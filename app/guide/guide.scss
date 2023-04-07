@@ -13,7 +13,6 @@
       line-height: 50vh;
       text-align: center;
       font-weight: 900;
-      font-size: $fontSize-h1;
     }
 
     ul {
@@ -60,8 +59,7 @@
             content:'· ';
             position: absolute;
             left: 0;
-            top: 50%;
-            transform: translateY(-50%);
+            top: -5px;
             font-size: 30px;
           }
         }
@@ -71,6 +69,21 @@
           border: 2px dotted #D6D6D6;
           margin-bottom: 20px;
           margin-top: 10px;
+        }
+
+        .title {
+          display: inline-block;
+          border: 2px solid #000000;
+          padding: 10px 40px;
+          margin-top: 30px;
+          margin-bottom: 10px;
+        }
+
+        .responsive {
+          background-color: #eee;
+          padding: 10px 20px;
+          margin-bottom: 20px;
+          font-size: 18px;
         }
 
         > article {

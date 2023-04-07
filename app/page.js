@@ -1,9 +1,8 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import {getFontDefinitions} from "@/helper/init-helper";
+const {covered, pretendard, stolzl} = getFontDefinitions();
 // import Header from "@/components/Header/Header";
 import Link from "next/link";
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
