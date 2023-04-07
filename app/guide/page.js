@@ -15,6 +15,7 @@ export default function Guide() {
                     <li><Link href="guide/pages/color">Color</Link></li>
                     <li><Link href="guide/pages/button">Button</Link></li>
                     <li><Link href="guide/pages/video">Video</Link></li>
+                    <li><Link href="guide/pages/component">Component</Link></li>
                 </ul>
             </header>
             <main>
@@ -32,7 +33,7 @@ export default function Guide() {
 
                     <dt>Component Rule</dt>
                     <dd>
-                        <p>구현해야할 구조 및 기능이 공통 컴포넌트에 존재하는지 확인하고, 존재한다면 공통 컴포넌트를 최우선에서 사용한다.</p>
+                        <p>작업 전 먼저 구현해야할 구조 및 기능이 공통 컴포넌트에 존재하는지 확인하고, 존재한다면 공통 컴포넌트를 최우선에서 사용한다.</p>
                         <p>공통 컴포넌트를 활용하지 못할 상황일 때는 각 페이지 내에서 자유롭게 작성한다.</p>
                         <p>컴포넌트 가이드 파일을 확인하여 각 컴포넌트의 규칙 및 props 조건을 확인하여 사용한다.</p>
                         <p><a href="" title="" target="_blank">컴포넌트 가이드 PDF</a></p>

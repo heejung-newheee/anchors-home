@@ -1,5 +1,4 @@
-import 'public/assets/css/common.module.scss';
-import '@/public/assets/css/reset.css';
+import '@/public/assets/css/common.scss';
 import Link from "next/link";
 import {getFontDefinitions} from "@/helper/init-helper";
 const {covered, pretendard, stolzl} = getFontDefinitions();

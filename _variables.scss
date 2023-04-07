@@ -1,0 +1,184 @@
+// S: for variable
+// Breakpoints
+$breakpoint-wide: 1546px;
+$breakpoint-desktop: 1280px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 360px;
+@mixin wide {
+  @media (min-width: #{$breakpoint-wide}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) and (max-width: #{$breakpoint-wide - 1px}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+// color
+$color-black : #000000;
+$color-blue : #1F0AAD;
+$color-lightblue : #00BEFD;
+$color-white : #FFFFFF;
+$color-darkgrey : #848484;
+$color-grey : #D6D6D6;
+$color-lightgrey : #E4E4E4;
+
+// E: for variable
+
+// S: guide
+
+// font size
+//.fontSize-h1 { font-size: 20rem; line-height: 20rem; }
+//.fontSize-h2 { font-size: 10.4rem; line-height: 11.4rem; }
+//.fontSize-h3 { font-size: 5.6rem; line-height: 7.8rem; }
+//.fontSize-h4 { font-size: 5rem; line-height: 7rem; }
+//.fontSize-h5 { font-size: 3.8rem; line-height: 5rem; }
+//.fontSize-h6 { font-size: 3.2rem; line-height: 4.5rem; }
+//.fontSize-h7 { font-size: 2.8rem; line-height: 4rem;}
+//.fontSize-h8 { font-size: 2.4rem; line-height: 3.4rem; }
+//.fontSize-body1 { font-size: 2rem; line-height: 3.2rem; }
+//.fontSize-body2 { font-size: 1.8rem; line-height: 2.8rem; }
+//.fontSize-body3  { font-size: 1.8rem; line-height: 2.8rem; }
+//.fontSize-caption { font-size: 1.6rem; line-height: 2.4rem; }
+//
+//@include desktop {
+//  .fontSize-h1 { font-size: 16rem; line-height: 16rem; }
+//  .fontSize-h2 { font-size: 9rem; line-height: 10rem; }
+//  .fontSize-h3 { font-size: 4.6rem; line-height: 6.4rem; }
+//  .fontSize-h4 { font-size: 4.2rem; line-height: 5.8rem; }
+//  .fontSize-h5 { font-size: 3.2rem; line-height: 4.2rem; }
+//  .fontSize-h6 { font-size: 2.8rem; line-height: 4rem; }
+//  .fontSize-h7 { font-size: 2.4rem; line-height: 3.4rem;}
+//  .fontSize-h8 { font-size: 2.2rem; line-height: 3rem; }
+//  .fontSize-body1 { font-size: 1.8rem; line-height: 2.8rem; }
+//  .fontSize-body2 { font-size: 1.6rem; line-height: 2.4rem; }
+//  .fontSize-body3  { font-size: 1.6rem; line-height: 2.4rem; }
+//  .fontSize-caption { font-size: 1.4rem; line-height: 2.2rem; }
+//}
+//@include tablet {
+//  .fontSize-h1 { font-size: 12rem; line-height: 12rem; }
+//  .fontSize-h2 { font-size: 8rem; line-height: 9rem; }
+//  .fontSize-h3 { font-size: 3.6rem; line-height: 5rem; }
+//  .fontSize-h4 { font-size: 3.4rem; line-height: 4.8rem; }
+//  .fontSize-h5 { font-size: 2.8rem; line-height: 3.8rem; }
+//  .fontSize-h6 { font-size: 2.3rem; line-height: 2.8rem; }
+//  .fontSize-h7 { font-size: 2rem; line-height: 3rem;}
+//  .fontSize-h8 { font-size: 1.8rem; line-height: 2.8rem; }
+//  .fontSize-body1 { font-size: 1.6rem; line-height: 2.6rem; }
+//  .fontSize-body2 { font-size: 1.4rem; line-height: 2.2rem; }
+//  .fontSize-body3  { font-size: 1.6rem; line-height: 2.4rem; }
+//  .fontSize-caption { font-size: 1.2rem; line-height: 1.8rem; }
+//}
+//@include mobile {
+//  .fontSize-h1 { font-size: 6rem; line-height: 6rem; }
+//  .fontSize-h2 { font-size: 5rem; line-height: 5.8rem; }
+//  .fontSize-h3 { font-size: 2.8rem; line-height: 4rem; }
+//  .fontSize-h4 { font-size: 2.2rem; line-height: 3rem; }
+//  .fontSize-h5 { font-size: 2.2rem; line-height: 3rem; }
+//  .fontSize-h6 { font-size: 1.8rem; line-height: 2.6rem; }
+//  .fontSize-h7 { font-size: 1.8rem; line-height: 2.6rem;}
+//  .fontSize-h8 { font-size: 1.6rem; line-height: 2.6rem; }
+//  .fontSize-body1 { font-size: 1.6rem; line-height: 2.6rem; }
+//  .fontSize-body2 { font-size: 1.2rem; line-height: 2rem; }
+//  .fontSize-body3  { font-size: 1.4rem; line-height: 2.2rem; }
+//  .fontSize-caption { font-size: 1.2rem; line-height: 1.8rem; }
+//}
+//
+//// button
+//.row[class*='btn']{
+//  width: 22rem;
+//  height: 22rem;
+//  background-color: $color-white;
+//  color: $color-blue;
+//  text-decoration: none;
+//  border-radius: 50%;
+//  overflow: hidden;
+//  cursor: pointer;
+//  position: relative;
+//  display: inline-block;
+//  text-align: center;
+//  vertical-align: middle;
+//
+//  span {
+//    position: absolute;
+//    display: inline-block;
+//    left: 50%;
+//    top: 50%;
+//    -webkit-transform: translate(-50%, -50%);
+//    transform: translate(-50%, -50%);
+//    width: 100%;
+//    font-weight: 700;
+//    font-size: 2.4rem;
+//    line-height: 3.6rem;
+//  }
+//
+//  &:after,
+//  &:before {
+//    display: none;
+//    content: '';
+//    width: 4rem;
+//    height: 4rem;
+//    position: absolute;
+//    left: 50%;
+//    top: 50%;
+//    -webkit-transform: translate(-50%, -50%);
+//    transform: translate(-50%, -50%);
+//    //background: url(/assets/images/ico/ico_btn_arrow.svg) no-repeat;
+//  }
+//
+//  @keyframes btnType01AniAfter {
+//    0% {
+//      left: 50%;
+//      top: 50%;
+//    }
+//    50% {
+//      left: 100%;
+//      top: 0;
+//    }
+//    100% {
+//      left: 100%;
+//      top: 0;
+//    }
+//  }
+//  @keyframes btnType01AniBefore {
+//    0% {
+//      left: 0;
+//      top: 100%;
+//    }
+//    50% {
+//      left: 0;
+//      top: 100%;
+//    }
+//    100% {
+//      left: 50%;
+//      top: 50%;
+//    }
+//  }
+//
+//  &:hover span {
+//    opacity: 0;
+//  }
+//
+//  &:hover:after {
+//    display: block;
+//    animation: btnType01AniAfter 1.2s infinite;
+//  }
+//
+//  &:hover:before {
+//    display: block;
+//    animation: btnType01AniBefore 1.2s infinite;
+//  }
+//}
+
+// E: guide

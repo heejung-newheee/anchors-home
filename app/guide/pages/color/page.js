@@ -3,7 +3,7 @@ import {getFontDefinitions} from "@/helper/init-helper";
 import Link from "next/link";
 const {covered, pretendard, stolzl} = getFontDefinitions();
 
-export default function Guide() {
+export default function GuideColor() {
     return (
         <div className="guide">
             <header>
@@ -15,6 +15,7 @@ export default function Guide() {
                     <li className="active"><Link href="guide/pages/color">Color</Link></li>
                     <li><Link href="guide/pages/button">Button</Link></li>
                     <li><Link href="guide/pages/video">Video</Link></li>
+                    <li><Link href="guide/pages/component">Component</Link></li>
                 </ul>
             </header>
             <main>
