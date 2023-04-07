@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+/* ============ S: font ============*/
+
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    unicode-range: U+AC00-D7A3;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    unicode-range: U+AC00-D7A3;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    unicode-range: U+AC00-D7A3;
+}
+
+
+.font-covered{ font-family:'Covered By Your Grace';}
+.font-pretendard { font-family: 'Pretendard';}
+.font-stolzl {font-family: stolzl;}
+
+.fontSize-h1 {font-size: 100px;}
+.fontSize-h2 {font-size: 10.4rem;}
+.fontSize-h3 {font-size: 5.6rem;}
+.fontSize-h4 {font-size: 5rem;}
+.fontSize-h5 {font-size: 3.8rem;}
+.fontSize-h6 {font-size: 3.2rem;}
+.fontSize-h7 {font-size: 2.8rem;}
+.fontSize-h8 {font-size: 2.4rem;}
+.fontSize-body1 {font-size: 2rem;}
+.fontSize-body2 {font-size: 1.8rem;}
+.fontSize-body3 {font-size: 1.8rem;}
+
+/* ============ E: font ============ */
+
+
+
+
+/* ============ S: color ============ */
+/* ============ E: color ============*/
+
+
+
+
+/* ============ S: reset ============ */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    line-height: 1;
+    color: #000;
+    letter-spacing: normal;
+}
+html *, body * {
+    font-size: 2.4rem;
+}
+body, h1, h2, h3, h4, h5, h6, p, blockquote, ul, ol, dl, dd, figure, form, fieldset, pre {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    word-break: keep-all;
+    box-sizing: border-box;
+}
+img {
+    border: 0;
+}
+img, video, object, embed {
+    width: 100%;
+    height: auto;
+}
+ul, ol {
+    list-style: none;
+}
+button, input {
+    line-height: normal;
+    overflow: visible;
+}
+input {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+input::placeholder {
+    color: #D6D6D6;
+}
+button {
+    border: none;
+    background: none;
+    padding: 0;
+}
+textarea, pre {
+    overflow: auto;
+}
+img, textarea, input {
+    margin: 0;
+    vertical-align: top;
+}
+table {
+    table-layout: fixed;
+    width:100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+button, input, select, textarea {
+    font: inherit;
+}
+strong {
+    font-weight: 700;
+}
+fieldset {
+    border: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover,
+a:hover span,
+a:hover strong {
+    text-decoration: none;
+    outline: none;
+
+}
+caption {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+body {
+    overflow-x: hidden;
+}
+.blind {
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    text-indent: -999em !important;
+    position: absolute;
+    top: -999em !important;
+    left: -999em !important;
+}
+.mo-only {
+    display: none;
+}
+/* ============ E: reset ============ */
