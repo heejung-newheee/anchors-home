@@ -1,7 +1,6 @@
+import variables from '/public/assets/css/_variables.module.scss';
 import '../../guide.scss';
-import {getFontDefinitions} from "@/helper/init-helper";
 import Link from "next/link";
-const {covered, pretendard, stolzl} = getFontDefinitions();
 
 export default function GuideButton() {
     return (
@@ -34,7 +33,9 @@ export default function GuideButton() {
                                 <p>&lt;button className="fontSize-h3"&gt;&lt;/button&gt;</p>
                                 <p>&lt;a className="fontSize-h3"&gt;&lt;/a&gt;</p>
                             </div>
-                            <button className="btn-primary"></button>
+                            <div className="cta-outer" style={{backgroundColor :'#000'}}>
+                                <button className="btn-primary">BtnPrimary</button>
+                            </div>
                         </article>
 
                     </dd>

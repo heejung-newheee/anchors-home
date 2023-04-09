@@ -1,13 +1,12 @@
+import variables from '/public/assets/css/_variables.module.scss';
 import './guide.scss';
 import Link from "next/link";
-import {getFontDefinitions} from "@/helper/init-helper";
-const {covered, pretendard, stolzl} = getFontDefinitions();
 
 export default function Guide() {
     return (
         <div className="guide">
             <header>
-                <h1 className="fontSize-h1">Guide</h1>
+                <h1>Guide</h1>
 
                 <ul>
                     <li className="active"><Link href="guide">Rule</Link></li>
@@ -25,6 +24,10 @@ export default function Guide() {
                         <p>react 기반 next.js의 개발환경이다.</p>
                         <p>반응형은 WIDE 1536 / PC 1280 / TAB 768 / MO 360으로 구분된다.</p>
                         <p>신규 페이지는 app/pages/ 경로에 해당 페이지명으로 폴더링하여 page.js및 페이지명.scss를 생성하여 진행한다. <br/>Ex) app/pages/페이지명/</p>
+                        <p>신규 페이지 생성시 하기 소스를 import 하여 페이지 소스내 직접 scss 변수값을 사용할 수 있다.</p>
+                        <div className="box">
+                            import variables from '/public/assets/css/_variables.module.scss';
+                        </div>
                         <p>공통 컴포넌트는 components/경로에 해당 컴포넌트명으로 폴더링하여 컴포넌트명.js 및 컴포넌트명.scss를 생성하여 진행한다. <br/>Ex) components/컴포넌트명/</p>
                         <p>공통 컴포넌트가 아닌 각 페이지 기준 1회성 컴포넌트의 경우 해당 페이지 경로에서 새로 제작될 컴포넌트를 공통 컴포넌트 생성 방식과 동일하게 폴더링하여 사용한다. <br/>Ex) app/pages/페이지명/페이지컴포넌트명/ </p>
                         <p>이미지는 ... 경로에 생성한다.</p>
@@ -57,17 +60,21 @@ export default function Guide() {
                         <p>페이지 마크업 시 section 별로 영역을 나타낼수 있는 주석을 표시한다.</p>
                     </dd>
 
-                    <dt>Css Rule</dt>
+                    <dt>Scss Rule</dt>
                     <dd>
                         <p>css 파일 형식은 scss이다.</p>
-                        <p>공통 css 위치 : public/assets/css/</p>
-                        <p>각 페이지 css 위치 : 각 페이지의 page.js와 나란히 정렬한다.</p>
-                        <p>컴포넌트 css 위치 : 각 컴포넌트.js와 나란히 정렬한다.</p>
-                        <p>신규 css 생성시 common.module.scss를 import하여 사용한다.</p>
+                        <p>공통 scss 위치 : public/assets/css/</p>
+                        <p>각 페이지 scss 위치 : 각 페이지의 page.js와 나란히 정렬한다.</p>
+                        <p>컴포넌트 scss 위치 : 각 컴포넌트.js와 나란히 정렬한다.</p>
+                        <p>가이드에서 제공하는 변수 값은 scss 상에서는 속성값에 $변수명 을 적용하며, 페이지 상에서 직접 적용시에는 속성값에 '$'와'-'을 제외하고 camelClass를 적용하여 variables.변수값 으로 적용한다.</p>
                         <div className="box">
-                            @import "public/assets/css/common.module";
+                            <p>
+                                color : $color-black;<br/>
+                                style = &#123;&#123; color : variables.colorBlack&#125;&#125; <br/>
+                                (상기 web style guide에서 안내했던 import 파일의 변수값 사용)
+                            </p>
                         </div>
-                        <p>css 미디어쿼리 작성시 믹스인으로 변수화된 미디어쿼리 방식을 사용한다.</p>
+                        <p>scss 미디어쿼리 작성시 믹스인으로 변수화된 미디어쿼리 방식을 사용한다.</p>
                         <div className="box">
                             <p>
                                 .class &#123; 미디어쿼리 수정값 &#125;<br/>

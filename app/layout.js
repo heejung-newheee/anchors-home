@@ -1,12 +1,11 @@
 import '@/public/assets/css/common.scss';
-import Link from "next/link";
-import {getFontDefinitions} from "@/helper/init-helper";
-const {covered, pretendard, stolzl} = getFontDefinitions();
+// import {getFontDefinitions} from "@/helper/init-helper";
+// const {covered, pretendard, stolzl} = getFontDefinitions();
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ko" className={stolzl.className}>
-        <body>
+    <html>
+        <body lang="ko">
           {children}
         </body>
     </html>

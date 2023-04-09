@@ -1,7 +1,6 @@
+import variables from '/public/assets/css/_variables.module.scss';
 import '../../guide.scss';
-import {getFontDefinitions} from "@/helper/init-helper";
 import Link from "next/link";
-const {covered, pretendard, stolzl} = getFontDefinitions();
 
 export default function GuideColor() {
     return (
@@ -31,57 +30,66 @@ export default function GuideColor() {
                         <article>
                             <strong className="title">$color-black</strong>
                             <div className="box">
-                                <p>color: $color-black</p>
+                                <p>
+                                    color: $color-black;<br/>
+                                    style = &#123;&#123; color: variables.colorBlack &#125;&#125;
+                                </p>
                             </div>
-                            <p style={{color: '#000000'}}>$color-black #000000</p>
+                            <p style={{color: variables.colorBlack}}>$color-black #000000</p>
                         </article>
 
                         <article>
                             <strong className="title">$color-white</strong>
                             <div className="box">
-                                <p>color: $color-white</p>
+                                <p>color: $color-white;<br/>
+                                    style = &#123;&#123; color: variables.colorWhite &#125;&#125;</p>
                             </div>
-                            <p style={{color: '#FFFFFF', backgroundColor: '#000000'}}>$color-white #FFFFFF</p>
+                            <p style={{color: variables.colorWhite, backgroundColor: variables.colorBlack}}>$color-white #FFFFFF</p>
                         </article>
 
                         <article>
                             <strong className="title">$color-blue</strong>
                             <div className="box">
-                                <p>color: $color-blue</p>
+                                <p>color: $color-blue;<br/>
+                                    style = &#123;&#123; color: variables.colorBlue &#125;&#125;</p>
                             </div>
-                            <p style={{color: '#1F0AAD'}}>$color-blue #1F0AAD</p>
+                            <p style={{color: variables.colorBlue}}>$color-blue #1F0AAD</p>
                         </article>
 
                         <article>
                             <strong className="title">$color-lightblue</strong>
                             <div className="box">
-                                <p>color: $color-lightblue</p>
+                                <p>color: $color-lightblue;<br/>
+                                    style = &#123;&#123; color: variables.colorLightblue &#125;&#125;</p>
                             </div>
-                            <p style={{color: '#00BEFD'}}>$color-lightblue #00BEFD</p>
+                            <p style={{color: variables.colorLightblue}}>$color-lightblue #00BEFD</p>
                         </article>
 
                         <article>
                             <strong className="title">$color-darkgrey</strong>
                             <div className="box">
-                                <p>color: $color-darkgrey</p>
+                                <p>color: $color-darkgrey;<br/>
+                                    style = &#123;&#123; color: variables.colorDarkgrey &#125;&#125;</p>
                             </div>
-                            <p style={{color: '#848484'}}>$color-darkgrey #848484</p>
+                            <p style={{color: variables.colorDarkgrey}}>$color-darkgrey #848484</p>
                         </article>
 
                         <article>
                             <strong className="title">$color-grey</strong>
                             <div className="box">
-                                <p>color: $color-grey</p>
+                                <p>color: $color-grey;<br/>
+                                    style = &#123;&#123; color: variables.colorGrey &#125;&#125;</p>
                             </div>
-                            <p style={{color: '#D6D6D6'}}>$color-grey #D6D6D6</p>
+                            <p style={{color: variables.colorGrey}}>$color-grey #D6D6D6</p>
                         </article>
 
                         <article>
                             <strong className="title">$color-lightgrey</strong>
                             <div className="box">
-                                <p>color: $color-lightgrey</p>
+                                <p>color: $color-lightgrey;<br/>
+                                    style = &#123;&#123; color: variables.colorLightgrey &#125;&#125;</p>
                             </div>
-                            <p style={{color: '#E4E4E4'}}>$color-lightgrey #E4E4E4</p>
+                            <p style={{color: variables.colorLightgrey}}>$color-lightgrey #E4E4E4</p>
                         </article>
 
                     </dd>

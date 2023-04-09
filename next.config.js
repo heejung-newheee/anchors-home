@@ -7,8 +7,8 @@ const nextConfig = {
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
-    prependData: `@use 'variables' as *;`,
-
+    // prependData: `@use 'variables.module' as *;`,
+    prependData: `@import "/_variables.module.scss";`, // prependData 옵션 추가
   },
 }
 

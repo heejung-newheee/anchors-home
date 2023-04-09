@@ -9,9 +9,10 @@
     h1 {
       width: 100%;
       height: 50vh;
-      line-height: 50vh;
+      line-height: 50vh !important;
       text-align: center;
       font-weight: 900;
+      @extend %font-h1;
     }
 
     ul {
@@ -86,7 +87,7 @@
         }
 
         > article {
-          margin-bottom: 50px;
+          margin-bottom: 80px;
 
           &:last-child {
             margin-bottom: 0;
@@ -97,3 +98,16 @@
   }
 /* E:  guide content */
 }
+// 임시 font size
+.fontH1 { @extend %font-h1 }
+.fontH2 { @extend %font-h2 }
+.fontH3 { @extend %font-h3 }
+.fontH4 { @extend %font-h4 }
+.fontH5 { @extend %font-h5 }
+.fontH6 { @extend %font-h6 }
+.fontH7 { @extend %font-h7 }
+.fontH8 { @extend %font-h8 }
+.fontBody1 { @extend %font-body1 }
+.fontBody2 { @extend %font-body2 }
+.fontBody3 { @extend %font-body3 }
+.fontCaption { @extend %font-caption }
