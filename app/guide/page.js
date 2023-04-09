@@ -10,6 +10,7 @@ export default function Guide() {
 
                 <ul>
                     <li className="active"><Link href="guide">Rule</Link></li>
+                    <li><Link href="guide/pages/layout">Layout</Link></li>
                     <li><Link href="guide/pages/font">Font</Link></li>
                     <li><Link href="guide/pages/color">Color</Link></li>
                     <li><Link href="guide/pages/button">Button</Link></li>

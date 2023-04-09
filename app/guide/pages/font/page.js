@@ -9,6 +9,7 @@ export default function GuideFont() {
                 <h1 className="fontSize-h1">Guide</h1>
                 <ul>
                     <li><Link href="../../guide">Rule</Link></li>
+                    <li><Link href="guide/pages/layout">Layout</Link></li>
                     <li className="active"><Link href="guide/pages/font">Font</Link></li>
                     <li><Link href="guide/pages/color">Color</Link></li>
                     <li><Link href="guide/pages/button">Button</Link></li>
@@ -32,7 +33,6 @@ export default function GuideFont() {
                         <p>기본 세팅 폰트는 국문 Prentendard ,영문 stolzl 이다.</p>
                         <p>폰트패밀리는 모두 변수에 담겨 있으므로, scss에 하기 변수값을 확인하여 적용한다.</p>
                         <p>영문 폰트 자간은 변수에 담겨 있으므로, scss에 하기 변수값을 확인하여 적용한다.</p>
-                        <p></p>
 
                         <article>
                             <strong className="title">$font-ko</strong>
@@ -77,7 +77,7 @@ export default function GuideFont() {
 
                     <dt>Font Size Option</dt>
                     <dd>
-                        <p>폰트사이즈와 행간은 모두 @extend하여, scss에 하기 변수값을 확인하여 적용한다.</p>
+                        <p>폰트사이즈 옵션은 모두 @extend하여, scss에 하기 변수값을 확인하여 적용한다.</p>
                         <p>일부 해상도에서 폰트사이즈가 겹치는 경우가 있으므로, 반응형 사이즈를 확인하여 적용한다.</p>
 
                         <article>

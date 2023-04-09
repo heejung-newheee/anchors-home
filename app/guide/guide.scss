@@ -1,8 +1,6 @@
 /* S : guide Common */
 .guide {
-  padding: 48px;
-  max-width: 1280px;
-  margin: 0 auto;
+  @extend %layout-fix;
 
   header {
 
@@ -114,3 +112,5 @@
 
 .btn-primary-normal { @extend %btn-primary-normal }
 .btn-primary-ghost { @extend %btn-primary-ghost }
+.btn-secondary-up { @extend %btn-secondary-up }
+.btn-secondary-down { @extend %btn-secondary-down }

@@ -10,6 +10,7 @@ export default function GuideColor() {
 
                 <ul>
                     <li><Link href="../../guide">Rule</Link></li>
+                    <li><Link href="guide/pages/layout">Layout</Link></li>
                     <li><Link href="guide/pages/font">Font</Link></li>
                     <li className="active"><Link href="guide/pages/color">Color</Link></li>
                     <li><Link href="guide/pages/button">Button</Link></li>
@@ -35,7 +36,7 @@ export default function GuideColor() {
                                     style = &#123;&#123; color: variables.colorBlack &#125;&#125;
                                 </p>
                             </div>
-                            <p style={{color: variables.colorBlack}}>$color-black #000000</p>
+                            <p style={{color: variables.colorBlack, padding: '10px'}}>$color-black #1D1D1F</p>
                         </article>
 
                         <article>
@@ -44,7 +45,7 @@ export default function GuideColor() {
                                 <p>color: $color-white;<br/>
                                     style = &#123;&#123; color: variables.colorWhite &#125;&#125;</p>
                             </div>
-                            <p style={{color: variables.colorWhite, backgroundColor: variables.colorBlack}}>$color-white #FFFFFF</p>
+                            <p style={{color: variables.colorWhite, backgroundColor: variables.colorBlack, padding: '10px'}}>$color-white #FFFFFF</p>
                         </article>
 
                         <article>
@@ -53,7 +54,7 @@ export default function GuideColor() {
                                 <p>color: $color-blue;<br/>
                                     style = &#123;&#123; color: variables.colorBlue &#125;&#125;</p>
                             </div>
-                            <p style={{color: variables.colorBlue}}>$color-blue #1F0AAD</p>
+                            <p style={{color: variables.colorBlue, padding: '10px'}}>$color-blue #1F0AAD</p>
                         </article>
 
                         <article>
@@ -62,7 +63,7 @@ export default function GuideColor() {
                                 <p>color: $color-lightblue;<br/>
                                     style = &#123;&#123; color: variables.colorLightblue &#125;&#125;</p>
                             </div>
-                            <p style={{color: variables.colorLightblue}}>$color-lightblue #00BEFD</p>
+                            <p style={{color: variables.colorLightblue, padding: '10px'}}>$color-lightblue #00BEFD</p>
                         </article>
 
                         <article>
@@ -71,7 +72,7 @@ export default function GuideColor() {
                                 <p>color: $color-darkgrey;<br/>
                                     style = &#123;&#123; color: variables.colorDarkgrey &#125;&#125;</p>
                             </div>
-                            <p style={{color: variables.colorDarkgrey}}>$color-darkgrey #848484</p>
+                            <p style={{color: variables.colorDarkgrey, padding: '10px'}}>$color-darkgrey #848484</p>
                         </article>
 
                         <article>
@@ -80,7 +81,7 @@ export default function GuideColor() {
                                 <p>color: $color-grey;<br/>
                                     style = &#123;&#123; color: variables.colorGrey &#125;&#125;</p>
                             </div>
-                            <p style={{color: variables.colorGrey}}>$color-grey #D6D6D6</p>
+                            <p style={{color: variables.colorGrey, padding: '10px'}}>$color-grey #D6D6D6</p>
                         </article>
 
                         <article>
@@ -89,7 +90,7 @@ export default function GuideColor() {
                                 <p>color: $color-lightgrey;<br/>
                                     style = &#123;&#123; color: variables.colorLightgrey &#125;&#125;</p>
                             </div>
-                            <p style={{color: variables.colorLightgrey}}>$color-lightgrey #E4E4E4</p>
+                            <p style={{color: variables.colorLightgrey, padding: '10px'}}>$color-lightgrey #E4E4E4</p>
                         </article>
 
                     </dd>

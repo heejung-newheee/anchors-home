@@ -1,6 +1,6 @@
 // S: for variable
 // Breakpoints
-$breakpoint-wide: 1546px;
+$breakpoint-wide: 1536px;
 $breakpoint-desktop: 1280px;
 $breakpoint-tablet: 768px;
 $breakpoint-mobile: 360px;
@@ -25,6 +25,7 @@ $breakpoint-mobile: 360px;
   }
 }
 
+
 // font-family
 $font-ko : Pretendard;
 $font-en : stolzl;
@@ -32,7 +33,7 @@ $font-en-italic : covered;
 $en-letterSpacing : -0.03em;
 
 // color
-$color-black : #000000;
+$color-black : #1D1D1F;
 $color-blue : #1F0AAD;
 $color-lightblue : #00BEFD;
 $color-white : #FFFFFF;
@@ -61,90 +62,92 @@ $color-lightgrey : #E4E4E4;
 
 // S: for expend
 
+// layout
+%layout-fix { max-width: $breakpoint-wide; margin: 0 auto; padding: 0 48px; }
+@include desktop { %layout-fix { max-width: auto; margin: 0 auto; padding: 0 32px; } }
+@include tablet { %layout-fix { max-width: auto; margin: 0 auto; padding: 0 24px; } }
+@include mobile { %layout-fix { max-width: auto; margin: 0 auto; padding: 0 24px; } }
+
 // font size
-%font-h1 { font-size: 20rem; line-height: 20rem; }
-%font-h2 { font-size: 10.4rem; line-height: 11.4rem; }
-%font-h3 { font-size: 5.6rem; line-height: 7.8rem; }
-%font-h4 { font-size: 5rem; line-height: 7rem; }
-%font-h5 { font-size: 3.8rem; line-height: 5rem; }
-%font-h6 { font-size: 3.2rem; line-height: 4.5rem; }
-%font-h7 { font-size: 2.8rem; line-height: 4rem; }
-%font-h8 { font-size: 2.4rem; line-height: 3.4rem; }
-%font-body1 { font-size: 2rem; line-height: 3.2rem; }
-%font-body2 { font-size: 1.8rem; line-height: 2.8rem; }
-%font-body3 { font-size: 1.8rem; line-height: 2.8rem; }
-%font-caption { font-size: 1.6rem; line-height: 2.4rem; }
+%font-h1 { font-size: 200px; line-height: 200px; }
+%font-h2 { font-size: 104px; line-height: 114px; }
+%font-h3 { font-size: 56px; line-height: 78px; }
+%font-h4 { font-size: 50px; line-height: 70px; }
+%font-h5 { font-size: 38px; line-height: 50px; }
+%font-h6 { font-size: 32px; line-height: 45px; }
+%font-h7 { font-size: 28px; line-height: 40px; }
+%font-h8 { font-size: 24px; line-height: 34px; }
+%font-body1 { font-size: 20px; line-height: 32px; }
+%font-body2 { font-size: 18px; line-height: 28px; }
+%font-body3 { font-size: 18px; line-height: 28px; }
+%font-caption { font-size: 16px; line-height: 24px; }
 
 @include desktop {
-  %font-h1 { font-size: 16rem; line-height: 16rem; }
-  %font-h2 { font-size: 9rem; line-height: 10rem; }
-  %font-h3 { font-size: 4.6rem; line-height: 6.4rem; }
-  %font-h4 { font-size: 4.2rem; line-height: 5.8rem; }
-  %font-h5 { font-size: 3.2rem; line-height: 4.2rem; }
-  %font-h6 { font-size: 2.8rem; line-height: 4rem; }
-  %font-h7 { font-size: 2.4rem; line-height: 3.4rem; }
-  %font-h8 { font-size: 2.2rem; line-height: 3rem; }
-  %font-body1 { font-size: 1.8rem; line-height: 2.8rem; }
-  %font-body2 { font-size: 1.6rem; line-height: 2.4rem; }
-  %font-body3 { font-size: 1.6rem; line-height: 2.4rem; }
-  %font-caption { font-size: 1.4rem; line-height: 2.2rem; }
+  %font-h1 { font-size: 160px; line-height: 160px; }
+  %font-h2 { font-size: 90px; line-height: 100px; }
+  %font-h3 { font-size: 46px; line-height: 64px; }
+  %font-h4 { font-size: 42px; line-height: 58px; }
+  %font-h5 { font-size: 32px; line-height: 4.02px; }
+  %font-h6 { font-size: 28px; line-height: 40px; }
+  %font-h7 { font-size: 24px; line-height: 34px; }
+  %font-h8 { font-size: 22px; line-height: 30px; }
+  %font-body1 { font-size: 18px; line-height: 28px; }
+  %font-body2 { font-size: 16px; line-height: 24px; }
+  %font-body3 { font-size: 16px; line-height: 24px; }
+  %font-caption { font-size: 14px; line-height: 22px; }
 }
 @include tablet {
-  %font-h1 { font-size: 12rem; line-height: 12rem; }
-  %font-h2 { font-size: 8rem; line-height: 9rem; }
-  %font-h3 { font-size: 3.6rem; line-height: 5rem; }
-  %font-h4 { font-size: 3.4rem; line-height: 4.8rem; }
-  %font-h5 { font-size: 2.8rem; line-height: 3.8rem; }
-  %font-h6 { font-size: 2.3rem; line-height: 2.8rem; }
-  %font-h7 { font-size: 2rem; line-height: 3rem; }
-  %font-h8 { font-size: 1.8rem; line-height: 2.8rem; }
-  %font-body1 { font-size: 1.6rem; line-height: 2.6rem; }
-  %font-body2 { font-size: 1.4rem; line-height: 2.2rem; }
-  %font-body3 { font-size: 1.6rem; line-height: 2.4rem; }
-  %font-caption { font-size: 1.2rem; line-height: 1.8rem; }
+  %font-h1 { font-size: 120px; line-height: 120px; }
+  %font-h2 { font-size: 80px; line-height: 90px; }
+  %font-h3 { font-size: 36px; line-height: 50px; }
+  %font-h4 { font-size: 34px; line-height: 48px; }
+  %font-h5 { font-size: 28px; line-height: 38px; }
+  %font-h6 { font-size: 23px; line-height: 28px; }
+  %font-h7 { font-size: 20px; line-height: 30px; }
+  %font-h8 { font-size: 18px; line-height: 28px; }
+  %font-body1 { font-size: 16px; line-height: 26px; }
+  %font-body2 { font-size: 14px; line-height: 22px; }
+  %font-body3 { font-size: 16px; line-height: 24px; }
+  %font-caption { font-size: 12px; line-height: 18px; }
 }
 @include mobile {
-  %font-h1 { font-size: 6rem; line-height: 6rem; }
-  %font-h2 { font-size: 5rem; line-height: 5.8rem; }
-  %font-h3 { font-size: 2.8rem; line-height: 4rem; }
-  %font-h4 { font-size: 2.2rem; line-height: 3rem; }
-  %font-h5 { font-size: 2.2rem; line-height: 3rem; }
-  %font-h6 { font-size: 1.8rem; line-height: 2.6rem; }
-  %font-h7 { font-size: 1.8rem; line-height: 2.6rem; }
-  %font-h8 { font-size: 1.6rem; line-height: 2.6rem; }
-  %font-body1 { font-size: 1.6rem; line-height: 2.6rem; }
-  %font-body2 { font-size: 1.2rem; line-height: 2rem; }
-  %font-body3 { font-size: 1.4rem; line-height: 2.2rem; }
-  %font-caption { font-size: 1.2rem; line-height: 1.8rem; }
+  %font-h1 { font-size: 60px; line-height: 60px; }
+  %font-h2 { font-size: 50px; line-height: 58px; }
+  %font-h3 { font-size: 28px; line-height: 40px; }
+  %font-h4 { font-size: 22px; line-height: 30px; }
+  %font-h5 { font-size: 22px; line-height: 30px; }
+  %font-h6 { font-size: 18px; line-height: 26px; }
+  %font-h7 { font-size: 18px; line-height: 26px; }
+  %font-h8 { font-size: 16px; line-height: 26px; }
+  %font-body1 { font-size: 16px; line-height: 26px; }
+  %font-body2 { font-size: 12px; line-height: 20px; }
+  %font-body3 { font-size: 14px; line-height: 22px; }
+  %font-caption { font-size: 12px; line-height: 18px; }
 }
 
-@keyframes btnPrimary {
-  from{
-    top: 110%;
-    left: 55%;
-  }
-  to {
-    top: -10%;
-    left: 100%;
-  }
-}
-%btn-primary-normal {
+// btn
+%btn-primary-normal, %btn-primary-ghost {
+  display: inline-block;
+  vertical-align: middle;
   background-color: $color-white;
   color: $color-blue;
-  height: 7rem;
+  height: 70px;
+  line-height: 70px;
   padding-left: 36px;
   padding-right: 64px;
-  border-radius: 999rem;
+  border-radius: 999px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  font-size: 22px;
+  letter-spacing: $en-letterSpacing;
 
   span {
     position: relative;
-    left: unset;
     top: unset;
     -webkit-transform: none;
     transform: none;
+    font-size: inherit;
   }
   &:after {
     content: '';
@@ -157,55 +160,197 @@ $color-lightgrey : #E4E4E4;
     transform: translate(0, -50%);
     position: absolute;
     top: 50%;
-    left: unset;
     right: 32px;
   }
   &:hover span {
     opacity: 1;
   }
+  @keyframes btnPrimary {
+    from{
+      top: 110%;
+      right: 64px;
+    }
+    to {
+      top: -10%;
+      right: -10px;
+    }
+  }
   &:hover:after {
     animation: btnPrimary 1s infinite;
   }
 }
-
 %btn-primary-ghost {
   background-color: transparent;
   color: $color-white;
-  height: 7rem;
-  padding-left: 36px;
-  padding-right: 64px;
-  border-radius: 999rem;
   border: 1px solid $color-white;
+
+  &:after {
+    background: url(/assets/images/ico/ico-btn-white-up.svg)no-repeat;
+    background-size: 100%;
+  }
+  @keyframes btnPrimary {
+    from{
+      top: 110%;
+      right: 54px;
+    }
+    to {
+      top: -10%;
+      right: -9px;
+    }
+  }
+}
+@include tablet {
+  %btn-primary-normal, %btn-primary-ghost {
+    height: 58px;
+    line-height: 58px;
+    font-size: 18px;
+    padding-left: 30px;
+    padding-right: 54px;
+    &:after {
+      width: 18px;
+      height: 18px;
+      right: 27px;
+    }
+  }
+}
+@include mobile {
+  %btn-primary-normal, %btn-primary-ghost {
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+    padding-left: 22px;
+    padding-right: 42px;
+    &:after {
+      width: 16px;
+      height: 16px;
+      right: 21px;
+    }
+  }
+}
+
+%btn-secondary-up, %btn-secondary-down {
+  display: inline-block;
+  vertical-align: middle;
+  width: 180px;
+  height: 180px;
+  background-color: $color-white;
+  color: $color-black;
+  border: 1px solid $color-grey;
+  text-decoration: none;
+  border-radius: 50%;
+  overflow: hidden;
   cursor: pointer;
   position: relative;
-  overflow: hidden;
+  text-align: center;
 
   span {
-    position: relative;
-    left: unset;
-    top: unset;
-    -webkit-transform: none;
-    transform: none;
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
   }
   &:after {
+    display: none;
     content: '';
-    display: block;
-    width: 20px;
-    height: 20px;
-    background: url(/assets/images/ico/ico-btn-blue-up.svg)no-repeat;
-    background-size: 100%;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
+    width: 26px;
+    height: 26px;
     position: absolute;
+    left: 50%;
     top: 50%;
-    left: unset;
-    right: 32px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: url(/assets/images/ico/ico-btn-white-up.svg)no-repeat;
+    background-size: 100%;
+  }
+  @keyframes btnSecondaryUp {
+    from{
+      left: 0;
+      top: 100%;
+    }
+    to {
+      left: 100%;
+      top: 0;
+    }
+  }
+  &:hover {
+    background-color: #252525;
+    border: 1px solid #252525;
   }
   &:hover span {
-    opacity: 1;
+    opacity: 0;
   }
   &:hover:after {
-    animation: btnPrimary 1s infinite;
+    display: block;
+    animation: btnSecondaryUp 1s infinite;
+  }
+}
+%btn-secondary-down {
+  &:after {
+    width: 38px;
+    height: 38px;
+    background: url(/assets/images/ico/ico-btn-black-down.svg)no-repeat;
+    background-size: 100%;
+  }
+  &:hover {
+    background-color: $color-white;
+    border: 1px solid $color-grey;
+  }
+  @keyframes btnSecondaryDown {
+    from{
+      top: -10%;
+    }
+    to {
+      top: 115%;
+    }
+  }
+  &:hover:after {
+    animation: btnSecondaryDown 1s infinite;
+  }
+}
+@include tablet {
+  %btn-secondary-up, %btn-secondary-down {
+    width: 140px;
+    height: 140px;
+    span {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &:after {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  %btn-secondary-down {
+    &:after {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+@include mobile {
+  %btn-secondary-up, %btn-secondary-down {
+    width: 90px;
+    height: 90px;
+    span {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &:after {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  %btn-secondary-down {
+    &:after {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 // E: for expend
