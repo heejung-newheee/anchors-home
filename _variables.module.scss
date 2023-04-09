@@ -54,7 +54,7 @@ $color-lightgrey : #E4E4E4;
   colorWhite : $color-white;
   colorDarkgrey : $color-darkgrey;
   colorGrey : $color-grey;
-  colorlightgrey : $color-lightgrey;
+  colorLightgrey : $color-lightgrey;
 }
 
 // E: for variable
@@ -116,6 +116,97 @@ $color-lightgrey : #E4E4E4;
   %font-body2 { font-size: 1.2rem; line-height: 2rem; }
   %font-body3 { font-size: 1.4rem; line-height: 2.2rem; }
   %font-caption { font-size: 1.2rem; line-height: 1.8rem; }
+}
+
+@keyframes btnPrimary {
+  from{
+    top: 110%;
+    left: 55%;
+  }
+  to {
+    top: -10%;
+    left: 100%;
+  }
+}
+%btn-primary-normal {
+  background-color: $color-white;
+  color: $color-blue;
+  height: 7rem;
+  padding-left: 36px;
+  padding-right: 64px;
+  border-radius: 999rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    left: unset;
+    top: unset;
+    -webkit-transform: none;
+    transform: none;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(/assets/images/ico/ico-btn-blue-up.svg)no-repeat;
+    background-size: 100%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    position: absolute;
+    top: 50%;
+    left: unset;
+    right: 32px;
+  }
+  &:hover span {
+    opacity: 1;
+  }
+  &:hover:after {
+    animation: btnPrimary 1s infinite;
+  }
+}
+
+%btn-primary-ghost {
+  background-color: transparent;
+  color: $color-white;
+  height: 7rem;
+  padding-left: 36px;
+  padding-right: 64px;
+  border-radius: 999rem;
+  border: 1px solid $color-white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    left: unset;
+    top: unset;
+    -webkit-transform: none;
+    transform: none;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(/assets/images/ico/ico-btn-blue-up.svg)no-repeat;
+    background-size: 100%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    position: absolute;
+    top: 50%;
+    left: unset;
+    right: 32px;
+  }
+  &:hover span {
+    opacity: 1;
+  }
+  &:hover:after {
+    animation: btnPrimary 1s infinite;
+  }
 }
 // E: for expend
 

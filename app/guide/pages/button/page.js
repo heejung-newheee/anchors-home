@@ -28,13 +28,22 @@ export default function GuideButton() {
                     <dd>
 
                         <article>
-                            <strong className="title">button type</strong>
+                            <strong className="title">&btn-primary-normal</strong>
                             <div className="box">
-                                <p>&lt;button className="fontSize-h3"&gt;&lt;/button&gt;</p>
-                                <p>&lt;a className="fontSize-h3"&gt;&lt;/a&gt;</p>
+
                             </div>
-                            <div className="cta-outer" style={{backgroundColor :'#000'}}>
-                                <button className="btn-primary">BtnPrimary</button>
+                            <div className="cta-outer" style={{backgroundColor :variables.colorDarkgrey, padding: '10px'}}>
+                                <button className="btn-primary-normal"><span>BtnPrimaryNormal</span></button>
+                            </div>
+                        </article>
+
+                        <article>
+                            <strong className="title">%btn-primary-ghost</strong>
+                            <div className="box">
+
+                            </div>
+                            <div className="cta-outer" style={{backgroundColor :variables.colorDarkgrey, padding: '10px'}}>
+                                <button className="btn-primary-ghost"><span>BtnPrimaryGhost</span></button>
                             </div>
                         </article>
 
