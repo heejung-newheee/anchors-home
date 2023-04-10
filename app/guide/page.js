@@ -1,4 +1,4 @@
-import variables from '/public/assets/css/_variables.module.scss';
+import variables from '/public/assets/css/_variables.scss';
 import './guide.scss';
 import Link from "next/link";
 

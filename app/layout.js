@@ -1,4 +1,4 @@
-import '@/public/assets/css/common.scss';
+import '@/public/assets/css/_reset.scss';
 // import {getFontDefinitions} from "@/helper/init-helper";
 // const {covered, pretendard, stolzl} = getFontDefinitions();
 
