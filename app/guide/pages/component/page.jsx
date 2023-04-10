@@ -5,10 +5,10 @@ import Link from "next/link";
 import Logo from "@/components/Logo/Logo";
 import Btn from "@/components/Btn/Btn";
 
-// export const metadata = {
-//     title: 'Anchors Guide Component',
-//     description: '',
-// }
+export const metadata = {
+    title: 'Anchors Guide Component',
+    description: '',
+}
 
 export default function GuideComponent() {
     return (
@@ -36,6 +36,8 @@ export default function GuideComponent() {
                     <dd>
                         <Btn type="link" url="/" design="btnSecondaryUp">button</Btn>
                         <Logo/>
+
+
                     </dd>
 
                 </dl>
