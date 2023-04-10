@@ -1,19 +1,15 @@
 "use client"
 import Image from 'next/image'
 import Link from "next/link";
-import Btn from "@/components/Btn/Btn";
-import headerFooter from "@/helper/data/json/headerFooter.json";
-
+// import Btn
 
 export default function Logo() {
-
   return (
-      <h1 className="logo">{/*headerFooter.json 호출*/}
-        <Btn type="link" url="/" alt="Anchors">
-        {/*  로고 이미지  */}
-          {JSON.stringify(headerFooter)}
-          {headerFooter.copyright}
-        </Btn>
+      <!-- header_footer.json 호출 -->
+      <h1 className="logo">
+        {/* Btn component */}
+          <img src="@/components/Logo/Logo" alt="Anchors"/>
+        {/* //Btn component */}
       </h1>
   )
 }

@@ -1,8 +1,13 @@
-import variables from '/public/assets/css/_variables.scss';
+import variables from '@/public/assets/css/_variables.module.scss';
 import '../../guide.scss';
 import Link from "next/link";
 
-export default function GuideButton() {
+export const metadata = {
+    title: 'Anchors Guide Layout',
+    description: '',
+}
+
+export default function GuideLayout() {
     return (
         <div className="guide">
             <header>
@@ -14,7 +19,6 @@ export default function GuideButton() {
                     <li><Link href="guide/pages/font">Font</Link></li>
                     <li><Link href="guide/pages/color">Color</Link></li>
                     <li><Link href="guide/pages/button">Button</Link></li>
-                    <li><Link href="guide/pages/video">Video</Link></li>
                     <li><Link href="guide/pages/component">Component</Link></li>
                 </ul>
             </header>
