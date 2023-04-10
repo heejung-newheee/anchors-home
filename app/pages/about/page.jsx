@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import './about.scss'
-import Link from "next/link";
 
 export const metadata = {
   title: 'Anchors',
