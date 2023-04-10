@@ -32,7 +32,7 @@ export default function GuideButton() {
                         <article>
                             <strong className="title">%btn-primary-normal</strong>
                             <div className="box">
-                                button &#123; %btn-primary-normal &#125;
+                                button &#123; @extend %btn-primary-normal &#125;
                             </div>
                             <div className="cta-outer" style={{backgroundColor :variables.colorDarkgrey, padding: '10px'}}>
                                 <button className="btn-primary-normal"><span>BtnPrimaryNormal</span></button>
@@ -42,7 +42,7 @@ export default function GuideButton() {
                         <article>
                             <strong className="title">%btn-primary-ghost</strong>
                             <div className="box">
-                                button &#123; %btn-primary-ghost &#125;
+                                button &#123; @extend %btn-primary-ghost &#125;
                             </div>
                             <div className="cta-outer" style={{backgroundColor :variables.colorDarkgrey, padding: '10px'}}>
                                 <button className="btn-primary-ghost"><span>BtnPrimaryGhost</span></button>
@@ -52,7 +52,7 @@ export default function GuideButton() {
                         <article>
                             <strong className="title">%btn-secondary-up</strong>
                             <div className="box">
-                                button &#123; %btn-secondary-up &#125;
+                                button &#123; @extend %btn-secondary-up &#125;
                             </div>
                             <div className="cta-outer" style={{backgroundColor :variables.colorDarkgrey, padding: '10px'}}>
                                 <button className="btn-secondary-up"><span>Btn<br/>Secondary<br/>Up</span></button>
@@ -62,7 +62,7 @@ export default function GuideButton() {
                         <article>
                             <strong className="title">%btn-secondary-down</strong>
                             <div className="box">
-                                button &#123; %btn-secondary-down &#125;
+                                button &#123; @extend %btn-secondary-down &#125;
                             </div>
                             <div className="cta-outer" style={{backgroundColor :variables.colorDarkgrey, padding: '10px'}}>
                                 <button className="btn-secondary-down"><span>Btn<br/>Secondary<br/>Down</span></button>
