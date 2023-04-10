@@ -1,4 +1,5 @@
 /* S : guide Common */
+.header, .footer { display: none; }
 .guide {
   @extend %layout-fix;
 
