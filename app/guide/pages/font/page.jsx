@@ -1,11 +1,6 @@
-import variables from '@/public/assets/css/_variables.module.scss';
+import variables from '/public/assets/css/_variables.scss';
 import '../../guide.scss';
 import Link from "next/link";
-
-export const metadata = {
-    title: 'Anchors Guide Font',
-    description: '',
-}
 
 export default function GuideFont() {
     return (
@@ -18,6 +13,7 @@ export default function GuideFont() {
                     <li className="active"><Link href="guide/pages/font">Font</Link></li>
                     <li><Link href="guide/pages/color">Color</Link></li>
                     <li><Link href="guide/pages/button">Button</Link></li>
+                    <li><Link href="guide/pages/video">Video</Link></li>
                     <li><Link href="guide/pages/component">Component</Link></li>
                 </ul>
             </header>
