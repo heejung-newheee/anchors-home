@@ -1,11 +1,14 @@
+"use client"
 import variables from '@/public/assets/css/_variables.module.scss';
 import '../../guide.scss';
 import Link from "next/link";
+import Logo from "@/components/Logo/Logo";
+import Btn from "@/components/Btn/Btn";
 
-export const metadata = {
-    title: 'Anchors Guide Component',
-    description: '',
-}
+// export const metadata = {
+//     title: 'Anchors Guide Component',
+//     description: '',
+// }
 
 export default function GuideComponent() {
     return (
@@ -31,8 +34,8 @@ export default function GuideComponent() {
 
                     <dt>Component Option</dt>
                     <dd>
-
-
+                        <Btn type="link" url="/" design="btnSecondaryUp">button</Btn>
+                        <Logo/>
                     </dd>
 
                 </dl>

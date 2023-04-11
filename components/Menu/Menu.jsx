@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Menu() {
   return (
-      <!-- header_footer.json 호출 -->
+      <!-- header_footer.js 호출 -->
       <article className="menu">
           {/* Btn component */} <!-- 햄버거 버튼 -->
           <div className="gnb-wrap">

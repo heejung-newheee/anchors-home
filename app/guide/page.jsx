@@ -44,7 +44,7 @@ export default function Guide() {
                         <p>작업 전 먼저 구현해야할 구조 및 기능이 공통 컴포넌트에 존재하는지 확인하고, 존재한다면 공통 컴포넌트를 최우선에서 사용한다.</p>
                         <p>공통 컴포넌트를 활용하지 못할 상황일 때는 각 페이지 내에서 자유롭게 작성한다.</p>
                         <p>컴포넌트 가이드 파일을 확인하여 각 컴포넌트의 규칙 및 props 조건을 확인하여 사용한다.</p>
-                        <p><a href="/assets/guide/Anchors_Homepage_Componet_Guide05.pdf" title="" target="_blank" style={{textDecoration: 'underline'}}>컴포넌트 가이드 PDF 열기</a></p>
+                        <p><a href="/assets/guide/Anchors_Homepage_Componet_Guide.pdf" title="" target="_blank" style={{textDecoration: 'underline'}}>컴포넌트 가이드 PDF 열기</a></p>
                     </dd>
 
                     <dt>Naming Rule</dt>
@@ -100,7 +100,7 @@ export default function Guide() {
                     <dd>
                         <p>Json 가이드 파일에서 제공하는 규칙을 토대로 작성한다.</p>
                         <p>예시의 값을 그대로 사용한다.</p>
-                        <p><a href="/assets/guide/Anchors_Homepage_Json_Guide05.pdf" title="" target="_blank" style={{textDecoration: 'underline'}}>JSON 가이드 PDF 열기</a></p>
+                        <p><a href="/assets/guide/Anchors_Homepage_Json_Guide.pdf" title="" target="_blank" style={{textDecoration: 'underline'}}>JSON 가이드 PDF 열기</a></p>
                     </dd>
 
                 </dl>

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-      <footer className="footer"> {/*header_footer.json 호출*/}
+      <footer className="footer"> {/*header_footer.js 호출*/}
           <div className="lottie-wrap">
               {/* Lottie component */} {/*Lottie component (Ready to talk about your works?)*/}
               {/* Lottie component */} {/*Lottie component (손가락모션)*/}
