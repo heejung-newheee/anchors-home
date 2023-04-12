@@ -35,6 +35,7 @@ export default function GuideComponent() {
                     <dd>
                         <Btn type="link" url="/" design="btnSecondaryUp">button</Btn>
                         <Logo/>
+                        <Btn type="button">button</Btn>
 
 
                     </dd>
