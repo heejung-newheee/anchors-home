@@ -1,17 +1,20 @@
 "use client"
 import Image from 'next/image'
 import Link from "next/link";
+import './Btn.scss';
 
-export default function Btn() {
-  // props list = type, style, alt
-
+export default function Btn( {type , url, alt, design, children} ) {
   return (
     <>
-      <button></button>
+      {type === "" && <button type="button" className={design}><span>{children}</span></button> }
 
-      <a href="@/components/Btn/Btn"></a>
+      {type === "button" && <button type="button" className={design}><span>{children}</span></button> }
 
-      <Link></Link>
+      {type === "submit" && <button type="submit" className={design}><span>{children}</span></button> }
+
+      {type === "a" && <a href={url} title={alt} className={design}><span>{children}</span></a> }
+
+      {type === "link" && <Link href={url} title={alt} className={design}><span>{children}</span></Link>}
     </>
   )
 }
