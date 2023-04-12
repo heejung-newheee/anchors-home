@@ -12,6 +12,8 @@ export default function Logo() {
         {/*  로고 이미지  */}
           {JSON.stringify(headerFooter)}
           {headerFooter.copyright}
+
+          <Image src="ico-btn-black-down.svg" width={100} height={100} priority/>
         </Btn>
         <Image
         src={headerFooter.sendEmail}
