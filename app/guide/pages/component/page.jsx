@@ -1,4 +1,4 @@
-import variables from '@/public/assets/css/_variables.module.scss';
+import variables from '@/public/assets/scss/_variables.module.scss';
 import '../../guide.scss';
 import Link from "next/link";
 import Logo from "@/components/Logo/Logo";
@@ -16,7 +16,7 @@ export default function GuideComponent() {
                 <h1 className="fontSize-h1">Guide</h1>
 
                 <ul>
-                    <li><Link href="../../guide">Rule</Link></li>
+                    <li><Link href="guide">Rule</Link></li>
                     <li><Link href="guide/pages/layout">Layout</Link></li>
                     <li><Link href="guide/pages/font">Font</Link></li>
                     <li><Link href="guide/pages/color">Color</Link></li>

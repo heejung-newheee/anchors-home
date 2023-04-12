@@ -2,8 +2,7 @@
 import Image from 'next/image'
 import Link from "next/link";
 import Btn from "@/components/Btn/Btn";
-import headerFooter from "@/helper/data/json/headerFooter.json";
-
+import headerFooter from "@/helper/data/json/contents/headerFooter.json";
 
 export default function Logo() {
 
@@ -14,6 +13,12 @@ export default function Logo() {
           {JSON.stringify(headerFooter)}
           {headerFooter.copyright}
         </Btn>
+        <Image
+        src={headerFooter.sendEmail}
+        width={100}
+        height={100}
+        className="image-width"
+        />
       </h1>
   )
 }

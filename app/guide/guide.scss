@@ -1,4 +1,4 @@
-/* S : guide Common */
+/* S : pdf Common */
 .header, .footer { display: none; }
 .guide {
   @extend %layout-fix;
@@ -33,9 +33,9 @@
       }
     }
   }
-/* E: guide Common */
+/* E: pdf Common */
 
-/* S: guide content */
+/* S: pdf content */
   main {
 
     dl {
@@ -95,9 +95,9 @@
       }
     }
   }
-/* E:  guide content */
+/* E:  pdf content */
 }
-// 임시 guide 클래스명
+// 임시 pdf 클래스명
 .fontH1 { @extend %font-h1 }
 .fontH2 { @extend %font-h2 }
 .fontH3 { @extend %font-h3 }

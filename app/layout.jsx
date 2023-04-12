@@ -1,4 +1,4 @@
-import '@/public/assets/css/_reset.scss';
+import '@/public/assets/scss/_reset.scss';
 // import Header from "@/components/Header/Header";
 // import Footer from "@/components/Footer/Footer";
 // import {getFontDefinitions} from "@/helper/init-helper";

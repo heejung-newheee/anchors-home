@@ -1,0 +1,31 @@
+{
+  "copyright" : "All Rights Reserved ©Anchors 2023",
+  "sendEmail": "/assets/images/ico/ico-btn-black-down.svg",
+  "menuList" : [
+    {
+      "name" : "",
+      "url" : "",
+      "alt" : ""
+    },
+    {
+      "name" : "",
+      "url" : "",
+      "alt" : ""
+    },
+    {
+      "name" : "",
+      "url" : "",
+      "alt" : ""
+    },
+    {
+      "name" : "",
+      "url" : "",
+      "alt" : ""
+    },
+    {
+      "name" : "",
+      "url" : "",
+      "alt" : ""
+    }
+  ]
+}
