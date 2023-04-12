@@ -1,4 +1,3 @@
-"use client"
 import variables from '@/public/assets/css/_variables.module.scss';
 import '../../guide.scss';
 import Link from "next/link";
