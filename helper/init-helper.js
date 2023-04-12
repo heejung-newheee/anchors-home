@@ -1,3 +1,8 @@
+import jquery from '@/helper/data/lib/jquery_loader'
+import variables from '@/public/assets/scss/_variables.module.scss';
+
+export const initHelper = () => ({ jquery , variables });
+
 // import {getFontDefinitions} from "@/helper/init-helper";
 // const {covered, pretendard, stolzl} = getFontDefinitions();
 
