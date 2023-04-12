@@ -1,15 +1,20 @@
 "use client"
 import Image from 'next/image'
 import Link from "next/link";
+import './Visual.scss'
 
-export default function Visual() {
-    // props list = imgUrl, dimm
+export default function Visual( {imgUrl, dimm, children} ) {
+
+  const dimmClass = dimm === "Y" ? " dimmed" : "";
 
   return (
-      <article className="visual"> <!-- {dimm} style="background-image:url(' {imgUrl.json} || {imgUrl.string} ');"-->
-        <!-- 사용자가 컴포넌트에 직접 입력한 마크업이 들어가는 영역 -->
-          {}
-        <!-- // 사용자가 컴포넌트에 직접 입력한 마크업이 들어가는 영역 -->
-    </article>
+      <article className={"visual" + dimmClass} style={{backgroundImage:`url(${imgUrl})`}}>
+          {children}
+      </article>
   )
+
+}
+{/* dimm 초기값 설정 */}
+Visual.defaultProps = {
+  dimm: "N"
 }
