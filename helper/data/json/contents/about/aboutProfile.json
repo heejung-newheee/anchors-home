@@ -1,0 +1,96 @@
+{
+  "imgUrl": "이미지 이동경로",
+  "scale": {
+    "annual": ["6","Years"],
+    "members": ["94","Members"],
+    "total": ["8.3","Billions"]
+  },
+  "award":
+    [
+      {
+        "name": "Web awards PC Web best grand prize",
+        "description": "2020 · Genesis brand website"
+      },
+      {
+        "name": "Web Awards Technology Innovation Awards",
+        "description": "2019 · Kia Motors 2.0 Advancement Project"
+      }
+    ],
+  "customerLogo": [
+    {
+      "name": "HYUNDAI",
+      "img": "이미지 파일명",
+      "alt": "대체 텍스트"
+    },
+    {
+      "name": "HYUNDAI motor group",
+      "img": "",
+      "alt": ""
+    },
+    {
+      "name": "HANKOOK driving emotion",
+      "img": "",
+      "alt": ""
+    },
+    {
+      "name": "GENESIS",
+      "img": "",
+      "alt": ""
+    },
+    {
+      "name": "AIA",
+      "img": "",
+      "alt": ""
+    },
+    {
+      "name": "KOREAN AIR",
+      "img": "",
+      "alt": ""
+    },
+    {
+      "name": "CHANEL",
+      "img": "",
+      "alt": ""
+    },
+    {
+      "name": "LG전자",
+      "img": "",
+      "alt": ""
+    },
+    {
+      "name": "KIA",
+      "img": "",
+      "alt": ""
+    },
+    {
+      "name": "DOOSAN",
+      "img": "",
+      "alt": ""
+    },
+    {
+      "name": "SAMSUNG SDI",
+      "img": "",
+      "alt": ""
+    },
+    {
+      "name": "삼성전자",
+      "img": "",
+      "alt": ""
+    },
+    {
+      "name": "AMOREPACIFIC",
+      "img": "",
+      "alt": ""
+    },
+    {
+      "name": "HYUNDAI GLOVIS",
+      "img": "",
+      "alt": ""
+    },
+    {
+      "name": "HYUNDAI engineering",
+      "img": "",
+      "alt": ""
+    },
+  ]
+}
