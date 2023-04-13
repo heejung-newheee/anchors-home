@@ -1,18 +1,22 @@
+"use client"
 import Image from 'next/image'
 // import Header from "@/components/Header/Header";
 import Link from "next/link";
-
-export const metadata = {
-  title: 'Anchors',
-  description: '',
-}
+import "./scss/main.scss";
+import {initHelper} from "@/helper/init-helper";
+const {jquery , variables} = initHelper();
 
 export default function Home() {
+  // $(function(){
+  //   alert();
+  // });
   return (
    <>
      {/*<Header />*/}
      <Link href="guide" className="name-is-cha" style={{lineHeight: "10px"}}>guide</Link><br/>
      <Link href="pages/about">about</Link>
+
+     <p className="text">mediaQuery type - </p>
    </>
   )
 }

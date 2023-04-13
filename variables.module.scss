@@ -62,39 +62,25 @@ $color-lightgrey : #E4E4E4;
 // S: for expend
 
 // layout
-%layout-fix { max-width: $breakpoint-wide; margin: 0 auto; padding: 0 48px; }
-@include desktop { %layout-fix { max-width: auto; margin: 0 auto; padding: 0 32px; } }
-@include tablet { %layout-fix { max-width: auto; margin: 0 auto; padding: 0 24px; } }
+%layout-fix { max-width: auto; margin: 0 auto; padding: 0 24px; }
 @include mobile { %layout-fix { max-width: auto; margin: 0 auto; padding: 0 24px; } }
+@include desktop { %layout-fix { max-width: auto; margin: 0 auto; padding: 0 32px; } }
+@include wide { %layout-fix { max-width: $breakpoint-wide; margin: 0 auto; padding: 0 48px; } }
 
 // font size
-%font-h1 { font-size: 200px; line-height: 200px; }
-%font-h2 { font-size: 104px; line-height: 114px; }
-%font-h3 { font-size: 56px; line-height: 78px; }
-%font-h4 { font-size: 50px; line-height: 70px; }
-%font-h5 { font-size: 38px; line-height: 50px; }
-%font-h6 { font-size: 32px; line-height: 45px; }
-%font-h7 { font-size: 28px; line-height: 40px; }
-%font-h8 { font-size: 24px; line-height: 34px; }
-%font-body1 { font-size: 20px; line-height: 32px; }
-%font-body2 { font-size: 18px; line-height: 28px; }
-%font-body3 { font-size: 18px; line-height: 28px; }
-%font-caption { font-size: 16px; line-height: 24px; }
+%font-h1 { font-size: 60px; line-height: 60px; }
+%font-h2 { font-size: 50px; line-height: 58px; }
+%font-h3 { font-size: 28px; line-height: 40px; }
+%font-h4 { font-size: 22px; line-height: 30px; }
+%font-h5 { font-size: 22px; line-height: 30px; }
+%font-h6 { font-size: 18px; line-height: 26px; }
+%font-h7 { font-size: 18px; line-height: 26px; }
+%font-h8 { font-size: 16px; line-height: 26px; }
+%font-body1 { font-size: 16px; line-height: 26px; }
+%font-body2 { font-size: 12px; line-height: 20px; }
+%font-body3 { font-size: 14px; line-height: 22px; }
+%font-caption { font-size: 12px; line-height: 18px; }
 
-@include desktop {
-  %font-h1 { font-size: 160px; line-height: 160px; }
-  %font-h2 { font-size: 90px; line-height: 100px; }
-  %font-h3 { font-size: 46px; line-height: 64px; }
-  %font-h4 { font-size: 42px; line-height: 58px; }
-  %font-h5 { font-size: 32px; line-height: 42px; }
-  %font-h6 { font-size: 28px; line-height: 40px; }
-  %font-h7 { font-size: 24px; line-height: 34px; }
-  %font-h8 { font-size: 22px; line-height: 30px; }
-  %font-body1 { font-size: 18px; line-height: 28px; }
-  %font-body2 { font-size: 16px; line-height: 24px; }
-  %font-body3 { font-size: 16px; line-height: 24px; }
-  %font-caption { font-size: 14px; line-height: 22px; }
-}
 @include tablet {
   %font-h1 { font-size: 120px; line-height: 120px; }
   %font-h2 { font-size: 80px; line-height: 90px; }
@@ -109,19 +95,33 @@ $color-lightgrey : #E4E4E4;
   %font-body3 { font-size: 16px; line-height: 24px; }
   %font-caption { font-size: 12px; line-height: 18px; }
 }
-@include mobile {
-  %font-h1 { font-size: 60px; line-height: 60px; }
-  %font-h2 { font-size: 50px; line-height: 58px; }
-  %font-h3 { font-size: 28px; line-height: 40px; }
-  %font-h4 { font-size: 22px; line-height: 30px; }
-  %font-h5 { font-size: 22px; line-height: 30px; }
-  %font-h6 { font-size: 18px; line-height: 26px; }
-  %font-h7 { font-size: 18px; line-height: 26px; }
-  %font-h8 { font-size: 16px; line-height: 26px; }
-  %font-body1 { font-size: 16px; line-height: 26px; }
-  %font-body2 { font-size: 12px; line-height: 20px; }
-  %font-body3 { font-size: 14px; line-height: 22px; }
-  %font-caption { font-size: 12px; line-height: 18px; }
+@include desktop {
+  %font-h1 { font-size: 160px; line-height: 160px; }
+  %font-h2 { font-size: 90px; line-height: 100px; }
+  %font-h3 { font-size: 46px; line-height: 64px; }
+  %font-h4 { font-size: 42px; line-height: 58px; }
+  %font-h5 { font-size: 32px; line-height: 42px; }
+  %font-h6 { font-size: 28px; line-height: 40px; }
+  %font-h7 { font-size: 24px; line-height: 34px; }
+  %font-h8 { font-size: 22px; line-height: 30px; }
+  %font-body1 { font-size: 18px; line-height: 28px; }
+  %font-body2 { font-size: 16px; line-height: 24px; }
+  %font-body3 { font-size: 16px; line-height: 24px; }
+  %font-caption { font-size: 14px; line-height: 22px; }
+}
+@include wide {
+  %font-h1 { font-size: 200px; line-height: 200px; }
+  %font-h2 { font-size: 104px; line-height: 114px; }
+  %font-h3 { font-size: 56px; line-height: 78px; }
+  %font-h4 { font-size: 50px; line-height: 70px; }
+  %font-h5 { font-size: 38px; line-height: 50px; }
+  %font-h6 { font-size: 32px; line-height: 45px; }
+  %font-h7 { font-size: 28px; line-height: 40px; }
+  %font-h8 { font-size: 24px; line-height: 34px; }
+  %font-body1 { font-size: 20px; line-height: 32px; }
+  %font-body2 { font-size: 18px; line-height: 28px; }
+  %font-body3 { font-size: 18px; line-height: 28px; }
+  %font-caption { font-size: 16px; line-height: 24px; }
 }
 
 // btn

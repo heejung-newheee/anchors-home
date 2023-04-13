@@ -1,0 +1,6 @@
+@include tablet {
+  .text:after {
+    content: "tablet";
+    display: inline;
+  }
+}

@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import './about.scss'
@@ -5,11 +6,6 @@ import ElementTitle from '@/components/ElementTitle/ElementTitle'
 import Visual from '@/components/Visual/Visual'
 import SwiperArea from '@/components/SwiperArea/SwiperArea'
 import LottiePlayer from '@/components/Lottie/LottiePlayer'
-
-export const metadata = {
-  title: 'Anchors',
-  description: '',
-}
 
 const inter = Inter({ subsets: ['latin'] })
 

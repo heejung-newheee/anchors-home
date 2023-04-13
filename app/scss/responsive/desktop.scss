@@ -1,0 +1,6 @@
+@include desktop {
+  .text:after {
+    content:"desktop";
+    display: inline;
+  }
+}
