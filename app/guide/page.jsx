@@ -66,6 +66,10 @@ export default function Guide() {
                         <p>공통 scss 위치 : public/assets/css/</p>
                         <p>각 페이지 scss 위치 : 각 페이지의 page.js와 나란히 정렬한다.</p>
                         <p>컴포넌트 scss 위치 : 각 컴포넌트.js와 나란히 정렬한다.</p>
+                        <p>guide 변수를 jsx사에 직접 입력할 경우 하기 소스를 import 한다.</p>
+                        <div className="box">
+                            import variables from '@/public/assets/scss/_variables.module.scss';
+                        </div>
                         <p>가이드에서 제공하는 변수 값은 scss 상에서는 속성값에 $변수명 을 적용하며, 페이지 상에서 직접 적용시에는 속성값에 '$'와'-'을 제외하고 camelClass를 적용하여 variables.변수값 으로 적용한다.</p>
                         <div className="box">
                             <p>
@@ -97,6 +101,14 @@ export default function Guide() {
                         <p>Json 가이드 파일에서 제공하는 규칙을 토대로 작성한다.</p>
                         <p>Json 가이드 파일에서 제공하는 예시의 값을 그대로 사용한다.</p>
                         {/*<p><a href="guide/pages/pdf/Anchors_Homepage_Json_Guide.pdf" title="" target="_blank" style={{textDecoration: 'underline'}}>JSON 가이드 PDF 열기</a></p>*/}
+                    </dd>
+
+                    <dt>Library Rule</dt>
+                    <dd>
+                        <p>jquery library를 사용할 경우 사용할 페이지에 하기 소스를 import 한다.</p>
+                        <div className="box">
+                            import jquery from '@/helper/libs/jquery_loader'
+                        </div>
                     </dd>
 
                 </dl>
