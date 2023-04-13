@@ -1,7 +1,5 @@
-import jquery from '@/public/lib/jquery_loader'
+import jquery from '@/helper/lib/jquery_loader'
 import variables from '@/public/assets/scss/_variables.module.scss';
-// import dynamic from 'next/dynamic'
-// const jquery= dynamic(() => import("@/public/lib/jquery_loader"), { ssr: false });
 
 export const initHelper = () => ({ jquery , variables });
 

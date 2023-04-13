@@ -7,9 +7,9 @@ import {initHelper} from "@/helper/init-helper";
 const {jquery , variables} = initHelper();
 
 export default function Home() {
-  $(function(){
-    alert();
-  });
+  // $(function(){
+  //   alert();
+  // });
   return (
    <>
      {/*<Header />*/}
