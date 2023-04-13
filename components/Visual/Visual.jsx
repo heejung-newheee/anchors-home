@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from "next/link";
 import './Visual.scss'
 
-export default function Visual( {imgUrl, dimm, children} ) {
+export default function Visual( {imgUrl, dimm = "N", children} ) {
 
   const dimmClass = dimm === "Y" ? " dimmed" : "";
 
@@ -13,8 +13,4 @@ export default function Visual( {imgUrl, dimm, children} ) {
       </article>
   )
 
-}
-{/* dimm 초기값 설정 */}
-Visual.defaultProps = {
-  dimm: "N"
 }
