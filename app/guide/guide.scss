@@ -11,7 +11,7 @@
       line-height: 50vh !important;
       text-align: center;
       font-weight: 900;
-      @extend %font-h1;
+      @extend %font-pageTitle;
     }
 
     ul {
@@ -98,18 +98,18 @@
 /* E:  pdf content */
 }
 // 임시 pdf 클래스명
-.fontH1 { @extend %font-h1 }
-.fontH2 { @extend %font-h2 }
-.fontH3 { @extend %font-h3 }
-.fontH4 { @extend %font-h4 }
-.fontH5 { @extend %font-h5 }
-.fontH6 { @extend %font-h6 }
-.fontH7 { @extend %font-h7 }
-.fontH8 { @extend %font-h8 }
-.fontBody1 { @extend %font-body1 }
-.fontBody2 { @extend %font-body2 }
-.fontBody3 { @extend %font-body3 }
-.fontCaption { @extend %font-caption }
+.fontPageTitle { @extend %font-pageTitle }
+.fontVisualTitle { @extend %font-visualTitle }
+.fontSectionTitle { @extend %font-sectionTitle }
+.fontEnIntro { @extend %font-enIntro }
+.fontContentsTitle { @extend %font-contentsTitle }
+.fontListTitle { @extend %font-listTitle }
+.fontBaseArticle { @extend %font-baseArticleTitle }
+.fontVisualDescription { @extend %font-visualDescription }
+.fontPrimary { @extend %font-primary }
+.fontDisclaimer { @extend %font-disclaimer }
+.fontTabAccContents { @extend %font-tabAccContents }
+.fontDevice { @extend %font-device }
 
 .btn-primary-normal { @extend %btn-primary-normal }
 .btn-primary-ghost { @extend %btn-primary-ghost }
