@@ -2,11 +2,6 @@ import variables from '@/public/assets/scss/_variables.module.scss';
 import './guide.scss';
 import Link from "next/link";
 
-export const metadata = {
-    title: 'Anchors Guide',
-    description: '',
-}
-
 export default function Guide() {
     return (
         <div className="guide">

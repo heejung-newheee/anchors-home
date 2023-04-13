@@ -2,11 +2,6 @@ import variables from '@/public/assets/scss/_variables.module.scss';
 import '../../guide.scss';
 import Link from "next/link";
 
-export const metadata = {
-    title: 'Anchors Guide Color',
-    description: '',
-}
-
 export default function GuideColor() {
     return (
         <div className="guide">

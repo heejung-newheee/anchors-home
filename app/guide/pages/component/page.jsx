@@ -4,11 +4,6 @@ import Link from "next/link";
 import Logo from "@/components/Logo/Logo";
 import Btn from "@/components/Btn/Btn";
 
-export const metadata = {
-    title: 'Anchors Guide Component',
-    description: '',
-}
-
 export default function GuideComponent() {
     return (
         <div className="guide">
