@@ -1,20 +1,28 @@
-"use client"
-import Image from 'next/image'
-import Link from "next/link";
-// import AccordionTitle from "@/components/AccordionTitle/AccordionTitle";
-// import AccordionContents from "@/components/AccordionContents/AccordionContents";
+'use client';
+import React, { useState } from 'react';
 
-export default function Accordion() {
+import Image from 'next/image';
+import Link from 'next/link';
+
+import AccordionChild from '@/components/AccordionContents/AccordionChild';
+
+// import AccordionChild from "@/components/AccordionChild/AccordionChild";
+
+export default function Accordion({ children, contents }) {
+  const [selected, setSelected] = useState(0);
+
   return (
-      <dl className="accordion">
-        {/*작업자 자유 영역*/}
-          {/*AccordionTitle*/}{/*activeOtion="Y"*/}
-            아코디언 타이틀
-          {/*// AccordionTitle*/}
-          {/*AccordionContents*/}
-           아코디언 컨텐츠
-          {/*// AccordionContents*/}
-        {/*작업자 자유 영역*/}
-      </dl>
-  )
+    <dl className="accordion">
+      {contents.map((accordionChild, index) => (
+        <AccordionChild
+          key={index}
+          titleData={accordionChild.title}
+          activeOption={selected === index ? 'Y' : 'N'}
+          onClick={() => setSelected(index)}
+        >
+          {accordionChild.content}
+        </AccordionChild>
+      ))}
+    </dl>
+  );
 }
