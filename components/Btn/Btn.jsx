@@ -3,6 +3,9 @@ import Image from 'next/image'
 import Link from "next/link";
 import './Btn.scss';
 
+import {initHelper} from "@/helper/init-helper";
+const {jquery , variables} = initHelper();
+
 export default function Btn( {type , url, alt, design, children} ) {
   return (
     <>
