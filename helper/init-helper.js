@@ -1,5 +1,5 @@
 import jquery from '@/helper/libs/jquery_loader'
 import variables from '@/public/assets/scss/_variables.module.scss';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+i// mport { Helmet, HelmetProvider } from 'react-helmet-async';
 
-export const initHelper = () => ({ jquery , variables, Helmet, HelmetProvider});
+export const initHelper = () => ({ jquery , variables});
