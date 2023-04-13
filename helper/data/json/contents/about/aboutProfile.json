@@ -19,78 +19,78 @@
   "customerLogo": [
     {
       "name": "HYUNDAI",
-      "img": "이미지 파일명",
+      "img": "img-logo-hyundai.png",
       "alt": "대체 텍스트"
     },
     {
       "name": "HYUNDAI motor group",
-      "img": "",
+      "img": "img-logo-hyundaimotor.png",
       "alt": ""
     },
     {
       "name": "HANKOOK driving emotion",
-      "img": "",
+      "img": "img-logo-hankook.png",
       "alt": ""
     },
     {
       "name": "GENESIS",
-      "img": "",
+      "img": "img-logo-genesis.png",
       "alt": ""
     },
     {
       "name": "AIA",
-      "img": "",
+      "img": "img-logo-aia.png",
       "alt": ""
     },
     {
       "name": "KOREAN AIR",
-      "img": "",
+      "img": "img-logo-koreanair.png",
       "alt": ""
     },
     {
       "name": "CHANEL",
-      "img": "",
+      "img": "img-logo-chanel.png",
       "alt": ""
     },
     {
       "name": "LG전자",
-      "img": "",
+      "img": "img-logo-lg.png",
       "alt": ""
     },
     {
       "name": "KIA",
-      "img": "",
+      "img": "img-logo-kia.png",
       "alt": ""
     },
     {
       "name": "DOOSAN",
-      "img": "",
+      "img": "img-logo-doosan.png",
       "alt": ""
     },
     {
       "name": "SAMSUNG SDI",
-      "img": "",
+      "img": "img-logo-samsungsdi.png",
       "alt": ""
     },
     {
       "name": "삼성전자",
-      "img": "",
+      "img": "img-logo-samsung.png",
       "alt": ""
     },
     {
       "name": "AMOREPACIFIC",
-      "img": "",
+      "img": "img-logo-amore.png",
       "alt": ""
     },
     {
       "name": "HYUNDAI GLOVIS",
-      "img": "",
+      "img": "img-logo-glovis.png",
       "alt": ""
     },
     {
       "name": "HYUNDAI engineering",
-      "img": "",
+      "img": "img-logo-engineering.png",
       "alt": ""
-    },
+    }
   ]
 }
