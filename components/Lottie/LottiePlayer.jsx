@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 const DEFAULT_STYLE = { border: '1px solid #f00' };
