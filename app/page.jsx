@@ -1,19 +1,15 @@
+"use client"
 import Image from 'next/image'
 // import Header from "@/components/Header/Header";
 import Link from "next/link";
 import "./scss/main.scss";
-// import {initHelper} from "@/helper/init-helper";
-// const {jquery , variables} = initHelper();
-// import dynamic from 'next/dynamic'
-// const jquery= dynamic(() => import("@/public/lib/jquery_loader"), { ssr: false });
-// import "@/public/lib/jquery_loader";
-
-export const metadata = {
-  title: 'Anchors',
-  description: '',
-}
+import {initHelper} from "@/helper/init-helper";
+const {jquery , variables} = initHelper();
 
 export default function Home() {
+  $(function(){
+    alert();
+  });
   return (
    <>
      {/*<Header />*/}
