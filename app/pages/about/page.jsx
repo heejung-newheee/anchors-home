@@ -4,6 +4,7 @@ import './about.scss'
 import ElementTitle from '@/components/ElementTitle/ElementTitle'
 import Visual from '@/components/Visual/Visual'
 import SwiperArea from '@/components/SwiperArea/SwiperArea'
+import LottiePlayer from '@/components/Lottie/LottiePlayer'
 
 export const metadata = {
   title: 'Anchors',
@@ -32,6 +33,7 @@ export default function About() {
 
       {/* SwiperArea component test */}
       <SwiperArea />
+      <LottiePlayer src="/lottie/lottie_aboutus.json" style={{ height: '300px', width: '300px' }} />
     </div>
   )
 }
