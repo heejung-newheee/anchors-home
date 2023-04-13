@@ -1,6 +1,7 @@
 'use client';
 
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
+const DEFAULT_STYLE = { border: '1px solid #f00' };
 
 /**
  * LOTTIE OPTION
@@ -14,18 +15,16 @@ import { Player, Controls } from '@lottiefiles/react-lottie-player';
  * @returns {JSX.Element}
  * @constructor
  */
-
 function LottiePlayer({
   loop = true,
   autoplay = true,
   render = 'svn',
-  src,
-  style = {},
+  src = '',
+  style = DEFAULT_STYLE,
   visible = false,
   buttons = ['play', 'repeat', 'frame', 'debug'],
 }) {
-  const computedStyle = { ...{}, ...style };
-
+  const computedStyle = { ...DEFAULT_STYLE, ...style };
   return (
     <Player
       loop={loop}
