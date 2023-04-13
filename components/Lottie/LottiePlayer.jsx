@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
@@ -15,21 +15,28 @@ import { Player, Controls } from '@lottiefiles/react-lottie-player';
  * @constructor
  */
 
-function LottiePlayer({loop =true, autoplay=true, render="svn", src, style={}, visible=false}, buttons=['play', 'repeat', 'frame', 'debug']) {
+function LottiePlayer({
+  loop = true,
+  autoplay = true,
+  render = 'svn',
+  src,
+  style = {},
+  visible = false,
+  buttons = ['play', 'repeat', 'frame', 'debug'],
+}) {
+  const computedStyle = { ...{}, ...style };
+
   return (
     <Player
       loop={loop}
       autoplay={autoplay}
       renderer={render}
-      style={style}
+      style={computedStyle}
       src={src}
     >
-      <Controls
-        visible={visible}
-        buttons={buttons}
-      />
+      <Controls visible={visible} buttons={buttons} />
     </Player>
-  )
+  );
 }
 
 export default LottiePlayer;
