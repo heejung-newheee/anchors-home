@@ -1,17 +1,31 @@
 "use client";
 
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
-function LottiePlayer(props) {
+
+/**
+ * 로티 플레이어
+ * @param loop 반복합니다.
+ * @param autoplay 자동재생
+ * @param render 랜더방법 : "svg","canvas"
+ * @param src
+ * @param style
+ * @returns {JSX.Element}
+ * @constructor
+ */
+function LottiePlayer({loop =true, autoplay=true, render="svn", src, style={}, visible=false}, buttons=['play', 'repeat', 'frame', 'debug']) {
   return (
-    <div className="bg-green-500" style={{"backgroundColor" : "#1D1D1F"}}>
     <Player
-      autoplay
-      loop
-      renderer={"svg"}
-      style={props.style}
-      src={props.src}
-    ></Player>
-      </div>
+      loop={loop}
+      autoplay={autoplay}
+      renderer={render}
+      style={style}
+      src={src}
+    >
+      <Controls
+        visible={visible}
+        buttons={buttons}
+      />
+    </Player>
   )
 }
 
