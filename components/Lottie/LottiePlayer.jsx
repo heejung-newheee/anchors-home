@@ -3,15 +3,18 @@
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
 /**
- * 로티 플레이어
- * @param loop 반복합니다.
- * @param autoplay 자동재생
- * @param render 랜더방법 : "svg","canvas"
+ * LOTTIE OPTION
+ * @param loop
+ * @param autoplay
+ * @param render
  * @param src
  * @param style
+ * @param visible
+ * @param buttons
  * @returns {JSX.Element}
  * @constructor
  */
+
 function LottiePlayer({loop =true, autoplay=true, render="svn", src, style={}, visible=false}, buttons=['play', 'repeat', 'frame', 'debug']) {
   return (
     <Player

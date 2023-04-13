@@ -1,15 +1,14 @@
-"use client"
-import Image from 'next/image'
-// import Header from "@/components/Header/Header";
-import Link from "next/link";
 import "./scss/main.scss";
-import {initHelper} from "@/helper/init-helper";
-const {jquery , variables} = initHelper();
+import Image from 'next/image'
+import Link from "next/link";
+// import Header from "@/components/Header/Header";
 
-export default function Home() {
-  // $(function(){
-  //   alert();
-  // });
+export const metadata = {
+  title: 'Anchors',
+  description: 'Anchors',
+}
+
+export default function Main() {
   return (
    <>
      {/*<Header />*/}

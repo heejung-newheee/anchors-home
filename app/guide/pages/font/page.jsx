@@ -74,189 +74,194 @@ export default function GuideFont() {
                         </article>
                     </dd>
 
-                    <dt>Font Size Option</dt>
+                    <dt style={{padding: 0}}>Font Size Option</dt>
+                    <dt style={{backgroundColor: variables.colorBlack, color: variables.colorWhite, padding: "5px 0 10px", marginBottom : '10px'}}>Common</dt>
                     <dd>
                         <p>폰트사이즈 옵션은 모두 @extend하여, scss에 하기 변수값을 확인하여 적용한다.</p>
                         <p>일부 해상도에서 폰트사이즈가 겹치는 경우가 있으므로, 반응형 사이즈를 확인하여 적용한다.</p>
+                        <p>Common은 page font guide이며, Component는 component font guide이다. 단, 변수명은 필요에 따라 어느곳에건 활용 가능하다.</p>
 
                         <article>
-                            <strong className="title">%font-h1</strong>
+                            <strong className="title">%font-primary</strong>
                             <div className="box">
-                                h1 &#123; @extend %font-h1; &#125;
+                                .primary &#123; @extend %font-primary; &#125;
                             </div>
                             <p className="responsive">
-                                [WIDE] - font-size: 20rem; line-height: 20rem; <br/>
-                                [PC] - font-size: 16rem; line-height: 16rem; <br/>
-                                [TAB] - font-size: 12rem; line-height: 12rem; <br/>
-                                [MO] - font-size: 6rem; line-height: 6rem;
+                                [WIDE] - font-size: 20px; line-height: 32px; <br/>
+                                [PC] - font-size: 18px; line-height: 28px; <br/>
+                                [TAB] - font-size: 16px; line-height: 26px; <br/>
+                                [MO] - font-size: 16px; line-height: 26px;
                             </p>
-                            <p className="fontH1">%font-h1</p>
-                            <b className="fontH1">%font-h1</b>
+                            <p className="fontPrimary">%font-primary</p>
+                            <b className="fontPrimary">%font-primary</b>
                         </article>
 
                         <article>
-                            <strong className="title">%font-h2</strong>
+                            <strong className="title">%font-sectionTitle</strong>
                             <div className="box">
-                                h1 &#123; @extend %font-h2; &#125;
+                                .sectionTitle &#123; @extend %font-sectionTitle; &#125;
                             </div>
                             <p className="responsive">
-                                [WIDE] - font-size: 10.4rem; line-height: 11.4rem; <br/>
-                                [PC] - font-size: 9rem; line-height: 10rem; <br/>
-                                [TAB] - font-size: 8rem; line-height: 9rem; <br/>
-                                [MO] - font-size: 5rem; line-height: 5.8rem;
+                                [WIDE] - font-size: 56px; line-height: 78px; <br/>
+                                [PC] - font-size: 46px; line-height: 64px; <br/>
+                                [TAB] - font-size: 36px; line-height: 50px; <br/>
+                                [MO] - font-size: 28px; line-height: 40px;
                             </p>
-                            <p className="fontH2">%font-h2</p>
-                            <b className="fontH2">%font-h2</b>
+                            <p className="fontSectionTitle">%font-sectionTitle</p>
+                            <b className="fontSectionTitle">%font-sectionTitle</b>
                         </article>
 
                         <article>
-                            <strong className="title">%font-h3</strong>
+                            <strong className="title">%font-contentsTitle</strong>
                             <div className="box">
-                                h1 &#123; @extend %font-h3; &#125;
+                                .contentsTitle &#123; @extend %font-contentsTitle; &#125;
                             </div>
                             <p className="responsive">
-                                [WIDE] - font-size: 5.6rem; line-height: 7.8rem; <br/>
-                                [PC] - font-size: 4.6rem; line-height: 6.4rem; <br/>
-                                [TAB] - font-size: 3.6rem; line-height: 5rem; <br/>
-                                [MO] - font-size: 2.8rem; line-height: 4rem;
+                                [WIDE] - font-size: 38px; line-height: 5px; <br/>
+                                [PC] - font-size: 32px; line-height: 42px; <br/>
+                                [TAB] - font-size: 28px; line-height: 38px; <br/>
+                                [MO] - font-size: 22px; line-height: 3px;
                             </p>
-                            <p className="fontH3">%font-h3</p>
-                            <b className="fontH3">%font-h3</b>
+                            <p className="fontContentsTitle">%font-contentsTitle</p>
+                            <b className="fontContentsTitle">%font-contentsTitle</b>
                         </article>
 
                         <article>
-                            <strong className="title">%font-h4</strong>
+                            <strong className="title">%font-listTitle</strong>
                             <div className="box">
-                                h1 &#123; @extend %font-h4; &#125;
+                                .listTItle &#123; @extend %font-listTitle; &#125;
                             </div>
                             <p className="responsive">
-                                [WIDE] - font-size: 5rem; line-height: 7rem; <br/>
-                                [PC] - font-size: 4.2rem; line-height: 5.8rem; <br/>
-                                [TAB] - font-size: 3.4rem; line-height: 4.8rem; <br/>
-                                [MO] - font-size: 2.2rem; line-height: 3rem;
+                                [WIDE] - font-size: 32px; line-height: 45px; <br/>
+                                [PC] - font-size: 28px; line-height: 40px; <br/>
+                                [TAB] - font-size: 20px; line-height: 28px; <br/>
+                                [MO] - font-size: 18px; line-height: 26px;
                             </p>
-                            <p className="fontH4">%font-h4</p>
-                            <b className="fontH4">%font-h4</b>
+                            <p className="fontListTitle">%font-listTitle</p>
+                            <b className="fontListTitle">%font-listTitle</b>
                         </article>
 
                         <article>
-                            <strong className="title">%font-h5</strong>
+                            <strong className="title">%font-disclaimer</strong>
                             <div className="box">
-                                h1 &#123; @extend %font-h5; &#125;
+                                .disclaimer &#123; @extend %font-disclaimer; &#125;
                             </div>
                             <p className="responsive">
-                                [WIDE] - font-size: 3.8rem; line-height: 5rem; <br/>
-                                [PC] - font-size: 3.2rem; line-height: 4.2rem; <br/>
-                                [TAB] - font-size: 2.8rem; line-height: 3.8rem; <br/>
-                                [MO] - font-size: 2.2rem; line-height: 3rem;
+                                [WIDE] - font-size: 18px; line-height: 28px; <br/>
+                                [PC] - font-size: 16px; line-height: 24px; <br/>
+                                [TAB] - font-size: 14px; line-height: 22px; <br/>
+                                [MO] - font-size: 12px; line-height: 20px;
                             </p>
-                            <p className="fontH5">%font-h5</p>
-                            <b className="fontH5">%font-h5</b>
+                            <p className="fontDisclaimer">%font-disclaimer</p>
+                            <b className="fontDisclaimer">%font-disclaimer</b>
                         </article>
 
                         <article>
-                            <strong className="title">%font-h6</strong>
+                            <strong className="title">%font-enIntro</strong>
                             <div className="box">
-                                h1 &#123; @extend %font-h6; &#125;
+                                .enIntro &#123; @extend %font-enIntro; &#125;
                             </div>
                             <p className="responsive">
-                                [WIDE] - font-size: 3.2rem; line-height: 4.5rem; <br/>
-                                [PC] - font-size: 2.8rem; line-height: 4rem; <br/>
-                                [TAB] - font-size: 2.3rem; line-height: 2.8rem; <br/>
-                                [MO] - font-size: 1.8rem; line-height: 2.6rem;
+                                [WIDE] - font-size: 50px; line-height: 70px; <br/>
+                                [PC] - font-size: 42px; line-height: 58px; <br/>
+                                [TAB] - font-size: 34px; line-height: 48px; <br/>
+                                [MO] - font-size: 22px; line-height: 30px;
                             </p>
-                            <p className="fontH6">%font-h6</p>
-                            <b className="fontH6">%font-h6</b>
+                            <p className="fontEnIntro">%font-enIntro</p>
+                            <b className="fontEnIntro">%font-enIntro</b>
+                        </article>
+                    </dd>
+
+                    <dt style={{backgroundColor: variables.colorBlack, color: variables.colorWhite, padding: "5px 0 10px", marginBottom : '10px'}}>Component</dt>
+                    <dd>
+                        <article>
+                            <strong className="title">%font-pageTitle</strong>
+                            <div className="box">
+                                .pageTitle &#123; @extend %font-pageTitle; &#125;
+                            </div>
+                            <p className="responsive">
+                                [WIDE] - font-size: 200px; line-height: 200px; <br/>
+                                [PC] - font-size: 160px; line-height: 160px; <br/>
+                                [TAB] - font-size: 120px; line-height: 120px; <br/>
+                                [MO] - font-size: 60px; line-height: 60px;
+                            </p>
+                            <p className="fontPageTitle">%font-pageTitle</p>
+                            <b className="fontPageTitle">%font-pageTitle</b>
                         </article>
 
                         <article>
-                            <strong className="title">%font-h7</strong>
+                            <strong className="title">%font-visualTitle</strong>
                             <div className="box">
-                                h1 &#123; @extend %font-h7; &#125;
+                                .visualTitle &#123; @extend %font-visualTitle; &#125;
                             </div>
                             <p className="responsive">
-                                [WIDE] - font-size: 2.8rem; line-height: 4rem; <br/>
-                                [PC] - font-size: 2.4rem; line-height: 3.4rem; <br/>
-                                [TAB] - font-size: 2rem; line-height: 3rem; <br/>
-                                [MO] - font-size: 1.8rem; line-height: 2.6rem;
+                                [WIDE] - font-size: 104px; line-height: 114px; <br/>
+                                [PC] - font-size: 90px; line-height: 100px; <br/>
+                                [TAB] - font-size: 80px; line-height: 90px; <br/>
+                                [MO] - font-size: 50px; line-height: 58px;
                             </p>
-                            <p className="fontH7">%font-h7</p>
-                            <b className="fontH7">%font-h7</b>
+                            <p className="fontVisualTitle">%font-visualTitle</p>
+                            <b className="fontVisualTitle">%font-visualTitle</b>
                         </article>
 
                         <article>
-                            <strong className="title">%font-h8</strong>
+                            <strong className="title">%font-baseArticle</strong>
                             <div className="box">
-                                h1 &#123; @extend %font-h8; &#125;
+                                .baseArticle &#123; @extend %font-baseArticle; &#125;
                             </div>
                             <p className="responsive">
-                                [WIDE] - font-size: 2.4rem; line-height: 3.4rem; <br/>
-                                [PC] - font-size: 2.2rem; line-height: 3rem; <br/>
-                                [TAB] - font-size: 1.6rem; line-height: 2.4rem; <br/>
-                                [MO] - font-size: 1.4rem; line-height: 2.2rem;
+                                [WIDE] - font-size: 28px; line-height: 40px; <br/>
+                                [PC] - font-size: 24px; line-height: 34px; <br/>
+                                [TAB] - font-size: 22px; line-height: 30px; <br/>
+                                [MO] - font-size: 18px; line-height: 26px;
                             </p>
-                            <p className="fontH8">%font-h8</p>
-                            <b className="fontH8">%font-h8</b>
+                            <p className="fontBaseArticle">%font-baseArticle</p>
+                            <b className="fontBaseArticle">%font-baseArticle</b>
                         </article>
 
                         <article>
-                            <strong className="title">%font-body1</strong>
+                            <strong className="title">%font-visualDescription</strong>
                             <div className="box">
-                                h1 &#123; @extend %font-body1; &#125;
+                                .visualDescription &#123; @extend %font-visualDescription; &#125;
                             </div>
                             <p className="responsive">
-                                [WIDE] - font-size: 2rem; line-height: 3.2rem; <br/>
-                                [PC] - font-size: 1.8rem; line-height: 2.8rem; <br/>
-                                [TAB] - font-size: 1.6rem; line-height: 2.6rem; <br/>
-                                [MO] - font-size: 1.6rem; line-height: 2.6rem;
+                                [WIDE] - font-size: 24px; line-height: 34px; <br/>
+                                [PC] - font-size: 22px; line-height: 30px; <br/>
+                                [TAB] - font-size: 18px; line-height: 28px; <br/>
+                                [MO] - font-size: 16px; line-height: 26px;
                             </p>
-                            <p className="fontBody1">%font-body1</p>
-                            <b className="fontBody1">%font-body1</b>
+                            <p className="fontVisualDescription">%font-visualDescription</p>
+                            <b className="fontVisualDescription">%font-visualDescription</b>
                         </article>
 
                         <article>
-                            <strong className="title">%font-body2</strong>
+                            <strong className="title">%font-tabAccContents</strong>
                             <div className="box">
-                                h1 &#123; @extend %font-body2; &#125;
+                                .tabAccContents &#123; @extend %font-tabAccContents; &#125;
                             </div>
                             <p className="responsive">
-                                [WIDE] - font-size: 1.8rem; line-height: 2.8rem; <br/>
-                                [PC] - font-size: 1.6rem; line-height: 2.4rem; <br/>
-                                [TAB] - font-size: 1.4rem; line-height: 2.2rem; <br/>
-                                [MO] - font-size: 1.2rem; line-height: 2rem;
+                                [WIDE] - font-size: 18px; line-height: 28px; <br/>
+                                [PC] - font-size: 16px; line-height: 26px; <br/>
+                                [TAB] - font-size: 16px; line-height: 26px; <br/>
+                                [MO] - font-size: 16x; line-height: 26px;
                             </p>
-                            <p className="fontBody2">%font-body2</p>
-                            <b className="fontBody2">%font-body2</b>
+                            <p className="fontTabAccContents">%font-tabAccContents</p>
+                            <b className="fontTabAccContents">%font-tabAccContents</b>
                         </article>
 
                         <article>
-                            <strong className="title">%font-body3</strong>
+                            <strong className="title">%font-device</strong>
                             <div className="box">
-                                h1 &#123; @extend %font-body3; &#125;
+                                .device &#123; @extend %font-device; &#125;
                             </div>
                             <p className="responsive">
-                                [WIDE] - font-size: 1.8rem; line-height: 2.8rem; <br/>
-                                [PC] - font-size: 1.6rem; line-height: 2.4rem; <br/>
-                                [TAB] - font-size: 1.6rem; line-height: 2.4rem; <br/>
-                                [MO] - font-size: 1.4rem; line-height: 2.2rem;
+                                [WIDE] - font-size: 16px; line-height: 24px; <br/>
+                                [PC] - font-size: 14px; line-height: 22px; <br/>
+                                [TAB] - font-size: 11px; line-height: 18px; <br/>
+                                [MO] - font-size: 12px; line-height: 18px;
                             </p>
-                            <p className="fontBody3">%font-body3</p>
-                            <b className="fontBody3">%font-body3</b>
-                        </article>
-
-                        <article>
-                            <strong className="title">%font-caption</strong>
-                            <div className="box">
-                                h1 &#123; @extend %font-caption; &#125;
-                            </div>
-                            <p className="responsive">
-                                [WIDE] - font-size: 1.6rem; line-height: 2.4rem; <br/>
-                                [PC] - font-size: 1.4rem; line-height: 2.2rem; <br/>
-                                [TAB] - font-size: 1.6rem; line-height: 2.4rem; <br/>
-                                [MO] - font-size: 1.2rem; line-height: 1.8rem;
-                            </p>
-                            <p className="fontCaption">%font-caption</p>
-                            <b className="fontCaption">%font-caption</b>
+                            <p className="fontDevice">%font-device</p>
+                            <b className="fontDevice">%font-device</b>
                         </article>
                     </dd>
 
