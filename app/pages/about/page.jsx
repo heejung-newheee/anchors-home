@@ -13,7 +13,7 @@ function About() {
   return (
     <div>
       {/*<img src="/assets/images/ico/ico-btn-black-down.svg"/>*/}
-      this is about!!!!
+      <p>this is about!!!!</p>
     </div>
   )
 }
