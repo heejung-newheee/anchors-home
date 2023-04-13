@@ -1,4 +1,4 @@
-import jquery from '@/helper/lib/jquery_loader'
+import jquery from '@/helper/data/lib/jquery_loader'
 import variables from '@/public/assets/scss/_variables.module.scss';
 
 export const initHelper = () => ({ jquery , variables });
