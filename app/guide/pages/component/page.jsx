@@ -1,8 +1,6 @@
 import variables from '@/public/assets/scss/_variables.module.scss';
 import '../../guide.scss';
 import Link from "next/link";
-import Logo from "@/components/Logo/Logo";
-import Btn from "@/components/Btn/Btn";
 
 export default function GuideComponent() {
     return (
@@ -28,10 +26,6 @@ export default function GuideComponent() {
 
                     <dt>Component Option</dt>
                     <dd>
-                        <Btn type="link" url="/" design="btnSecondaryUp">button</Btn>
-                        <Logo/>
-                        <Btn type="button">button</Btn>
-
 
                     </dd>
 

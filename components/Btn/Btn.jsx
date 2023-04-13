@@ -1,7 +1,6 @@
 "use client"
-import Image from 'next/image'
 import Link from "next/link";
-import './Btn.scss';
+import './scss/Btn.scss';
 
 export default function Btn( {type ="button" , url, alt, design, children} ) {
   return (
