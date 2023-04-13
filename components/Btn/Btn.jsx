@@ -3,11 +3,9 @@ import Image from 'next/image'
 import Link from "next/link";
 import './Btn.scss';
 
-export default function Btn( {type , url, alt, design, children} ) {
+export default function Btn( {type ="button" , url, alt, design, children} ) {
   return (
     <>
-      {type === "" && <button type="button" className={design}><span>{children}</span></button> }
-
       {type === "button" && <button type="button" className={design}><span>{children}</span></button> }
 
       {type === "submit" && <button type="submit" className={design}><span>{children}</span></button> }
