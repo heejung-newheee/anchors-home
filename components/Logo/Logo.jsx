@@ -6,7 +6,7 @@ import headerFooter from "@/helper/data/json/contents/headerFooter.json";
 export default function Logo() {
 
   return (
-      <h1 className="logo">{/*headerFooter.json 호출*/}
+      <h1 className="logo">
         <Btn type="link" url="/" alt="Anchors">
         {/*  {JSON.stringify(headerFooter)}*/}
         {/*  {headerFooter.copyright}*/}
