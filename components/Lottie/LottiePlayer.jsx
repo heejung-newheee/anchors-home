@@ -23,16 +23,14 @@ function LottiePlayer({
   style = DEFAULT_STYLE,
   visible = false,
   buttons = ['play', 'repeat', 'frame', 'debug'],
-  isplay,
 }) {
-  const computedStyle = { ...DEFAULT_STYLE, ...style };
-  console.log(isplay);
+  const COMPONENTS_STYLE = { ...DEFAULT_STYLE, ...style };
   return (
     <Player
       loop={loop}
       autoplay={autoplay}
       renderer={render}
-      style={computedStyle}
+      style={COMPONENTS_STYLE}
       src={src}
     >
       <Controls visible={visible} buttons={buttons} />
