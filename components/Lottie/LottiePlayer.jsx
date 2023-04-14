@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 const DEFAULT_STYLE = { border: '1px solid #f00' };
@@ -26,7 +26,6 @@ function LottiePlayer({
 }) {
   const computedStyle = { ...DEFAULT_STYLE, ...style };
   return (
-    <div className="bg-green-500" style={{"backgroundColor" : "#1D1D1F"}}>
     <Player
       loop={loop}
       autoplay={autoplay}

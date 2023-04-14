@@ -4,19 +4,37 @@ import React from 'react';
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Visual from '@/components/Visual/Visual';
-import jquery from '@/helper/libs/jquery_loader';
+import aboutIntro from '@/helper/data/json/contents/about/aboutIntro.json';
+import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
 import variables from '@/public/assets/scss/_variables.module.scss';
 
-function swiperContent() {
-  return <div>single swiper</div>;
+function swiperContent(cont) {
+  return (
+    <div>
+      <p>{cont.nameEn}</p>
+      <div>
+        <p>{cont.nameKo}</p>
+        <p>{cont.part}</p>
+        <p>{cont.hashtag}</p>
+      </div>
+    </div>
+  );
 }
 
-function firstContent() {
-  return <div>first swiper</div>;
+function firstContent(cont2) {
+  return (
+    <div>
+      <p>{cont2.highlightText}</p>
+    </div>
+  );
 }
 
-function secondContent() {
-  return <div>double swiper</div>;
+function secondContent(cont3) {
+  return (
+    <div>
+      <p>{cont3.text}</p>
+    </div>
+  );
 }
 
 export default function Jueun() {
@@ -66,6 +84,7 @@ export default function Jueun() {
       <SwiperArea
         type="single"
         swiperContent={swiperContent}
+        swiperContentData={aboutMembers.members}
         swiperOption={{
           slidesPerView: 1,
         }}
@@ -74,6 +93,12 @@ export default function Jueun() {
         type="double"
         firstContent={firstContent}
         secondContent={secondContent}
+        swiperContentData={aboutIntro.introduction}
+        firstSwiperOption={{}}
+        secondSwiperOption={{
+          navigation: false,
+          pagination: false,
+        }}
       />
     </>
   );

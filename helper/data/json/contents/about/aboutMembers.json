@@ -2,12 +2,8 @@
   "imgUrl": "이미지 이동경로",
   "members": [
     {
-      "name": [
-        {
-          "ko": "최인성 과장",
-          "en": "Choi Insung"
-        }
-      ],
+      "nameKo": "최인성 과장",
+      "nameEn": "Choi Insung",
       "part": "PM / 기획",
       "hashtag": [
         "#내 꿈은 #연봉 1억 #사원",
@@ -20,12 +16,8 @@
       "alt": "앵커스 직원 대표 이미지"
     },
     {
-      "name": [
-        {
-          "ko": "장빈수 대리",
-          "en": "Jang Bin soo"
-        }
-      ],
+      "nameKo": "장빈수 대리",
+      "nameEn": "Jang Bin soo",
       "part": "디자인실",
       "hashtag": [
         "#빛나고 투명한거 좋아",
@@ -39,12 +31,8 @@
       "alt": "앵커스 직원 대표 이미지"
     },
     {
-      "name": [
-        {
-          "ko": "서승희 대리",
-          "en": "Seo Seung hee"
-        }
-      ],
+      "nameKo": "서승희 대리",
+      "nameEn": "Seo Seung hee",
       "part": "기획팀",
       "hashtag": [
         "#4개국어 합니다 #영어",
@@ -57,12 +45,8 @@
       "alt": "앵커스 직원 대표 이미지"
     },
     {
-      "name": [
-        {
-          "ko": "최혜주 과장",
-          "en": "Choi hye ju"
-        }
-      ],
+      "nameKo": "최혜주 과장",
+      "nameEn": "Choi hye ju",
       "part": "연구실",
       "hashtag": [
         "#애엄마 #캠퍼",
@@ -76,12 +60,8 @@
       "alt": "앵커스 직원 대표 이미지"
     },
     {
-      "name": [
-        {
-          "ko": "길재희 차장",
-          "en": "Gil Jae hee"
-        }
-      ],
+      "nameKo": "길재희 차장",
+      "nameEn": "Gil Jae hee",
       "part": "Front End 개발",
       "hashtag": [
         "#얼죽아",
@@ -94,12 +74,8 @@
       "alt": "앵커스 직원 대표 이미지"
     },
     {
-      "name": [
-        {
-          "ko": "정나영 대리",
-          "en": "Jeong nayoung"
-        }
-      ],
+      "nameKo": "정나영 대리",
+      "nameEn": "Jeong nayoung",
       "part": "디자인실",
       "hashtag": [
         "#겨울최고",

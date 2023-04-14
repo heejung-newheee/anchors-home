@@ -54,7 +54,10 @@ const DEFAULT_SWIPER_OPTION = {
 function SwiperArea({
   type,
   swiperOption = DEFAULT_SWIPER_OPTION,
+  firstSwiperOption = DEFAULT_SWIPER_OPTION,
+  secondSwiperOption = DEFAULT_SWIPER_OPTION,
   swiperContent,
+  swiperContentData = [],
   firstContent,
   secondContent,
 }) {
@@ -62,37 +65,51 @@ function SwiperArea({
   const [secondSwiper, setSecondSwiper] = React.useState(null);
 
   const computedSwiperOption = { ...DEFAULT_SWIPER_OPTION, ...swiperOption };
+  const computedFirstSwiperOption = {
+    ...DEFAULT_SWIPER_OPTION,
+    ...firstSwiperOption,
+  };
+  const computedScondSwiperOption = {
+    ...DEFAULT_SWIPER_OPTION,
+    ...secondSwiperOption,
+  };
 
   if (type === 'double') {
     return (
       <>
-        <Swiper
+        {/* S: double swiper */}
+        <Swiper // first swiper
           modules={swiperModule}
           onSwiper={setFirstSwiper}
           controller={{ control: secondSwiper }}
+          {...computedFirstSwiperOption}
         >
-          <SwiperSlide>{firstContent}</SwiperSlide>
-          <SwiperSlide>{firstContent}</SwiperSlide>
-          <SwiperSlide>{firstContent}</SwiperSlide>
+          {swiperContentData.map((d, idx) => (
+            <SwiperSlide key={idx}>{firstContent(d)}</SwiperSlide>
+          ))}
         </Swiper>
-        <Swiper
+        <Swiper // second swiper
           modules={swiperModule}
           onSwiper={setSecondSwiper}
           controller={{ control: firstSwiper }}
+          {...computedScondSwiperOption}
         >
-          <SwiperSlide>{secondContent}</SwiperSlide>
-          <SwiperSlide>{secondContent}</SwiperSlide>
-          <SwiperSlide>{secondContent}</SwiperSlide>
+          {swiperContentData.map((d, idx) => (
+            <SwiperSlide key={idx}>{secondContent(d)}</SwiperSlide>
+          ))}
         </Swiper>
+        {/* E: double swiper */}
       </>
     );
   }
   return (
+    // S: single swiper
     <Swiper modules={swiperModule} {...computedSwiperOption}>
-      <SwiperSlide>{swiperContent}</SwiperSlide>
-      <SwiperSlide>{swiperContent}</SwiperSlide>
-      <SwiperSlide>{swiperContent}</SwiperSlide>
+      {swiperContentData.map((d, idx) => (
+        <SwiperSlide key={idx}>{swiperContent(d)}</SwiperSlide>
+      ))}
     </Swiper>
+    // E: single swiper
   );
 }
 
