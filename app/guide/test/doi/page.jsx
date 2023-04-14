@@ -9,7 +9,7 @@ export default function Doi() {
   return (
       <>
         <Disclaimer data="disclaimer" />
-        <Video videoUrl="https://picsum.photos/id/870/200/300?grayscale&blur=2" />
+        <Video videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" />
       </>
   )
 }
