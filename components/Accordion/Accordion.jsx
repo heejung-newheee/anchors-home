@@ -8,9 +8,9 @@ import AccordionChild from '@/components/AccordionContents/AccordionChild';
 
 // import AccordionChild from "@/components/AccordionChild/AccordionChild";
 
-export default function Accordion({ children, contents }) {
+export default function Accordion({ contents }) {
   const [selected, setSelected] = useState(0);
-
+  console.log(selected);
   return (
     <dl className="accordion">
       {contents.map((accordionChild, index) => (
@@ -20,7 +20,7 @@ export default function Accordion({ children, contents }) {
           activeOption={selected === index ? 'Y' : 'N'}
           onClick={() => setSelected(index)}
         >
-          {accordionChild.content}
+          {accordionChild.content})
         </AccordionChild>
       ))}
     </dl>
