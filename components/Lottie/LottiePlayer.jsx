@@ -1,7 +1,7 @@
 'use client';
 
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
-const DEFAULT_STYLE = { border: '1px solid #f00' };
+const DEFAULT_STYLE = { height: '100%', width: '100%' };
 
 /**
  * LOTTIE OPTION
@@ -23,8 +23,10 @@ function LottiePlayer({
   style = DEFAULT_STYLE,
   visible = false,
   buttons = ['play', 'repeat', 'frame', 'debug'],
+  isplay,
 }) {
   const computedStyle = { ...DEFAULT_STYLE, ...style };
+  console.log(isplay);
   return (
     <Player
       loop={loop}
