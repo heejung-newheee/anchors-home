@@ -1,0 +1,96 @@
+{
+  "imgUrl": "이미지 이동경로",
+  "scale": {
+    "annual": ["6","Years"],
+    "members": ["94","Members"],
+    "total": ["8.3","Billions"]
+  },
+  "award":
+    [
+      {
+        "name": "Web awards PC Web best grand prize",
+        "description": "2020 · Genesis brand website"
+      },
+      {
+        "name": "Web Awards Technology Innovation Awards",
+        "description": "2019 · Kia Motors 2.0 Advancement Project"
+      }
+    ],
+  "customerLogo": [
+    {
+      "name": "HYUNDAI",
+      "img": "img-logo-hyundai.png",
+      "alt": "HYUNDAI 로고 이미지"
+    },
+    {
+      "name": "HYUNDAI motor group",
+      "img": "img-logo-hyundaimotor.png",
+      "alt": "HYUNDAI motor group 로고 이미지"
+    },
+    {
+      "name": "HANKOOK driving emotion",
+      "img": "img-logo-hankook.png",
+      "alt": "HANKOOK driving emotion 로고 이미지"
+    },
+    {
+      "name": "GENESIS",
+      "img": "img-logo-genesis.png",
+      "alt": "GENESIS 로고 이미지"
+    },
+    {
+      "name": "AIA",
+      "img": "img-logo-aia.png",
+      "alt": "AIA 로고 이미지"
+    },
+    {
+      "name": "KOREAN AIR",
+      "img": "img-logo-koreanair.png",
+      "alt": "KOREAN AIR 로고 이미지"
+    },
+    {
+      "name": "CHANEL",
+      "img": "img-logo-chanel.png",
+      "alt": "CHANEL 로고 이미지"
+    },
+    {
+      "name": "LG전자",
+      "img": "img-logo-lg.png",
+      "alt": "LG전자 로고 이미지"
+    },
+    {
+      "name": "KIA",
+      "img": "img-logo-kia.png",
+      "alt": "KIA 로고 이미지"
+    },
+    {
+      "name": "DOOSAN",
+      "img": "img-logo-doosan.png",
+      "alt": "DOOSAN 로고 이미지"
+    },
+    {
+      "name": "SAMSUNG SDI",
+      "img": "img-logo-samsungsdi.png",
+      "alt": "SAMSUNG SDI 로고 이미지"
+    },
+    {
+      "name": "삼성전자",
+      "img": "img-logo-samsung.png",
+      "alt": "삼성전자 로고 이미지"
+    },
+    {
+      "name": "AMOREPACIFIC",
+      "img": "img-logo-amore.png",
+      "alt": "AMOREPACIFIC 로고 이미지"
+    },
+    {
+      "name": "HYUNDAI GLOVIS",
+      "img": "img-logo-glovis.png",
+      "alt": "HYUNDAI GLOVIS 로고 이미지"
+    },
+    {
+      "name": "HYUNDAI engineering",
+      "img": "img-logo-engineering.png",
+      "alt": "HYUNDAI engineering 로고 이미지"
+    }
+  ]
+}
