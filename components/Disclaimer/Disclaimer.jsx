@@ -1,13 +1,12 @@
 "use client"
-import Image from 'next/image'
-import Link from "next/link";
 
-export default function Disclaimer() {
-    // props list = data
+export default function Disclaimer({data}) {
+  // props list = data
 
   return (
-      <p className="disclaimer">
-          <!-- {data.json} || {data.string} -->
-      </p>
+    <span className="disclaimer">
+      {/* <!-- {data.json} || {data.string} --> */}
+      {data}
+    </span>
   )
 }
