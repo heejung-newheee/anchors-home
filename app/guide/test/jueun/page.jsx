@@ -23,19 +23,46 @@ export default function Jueun() {
   return (
     <>
       {/* ElementTitle component test */}
-      <p style={{ backgroundColor: variables.colorBlack, color: '#fff', padding: '10px 0' }}>ElementTitle Component</p>
+      <p
+        style={{
+          backgroundColor: variables.colorBlack,
+          color: '#fff',
+          padding: '10px 0',
+        }}
+      >
+        ElementTitle Component
+      </p>
       <ElementTitle data="Element Title" />
 
       {/* Visual component test */}
-      <p style={{ backgroundColor: variables.colorBlack, color: '#fff', padding: '10px 0', marginTop: '30px' }}>Visual Component</p>
+      <p
+        style={{
+          backgroundColor: variables.colorBlack,
+          color: '#fff',
+          padding: '10px 0',
+          marginTop: '30px',
+        }}
+      >
+        Visual Component
+      </p>
       <Visual imgUrl="https://picsum.photos/1920/800">
         <div>
-          <p>Title</p>정<span>Description</span>
+          <p>Title</p>
+          <span>Description</span>
         </div>
       </Visual>
 
       {/* SwiperArea component test */}
-      <p style={{ backgroundColor: '#000', color: '#fff', padding: '10px 0', marginTop: '30px' }}>SwiperArea Component</p>
+      <p
+        style={{
+          backgroundColor: '#000',
+          color: '#fff',
+          padding: '10px 0',
+          marginTop: '30px',
+        }}
+      >
+        SwiperArea Component
+      </p>
       <SwiperArea
         type="single"
         swiperContent={swiperContent}
@@ -43,7 +70,11 @@ export default function Jueun() {
           slidesPerView: 1,
         }}
       />
-      <SwiperArea type="double" firstContent={firstContent} secondContent={secondContent} />
+      <SwiperArea
+        type="double"
+        firstContent={firstContent}
+        secondContent={secondContent}
+      />
     </>
   );
 }
