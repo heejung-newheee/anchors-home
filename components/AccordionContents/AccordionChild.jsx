@@ -20,7 +20,7 @@ export default function AccordionChild({
         <Btn type="button">{titleData}</Btn>
       </dt>
       <dd>{children}</dd>
-      {/*<dt className={activeOption === "Y" ? "active" : ""}></dt>*/}
     </>
   );
 }
+1;
