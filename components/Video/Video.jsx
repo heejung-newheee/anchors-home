@@ -10,6 +10,7 @@ export default function Video({ videoUrl }) {
   const [videoBtnState, setVideoBtnState] = useState('block');
   const videoPlay = () => {
     document.querySelector('video').play();
+    document.querySelector('video').classList.add('on');
     setVideoBtnState('none');
   };
   return (
