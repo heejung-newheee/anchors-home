@@ -1,12 +1,9 @@
-'use client';
+import './scss/Disclaimer.scss';
 
 export default function Disclaimer({ data, className }) {
-  // props list = data
-
-  return (
-    <span className={`disclaimer ${className}`}>
-      {/* <!-- {data.json} || {data.string} --> */}
-      {data}
-    </span>
-  );
+  const getClassNm =
+    className == undefined
+      ? { className: 'disclaimer' }
+      : { className: 'disclaimer ' + className };
+  return <span {...getClassNm}>{data}</span>;
 }

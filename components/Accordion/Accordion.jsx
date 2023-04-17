@@ -7,9 +7,13 @@ import Link from 'next/link';
 import AccordionChild from '@/components/AccordionContents/AccordionChild';
 
 export default function Accordion({ contents, className }) {
+  const getClassNm =
+    className == undefined
+      ? { className: 'accordion' }
+      : { className: 'accordion ' + className };
   const [selected, setSelected] = useState(0);
   return (
-    <dl className={`accordion ${className}`}>
+    <dl {...getClassNm}>
       {contents.map((accordionChild, index) => (
         <AccordionChild
           key={index}

@@ -5,9 +5,11 @@ import Accordion from '@/components/Accordion/Accordion';
 import BaseArticle from '@/components/BaseArticle/BaseArticle';
 import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
+import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import Header from '@/components/Header/Header';
 import Logo from '@/components/Logo/Logo';
 import PageTitle from '@/components/PageTitle/PageTitle';
+import Visual from '@/components/Visual/Visual';
 import variables from '@/public/assets/scss/_variables.module.scss';
 
 const ACCORDION_CONTENTS = [
@@ -17,43 +19,50 @@ const ACCORDION_CONTENTS = [
 ];
 const PAGETITLE_DATA = [{ word: 'Our' }, { word: 'Works' }];
 
-export default function chchaa() {
+export default function Chchaa() {
   return (
     <>
-      <PageTitle data={PAGETITLE_DATA} />
       <Header />
+      <PageTitle data={PAGETITLE_DATA} />
       <div
-        headerPosition="0"
-        className="section01"
+        className="section-div type-bg-white"
         style={{
-          backgroundColor: variables.colorBlue,
+          backgroundColor: variables.colorLightgrey,
           color: variables.colorWhite,
           height: '200px',
         }}
       >
-        section01
+        밝은 배경
       </div>
       <div
-        headerPosition="1"
+        className="section-div type-bg-black"
+        style={{
+          backgroundColor: variables.colorBlack,
+          color: variables.colorWhite,
+          height: '200px',
+        }}
+      >
+        어두운 배경
+      </div>
+      <div
         className="section02"
+        style={{
+          backgroundColor: variables.colorWhite,
+          color: variables.colorWhite,
+          height: '200px',
+        }}
+      >
+        void
+      </div>
+      <div
+        className="section-div type-bg-photo"
         style={{
           backgroundColor: variables.colorLightblue,
           color: variables.colorWhite,
           height: '200px',
         }}
       >
-        section02
-      </div>
-      <div
-        headerPosition="2"
-        className="section02"
-        style={{
-          backgroundColor: variables.colorDarkgrey,
-          color: variables.colorWhite,
-          height: '200px',
-        }}
-      >
-        section03
+        사진 배경
       </div>
       1. &lt;Btn&gt;
       <br />
@@ -71,12 +80,12 @@ export default function chchaa() {
         ]
       </p>
       <br />
-      <Accordion contents={ACCORDION_CONTENTS} />
+      <Accordion className="accordion1" contents={ACCORDION_CONTENTS} />
       <br />
       <br />
       3. &lt;BaseArticle&gt;
       <br />
-      <BaseArticle elementTitle="text" />
+      <BaseArticle className="bascArticle1" elementTitle="text" />
       <br />
       <br />
       4. &lt;PageTitle&gt; <br />
@@ -90,6 +99,11 @@ export default function chchaa() {
       <DepthTitle blindOption="" depthLevel="2">
         depthTitle
       </DepthTitle>
+      6. disclaimer <br />
+      <Disclaimer className="disclaimer1 disclaimer2" data="disclaimer" />
+      <br />
+      6. visual <br />
+      <Visual className="visual1" />
     </>
   );
 }
