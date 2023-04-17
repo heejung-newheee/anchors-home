@@ -1,15 +1,25 @@
-"use client"
-import Image from 'next/image'
-import Link from "next/link";
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import './scss/Device.scss';
 
-export default function Device() {
-    // props list = imgUrl, alt
+export default function Device({ imgUrl, alt, caption, className }) {
+  // props list = imgUrl, alt
 
   return (
-      <article className="device">
-          <img src="@/components/Device/Device" alt="{alt[0]}"/> <!--{imgUrl[0]}-->
-          <img src="@/components/Device/Device" alt="{alt[1]}"/> <!--{imgUrl[1]}-->
-          <img src="@/components/Device/Device" alt="{alt[2]}"/> <!--{imgUrl[2]}-->
-      </article>
-  )
+    <article className={`device ${className}`}>
+      <div>
+        <span>{caption[0]}</span>
+        <img src={imgUrl[0]} alt={alt[0]} />
+      </div>
+      <div>
+        <span>{caption[1]}</span>
+        <img src={imgUrl[1]} alt={alt[0]} />
+      </div>
+      <div>
+        <span>{caption[2]}</span>
+        <img src={imgUrl[2]} alt={alt[0]} />
+      </div>
+    </article>
+  );
 }

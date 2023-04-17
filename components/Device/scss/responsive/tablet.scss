@@ -1,0 +1,22 @@
+@include tablet {
+  .device{
+    //margin: 0;
+
+    display: flex;
+    justify-content: space-between;
+    div{
+      padding: 0;
+      &:nth-child(1){
+        padding-left: 5.3rem;
+        margin-top: 22.54rem;
+      }
+      &:nth-child(2){
+        margin-top: 11.24rem;
+      }
+      &:nth-child(3){
+        padding-right: 5.3rem;
+        margin-top: 4.95rem;
+      }
+    }
+  }
+}
