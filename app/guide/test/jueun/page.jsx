@@ -2,13 +2,14 @@
 import React from 'react';
 
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
+import Menu from '@/components/Menu/Menu';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Visual from '@/components/Visual/Visual';
 import aboutIntro from '@/helper/data/json/contents/about/aboutIntro.json';
 import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
 import variables from '@/public/assets/scss/_variables.module.scss';
 
-function swiperContent(cont) {
+/* function swiperContent(cont) {
   return (
     <div>
       <p>{cont.nameEn}</p>
@@ -19,7 +20,7 @@ function swiperContent(cont) {
       </div>
     </div>
   );
-}
+} */
 
 function firstContent(cont2) {
   return (
@@ -83,7 +84,18 @@ export default function Jueun() {
       </p>
       <SwiperArea
         type="single"
-        swiperContent={swiperContent}
+        swiperContent={function (cont) {
+          return (
+            <div>
+              <p>{cont.nameEn}</p>
+              <div>
+                <p>{cont.nameKo}</p>
+                <p>{cont.part}</p>
+                <p>{cont.hashtag}</p>
+              </div>
+            </div>
+          );
+        }}
         swiperContentData={aboutMembers.members}
         swiperOption={{
           slidesPerView: 1,
@@ -100,6 +112,19 @@ export default function Jueun() {
           pagination: false,
         }}
       />
+
+      {/* Menu component test */}
+      <p
+        style={{
+          backgroundColor: '#000',
+          color: '#fff',
+          padding: '10px 0',
+          marginTop: '30px',
+        }}
+      >
+        Menu Component
+      </p>
+      <Menu />
     </>
   );
 }

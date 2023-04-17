@@ -1,0 +1,22 @@
+.text:after {
+  content:"mobile";
+  display: inline;
+}
+.menu{
+  .menu-btn{
+    span{
+      visibility: hidden;
+    }
+    width: 24px;
+    height: 24px;
+    &.black{
+      background: url('../../../../public/assets/images/ico/ico-btn-black-menu.svg') no-repeat;
+    }
+    &.white{
+       background: url('../../../../public/assets/images/ico/ico-btn-white-menu.svg') no-repeat;
+    }
+    &.close{
+      background: url('../../../../public/assets/images/ico/ico-btn-close.svg') no-repeat;
+    }
+  }
+}
