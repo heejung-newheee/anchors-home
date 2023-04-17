@@ -1,7 +1,7 @@
 'use client';
-import './scss/Menu.scss';
 import Image from 'next/image';
 import Link from 'next/link';
+import './scss/Menu.scss';
 
 import Btn from '@/components/Btn/Btn';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
