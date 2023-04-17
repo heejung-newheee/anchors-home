@@ -5,6 +5,7 @@ import Accordion from '@/components/Accordion/Accordion';
 import BaseArticle from '@/components/BaseArticle/BaseArticle';
 import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
+import Header from '@/components/Header/Header';
 import Logo from '@/components/Logo/Logo';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import variables from '@/public/assets/scss/_variables.module.scss';
@@ -19,6 +20,41 @@ const PAGETITLE_DATA = [{ word: 'Our' }, { word: 'Works' }];
 export default function chchaa() {
   return (
     <>
+      <PageTitle data={PAGETITLE_DATA} />
+      <Header />
+      <div
+        headerPosition="0"
+        className="section01"
+        style={{
+          backgroundColor: variables.colorBlue,
+          color: variables.colorWhite,
+          height: '200px',
+        }}
+      >
+        section01
+      </div>
+      <div
+        headerPosition="1"
+        className="section02"
+        style={{
+          backgroundColor: variables.colorLightblue,
+          color: variables.colorWhite,
+          height: '200px',
+        }}
+      >
+        section02
+      </div>
+      <div
+        headerPosition="2"
+        className="section02"
+        style={{
+          backgroundColor: variables.colorDarkgrey,
+          color: variables.colorWhite,
+          height: '200px',
+        }}
+      >
+        section03
+      </div>
       1. &lt;Btn&gt;
       <br />
       <Btn design="btnSecondaryUp">테스트 버튼</Btn>

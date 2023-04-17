@@ -5,11 +5,7 @@ import '@/public/assets/scss/_reset.scss';
 export default function RootLayout({ children }) {
   return (
     <html>
-        <body lang="ko">
-          {/*<Header />*/}
-          {children}
-          {/*<Footer />*/}
-        </body>
+      <body lang="ko">{children}</body>
     </html>
-)
+  );
 }
