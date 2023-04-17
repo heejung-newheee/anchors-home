@@ -3,6 +3,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useRef } from 'react';
 import { Controls, PlayState, Reveal, Tween } from 'react-gsap';
+import Lottie from 'lottie-react';
+import lottie_main from '@/public/lottie/lottie_main_keyvisual.json';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,7 +18,7 @@ const FadeInLeft = ({ children }) => (
 );
 
 function LottieTest() {
-  //   const scrollTrigger = useRef(null);
+  const lottieRef = useRef();
 
   return (
     <>
@@ -33,6 +35,12 @@ function LottieTest() {
         </Tween>
       </Controls>
       <div style={{ height: '1000px', backgroundColor: 'lightgray' }}>!</div>
+      <Lottie
+        lottieRef={lottieRef}
+        animationData={lottie_main}
+        autoplay={false}
+        loop={false}
+      />
       <Tween
         to={{
           x: '100vw',
@@ -40,12 +48,13 @@ function LottieTest() {
           scale: 10,
           scrollTrigger: {
             trigger: '.square',
-            start: '-200px center',
-            end: '200px center',
+            start: '10px center',
+            end: '400px center',
             scrub: 0.5,
             markers: true,
             onEnter: (d) => {
               console.log('📢[LottieTest.jsx:48]: onEnter: ', d);
+              lottieRef.current.play();
             },
             onUpdate: (d) => {
               console.log(d);
