@@ -8,7 +8,7 @@ import Link from 'next/link';
 import variables from '@/public/assets/scss/_variables.module.scss';
 import './scss/PageTitle.scss';
 
-export default function PageTitle({ data }) {
+export default function PageTitle({ data, className }) {
   const [animation, setAnimation] = useState('fadeIn');
 
   const handleScroll = () => {
@@ -22,7 +22,7 @@ export default function PageTitle({ data }) {
     };
   }, []);
   return (
-    <div className="page-title">
+    <div className={`page-title ${className}`}>
       <h2 className={`page-title-h2 ${animation}`}>
         {data.map((words, index) => (
           <span key={index} className={`span${index}`}>

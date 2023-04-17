@@ -4,6 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Description from '@/components/Description/Description';
+import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
 
 export default function BaseArticle({
@@ -12,15 +14,16 @@ export default function BaseArticle({
   elementTitle = '',
   description = '',
   disclaimer = '',
+  className,
 }) {
   return (
-    <article className="base-article">
+    <article className={`base-article ${className}`}>
       {imgUrl != '' && (
         <Image src={imgUrl} width={100} height={100} alt={imgAlt} />
       )}
       {elementTitle != '' && <ElementTitle data={elementTitle} />}
-      {/*{description != '' && <ElementTitle data={description} />}*/}
-      {/*{disclaimer != '' && <ElementTitle data={disclaimer} />}*/}
+      {description != '' && <Description data={description} />}
+      {disclaimer != '' && <Disclaimer data={disclaimer} />}
     </article>
   );
 }
