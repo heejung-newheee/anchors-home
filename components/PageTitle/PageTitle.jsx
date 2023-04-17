@@ -2,10 +2,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 
-import Image from 'next/image';
-import Link from 'next/link';
-
-import variables from '@/public/assets/scss/_variables.module.scss';
 import './scss/PageTitle.scss';
 
 export default function PageTitle({ data, className }) {
