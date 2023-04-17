@@ -8,15 +8,13 @@ import lottie_main from '@/public/lottie/lottie_main_keyvisual.json';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const FadeInLeft = ({ children }) => (
-  <Tween
-    from={{ opacity: 0.5, transform: 'translate3d(-100vw, 0, 0)' }}
-    ease="back.out(1.4)"
-  >
-    {children}
-  </Tween>
-);
-
+/**
+ * 로티 애니메이션 예제
+ * 참고
+ *  - https://bitworking.github.io/react-gsap/
+ *  - https://lottiereact.com/
+ * @returns 
+ */
 function LottieTest() {
   const lottieRef = useRef();
 
