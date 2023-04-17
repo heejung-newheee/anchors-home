@@ -41,6 +41,9 @@ function secondContent(cont3) {
 export default function Jueun() {
   return (
     <>
+      {/* Menu component test */}
+      <Menu />
+
       {/* ElementTitle component test */}
       <p
         style={{
@@ -112,19 +115,6 @@ export default function Jueun() {
           pagination: false,
         }}
       />
-
-      {/* Menu component test */}
-      <p
-        style={{
-          backgroundColor: '#000',
-          color: '#fff',
-          padding: '10px 0',
-          marginTop: '30px',
-        }}
-      >
-        Menu Component
-      </p>
-      <Menu />
     </>
   );
 }

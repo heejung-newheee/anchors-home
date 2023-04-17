@@ -3,4 +3,42 @@
     content:"desktop";
     display: inline;
   }
+  .menu {
+    display: flex;
+    align-items: center;
+    .menu-btn {
+      display: none;
+    }
+    .gnb-wrap{
+      position: relative;
+      display: block;
+      height: 100%;
+      .gnb, .copy {
+        position: relative;
+        left: 0;
+      }
+      .gnb {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        bottom: 0;
+        padding: 0 3.2rem;
+        li {
+          margin-bottom: 0;
+          margin-right: 4.8rem;
+          * {
+            font-family : $font-ko;
+            font-size: 1.6rem;
+            font-weight: 400;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      .copy {
+        display: none;
+      }
+    }
+  }
 }
