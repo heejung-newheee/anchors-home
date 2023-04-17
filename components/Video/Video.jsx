@@ -12,8 +12,12 @@ export default function Video({ videoUrl, className }) {
     document.querySelector('video').classList.add('on');
     document.querySelector('button').classList.add('hide');
   };
+  const getClassNm =
+    className == undefined
+      ? { className: 'video' }
+      : { className: 'video ' + className };
   return (
-    <div className={`video ${className}`}>
+    <div {...getClassNm}>
       <video src={videoUrl} controls></video>
 
       <Btn
