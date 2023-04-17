@@ -1,0 +1,60 @@
+// media-query var
+$pageTitle-top : 104px;
+$pageTitle-bottom : 60px;
+$pageTitle-fontSize: 60px;
+$pageTitle-spanPaddingRight : 10px;
+
+.page-title {
+  width: 100%;
+  height: $pageTitle-top + $pageTitle-bottom + $pageTitle-fontSize;
+  z-index: -1;
+
+  &-h2 {
+    @extend %font-pageTitle;
+    position: fixed;
+    left: 0;
+    top: $pageTitle-top;
+    width: 100%;
+    height: $pageTitle-fontSize;
+    overflow: hidden;
+    z-index: -1;
+    text-align: center;
+    transition: all 1s;
+
+    span {
+      padding-right: $pageTitle-spanPaddingRight;
+      display: inline-block;
+      padding-top: $pageTitle-fontSize;
+      -webkit-animation: pageTitleSpanFirst 1s;
+      animation: pageTitleSpanFirst 1s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      vertical-align: top;
+
+     @-webkit-keyframes pageTitleSpanFirst {
+        from {padding-top: $pageTitle-fontSize;}
+        to {padding-top: 0;}
+      }
+      @keyframes pageTitleSpanFirst {
+        from {padding-top: $pageTitle-fontSize;}
+        to {padding-top: 0;}
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:nth-child(2) {
+        -webkit-animation-delay: .5s;
+        animation-delay: .5s;
+      }
+    }
+
+    &.fadeIn {
+      opacity: 1;
+    }
+    &.fadeOut {
+      opacity: 0;
+    }
+  }
+}
