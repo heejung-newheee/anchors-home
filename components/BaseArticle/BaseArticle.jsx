@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import './scss/BaseArticle.scss';
 
 import Image from 'next/image';
 import Link from 'next/link';
