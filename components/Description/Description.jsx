@@ -1,9 +1,7 @@
 'use client';
-import Image from 'next/image';
-import Link from 'next/link';
 
-export default function Description({ data }) {
+export default function Description({ data, className }) {
   // props list = data
 
-  return <p className="description">{data}</p>;
+  return <p className={`description ${className}`}>{data}</p>;
 }

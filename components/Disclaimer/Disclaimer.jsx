@@ -1,12 +1,12 @@
-"use client"
+'use client';
 
-export default function Disclaimer({data}) {
+export default function Disclaimer({ data, className }) {
   // props list = data
 
   return (
-    <span className="disclaimer">
+    <span className={`disclaimer ${className}`}>
       {/* <!-- {data.json} || {data.string} --> */}
       {data}
     </span>
-  )
+  );
 }
