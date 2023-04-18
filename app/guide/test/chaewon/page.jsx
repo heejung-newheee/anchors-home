@@ -17,6 +17,7 @@ export default function Chaewon() {
           '/assets/images/contents/works/img-phone-configurator3-jplatform.png',
         ]}
         alt={['현대자동차 J플랫폼 Step setting, Total 화면 이미지']}
+        type="A"
       />
     </>
   );

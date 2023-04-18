@@ -1,3 +1,41 @@
 @include wide{
+  .device{
+    width: 130rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 11.8rem;
+    margin: 0 auto;
+    div{
+      box-sizing: border-box;
+      padding: 0;
+      &:nth-child(1){
+        margin-top: 36.8rem;
+      }
+      &:nth-child(2){
+        margin-top: 21.2rem;
+      }
+      &:nth-child(3){
+        margin-top: 7.3rem;
+      }
+      span{
+        font-size: 1.6rem;
+        padding-left: 4.5rem;
 
+      }
+    }
+    article.typeB{
+      div{
+        padding: 0;
+        &:nth-child(1){
+          margin-top: 31rem;
+        }
+        &:nth-child(2){
+          margin-top: 8.7rem;
+        }
+        &:nth-child(3){
+          margin-top: 20.3rem;
+        }
+      }
+    }
+  }
 }

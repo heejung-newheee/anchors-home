@@ -1,21 +1,19 @@
 @include desktop{
   .device{
     //margin: 0;
-
     display: flex;
     justify-content: space-between;
+    padding: 0 8rem;
+    margin: 0 auto;
     div{
-      padding: 0;
       &:nth-child(1){
-        padding-left: 5.3rem;
-        margin-top: 22.54rem;
+        margin-top: 30.9rem;
       }
       &:nth-child(2){
-        margin-top: 11.24rem;
+        margin-top: 15.9rem;
       }
       &:nth-child(3){
-        padding-right: 5.3rem;
-        margin-top: 4.95rem;
+        margin-top: 4.5rem;
       }
       span{
         font-size: 1.4rem;
@@ -23,6 +21,19 @@
 
       }
     }
-
+  }
+  article.typeB{
+    div{
+      padding: 0;
+      &:nth-child(1){
+        margin-top: 32.6rem;
+      }
+      &:nth-child(2){
+        margin-top: 7.3rem;
+      }
+      &:nth-child(3){
+        margin-top: 24.5rem;
+      }
+    }
   }
 }
