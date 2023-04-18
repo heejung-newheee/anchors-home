@@ -1,8 +1,4 @@
 @include wide {
-  .text:after {
-    content: "wide";
-    display: inline;
-  }
   .menu {
     .gnb-wrap {
       .gnb {

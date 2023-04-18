@@ -5,17 +5,12 @@ $gnb-bottom: 9.8rem;
 $gnb-li-margin-b: 1.6rem;
 $gnb-li-font-size: 3.2rem;
 $copy-bottom: 2.6rem;*/
-
-.text:after {
-  content:"mobile";
-  display: inline;
-}
 .menu {
   position: fixed;
   z-index: 10;
   width: 100%;
-  min-height: 6.4rem; /* 추후 제거*/
-  background-color: $color-white;
+  /*min-height: 6.4rem;*/
+  /*background-color: $color-white;*/
   .menu-btn {
     position: absolute;
     top: 50%;

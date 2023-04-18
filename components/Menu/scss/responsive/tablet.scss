@@ -1,8 +1,4 @@
 @include tablet {
-  .text:after {
-    content: "tablet";
-    display: inline;
-  }
   .menu {
     .menu-btn {
       width: 2.8rem;
