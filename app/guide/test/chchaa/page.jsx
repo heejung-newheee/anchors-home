@@ -10,6 +10,7 @@ import Header from '@/components/Header/Header';
 import Logo from '@/components/Logo/Logo';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import Visual from '@/components/Visual/Visual';
+import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 import variables from '@/public/assets/scss/_variables.module.scss';
 
 const ACCORDION_CONTENTS = [
@@ -26,6 +27,7 @@ const ACCORDION_CONTENTS = [
   { title: '2', content: <span>asdf</span> },
   { title: '3', content: <div>name</div> },
 ];
+//headerFooter.menuList[0].name
 
 const PAGETITLE_DATA = [{ word: 'Our' }, { word: 'Works' }];
 
@@ -33,9 +35,9 @@ export default function Chchaa() {
   return (
     <>
       <Header />
-      <PageTitle data={PAGETITLE_DATA} />
+      <PageTitle data={headerFooter.menuList[0].name} />
       <div
-        className="section-div type-bg-white"
+        className="section-div is-white"
         style={{
           backgroundColor: variables.colorLightgrey,
           color: variables.colorWhite,
@@ -45,7 +47,7 @@ export default function Chchaa() {
         밝은 배경
       </div>
       <div
-        className="section-div type-bg-black"
+        className="section-div is-black"
         style={{
           backgroundColor: variables.colorBlack,
           color: variables.colorWhite,
@@ -65,7 +67,7 @@ export default function Chchaa() {
         void
       </div>
       <div
-        className="section-div type-bg-photo"
+        className="section-div is-photo"
         style={{
           backgroundColor: variables.colorLightblue,
           color: variables.colorWhite,

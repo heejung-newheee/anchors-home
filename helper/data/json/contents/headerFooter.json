@@ -4,37 +4,37 @@
   "menuList" : [
     {
       "name" : [
-        {"word" : "Our" },
-        {"word" : "works" }
+        {"words" : "Our" },
+        {"words" : "works" }
       ],
       "url" : "pages/works",
-      "alt" : "Our words"
+      "alt" : "Our works"
     },
     {
       "name" : [
-        {"word" : "About" },
-        {"word" : "us" }
+        {"words" : "About" },
+        {"words" : "us" }
       ],
       "url" : "pages/about",
       "alt" : "About us"
     },
     {
       "name" : [
-        {"word" : "Service" }
+        {"words" : "Service" }
       ],
       "url" : "pages/service",
       "alt" : "Service"
     },
     {
       "name" : [
-        {"word" : "Contact" }
+        {"words" : "Contact" }
       ],
       "url" : "pages/contact",
       "alt" : "Contact"
     },
     {
       "name" : [
-        {"word" : "Careers" }
+        {"words" : "Careers" }
       ],
       "url" : "pages/career",
       "alt" : "Careers"

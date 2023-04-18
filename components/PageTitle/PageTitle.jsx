@@ -26,7 +26,7 @@ export default function PageTitle({ data, className }) {
       <h2 className={`page-title-h2 ${animation}`}>
         {data.map((words, index) => (
           <span key={index} className={`span${index}`}>
-            {words.word}
+            {words.words}
           </span>
         ))}
       </h2>

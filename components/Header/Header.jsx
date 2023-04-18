@@ -33,9 +33,9 @@ export default function Header({ sectionRefs, headerPosition }) {
         break;
       default:
         const classNm = sections[sectionUnderHeader].className;
-        const isWhite = classNm.includes('type-bg-white');
-        const isBlack = classNm.includes('type-bg-black');
-        const isPhoto = classNm.includes('type-bg-photo');
+        const isWhite = classNm.includes('is-white');
+        const isBlack = classNm.includes('is-black');
+        const isPhoto = classNm.includes('is-photo');
         // console.log(`${sectionUnderHeader}번째 인덱스 위에 헤더 있음`, classNm);
         isWhite && setHeaderBgType('is-white');
         isBlack && setHeaderBgType('is-black');

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Btn from '@/components/Btn/Btn';
 import './scss/Logo.scss';
 
-export default function Logo({ colorTypeOption }) {
+export default function Logo() {
   return (
     <h1 className="logo">
       <Btn type="link" url="/" alt="Anchors">
