@@ -1,6 +1,8 @@
-dt.active + dd {
-  display: block;
-}
-dd {
-  display: none;
+.accordion {
+  dt.active + dd {
+    display: block;
+  }
+  dd {
+    display: none;
+  }
 }

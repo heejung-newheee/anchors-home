@@ -13,10 +13,20 @@ import Visual from '@/components/Visual/Visual';
 import variables from '@/public/assets/scss/_variables.module.scss';
 
 const ACCORDION_CONTENTS = [
-  { title: '1', content: 'a' },
-  { title: '2', content: 'b' },
-  { title: '3', content: <span>span tag</span> },
+  {
+    title: '1',
+    content: (
+      <>
+        fff
+        <br />
+        asdfasdf
+      </>
+    ),
+  },
+  { title: '2', content: <span>asdf</span> },
+  { title: '3', content: <div>name</div> },
 ];
+
 const PAGETITLE_DATA = [{ word: 'Our' }, { word: 'Works' }];
 
 export default function Chchaa() {
@@ -80,7 +90,23 @@ export default function Chchaa() {
         ]
       </p>
       <br />
-      <Accordion className="accordion1" contents={ACCORDION_CONTENTS} />
+      <Accordion
+        className="accordion1"
+        contents={[
+          {
+            title: '1',
+            content: (
+              <>
+                fff123123123123
+                <br />
+                asdfasdf
+              </>
+            ),
+          },
+          { title: '2', content: <span>asdf</span> },
+          { title: '3', content: <div>name</div> },
+        ]}
+      />
       <br />
       <br />
       3. &lt;BaseArticle&gt;

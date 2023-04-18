@@ -29,7 +29,7 @@ export default function Header({ sectionRefs, headerPosition }) {
     switch (sectionUnderHeader) {
       case -1:
         // console.log('기본 className'); // 아무 것도 정의된 항목이 헤더 아래에 없으니
-        setHeaderBgType('isWhite');
+        setHeaderBgType('is-white');
         break;
       default:
         const classNm = sections[sectionUnderHeader].className;
@@ -37,9 +37,9 @@ export default function Header({ sectionRefs, headerPosition }) {
         const isBlack = classNm.includes('type-bg-black');
         const isPhoto = classNm.includes('type-bg-photo');
         // console.log(`${sectionUnderHeader}번째 인덱스 위에 헤더 있음`, classNm);
-        isWhite && setHeaderBgType('isWhite');
-        isBlack && setHeaderBgType('isBlack');
-        isPhoto && setHeaderBgType('isPhoto');
+        isWhite && setHeaderBgType('is-white');
+        isBlack && setHeaderBgType('is-black');
+        isPhoto && setHeaderBgType('is-photo');
         break;
     }
   };

@@ -21,7 +21,7 @@ export default function Accordion({ contents, className }) {
           activeOption={selected === index ? 'Y' : 'N'}
           onClick={() => setSelected(index)}
         >
-          {accordionChild.content})
+          {accordionChild.content}
         </AccordionChild>
       ))}
     </dl>
