@@ -101,8 +101,13 @@ export default function Jueun() {
         }}
         swiperContentData={aboutMembers.members}
         swiperOption={{
-          slidesPerView: 1,
+          navigation: false,
+          pagination: false,
+          scrollbar: {
+            draggable: true,
+          },
         }}
+        className="single"
       />
       <SwiperArea
         type="double"
@@ -114,6 +119,8 @@ export default function Jueun() {
           navigation: false,
           pagination: false,
         }}
+        firstClassName="first-test"
+        secondClassName="second-test"
       />
     </>
   );
