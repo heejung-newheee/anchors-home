@@ -8,6 +8,7 @@ import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 export default function Menu() {
   const menuBtnClass = () => {
     document.querySelector('button').classList.toggle('close');
+    document.querySelector('.gnb-wrap').classList.toggle('on');
   };
 
   return (
@@ -27,7 +28,7 @@ export default function Menu() {
             </li>
           ))}
         </ul>
-        <span>{headerFooter.copyright}</span>
+        <span className="copy">{headerFooter.copyright}</span>
       </div>
     </article>
   );

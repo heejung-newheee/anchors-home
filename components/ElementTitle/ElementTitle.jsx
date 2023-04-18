@@ -1,7 +1,12 @@
 'use client';
+import './scss/ElementTitle.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function ElementTitle({ data, className }) {
-  return <strong className={`element-title ${className}`}>{data}</strong>;
+  const getClassNm =
+    className == undefined
+      ? { className: 'element-title' }
+      : { className: 'element-title ' + className };
+  return <strong {...getClassNm}>{data}</strong>;
 }

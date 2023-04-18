@@ -8,20 +8,16 @@ export default function DepthTitle({
   className,
 }) {
   const blindOptionObj = blindOption === 'visible' ? 'visible' : 'hidden';
+  const getClassNm =
+    className == undefined
+      ? { className: blindOptionObj }
+      : { className: blindOptionObj + ' ' + className };
   return (
     <>
-      {depthLevel === '1' && (
-        <h3 className={`${blindOptionObj} ${className}`}>{children}</h3>
-      )}
-      {depthLevel === '2' && (
-        <h4 className={`${blindOptionObj} ${className}`}>{children}</h4>
-      )}
-      {depthLevel === '3' && (
-        <h5 className={`${blindOptionObj} ${className}`}>{children}</h5>
-      )}
-      {depthLevel === '4' && (
-        <h6 className={`${blindOptionObj} ${className}`}>{children}</h6>
-      )}
+      {depthLevel === '1' && <h3 {...getClassNm}>{children}</h3>}
+      {depthLevel === '2' && <h4 {...getClassNm}>{children}</h4>}
+      {depthLevel === '3' && <h5 {...getClassNm}>{children}</h5>}
+      {depthLevel === '4' && <h6 {...getClassNm}>{children}</h6>}
     </>
   );
 }

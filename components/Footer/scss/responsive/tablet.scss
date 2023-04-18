@@ -1,0 +1,12 @@
+@include tablet {
+  .footer {
+    .copyright-wrap {
+      padding: 3.2rem 0;
+      margin: 0 5rem;
+      .copyright {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+      }
+    }
+  }
+}

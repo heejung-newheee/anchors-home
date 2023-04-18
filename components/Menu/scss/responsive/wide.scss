@@ -3,4 +3,11 @@
     content: "wide";
     display: inline;
   }
+  .menu {
+    .gnb-wrap {
+      .gnb {
+        padding: 0 4rem;
+      }
+    }
+  }
 }
