@@ -1,37 +1,30 @@
-/*$menu-btn-width: 2.4rem;
-$menu-btn-height: 2.4rem;
-$gnb-copy-left: 4rem;
-$gnb-bottom: 9.8rem;
-$gnb-li-margin-b: 1.6rem;
-$gnb-li-font-size: 3.2rem;
-$copy-bottom: 2.6rem;*/
 .menu {
   position: fixed;
-  z-index: 10;
-  width: 100%;
-  /*min-height: 6.4rem;*/
-  /*background-color: $color-white;*/
+  width: calc( 100% - 12.8rem );
+  height: inherit;
+  right: 0;
   .menu-btn {
     position: absolute;
     top: 50%;
     right: 2.4rem;
     transform: translateY(-50%);
-    z-index: 10;
     width: 2.4rem;
     height: 2.4rem;
     background-size: 100%;
+    z-index: 1;
+    background-image: url('../../../../public/assets/images/ico/ico-btn-black-menu.svg');
     span {
       visibility: hidden;
       font-size: 0;
     }
-    &.black {
-      background-image: url('../../../../public/assets/images/ico/ico-btn-black-menu.svg');
-    }
-    &.white {
-      background-image: url('../../../../public/assets/images/ico/ico-btn-white-menu.svg');
-    }
     &.close {
       background-image: url('../../../../public/assets/images/ico/ico-btn-close.svg');
+    }
+  }
+  &.on {
+    width: 100%;
+    .gnb-wrap{
+      display: block;
     }
   }
   .gnb-wrap {
@@ -40,9 +33,6 @@ $copy-bottom: 2.6rem;*/
     width: 100%;
     height: 100vh;
     background-color: $color-white;
-    &.on {
-      display: block;
-    }
     .gnb, .copy {
       position: absolute;
       left: 4rem;
@@ -53,8 +43,9 @@ $copy-bottom: 2.6rem;*/
         margin-bottom: 1.6rem;
         * {
           font-size: 3.2rem;
-          letter-spacing: -3%;
+          letter-spacing: $en-letterSpacing;
           font-weight: 700;
+          line-height: 1;
         }
         &:last-child {
           margin-bottom: 0;
@@ -65,7 +56,40 @@ $copy-bottom: 2.6rem;*/
       bottom: 2.6rem;
       @extend %font-disclaimer;
       color: $color-darkgrey;
-      letter-spacing: -3%;
+      letter-spacing: $en-letterSpacing;
+    }
+  }
+}
+
+.header {
+  &.is-white {
+  }
+  &.is-black {
+    .menu {
+      .menu-btn {
+        background-image: url('../../../../public/assets/images/ico/ico-btn-white-menu.svg');
+      }
+    }
+    .gnb {
+      li {
+        * {
+          color: $color-white;
+        }
+      }
+    }
+  }
+  &.is-photo {
+    .menu {
+      .menu-btn {
+        background-image: url('../../../../public/assets/images/ico/ico-btn-black-menu.svg');
+      }
+    }
+  }
+  .menu {
+    .menu-btn {
+      &.close {
+        background-image: url('../../../../public/assets/images/ico/ico-btn-close.svg');
+      }
     }
   }
 }

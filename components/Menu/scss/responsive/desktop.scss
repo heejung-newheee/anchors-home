@@ -1,7 +1,5 @@
 @include desktop {
   .menu {
-    display: flex;
-    align-items: center;
     .menu-btn {
       display: none;
     }
@@ -9,6 +7,7 @@
       position: relative;
       display: block;
       height: 100%;
+      background-color: unset;
       .gnb, .copy {
         position: relative;
         left: 0;
@@ -17,6 +16,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        height: inherit;
         bottom: 0;
         padding: 0 3.2rem;
         li {

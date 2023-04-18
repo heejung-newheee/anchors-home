@@ -1,5 +1,6 @@
 @include tablet {
   .menu {
+    width: calc( 100% - 15.8rem );
     .menu-btn {
       width: 2.8rem;
       height: 2.8rem;

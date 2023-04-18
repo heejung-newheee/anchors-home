@@ -2,6 +2,7 @@
 import React from 'react';
 
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
+import Header from '@/components/Header/Header';
 import Menu from '@/components/Menu/Menu';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Visual from '@/components/Visual/Visual';
@@ -42,7 +43,7 @@ export default function Jueun() {
   return (
     <>
       {/* Menu component test */}
-      <Menu />
+      <Header />
 
       {/* ElementTitle component test */}
       <p
