@@ -17,7 +17,8 @@ export default function AccordionChild({
   return (
     <>
       <dt {...classNameObj} onClick={onClick}>
-        <Btn type="button">{titleData}</Btn>
+        {titleData}
+        <Btn type="button">목록 버튼</Btn>
       </dt>
       <dd>{children}</dd>
     </>
