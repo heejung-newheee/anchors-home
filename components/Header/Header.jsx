@@ -7,13 +7,14 @@ import Link from 'next/link';
 
 import Logo from '@/components/Logo/Logo';
 import Menu from '@/components/Menu/Menu';
-import variables from '@/public/assets/scss/_variables.module.scss';
-
-const HEADER_HEIGHT = 60;
+import './scss/Header.scss';
 
 export default function Header({ sectionRefs, headerPosition }) {
   const [headerBgType, setHeaderBgType] = useState('');
+
   const handleScroll = () => {
+    const $header = document.querySelector('.header');
+    const HEADER_HEIGHT = $header.getBoundingClientRect().height;
     const sections = document.querySelectorAll('.section-div');
     const sectionsArray = [];
     sections.forEach((el) => sectionsArray.push(el));
@@ -28,7 +29,7 @@ export default function Header({ sectionRefs, headerPosition }) {
     switch (sectionUnderHeader) {
       case -1:
         // console.log('기본 className'); // 아무 것도 정의된 항목이 헤더 아래에 없으니
-        setHeaderBgType('type-bg-white');
+        setHeaderBgType('isWhite');
         break;
       default:
         const classNm = sections[sectionUnderHeader].className;

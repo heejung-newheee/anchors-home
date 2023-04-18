@@ -61,6 +61,19 @@ $color-lightgrey : #E4E4E4;
 
 // S: for expend
 
+// blink
+%blind {
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  text-indent: -999em !important;
+  position: absolute;
+  top: -999em !important;
+  left: -999em !important;
+}
+
 // layout
 %layout-fix { max-width: auto; margin: 0 auto; padding: 0 24px; }
 @include mobile { %layout-fix { max-width: auto; margin: 0 auto; padding: 0 24px; } }
