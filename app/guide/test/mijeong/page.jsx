@@ -1,18 +1,25 @@
-'use client';
-import LottiePlayer from '@/components/Lottie/LottiePlayer';
-import { initHelper } from '@/helper/init-helper';
-const { jquery, variables } = initHelper();
+import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
+import Tab from '@/components/Tab/Tab';
+import LottieTest from '@/components/Test/LottieTest';
+import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 
-function mijeong() {
+const LOTTIE_STYLE = {
+  height: '600px',
+  width: '600px',
+  backgroundColor: '#1D1D1F',
+};
+function Mijeong() {
   return (
     <>
-      <p> this is chomj!!!! </p>
-      <LottiePlayer
-        render="svg"
-        style={{ height: '600px', width: '600px', backgroundColor: '#1D1D1F' }}
-        src={'/lottie/lottie_aboutus.json'}
-      />
+      <p> this is chomj!!!!</p>
+      <LottiePlayer data={lottieMainKeyVisual} style={LOTTIE_STYLE} />
+      {/*
+      <p> 탭 </p>
+      <Tab />
+      <p> 스크롤 로티 </p>
+      <LottieTest />
+      */}
     </>
   );
 }
-export default mijeong;
+export default Mijeong;

@@ -23,7 +23,7 @@ import variables from '@/public/assets/scss/_variables.module.scss';
   );
 } */
 
-function firstContent(cont2) {
+function FirstContent(cont2) {
   return (
     <div>
       <p>{cont2.highlightText}</p>
@@ -31,7 +31,7 @@ function firstContent(cont2) {
   );
 }
 
-function secondContent(cont3) {
+function SecondContent(cont3) {
   return (
     <div>
       <p>{cont3.text}</p>
@@ -43,7 +43,7 @@ export default function Jueun() {
   return (
     <>
       {/* Menu component test */}
-      <Header />
+      {/* <Header /> */}
 
       {/* ElementTitle component test */}
       <p
@@ -112,8 +112,8 @@ export default function Jueun() {
       />
       <SwiperArea
         type="double"
-        firstContent={firstContent}
-        secondContent={secondContent}
+        firstContent={FirstContent}
+        secondContent={SecondContent}
         swiperContentData={aboutIntro.introduction}
         firstSwiperOption={{}}
         secondSwiperOption={{

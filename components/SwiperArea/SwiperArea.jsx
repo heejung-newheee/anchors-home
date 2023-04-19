@@ -29,7 +29,7 @@ import 'swiper/css/effect-cards';
 import 'swiper/css/effect-creative';
 // E: swiper import
 
-const swiperModule = [
+const SWIPER_MODULE = [
   Pagination,
   Navigation,
   Scrollbar,
@@ -67,12 +67,12 @@ function SwiperArea({
   const [firstSwiper, setFirstSwiper] = React.useState(null);
   const [secondSwiper, setSecondSwiper] = React.useState(null);
 
-  const computedSwiperOption = { ...DEFAULT_SWIPER_OPTION, ...swiperOption };
-  const computedFirstSwiperOption = {
+  const COMPUTED_SWIPER_OPTION = { ...DEFAULT_SWIPER_OPTION, ...swiperOption };
+  const COMPUTED_FIRST_SWIPER_OPTION = {
     ...DEFAULT_SWIPER_OPTION,
     ...firstSwiperOption,
   };
-  const computedScondSwiperOption = {
+  const COMPUTED_SCOND_SWIPER_OPTION = {
     ...DEFAULT_SWIPER_OPTION,
     ...secondSwiperOption,
   };
@@ -96,10 +96,10 @@ function SwiperArea({
       <>
         {/* S: double swiper */}
         <Swiper // first swiper
-          modules={swiperModule}
+          modules={SWIPER_MODULE}
           onSwiper={setFirstSwiper}
           controller={{ control: secondSwiper }}
-          {...computedFirstSwiperOption}
+          {...COMPUTED_FIRST_SWIPER_OPTION}
           {...getClassNm1st}
         >
           {swiperContentData.map((d, idx) => (
@@ -107,10 +107,10 @@ function SwiperArea({
           ))}
         </Swiper>
         <Swiper // second swiper
-          modules={swiperModule}
+          modules={SWIPER_MODULE}
           onSwiper={setSecondSwiper}
           controller={{ control: firstSwiper }}
-          {...computedScondSwiperOption}
+          {...COMPUTED_SCOND_SWIPER_OPTION}
           {...getClassNm2st}
         >
           {swiperContentData.map((d, idx) => (
@@ -123,7 +123,7 @@ function SwiperArea({
   }
   return (
     // S: single swiper
-    <Swiper modules={swiperModule} {...computedSwiperOption} {...getClassNm}>
+    <Swiper modules={SWIPER_MODULE} {...COMPUTED_SWIPER_OPTION} {...getClassNm}>
       {swiperContentData.map((d, idx) => (
         <SwiperSlide key={idx}>{swiperContent(d)}</SwiperSlide>
       ))}

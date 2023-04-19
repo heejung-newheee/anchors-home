@@ -6,14 +6,14 @@ import './scss/Menu.scss';
 import Btn from '@/components/Btn/Btn';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 export default function Menu() {
-  const menuBtnClass = () => {
+  const MenuBtnClass = () => {
     document.querySelector('button').classList.toggle('close');
     document.querySelector('.menu').classList.toggle('on');
   };
 
   return (
     <article className="menu">
-      <Btn type="button" className="menu-btn black" onClick={menuBtnClass}>
+      <Btn type="button" className="menu-btn black" onClick={MenuBtnClass}>
         메뉴버튼
       </Btn>
       {/* 햄버거 버튼 */}
