@@ -1,6 +1,51 @@
-dt.active + dd {
-  display: block;
-}
-dd {
-  display: none;
+.accordion {
+  border-bottom: 1px solid $color-grey;
+
+  dt {
+    @extend %font-baseArticleTitle;
+    padding: 2.7rem 3.8rem 2.7rem .4rem; // $accordion-dtPadding
+    border-top: 1px solid $color-grey;
+    position: relative;
+
+    &:first-child {
+      border-top-color: $color-black;
+    }
+
+    button {
+      width: 2.4rem; // $accordion-buttonSize
+      height: 2.4rem; // $accordion-buttonSize
+      background: url(/assets/images/ico/ico-accordion-minus.svg) no-repeat center;
+      background-size: 100%;
+      position: absolute;
+      right: 1rem; // $accordion-buttonRight
+      top: 50%;
+      transform: translateY(-50%);
+
+      span {
+        @extend %blind;
+      }
+    }
+
+    &.active {
+      button {
+        background: url(/assets/images/ico/ico-accordion-plus.svg) no-repeat center;
+        background-size: 100%;
+        transform: translateY(-50%) rotate(180deg);
+        transition: transform .5s;
+      }
+    }
+
+    &.active + dd {
+      padding: 1.3rem 1rem 4rem; // $accordion-ddPadding
+      height: auto;
+      transition: all .3s;
+    }
+  }
+
+  dd {
+    height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    @extend %font-tabAccContents;
+  }
 }

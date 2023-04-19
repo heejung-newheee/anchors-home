@@ -3,29 +3,41 @@
   "sendEmail": "/assets/images/ico/ico-btn-black-down.svg",
   "menuList" : [
     {
-      "name" : "",
-      "url" : "",
-      "alt" : ""
+      "name" : [
+        {"words" : "Our" },
+        {"words" : "works" }
+      ],
+      "url" : "pages/works",
+      "alt" : "Our works"
     },
     {
-      "name" : "",
-      "url" : "",
-      "alt" : ""
+      "name" : [
+        {"words" : "About" },
+        {"words" : "us" }
+      ],
+      "url" : "pages/about",
+      "alt" : "About us"
     },
     {
-      "name" : "",
-      "url" : "",
-      "alt" : ""
+      "name" : [
+        {"words" : "Service" }
+      ],
+      "url" : "pages/service",
+      "alt" : "Service"
     },
     {
-      "name" : "",
-      "url" : "",
-      "alt" : ""
+      "name" : [
+        {"words" : "Contact" }
+      ],
+      "url" : "pages/contact",
+      "alt" : "Contact"
     },
     {
-      "name" : "",
-      "url" : "",
-      "alt" : ""
+      "name" : [
+        {"words" : "Careers" }
+      ],
+      "url" : "pages/career",
+      "alt" : "Careers"
     }
   ]
 }

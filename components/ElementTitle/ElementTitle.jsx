@@ -1,12 +1,12 @@
-"use client"
-import Image from 'next/image'
-import Link from "next/link";
+'use client';
+import './scss/ElementTitle.scss';
+import Image from 'next/image';
+import Link from 'next/link';
 
-export default function ElementTitle( {data} ) {
-
-  return (
-      <strong className="element-title">
-        {data}
-      </strong>
-  )
+export default function ElementTitle({ data, className }) {
+  const getClassNm =
+    className == undefined
+      ? { className: 'element-title' }
+      : { className: 'element-title ' + className };
+  return <strong {...getClassNm}>{data}</strong>;
 }

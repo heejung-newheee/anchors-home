@@ -1,42 +1,38 @@
-// media-query var
-$pageTitle-top : 104px;
-$pageTitle-bottom : 60px;
-$pageTitle-fontSize: 60px;
-$pageTitle-spanPaddingRight : 10px;
-
 .page-title {
   width: 100%;
-  height: $pageTitle-top + $pageTitle-bottom + $pageTitle-fontSize;
+  height: 104px + 60px + 60px; //$pageTitle-top + $pageTitle-bottom + $pageTitle-fontSize
   z-index: -1;
 
   &-h2 {
     @extend %font-pageTitle;
     position: fixed;
     left: 0;
-    top: $pageTitle-top;
+    top: 104px; //$pageTitle-top
     width: 100%;
-    height: $pageTitle-fontSize;
+    height: 60px; //$pageTitle-fontSize
     overflow: hidden;
     z-index: -1;
     text-align: center;
     transition: all 1s;
 
     span {
-      padding-right: $pageTitle-spanPaddingRight;
+      padding-right: 10px; // $pageTitle-spanPaddingRight;
       display: inline-block;
-      padding-top: $pageTitle-fontSize;
+      padding-top: 60px; //$pageTitle-fontSize
       -webkit-animation: pageTitleSpanFirst 1s;
       animation: pageTitleSpanFirst 1s;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
       vertical-align: top;
+      font-size: inherit;
+      font-weight: bold;
 
      @-webkit-keyframes pageTitleSpanFirst {
-        from {padding-top: $pageTitle-fontSize;}
+        from {padding-top: 60px;} //$pageTitle-fontSize
         to {padding-top: 0;}
       }
       @keyframes pageTitleSpanFirst {
-        from {padding-top: $pageTitle-fontSize;}
+        from {padding-top: 60px;} //$pageTitle-fontSize
         to {padding-top: 0;}
       }
 

@@ -60,6 +60,9 @@ function SwiperArea({
   swiperContentData = [],
   firstContent,
   secondContent,
+  className,
+  firstClassName,
+  secondClassName,
 }) {
   const [firstSwiper, setFirstSwiper] = React.useState(null);
   const [secondSwiper, setSecondSwiper] = React.useState(null);
@@ -73,6 +76,20 @@ function SwiperArea({
     ...DEFAULT_SWIPER_OPTION,
     ...secondSwiperOption,
   };
+  const getClassNm =
+    className == undefined
+      ? { className: 'swiper-area' }
+      : { className: 'swiper-area ' + className };
+
+  const getClassNm1st =
+    firstClassName == undefined
+      ? { className: 'swiper-area' }
+      : { className: 'swiper-area ' + firstClassName };
+
+  const getClassNm2st =
+    secondClassName == undefined
+      ? { className: 'swiper-area' }
+      : { className: 'swiper-area ' + secondClassName };
 
   if (type === 'double') {
     return (
@@ -83,6 +100,7 @@ function SwiperArea({
           onSwiper={setFirstSwiper}
           controller={{ control: secondSwiper }}
           {...computedFirstSwiperOption}
+          {...getClassNm1st}
         >
           {swiperContentData.map((d, idx) => (
             <SwiperSlide key={idx}>{firstContent(d)}</SwiperSlide>
@@ -93,6 +111,7 @@ function SwiperArea({
           onSwiper={setSecondSwiper}
           controller={{ control: firstSwiper }}
           {...computedScondSwiperOption}
+          {...getClassNm2st}
         >
           {swiperContentData.map((d, idx) => (
             <SwiperSlide key={idx}>{secondContent(d)}</SwiperSlide>
@@ -104,7 +123,7 @@ function SwiperArea({
   }
   return (
     // S: single swiper
-    <Swiper modules={swiperModule} {...computedSwiperOption}>
+    <Swiper modules={swiperModule} {...computedSwiperOption} {...getClassNm}>
       {swiperContentData.map((d, idx) => (
         <SwiperSlide key={idx}>{swiperContent(d)}</SwiperSlide>
       ))}

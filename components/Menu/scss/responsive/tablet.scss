@@ -1,0 +1,23 @@
+@include tablet {
+  .menu {
+    width: calc( 100% - 15.8rem );
+    .menu-btn {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+    .gnb-wrap{
+      .gnb {
+        bottom: 15.4rem;
+        li {
+          margin-bottom: 2.4rem;
+          * {
+            font-size: 6.4rem;
+          }
+        }
+      }
+      .copy {
+        bottom: 6rem;
+      }
+    }
+  }
+}

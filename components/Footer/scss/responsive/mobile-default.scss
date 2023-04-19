@@ -1,0 +1,27 @@
+.footer {
+  background-color: $color-blue;
+  background-color: $color-blue;
+  .btn-wrap {
+    text-align: center;
+    padding-bottom: 6rem;
+    a span {
+      font-family: $font-en;
+      font-weight: 700;
+    }
+  }
+  .copyright-wrap {
+    border-top: 1px solid rgba(255,255,255,.2);
+    padding: 2.4rem 0;
+    margin: 0 2.4rem;
+    text-align: center;
+
+    .copyright {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      color: $color-white;
+      font-family: $font-ko;
+      letter-spacing: 0.03em;
+      vertical-align: middle;
+    }
+  }
+}

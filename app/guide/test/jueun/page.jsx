@@ -2,13 +2,15 @@
 import React from 'react';
 
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
+import Header from '@/components/Header/Header';
+import Menu from '@/components/Menu/Menu';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Visual from '@/components/Visual/Visual';
 import aboutIntro from '@/helper/data/json/contents/about/aboutIntro.json';
 import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
 import variables from '@/public/assets/scss/_variables.module.scss';
 
-function swiperContent(cont) {
+/* function swiperContent(cont) {
   return (
     <div>
       <p>{cont.nameEn}</p>
@@ -19,7 +21,7 @@ function swiperContent(cont) {
       </div>
     </div>
   );
-}
+} */
 
 function firstContent(cont2) {
   return (
@@ -40,6 +42,9 @@ function secondContent(cont3) {
 export default function Jueun() {
   return (
     <>
+      {/* Menu component test */}
+      <Header />
+
       {/* ElementTitle component test */}
       <p
         style={{
@@ -63,7 +68,7 @@ export default function Jueun() {
       >
         Visual Component
       </p>
-      <Visual imgUrl="https://picsum.photos/1920/800">
+      <Visual imgUrl="https://picsum.photos/1920/800" pageTitleData="pageTitle">
         <div>
           <p>Title</p>
           <span>Description</span>
@@ -83,11 +88,27 @@ export default function Jueun() {
       </p>
       <SwiperArea
         type="single"
-        swiperContent={swiperContent}
+        swiperContent={function (cont) {
+          return (
+            <div>
+              <p>{cont.nameEn}</p>
+              <div>
+                <p>{cont.nameKo}</p>
+                <p>{cont.part}</p>
+                <p>{cont.hashtag}</p>
+              </div>
+            </div>
+          );
+        }}
         swiperContentData={aboutMembers.members}
         swiperOption={{
-          slidesPerView: 1,
+          navigation: false,
+          pagination: false,
+          scrollbar: {
+            draggable: true,
+          },
         }}
+        className="single"
       />
       <SwiperArea
         type="double"
@@ -99,6 +120,8 @@ export default function Jueun() {
           navigation: false,
           pagination: false,
         }}
+        firstClassName="first-test"
+        secondClassName="second-test"
       />
     </>
   );

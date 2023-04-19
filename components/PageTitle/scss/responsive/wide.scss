@@ -1,3 +1,24 @@
 @include wide {
+  .page-title {
+    height: 220px + 140px + 200px; //$pageTitle-top + $pageTitle-bottom + $pageTitle-fontSize
 
+    &-h2 {
+      top: 220px; //$pageTitle-top
+      height: 200px; //$pageTitle-fontSize
+
+      span {
+        padding-right: 22px; // $pageTitle-spanPaddingRight;
+        padding-top: 200px; //$pageTitle-fontSize
+
+        @-webkit-keyframes pageTitleSpanFirst {
+          from {padding-top: 200px;} //$pageTitle-fontSize
+          to {padding-top: 0;}
+        }
+        @keyframes pageTitleSpanFirst {
+          from {padding-top: 200px;} //$pageTitle-fontSize
+          to {padding-top: 0;}
+        }
+      }
+    }
+  }
 }

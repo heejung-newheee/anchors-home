@@ -1,14 +1,47 @@
 'use client';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
-// import Logo from "@/components/Logo/Logo";
-// import Menu from "@/components/Menu/Menu";
 
-export default function Header({ headerPosition }) {
+import Logo from '@/components/Logo/Logo';
+import Menu from '@/components/Menu/Menu';
+import './scss/Header.scss';
+
+export default function Header({ sectionRefs, headerPosition }) {
+  const [headerBgType, setHeaderBgType] = useState('');
+
   const handleScroll = () => {
-    console.log(0 + 1);
+    const $header = document.querySelector('.header');
+    const HEADER_HEIGHT = $header.getBoundingClientRect().height;
+    const sections = document.querySelectorAll('.section-div');
+    const sectionsArray = [];
+    sections.forEach((el) => sectionsArray.push(el));
+    const sectionUnderHeader = sectionsArray
+      ?.map((s) => s.getBoundingClientRect())
+      .map(({ y, height }) => ({
+        start: y - HEADER_HEIGHT,
+        end: y + height - HEADER_HEIGHT,
+      }))
+      .findIndex((se) => se.start < 0 && se.end >= 0);
+
+    switch (sectionUnderHeader) {
+      case -1:
+        // console.log('기본 className'); // 아무 것도 정의된 항목이 헤더 아래에 없으니
+        setHeaderBgType('is-white');
+        break;
+      default:
+        const classNm = sections[sectionUnderHeader].className;
+        const isWhite = classNm.includes('is-white');
+        const isBlack = classNm.includes('is-black');
+        const isPhoto = classNm.includes('is-photo');
+        // console.log(`${sectionUnderHeader}번째 인덱스 위에 헤더 있음`, classNm);
+        isWhite && setHeaderBgType('is-white');
+        isBlack && setHeaderBgType('is-black');
+        isPhoto && setHeaderBgType('is-photo');
+        break;
+    }
   };
 
   useEffect(() => {
@@ -17,5 +50,10 @@ export default function Header({ headerPosition }) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  return <header className="header">header</header>;
+  return (
+    <header className={`header ${headerBgType}`}>
+      <Logo />
+      <Menu />
+    </header>
+  );
 }

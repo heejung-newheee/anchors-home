@@ -1,25 +1,35 @@
-"use client"
-import Image from 'next/image'
-import Link from "next/link";
-// import Btn
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import './scss/Menu.scss';
 
+import Btn from '@/components/Btn/Btn';
+import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 export default function Menu() {
+  const menuBtnClass = () => {
+    document.querySelector('button').classList.toggle('close');
+    document.querySelector('.menu').classList.toggle('on');
+  };
+
   return (
-      <!-- header_footer.json 호출 -->
-      <article className="menu">
-          {/* Btn component */} <!-- 햄버거 버튼 -->
-          <div className="gnb-wrap">
-              <ul className="gnb">
-                  <!-- header_footer.menuList 배열값으로 반복 생성 -->
-                  <li>
-                      {/* Btn component */} <!-- href="{header_footer.menuList.url}" title="{header_footer.menuList.alt}" -->
-                     {/* header_footer.menuList.name (배열 모두 담기,배열 사이에 띄어쓰기 포함하기) */}
-                      {/* // Btn component */}
-                  </li>
-                  <!-- // header_footer.menuList 배열값으로 반복 생성 -->
-              </ul>
-              <span>{/*header_footer.copyright*/}</span>
-          </div>
-      </article>
-  )
+    <article className="menu">
+      <Btn type="button" className="menu-btn black" onClick={menuBtnClass}>
+        메뉴버튼
+      </Btn>
+      {/* 햄버거 버튼 */}
+      <div className="gnb-wrap">
+        <ul className="gnb">
+          {headerFooter.menuList.map((menuList, idx) => (
+            <li key={idx}>
+              <Btn type="link" url={menuList.url} alt={menuList.alt}>
+                {menuList.name[0].words}
+                {menuList.name[1] ? ' ' + menuList.name[1].words : ''}
+              </Btn>
+            </li>
+          ))}
+        </ul>
+        <span className="copy">{headerFooter.copyright}</span>
+      </div>
+    </article>
+  );
 }
