@@ -78,7 +78,7 @@ export default function WorksTemplate({ className }) {
             </>
           }
         />
-        {/* works.json => 'projectInformation' key값 순서 가져와서 적용 */}
+        {/* works.json => 받아와야 할 순서의 contents key값 중에 'projectInformation' 받아와서 적용 */}
         {works.content[4].projectInfomation.map((data, index) => (
           <BaseArticle
             key={index}
@@ -97,7 +97,7 @@ export default function WorksTemplate({ className }) {
       >
         <div className="sub_visual_text">
           <Description data="Thank you!" />
-          {/* works.json => 'projectInformation' key값 순서 가져와서 적용 */}
+          {/* works.json => 받아와야 할 순서의 contents key값 중에 'projectInformation' 받아와서 적용 */}
           {works.content[4].projectInfomation.map((data, index) => (
             <BaseArticle
               key={index}
