@@ -1,23 +1,23 @@
 @include tablet {
   .swiper_area {
-    .swiper_button_next, .swiper_button_prev {
+    .swiper-button-next, .swiper-button-prev {
       width: 4.6rem;
       height: 4.6rem;
     }
-    .swiper_pagination {
-      &.swiper_pagination_bullets {
-        .swiper_pagination_bullet {
+    .swiper-pagination {
+      &.swiper-pagination-bullets {
+        .swiper-pagination-bullet {
           width: .8rem;
           height: .8rem;
           margin: 0 .4rem;
-          &.swiper_pagination_bullet_active {
+          &.swiper-pagination-bullet-active {
             width: 3.6rem;
           }
         }
       }
     }
-    .swiper_scrollbar {
-      &.swiper_scrollbar_horizontal {
+    .swiper-scrollbar {
+      &.swiper-scrollbar-horizontal {
         height: .6rem;
       }
     }
