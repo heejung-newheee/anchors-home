@@ -9,15 +9,15 @@
       align-items: center;
       justify-content: center;
       h2 {
-        color: $color-white;
+        color: $color_white;
         font-weight: 700;
-        font-family: $font-en;
+        font-family: $font_en;
         margin-bottom: 1.8rem;
       }
       .disclaimer {
-        color: $color-white;
-        font-family: $font-ko;
-        @extend %font-visualDescription;
+        color: $color_white;
+        font-family: $font_ko;
+        @extend %font_visualDescription;
       }
     }
     .scroll-icon {
@@ -31,36 +31,36 @@
     }
   }
   .view-website-btn {
-    @extend %btn-secondary-up;
+    @extend %btn_secondary_up;
     position: fixed;
     right: 14px;
     bottom: 50px;
     z-index: 99;
   }
   .detail-text-wrap {
-    @extend %layout-fix;
-    @extend %font-enIntro;
-    font-family: $font-en;
+    @extend %layout_fix;
+    @extend %font_enIntro;
+    font-family: $font_en;
     .description:first-child {
       margin-top: 6rem;
       span {
-        font-family: $font-en-italic;
+        font-family: $font_en_italic;
       }
     }
     .description:nth-child(2) {
       margin-top: 5rem;
       margin-bottom: 5rem;
-      @extend %font-primary;
-      font-family: $font-ko;
+      @extend %font_primary;
+      font-family: $font_ko;
       br {
         display: none;
       }
     }
     .base-article {
-      @extend %font-primary;
-      color: $color-black;
+      @extend %font_primary;
+      color: $color_black;
       .element-title {
-        font-family: $font-ko;
+        font-family: $font_ko;
         font-size: 1.6rem;
         line-height: 1.6rem;
       }
@@ -80,7 +80,7 @@
   .detail-sub-visual-wrap {
     background-position: center;
     background-size: cover;
-    color: $color-white;
+    color: $color_white;
     height: 48rem;
     &.dimmed::after {
       background-color: rgba(0, 0, 0, 0.5);
@@ -94,21 +94,21 @@
       z-index: 1;
 
       .description {
-        font-family: $font-en-italic;
+        font-family: $font_en_italic;
         font-size: 3.6rem;
         margin-bottom: 4.4rem;
         letter-spacing: 0.03em;
         line-height: 4.7rem;
       }
       .base-article {
-        font-family: $font-ko;
+        font-family: $font_ko;
         .element-title {
           font-size: 1.6rem;
           line-height: 1.6rem;
         }
         .description {
           font-size: 1.4rem;
-          font-family: $font-ko;
+          font-family: $font_ko;
           line-height: 2.2rem;
           margin-top: 1.2rem;
           margin-bottom: 3.6rem;
@@ -118,15 +118,15 @@
   }
   .detail-next-work-wrap {
     margin-top: 6rem;
-    @extend %layout-fix;
+    @extend %layout_fix;
 
     h3 {
-      font-family: $font-en;
-      @extend %font-visualTitle;
+      font-family: $font_en;
+      @extend %font_visualTitle;
       font-weight: 700;
     }
     .base-article {
-      font-family: $font-en;
+      font-family: $font_en;
       margin-top: 4rem;
       text-align: left;
       img {
@@ -140,7 +140,7 @@
         margin-bottom: 0.8rem;
       }
       .description {
-        color: $color-darkgrey;
+        color: $color_darkgrey;
         font-size: 1.4rem;
         line-height: 1.4rem;
         letter-spacing: -0.03em;
@@ -148,8 +148,8 @@
     }
   }
   .portfolio-list-btn {
-    @extend %btn-primary-ghost;
-    background-color: $color-black;
+    @extend %btn_primary_ghost;
+    background-color: $color_black;
     margin: 4rem auto 6rem;
   }
 }
