@@ -1,7 +1,7 @@
 /* S : pdf Common */
 .header, .footer { display: none; }
 .guide {
-  @extend %layout-fix;
+  @extend %layout_fix;
 
   header {
 
@@ -11,7 +11,7 @@
       line-height: 50vh !important;
       text-align: center;
       font-weight: 900;
-      @extend %font-pageTitle;
+      @extend %font_pageTitle;
     }
 
     ul {
@@ -58,7 +58,7 @@
             content:'· ';
             position: absolute;
             left: 0;
-            top: -5px;
+            top: _5px;
             font-size: 30px;
           }
         }
@@ -98,20 +98,20 @@
 /* E:  pdf content */
 }
 // 임시 pdf 클래스명
-.fontPageTitle { @extend %font-pageTitle }
-.fontVisualTitle { @extend %font-visualTitle }
-.fontSectionTitle { @extend %font-sectionTitle }
-.fontEnIntro { @extend %font-enIntro }
-.fontContentsTitle { @extend %font-contentsTitle }
-.fontListTitle { @extend %font-listTitle }
-.fontBaseArticle { @extend %font-baseArticleTitle }
-.fontVisualDescription { @extend %font-visualDescription }
-.fontPrimary { @extend %font-primary }
-.fontDisclaimer { @extend %font-disclaimer }
-.fontTabAccContents { @extend %font-tabAccContents }
-.fontDevice { @extend %font-device }
+.fontPageTitle { @extend %font_pageTitle }
+.fontVisualTitle { @extend %font_visualTitle }
+.fontSectionTitle { @extend %font_sectionTitle }
+.fontEnIntro { @extend %font_enIntro }
+.fontContentsTitle { @extend %font_contentsTitle }
+.fontListTitle { @extend %font_listTitle }
+.fontBaseArticle { @extend %font_baseArticleTitle }
+.fontVisualDescription { @extend %font_visualDescription }
+.fontPrimary { @extend %font_primary }
+.fontDisclaimer { @extend %font_disclaimer }
+.fontTabAccContents { @extend %font_tabAccContents }
+.fontDevice { @extend %font_device }
 
-.btn-primary-normal { @extend %btn-primary-normal }
-.btn-primary-ghost { @extend %btn-primary-ghost }
-.btn-secondary-up { @extend %btn-secondary-up }
-.btn-secondary-down { @extend %btn-secondary-down }
+.btn_primary_normal { @extend %btn_primary_normal }
+.btn_primary_ghost { @extend %btn_primary_ghost }
+.btn_secondary_up { @extend %btn_secondary_up }
+.btn_secondary_down { @extend %btn_secondary_down }

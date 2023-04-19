@@ -17,11 +17,11 @@ export default function Tab() {
 
   return (
     <article className="tab">
-      <ul className="tab-btn-wrap">
+      <ul className="tab_btn_wrap">
         <TabButton onClick={() => handleClick(1)} />
       </ul>
 
-      <section className="tab-content-wrap">{/* tabContents */}</section>
+      <section className="tab_content_wrap">{/* tabContents */}</section>
     </article>
   );
 }

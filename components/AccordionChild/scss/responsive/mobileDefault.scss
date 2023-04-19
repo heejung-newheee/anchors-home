@@ -1,0 +1,53 @@
+.accordion {
+  border-bottom: 1px solid $color_grey;
+
+  dt {
+    @extend %font_baseArticleTitle;
+    padding: 2.8rem 3.8rem 2.8rem .4rem; // $accordion_dtPadding
+    border-top: 1px solid $color_grey;
+    position: relative;
+    font-weight: 700;
+
+    &:first-child {
+      border-top-color: $color_black;
+    }
+
+    button {
+      width: 2.4rem; // $accordion_buttonSize
+      height: 2.4rem; // $accordion_buttonSize
+      background: url(/assets/images/ico/ico_accordion_minus.svg) no-repeat center;
+      background-size: 100%;
+      position: absolute;
+      right: 1rem; // $accordion_buttonRight
+      top: 50%;
+      transform: translateY(-50%);
+
+      span {
+        @extend %blind;
+      }
+    }
+
+    &.active {
+      button {
+        background: url(/assets/images/ico/ico_accordion_plus.svg) no-repeat center;
+        background-size: 100%;
+        transform: translateY(-50%) rotate(180deg);
+        transition: transform .5s;
+      }
+    }
+
+    &.active + dd {
+      padding: 1.2rem 1rem 4rem; // $accordion_ddPadding
+      height: auto;
+      transition: all .3s;
+    }
+  }
+
+
+  dd {
+    height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    @extend %font_tabAccContents;
+  }
+}

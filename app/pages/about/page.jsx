@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ['latin'] });
 function About() {
   return (
     <div>
-      {/*<img src="/assets/images/ico/ico-btn-black-down.svg"/>*/}
+      {/*<img src="/assets/images/ico/ico_btn_black_down.svg"/>*/}
       <p>this is about!!!!</p>
     </div>
   );

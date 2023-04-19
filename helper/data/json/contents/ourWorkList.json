@@ -1,4 +1,4 @@
-Params = {
+{
 		"imgUrl" : "/assets/images/content/",
 		"url" : "/works/",
 		"button" : ["All", "Website", "App"],

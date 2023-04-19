@@ -1,11 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 
-import './scss/AccordionChild.scss';
-import Image from 'next/image';
-import Link from 'next/link';
-
 import Btn from '@/components/Btn/Btn';
+import './scss/AccordionChild.scss';
 
 export default function AccordionChild({
   children,
@@ -13,10 +10,10 @@ export default function AccordionChild({
   activeOption = 'N',
   onClick,
 }) {
-  const classNameObj = activeOption === 'Y' ? { className: 'active' } : {};
+  const CLASSNAME_OPTION = activeOption === 'Y' ? { className: 'active' } : {};
   return (
     <>
-      <dt {...classNameObj} onClick={onClick}>
+      <dt {...CLASSNAME_OPTION} onClick={onClick}>
         {titleData}
         <Btn type="button">목록 버튼</Btn>
       </dt>

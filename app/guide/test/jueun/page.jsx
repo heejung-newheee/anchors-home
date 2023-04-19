@@ -120,8 +120,8 @@ export default function Jueun() {
           navigation: false,
           pagination: false,
         }}
-        firstClassName="first-test"
-        secondClassName="second-test"
+        firstClassName="first_test"
+        secondClassName="second_test"
       />
     </>
   );

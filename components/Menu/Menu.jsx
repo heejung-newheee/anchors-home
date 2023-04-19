@@ -1,9 +1,7 @@
 'use client';
-import Image from 'next/image';
-import Link from 'next/link';
-import './scss/Menu.scss';
 
 import Btn from '@/components/Btn/Btn';
+import './scss/Menu.scss';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 export default function Menu() {
   const MenuBtnClass = () => {
@@ -13,11 +11,11 @@ export default function Menu() {
 
   return (
     <article className="menu">
-      <Btn type="button" className="menu-btn black" onClick={MenuBtnClass}>
+      <Btn type="button" className="menu_btn black" onClick={MenuBtnClass}>
         메뉴버튼
       </Btn>
       {/* 햄버거 버튼 */}
-      <div className="gnb-wrap">
+      <div className="gnb_wrap">
         <ul className="gnb">
           {headerFooter.menuList.map((menuList, idx) => (
             <li key={idx}>

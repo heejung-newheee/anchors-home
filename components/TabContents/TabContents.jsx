@@ -1,13 +1,11 @@
-"use client"
-import Image from 'next/image'
-import Link from "next/link";
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function TabContents() {
-    // props list = firstActiveOption
+  // props list = firstActiveOption
 
   return (
-      <article className="tab-content">
-        {/*작업자가 전달할 컴포넌트*/}
-      </article>
-  )
+    <article className="tab_content">{/*작업자가 전달할 컴포넌트*/}</article>
+  );
 }

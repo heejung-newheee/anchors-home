@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import './scss/DepthTitle.scss';
 
 export default function DepthTitle({
@@ -8,17 +8,17 @@ export default function DepthTitle({
   depthLevel = '1',
   className,
 }) {
-  const blindOptionObj = blindOption === 'visible' ? 'visible' : 'hidden';
-  const getClassNm =
+  const BLIND_OPTIOIN = blindOption === 'visible' ? 'visible' : 'hidden';
+  const GET_CLASSNAME =
     className == undefined
-      ? { className: blindOptionObj }
-      : { className: blindOptionObj + ' ' + className };
+      ? { className: BLIND_OPTIOIN }
+      : { className: BLIND_OPTIOIN + ' ' + className };
   return (
     <>
-      {depthLevel === '1' && <h3 {...getClassNm}>{children}</h3>}
-      {depthLevel === '2' && <h4 {...getClassNm}>{children}</h4>}
-      {depthLevel === '3' && <h5 {...getClassNm}>{children}</h5>}
-      {depthLevel === '4' && <h6 {...getClassNm}>{children}</h6>}
+      {depthLevel === '1' && <h3 {...GET_CLASSNAME}>{children}</h3>}
+      {depthLevel === '2' && <h4 {...GET_CLASSNAME}>{children}</h4>}
+      {depthLevel === '3' && <h5 {...GET_CLASSNAME}>{children}</h5>}
+      {depthLevel === '4' && <h6 {...GET_CLASSNAME}>{children}</h6>}
     </>
   );
 }

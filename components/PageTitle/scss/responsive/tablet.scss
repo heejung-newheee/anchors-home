@@ -1,21 +1,21 @@
 @include tablet {
-  .page-title {
-    height: 136px + 80px + 120px; //$pageTitle-top + $pageTitle-bottom + $pageTitle-fontSize
+  .page_title {
+    height: 136px + 80px + 120px; //$pageTitle_top + $pageTitle_bottom + $pageTitle_fontSize
 
-    &-h2 {
-      top: 136px; //$pageTitle-top
-      height: 120px; //$pageTitle-fontSize
+    &_h2 {
+      top: 136px; //$pageTitle_top
+      height: 120px; //$pageTitle_fontSize
 
       span {
-        padding-right: 14px; // $pageTitle-spanPaddingRight;
-        padding-top: 120px; //$pageTitle-fontSize
+        padding-right: 14px; // $pageTitle_spanPaddingRight;
+        padding-top: 120px; //$pageTitle_fontSize
 
         @-webkit-keyframes pageTitleSpanFirst {
-          from {padding-top: 120px;} //$pageTitle-fontSize
+          from {padding-top: 120px;} //$pageTitle_fontSize
           to {padding-top: 0;}
         }
         @keyframes pageTitleSpanFirst {
-          from {padding-top: 120px;} //$pageTitle-fontSize
+          from {padding-top: 120px;} //$pageTitle_fontSize
           to {padding-top: 0;}
         }
       }

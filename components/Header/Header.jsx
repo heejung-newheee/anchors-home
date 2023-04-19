@@ -2,52 +2,50 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 
-import Image from 'next/image';
-import Link from 'next/link';
-
 import Logo from '@/components/Logo/Logo';
 import Menu from '@/components/Menu/Menu';
 import './scss/Header.scss';
 
-export default function Header({ sectionRefs, headerPosition }) {
+export default function Header() {
   const [headerBgType, setHeaderBgType] = useState('');
 
-  const handleScroll = () => {
-    const $header = document.querySelector('.header');
-    const HEADER_HEIGHT = $header.getBoundingClientRect().height;
-    const sections = document.querySelectorAll('.section-div');
-    const sectionsArray = [];
-    sections.forEach((el) => sectionsArray.push(el));
-    const sectionUnderHeader = sectionsArray
-      ?.map((s) => s.getBoundingClientRect())
+  const HandleScroll = () => {
+    const HEADER = document.querySelector('.header');
+    const HEADER_HEIGHT = HEADER.getBoundingClientRect().height;
+    const SECTIONS = document.querySelectorAll('.section_div');
+    const SECTIONS_ARRAY = [];
+    SECTIONS.forEach((el) => SECTIONS_ARRAY.push(el));
+    const SECTIONS_UNDER_HEADER = SECTIONS_ARRAY?.map((s) =>
+      s.getBoundingClientRect(),
+    )
       .map(({ y, height }) => ({
         start: y - HEADER_HEIGHT,
         end: y + height - HEADER_HEIGHT,
       }))
       .findIndex((se) => se.start < 0 && se.end >= 0);
 
-    switch (sectionUnderHeader) {
+    switch (SECTIONS_UNDER_HEADER) {
       case -1:
         // console.log('기본 className'); // 아무 것도 정의된 항목이 헤더 아래에 없으니
-        setHeaderBgType('is-white');
+        setHeaderBgType('is_white');
         break;
       default:
-        const classNm = sections[sectionUnderHeader].className;
-        const isWhite = classNm.includes('is-white');
-        const isBlack = classNm.includes('is-black');
-        const isPhoto = classNm.includes('is-photo');
-        // console.log(`${sectionUnderHeader}번째 인덱스 위에 헤더 있음`, classNm);
-        isWhite && setHeaderBgType('is-white');
-        isBlack && setHeaderBgType('is-black');
-        isPhoto && setHeaderBgType('is-photo');
+        const CLASSNAME = SECTIONS[SECTIONS_UNDER_HEADER].className;
+        const IS_WHITE = CLASSNAME.includes('is_white');
+        const IS_BLACK = CLASSNAME.includes('is_black');
+        const IS_PHOTO = CLASSNAME.includes('is_photo');
+        // console.log(`${SECTIONS_UNDER_HEADER}번째 인덱스 위에 헤더 있음`, CLASSNAME);
+        IS_WHITE && setHeaderBgType('is_white');
+        IS_BLACK && setHeaderBgType('is_black');
+        IS_PHOTO && setHeaderBgType('is_photo');
         break;
     }
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', HandleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', HandleScroll);
     };
   }, []);
   return (

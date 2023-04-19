@@ -11,20 +11,17 @@ export default function Footer() {
   return (
     <footer className="footer">
       {/*headerFooter.json 호출*/}
-      <div className="lottie-wrap">
-        {/* LottiePlayer component */}
-        {/*LottiePlayer component (Ready to talk about your works?)*/}
-        {/* LottiePlayer component */} {/*LottiePlayer component (손가락모션)*/}
+      <div className="lottie_wrap">
+        {/* Lottie component */}
+        {/*Lottie component (Ready to talk about your works?)*/}
+        {/* Lottie component */} {/*Lottie component (손가락모션)*/}
       </div>
-      <div className="btn-wrap">
-        <Btn
-          className="btnPrimaryNormal"
-          type="submit"
-          alt="send mail"
-          children="Send mail"
-        />
+      <div className="btn_wrap">
+        <Btn className="btnPrimaryNormal" type="submit" alt="send mail">
+          Send mail
+        </Btn>
       </div>
-      <div className="copyright-wrap">
+      <div className="copyright_wrap">
         <span className="copyright">{copyright}</span>
       </div>
     </footer>

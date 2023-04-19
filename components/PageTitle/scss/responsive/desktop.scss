@@ -1,21 +1,21 @@
 @include desktop {
-  .page-title {
-    height: 200px + 120px + 160px; //$pageTitle-top + $pageTitle-bottom + $pageTitle-fontSize
+  .page_title {
+    height: 200px + 120px + 160px; //$pageTitle_top + $pageTitle_bottom + $pageTitle_fontSize
 
-    &-h2 {
-      top: 200px; //$pageTitle-top
-      height: 160px; //$pageTitle-fontSize
+    &_h2 {
+      top: 200px; //$pageTitle_top
+      height: 160px; //$pageTitle_fontSize
 
       span {
-        padding-right: 18px; // $pageTitle-spanPaddingRight;
-        padding-top: 160px; //$pageTitle-fontSize
+        padding-right: 18px; // $pageTitle_spanPaddingRight;
+        padding-top: 160px; //$pageTitle_fontSize
 
         @-webkit-keyframes pageTitleSpanFirst {
-          from {padding-top: 160px;} //$pageTitle-fontSize
+          from {padding-top: 160px;} //$pageTitle_fontSize
           to {padding-top: 0;}
         }
         @keyframes pageTitleSpanFirst {
-          from {padding-top: 160px;} //$pageTitle-fontSize
+          from {padding-top: 160px;} //$pageTitle_fontSize
           to {padding-top: 0;}
         }
       }

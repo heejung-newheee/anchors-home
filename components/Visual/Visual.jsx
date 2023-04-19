@@ -11,12 +11,12 @@ export default function Visual({
   pageTitleData,
 }) {
   const DIMM_CLASS = dimm === 'Y' ? ' dimmed' : '';
-  const getClassNm =
+  const GET_CLASSNAME =
     className == undefined
       ? { className: 'visual' + DIMM_CLASS }
       : { className: 'visual ' + className + DIMM_CLASS };
   return (
-    <article {...getClassNm} style={{ backgroundImage: `url(${imgUrl})` }}>
+    <article {...GET_CLASSNAME} style={{ backgroundImage: `url(${imgUrl})` }}>
       {pageTitleData && <h2>{pageTitleData}</h2>}
       {children}
     </article>

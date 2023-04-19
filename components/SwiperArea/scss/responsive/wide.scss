@@ -1,23 +1,23 @@
 @include wide {
-  .swiper-area {
-    .swiper-button-next, .swiper-button-prev {
+  .swiper_area {
+    .swiper_button_next, .swiper_button_prev {
       width: 5.2rem;
       height: 5.2rem;
     }
-    .swiper-pagination {
-      &.swiper-pagination-bullets {
-        .swiper-pagination-bullet {
+    .swiper_pagination {
+      &.swiper_pagination_bullets {
+        .swiper_pagination_bullet {
           width: 1rem;
           height: 1rem;
           margin: 0 .5rem;
-          &.swiper-pagination-bullet-active {
+          &.swiper_pagination_bullet_active {
             width: 4rem;
           }
         }
       }
     }
-    .swiper-scrollbar {
-      &.swiper-scrollbar-horizontal {
+    .swiper_scrollbar {
+      &.swiper_scrollbar_horizontal {
         height: .8rem;
       }
     }

@@ -76,20 +76,20 @@ function SwiperArea({
     ...DEFAULT_SWIPER_OPTION,
     ...secondSwiperOption,
   };
-  const getClassNm =
+  const GET_CLASSNAME =
     className == undefined
-      ? { className: 'swiper-area' }
-      : { className: 'swiper-area ' + className };
+      ? { className: 'swiper_area' }
+      : { className: 'swiper_area ' + className };
 
-  const getClassNm1st =
+  const GET_CLASSNAME1st =
     firstClassName == undefined
-      ? { className: 'swiper-area' }
-      : { className: 'swiper-area ' + firstClassName };
+      ? { className: 'swiper_area' }
+      : { className: 'swiper_area ' + firstClassName };
 
-  const getClassNm2st =
+  const GET_CLASSNAME2st =
     secondClassName == undefined
-      ? { className: 'swiper-area' }
-      : { className: 'swiper-area ' + secondClassName };
+      ? { className: 'swiper_area' }
+      : { className: 'swiper_area ' + secondClassName };
 
   if (type === 'double') {
     return (
@@ -100,7 +100,7 @@ function SwiperArea({
           onSwiper={setFirstSwiper}
           controller={{ control: secondSwiper }}
           {...COMPUTED_FIRST_SWIPER_OPTION}
-          {...getClassNm1st}
+          {...GET_CLASSNAME1st}
         >
           {swiperContentData.map((d, idx) => (
             <SwiperSlide key={idx}>{firstContent(d)}</SwiperSlide>
@@ -111,7 +111,7 @@ function SwiperArea({
           onSwiper={setSecondSwiper}
           controller={{ control: firstSwiper }}
           {...COMPUTED_SCOND_SWIPER_OPTION}
-          {...getClassNm2st}
+          {...GET_CLASSNAME2st}
         >
           {swiperContentData.map((d, idx) => (
             <SwiperSlide key={idx}>{secondContent(d)}</SwiperSlide>
@@ -123,7 +123,7 @@ function SwiperArea({
   }
   return (
     // S: single swiper
-    <Swiper modules={SWIPER_MODULE} {...COMPUTED_SWIPER_OPTION} {...getClassNm}>
+    <Swiper modules={SWIPER_MODULE} {...COMPUTED_SWIPER_OPTION} {...GET_CLASSNAME}>
       {swiperContentData.map((d, idx) => (
         <SwiperSlide key={idx}>{swiperContent(d)}</SwiperSlide>
       ))}

@@ -37,7 +37,7 @@ export default function Chchaa() {
       {/* <Header /> */}
       <PageTitle data={headerFooter.menuList[0].name} />
       <div
-        className="section-div is-white"
+        className="section_div is_white"
         style={{
           backgroundColor: variables.colorLightgrey,
           color: variables.colorWhite,
@@ -47,7 +47,7 @@ export default function Chchaa() {
         밝은 배경
       </div>
       <div
-        className="section-div is-black"
+        className="section_div is_black"
         style={{
           backgroundColor: variables.colorBlack,
           color: variables.colorWhite,
@@ -67,7 +67,7 @@ export default function Chchaa() {
         void
       </div>
       <div
-        className="section-div is-photo"
+        className="section_div is_photo"
         style={{
           backgroundColor: variables.colorLightblue,
           color: variables.colorWhite,

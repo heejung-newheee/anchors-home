@@ -1,11 +1,11 @@
 @include tablet {
   .menu {
     width: calc( 100% - 15.8rem );
-    .menu-btn {
+    .menu_btn {
       width: 2.8rem;
       height: 2.8rem;
     }
-    .gnb-wrap{
+    .gnb_wrap{
       .gnb {
         bottom: 15.4rem;
         li {

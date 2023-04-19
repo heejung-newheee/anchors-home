@@ -1,13 +1,10 @@
 'use client';
 import React from 'react';
-import './scss/BaseArticle.scss';
-
-import Image from 'next/image';
-import Link from 'next/link';
 
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
+import './scss/BaseArticle.scss';
 
 export default function BaseArticle({
   imgUrl = '',
@@ -17,12 +14,12 @@ export default function BaseArticle({
   disclaimer = '',
   className,
 }) {
-  const getClassNm =
+  const GET_CLASSNAME =
     className == undefined
-      ? { className: 'base-article' }
-      : { className: 'base-article ' + className };
+      ? { className: 'base_article' }
+      : { className: 'base_article ' + className };
   return (
-    <article {...getClassNm}>
+    <article {...GET_CLASSNAME}>
       {imgUrl != '' && <img src={imgUrl} alt={imgAlt} />}
       {elementTitle != '' && <ElementTitle data={elementTitle} />}
       {description != '' && <Description data={description} />}

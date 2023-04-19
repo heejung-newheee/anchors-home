@@ -1,0 +1,54 @@
+.swiper_area {
+  .swiper_button_next, .swiper_button_prev {
+    width: 3.2rem;
+    height: 3.2rem;
+    display: block;
+    margin-top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: 100%;
+    &::after{
+      display: none;
+    }
+    &.swiper_button_disabled {
+      opacity: .4;
+    }
+  }
+  .swiper_button_prev {
+    background-image: url('/assets/images/ico/ico_btn_white_prev.svg');
+  }
+  .swiper_button_next {
+    background-image: url('/assets/images/ico/ico_btn_white_next.svg');
+  }
+  .swiper_pagination {
+    &.swiper_pagination_bullets {
+      .swiper_pagination_bullet {
+        opacity: 1;
+        width: .6rem;
+        height: .6rem;
+        background-color: $color_grey;
+        margin: 0 .3rem;
+        transition: all .3s;
+        &.swiper_pagination_bullet_active {
+          width: 2.6rem;
+          border-radius: 100px;
+          background-color: $color_black;
+        }
+      }
+    }
+  }
+  .swiper_scrollbar {
+    &.swiper_scrollbar_horizontal {
+      width: 31.2rem;
+      height: .4rem;
+      background: $color_grey;
+      border-radius: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      .swiper_scrollbar_drag {
+        background: $color_black;
+        border-radius: 0;
+      }
+    }
+  }
+}

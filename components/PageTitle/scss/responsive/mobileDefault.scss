@@ -1,24 +1,24 @@
-.page-title {
+.page_title {
   width: 100%;
-  height: 104px + 60px + 60px; //$pageTitle-top + $pageTitle-bottom + $pageTitle-fontSize
+  height: 104px + 60px + 60px; //$pageTitle_top + $pageTitle_bottom + $pageTitle_fontSize
   z-index: -1;
 
-  &-h2 {
-    @extend %font-pageTitle;
+  &_h2 {
+    @extend %font_pageTitle;
     position: fixed;
     left: 0;
-    top: 104px; //$pageTitle-top
+    top: 104px; //$pageTitle_top
     width: 100%;
-    height: 60px; //$pageTitle-fontSize
+    height: 60px; //$pageTitle_fontSize
     overflow: hidden;
     z-index: -1;
     text-align: center;
     transition: all 1s;
 
     span {
-      padding-right: 10px; // $pageTitle-spanPaddingRight;
+      padding-right: 10px; // $pageTitle_spanPaddingRight;
       display: inline-block;
-      padding-top: 60px; //$pageTitle-fontSize
+      padding-top: 60px; //$pageTitle_fontSize
       -webkit-animation: pageTitleSpanFirst 1s;
       animation: pageTitleSpanFirst 1s;
       -webkit-animation-fill-mode: forwards;
@@ -28,11 +28,11 @@
       font-weight: 700;
 
      @-webkit-keyframes pageTitleSpanFirst {
-        from {padding-top: 60px;} //$pageTitle-fontSize
+        from {padding-top: 60px;} //$pageTitle_fontSize
         to {padding-top: 0;}
       }
       @keyframes pageTitleSpanFirst {
-        from {padding-top: 60px;} //$pageTitle-fontSize
+        from {padding-top: 60px;} //$pageTitle_fontSize
         to {padding-top: 0;}
       }
 

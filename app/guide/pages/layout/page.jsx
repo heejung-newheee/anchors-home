@@ -7,7 +7,7 @@ export default function GuideLayout() {
   return (
     <div className="guide">
       <header>
-        <h1 className="fontSize-h1">Guide</h1>
+        <h1 className="fontSize_h1">Guide</h1>
 
         <ul>
           <li>
@@ -49,17 +49,17 @@ export default function GuideLayout() {
             </p>
             <p>
               디자인 적용 중 최대너비가 패딩 포함 1536px이 아닐 경우,
-              @layout-fix를 적용한 뒤 따로 수정해야 할 부분을 추가하여 적용한다.
+              @layout_fix를 적용한 뒤 따로 수정해야 할 부분을 추가하여 적용한다.
             </p>
           </dd>
 
           <dt>Layout Option</dt>
           <dd>
             <article>
-              <strong className="title">%layout-fix</strong>
-              <div className="box">div &#123; @extend %layout-fix; &#125;</div>
+              <strong className="title">%layout_fix</strong>
+              <div className="box">div &#123; @extend %layout_fix; &#125;</div>
               <div
-                className="cta-outer"
+                className="cta_outer"
                 style={{
                   backgroundColor: variables.colorDarkgrey,
                   padding: '10px',

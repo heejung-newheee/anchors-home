@@ -1,10 +1,10 @@
 <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_2891_19191)">
-<path d="M19 40L33 26L19 12" stroke="white" stroke-opacity="0.4" stroke-width="5" shape-rendering="crispEdges"/>
+<path d="M19 40L33 26L19 12" stroke="white" stroke_opacity="0.4" stroke_width="5" shape_rendering="crispEdges"/>
 </g>
 <defs>
-<filter id="filter0_d_2891_19191" x="13.2305" y="10.2322" width="27.3047" height="39.5355" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_d_2891_19191" x="13.2305" y="10.2322" width="27.3047" height="39.5355" filterUnits="userSpaceOnUse" color_interpolation_filters="sRGB">
+<feFlood flood_opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
 <feGaussianBlur stdDeviation="2"/>

@@ -1,15 +1,15 @@
 .footer {
-  background-color: $color-blue;
-  background-color: $color-blue;
-  .btn-wrap {
+  background-color: $color_blue;
+  background-color: $color_blue;
+  .btn_wrap {
     text-align: center;
     padding-bottom: 6rem;
     a span {
-      font-family: $font-en;
+      font-family: $font_en;
       font-weight: 700;
     }
   }
-  .copyright-wrap {
+  .copyright_wrap {
     border-top: 1px solid rgba(255,255,255,.2);
     padding: 2.4rem 0;
     margin: 0 2.4rem;
@@ -18,8 +18,8 @@
     .copyright {
       font-size: 1.2rem;
       line-height: 1.4rem;
-      color: $color-white;
-      font-family: $font-ko;
+      color: $color_white;
+      font-family: $font_ko;
       letter-spacing: 0.03em;
       vertical-align: middle;
     }

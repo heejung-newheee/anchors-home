@@ -3,7 +3,7 @@
   width: calc( 100% - 12.8rem );
   height: inherit;
   right: 0;
-  .menu-btn {
+  .menu_btn {
     position: absolute;
     top: 50%;
     right: 2.4rem;
@@ -12,27 +12,27 @@
     height: 2.4rem;
     background-size: 100%;
     z-index: 1;
-    background-image: url('../../../../public/assets/images/ico/ico-btn-black-menu.svg');
+    background-image: url('../../../../public/assets/images/ico/ico_btn_black_menu.svg');
     span {
       visibility: hidden;
       font-size: 0;
     }
     &.close {
-      background-image: url('../../../../public/assets/images/ico/ico-btn-close.svg');
+      background-image: url('../../../../public/assets/images/ico/ico_btn_close.svg');
     }
   }
   &.on {
     width: 100%;
-    .gnb-wrap{
+    .gnb_wrap{
       display: block;
     }
   }
-  .gnb-wrap {
+  .gnb_wrap {
     position: absolute;
     display: none;
     width: 100%;
     height: 100vh;
-    background-color: $color-white;
+    background-color: $color_white;
     .gnb, .copy {
       position: absolute;
       left: 4rem;
@@ -44,7 +44,7 @@
         font-size: initial;
         * {
           font-size: 3.2rem;
-          letter-spacing: $en-letterSpacing;
+          letter-spacing: $en_letterSpacing;
           font-weight: 700;
           line-height: 1;
         }
@@ -55,42 +55,42 @@
     }
     .copy {
       bottom: 2.6rem;
-      @extend %font-disclaimer;
-      color: $color-darkgrey;
-      letter-spacing: $en-letterSpacing;
+      @extend %font_disclaimer;
+      color: $color_darkgrey;
+      letter-spacing: $en_letterSpacing;
       line-height: 1;
     }
   }
 }
 
 .header {
-  &.is-white {
+  &.is_white {
   }
-  &.is-black {
+  &.is_black {
     .menu {
-      .menu-btn {
-        background-image: url('../../../../public/assets/images/ico/ico-btn-white-menu.svg');
+      .menu_btn {
+        background-image: url('../../../../public/assets/images/ico/ico_btn_white_menu.svg');
       }
     }
     .gnb {
       li {
         * {
-          color: $color-white;
+          color: $color_white;
         }
       }
     }
   }
-  &.is-photo {
+  &.is_photo {
     .menu {
-      .menu-btn {
-        background-image: url('../../../../public/assets/images/ico/ico-btn-black-menu.svg');
+      .menu_btn {
+        background-image: url('../../../../public/assets/images/ico/ico_btn_black_menu.svg');
       }
     }
   }
   .menu {
-    .menu-btn {
+    .menu_btn {
       &.close {
-        background-image: url('../../../../public/assets/images/ico/ico-btn-close.svg');
+        background-image: url('../../../../public/assets/images/ico/ico_btn_close.svg');
       }
     }
   }

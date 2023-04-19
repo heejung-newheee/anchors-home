@@ -10,7 +10,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    background: url(/assets/images/ico/ico-logo-anchors-black.svg) no-repeat center;
+    background: url(/assets/images/ico/ico_logo_anchors_black.svg) no-repeat center;
     background-size: 100% auto;
 
     span {
@@ -18,12 +18,12 @@
     }
   }
 }
-.is-black .logo a {
-  background: url(/assets/images/ico/ico-logo-anchors-white.svg) no-repeat center;
+.is_black .logo a {
+  background: url(/assets/images/ico/ico_logo_anchors_white.svg) no-repeat center;
   background-size: 100% auto;
 }
-.is-white .logo a,
-.is-photo .logo a {
-  background: url(/assets/images/ico/ico-logo-anchors-black.svg) no-repeat center;
+.is_white .logo a,
+.is_photo .logo a {
+  background: url(/assets/images/ico/ico_logo_anchors_black.svg) no-repeat center;
   background-size: 100% auto;
 }

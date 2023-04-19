@@ -60,11 +60,11 @@ export default function Guide() {
               OurWorks
             </p>
             <p>
-              Class, ID : 단어와 단어 사이에 하이픈을 사용한다. Ex) .our-works
+              Class, ID : 단어와 단어 사이에 하이픈을 사용한다. Ex) .our_works
             </p>
             <p>
               image 내 파일 : 단어와 단어 사이에 하이픈을 사용한다. Ex)
-              ico-our-works
+              ico_our_works
             </p>
           </dd>
 
@@ -124,12 +124,12 @@ export default function Guide() {
             </div>
             <p>
               가이드에서 제공하는 변수 값은 scss 상에서는 속성값에 $변수명 을
-              적용하며, 페이지 상에서 직접 적용시에는 속성값에 '$'와'-'을
+              적용하며, 페이지 상에서 직접 적용시에는 속성값에 '$'와'_'을
               제외하고 camelClass를 적용하여 variables.변수값 으로 적용한다.
             </p>
             <div className="box">
               <p>
-                color : $color-black;
+                color : $color_black;
                 <br />
                 style = &#123;&#123; color : variables.colorBlack&#125;&#125;{' '}
                 <br />

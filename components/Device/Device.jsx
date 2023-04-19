@@ -1,10 +1,8 @@
 'use client';
 
-import Link from 'next/link';
-
-import './scss/Device.scss';
 import Description from '@/components/Description/Description';
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
+import './scss/Device.scss';
 
 export default function Device({
   elementTitle,
@@ -16,7 +14,7 @@ export default function Device({
   type = 'A',
 }) {
   const TYPE_OPTION = type === 'B' ? ' type_b' : '';
-  const GET_CLASS_NM =
+  const GET_CLASSNAME =
     className == undefined
       ? { className: 'device' + TYPE_OPTION }
       : { className: 'device ' + className + TYPE_OPTION };
@@ -27,7 +25,7 @@ export default function Device({
     { caption: caption[2], imgUrl: imgUrl[2], alt: alt },
   ];
   return (
-    <article {...GET_CLASS_NM}>
+    <article {...GET_CLASSNAME}>
       <ElementTitle data={elementTitle} />
       <Description data={description} />
       <div className="device-img">

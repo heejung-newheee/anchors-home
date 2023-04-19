@@ -1,60 +1,60 @@
 // S: for variable
 // Breakpoints
-$breakpoint-wide: 1536px;
-$breakpoint-desktop: 1280px;
-$breakpoint-tablet: 768px;
-$breakpoint-mobile: 360px;
+$breakpoint_wide: 1536px;
+$breakpoint_desktop: 1280px;
+$breakpoint_tablet: 768px;
+$breakpoint_mobile: 360px;
 @mixin wide {
-  @media (min-width: #{$breakpoint-wide}) {
+  @media (min-width: #{$breakpoint_wide}) {
     @content;
   }
 }
 @mixin desktop {
-  @media (min-width: #{$breakpoint-desktop}) {
+  @media (min-width: #{$breakpoint_desktop}) {
     @content;
   }
 }
 @mixin tablet {
-  @media (min-width: #{$breakpoint-tablet}) {
+  @media (min-width: #{$breakpoint_tablet}) {
     @content;
   }
 }
 @mixin mobile {
-  @media (max-width: #{$breakpoint-tablet - 1px}) {
+  @media (max-width: #{$breakpoint_tablet - 1px}) {
     @content;
   }
 }
 
 // font-family
-$font-ko : Pretendard;
-$font-en : stolzl;
-$font-en-italic : covered;
-$en-letterSpacing : -0.03em;
+$font_ko : Pretendard;
+$font_en : stolzl;
+$font_en_italic : covered;
+$en_letterSpacing : -0.03em;
 
 // color
-$color-black : #1D1D1F;
-$color-blue : #1F0AAD;
-$color-lightblue : #00BEFD;
-$color-white : #FFFFFF;
-$color-darkgrey : #848484;
-$color-grey : #D6D6D6;
-$color-lightgrey : #E4E4E4;
+$color_black : #1D1D1F;
+$color_blue : #1F0AAD;
+$color_lightblue : #00BEFD;
+$color_white : #FFFFFF;
+$color_darkgrey : #848484;
+$color_grey : #D6D6D6;
+$color_lightgrey : #E4E4E4;
 
 
 
 // export
 :export {
-  fontKo : $font-ko;
-  fontEn : $font-en;
-  fontEnItalic : $font-en-italic;
-  EnLetterSpacing : $en-letterSpacing;
-  colorBlack : $color-black;
-  colorBlue : $color-blue;
-  colorLightblue : $color-lightblue;
-  colorWhite : $color-white;
-  colorDarkgrey : $color-darkgrey;
-  colorGrey : $color-grey;
-  colorLightgrey : $color-lightgrey;
+  fontKo : $font_ko;
+  fontEn : $font_en;
+  fontEnItalic : $font_en_italic;
+  EnLetterSpacing : $en_letterSpacing;
+  colorBlack : $color_black;
+  colorBlue : $color_blue;
+  colorLightblue : $color_lightblue;
+  colorWhite : $color_white;
+  colorDarkgrey : $color_darkgrey;
+  colorGrey : $color_grey;
+  colorLightgrey : $color_lightgrey;
 }
 
 // E: for variable
@@ -75,83 +75,83 @@ $color-lightgrey : #E4E4E4;
 }
 
 // layout
-%layout-fix { max-width: auto; margin: 0 auto; padding: 0 24px; }
-@include mobile { %layout-fix { max-width: auto; margin: 0 auto; padding: 0 24px; } }
-@include desktop { %layout-fix { max-width: auto; margin: 0 auto; padding: 0 32px; } }
-@include wide { %layout-fix { max-width: $breakpoint-wide; margin: 0 auto; padding: 0 48px; } }
+%layout_fix { max-width: auto; margin: 0 auto; padding: 0 24px; }
+@include mobile { %layout_fix { max-width: auto; margin: 0 auto; padding: 0 24px; } }
+@include desktop { %layout_fix { max-width: auto; margin: 0 auto; padding: 0 32px; } }
+@include wide { %layout_fix { max-width: $breakpoint_wide; margin: 0 auto; padding: 0 48px; } }
 
 // font size
 // common
-%font-primary { font-size: 16px; line-height: 26px; } /* body2 */
-%font-sectionTitle { font-size: 28px; line-height: 40px; } /* subhead1 */
-%font-contentsTitle { font-size: 22px; line-height: 30px; } /* subhead2 */
-%font-listTitle { font-size: 18px; line-height: 26px; } /* subhead3 */
-%font-disclaimer { font-size: 12px; line-height: 20px; } /* subhead5 */
-%font-enIntro { font-size: 22px; line-height: 30px; } /* body1 */
+%font_primary { font-size: 16px; line-height: 26px; } /* body2 */
+%font_sectionTitle { font-size: 28px; line-height: 40px; } /* subhead1 */
+%font_contentsTitle { font-size: 22px; line-height: 30px; } /* subhead2 */
+%font_listTitle { font-size: 18px; line-height: 26px; } /* subhead3 */
+%font_disclaimer { font-size: 12px; line-height: 20px; } /* subhead5 */
+%font_enIntro { font-size: 22px; line-height: 30px; } /* body1 */
 // component
-%font-pageTitle { font-size: 60px; line-height: 60px; } /* display1 */
-%font-visualTitle { font-size: 50px; line-height: 58px; } /* headline1 */
-%font-baseArticleTitle { font-size: 18px; line-height: 26px; } /* headline2 */
-%font-visualDescription { font-size: 16px; line-height: 26px; } /* subhead4 */
-%font-tabAccContents { font-size: 16px; line-height: 26px; } /* body3 */
-%font-device { font-size: 12px; line-height: 18px; } /* caption2 */
+%font_pageTitle { font-size: 60px; line-height: 60px; } /* display1 */
+%font_visualTitle { font-size: 50px; line-height: 58px; } /* headline1 */
+%font_baseArticleTitle { font-size: 18px; line-height: 26px; } /* headline2 */
+%font_visualDescription { font-size: 16px; line-height: 26px; } /* subhead4 */
+%font_tabAccContents { font-size: 16px; line-height: 26px; } /* body3 */
+%font_device { font-size: 12px; line-height: 18px; } /* caption2 */
 
 @include tablet {
   // common
-  %font-primary { font-size: 16px; line-height: 26px; } /* body2 */
-  %font-sectionTitle { font-size: 36px; line-height: 50px; } /* subhead1 */
-  %font-contentsTitle { font-size: 28px; line-height: 38px; } /* subhead2 */
-  %font-listTitle { font-size: 20px; line-height: 28px; } /* subhead3 */
-  %font-disclaimer { font-size: 14px; line-height: 22px; } /* subhead5 */
-  %font-enIntro { font-size: 34px; line-height: 48px; } /* body1 */
+  %font_primary { font-size: 16px; line-height: 26px; } /* body2 */
+  %font_sectionTitle { font-size: 36px; line-height: 50px; } /* subhead1 */
+  %font_contentsTitle { font-size: 28px; line-height: 38px; } /* subhead2 */
+  %font_listTitle { font-size: 20px; line-height: 28px; } /* subhead3 */
+  %font_disclaimer { font-size: 14px; line-height: 22px; } /* subhead5 */
+  %font_enIntro { font-size: 34px; line-height: 48px; } /* body1 */
   // component
-  %font-pageTitle { font-size: 120px; line-height: 120px; } /* display1 */
-  %font-visualTitle { font-size: 80px; line-height: 90px; } /* headline1 */
-  %font-baseArticleTitle { font-size: 22px; line-height: 30px; } /* headline2 */
-  %font-visualDescription { font-size: 18px; line-height: 28px; } /* subhead4 */
-  //%font-tabAccContents { font-size: 16px; line-height: 26px; } /* body3 */
-  //%font-device { font-size: px; line-height: px; } /* caption2 */
+  %font_pageTitle { font-size: 120px; line-height: 120px; } /* display1 */
+  %font_visualTitle { font-size: 80px; line-height: 90px; } /* headline1 */
+  %font_baseArticleTitle { font-size: 22px; line-height: 30px; } /* headline2 */
+  %font_visualDescription { font-size: 18px; line-height: 28px; } /* subhead4 */
+  //%font_tabAccContents { font-size: 16px; line-height: 26px; } /* body3 */
+  //%font_device { font-size: px; line-height: px; } /* caption2 */
 }
 @include desktop {
   // common
-  %font-primary { font-size: 18px; line-height: 28px; } /* body2 */
-  %font-sectionTitle { font-size: 46px; line-height: 64px; } /* subhead1 */
-  %font-contentsTitle { font-size: 32px; line-height: 42px; } /* subhead2 */
-  %font-listTitle { font-size: 28px; line-height: 40px; } /* subhead3 */
-  %font-disclaimer { font-size: 16px; line-height: 24px; } /* subhead5 */
-  %font-enIntro { font-size: 42px; line-height: 58px; } /* body1 */
+  %font_primary { font-size: 18px; line-height: 28px; } /* body2 */
+  %font_sectionTitle { font-size: 46px; line-height: 64px; } /* subhead1 */
+  %font_contentsTitle { font-size: 32px; line-height: 42px; } /* subhead2 */
+  %font_listTitle { font-size: 28px; line-height: 40px; } /* subhead3 */
+  %font_disclaimer { font-size: 16px; line-height: 24px; } /* subhead5 */
+  %font_enIntro { font-size: 42px; line-height: 58px; } /* body1 */
   // component
-  %font-pageTitle { font-size: 160px; line-height: 160px; } /* display1 */
-  %font-visualTitle { font-size: 90px; line-height: 100px; } /* headline1 */
-  %font-baseArticleTitle { font-size: 24px; line-height: 34px; } /* headline2 */
-  %font-visualDescription { font-size: 22px; line-height: 30px; } /* subhead4 */
-  //%font-tabAccContents { font-size: px; line-height: px; } /* body3 */
-  %font-device { font-size: 14px; line-height: 22px; } /* caption2 */
+  %font_pageTitle { font-size: 160px; line-height: 160px; } /* display1 */
+  %font_visualTitle { font-size: 90px; line-height: 100px; } /* headline1 */
+  %font_baseArticleTitle { font-size: 24px; line-height: 34px; } /* headline2 */
+  %font_visualDescription { font-size: 22px; line-height: 30px; } /* subhead4 */
+  //%font_tabAccContents { font-size: px; line-height: px; } /* body3 */
+  %font_device { font-size: 14px; line-height: 22px; } /* caption2 */
 }
 @include wide {
   // common
-  %font-primary { font-size: 20px; line-height: 32px; } /* body2 */
-  %font-sectionTitle { font-size: 56px; line-height: 78px; } /* subhead1 */
-  %font-contentsTitle { font-size: 38px; line-height: 50px; } /* subhead2 */
-  %font-listTitle { font-size: 32px; line-height: 45px; } /* subhead3 */
-  %font-disclaimer { font-size: 18px; line-height: 28px; } /* subhead5 */
-  %font-enIntro { font-size: 50px; line-height: 70px; } /* body1 */
+  %font_primary { font-size: 20px; line-height: 32px; } /* body2 */
+  %font_sectionTitle { font-size: 56px; line-height: 78px; } /* subhead1 */
+  %font_contentsTitle { font-size: 38px; line-height: 50px; } /* subhead2 */
+  %font_listTitle { font-size: 32px; line-height: 45px; } /* subhead3 */
+  %font_disclaimer { font-size: 18px; line-height: 28px; } /* subhead5 */
+  %font_enIntro { font-size: 50px; line-height: 70px; } /* body1 */
   // component
-  %font-pageTitle { font-size: 200px; line-height: 200px; } /* display1 */
-  %font-visualTitle { font-size: 104px; line-height: 114px; } /* headline1 */
-  %font-baseArticleTitle { font-size: 28px; line-height: 40px; } /* headline2 */
-  %font-visualDescription { font-size: 24px; line-height: 34px; } /* subhead4 */
-  %font-tabAccContents { font-size: 18px; line-height: 28px; } /* body3 */
-  %font-device { font-size: 16px; line-height: 24px; } /* caption2 */
+  %font_pageTitle { font-size: 200px; line-height: 200px; } /* display1 */
+  %font_visualTitle { font-size: 104px; line-height: 114px; } /* headline1 */
+  %font_baseArticleTitle { font-size: 28px; line-height: 40px; } /* headline2 */
+  %font_visualDescription { font-size: 24px; line-height: 34px; } /* subhead4 */
+  %font_tabAccContents { font-size: 18px; line-height: 28px; } /* body3 */
+  %font_device { font-size: 16px; line-height: 24px; } /* caption2 */
 }
 
 
 // btn
-%btn-primary-normal, %btn-primary-ghost {
+%btn_primary_normal, %btn_primary_ghost {
   display: inline-block;
   vertical-align: middle;
-  background-color: $color-white;
-  color: $color-blue;
+  background-color: $color_white;
+  color: $color_blue;
   height: 44px;
   line-height: 44px;
   padding-left: 22px;
@@ -161,7 +161,7 @@ $color-lightgrey : #E4E4E4;
   position: relative;
   overflow: hidden;
   font-size: 14px;
-  letter-spacing: $en-letterSpacing;
+  letter-spacing: $en_letterSpacing;
 
   span {
     position: relative;
@@ -175,7 +175,7 @@ $color-lightgrey : #E4E4E4;
     display: block;
     width: 16px;
     height: 16px;
-    background: url(/assets/images/ico/ico-btn-blue-up.svg)no-repeat;
+    background: url(/assets/images/ico/ico_btn_blue_up.svg)no-repeat;
     background-size: 100%;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
@@ -200,18 +200,18 @@ $color-lightgrey : #E4E4E4;
     animation: btnPrimary 2s infinite;
   }
 }
-%btn-primary-ghost {
+%btn_primary_ghost {
   background-color: transparent;
-  color: $color-white;
-  border: 1px solid $color-white;
+  color: $color_white;
+  border: 1px solid $color_white;
 
   &:after {
-    background: url(/assets/images/ico/ico-btn-white-up.svg)no-repeat;
+    background: url(/assets/images/ico/ico_btn_white_up.svg)no-repeat;
     background-size: 100%;
   }
 }
 @include tablet {
-  %btn-primary-normal, %btn-primary-ghost {
+  %btn_primary_normal, %btn_primary_ghost {
     height: 58px;
     line-height: 58px;
     font-size: 18px;
@@ -235,7 +235,7 @@ $color-lightgrey : #E4E4E4;
   }
 }
 @include desktop {
-  %btn-primary-normal, %btn-primary-ghost {
+  %btn_primary_normal, %btn_primary_ghost {
     height: 70px;
     line-height: 70px;
     font-size: 22px;
@@ -259,14 +259,14 @@ $color-lightgrey : #E4E4E4;
   }
 }
 
-%btn-secondary-up, %btn-secondary-down {
+%btn_secondary_up, %btn_secondary_down {
   display: inline-block;
   vertical-align: middle;
   width: 90px;
   height: 90px;
-  background-color: $color-white;
-  color: $color-black;
-  border: 1px solid $color-grey;
+  background-color: $color_white;
+  color: $color_black;
+  border: 1px solid $color_grey;
   text-decoration: none;
   border-radius: 50%;
   overflow: hidden;
@@ -296,7 +296,7 @@ $color-lightgrey : #E4E4E4;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background: url(/assets/images/ico/ico-btn-white-up.svg)no-repeat;
+    background: url(/assets/images/ico/ico_btn_white_up.svg)no-repeat;
     background-size: 100%;
   }
   @keyframes btnSecondaryUp {
@@ -321,16 +321,16 @@ $color-lightgrey : #E4E4E4;
     animation: btnSecondaryUp 2s infinite;
   }
 }
-%btn-secondary-down {
+%btn_secondary_down {
   &:after {
     width: 24px;
     height: 24px;
-    background: url(/assets/images/ico/ico-btn-black-down.svg)no-repeat;
+    background: url(/assets/images/ico/ico_btn_black_down.svg)no-repeat;
     background-size: 100%;
   }
   &:hover {
-    background-color: $color-white;
-    border: 1px solid $color-grey;
+    background-color: $color_white;
+    border: 1px solid $color_grey;
   }
   @keyframes btnSecondaryDown {
     0% { top: 50%; }
@@ -347,7 +347,7 @@ $color-lightgrey : #E4E4E4;
   }
 }
 @include tablet {
-  %btn-secondary-up, %btn-secondary-down {
+  %btn_secondary_up, %btn_secondary_down {
     width: 140px;
     height: 140px;
     span {
@@ -359,7 +359,7 @@ $color-lightgrey : #E4E4E4;
       height: 22px;
     }
   }
-  %btn-secondary-down {
+  %btn_secondary_down {
     &:after {
       width: 32px;
       height: 32px;
@@ -367,7 +367,7 @@ $color-lightgrey : #E4E4E4;
   }
 }
 @include desktop {
-  %btn-secondary-up, %btn-secondary-down {
+  %btn_secondary_up, %btn_secondary_down {
     width: 180px;
     height: 180px;
     span {
@@ -379,7 +379,7 @@ $color-lightgrey : #E4E4E4;
       height: 26px;
     }
   }
-  %btn-secondary-down {
+  %btn_secondary_down {
     &:after {
       width: 38px;
       height: 38px;

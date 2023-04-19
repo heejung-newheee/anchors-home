@@ -6,11 +6,11 @@
   top: 0;
   z-index: 1000;
 
-  &.is-white {
+  &.is_white {
   }
-  &.is-black {
+  &.is_black {
   }
-  &.is-photo {
+  &.is_photo {
     background-color: rgba(255,255,255,0.6);
     backdrop-filter: blur(0.5rem);
     -webkit-backdrop-filter: blur(0.5rem);
