@@ -7,8 +7,6 @@ export const metadata = {
   description: '',
 };
 
-const inter = Inter({ subsets: ['latin'] });
-
 function About() {
   return (
     <div>
