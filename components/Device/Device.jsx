@@ -30,12 +30,14 @@ export default function Device({
     <article {...getClassNm}>
       <ElementTitle data={elementTitle} />
       <Description data={description} />
-      {DEVICE_DATA.map((data, index) => (
-        <div key={index}>
-          <span>{data.caption}</span>
-          <Image src={data.imgUrl} alt={data.alt} width={100} height={100} />
-        </div>
-      ))}
+      <div className="device-img">
+        {DEVICE_DATA.map((data, index) => (
+          <div key={index}>
+            <span>{data.caption}</span>
+            <Image src={data.imgUrl} alt={data.alt} width={100} height={100} />
+          </div>
+        ))}
+      </div>
     </article>
   );
 }
