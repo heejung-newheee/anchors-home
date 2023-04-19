@@ -1,3 +1,13 @@
 @include wide {
+  .accordion {
 
+    dt {
+      padding: 5.4rem 6.6rem 5.4rem 1rem; // $accordion-dtPadding
+
+      button {
+        width: 4.6rem; // $accordion-buttonSize
+        height: 4.6rem; // $accordion-buttonSize
+      }
+    }
+  }
 }

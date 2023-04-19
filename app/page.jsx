@@ -1,7 +1,8 @@
 import './scss/main.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-// import Header from "@/components/Header/Header";
+
+import variables from '@/public/assets/scss/_variables.module.scss';
 
 export const metadata = {
   title: 'Anchors',
@@ -11,18 +12,53 @@ export const metadata = {
 export default function Main() {
   return (
     <>
-      {/*<Header />*/}
-      <Link href="guide" className="name-is-cha" style={{ lineHeight: '10px' }}>
-        guide
-      </Link>
       <br />
-      <Link href="pages/about">about</Link> <br /> <br />
-      <p className="text">mediaQuery type - </p> <br /> <br />
-      <Link href="guide/test/chchaa">chchaa test page</Link> <br />
-      <Link href="guide/test/jueun">jueun test page</Link> <br />
-      <Link href="guide/test/mijeong">mijeong test page</Link> <br />
-      <Link href="guide/test/doi">doi test page</Link> <br />
-      <Link href="guide/test/chaewon">chaewon test page</Link>
+      <br />
+      <br />
+      <br />
+      <br />
+      <p
+        className="text"
+        style={{
+          backgroundColor: variables.colorGrey,
+          color: variables.colorWhite,
+          padding: 20,
+        }}
+      >
+        mediaQuery type -
+      </p>
+      <br />
+      <br />
+      <br />
+      <p>
+        <b>가이드페이지 링크</b>
+      </p>
+      <br />
+      <br />
+      <Link href="guide">&gt; GUIDE 바로가기</Link> <br /> <br />
+      <br />
+      <br />
+      <p>
+        <b>테스트 링크</b>
+      </p>
+      <br />
+      <Link href="guide/test/chchaa">&gt; chchaa test page 바로가기</Link>
+      <br />
+      <br />
+      <Link href="guide/test/jueun">&gt; jueun test page 바로가기</Link> <br />
+      <br />
+      <Link href="guide/test/mijeong">&gt; mijeong test page 바로가기</Link>
+      <br />
+      <br />
+      <Link href="guide/test/doi">&gt; doi test page 바로가기</Link> <br />
+      <br />
+      <Link href="guide/test/chaewon">&gt; chaewon test page 바로가기</Link>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </>
   );
 }

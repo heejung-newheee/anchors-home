@@ -3,9 +3,10 @@
 
   dt {
     @extend %font-baseArticleTitle;
-    padding: 2.7rem 3.8rem 2.7rem .4rem; // $accordion-dtPadding
+    padding: 2.8rem 3.8rem 2.8rem .4rem; // $accordion-dtPadding
     border-top: 1px solid $color-grey;
     position: relative;
+    font-weight: 700;
 
     &:first-child {
       border-top-color: $color-black;
@@ -36,7 +37,7 @@
     }
 
     &.active + dd {
-      padding: 1.3rem 1rem 4rem; // $accordion-ddPadding
+      padding: 1.2rem 1rem 4rem; // $accordion-ddPadding
       height: auto;
       transition: all .3s;
     }
