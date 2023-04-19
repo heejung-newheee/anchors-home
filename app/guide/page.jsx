@@ -60,11 +60,16 @@ export default function Guide() {
               OurWorks
             </p>
             <p>
-              Class, ID : 단어와 단어 사이에 하이픈을 사용한다. Ex) .our_works
+              Class, ID : 소문자 단어와 단어 사이에 언더바를 사용한다. Ex)
+              .our_works
             </p>
             <p>
-              image 내 파일 : 단어와 단어 사이에 하이픈을 사용한다. Ex)
+              image 내 파일 : 소문자 단어와 단어 사이에 언더바을 사용한다. Ex)
               ico_our_works
+            </p>
+            <p>
+              함수 변수명 : 대문자 단어와 단어 사이에 언더바을 사용한다. Ex)
+              HEADER_ICON
             </p>
           </dd>
 
