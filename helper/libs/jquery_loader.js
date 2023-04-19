@@ -1,2 +1,4 @@
-//jquery_loader.js
-window.$ = window.jQuery = require('jquery')
+'use client';
+if (typeof window !== 'undefined') {
+  window.$ = window.jQuery = require('jquery');
+}
