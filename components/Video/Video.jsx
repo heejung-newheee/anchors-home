@@ -2,14 +2,14 @@
 
 // import Link from "next/link";
 import Btn from '@/components/Btn/Btn';
-import videoPlayBtn from '@/public/assets/images/ico/ico_btn_play.svg';
 import './scss/Video.scss';
 
 export default function Video({ videoUrl, className }) {
-  const videoPlay = () => {
+  const VIDEO_PLAY = () => {
+    document.querySelector('.video').classList.add('dim_off');
     document.querySelector('video').play();
     document.querySelector('video').classList.add('on');
-    document.querySelector('button').classList.add('hide');
+    document.querySelector('button.video_btn').classList.add('hide');
   };
   const GET_CLASSNAME =
     className == undefined
@@ -18,16 +18,13 @@ export default function Video({ videoUrl, className }) {
   return (
     <div {...GET_CLASSNAME}>
       <video src={videoUrl} controls />
-
       <Btn
         className="video_btn"
         type="button"
-        onClick={videoPlay}
+        onClick={VIDEO_PLAY}
         children={
-          <Image
-            src={videoPlayBtn}
-            width={60}
-            height={60}
+          <img
+            src="/assets/images/ico/ico_btn_play.svg"
             alt="video play button"
           />
         }

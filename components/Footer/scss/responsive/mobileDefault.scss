@@ -1,12 +1,10 @@
 .footer {
   background-color: $color_blue;
-  background-color: $color_blue;
   .btn_wrap {
     text-align: center;
     padding-bottom: 6rem;
-    a span {
-      font-family: $font_en;
-      font-weight: 700;
+    button {
+      @extend %btn_primary_normal;
     }
   }
   .copyright_wrap {
