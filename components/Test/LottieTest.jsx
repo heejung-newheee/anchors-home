@@ -1,10 +1,12 @@
 'use client';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useRef } from 'react';
 import { Controls, PlayState, Reveal, Tween } from 'react-gsap';
-import Lottie from 'lottie-react';
-import lottie_main from '@/public/lottie/lottie_main_keyvisual.json';
+
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
+import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,10 +15,10 @@ gsap.registerPlugin(ScrollTrigger);
  * 참고
  *  - https://bitworking.github.io/react-gsap/
  *  - https://lottiereact.com/
- * @returns 
+ * @returns
  */
 function LottieTest() {
-  const lottieRef = useRef();
+  const LottiePlayerRef = useRef();
 
   return (
     <>
@@ -33,16 +35,16 @@ function LottieTest() {
         </Tween>
       </Controls>
       <div style={{ height: '1000px', backgroundColor: 'lightgray' }}>!</div>
-      <Lottie
-        lottieRef={lottieRef}
-        animationData={lottie_main}
+      <LottiePlayer
+        ref={LottiePlayerRef}
+        data={lottieMainKeyVisual}
         autoplay={false}
         loop={false}
       />
       <Tween
         to={{
-          x: '100vw',
-          y: '100vh',
+          x: '200px',
+          y: '100px',
           scale: 10,
           scrollTrigger: {
             trigger: '.square',
@@ -51,11 +53,13 @@ function LottieTest() {
             scrub: 0.5,
             markers: true,
             onEnter: (d) => {
-              console.log('📢[LottieTest.jsx:48]: onEnter: ', d);
-              lottieRef.current.play();
+              LottiePlayerRef.current.controll('play');
+            },
+            onLeave: () => {
+              LottiePlayerRef.current.controll('pause');
             },
             onUpdate: (d) => {
-              console.log(d);
+              // console.log(d);
             },
           },
         }}
@@ -67,18 +71,12 @@ function LottieTest() {
       </Tween>
       <div style={{ height: '1000px', backgroundColor: 'lightgray' }}>!</div>
       <Reveal repeat>
-        <Tween from={{ opacity: 0 }} duration={2}>
-          <div>This headline is fading in</div>
+        <Tween to={{ opacity: 1 }} duration={2}>
+          <div style={{ opacity: 0 }}>This headline is fading in</div>
         </Tween>
       </Reveal>
       <div style={{ height: '1000px', backgroundColor: 'lightgray' }}>!</div>
-      <Reveal repeat trigger={<div />}>
-        <FadeInLeft>
-          <div style={{ backgroundColor: 'red' }}>
-            This headline is coming from left
-          </div>
-        </FadeInLeft>
-      </Reveal>
+
       <div style={{ height: '1000px', backgroundColor: 'lightgray' }}>!</div>
     </>
   );
