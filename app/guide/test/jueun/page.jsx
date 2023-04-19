@@ -68,7 +68,7 @@ export default function Jueun() {
       >
         Visual Component
       </p>
-      <Visual imgUrl="https://picsum.photos/1920/800">
+      <Visual imgUrl="https://picsum.photos/1920/800" pageTitleData="pageTitle">
         <div>
           <p>Title</p>
           <span>Description</span>
