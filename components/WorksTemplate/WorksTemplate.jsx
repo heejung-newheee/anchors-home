@@ -14,17 +14,17 @@ import works from '@/helper/data/json/contents/works/works.json';
 import './scss/WorkTemplate.scss';
 
 export default function WorksTemplate({ className }) {
-  const getClassNm =
+  const GET_CLASSNAME =
     className == undefined
-      ? { className: 'works-template' }
-      : { className: 'works-template ' + className };
+      ? { className: 'works_template' }
+      : { className: 'works_template ' + className };
   return (
-    <section {...getClassNm}>
+    <section {...GET_CLASSNAME}>
       {/* S: Key Visual 영역 */}
-      <div className="detail-key-visual-wrap">
+      <div className="detail_key_visual_wrap">
         <Visual
-          className="detail-key-visual"
-          imgUrl="/assets/images/contents/works/img-keyvisual-aia.png"
+          className="detail_key_visual"
+          imgUrl="/assets/images/contents/works/img_keyvisual_aia.png"
           pageTitleData={
             <>
               AIA Life insurance
@@ -36,21 +36,21 @@ export default function WorksTemplate({ className }) {
           <Disclaimer data={works.content[0].description} />
         </Visual>
         <img
-          className="scroll-icon"
-          src="/assets/images/contents/works/img-scroll.png"
+          className="scroll_icon"
+          src="/assets/images/contents/works/img_scroll.png"
           alt="scroll for more image"
         />
       </div>
       {/* E: Key Visual 영역 */}
 
       {/* S: View Website Button 영역 */}
-      <Btn className="view-website-btn" type="a" title="view website button">
+      <Btn className="view_website_btn" type="a" title="view website button">
         View Website
       </Btn>
       {/* E: View Website Button 영역 */}
 
       {/* S: Text 영역 */}
-      <div className="detail-text-wrap">
+      <div className="detail_text_wrap">
         <Description
           data={
             <>
@@ -91,10 +91,10 @@ export default function WorksTemplate({ className }) {
       {/* S: Sub Visual 영역 */}
       <Visual
         dimm="Y"
-        className="detail-sub-visual-wrap"
-        imgUrl="/assets/images/contents/works/img-subvisual-aia.png"
+        className="detail_sub_visual_wrap"
+        imgUrl="/assets/images/contents/works/img_subvisual_aia.png"
       >
-        <div className="sub-visual-text">
+        <div className="sub_visual_text">
           <Description data="Thank you!" />
           {/* works.json => 'projectInformation' key값 순서 가져와서 적용 */}
           {works.content[4].projectInfomation.map((data, index) => (
@@ -109,7 +109,7 @@ export default function WorksTemplate({ className }) {
       {/* E: Sub Visual 영역 */}
 
       {/* S: Next work 영역 */}
-      <div className="detail-next-work-wrap">
+      <div className="detail_next_work_wrap">
         <DepthTitle depthLevel="1" blindOption="visible">
           Next Work
         </DepthTitle>
@@ -144,7 +144,7 @@ export default function WorksTemplate({ className }) {
 
       {/* S: Portfolio list button 영역 */}
       <Btn
-        className="portfolio-list-btn"
+        className="portfolio_list_btn"
         type="a"
         title="portfolio list button"
       >

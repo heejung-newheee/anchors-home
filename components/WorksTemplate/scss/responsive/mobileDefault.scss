@@ -1,9 +1,9 @@
-.works-template {
+.works_template {
   text-align: center;
-  .detail-key-visual-wrap {
+  .detail_key_visual_wrap {
     position: relative;
 
-    .detail-key-visual {
+    .detail_key_visual {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -20,7 +20,7 @@
         @extend %font_visualDescription;
       }
     }
-    .scroll-icon {
+    .scroll_icon {
       position: absolute;
       bottom: 30px;
       left: 50%;
@@ -30,14 +30,14 @@
       height: auto;
     }
   }
-  .view-website-btn {
+  .view_website_btn {
     @extend %btn_secondary_up;
     position: fixed;
     right: 14px;
     bottom: 50px;
     z-index: 99;
   }
-  .detail-text-wrap {
+  .detail_text_wrap {
     @extend %layout_fix;
     @extend %font_enIntro;
     font-family: $font_en;
@@ -56,10 +56,10 @@
         display: none;
       }
     }
-    .base-article {
+    .base_article {
       @extend %font_primary;
       color: $color_black;
-      .element-title {
+      .element_title {
         font-family: $font_ko;
         font-size: 1.6rem;
         line-height: 1.6rem;
@@ -77,7 +77,7 @@
       }
     }
   }
-  .detail-sub-visual-wrap {
+  .detail_sub_visual_wrap {
     background-position: center;
     background-size: cover;
     color: $color_white;
@@ -85,7 +85,7 @@
     &.dimmed::after {
       background-color: rgba(0, 0, 0, 0.5);
     }
-    .sub-visual-text {
+    .sub_visual_text {
       position: relative;
       left: 50%;
       top: 50%;
@@ -100,9 +100,9 @@
         letter-spacing: 0.03em;
         line-height: 4.7rem;
       }
-      .base-article {
+      .base_article {
         font-family: $font_ko;
-        .element-title {
+        .element_title {
           font-size: 1.6rem;
           line-height: 1.6rem;
         }
@@ -116,7 +116,7 @@
       }
     }
   }
-  .detail-next-work-wrap {
+  .detail_next_work_wrap {
     margin-top: 6rem;
     @extend %layout_fix;
 
@@ -125,14 +125,14 @@
       @extend %font_visualTitle;
       font-weight: 700;
     }
-    .base-article {
+    .base_article {
       font-family: $font_en;
       margin-top: 4rem;
       text-align: left;
       img {
         margin-bottom: 2.2rem;
       }
-      .element-title {
+      .element_title {
         font-size: 1.8rem;
         line-height: 1.8rem;
         font-weight: 400;
@@ -147,7 +147,7 @@
       }
     }
   }
-  .portfolio-list-btn {
+  .portfolio_list_btn {
     @extend %btn_primary_ghost;
     background-color: $color_black;
     margin: 4rem auto 6rem;
