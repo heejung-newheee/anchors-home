@@ -1,3 +1,82 @@
 @include desktop {
-
+  .works_template {
+    .detail_key_visual_wrap {
+      .detail_key_visual {
+        h2 {
+          padding: 0;
+          margin-bottom: 2.8rem;
+        }
+        .disclaimer {
+          line-height: 2.2rem;
+        }
+      }
+    }
+    .view_website_btn {
+      right: 32px;
+    }
+    .detail_text_wrap {
+      .description:first-child {
+        margin-top: 14rem;
+      }
+      .base_article {
+        .element_title {
+          font-size: 1.8rem;
+          line-height: 1.8rem;
+        }
+        .description {
+          margin-top: 1.6rem;
+          margin-bottom: 4rem;
+        }
+        &:last-child {
+          .description {
+            margin-bottom: 14rem;
+          }
+        }
+      }
+    }
+    .detail_sub_visual_wrap {
+      height: 63.4rem;
+      .sub_visual_text {
+        .description {
+          margin-bottom: 5.4rem;
+        }
+        .base_article {
+          .element_title {
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+          }
+          .description {
+            margin-top: 1.6rem;
+            margin-bottom: 4rem;
+          }
+        }
+      }
+    }
+    .detail_next_work_wrap {
+      margin-top: 14rem;
+      div {
+        a {
+          margin-right: 2.4rem;
+          .base_article {
+            margin-top: 7rem;
+            img {
+              margin-bottom: 3rem;
+            }
+            .element_title {
+              margin-bottom: 1rem;
+              font-size: 2.2rem;
+              line-height: 2.2rem;
+            }
+            .description {
+              font-size: 1.6rem;
+              line-height: 2.4rem;
+            }
+          }
+        }
+      }
+    }
+    .portfolio_list_btn {
+      margin: 7rem auto 14rem;
+    }
+  }
 }

@@ -1,3 +1,88 @@
 @include tablet {
-
+  .works_template {
+    .detail_key_visual_wrap {
+      .detail_key_visual {
+        h2 {
+          padding: 0 8.4rem;
+          margin-bottom: 2.4rem;
+        }
+      }
+      .scroll_icon {
+        bottom: 40px;
+        width: 15.6rem;
+      }
+    }
+    .view_website_btn {
+      right: 24px;
+    }
+    .detail_text_wrap {
+      .description:first-child {
+        margin-top: 10rem;
+      }
+      .description:nth-child(2) {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+        br {
+          display: block;
+        }
+      }
+      .base_article {
+        .description {
+          margin-top: 1.4rem;
+          margin-bottom: 3.6rem;
+          font-size: 1.6rem;
+          line-height: 1.6rem;
+        }
+        &:last-child {
+          .description {
+            margin-bottom: 10rem;
+          }
+        }
+      }
+    }
+    .detail_sub_visual_wrap {
+      height: 52rem;
+      .sub_visual_text {
+        .description {
+          font-size: 4.2rem;
+          line-height: 4.2rem;
+        }
+        .base_article {
+          .description {
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+            margin-top: 1.4rem;
+          }
+        }
+      }
+    }
+    .detail_next_work_wrap {
+      margin-top: 10rem;
+      div {
+        display: flex;
+        justify-content: space-between;
+        a {
+          margin-right: 1.6rem;
+          &:last-child {
+            margin-right: 0;
+          }
+          .base_article {
+            margin-top: 5rem;
+            img {
+              margin-bottom: 2.4rem;
+            }
+            .element_title {
+              margin-bottom: 0.6rem;
+            }
+            .description {
+              line-height: 2.2rem;
+            }
+          }
+        }
+      }
+    }
+    .portfolio_list_btn {
+      margin: 5rem auto 10rem;
+    }
+  }
 }

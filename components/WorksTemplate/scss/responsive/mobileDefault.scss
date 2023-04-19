@@ -13,6 +13,7 @@
         font-weight: 700;
         font-family: $font_en;
         margin-bottom: 1.8rem;
+        letter-spacing: -0.03em;
       }
       .disclaimer {
         color: $color_white;
@@ -39,12 +40,16 @@
   }
   .detail_text_wrap {
     @extend %layout_fix;
-    @extend %font_enIntro;
     font-family: $font_en;
+    .description {
+      @extend %font_enIntro;
+      letter-spacing: -0.03em;
+    }
     .description:first-child {
       margin-top: 6rem;
       span {
         font-family: $font_en_italic;
+        @extend %font_enIntro;
       }
     }
     .description:nth-child(2) {
@@ -149,6 +154,7 @@
   }
   .portfolio_list_btn {
     @extend %btn_primary_ghost;
+    font-weight: 700;
     background-color: $color_black;
     margin: 4rem auto 6rem;
   }

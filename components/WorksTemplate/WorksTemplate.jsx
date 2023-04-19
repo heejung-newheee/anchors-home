@@ -55,7 +55,8 @@ export default function WorksTemplate({ className }) {
           data={
             <>
               Global insurance company AIA Life Insurance claim screen, MY AIA
-              enhance project. The <span>user interface has been improved</span>
+              enhance project. The
+              <span> user interface has been improved </span>
               to make insurance claims more convenient. Anchors carried out the
               project based on <span>our experienced AEM know-how,</span> and we
               are recognized for its ability to perform. MY AIA annual operation
@@ -71,9 +72,8 @@ export default function WorksTemplate({ className }) {
               편리하게 보험금 청구가 가능하도록 User Interface를 개선하였습니다.
               <br />
               자사의 숙련된 AEM Know-how를 바탕으로 프로젝트를 수행하였으며,
-              수행
               <br />
-              능력을 인정받아 MY AIA 연간 운영 사업도 진행하고 있습니다.
+              수행 능력을 인정받아 MY AIA 연간 운영 사업도 진행하고 있습니다.
             </>
           }
         />
