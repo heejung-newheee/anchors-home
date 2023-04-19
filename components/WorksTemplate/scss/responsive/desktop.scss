@@ -15,6 +15,7 @@
       right: 32px;
     }
     .detail_text_wrap {
+      padding: 0 14rem;
       .description:first-child {
         margin-top: 14rem;
       }
@@ -54,6 +55,10 @@
     }
     .detail_next_work_wrap {
       margin-top: 14rem;
+      padding: 0 3.1rem;
+      h3 {
+        line-height: 9rem;
+      }
       div {
         a {
           margin-right: 2.4rem;

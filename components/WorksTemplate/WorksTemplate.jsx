@@ -23,6 +23,7 @@ export default function WorksTemplate({ className }) {
       {/* S: Key Visual 영역 */}
       <div className="detail_key_visual_wrap">
         <Visual
+          dimm="Y"
           className="detail_key_visual"
           imgUrl="/assets/images/contents/works/img_keyvisual_aia.png"
           pageTitleData={

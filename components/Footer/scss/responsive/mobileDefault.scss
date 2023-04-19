@@ -5,6 +5,7 @@
     padding-bottom: 6rem;
     button {
       @extend %btn_primary_normal;
+      font-weight: 700;
     }
   }
   .copyright_wrap {

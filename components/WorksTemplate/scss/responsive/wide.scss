@@ -1,2 +1,89 @@
 @include wide {
+  .works_template {
+    .detail_key_visual_wrap {
+      .detail_key_visual {
+        h2 {
+          margin-bottom: 3.2rem;
+        }
+        .disclaimer {
+          line-height: 2.4rem;
+        }
+      }
+      .scroll_icon {
+        bottom: 50px;
+        width: 18rem;
+      }
+    }
+    .view_website_btn {
+      right: 48px;
+    }
+    .detail_text_wrap {
+      padding: 0 16.8rem;
+      .description:first-child {
+        margin-top: 16rem;
+      }
+      .base_article {
+        .element_title {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+        .description {
+          margin-top: 1.8rem;
+          margin-bottom: 5rem;
+        }
+        &:last-child {
+          .description {
+            margin-bottom: 16rem;
+          }
+        }
+      }
+    }
+    .detail_sub_visual_wrap {
+      height: 76rem;
+      .sub_visual_text {
+        .description {
+          margin-bottom: 6.4rem;
+        }
+        .base_article {
+          .element_title {
+            font-size: 2rem;
+            line-height: 2rem;
+          }
+          .description {
+            margin-top: 1.8rem;
+            margin-bottom: 5rem;
+          }
+        }
+      }
+    }
+    .detail_next_work_wrap {
+      margin-top: 16rem;
+      h3 {
+        line-height: 10.4rem;
+      }
+      div {
+        a {
+          margin-right: 2.4rem;
+          .base_article {
+            margin-top: 8rem;
+            img {
+              margin-bottom: 3.2rem;
+            }
+            .element_title {
+              margin-bottom: 1.2rem;
+              font-size: 2.4rem;
+              line-height: 2.4rem;
+            }
+            .description {
+              font-size: 1.8rem;
+              line-height: 2.8rem;
+            }
+          }
+        }
+      }
+    }
+    .portfolio_list_btn {
+      margin: 10.8rem auto 16rem;
+    }
+  }
 }

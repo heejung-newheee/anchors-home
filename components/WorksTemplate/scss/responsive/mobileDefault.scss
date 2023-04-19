@@ -14,11 +14,13 @@
         font-family: $font_en;
         margin-bottom: 1.8rem;
         letter-spacing: -0.03em;
+        z-index: 1;
       }
       .disclaimer {
         color: $color_white;
         font-family: $font_ko;
         @extend %font_visualDescription;
+        z-index: 1;
       }
     }
     .scroll_icon {
@@ -39,7 +41,7 @@
     z-index: 99;
   }
   .detail_text_wrap {
-    @extend %layout_fix;
+    padding: 0 2.4rem;
     font-family: $font_en;
     .description {
       @extend %font_enIntro;
@@ -123,12 +125,13 @@
   }
   .detail_next_work_wrap {
     margin-top: 6rem;
-    @extend %layout_fix;
+    padding: 0 2.4rem;
 
     h3 {
       font-family: $font_en;
       @extend %font_visualTitle;
       font-weight: 700;
+      line-height: 5rem;
     }
     .base_article {
       font-family: $font_en;
