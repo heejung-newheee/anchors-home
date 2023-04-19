@@ -23,9 +23,7 @@ export default function BaseArticle({
       : { className: 'base-article ' + className };
   return (
     <article {...getClassNm}>
-      {imgUrl != '' && (
-        <Image src={imgUrl} width={100} height={100} alt={imgAlt} />
-      )}
+      {imgUrl != '' && <img src={imgUrl} alt={imgAlt} />}
       {elementTitle != '' && <ElementTitle data={elementTitle} />}
       {description != '' && <Description data={description} />}
       {disclaimer != '' && <Disclaimer data={disclaimer} />}

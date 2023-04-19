@@ -1,0 +1,149 @@
+@include tablet {
+  .works-template {
+    .detail-key-visual-wrap {
+      .detail-key-visual {
+        h2 {
+          padding: 0 8.4rem;
+          margin-bottom: 1.8rem;
+        }
+        .disclaimer {
+          color: $color-white;
+          font-family: $font-ko;
+          @extend %font-visualDescription;
+        }
+      }
+      .scroll-icon {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 11.4rem;
+        height: auto;
+      }
+    }
+    .view-website-btn {
+      @extend %btn-secondary-up;
+      position: fixed;
+      right: 14px;
+      bottom: 50px;
+      z-index: 99;
+    }
+    .detail-text-wrap {
+      @extend %layout-fix;
+      @extend %font-enIntro;
+      font-family: $font-en;
+      .description:first-child {
+        margin-top: 6rem;
+        span {
+          font-family: $font-en-italic;
+        }
+      }
+      .description:nth-child(2) {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        @extend %font-primary;
+        font-family: $font-ko;
+        br {
+          display: none;
+        }
+      }
+      .base-article {
+        @extend %font-primary;
+        color: $color-black;
+        .element-title {
+          font-family: $font-ko;
+          font-size: 1.6rem;
+          line-height: 1.6rem;
+        }
+        .description {
+          margin-top: 1.2rem;
+          margin-bottom: 3.6rem;
+          font-size: 1.4rem;
+          line-height: 2.2rem;
+        }
+        &:last-child {
+          .description {
+            margin-bottom: 6rem;
+          }
+        }
+      }
+    }
+    .detail-sub-visual-wrap {
+      background-position: center;
+      background-size: cover;
+      color: $color-white;
+      height: 48rem;
+      &.dimmed::after {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .sub-visual-text {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        z-index: 1;
+
+        .description {
+          font-family: $font-en-italic;
+          font-size: 3.6rem;
+          margin-bottom: 4.4rem;
+          letter-spacing: 0.03em;
+          line-height: 4.7rem;
+        }
+        .base-article {
+          font-family: $font-ko;
+          .element-title {
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+          }
+          .description {
+            font-size: 1.4rem;
+            font-family: $font-ko;
+            line-height: 2.2rem;
+            margin-top: 1.2rem;
+            margin-bottom: 3.6rem;
+          }
+        }
+      }
+    }
+    .detail-next-work-wrap {
+      margin-top: 6rem;
+      @extend %layout-fix;
+
+      h3 {
+        font-family: $font-en;
+        @extend %font-visualTitle;
+        font-weight: 700;
+      }
+      .base-article {
+        font-family: $font-en;
+        margin-top: 4rem;
+        text-align: left;
+        img {
+          margin-bottom: 2.2rem;
+        }
+        .element-title {
+          font-size: 1.8rem;
+          line-height: 1.8rem;
+          font-weight: 400;
+          display: inline-block;
+          margin-bottom: 0.8rem;
+        }
+        .description {
+          color: $color-darkgrey;
+          font-size: 1.4rem;
+          line-height: 1.4rem;
+          letter-spacing: -0.03em;
+        }
+      }
+    }
+    .portfolio-list-btn {
+      @extend %btn-primary-ghost;
+      background-color: $color-black;
+      margin: 4rem auto 6rem;
+    }
+  }
+
+}
