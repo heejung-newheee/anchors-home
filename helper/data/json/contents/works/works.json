@@ -1,6 +1,6 @@
 {
   "sort":["all", "website", "app"],
-  "imgUrl": "/assets/images/contents/works",
+  "imgUrl": "/assets/images/contents/works/",
   "pageUrl": "페이지 이동경로",
   "content": [
     {

@@ -116,7 +116,7 @@ export default function WorksTemplate({ className }) {
         <div>
           <a href="#">
             <BaseArticle
-              imgUrl={works.content[4].thumbnail}
+              imgUrl={works.imgUrl + works.content[4].thumbnail}
               imgAlt="next work thumnail image"
               elementTitle={works.content[4].title}
               description={works.content[4].description}
@@ -124,7 +124,7 @@ export default function WorksTemplate({ className }) {
           </a>
           <a href="#">
             <BaseArticle
-              imgUrl={works.content[4].thumbnail}
+              imgUrl={works.imgUrl + works.content[4].thumbnail}
               imgAlt="next work thumnail image"
               elementTitle={works.content[4].title}
               description={works.content[4].description}
@@ -132,7 +132,7 @@ export default function WorksTemplate({ className }) {
           </a>
           <a href="#">
             <BaseArticle
-              imgUrl={works.content[4].thumbnail}
+              imgUrl={works.imgUrl + works.content[4].thumbnail}
               imgAlt="next work thumnail image"
               elementTitle={works.content[4].title}
               description={works.content[4].description}
