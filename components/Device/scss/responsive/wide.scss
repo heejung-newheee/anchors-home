@@ -22,9 +22,10 @@
         }
       }
     }
-    article.typeB{
+  }
+  article.typeB{
+    .device-img{
       div{
-        padding: 0;
         &:nth-child(1){
           margin-top: 31rem;
         }

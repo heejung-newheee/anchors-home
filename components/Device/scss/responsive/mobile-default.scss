@@ -1,4 +1,26 @@
 .device{
+  padding: 0 2.4rem;
+  .element-title{
+    font-family: 'stolzl';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+    letter-spacing: -3%;
+    padding-bottom: 1.6rem;
+
+  }
+  .description{
+    width: 26.2rem;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    letter-spacing: -3%;
+    padding-bottom: 2rem;
+    text-align: left;
+  }
   div{
     width: 100%;
     //padding: 0 5.2rem;
