@@ -125,7 +125,7 @@
   }
   .detail_next_work_wrap {
     margin-top: 6rem;
-    padding: 0 2.4rem;
+    @extend %layout_fix;
 
     h3 {
       font-family: $font_en;
