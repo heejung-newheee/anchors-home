@@ -1,11 +1,11 @@
 {
   "sort":["all", "website", "app"],
-  "imgUrl": "이미지 이동경로",
+  "imgUrl": "/assets/images/contents/works",
   "pageUrl": "페이지 이동경로",
   "content": [
     {
-      "id": "고유 아이디값",
-      "sort": [],
+      "id": "0000",
+      "sort": ["all","website"],
       "htmlName": "지정할 html 파일명",
       "title": "CHANEL KOREA",
       "description": "e-Commerce, Website, Mobile Web, CRM",
@@ -22,8 +22,8 @@
       "service": "PHP, mySQL, ASP.net, Java, Salesforce, AmpScript, javascript"
     },
     {
-      "id": "고유 아이디값",
-      "sort": [],
+      "id": "0001",
+      "sort": ["all","website"],
       "htmlName": "",
       "title": "Hyundai Motor DCXT",
       "description": "Salesforce Marketing Cloud",
@@ -40,8 +40,8 @@
       "service": "Salesforce Core, I/F, DB Migration, Foundation"
     },
     {
-      "id": "고유 아이디값",
-      "sort": [],
+      "id" : "0023",
+      "sort": ["all","website"],
       "htmlName": "",
       "title": "Hyundai Motor J Platform",
       "description": "Online sales, e-Commerce, Website, Mobile Web, PIP",
@@ -58,8 +58,8 @@
       "service": "eCore 기반, JAVA, iOS, Android, Salesforce"
     },
     {
-      "id": "고유 아이디값",
-      "sort": [],
+      "id" : "0034",
+      "sort": ["all","website"],
       "htmlName": "",
       "title": "Hyundai Motor BMS renewal",
       "description": "Website, Mobile Web, PIP",
@@ -76,8 +76,8 @@
       "service": "Java, React"
     },
     {
-      "id": "고유 아이디값",
-      "sort": [],
+      "id": "0017",
+      "sort": ["all","website"],
       "htmlName": "",
       "title": "AIA Life insurance ‘MY AIA’ site",
       "description": "Website, Mobile Web, PIP",
@@ -94,8 +94,8 @@
       "service": "Adobe AEM, Vue.js, TypeScript, JAVA, Adobe Analytics"
     },
     {
-      "id": "고유 아이디값",
-      "sort": [],
+      "id": "0015",
+      "sort": ["all","app"],
       "htmlName": "",
       "title": "Korean Air KALPOS App",
       "description": "Mobile Web, PIP",
@@ -112,8 +112,8 @@
       "service": "Android"
     },
     {
-      "id": "고유 아이디값",
-      "sort": [],
+      "id": "0010",
+      "sort": ["all","website"],
       "htmlName": "",
       "title": "Kia K-WCMS renewal",
       "description": "Online sales, e-Commerce, Website, Mobile Web, PIP",
@@ -130,8 +130,8 @@
       "service": "AEM, Java, Responsive Web, e-Commerce"
     },
     {
-      "id": "고유 아이디값",
-      "sort": [],
+      "id": "0009",
+      "sort": ["all","app"],
       "htmlName": "",
       "title": "Korean Air android App",
       "description": "Website, Mobile Web, PIP",
@@ -148,8 +148,8 @@
       "service": "eCore 기반, JAVA, iOS, Android, Salesforce"
     },
     {
-      "id": "고유 아이디값",
-      "sort": [],
+      "id": "0008",
+      "sort": ["all","app"],
       "htmlName": "",
       "title": "Hyundai Motor 'myHyundai APP'",
       "description": "Online sales, e-Commerce, Website, Mobile Web, PIP",
@@ -166,8 +166,8 @@
       "service": "iOS, Android, Development"
     },
     {
-      "id": "고유 아이디값",
-      "sort": [],
+      "id": "0007",
+      "sort": ["all","website"],
       "htmlName": "",
       "title": "Hyundai Motor Happy Move",
       "description": "Website, PIP",
@@ -184,8 +184,8 @@
       "service": "eCore 기반, JAVA, iOS, Android, Salesforce"
     },
     {
-      "id": "고유 아이디값",
-      "sort": [],
+      "id": "0006",
+      "sort": ["all","website"],
       "htmlName": "",
       "title": "Hyundai Motor N-brand Website",
       "description": "Website, PIP",
@@ -202,8 +202,8 @@
       "service": "Java"
     },
     {
-      "id": "고유 아이디값",
-      "sort": [],
+      "id": "0005",
+      "sort": ["all","website"],
       "htmlName": "",
       "title": "Hyundai Motor WWN 3.0",
       "description": "Website, PIP",
@@ -220,8 +220,8 @@
       "service": "eCore 기반, JAVA, iOS, Android, Salesforce"
     },
     {
-      "id": "고유 아이디값",
-      "sort": [],
+      "id": "0004",
+      "sort": ["all","website"],
       "htmlName": "",
       "title": "Genesis Global Site",
       "description": "Online sales, e-Commerce, Website, PIP",
