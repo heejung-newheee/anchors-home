@@ -1,9 +1,9 @@
 'use client';
 
 export default function Description({ data, className }) {
-  const getClassNm =
+  const GET_CLASS_NM =
     className == undefined
       ? { className: 'description' }
       : { className: 'description ' + className };
-  return <p {...getClassNm}>{data}</p>;
+  return <p {...GET_CLASS_NM}>{data}</p>;
 }

@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/image';
+
 import Link from 'next/link';
 
 import './scss/Device.scss';
@@ -15,11 +15,11 @@ export default function Device({
   className,
   type = 'A',
 }) {
-  const typeOption = type === 'B' ? ' typeB' : '';
-  const getClassNm =
+  const TYPE_OPTION = type === 'B' ? ' type_b' : '';
+  const GET_CLASS_NM =
     className == undefined
-      ? { className: 'device' + typeOption }
-      : { className: 'device ' + className + typeOption };
+      ? { className: 'device' + TYPE_OPTION }
+      : { className: 'device ' + className + TYPE_OPTION };
 
   const DEVICE_DATA = [
     { caption: caption[0], imgUrl: imgUrl[0], alt: alt },
@@ -27,14 +27,14 @@ export default function Device({
     { caption: caption[2], imgUrl: imgUrl[2], alt: alt },
   ];
   return (
-    <article {...getClassNm}>
+    <article {...GET_CLASS_NM}>
       <ElementTitle data={elementTitle} />
       <Description data={description} />
       <div className="device-img">
         {DEVICE_DATA.map((data, index) => (
           <div key={index}>
             <span>{data.caption}</span>
-            <Image src={data.imgUrl} alt={data.alt} width={100} height={100} />
+            <img src={data.imgUrl} alt={data.alt} />
           </div>
         ))}
       </div>
