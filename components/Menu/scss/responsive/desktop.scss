@@ -38,4 +38,11 @@
       }
     }
   }
+  header {
+    &.is_black .gnb_wrap .gnb li * { color: $color_white; }
+
+    &.is_photo .gnb_wrap .gnb li * ,
+    &.is_white .gnb_wrap .gnb li * { color: $color_black; }
+
+  }
 }

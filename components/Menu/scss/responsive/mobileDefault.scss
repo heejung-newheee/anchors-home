@@ -47,6 +47,7 @@
           letter-spacing: $en_letterSpacing;
           font-weight: 700;
           line-height: 1;
+          color: $color-black;
         }
         &:last-child {
           margin-bottom: 0;
@@ -64,28 +65,12 @@
 }
 
 .header {
-  &.is_white {
+  &.is_black .menu .menu_btn {
+    background-image: url('../../../../public/assets/images/ico/ico_btn_white_menu.svg');
   }
-  &.is_black {
-    .menu {
-      .menu_btn {
-        background-image: url('../../../../public/assets/images/ico/ico_btn_white_menu.svg');
-      }
-    }
-    .gnb {
-      li {
-        * {
-          color: $color_white;
-        }
-      }
-    }
-  }
-  &.is_photo {
-    .menu {
-      .menu_btn {
-        background-image: url('../../../../public/assets/images/ico/ico_btn_black_menu.svg');
-      }
-    }
+  &.is_photo .menu .menu_btn,
+  &.is_white .menu .menu_btn {
+    background-image: url('../../../../public/assets/images/ico/ico_btn_black_menu.svg');
   }
   .menu {
     .menu_btn {

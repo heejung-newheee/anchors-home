@@ -6,7 +6,7 @@ import Logo from '@/components/Logo/Logo';
 import Menu from '@/components/Menu/Menu';
 import './scss/Header.scss';
 
-export default function Header() {
+export default function Header({ className }) {
   const [headerBgType, setHeaderBgType] = useState('');
 
   const HandleScroll = () => {
@@ -26,30 +26,35 @@ export default function Header() {
 
     switch (SECTIONS_UNDER_HEADER) {
       case -1:
-        // console.log('기본 className'); // 아무 것도 정의된 항목이 헤더 아래에 없으니
-        setHeaderBgType('is_white');
+        // setHeaderBgType('is_white');
         break;
       default:
         const CLASSNAME = SECTIONS[SECTIONS_UNDER_HEADER].className;
-        const IS_WHITE = CLASSNAME.includes('is_white');
-        const IS_BLACK = CLASSNAME.includes('is_black');
-        const IS_PHOTO = CLASSNAME.includes('is_photo');
-        // console.log(`${SECTIONS_UNDER_HEADER}번째 인덱스 위에 헤더 있음`, CLASSNAME);
-        IS_WHITE && setHeaderBgType('is_white');
-        IS_BLACK && setHeaderBgType('is_black');
-        IS_PHOTO && setHeaderBgType('is_photo');
+        CLASSNAME.includes('is_white') && setHeaderBgType('is_white');
+        CLASSNAME.includes('is_black') && setHeaderBgType('is_black');
+        CLASSNAME.includes('is_photo') && setHeaderBgType('is_photo');
         break;
     }
   };
 
   useEffect(() => {
+    const HEADER = document.querySelector('.header');
+    const HEADER_NEXT = HEADER.nextElementSibling.className;
+    HEADER_NEXT.includes('new_header') && HEADER.remove();
+
     window.addEventListener('scroll', HandleScroll);
     return () => {
       window.removeEventListener('scroll', HandleScroll);
     };
   }, []);
+
+  const GET_CLASSNAME =
+    className == undefined
+      ? { className: 'header ' + headerBgType }
+      : { className: 'header ' + className + ' ' + headerBgType };
+
   return (
-    <header className={`header ${headerBgType}`}>
+    <header {...GET_CLASSNAME}>
       <Logo />
       <Menu />
     </header>

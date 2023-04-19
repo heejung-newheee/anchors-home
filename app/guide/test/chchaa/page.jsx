@@ -12,6 +12,7 @@ import PageTitle from '@/components/PageTitle/PageTitle';
 import Visual from '@/components/Visual/Visual';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 import variables from '@/public/assets/scss/_variables.module.scss';
+import './chchaa.scss';
 
 const ACCORDION_CONTENTS = [
   {
@@ -34,7 +35,18 @@ const PAGETITLE_DATA = [{ word: 'Our' }, { word: 'Works' }];
 export default function Chchaa() {
   return (
     <>
-      {/* <Header /> */}
+      <Header className="new_header is_black" />
+      <div className="is_black" />
+      <div
+        className="section_div is_black"
+        style={{
+          backgroundColor: variables.colorBlue,
+          color: variables.colorWhite,
+          height: '200px',
+        }}
+      >
+        어두운 배경
+      </div>
       <PageTitle data={headerFooter.menuList[0].name} />
       <div
         className="section_div is_white"
