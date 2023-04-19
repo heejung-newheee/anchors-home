@@ -9,7 +9,7 @@
       ],
       "hashtag": ["#Web & App Development","#Salesforce Project Development","#Global IT Service Development","#AEM Project Development"],
       "tagClassname": "해시태그 style 클래스 명",
-      "img": "img-rdlab.png",
+      "img": "img_rdlab.png",
       "alt": "앵커스 R&D Lab실 이미지"
     },
     {
@@ -20,7 +20,7 @@
       ],
       "hashtag": ["#Brand Strategy Consulting","#e-Business Consulting","#AEM Project Consulting"],
       "tagClassname": "해시태그 style 클래스 명",
-      "img": "img-consulting.png",
+      "img": "img_consulting.png",
       "alt": "포스트잇이 여러 장 붙어있는 이미지"
     },
     {
@@ -31,7 +31,7 @@
       ],
       "hashtag": ["#Web & App Maintenance","#Global IT Service Maintenance"],
       "tagClassname": "해시태그 style 클래스 명",
-      "img": "img-maintenance.png",
+      "img": "img_maintenance.png",
       "alt": "노트북으로 소스코딩하고 있는 이미지"
     },
     {
@@ -42,7 +42,7 @@
       ],
       "hashtag": ["#User Experience Design","#User Interface Design"],
       "tagClassname": "해시태그 style 클래스 명",
-      "img": "img-design.png",
+      "img": "img_design.png",
       "alt": "만년필로 그림을 그리고 있는 이미지"
     }
   ]

@@ -7,7 +7,6 @@
 				"id" : "0023",
 				"sort" : ["All", "Website"],
 				"imgName" : "img_work_Jplatform.jpg",
-				"pageName" : "hyundai-J-Platform.html",
 				"title" : "Hyundai J Platform",
 				"text" : "Online sales, e-Commerce, Website, Mobile Web, PIP",
 				"alt" : "현대자동차 J플랫폼(일본법인 신 고객경험 플랫폼) 구축 이미지"
@@ -16,7 +15,6 @@
 				"id" : "0034",
 				"sort" : ["All", "Website"],
 				"imgName" : "img_work_bms.jpg",
-				"pageName" : "hyundai-BMS-Renewal.html",
 				"title" : "Hyundai BMS renewal",
 				"text" : "Website, Mobile Web, PIP",
 				"alt" : "현대자동차 브랜드홈(BMS 2.0) 개편 구축 이미지"
@@ -25,7 +23,6 @@
 				"id" : "0017",
 				"sort" : ["All", "Website"],
 				"imgName" : "img_work_myAIA.jpg",
-				"pageName" : "aia-group.html",
 				"title" : "AIA Life insurance ‘MY AIA’ site",
 				"text" : "Website, Mobile Web, PIP",
 				"alt" : "AIA생명 ‘MY AIA’ 보험금 청구 화면 개편 이미지"
@@ -34,7 +31,6 @@
 				"id" : "0015",
 				"sort" : ["All", "App"],
 				"imgName" : "img_work_koreanAir.jpg",
-				"pageName" : "korean-air-KALPOS-app.html",
 				"title" : "Korean Air KALPOS App",
 				"text" : "Mobile Web, PIP",
 				"alt" : "대한항공 KALPOS 블루투스 통신모듈 개발 이미지"
@@ -43,7 +39,6 @@
 				"id" : "0010",
 				"sort" : ["All", "Website"],
 				"imgName" : "img_work_KWCMS.jpg",
-				"pageName" : "kia-renewal.html",
 				"title" : "Kia K-WCMS renewal",
 				"text" : "Online sales, e-Commerce, Website, Mobile Web, PIP",
 				"alt" : "기아자동차 K-WCMS 인도법인 확산 및 딜러사이트 구축 이미지"
@@ -52,7 +47,6 @@
 				"id" : "0009",
 				"sort" : ["All", "App"],
 				"imgName" : "img_work_koreanAir_android.jpg",
-				"pageName" : "korean-air-android-app.html",
 				"title" : "Korean Air android App",
 				"text" : "Website, Mobile Web, PIP",
 				"alt" : "대한항공 Android App 개편 구축 이미지"
@@ -61,7 +55,6 @@
 				"id" : "0008",
 				"sort" : ["All", "App"],
 				"imgName" : "img_work_myHyundai.jpg",
-				"pageName" : "my-hyundai-app.html",
 				"title" : "Hyundai 'myHyundai APP'",
 				"text" : "Online sales, e-Commerce, Website, Mobile Web, PIP",
 				"alt" : "현대자동차 고객서비스통합 APP 'myHyundai App' 구축 이미지"
@@ -70,7 +63,6 @@
 				"id" : "0007",
 				"sort" : ["All", "Website"],
 				"imgName" : "img_work_hyundai_happy.jpg",
-				"pageName" : "hyundai-happy-move.html",
 				"title" : "Hyundai Happy Move",
 				"text" : "Website, PIP",
 				"alt" : "현대자동차그룹 Happy Move 웹사이트 구축 이미지"
@@ -79,7 +71,6 @@
 				"id" : "0006",
 				"sort" : ["All", "Website"],
 				"imgName" : "img_work_nBrand.jpg",
-				"pageName" : "hyundai-N-Brand.html",
 				"title" : "Hyundai N-brand Website",
 				"text" : "Website, PIP",
 				"alt" : "현대자동차그룹 N-brand 웹사이트 구축 이미지"
@@ -88,7 +79,6 @@
 				"id" : "0005",
 				"sort" : ["All", "Website"],
 				"imgName" : "img_work_hyundai_wwn.jpg",
-				"pageName" : "hyundai-WWN.html",
 				"title" : "Hyundai WWN 3.0",
 				"text" : "Website, PIP",
 				"alt" : "현대자동차 WWN 3.0 국내 통합 개편 구축 이미지"
@@ -97,7 +87,6 @@
 				"id" : "0004",
 				"sort" : ["All", "Website"],
 				"imgName" : "img_work_genesis.jpg",
-				"pageName" : "genesis-global.html",
 				"title" : "Genesis Global site",
 				"text" : "Online sales, e-Commerce, Website, PIP",
 				"alt" : "제네시스 국내/글로벌 통합 운영 개발 이미지"
