@@ -1,1 +1,4 @@
-.element-title { @extend %font-listTitle; }
+.element-title {
+  @extend %font-listTitle;
+  display: block;
+}

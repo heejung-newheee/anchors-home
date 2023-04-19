@@ -132,6 +132,7 @@ export default function Chchaa() {
       <br />
       6. visual <br />
       <Visual className="visual1" />
+      <BaseArticle disclaimer="disclaimer" description="description" />
     </>
   );
 }

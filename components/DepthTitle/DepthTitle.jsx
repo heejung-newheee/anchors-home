@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import './scss/DepthTitle.scss';
 
 export default function DepthTitle({
   children,
