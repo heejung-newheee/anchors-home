@@ -34,7 +34,7 @@ const PAGETITLE_DATA = [{ word: 'Our' }, { word: 'Works' }];
 export default function Chchaa() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <PageTitle data={headerFooter.menuList[0].name} />
       <div
         className="section-div is-white"
