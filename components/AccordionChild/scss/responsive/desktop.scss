@@ -1,0 +1,17 @@
+@include desktop {
+  .accordion {
+
+    dt {
+      padding: 4.2rem 5.8rem 4.2rem 1rem; // $accordion-dtPadding
+
+      button {
+        width: 3.8rem; // $accordion-buttonSize
+        height: 3.8rem; // $accordion-buttonSize
+      }
+
+      &.active + dd {
+        padding-bottom: 6rem;
+      }
+    }
+  }
+}

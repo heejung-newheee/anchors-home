@@ -42,7 +42,7 @@ const swiperModule = [
   Controller,
 ];
 
-const DEFAULT_SWIPER_OPTION = {
+const defaultSwiperOption = {
   slidesPerView: 1,
   spaceBetween: 0,
   effect: 'slide',
@@ -53,9 +53,9 @@ const DEFAULT_SWIPER_OPTION = {
 
 function SwiperArea({
   type,
-  swiperOption = DEFAULT_SWIPER_OPTION,
-  firstSwiperOption = DEFAULT_SWIPER_OPTION,
-  secondSwiperOption = DEFAULT_SWIPER_OPTION,
+  swiperOption = defaultSwiperOption,
+  firstSwiperOption = defaultSwiperOption,
+  secondSwiperOption = defaultSwiperOption,
   swiperContent,
   swiperContentData = [],
   firstContent,
@@ -67,13 +67,13 @@ function SwiperArea({
   const [firstSwiper, setFirstSwiper] = React.useState(null);
   const [secondSwiper, setSecondSwiper] = React.useState(null);
 
-  const computedSwiperOption = { ...DEFAULT_SWIPER_OPTION, ...swiperOption };
+  const computedSwiperOption = { ...defaultSwiperOption, ...swiperOption };
   const computedFirstSwiperOption = {
-    ...DEFAULT_SWIPER_OPTION,
+    ...defaultSwiperOption,
     ...firstSwiperOption,
   };
   const computedScondSwiperOption = {
-    ...DEFAULT_SWIPER_OPTION,
+    ...defaultSwiperOption,
     ...secondSwiperOption,
   };
   const getClassNm =

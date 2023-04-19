@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import AccordionChild from '@/components/AccordionContents/AccordionChild';
+import AccordionChild from '@/components/AccordionChild/AccordionChild';
 
 export default function Accordion({ contents, className }) {
   const getClassNm =

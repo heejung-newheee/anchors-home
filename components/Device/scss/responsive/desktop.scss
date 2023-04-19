@@ -1,38 +1,40 @@
 @include desktop{
   .device{
-    //margin: 0;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 8rem;
-    margin: 0 auto;
-    div{
-      &:nth-child(1){
-        margin-top: 30.9rem;
-      }
-      &:nth-child(2){
-        margin-top: 15.9rem;
-      }
-      &:nth-child(3){
-        margin-top: 4.5rem;
-      }
-      span{
-        font-size: 1.4rem;
-        padding-left: 4.5rem;
-
+    padding: 0 11.8rem;
+    .element-title{
+      font-size: 3.2rem;
+      padding-bottom: 2.8rem;
+    }
+    .description{
+      width: 44.8rem;
+      font-size: 1.8rem;
+    }
+    .device-img{
+      div{
+        &:nth-child(1){
+          margin-top: 30.9rem;
+        }
+        &:nth-child(2){
+          margin-top: 15.9rem;
+        }
+        &:nth-child(3){
+          margin-top: 4.5rem;
+        }
       }
     }
   }
   article.typeB{
-    div{
-      padding: 0;
-      &:nth-child(1){
-        margin-top: 32.6rem;
-      }
-      &:nth-child(2){
-        margin-top: 7.3rem;
-      }
-      &:nth-child(3){
-        margin-top: 24.5rem;
+    .device-img{
+      div{
+        &:nth-child(1){
+          margin-top: 32.6rem;
+        }
+        &:nth-child(2){
+          margin-top: 7.3rem;
+        }
+        &:nth-child(3){
+          margin-top: 24.5rem;
+        }
       }
     }
   }

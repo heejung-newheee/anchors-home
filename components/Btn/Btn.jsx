@@ -19,19 +19,19 @@ export default function Btn({
       )}
 
       {type === 'submit' && (
-        <button type="submit" className={className}>
+        <button type="submit" className={className} onClick={onClick}>
           <span>{children}</span>
         </button>
       )}
 
       {type === 'a' && (
-        <a href={url} title={alt} className={className}>
+        <a href={url} title={alt} className={className} onClick={onClick}>
           <span>{children}</span>
         </a>
       )}
 
       {type === 'link' && (
-        <Link href={url} title={alt} className={className}>
+        <Link href={url} title={alt} className={className} onClick={onClick}>
           <span>{children}</span>
         </Link>
       )}

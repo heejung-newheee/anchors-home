@@ -1,31 +1,31 @@
 @include wide{
   .device{
-    width: 130rem;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 11.8rem;
-    margin: 0 auto;
-    div{
-      box-sizing: border-box;
-      padding: 0;
-      &:nth-child(1){
-        margin-top: 36.8rem;
-      }
-      &:nth-child(2){
-        margin-top: 21.2rem;
-      }
-      &:nth-child(3){
-        margin-top: 7.3rem;
-      }
-      span{
-        font-size: 1.6rem;
-        padding-left: 4.5rem;
-
+    //padding: 0 31rem;
+    .element-title{
+      font-size: 3.8rem;
+      padding-bottom: 3.2rem;
+    }
+    .description{
+      width: 48.5rem;
+      font-size: 2rem;
+    }
+    .device-img{
+      div{
+        &:nth-child(1){
+          margin-top: 36.8rem;
+        }
+        &:nth-child(2){
+          margin-top: 21.2rem;
+        }
+        &:nth-child(3){
+          margin-top: 7.3rem;
+        }
       }
     }
-    article.typeB{
+  }
+  article.typeB{
+    .device-img{
       div{
-        padding: 0;
         &:nth-child(1){
           margin-top: 31rem;
         }

@@ -1,0 +1,17 @@
+@include tablet {
+  .accordion {
+
+    dt {
+      padding: 3.6rem 5.2rem 3.6rem 1rem; // $accordion-dtPadding
+
+      button {
+        width: 3.2rem; // $accordion-buttonSize
+        height: 3.2rem; // $accordion-buttonSize
+      }
+
+      &.active + dd {
+        padding-bottom: 5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+h3.hidden,
+h4.hidden,
+h5.hidden,
+h6.hidden {
+  @extend %blind;
+  font-weight: 700;
+}

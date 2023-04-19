@@ -1,1 +1,4 @@
-.disclaimer { @extend %font-disclaimer; }
+.disclaimer {
+  @extend %font-disclaimer;
+  display: block;
+}
