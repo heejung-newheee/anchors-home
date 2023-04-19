@@ -29,7 +29,7 @@ import 'swiper/css/effect-cards';
 import 'swiper/css/effect-creative';
 // E: swiper import
 
-const swiperModule = [
+const SWIPER_MODULE = [
   Pagination,
   Navigation,
   Scrollbar,
@@ -42,7 +42,7 @@ const swiperModule = [
   Controller,
 ];
 
-const defaultSwiperOption = {
+const DEFAULT_SWIPER_OPTION = {
   slidesPerView: 1,
   spaceBetween: 0,
   effect: 'slide',
@@ -53,9 +53,9 @@ const defaultSwiperOption = {
 
 function SwiperArea({
   type,
-  swiperOption = defaultSwiperOption,
-  firstSwiperOption = defaultSwiperOption,
-  secondSwiperOption = defaultSwiperOption,
+  swiperOption = DEFAULT_SWIPER_OPTION,
+  firstSwiperOption = DEFAULT_SWIPER_OPTION,
+  secondSwiperOption = DEFAULT_SWIPER_OPTION,
   swiperContent,
   swiperContentData = [],
   firstContent,
@@ -67,13 +67,13 @@ function SwiperArea({
   const [firstSwiper, setFirstSwiper] = React.useState(null);
   const [secondSwiper, setSecondSwiper] = React.useState(null);
 
-  const computedSwiperOption = { ...defaultSwiperOption, ...swiperOption };
-  const computedFirstSwiperOption = {
-    ...defaultSwiperOption,
+  const COMPUTED_SWIPER_OPTION = { ...DEFAULT_SWIPER_OPTION, ...swiperOption };
+  const COMPUTED_FIRST_SWIPER_OPTION = {
+    ...DEFAULT_SWIPER_OPTION,
     ...firstSwiperOption,
   };
-  const computedScondSwiperOption = {
-    ...defaultSwiperOption,
+  const COMPUTED_SCOND_SWIPER_OPTION = {
+    ...DEFAULT_SWIPER_OPTION,
     ...secondSwiperOption,
   };
   const getClassNm =
@@ -96,10 +96,10 @@ function SwiperArea({
       <>
         {/* S: double swiper */}
         <Swiper // first swiper
-          modules={swiperModule}
+          modules={SWIPER_MODULE}
           onSwiper={setFirstSwiper}
           controller={{ control: secondSwiper }}
-          {...computedFirstSwiperOption}
+          {...COMPUTED_FIRST_SWIPER_OPTION}
           {...getClassNm1st}
         >
           {swiperContentData.map((d, idx) => (
@@ -107,10 +107,10 @@ function SwiperArea({
           ))}
         </Swiper>
         <Swiper // second swiper
-          modules={swiperModule}
+          modules={SWIPER_MODULE}
           onSwiper={setSecondSwiper}
           controller={{ control: firstSwiper }}
-          {...computedScondSwiperOption}
+          {...COMPUTED_SCOND_SWIPER_OPTION}
           {...getClassNm2st}
         >
           {swiperContentData.map((d, idx) => (
@@ -123,7 +123,7 @@ function SwiperArea({
   }
   return (
     // S: single swiper
-    <Swiper modules={swiperModule} {...computedSwiperOption} {...getClassNm}>
+    <Swiper modules={SWIPER_MODULE} {...COMPUTED_SWIPER_OPTION} {...getClassNm}>
       {swiperContentData.map((d, idx) => (
         <SwiperSlide key={idx}>{swiperContent(d)}</SwiperSlide>
       ))}
