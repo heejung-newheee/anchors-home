@@ -1,5 +1,5 @@
 {
-  "imgUrl": "이미지 이동경로",
+  "imgUrl": "/assets/images/contents/about",
   "scale": {
     "annual": ["6","Years"],
     "members": ["94","Members"],

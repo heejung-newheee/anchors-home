@@ -1,5 +1,5 @@
 {
-  "imgUrl": "이미지 이동 경로",
+  "imgUrl": "/assets/images/contents/about",
   "introduction" : [
     {
       "highlightText": "우리는 새로운 항로를 개척하는 탐험가입니다.",
