@@ -1,5 +1,5 @@
 import './scss/main.scss';
-import Image from 'next/image';
+
 import Link from 'next/link';
 
 import variables from '@/public/assets/scss/_variables.module.scss';

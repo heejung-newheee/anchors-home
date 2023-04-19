@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google';
-import Image from 'next/image';
+
 import './about.scss';
 
 export const metadata = {

@@ -1,14 +1,16 @@
 'use client';
-import Image from 'next/image';
-import Link from 'next/link';
-import Visual from '@/components/Visual/Visual';
-import Disclaimer from '@/components/Disclaimer/Disclaimer';
-import Btn from '@/components/Btn/Btn';
-import Description from '@/components/Description/Description';
-import BaseArticle from '@/components/BaseArticle/BaseArticle';
-import works from '@/helper/data/json/contents/works/works.json';
+
 import React from 'react';
+
+import Link from 'next/link';
+
+import BaseArticle from '@/components/BaseArticle/BaseArticle';
+import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
+import Description from '@/components/Description/Description';
+import Disclaimer from '@/components/Disclaimer/Disclaimer';
+import Visual from '@/components/Visual/Visual';
+import works from '@/helper/data/json/contents/works/works.json';
 import './scss/WorkTemplate.scss';
 
 export default function WorksTemplate({ className }) {

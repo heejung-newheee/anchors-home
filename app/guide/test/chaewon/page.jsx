@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-
 import Description from '@/components/Description/Description';
 import Device from '@/components/Device/Device';
 

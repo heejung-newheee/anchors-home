@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-
 // import Link from "next/link";
 import Btn from '@/components/Btn/Btn';
 import videoPlayBtn from '@/public/assets/images/ico/ico_btn_play.svg';
