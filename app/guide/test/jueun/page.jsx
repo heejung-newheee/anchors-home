@@ -102,13 +102,19 @@ export default function Jueun() {
         }}
         swiperContentData={aboutMembers.members}
         swiperOption={{
+          slidesPerview: 'auto',
           navigation: false,
           pagination: false,
           scrollbar: {
             draggable: true,
           },
+          autoplay: {
+            delay: 1,
+          },
+          loop: true,
+          speed: 4000,
         }}
-        className="single"
+        className="single scroll-linear"
       />
       <SwiperArea
         type="double"

@@ -5,6 +5,7 @@ import './scss/SwiperArea.scss';
 
 // S: swiper import
 import {
+  Autoplay,
   Pagination,
   Navigation,
   Scrollbar,
@@ -30,6 +31,7 @@ import 'swiper/css/effect-creative';
 // E: swiper import
 
 const SWIPER_MODULE = [
+  Autoplay,
   Pagination,
   Navigation,
   Scrollbar,
@@ -49,6 +51,8 @@ const DEFAULT_SWIPER_OPTION = {
   pagination: { clickable: true },
   navigation: true,
   scrollbar: false,
+  autoplay: false,
+  loop: false,
 };
 
 function SwiperArea({
@@ -123,7 +127,11 @@ function SwiperArea({
   }
   return (
     // S: single swiper
-    <Swiper modules={SWIPER_MODULE} {...COMPUTED_SWIPER_OPTION} {...GET_CLASSNAME}>
+    <Swiper
+      modules={SWIPER_MODULE}
+      {...COMPUTED_SWIPER_OPTION}
+      {...GET_CLASSNAME}
+    >
       {swiperContentData.map((d, idx) => (
         <SwiperSlide key={idx}>{swiperContent(d)}</SwiperSlide>
       ))}

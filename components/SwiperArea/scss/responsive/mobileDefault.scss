@@ -51,4 +51,9 @@
       }
     }
   }
+  &.swiper.scroll-linear {
+    .swiper-wrapper {
+      transition-timing-function : linear;
+    }
+  }
 }
