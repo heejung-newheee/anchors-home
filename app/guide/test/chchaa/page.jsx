@@ -14,6 +14,7 @@ import Visual from '@/components/Visual/Visual';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 import variables from '@/public/assets/scss/_variables.module.scss';
 import './chchaa.scss';
+import ImageArray from "@/components/ImageArray/ImageArray";
 
 const ACCORDION_CONTENTS = [
   {
@@ -35,9 +36,11 @@ const PAGETITLE_DATA = [{ word: 'Our' }, { word: 'Works' }];
 
 const DESCRIPTION_DATA = "description<b>tag text</b>"
 
+const IMGARR_DATA = [{ url: '/assets/images/이미지', alt : 'alt값'}]
 export default function Chchaa() {
   return (
     <>
+      <ImageArray data={IMGARR_DATA} bgColor="#ff0000" />
       <Description data={DESCRIPTION_DATA} innerHTMLOption="Y"/>
       <Description data={DESCRIPTION_DATA} innerHTMLOption="N"/>
       <Description data={DESCRIPTION_DATA}/>

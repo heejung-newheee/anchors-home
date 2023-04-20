@@ -1,0 +1,9 @@
+@include tablet {
+  .image_array {
+    padding: 10rem 7.4rem; // $imageArray padding
+
+    img {
+      margin-top: 8rem; // $imageArray margin
+    }
+  }
+}

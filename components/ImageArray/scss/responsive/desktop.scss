@@ -1,0 +1,9 @@
+@include desktop {
+  .image_array {
+    padding: 14rem 12.8rem; // $imageArray padding
+
+    img {
+      margin-top: 10rem; // $imageArray margin
+    }
+  }
+}

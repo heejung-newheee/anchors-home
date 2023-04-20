@@ -1,0 +1,15 @@
+.image_array {
+  padding: 6rem 2.6rem; // $imageArray padding
+
+  img {
+    width: 100%;
+    max-width: 1196px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 4rem; // $imageArray margin
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
