@@ -33,9 +33,14 @@ const ACCORDION_CONTENTS = [
 
 const PAGETITLE_DATA = [{ word: 'Our' }, { word: 'Works' }];
 
+const DESCRIPTION_DATA = "description<b>tag text</b>"
+
 export default function Chchaa() {
   return (
     <>
+      <Description data={DESCRIPTION_DATA} innerHTMLOption="Y"/>
+      <Description data={DESCRIPTION_DATA} innerHTMLOption="N"/>
+      <Description data={DESCRIPTION_DATA}/>
       {/*<Accordion contents={headerFooter.test} />*/}
       {/*<Description dangerouslySetInnerHTML={{ __html: headerFooter.test }} />*/}
       <Header className="new_header is_black" />
