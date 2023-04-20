@@ -25,9 +25,6 @@ export default function GuideColor() {
           <li>
             <Link href="guide/pages/button">Button</Link>
           </li>
-          <li>
-            <Link href="guide/pages/component">Component</Link>
-          </li>
         </ul>
       </header>
       <main>

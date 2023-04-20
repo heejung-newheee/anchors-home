@@ -5,6 +5,7 @@ import Accordion from '@/components/Accordion/Accordion';
 import BaseArticle from '@/components/BaseArticle/BaseArticle';
 import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
+import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import Header from '@/components/Header/Header';
 import Logo from '@/components/Logo/Logo';
@@ -35,6 +36,8 @@ const PAGETITLE_DATA = [{ word: 'Our' }, { word: 'Works' }];
 export default function Chchaa() {
   return (
     <>
+      {/*<Accordion contents={headerFooter.test} />*/}
+      {/*<Description dangerouslySetInnerHTML={{ __html: headerFooter.test }} />*/}
       <Header className="new_header is_black" />
       <div className="is_black" />
       <div
