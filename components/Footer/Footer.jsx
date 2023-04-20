@@ -5,16 +5,36 @@ import Link from 'next/link';
 import Btn from '@/components/Btn/Btn';
 import './scss/Footer.scss';
 import copyright from '@/helper/data/json/contents/headerFooter.json';
+import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
+import lineLottie from '@/public/assets/images/lottie/lottieFooterLine.json';
+import handLottie from '@/public/assets/images/lottie/lottieFooterHand.json';
 // import LottiePlayer
 
 export default function Footer() {
+  const LINE_LOTTIE_STYLE = {
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'transparent',
+  };
+  const HAND_LOTTIE_STYLE = {
+    width: '100%',
+    height: '100%',
+  };
+
   return (
     <footer className="footer">
       {/*headerFooter.json 호출*/}
       <div className="lottie_wrap">
-        {/* Lottie component */}
-        {/*Lottie component (Ready to talk about your works?)*/}
-        {/* Lottie component */} {/*Lottie component (손가락모션)*/}
+        <LottiePlayer
+          className="line_lottie"
+          data={lineLottie}
+          style={LINE_LOTTIE_STYLE}
+        />
+        <LottiePlayer
+          className="hand_lottie"
+          data={handLottie}
+          style={HAND_LOTTIE_STYLE}
+        />
       </div>
       <div className="btn_wrap">
         <Btn type="submit" alt="send mail">

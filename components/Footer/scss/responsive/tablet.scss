@@ -1,5 +1,16 @@
 @include tablet {
   .footer {
+    .lottie_wrap {
+      .line_lottie {
+        padding-top: 12.8rem;
+      }
+      .hand_lottie {
+        top: 19.2rem;
+      }
+    }
+    .btn_wrap {
+      padding-top: 1.1rem;
+    }
     .copyright_wrap {
       padding: 3.2rem 0;
       margin: 0 5rem;

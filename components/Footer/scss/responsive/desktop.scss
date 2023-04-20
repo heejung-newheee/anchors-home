@@ -1,6 +1,15 @@
 @include desktop {
   .footer {
+    .lottie_wrap {
+      .line_lottie {
+        padding-top: 16rem;
+      }
+      .hand_lottie {
+        top: 26.7rem;
+      }
+    }
     .btn_wrap {
+      padding-top: 0.8rem;
       padding-bottom: 10rem;
     }
     .copyright_wrap {
