@@ -7,6 +7,7 @@ import Footer from '@/components/Footer/Footer';
 import Video from '@/components/Video/Video';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import { content } from '@/helper/data/json/contents/works/works.json';
+import About from '@/app/pages/about/page';
 
 export default function Doi() {
   return (
@@ -14,7 +15,8 @@ export default function Doi() {
       {/* <Disclaimer data="disclaimer" /> */}
       {/* <Video videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" /> */}
       {/* <Footer /> */}
-      <WorksTemplate />
+      {/* <WorksTemplate /> */}
+      <About />
     </>
   );
 }
