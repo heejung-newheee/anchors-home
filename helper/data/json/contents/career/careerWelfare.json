@@ -1,5 +1,5 @@
 {
-  "imgUrl": "/assets/images/contents/career",
+  "imgUrl": "/assets/images/contents/career/",
   "content": [
     {
       "title": "탄력 근무제",
@@ -33,13 +33,13 @@
     },
     {
       "title": "인재 추천 보상",
-      "text": "사내 인재 추천 인센티브를 최대 300만원까지 제공해 드립니다.",
+      "text": "사내 인재 추천 인센티브를 최대 300만원까지 제공",
       "img": "img_welfare_hr.png",
       "alt": "인재추천 아이콘"
     },
     {
       "title": "교육비/도서 지원",
-      "text": "업무 능력 향상을 위한 교육 및 도서비 등을 지원해 드립니다.",
+      "text": "업무 능력 향상을 위한 교육 및 도서비 등 지원",
       "img": "img_welfare_book.png",
       "alt": "도서 아이콘"
     },
@@ -51,13 +51,13 @@
     },
     {
       "title": "동호회 활동 지원",
-      "text": "취미활동을 위한 사내 동호회활동을 지원해 드립니다",
+      "text": "취미활동을 위한 사내 동호회 활동 지원",
       "img": "img_welfare_popcorn.png",
       "alt": "팝콘 아이콘"
     },
     {
       "title": "경조사 지원",
-      "text": "경조사 발생 시 경조금 및 경조휴가를 지원해드립니다.",
+      "text": "경조사 발생 시 경조금 및 경조휴가 지원",
       "img": "img_welfare_money.png",
       "alt": "경조사 아이콘"
     },
@@ -69,7 +69,7 @@
     },
     {
       "title": "명절/기념일 선물",
-      "text": "명절 선물, 생일 상품권, 입사 웰컴 키트를 제공합니다.",
+      "text": "명절 선물, 생일 상품권, 입사 웰컴 키트를 제공",
       "img": "img_welfare_gift.png",
       "alt": "선물상자 아이콘"
     }
