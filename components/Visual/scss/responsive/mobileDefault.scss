@@ -3,6 +3,7 @@
   width: 100%;
   height: 64rem;
   background-size: cover;
+  background-position: center;
   &.dimmed::after {
     content: '';
     display: block;
