@@ -18,6 +18,7 @@ export default function WorksTemplate({ className }) {
     className == undefined
       ? { className: 'works_template' }
       : { className: 'works_template ' + className };
+
   return (
     <section {...GET_CLASSNAME}>
       {/* S: Key Visual 영역 */}
@@ -46,7 +47,7 @@ export default function WorksTemplate({ className }) {
 
       {/* S: View Website Button 영역 */}
       <Btn className="view_website_btn" type="a" title="view website button">
-        View Website
+        View <br /> Website
       </Btn>
       {/* E: View Website Button 영역 */}
 

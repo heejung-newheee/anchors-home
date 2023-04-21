@@ -35,10 +35,18 @@
   }
   .view_website_btn {
     @extend %btn_secondary_up;
+    font-family: $font_en;
+    font-weight: 500;
     position: fixed;
     right: 14px;
     bottom: 50px;
     z-index: 99;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+
+    &.hide {
+      bottom: -999px;
+    }
   }
   .detail_text_wrap {
     padding: 0 2.4rem;
@@ -124,7 +132,7 @@
     }
   }
   .detail_next_work_wrap {
-    margin-top: 6rem;
+    padding-top: 6rem;
     @extend %layout_fix;
 
     h3 {
