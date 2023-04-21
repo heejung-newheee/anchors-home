@@ -9,13 +9,14 @@ export default function PageTitle({ data, className }) {
     className == undefined
       ? { className: 'page_title' }
       : { className: 'page_title ' + className };
-  const [animation, setAnimation] = useState('fadeIn');
+  const [animation, setAnimation] = useState('');
 
   const HandleScroll = () => {
     window.scrollY < 10 ? setAnimation('fadeIn') : setAnimation('fadeOut');
   };
 
   useEffect(() => {
+    window.scrollY < 10 ? setAnimation('fadeIn') : setAnimation('fadeOut');
     window.addEventListener('scroll', HandleScroll);
     return () => {
       window.removeEventListener('scroll', HandleScroll); //clean up

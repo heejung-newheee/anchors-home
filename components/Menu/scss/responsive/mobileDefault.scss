@@ -12,7 +12,7 @@
     height: 2.4rem;
     background-size: 100%;
     z-index: 1;
-    background-image: url('../../../../public/assets/images/ico/ico_btn_black_menu.svg');
+    background-image: url('../../../../public/assets/images/ico/ico_btn_menu_black.svg');
     span {
       visibility: hidden;
       font-size: 0;
@@ -66,11 +66,11 @@
 
 .header {
   &.is_black .menu .menu_btn {
-    background-image: url('../../../../public/assets/images/ico/ico_btn_white_menu.svg');
+    background-image: url('../../../../public/assets/images/ico/ico_btn_menu_white.svg');
   }
   &.is_photo .menu .menu_btn,
   &.is_white .menu .menu_btn {
-    background-image: url('../../../../public/assets/images/ico/ico_btn_black_menu.svg');
+    background-image: url('../../../../public/assets/images/ico/ico_btn_menu_black.svg');
   }
   .menu {
     .menu_btn {

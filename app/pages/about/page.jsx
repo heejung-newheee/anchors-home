@@ -1,5 +1,3 @@
-import { Inter } from 'next/font/google';
-
 import './about.scss';
 
 export const metadata = {
@@ -10,7 +8,7 @@ export const metadata = {
 function About() {
   return (
     <div>
-      {/*<img src="/assets/images/ico/ico_btn_black_down.svg"/>*/}
+      {/*<img src="/assets/images/ico/ico_btn_download_black.svg"/>*/}
       <p>this is about!!!!</p>
     </div>
   );
