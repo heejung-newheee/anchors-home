@@ -1,0 +1,6 @@
+@include wide {
+  .text:after {
+    content: "wide";
+    display: inline;
+  }
+}
