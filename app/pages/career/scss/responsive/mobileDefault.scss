@@ -1,0 +1,72 @@
+
+.career{
+  .visual{
+    width: 100%;
+    height: 27rem;
+  }
+  .career_text{
+    margin-top: 8rem;
+    margin-bottom: 9rem;
+    padding: 0 2.4rem;
+    text-align: center;
+    font-weight: 400;
+    p:nth-of-type(1){
+      font-size: 2.2rem;
+      line-height: 3rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 2rem;
+      span{
+        font-size: 2.2rem;
+        font-family: $font_en_italic;
+      }
+    }
+    p:nth-of-type(2){
+      font-family: $font_ko;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+    }
+  }
+
+//  welfare 영역
+  .welfare{
+
+    @extend %layout_fix;
+    //padding: 0 2.4rem;
+    .welfare_text{
+      @extend %font_sectionTitle;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 2.6rem;
+      padding: 0 2rem;
+    }
+    .welfare_list{
+      .base_article{
+        width: 100%;
+        border-bottom: 0.1rem solid #E4E4E4;
+        &:last-child{
+          margin-bottom: 8rem;
+        }
+        img{
+          width: 3.4rem;
+          height: 3.4rem;
+          margin-top: 3.3rem;
+          margin-bottom: 1.8rem;
+        }
+        p{
+          font-size: 1.8rem;
+          font-weight: 700;
+          line-height: 100%;
+          text-align: left;
+          margin: 0;
+          padding-bottom: 0.6rem ;
+        }
+        span{
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 2.2rem;
+          padding-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+}
