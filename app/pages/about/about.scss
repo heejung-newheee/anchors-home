@@ -1,1 +1,100 @@
-p {font-size: 100px;}
+.about {
+  .visual {
+    width: 100%;
+    height: 27rem;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 6rem;
+  }
+  .about_intro_text_wrap {
+    text-align: center;
+    @extend %layout_fix;
+    .description:first-child {
+      @extend %font_enIntro;
+      letter-spacing: -0.03em;
+      font-family: $font-en;
+      margin-bottom: 3rem;
+      color: #121212;
+      & span {
+        font-family: $font_en_italic;
+      }
+    }
+    .description:nth-child(2) {
+      font-family: $font_ko;
+      @extend %font_primary;
+    }
+  }
+  .anchors_profile {
+    background-color: $color_black;
+    color: $color_white;
+    @extend %layout_fix;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    div {
+      position: relative;
+      padding-bottom: 12.1rem;
+      h3 {
+        font-family: $font_en;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        letter-spacing: -0.03em;
+        margin-bottom: 6rem;
+        font-weight: 400;
+      }
+      .profile_grow_text {
+        font-family: $font-en;
+        @extend %font_sectionTitle;
+        margin-bottom: 5rem;
+      }
+      .profile_grow_number {
+        font-size: 5rem;
+        font-family: $font-en;
+        letter-spacing: -0.03em;
+        & span {
+          @extend %font_visualDescription;
+          line-height: 100%;
+          margin-left: 0.8rem;
+          display: inline-block;
+          margin-bottom: 3rem;
+        }
+      }
+      .profile_lottie_arrow {
+        position: absolute;
+        bottom: 0;
+        left: -24.1rem;
+      }
+    }
+   .profile_award_description {
+     font-family: $font-en;
+     font-weight: 500;
+     letter-spacing: -0.03em;
+     @extend %font_sectionTitle;
+     margin-bottom: 6.4rem;
+   }
+    .profile_award_icon {
+      display: inline-block;
+      width: 7rem;
+      height: auto;
+      margin-bottom: 6rem;
+    }
+    .profile_award_list {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding: 3.2rem 0;
+      font-family: $font_en;
+
+      .element_title {
+        @extend %font_listTitle;
+        letter-spacing: -0.03em;
+        font-weight: 400;
+        margin-bottom: 1.4rem;
+      }
+      .description {
+        font-size: 1.4rem;
+        line-height: 100%;
+        letter-spacing: -0.03em;
+      }
+    }
+  }
+}

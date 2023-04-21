@@ -1,9 +1,18 @@
 {
   "imgUrl": "/assets/images/contents/about",
   "scale": {
-    "annual": ["6","Years"],
-    "members": ["94","Members"],
-    "total": ["8.3","Billions"]
+    "annual": {
+      "number" : "6",
+      "text" : "Years"
+    },
+    "members": {
+      "number" : "94",
+      "text" : "Members"
+    },
+    "total": {
+      "number" : "8.3",
+      "text" : "Billions"
+    }
   },
   "award":
     [
