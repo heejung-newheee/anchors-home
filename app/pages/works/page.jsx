@@ -12,14 +12,10 @@ export const metadata = {
 
 function Works() {
   return (
-    <main className="our_works_list section_div is_photo">
-      <PageTitle data={headerFooter.menuList[0].name} /> {/*our works*/}
-      {/* S: portfolio list */}
-      <Btn type="button" className="view_more_btn">
-        View more
-      </Btn>
-      {/* E: portfolio list */}
-    </main>
+    <div>
+      {/*<img src="/assets/images/ico/ico_btn_black_down.svg"/>*/}
+      <p>this is works!!!!</p>
+    </div>
   );
 }
 
