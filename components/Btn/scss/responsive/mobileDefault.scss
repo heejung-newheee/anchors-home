@@ -2,3 +2,6 @@
 .btn_primary_ghost { @extend %btn_primary_ghost }
 .btn_secondary_up { @extend %btn_secondary_up }
 .btn_secondary_down { @extend %btn_secondary_down }
+button, a {
+  cursor: pointer;
+}
