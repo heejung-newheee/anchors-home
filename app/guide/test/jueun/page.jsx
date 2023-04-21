@@ -1,43 +1,9 @@
-'use client';
-import React from 'react';
-
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
-import Header from '@/components/Header/Header';
-import Menu from '@/components/Menu/Menu';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Visual from '@/components/Visual/Visual';
 import aboutIntro from '@/helper/data/json/contents/about/aboutIntro.json';
 import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
 import variables from '@/public/assets/scss/_variables.module.scss';
-
-/* function swiperContent(cont) {
-  return (
-    <div>
-      <p>{cont.nameEn}</p>
-      <div>
-        <p>{cont.nameKo}</p>
-        <p>{cont.part}</p>
-        <p>{cont.hashtag}</p>
-      </div>
-    </div>
-  );
-} */
-
-function FirstContent(cont2) {
-  return (
-    <div>
-      <p>{cont2.highlightText}</p>
-    </div>
-  );
-}
-
-function SecondContent(cont3) {
-  return (
-    <div>
-      <p>{cont3.text}</p>
-    </div>
-  );
-}
 
 export default function Jueun() {
   return (
@@ -88,21 +54,8 @@ export default function Jueun() {
       </p>
       <SwiperArea
         type="single"
-        swiperContent={function (cont) {
-          return (
-            <div>
-              <p>{cont.nameEn}</p>
-              <div>
-                <p>{cont.nameKo}</p>
-                <p>{cont.part}</p>
-                <p>{cont.hashtag}</p>
-              </div>
-            </div>
-          );
-        }}
-        swiperContentData={aboutMembers.members}
         swiperOption={{
-          slidesPerview: 'auto',
+          slidesPerView: 'auto',
           navigation: false,
           pagination: false,
           scrollbar: {
@@ -115,12 +68,31 @@ export default function Jueun() {
           speed: 4000,
         }}
         className="single scroll-linear"
-      />
+        swiperContent={aboutMembers.members.map((cont, idx) => (
+          <div key={idx}>
+            <p>{cont.nameEn}</p>
+            <div>
+              <p>{cont.nameKo}</p>
+              <p>{cont.part}</p>
+              <p>{cont.hashtag}</p>
+            </div>
+          </div>
+        ))}
+      >
+        {/* aboutMembers.members */}
+      </SwiperArea>
       <SwiperArea
         type="double"
-        firstContent={FirstContent}
-        secondContent={SecondContent}
-        swiperContentData={aboutIntro.introduction}
+        firstContent={aboutIntro.introduction.map((cont, idx) => (
+          <div key={idx}>
+            <p>{cont.highlightText}</p>
+          </div>
+        ))}
+        secondContent={aboutIntro.introduction.map((cont, idx) => (
+          <div>
+            <p>{cont.text}</p>
+          </div>
+        ))}
         firstSwiperOption={{}}
         secondSwiperOption={{
           navigation: false,

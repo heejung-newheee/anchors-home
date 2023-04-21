@@ -61,7 +61,6 @@ function SwiperArea({
   firstSwiperOption = DEFAULT_SWIPER_OPTION,
   secondSwiperOption = DEFAULT_SWIPER_OPTION,
   swiperContent,
-  swiperContentData = [],
   firstContent,
   secondContent,
   className,
@@ -80,10 +79,6 @@ function SwiperArea({
     ...DEFAULT_SWIPER_OPTION,
     ...secondSwiperOption,
   };
-  const GET_CLASSNAME =
-    className == undefined
-      ? { className: 'swiper_area' }
-      : { className: 'swiper_area ' + className };
 
   const GET_CLASSNAME1st =
     firstClassName == undefined
@@ -94,6 +89,26 @@ function SwiperArea({
     secondClassName == undefined
       ? { className: 'swiper_area' }
       : { className: 'swiper_area ' + secondClassName };
+
+  const FIRST_SWIPER_ARR = Array.isArray(firstContent)
+    ? firstContent
+    : [firstContent];
+
+  const FIRST_SWIPER_MAP = [
+    FIRST_SWIPER_ARR.map((contentArrays, idx) => (
+      <SwiperSlide key={idx}>{contentArrays}</SwiperSlide>
+    )),
+  ];
+
+  const SECOND_SWIPER_ARR = Array.isArray(secondContent)
+    ? secondContent
+    : [secondContent];
+
+  const SECOND_SWIPER_MAP = [
+    SECOND_SWIPER_ARR.map((contentArrays, idx) => (
+      <SwiperSlide key={idx}>{contentArrays}</SwiperSlide>
+    )),
+  ];
 
   if (type === 'double') {
     return (
@@ -106,9 +121,7 @@ function SwiperArea({
           {...COMPUTED_FIRST_SWIPER_OPTION}
           {...GET_CLASSNAME1st}
         >
-          {swiperContentData.map((d, idx) => (
-            <SwiperSlide key={idx}>{firstContent(d)}</SwiperSlide>
-          ))}
+          {FIRST_SWIPER_MAP}
         </Swiper>
         <Swiper // second swiper
           modules={SWIPER_MODULE}
@@ -117,14 +130,28 @@ function SwiperArea({
           {...COMPUTED_SCOND_SWIPER_OPTION}
           {...GET_CLASSNAME2st}
         >
-          {swiperContentData.map((d, idx) => (
-            <SwiperSlide key={idx}>{secondContent(d)}</SwiperSlide>
-          ))}
+          {SECOND_SWIPER_MAP}
         </Swiper>
         {/* E: double swiper */}
       </>
     );
   }
+
+  const GET_CLASSNAME =
+    className == undefined
+      ? { className: 'swiper_area' }
+      : { className: 'swiper_area ' + className };
+
+  const SINGLE_SWIPER_ARR = Array.isArray(swiperContent)
+    ? swiperContent
+    : [swiperContent];
+
+  const SINGLE_SWIPER_MAP = [
+    SINGLE_SWIPER_ARR.map((contentArrays, idx) => (
+      <SwiperSlide key={idx}>{contentArrays}</SwiperSlide>
+    )),
+  ];
+
   return (
     // S: single swiper
     <Swiper
@@ -132,9 +159,7 @@ function SwiperArea({
       {...COMPUTED_SWIPER_OPTION}
       {...GET_CLASSNAME}
     >
-      {swiperContentData.map((d, idx) => (
-        <SwiperSlide key={idx}>{swiperContent(d)}</SwiperSlide>
-      ))}
+      {SINGLE_SWIPER_MAP}
     </Swiper>
     // E: single swiper
   );
