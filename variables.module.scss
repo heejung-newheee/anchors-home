@@ -76,7 +76,6 @@ $color_lightgrey : #E4E4E4;
 
 // layout
 %layout_fix { max-width: auto; margin: 0 auto; padding: 0 24px; }
-@include mobile { %layout_fix { max-width: auto; margin: 0 auto; padding: 0 24px; } }
 @include desktop { %layout_fix { max-width: auto; margin: 0 auto; padding: 0 32px; } }
 @include wide { %layout_fix { max-width: $breakpoint_wide; margin: 0 auto; padding: 0 48px; } }
 
