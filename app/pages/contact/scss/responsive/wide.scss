@@ -1,6 +1,27 @@
 @include wide {
-  .text:after {
-    content: "wide";
-    display: inline;
+  .contact {
+    .visual {
+      height: 176rem;
+      .contact_cont_wrap {
+        .wordbubble {
+          right: 8rem;
+          top: 20rem;
+          width: 47.2rem;
+          height: 38.3rem;
+        }
+        padding: 16rem 10.7rem;
+        .contact_address {
+          max-width: 60.7rem;
+        }
+        .contact_info {
+          min-width: 46.4rem;
+          .base_article {
+            .description {
+              font-size: 2.8rem;
+            }
+          }
+        }
+      }
+    }
   }
 }

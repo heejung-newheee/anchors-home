@@ -16,22 +16,22 @@ function Contact() {
     <main className="contact">
       <PageTitle data={headerFooter.menuList[3].name} />
       <Visual imgUrl={contact.imgUrl + contact.img}>
-        <span className="wordbubble">
-          <img
-            src={contact.imgUrl + contact.bubbleImg}
-            alt={contact.bubbleAlt}
-          />
-        </span>
-        <article className="contact_cont_wrap">
-          <div className="contact_address">
+        <div className="contact_cont_wrap">
+          <span className="wordbubble">
+            <img
+              src={contact.imgUrl + contact.bubbleImg}
+              alt={contact.bubbleAlt}
+            />
+          </span>
+          <article className="contact_address">
             <Description data={contact.address} />
-          </div>
-          <div className="contact_info">
+          </article>
+          <article className="contact_info">
             <BaseArticle elementTitle="Email" description={contact.email} />
             <BaseArticle elementTitle="Phone" description={contact.phone} />
             <BaseArticle elementTitle="Fax" description={contact.fax} />
-          </div>
-        </article>
+          </article>
+        </div>
       </Visual>
     </main>
   );

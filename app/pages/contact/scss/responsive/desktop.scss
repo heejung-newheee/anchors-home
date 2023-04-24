@@ -2,24 +2,26 @@
   .contact {
     .visual {
       height: 160rem;
-      .wordbubble {
-        position: absolute;
-        right: 2rem;
-        top: 7rem;
-        width: 30.2rem;
-        height: 24.5rem;
-      }
       .contact_cont_wrap {
-        padding: 10rem 8rem;
+        .wordbubble {
+          right: 4rem;
+          top: 17rem;
+          width: 41.8rem;
+          height: 34rem;
+        }
+        padding: 14rem 8rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
         .contact_address {
-          max-width: 56rem;
-          margin-bottom: 7rem;
+          max-width: 49.4rem;
+          margin-bottom: 0;
         }
         .contact_info {
+          min-width: 40rem;
           .base_article {
-            margin-bottom: 4.6rem;
             .description {
-              font-size: 2.2rem;
+              font-size: 2.4rem;
             }
           }
         }
