@@ -1,0 +1,31 @@
+@include desktop {
+  .contact {
+    .visual {
+      height: 160rem;
+      .contact_cont_wrap {
+        .wordbubble {
+          right: 4rem;
+          top: 17rem;
+          width: 41.8rem;
+          height: 34rem;
+        }
+        padding: 14rem 8rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+        .contact_address {
+          max-width: 49.4rem;
+          margin-bottom: 0;
+        }
+        .contact_info {
+          min-width: 40rem;
+          .base_article {
+            .description {
+              font-size: 2.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

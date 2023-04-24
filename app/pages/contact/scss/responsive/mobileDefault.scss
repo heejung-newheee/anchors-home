@@ -1,0 +1,59 @@
+.contact {
+  .visual {
+    height: 92.8rem;
+    .contact_cont_wrap {
+      @extend %layout_fix;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 8rem 3rem;
+      box-sizing: border-box;
+      position: relative;
+      * {
+        color: $color_white;
+      }
+      .wordbubble {
+        position: absolute;
+        right: 0;
+        top: 1rem;
+        width: 19.8rem;
+        height: 16rem;
+      }
+      .contact_address {
+        margin-bottom: 6rem;
+        .description {
+          letter-spacing: $en_letterSpacing;
+          @extend %font_sectionTitle;
+          font-family: $font_en;
+        }
+      }
+      .contact_info {
+        * {
+          line-height: 1 !important;
+          letter-spacing: $en_letterSpacing;
+          font-family: $font_en;
+        }
+        .base_article {
+          margin-bottom: 4.2rem;
+          .element_title {
+            @extend %font_primary;
+            font-weight: 400;
+            margin-bottom: 1.2rem;
+          }
+          .description {
+            font-size: 1.8rem;
+          }
+          &:first-child {
+            .description {
+              text-decoration: underline;
+            }
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

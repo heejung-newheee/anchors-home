@@ -1,0 +1,28 @@
+@include tablet {
+  .contact {
+    .visual {
+      height: 120rem;
+      .contact_cont_wrap {
+        padding: 10rem 8rem;
+        .wordbubble {
+          right: 2rem;
+          top: 7rem;
+          width: 30.2rem;
+          height: 24.5rem;
+        }
+        .contact_address {
+          max-width: 56rem;
+          margin-bottom: 7rem;
+        }
+        .contact_info {
+          .base_article {
+            margin-bottom: 4.6rem;
+            .description {
+              font-size: 2.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
