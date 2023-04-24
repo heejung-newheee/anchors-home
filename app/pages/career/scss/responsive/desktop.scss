@@ -22,16 +22,19 @@
     }
     //  welfare 영역
     .welfare{
-      padding: 0 13.7rem;
+      //width: 100rem;
+      //padding: 0 13.7rem;
 
       .welfare_text{
         margin-bottom: 6rem;
       }
       .welfare_list{
         .base_article{
-          width: 31rem;
+
+          //width: 31rem;
+          width: calc(33.3333% - 3.8rem);
           height: 37.4rem;
-          margin-right: 3.8rem;
+          //margin-right: 3.8rem;
           margin-bottom: 3.8rem;
           padding: 4rem 5rem;
           &:last-child{
