@@ -2,15 +2,14 @@
   .contact {
     .visual {
       height: 120rem;
-      .wordbubble {
-        position: absolute;
-        right: 2rem;
-        top: 7rem;
-        width: 30.2rem;
-        height: 24.5rem;
-      }
       .contact_cont_wrap {
         padding: 10rem 8rem;
+        .wordbubble {
+          right: 2rem;
+          top: 7rem;
+          width: 30.2rem;
+          height: 24.5rem;
+        }
         .contact_address {
           max-width: 56rem;
           margin-bottom: 7rem;

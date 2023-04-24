@@ -1,22 +1,24 @@
 .contact {
   .visual {
     height: 92.8rem;
-    .wordbubble {
-      position: absolute;
-      right: 0;
-      top: 1rem;
-      width: 19.8rem;
-      height: 16rem;
-    }
     .contact_cont_wrap {
+      @extend %layout_fix;
       display: flex;
       height: 100%;
       flex-direction: column;
       justify-content: flex-end;
       padding: 8rem 3rem;
       box-sizing: border-box;
+      position: relative;
       * {
         color: $color_white;
+      }
+      .wordbubble {
+        position: absolute;
+        right: 0;
+        top: 1rem;
+        width: 19.8rem;
+        height: 16rem;
       }
       .contact_address {
         margin-bottom: 6rem;
