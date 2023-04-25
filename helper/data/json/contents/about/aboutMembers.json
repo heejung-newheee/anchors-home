@@ -1,18 +1,15 @@
 {
-  "imgUrl": "/assets/images/contents/about",
+  "imgUrl": "/assets/images/contents/about/",
   "members": [
     {
       "nameKo": "최인성 과장",
       "nameEn": "Choi Insung",
       "part": "PM / 기획",
       "hashtag": [
-        "#내 꿈은 #연봉 1억 #사원",
-        "#참아 #견뎌 #버텨",
-        "#나도 이만큼 하는데",
-        "#너희들이라고 못할까"
+        "#내 꿈은 #연봉 1억 #사원 #참아 #견뎌 #버텨 #나도 이만큼 하는데 #너희들이라고 못할까"
       ],
       "tagClassname": "해시태그 style 클래스 명",
-      "img": "img_member_swiper1.png",
+      "img": "img_member_slide_swiper1.png",
       "alt": "앵커스 직원 대표 이미지"
     },
     {
@@ -20,14 +17,10 @@
       "nameEn": "Jang Bin soo",
       "part": "디자인실",
       "hashtag": [
-        "#빛나고 투명한거 좋아",
-        "#블랙 좋아, 까마귀 좋아",
-        "#크리스마스도 좋지 오예",
-        "좋아하는거 많은 사람이였네",
-        "#엇! 겨울에 집에 있는 것도"
+        "#빛나고 투명한거 좋아 #블랙 좋아, 까마귀 좋아 #크리스마스도 좋지 오예 좋아하는거 많은 사람이였네 #엇! 겨울에 집에 있는 것도"
       ],
       "tagClassname": "해시태그 style 클래스 명",
-      "img": "img_member_swiper2.png",
+      "img": "img_member_slide_swiper2.png",
       "alt": "앵커스 직원 대표 이미지"
     },
     {
@@ -35,13 +28,10 @@
       "nameEn": "Seo Seung hee",
       "part": "기획팀",
       "hashtag": [
-        "#4개국어 합니다 #영어",
-        "#일본어 #서울말 #대구말",
-        "#애주가 #소주파",
-        "#밀집모자일당급동료애"
+        "#4개국어 합니다 #영어 #일본어 #서울말 #대구말 #애주가 #소주파 #밀집모자일당급동료애"
       ],
       "tagClassname": "해시태그 style 클래스 명",
-      "img": "img_member_swiper3.png",
+      "img": "img_member_slide_swiper3.png",
       "alt": "앵커스 직원 대표 이미지"
     },
     {
@@ -49,14 +39,10 @@
       "nameEn": "Choi hye ju",
       "part": "연구실",
       "hashtag": [
-        "#애엄마 #캠퍼",
-        "#화가많음주의 #웃음도많음주의",
-        "#손빠름 #근데실수도많음",
-        "#돌아간다신난다",
-        "#ISFJ #그것은프로불편러"
+        "#애엄마 #캠퍼 #화가많음주의 #웃음도많음주의 #손빠름 #근데실수도많음 #돌아간다신난다 #ISFJ #그것은프로불편러"
       ],
       "tagClassname": "해시태그 style 클래스 명",
-      "img": "img_member_swiper4.png",
+      "img": "img_member_slide_swiper4.png",
       "alt": "앵커스 직원 대표 이미지"
     },
     {
@@ -64,13 +50,10 @@
       "nameEn": "Gil Jae hee",
       "part": "Front End 개발",
       "hashtag": [
-        "#얼죽아",
-        "#평화주의자",
-        "#용감한 수호자",
-        "#맡은 일은 충실하게"
+        "#얼죽아 #평화주의자 #용감한 수호자 #맡은 일은 충실하게"
       ],
       "tagClassname": "해시태그 style 클래스 명",
-      "img": "img_member_swiper5.png",
+      "img": "img_member_slide_swiper5.png",
       "alt": "앵커스 직원 대표 이미지"
     },
     {
@@ -78,13 +61,10 @@
       "nameEn": "Jeong nayoung",
       "part": "디자인실",
       "hashtag": [
-        "#겨울최고",
-        "#눈오는거좋아요 #산좋아요",
-        "#차타고 #카페,맛집투어",
-        "#얼.죽.아"
+        "#겨울최고 #눈오는거좋아요 #산좋아요 #차타고 #카페,맛집투어 #얼.죽.아"
       ],
       "tagClassname": "해시태그 style 클래스 명",
-      "img": "img_member_swiper6.png",
+      "img": "img_member_slide_swiper6.png",
       "alt": "앵커스 직원 대표 이미지"
     }
   ]
