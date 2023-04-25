@@ -1,0 +1,73 @@
+.service {
+  .page_title_h2 {
+    letter-spacing: $en_letterSpacing;
+    color: #000;
+  }
+  .visual_comment {
+    .visual {
+      height: 27rem;
+      margin-bottom: 6rem;
+    }
+    .description{
+      text-align: center;
+      @extend %layout_fix;
+      &.en_comment {
+        @extend %font_enIntro;
+        letter-spacing: $en_letterSpacing;
+        font-family: $font_en;
+        margin-bottom: 3rem;
+        span {
+          font-family: $font_en_italic;
+          font-size: inherit;
+        }
+      }
+      &.ko_comment {
+        @extend %font_primary;
+        letter-spacing: -2% !important;
+        color: #000;
+      }
+    }
+  }
+  .anchors_part {
+    margin-bottom: 6rem;
+    .container {
+      margin-top: 6rem;
+      .part_img {
+        display: block;
+        margin-bottom: 4rem;
+        img {
+          height: 18rem;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .part_introduction_wrap {
+        @extend %layout_fix;
+        .element_title {
+          @extend %font_sectionTitle;
+          line-height: 1;
+          letter-spacing: $en_letterSpacing;
+          margin-bottom: 3rem;
+        }
+        .description {
+          span {
+            @extend %font_primary;
+            font-family: $font_ko;
+            margin-bottom: 1.8rem;
+            display: block;
+          }
+        }
+        .disclaimer {
+          .hashtag {
+            color: $color_darkgrey;
+            font-size: 1.4rem;
+            line-height: 1;
+            font-family: $font_ko;
+            display: block;
+            padding-top: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
