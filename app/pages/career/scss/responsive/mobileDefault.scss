@@ -3,8 +3,10 @@
   .visual{
     width: 100%;
     height: 27rem;
+    background-color: #FFFFFF;
   }
   .career_text{
+    background-color: #FFFFFF;
     margin-top: 8rem;
     margin-bottom: 9rem;
     padding: 0 2.4rem;
@@ -24,6 +26,43 @@
       font-family: $font_ko;
       font-size: 1.6rem;
       line-height: 2.6rem;
+    }
+  }
+
+  //members 스와이퍼 영역
+  .swiper_members{
+    background-color: #FFFFFF;
+    @extend %layout_fix;
+    margin-bottom: 8rem;
+    overflow: hidden;
+    .swiper-cards{
+      width: 24rem;
+      margin-bottom: 8rem;
+      .swiper-pagination{
+        bottom:-2.4rem;
+      }
+    }
+    .swiper_area{
+      .element_title{
+        margin-bottom: 1.4rem;
+      }
+      .disclaimer{
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2.2rem;
+        font-family : $font_ko;
+        color: #848484;
+        margin-bottom: 3rem;
+      }
+      .description{
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.6rem;
+        color: #1D1D1F;
+        &:nth-of-type(1){
+          margin-bottom: 2rem;
+        }
+      }
     }
   }
 

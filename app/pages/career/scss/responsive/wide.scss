@@ -19,6 +19,36 @@
         line-height: 3.2rem;
       }
     }
+
+    //members 스와이퍼 영역
+    .swiper_members{
+      margin-bottom: 18rem;
+      .swiper-cards{
+        margin-bottom: 0;
+        .swiper-pagination{
+          bottom: -4rem;
+        }
+      }
+      .swiper_area{
+        width: 52rem;
+        .element_title{
+          font-size: 2.8rem;
+        }
+        .disclaimer{
+          font-size: 1.8rem;
+          line-height: 1.8rem;
+          margin-bottom: 6rem;
+        }
+        .description{
+          font-size: 2rem;
+          line-height: 3.2rem;
+          &:nth-of-type(1){
+            margin-bottom: 4rem;
+          }
+        }
+      }
+    }
+
     //  welfare 영역
     .welfare{
       max-width: 115.6rem;

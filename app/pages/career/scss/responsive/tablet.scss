@@ -15,6 +15,32 @@
         }
       }
     }
+
+    //members 스와이퍼 영역
+    .swiper_members{
+      padding: 0 12.6rem;
+      margin-bottom: 13rem;
+      .swiper-cards{
+        width: 36.3rem;
+        .swiper-pagination{
+          bottom:-3.3rem;
+        }
+      }
+      .swiper_area{
+        .element_title{
+          font-size: 2.2rem;
+        }
+        .disclaimer{
+          margin-bottom: 4rem;
+        }
+        .description{
+          &:nth-of-type(1){
+            margin-bottom: 3rem;
+          }
+        }
+      }
+    }
+
     //  welfare 영역
     .welfare{
       //padding: 0 3.6rem;

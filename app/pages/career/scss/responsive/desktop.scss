@@ -20,6 +20,49 @@
         line-height: 2.8rem;
       }
     }
+
+    //members 스와이퍼 영역
+    .swiper_members{
+      display: flex;
+      align-items: center;
+      padding: 0 5.5rem;
+      margin-bottom: 16rem;
+      overflow: visible;
+      .swiper-cards{
+        margin-bottom: 0;
+        .swiper-pagination{
+          bottom:-3.6rem;
+        }
+      }
+      .swiper_area{
+        width: 43rem;
+        .element_title{
+          font-size: 2.4rem;
+        }
+        .disclaimer{
+          font-size: 1.6rem;
+          font-weight: 400;
+          line-height: 1.6rem;
+          margin-bottom: 4rem;
+        }
+        .description{
+          font-size: 1.8rem;
+          line-height: 2.8rem;
+          &:nth-of-type(1){
+            margin-bottom: 3rem;
+          }
+        }
+        .swiper-slide{
+          transition: all 0.9s;
+          transition-delay: .1s;
+          transform: translateY(80%);
+        }
+        .swiper-slide-active{
+          transform: translateY(0);
+        }
+      }
+    }
+
     //  welfare 영역
     .welfare{
       //width: 100rem;
