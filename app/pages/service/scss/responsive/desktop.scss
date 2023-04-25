@@ -1,0 +1,41 @@
+@include desktop {
+  .service {
+    .visual_comment {
+      .visual {
+        height: 80rem;
+        margin-bottom: 14rem;
+      }
+      .description{
+        max-width: 100rem;
+      }
+    }
+    .anchors_part {
+      margin-bottom: 14rem;
+      .container {
+        margin-top: 14rem;
+        .part_img {
+          margin-bottom: 8rem;
+          img {
+            height: 36rem;
+          }
+        }
+        .part_introduction_wrap {
+          max-width: 100rem;
+          .element_title {
+            min-width: 40rem;
+            margin-right: 6.4rem;
+          }
+          .description {
+            padding-bottom: 1.4rem;
+          }
+          .disclaimer {
+            .hashtag {
+              font-size: 1.6rem;
+              padding: 1.8rem 3rem 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

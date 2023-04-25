@@ -1,0 +1,45 @@
+@include tablet {
+  .service {
+    .visual_comment {
+      .visual {
+        height: 57.6rem;
+        margin-bottom: 10rem;
+      }
+      .description{
+        max-width: 62rem;
+        &.en_comment {
+          margin-bottom: 4rem;
+        }
+      }
+    }
+    .anchors_part {
+      margin-bottom: 6rem;
+      .container {
+        margin-top: 10rem;
+        .part_img {
+          margin-bottom: 7rem;
+          img {
+            height: 25rem;
+          }
+        }
+        .part_introduction_wrap {
+          padding: 0 3.4rem;
+          display: flex;
+          .element_title {
+            min-width: 26rem;
+            margin-right: 4rem;
+          }
+          .description {
+            padding-bottom: .8rem;
+          }
+          .disclaimer {
+            .hashtag {
+              display: inline-block;
+              padding: 1.4rem 1.8rem 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
