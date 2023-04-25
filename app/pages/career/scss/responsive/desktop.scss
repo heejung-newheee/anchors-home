@@ -52,14 +52,6 @@
             margin-bottom: 3rem;
           }
         }
-        .swiper-slide{
-          transition: all 0.9s;
-          transition-delay: .1s;
-          transform: translateY(80%);
-        }
-        .swiper-slide-active{
-          transform: translateY(0);
-        }
       }
     }
 

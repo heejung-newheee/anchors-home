@@ -3,9 +3,11 @@
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
+import MoreDetail from '@/components/MoreDetail/MoreDetail';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Visual from '@/components/Visual/Visual';
+import careerComment from '@/helper/data/json/contents/career/careerComment.json';
 import careerMembers from '@/helper/data/json/contents/career/careerMembers.json';
 import careerText from '@/helper/data/json/contents/career/careerText.json';
 import careerWelfare from '@/helper/data/json/contents/career/careerWelfare.json';
@@ -63,7 +65,43 @@ function Career() {
       {/* E: swiper_members 영역 */}
 
       {/* S: swiper_comment 영역 */}
-      <section className="swiper_comment" />
+      <section className="swiper_comment">
+        <Description
+          className="swiper_comment_text"
+          innerHTMLOption="Y"
+          data={careerText.textList[1].text1}
+        />
+        <SwiperArea
+          type="single"
+          swiperContent={careerComment.content.map((cont, idx) => (
+            <div key={idx}>
+              <Visual imgUrl={careerComment.imgUrl + cont.img} />
+              <MoreDetail
+                children={
+                  <>
+                    <Description data={cont.highlightText} />
+                    <Disclaimer data={cont.text} />
+                  </>
+                }
+              />
+            </div>
+          ))}
+          swiperOption={{
+            slidesPerView: 'auto',
+            navigation: false,
+            pagination: false,
+            scrollbar: {
+              draggable: true,
+            },
+            // autoplay: {
+            //   delay: 1,
+            // },
+            // loop: true,
+            // speed: 4000,
+          }}
+          className="single scroll-linear swiper_comment_swiper"
+        />
+      </section>
       {/* E: swiper_comment 영역 */}
 
       {/* S: welfare 영역 */}
