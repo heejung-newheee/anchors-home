@@ -1,0 +1,41 @@
+.detail_slide {
+  position: relative;
+  overflow: hidden;
+
+  .detail_btn {
+    position: absolute;
+    right: 1.8rem;
+    bottom: 1.8rem;
+    width: 3rem;
+    height: 3rem;
+    background-image: url(/assets/images/ico/ico_btn_more_white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    cursor: pointer;
+    z-index: 10;
+
+    &.on {
+      background-image: url(/assets/images/ico/ico_btn_minus_white.svg);
+    }
+  }
+
+  .detail {
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 10, 173, 0.9);
+    color: $color_white;
+    font-family: $font-ko;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    z-index: 2;
+
+    &.on {
+      bottom: 0;
+    }
+  }
+}
