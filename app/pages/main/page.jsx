@@ -1,3 +1,4 @@
+import FinderWorksList from '@/app/pages/main/finderWorksList';
 import Btn from '@/components/Btn/Btn';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
@@ -7,10 +8,6 @@ import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import main from '@/helper/data/json/contents/main/main.json';
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 import './scss/main.scss';
-
-import React from 'react';
-
-import FinderWorksList from '@/app/pages/main/finderWorksList';
 
 export const metadata = {
   title: 'Anchors',
