@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 import Btn from '@/components/Btn/Btn';
 import './scss/Footer.scss';
-import copyright from '@/helper/data/json/contents/headerFooter.json';
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
-import lineLottie from '@/public/assets/images/lottie/lottieFooterLine.json';
+import copyright from '@/helper/data/json/contents/headerFooter.json';
 import handLottie from '@/public/assets/images/lottie/lottieFooterHand.json';
+import lineLottie from '@/public/assets/images/lottie/lottieFooterLine.json';
 // import LottiePlayer
 
 export default function Footer() {
@@ -22,7 +22,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="footer">
+    <footer className="footer section_div is_black">
       {/*headerFooter.json 호출*/}
       <div className="lottie_wrap">
         <LottiePlayer
