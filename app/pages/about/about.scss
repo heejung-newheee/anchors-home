@@ -1,1 +1,212 @@
-p {font-size: 100px;}
+.about {
+  .visual {
+    width: 100%;
+    height: 27rem;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .about_intro_text_wrap {
+    padding-top: 6rem;
+    text-align: center;
+    @extend %layout_fix;
+    background-color: $color_white;
+    .description:first-child {
+      @extend %font_enIntro;
+      letter-spacing: -0.03em;
+      font-family: $font-en;
+      margin-bottom: 3rem;
+      color: #121212;
+      & span {
+        font-family: $font_en_italic;
+      }
+    }
+    .description:nth-child(2) {
+      font-family: $font_ko;
+      @extend %font_primary;
+      margin-bottom: 6rem;
+    }
+  }
+
+  .anchors_profile {
+    background-color: $color_black;
+    color: $color_white;
+    @extend %layout_fix;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+
+    h3 {
+      font-family: $font_en;
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 6rem;
+      font-weight: 400;
+    }
+    div.profile_development {
+      position: relative;
+      padding-bottom: 12.1rem;
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      .profile_grow_text {
+        font-family: $font-en;
+        @extend %font_sectionTitle;
+        margin-bottom: 5rem;
+      }
+      .profile_grow_number {
+        font-size: 5rem;
+        font-family: $font-en;
+        letter-spacing: -0.03em;
+        & span {
+          @extend %font_visualDescription;
+          line-height: 100%;
+          margin-left: 0.8rem;
+          display: inline-block;
+          margin-bottom: 3rem;
+        }
+      }
+      .profile_lottie_arrow {
+        position: absolute;
+        bottom: 0;
+        left: -24.1rem;
+      }
+    }
+    div.profile_award {
+      .profile_award_description {
+        font-family: $font-en;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        @extend %font_sectionTitle;
+        margin-bottom: 6.4rem;
+      }
+      .profile_award_icon {
+        display: inline-block;
+        width: 7rem;
+        height: auto;
+        margin-bottom: 6.4rem;
+      }
+      .profile_award_list {
+        border-top: 1px solid rgba(255,255,255,0.2);
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding: 3.2rem 0;
+        font-family: $font_en;
+
+        &:first-child {
+          border-top: 1px solid rgba(255,255,255,1);
+        }
+
+        .element_title {
+          @extend %font_listTitle;
+          letter-spacing: -0.03em;
+          font-weight: 400;
+          margin-bottom: 1.4rem;
+        }
+        .description {
+          font-size: 1.4rem;
+          line-height: 100%;
+          letter-spacing: -0.03em;
+        }
+      }
+    }
+    div.profile_partner {
+      .description {
+        font-family: $font_en;
+        font-weight: 500;
+        @extend %font_sectionTitle;
+        letter-spacing: -0.03em;
+        margin-bottom: 5rem;
+        margin-top: 10rem;
+      }
+      .disclaimer {
+        margin-bottom: 2.6rem;
+        margin-top: 10rem;
+        font-family: $font_en;
+        @extend %font_visualDescription;
+        text-align: center;
+        letter-spacing: -0.03em;
+        line-height: 2.2rem;
+      }
+      .download_btn {
+        @extend %btn_secondary_down;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+  .about_members {
+    .description {
+      @extend %font_enIntro;
+      font-family: $font-en;
+      text-align: center;
+      letter-spacing: -0.03em;
+      margin-bottom: 3rem;
+      color: #121212;
+
+      & span {
+        font-family: $font-en_italic;
+      }
+
+      &:nth-child(3) {
+        font-family: $font-ko;
+        @extend %font_primary;
+        color: $color_black;
+        margin-bottom: 6rem;
+      }
+    }
+    .about_members_swiper {
+      padding-bottom: 4rem;
+      margin-bottom: 6rem;
+
+      .swiper-slide {
+        width: unset;
+
+        .member_name_en {
+          position: absolute;
+          bottom: 2.4rem;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          color: $color_white;
+          font-family: $font-en;
+          font-size: 1.8rem;
+          line-height: 100%;
+          letter-spacing: -0.03em;
+          z-index: 1;
+        }
+
+          .detail_slide {
+            width: 26rem;
+            height: 26rem;
+            position: relative;
+            overflow: hidden;
+
+            .detail {
+              div {
+                padding: 3.4rem 1.8rem 1.8rem 2.8rem;
+                b {
+                  display: inline-block;
+                  margin-bottom: 0.6rem;
+                  font-size: 1.8rem;
+                  line-height: 100%;
+                }
+                .member_team {
+                  font-size: 1.4rem;
+                  line-height: 140%;
+                  margin-bottom: 2rem;
+                }
+                .member_hashtag {
+                  @extend %font_visualDescription;
+                }
+              }
+            }
+          }
+        }
+      .swiper-scrollbar {
+        bottom: 0;
+      }
+    }
+  }
+}
