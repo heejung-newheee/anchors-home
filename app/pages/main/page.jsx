@@ -373,8 +373,8 @@ function Main() {
         {/* E: service */}
 
         {/* S: our works */}
-        <section className="section_div is_white our_works">
-          <div className="rolling_wrap">
+        <section className="our_works">
+          <div className="section_div is_white rolling_wrap">
             <span className="rolling_text">{main.ourWorks.rollingBigText}</span>
             <div className="rolling_imgs">
               {main.ourWorks.rollingImages.map((data, index) => (
@@ -391,7 +391,7 @@ function Main() {
             swiperOption={{
               slidesPerView: 'auto',
             }}
-            className="portfolio scroll-linear"
+            className="section_div is_photo scroll-linear portfolio"
             swiperContent={
               <>
                 {main.ourWorks.portfolio.map((data, index) => (
