@@ -1,0 +1,167 @@
+@include tablet {
+  .about {
+    .visual {
+      height: 91.2rem;
+    }
+    .about_intro_text_wrap {
+      padding: 12rem 7.4rem;
+
+      .description:nth-child(2) {
+        br {
+          display: block;
+        }
+      }
+    }
+    .about_intro_swiper {
+      padding: 0 11.6rem;
+      .image_swiper {
+        //width: calc( 100% - 8.2rem);
+        width: 67.723880%;
+      }
+      .text_swiper {
+        padding-top: 12.4rem;
+        .swiper-slide {
+          margin-bottom: 16rem;
+
+          &:after {
+            width: 20.6rem;
+            height: 1.8rem;
+          }
+          &:first-child:after {
+            right: 0;
+            margin-top: 10.6rem;
+          }
+          &:nth-child(2):after {
+            right: 5rem;
+            margin-top: 6rem;
+          }
+          &:nth-child(3):after {
+            left: 0;
+            margin-top: 5rem;
+          }
+        }
+      }
+    }
+
+
+    .anchors_profile {
+      padding: 16rem 0 14.5rem;
+
+      h3 {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+        margin-bottom: 10rem;
+        padding: 0 4.8rem;
+      }
+      div.profile_development {
+        padding: 0 4.8rem 17.3rem;
+
+        .profile_grow_text {
+          margin-bottom: 8rem;
+        }
+        .profile_grow_number {
+          font-size: 8rem;
+          display: flex;
+          align-items: baseline;
+          
+          span {
+            margin-left: 1.2rem;
+            margin-right: 5rem;
+            margin-bottom: 0;
+          }
+          br {
+            display: none;
+          }
+        }
+        .profile_lottie_arrow {
+          position: absolute;
+          bottom: 0;
+          left: -14.1rem;
+        }
+      }
+      div.profile_award {
+        padding: 12.7rem 4.8rem 0;
+        .profile_award_description {
+          margin-bottom: 8.5rem;
+        }
+        .profile_award_icon {
+          width: 9rem;
+          margin-bottom: 8rem;
+        }
+        .profile_award_list {
+          padding: 4rem 0;
+
+          .element_title {
+            line-height: 100%;
+            margin-bottom: 1.6rem;
+          }
+        }
+      }
+      div.profile_partner {
+        .description {
+          margin-bottom: 7rem;
+          margin-top: 12rem;
+          padding: 0 4.8rem;
+        }
+        .swiper {
+          .swiper-slide {
+            width: 22rem;
+            height: 6.5rem;
+          }
+          &.customer_logo_swiper_01 {
+            margin-bottom: 3.4rem;
+          }
+        }
+        .disclaimer {
+          margin-bottom: 3rem;
+          margin-top: 14rem;
+          line-height: 2.5rem;
+        }
+      }
+    }
+    .about_members {
+      .visual {
+        height: 34rem;
+      }
+      .about_members_desc {
+        padding: 0 7.4rem;
+        .description {
+          margin-top: 10rem;
+
+          &:nth-child(2) {
+            margin-bottom: 12rem;
+          }
+        }
+      }
+      .about_members_swiper {
+        padding-bottom: 6.2rem;
+        margin-bottom: 12rem;
+
+        .swiper-slide {
+          .member_name_en {
+            bottom: 3rem;
+            font-size: 2.2rem;
+          }
+
+          .detail_slide {
+            width: 34rem;
+            height: 34rem;
+
+            .detail {
+              div {
+                padding: 5rem 2rem 2rem 4rem;
+                b {
+                  margin-bottom: 1.2rem;
+                  font-size: 2.2rem;
+                }
+                .member_team {
+                  margin-bottom: 3.4rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
