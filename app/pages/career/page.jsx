@@ -55,22 +55,22 @@ function Career() {
           ))}
           firstSwiperOption={{
             effect: 'cards',
-            breakpoints: {
-              360: {},
-              768: {},
-              1280: {},
-              1536: {},
-            },
+            // breakpoints: {
+            //   360: {},
+            //   768: {},
+            //   1280: {},
+            //   1536: {},
+            // },
           }}
           secondSwiperOption={{
             pagination: false,
             navigation: false,
-            breakpoints: {
-              360: {},
-              768: {},
-              1280: {},
-              1536: {},
-            },
+            // breakpoints: {
+            //   360: {},
+            //   768: {},
+            //   1280: {},
+            //   1536: {},
+            // },
           }}
         />
       </section>
@@ -108,17 +108,17 @@ function Career() {
             scrollbar: {
               draggable: true,
             },
-            breakpoints: {
-              360: {},
-              768: {},
-              1280: {},
-              1536: {},
-            },
-            // autoplay: {
-            //   delay: 1,
+            // breakpoints: {
+            //   360: {},
+            //   768: {},
+            //   1280: {},
+            //   1536: {},
             // },
-            // loop: true,
-            // speed: 4000,
+            autoplay: {
+              delay: 1,
+            },
+            loop: true,
+            speed: 4000,
           }}
           className="single scroll-linear swiper_comment_swiper"
         />
