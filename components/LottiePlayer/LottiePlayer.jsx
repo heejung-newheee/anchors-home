@@ -9,21 +9,20 @@ const LottiePlayer = forwardRef(
     { className, data, loop = true, autoplay = true, style = DEFAULT_STYLE },
     ref,
   ) => {
-    const lottieRef = useRef();
+    const LOTTIE_REF = useRef();
     const COMPONENTS_STYLE = { ...DEFAULT_STYLE, ...style };
 
     useImperativeHandle(ref, () => ({
       controll(value) {
         switch (value) {
           case 'play':
-            lottieRef.current.play();
-            console.log('LottiePlayer', lottieRef);
+            LOTTIE_REF.current.play();
             break;
           case 'stop':
-            lottieRef.current.stop();
+            LOTTIE_REF.current.stop();
             break;
           case 'pause':
-            lottieRef.current.pause();
+            LOTTIE_REF.current.pause();
             break;
         }
       },
@@ -32,7 +31,7 @@ const LottiePlayer = forwardRef(
     return (
       <div className={className}>
         <Lottie
-          lottieRef={lottieRef}
+          lottieRef={LOTTIE_REF}
           loop={loop}
           autoplay={autoplay}
           animationData={data}

@@ -1,9 +1,9 @@
 'use client';
-import { useRef } from 'react';
-import { Controls, PlayState, Reveal, Tween } from 'react-gsap';
+import { useEffect, useRef, useState } from 'react';
+import { Controls, PlayState, Reveal, Timeline, Tween } from 'react-gsap';
 
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
