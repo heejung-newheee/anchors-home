@@ -1,0 +1,164 @@
+@include desktop {
+  .about {
+    .visual {
+      height: 80rem;
+    }
+    .about_intro_text_wrap {
+      padding: 14rem 9rem;
+
+      .description:first-child {
+        margin-bottom: 4rem;
+      }
+    }
+    .about_intro_swiper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 14rem;
+
+      .image_swiper {
+        width: 44.847328%;
+        padding-bottom: 3.6rem;
+        margin: 0;
+
+        .swiper-pagination {
+          bottom: 0;
+        }
+      }
+      .text_swiper {
+        width: 34.351145%;
+        height: auto;
+        padding-top: 12.9rem 0 0 3rem;
+        margin: 0;
+        .swiper-slide {
+          margin-bottom: 0;
+
+          &:after {
+            width: 20.6rem;
+            height: 1.8rem;
+          }
+          &:first-child:after {
+            right: 3rem;
+            margin-bottom: 24.4rem;
+          }
+          &:nth-child(2):after {
+            right: 6rem;
+            margin-top: 16.6rem;
+          }
+          &:nth-child(3):after {
+            margin-top: 13.4rem;
+          }
+        }
+      }
+    }
+
+
+    .anchors_profile {
+      padding: 16rem 0 16.1rem;
+
+      h3 {
+        font-size: 2.2rem;
+        line-height: 2.2rem;
+        margin-bottom: 12rem;
+        padding: 0 12rem;
+      }
+      div.profile_development {
+        padding: 0 12rem 19.2rem;
+
+        .profile_grow_number {
+          font-size: 9rem;
+
+          span {
+            margin-right: 10rem;
+          }
+        }
+        .profile_lottie_arrow {
+          left: -24rem;
+        }
+      }
+      div.profile_award {
+        padding: 19.8rem 12rem 0;
+        .profile_award_description {
+          margin-bottom: 10.7rem;
+        }
+        .profile_award_icon {
+          width: 11rem;
+          margin-bottom: 10rem;
+        }
+        .profile_award_list {
+          padding: 4.8rem 0;
+
+          .element_title {
+            line-height: 100%;
+            margin-bottom: 2rem;
+          }
+          .description {
+            font-size: 1.6rem;
+          }
+        }
+      }
+      div.profile_partner {
+        .description {
+          margin-bottom: 10rem;
+          margin-top: 14rem;
+          padding: 0 12rem;
+        }
+        .swiper {
+          &.customer_logo_swiper_01 {
+            margin-bottom: 5rem;
+          }
+          .swiper-slide {
+            width: 28rem;
+            height: 8.2rem;
+          }
+        }
+        .disclaimer {
+          margin-top: 18rem;
+          line-height: 3.1rem;
+        }
+      }
+    }
+    .about_members {
+      .visual {
+        height: 45rem;
+      }
+      .about_members_desc {
+        padding: 0 19rem;
+        .description {
+          margin-top: 12rem;
+          margin-bottom: 4rem;
+
+          &:nth-child(2) {
+            margin-bottom: 14rem;
+          }
+        }
+      }
+      .about_members_swiper {
+        margin-bottom: 14rem;
+        .swiper-slide {
+          .member_name_en {
+            bottom: 3.8rem;
+            font-size: 2.4rem;
+          }
+
+          .detail_slide {
+            width: 44rem;
+            height: 44rem;
+
+            .detail {
+              div {
+                padding: 7rem 2.4rem 2.4rem 5rem;
+                b {
+                  margin-bottom: 1.4rem;
+                  font-size: 2.4rem;
+                }
+                .member_team {
+                  margin-bottom: 5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
