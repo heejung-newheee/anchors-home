@@ -94,90 +94,7 @@ function Main() {
             ))}
           </div>
           <div className="section_div is_white bg_white">
-            <div className="swiper_bundle">
-              <SwiperArea
-                type="single"
-                swiperOption={{
-                  slidesPerView: 'auto',
-                  navigation: false,
-                  pagination: false,
-                  allowTouchMove: false,
-                  autoplay: {
-                    delay: 1,
-                  },
-                  loop: true,
-                  speed: 4000,
-                }}
-                className="scroll-linear"
-                swiperContent={main.service.whiteBgRolling.line1.map(
-                  (data, index) => (
-                    <>
-                      <span key={'text' + index}>{data.text}</span>
-                      <img
-                        key={'img' + index}
-                        src={main.imgUrl + data.image}
-                        alt={data.alt}
-                      />
-                    </>
-                  ),
-                )}
-              />
-              <SwiperArea
-                type="single"
-                swiperOption={{
-                  slidesPerView: 'auto',
-                  navigation: false,
-                  pagination: false,
-                  allowTouchMove: false,
-                  autoplay: {
-                    delay: 1,
-                    reverseDirection: true,
-                  },
-                  loop: true,
-                  speed: 4000,
-                }}
-                className="scroll-linear"
-                swiperContent={main.service.whiteBgRolling.line2.map(
-                  (data, index) => (
-                    <>
-                      <span key={'text' + index}>{data.text}</span>
-                      <img
-                        key={'img' + index}
-                        src={main.imgUrl + data.image}
-                        alt={data.alt}
-                      />
-                    </>
-                  ),
-                )}
-              />
-              <SwiperArea
-                type="single"
-                swiperOption={{
-                  slidesPerView: 'auto',
-                  navigation: false,
-                  pagination: false,
-                  allowTouchMove: false,
-                  autoplay: {
-                    delay: 1,
-                  },
-                  loop: true,
-                  speed: 4000,
-                }}
-                className="scroll-linear"
-                swiperContent={main.service.whiteBgRolling.line3.map(
-                  (data, index) => (
-                    <>
-                      <span key={'text' + index}>{data.text}</span>
-                      <img
-                        key={'img' + index}
-                        src={main.imgUrl + data.image}
-                        alt={data.alt}
-                      />
-                    </>
-                  ),
-                )}
-              />
-            </div>
+            <div className="swiper_bundle" />
             <div className="intro_area">
               <Description
                 className="intro_en"
@@ -211,25 +128,6 @@ function Main() {
               ))}
             </div>
           </div>
-          <SwiperArea
-            type="single"
-            swiperOption={{
-              slidesPerView: 'auto',
-              effect: 'cards',
-              cardsEffect: {
-                perSlideRotate: 30,
-                perSlideOffset: 100,
-              },
-            }}
-            className="section_div is_photo scroll-linear portfolio"
-            swiperContent={
-              <>
-                {main.ourWorks.portfolio.map((data, index) => (
-                  <FinderWorksList key={index} arrLength={index} />
-                ))}
-              </>
-            }
-          />
         </section>
         {/* E: our works */}
       </main>
