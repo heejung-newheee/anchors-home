@@ -268,6 +268,107 @@ function Main() {
               ))}
             </div>
           </div>
+          <div className="section_div is_white bg_white">
+            <div className="swiper_bundle">
+              <SwiperArea
+                type="single"
+                swiperOption={{
+                  slidesPerView: 'auto',
+                  navigation: false,
+                  pagination: false,
+                  allowTouchMove: false,
+                  autoplay: {
+                    delay: 1,
+                  },
+                  loop: true,
+                  speed: 4000,
+                }}
+                className="scroll-linear"
+                swiperContent={main.service.whiteBgRolling.line1.map(
+                  (data, index) => (
+                    <>
+                      <span key={'text' + index}>{data.text}</span>
+                      <img
+                        key={'img' + index}
+                        src={main.imgUrl + data.image}
+                        alt={data.alt}
+                      />
+                    </>
+                  ),
+                )}
+              />
+              <SwiperArea
+                type="single"
+                swiperOption={{
+                  slidesPerView: 'auto',
+                  navigation: false,
+                  pagination: false,
+                  allowTouchMove: false,
+                  autoplay: {
+                    delay: 1,
+                    reverseDirection: true,
+                  },
+                  loop: true,
+                  speed: 4000,
+                }}
+                className="scroll-linear"
+                swiperContent={main.service.whiteBgRolling.line2.map(
+                  (data, index) => (
+                    <>
+                      <span key={'text' + index}>{data.text}</span>
+                      <img
+                        key={'img' + index}
+                        src={main.imgUrl + data.image}
+                        alt={data.alt}
+                      />
+                    </>
+                  ),
+                )}
+              />
+              <SwiperArea
+                type="single"
+                swiperOption={{
+                  slidesPerView: 'auto',
+                  navigation: false,
+                  pagination: false,
+                  allowTouchMove: false,
+                  autoplay: {
+                    delay: 1,
+                  },
+                  loop: true,
+                  speed: 4000,
+                }}
+                className="scroll-linear"
+                swiperContent={main.service.whiteBgRolling.line3.map(
+                  (data, index) => (
+                    <>
+                      <span key={'text' + index}>{data.text}</span>
+                      <img
+                        key={'img' + index}
+                        src={main.imgUrl + data.image}
+                        alt={data.alt}
+                      />
+                    </>
+                  ),
+                )}
+              />
+            </div>
+            <div className="intro_area">
+              <Description
+                className="intro_en"
+                data={main.service.introduction.en}
+                innerHTMLOption="Y"
+              />
+              <Description
+                className="intro_ko"
+                data={main.service.introduction.ko}
+                innerHTMLOption="Y"
+              />
+              <Btn type="link" className="" url="/pages/service" alt="Service">
+                Service
+              </Btn>
+            </div>
+          </div>
         </section>
         {/* E: service */}
 
@@ -285,6 +386,20 @@ function Main() {
               ))}
             </div>
           </div>
+          <SwiperArea
+            type="single"
+            swiperOption={{
+              slidesPerView: 'auto',
+            }}
+            className="portfolio scroll-linear"
+            swiperContent={
+              <>
+                {main.ourWorks.portfolio.map((data, index) => (
+                  <FinderWorksList key={index} arrLength={index} />
+                ))}
+              </>
+            }
+          />
         </section>
         {/* E: our works */}
       </main>
