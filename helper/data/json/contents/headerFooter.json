@@ -7,7 +7,7 @@
         {"words" : "Our" },
         {"words" : "works" }
       ],
-      "url" : "pages/works",
+      "url" : "/pages/works",
       "alt" : "Our works"
     },
     {
@@ -15,28 +15,28 @@
         {"words" : "About" },
         {"words" : "us" }
       ],
-      "url" : "pages/about",
+      "url" : "/pages/about",
       "alt" : "About us"
     },
     {
       "name" : [
         {"words" : "Service" }
       ],
-      "url" : "pages/service",
+      "url" : "/pages/service",
       "alt" : "Service"
     },
     {
       "name" : [
         {"words" : "Contact" }
       ],
-      "url" : "pages/contact",
+      "url" : "/pages/contact",
       "alt" : "Contact"
     },
     {
       "name" : [
         {"words" : "Careers" }
       ],
-      "url" : "pages/career",
+      "url" : "/pages/career",
       "alt" : "Careers"
     }
   ]
