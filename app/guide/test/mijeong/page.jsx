@@ -79,12 +79,10 @@ function Mijeong() {
       >
         <div
           className="area01"
-          data-index="0"
           style={{ width: '100px', height: '100px', background: '#ccc' }}
         />
         <div
           className="area02"
-          data-index="1"
           style={{ width: '100px', height: '100px', background: '#999' }}
         />
       </ScrollTriggerArea>
