@@ -16,26 +16,108 @@
       }
     }
 
-    //members 스와이퍼 영역
+    //swiper_members 영역
     .swiper_members{
+      background-color: #FFFFFF;
       padding: 0 12.6rem;
       margin-bottom: 13rem;
+      @extend %layout_fix;
+      margin-bottom: 8rem;
+      overflow: hidden;
       .swiper-cards{
         width: 36.3rem;
+        margin-bottom: 8rem;
         .swiper-pagination{
-          bottom:-3.3rem;
+          bottom:-3.6rem;
         }
       }
       .swiper_area{
         .element_title{
-          font-size: 2.2rem;
+          margin-bottom: 1.4rem;
         }
         .disclaimer{
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 2.2rem;
+          font-family : $font_ko;
+          color: #848484;
           margin-bottom: 4rem;
         }
         .description{
+          font-size: 1.6rem;
+          font-weight: 400;
+          line-height: 2.6rem;
+          color: #1D1D1F;
           &:nth-of-type(1){
             margin-bottom: 3rem;
+          }
+        }
+        .swiper-slide{
+          transition: all 0.9s;
+          transition-delay: .1s;
+          transform: translateY(80%);
+        }
+        .swiper-slide-active{
+          transform: translateY(0);
+        }
+      }
+    }
+
+    //  swiper_comment 영역
+    .swiper_comment{
+      margin-bottom: 12rem;
+      .swiper_comment_text{
+        line-height: 5rem;
+      }
+      .swiper_comment_swiper{
+        .swiper-scrollbar.swiper-scrollbar-horizontal{
+          transform: translate(-50%, 4rem);
+          width: 8.6rem;
+          .swiper-scrollbar-drag{
+            //width: 2rem;
+          }
+        }
+        .swiper-slide{
+          width: 35rem;
+          height: 43rem;
+          .visual{
+            height: 43rem;
+          }
+
+          .detail_slide{
+            width: 35rem;
+            height: 43rem;
+            .detail_btn{
+              bottom: 3.6rem;
+            }
+            .detail{
+              transform: translateY(18%);
+              bottom: 0;
+              padding: 0 3rem;
+              padding-bottom: 10rem;
+              justify-content: flex-end;
+              &::before{
+              }
+              .description{
+                font-size: 2.8rem;
+                line-height: 3.8rem;
+              }
+              .disclaimer{
+                font-size: 0;
+                line-height: 0;
+              }
+              &.on {
+                transform: translateY(0%);
+                &::before{
+                  opacity: 0.4;
+                }
+                .disclaimer{
+                  font-size: 1.6rem;
+                  line-height: 2.4rem;
+                  text-align: justify;
+                }
+              }
+            }
           }
         }
       }

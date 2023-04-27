@@ -55,10 +55,22 @@ function Career() {
           ))}
           firstSwiperOption={{
             effect: 'cards',
+            breakpoints: {
+              360: {},
+              768: {},
+              1280: {},
+              1536: {},
+            },
           }}
           secondSwiperOption={{
             pagination: false,
             navigation: false,
+            breakpoints: {
+              360: {},
+              768: {},
+              1280: {},
+              1536: {},
+            },
           }}
         />
       </section>
@@ -79,7 +91,10 @@ function Career() {
               <MoreDetail
                 children={
                   <>
-                    <Description data={cont.highlightText} />
+                    <Description
+                      innerHTMLOption="Y"
+                      data={cont.highlightText}
+                    />
                     <Disclaimer data={cont.text} />
                   </>
                 }
@@ -92,6 +107,12 @@ function Career() {
             pagination: false,
             scrollbar: {
               draggable: true,
+            },
+            breakpoints: {
+              360: {},
+              768: {},
+              1280: {},
+              1536: {},
             },
             // autoplay: {
             //   delay: 1,
