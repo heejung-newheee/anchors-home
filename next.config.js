@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
+
 const path = require('path');
 const nextConfig = {
-  reactStrictMode: true,
+  output: 'export',
+  reactStrictMode: false,
   experimental: {
     appDir: true,
   },
@@ -10,6 +12,6 @@ const nextConfig = {
     // prependData: `@use 'variables.module' as *;`,
     prependData: `@import "/variables.module.scss";`, // prependData 옵션 추가
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
