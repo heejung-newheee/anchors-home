@@ -21,11 +21,16 @@ function Main() {
       <main className="main">
         {/* S: about us */}
         <section className="section_div is_black about_us">
-          <LottiePlayer className="text_keyvisual" data={lottieMainKeyVisual} />
-          <Disclaimer
-            className="keyvisual_disclaimer"
-            data="At Anchors, our executives and employees are hard at work to improve customer service with their professional expertise."
-          />
+          <div className="keyvisual_wrap">
+            <LottiePlayer
+              className="text_keyvisual"
+              data={lottieMainKeyVisual}
+            />
+            <Disclaimer
+              className="keyvisual_disclaimer"
+              data="At Anchors, our executives and employees are hard at work to improve customer service with their professional expertise."
+            />
+          </div>
           {/*RotateRolling*/}
           {/*<SwiperArea*/}
           {/*  type="single"*/}
@@ -45,180 +50,6 @@ function Main() {
           {/*  className="scroll-linear"*/}
           {/*  swiperContent={*/}
           {/*    <>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
           {/*      <div>*/}
           {/*        <img*/}
           {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
@@ -252,21 +83,15 @@ function Main() {
         {/* E: about us */}
 
         {/* S: service */}
-        <section className="service rolling_wrap">
-          <div className="section_div is_black bg_blue">
-            <div className="rolling_wrap">
-              <span className="rolling_text">
-                {main.service.rollingBigText[0]}
-                <span>{main.service.rollingBigText[1]}</span>
-              </span>
-              {main.service.blueBgRollingImages.map((data, index) => (
-                <img
-                  key={index}
-                  src={main.imgUrl + data.image}
-                  alt={data.alt}
-                />
-              ))}
-            </div>
+        <section className="service">
+          <div className="section_div is_black bg_blue rolling_wrap">
+            <span className="rolling_text">
+              {main.service.rollingBigText[0]}
+              <span>{main.service.rollingBigText[1]}</span>
+            </span>
+            {main.service.blueBgRollingImages.map((data, index) => (
+              <img key={index} src={main.imgUrl + data.image} alt={data.alt} />
+            ))}
           </div>
           <div className="section_div is_white bg_white">
             <div className="swiper_bundle">
@@ -390,6 +215,11 @@ function Main() {
             type="single"
             swiperOption={{
               slidesPerView: 'auto',
+              effect: 'cards',
+              cardsEffect: {
+                perSlideRotate: 30,
+                perSlideOffset: 100,
+              },
             }}
             className="section_div is_photo scroll-linear portfolio"
             swiperContent={
