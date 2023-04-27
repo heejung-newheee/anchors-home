@@ -5,23 +5,13 @@ import Link from 'next/link';
 import TabButton from '@/components/TabButton/TabButton';
 import TabContents from '@/components/TabContents/TabContents';
 
-export default function Tab() {
-  // props list = type
-
-  const handleClick = (value) => {
-    console.log(value);
-    // this.setState(prevState => ({
-    //   // isToggleOn: !prevState.isToggleOn
-    // }));
-  };
-
+function Tab({ type, tabList, contents }) {
   return (
-    <article className="tab">
-      <ul className="tab_btn_wrap">
-        <TabButton onClick={() => handleClick(1)} />
-      </ul>
-
-      <section className="tab_content_wrap">{/* tabContents */}</section>
+    <article className={`tab ${type}`} data-tab-type={type}>
+      <TabButton dataList={tabList} />
+      <TabContents dataContents={contents} />
     </article>
   );
 }
+
+export default Tab;

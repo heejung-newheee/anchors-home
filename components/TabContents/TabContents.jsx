@@ -6,6 +6,8 @@ export default function TabContents() {
   // props list = firstActiveOption
 
   return (
-    <article className="tab_content">{/*작업자가 전달할 컴포넌트*/}</article>
+    <section className="tab_content_wrap">
+      <article className="tab_content">{/*작업자가 전달할 컴포넌트*/}</article>
+    </section>
   );
 }
