@@ -16,7 +16,7 @@
       margin-bottom: 14rem;
 
       .image_swiper {
-        width: 44.847328%;
+        width: 36.718750vw;
         padding-bottom: 3.6rem;
         margin: 0;
 
@@ -25,27 +25,44 @@
         }
       }
       .text_swiper {
-        width: 34.351145%;
+        width: 30.468750vw;
         height: auto;
-        padding-top: 12.9rem 0 0 3rem;
+        padding: 12.9rem 0 0 0;
         margin: 0;
+        margin-left: 3rem;
+
         .swiper-slide {
-          margin-bottom: 0;
+          &:first-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+          }
+          &:nth-child(2) {
+            padding-bottom: 0;
+            margin-bottom: 0;
+          }
+          &:nth-child(3) {
+            padding-bottom: 0;
+            margin-bottom: 0;
+          }
 
           &:after {
             width: 20.6rem;
             height: 1.8rem;
+            margin-bottom: 0;
           }
           &:first-child:after {
             right: 3rem;
-            margin-bottom: 24.4rem;
+            bottom: 9.1rem;
+            margin-top: 0;
           }
           &:nth-child(2):after {
             right: 6rem;
-            margin-top: 16.6rem;
+            bottom: 14.1rem;
+            margin-top: 0;
           }
           &:nth-child(3):after {
-            margin-top: 13.4rem;
+            margin-top: 0;
+            bottom: 20.1rem;
           }
         }
       }

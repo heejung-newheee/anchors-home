@@ -15,13 +15,25 @@
     .about_intro_swiper {
       padding: 0 11.6rem;
       .image_swiper {
-        //width: calc( 100% - 8.2rem);
         width: 67.723880%;
       }
       .text_swiper {
+        padding: 0;
         padding-top: 12.4rem;
         .swiper-slide {
-          margin-bottom: 16rem;
+
+          &:first-child {
+            padding-bottom: 10.6rem;
+            margin-bottom: 14.8rem;
+          }
+          &:nth-child(2) {
+            padding-bottom: 6rem;
+            margin-bottom: 16.8rem;
+          }
+          &:nth-child(3) {
+            padding-bottom: 5rem;
+            margin-bottom: 17.8rem;
+          }
 
           &:after {
             width: 20.6rem;
@@ -63,7 +75,7 @@
           font-size: 8rem;
           display: flex;
           align-items: baseline;
-          
+
           span {
             margin-left: 1.2rem;
             margin-right: 5rem;

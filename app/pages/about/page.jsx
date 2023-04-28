@@ -57,15 +57,13 @@ function About() {
       {/* E: Description 영역*/}
 
       {/* S: about intro swiper 영역*/}
-      <div className="about_intro_swiper">
+      <div className="about_intro_swiper section_div is_white">
         <SwiperArea
           type="double"
           firstClassName="image_swiper"
           secondClassName="text_swiper"
           firstContent={aboutIntro.introduction.map((cont, idx) => (
-            <div key={idx}>
-              <img src={aboutIntro.imgUrl + cont.img} alt={cont.alt} />
-            </div>
+            <img key={idx} src={aboutIntro.imgUrl + cont.img} alt={cont.alt} />
           ))}
           secondContent={aboutIntro.introduction.map((cont, idx) => (
             <div className="intro_text" key={idx}>
@@ -75,20 +73,18 @@ function About() {
           ))}
           firstSwiperOption={{
             effect: 'cards',
-            spaceBetween: 19,
-            slidesOffsetBefore: 20,
           }}
           secondSwiperOption={{
             navigation: false,
             pagination: false,
-            spaceBetween: 19,
+            spaceBetween: 24,
           }}
         />
       </div>
       {/* E: about intro swiper 영역*/}
 
       {/* S: anchors profile 영역*/}
-      <div className="anchors_profile">
+      <div className="anchors_profile section_div is_black">
         <DepthTitle depthLevel="1" blindOption="visible">
           Anchors Profile
         </DepthTitle>
@@ -213,7 +209,7 @@ function About() {
       </div>
       {/* E: anchors profile 영역*/}
 
-      <div className="about_members">
+      <div className="about_members section_div is_white">
         <Visual imgUrl="/assets/images/contents/about/img_visual_members.png" />
         <div className="about_members_desc">
           <Description

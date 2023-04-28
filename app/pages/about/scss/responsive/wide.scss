@@ -1,4 +1,4 @@
-@include desktop {
+@include wide {
   .about {
     .visual {
       height: 96rem;
@@ -11,11 +11,12 @@
       }
     }
     .about_intro_swiper {
-      margin-bottom: 18rem;
+      max-width: 130.6rem;
+      margin: 0 auto 18rem;
       padding: 0 8.4rem;
 
       .image_swiper {
-        width: 48.684210%;
+        width: 33.854167vw;
         padding-bottom: 4rem;
         margin: 0;
 
@@ -24,9 +25,12 @@
         }
       }
       .text_swiper {
-        width: 42.836257%;
-        padding-top: 12.9rem 0 0 3rem;
+        width: 38.151042vw;
+        max-width: 58.6rem;
+        padding: 15.5rem 0 0 0;
         margin: 0;
+        margin-left: 4rem;
+
         .swiper-slide {
           margin-bottom: 0;
 
@@ -35,11 +39,14 @@
             height: 2.2rem;
           }
           &:first-child:after {
-            right: 10rem;
+            right: 0;
           }
           &:nth-child(2):after {
             left: unset;
             right: 15rem;
+          }
+          &:nth-child(3):after {
+            bottom: 23.7rem;
           }
           .intro_text {
             p {
@@ -57,9 +64,8 @@
       h3 {
         font-size: 2.2rem;
         line-height: 2.2rem;
-        margin-bottom: 12rem;
+        margin: 0 auto 12rem;
         padding: 0 14rem;
-        max-width: unset;
       }
       div.profile_development {
         padding: 0 14rem 24.6rem;
@@ -93,7 +99,6 @@
           margin-bottom: 12rem;
           margin-top: 16rem;
           padding: 0 14rem;
-          max-width: unset;
         }
         .swiper {
           &.customer_logo_swiper_01 {
