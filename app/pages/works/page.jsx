@@ -12,10 +12,25 @@ export const metadata = {
 
 function Works() {
   return (
-    <div>
-      {/*<img src="/assets/images/ico/ico_btn_black_down.svg"/>*/}
-      <p>this is works!!!!</p>
-    </div>
+    <main className="our_works_list section_div is_photo">
+      <PageTitle data={headerFooter.menuList[0].name} /> {/*our works*/}
+      {/* S: portfolio list */}
+      <section className="portfolio_list">
+        {works.content.map((data, index) => (
+          <BaseArticle
+            key={index}
+            imgUrl={works.imgUrl + data.thumbnail}
+            imgAlt={data.thumbnailAlt}
+            elementTitle={data.title}
+            disclaimer={data.description}
+          />
+        ))}
+      </section>
+      <Btn type="button" className="view_more_btn">
+        View more
+      </Btn>
+      {/* E: portfolio list */}
+    </main>
   );
 }
 
