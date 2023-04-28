@@ -115,3 +115,26 @@
 .btn_primary_ghost { @extend %btn_primary_ghost }
 .btn_secondary_up { @extend %btn_secondary_up }
 .btn_secondary_down { @extend %btn_secondary_down }
+
+.text:after {
+  content:"mobile";
+  display: inline;
+}
+@include tablet {
+  .text:after {
+    content: "tablet";
+    display: inline;
+  }
+}
+@include desktop {
+  .text:after {
+    content:"desktop";
+    display: inline;
+  }
+}
+@include wide {
+  .text:after {
+    content: "wide";
+    display: inline;
+  }
+}

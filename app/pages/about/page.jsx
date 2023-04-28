@@ -1,21 +1,22 @@
-import { Inter } from 'next/font/google';
 import headerFooter from 'helper/data/json/contents/headerFooter.json';
+import { Inter } from 'next/font/google';
 
 import './about.scss';
-import PageTitle from '@/components/PageTitle/PageTitle';
-import Visual from '@/components/Visual/Visual';
-import Description from '@/components/Description/Description';
-import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
-import lottie_arrow from '@/public/assets/images/lottie/lottieAboutusUpArrow.json';
-import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import BaseArticle from '@/components/BaseArticle/BaseArticle';
-import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import Btn from '@/components/Btn/Btn';
+import DepthTitle from '@/components/DepthTitle/DepthTitle';
+import Description from '@/components/Description/Description';
+import Disclaimer from '@/components/Disclaimer/Disclaimer';
+import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
+import MoreDetail from '@/components/MoreDetail/MoreDetail';
+import PageTitle from '@/components/PageTitle/PageTitle';
+import SwiperArea from '@/components/SwiperArea/SwiperArea';
+import Visual from '@/components/Visual/Visual';
+import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
+import lottie_arrow from '@/public/assets/images/lottie/lottieAboutusUpArrow.json';
+
 import aboutProfile from '/helper/data/json/contents/about/aboutProfile.json';
 import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
-import SwiperArea from '@/components/SwiperArea/SwiperArea';
-import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
-import MoreDetail from '@/components/MoreDetail/MoreDetail';
 
 // export const metadata = {
 //   title: 'Anchors',
@@ -56,29 +57,7 @@ function About() {
       {/* E: Description 영역*/}
 
       {/* S: about intro swiper 영역*/}
-      <SwiperArea
-        type="double"
-        firstClassName="image_swiper"
-        secondClassName="text_swiper"
-        firstContent={aboutIntro.introduction.map((cont, idx) => (
-          <div key={idx}>
-            <img src={aboutIntro.imgUrl + cont.img} alt={cont.alt} />
-          </div>
-        ))}
-        secondContent={aboutIntro.introduction.map((cont, idx) => (
-          <div key={idx}>
-            <p>{cont.highlightText}</p>
-            <p>{cont.text}</p>
-          </div>
-        ))}
-        firstSwiperOption={{
-          pagination: false,
-          effect: 'cards',
-        }}
-        secondSwiperOption={{
-          navigation: false,
-        }}
-      />
+
       {/* E: about intro swiper 영역*/}
 
       {/* S: anchors profile 영역*/}
@@ -106,7 +85,6 @@ function About() {
               </>
             }
           />
-          <LottiePlayer className="profile_lottie_arrow" data={lottie_arrow} />
         </div>
         <div className="profile_award">
           <Description
@@ -135,49 +113,7 @@ function About() {
               <>We've been partnering with our customers for a long time.</>
             }
           />
-          <SwiperArea
-            type="single"
-            swiperOption={{
-              slidesPerView: 'auto',
-              navigation: false,
-              pagination: false,
-              scrollbar: false,
-              allowTouchMove: false,
-              autoplay: {
-                delay: 1,
-              },
-              loop: true,
-              speed: 4000,
-            }}
-            className="single scroll-linear"
-            swiperContent={aboutProfile.customerLogo.map((cont, idx) => (
-              <div key={idx}>
-                <img src={aboutProfile.imgUrl + cont.img} alt={cont.alt} />
-              </div>
-            ))}
-          />
-          <SwiperArea
-            type="single"
-            swiperOption={{
-              slidesPerView: 'auto',
-              navigation: false,
-              pagination: false,
-              scrollbar: false,
-              allowTouchMove: false,
-              autoplay: {
-                delay: 1,
-                reverseDirection: true,
-              },
-              loop: true,
-              speed: 4000,
-            }}
-            className="single scroll-linear"
-            swiperContent={aboutProfile.customerLogo.map((cont, idx) => (
-              <div key={idx}>
-                <img src={aboutProfile.imgUrl + cont.img} alt={cont.alt} />
-              </div>
-            ))}
-          />
+
           <Disclaimer data={<>Want to know about us</>} />
           <Btn className="download_btn" type="a">
             Download
@@ -210,40 +146,7 @@ function About() {
           }
         />
         {/* S: about members swiper 영역*/}
-        <SwiperArea
-          type="single"
-          swiperOption={{
-            slidesPerView: 'auto',
-            navigation: false,
-            pagination: false,
-            scrollbar: true,
-            spaceBetween: 16,
-            slidesOffsetBefore: 24,
-            slidesOffsetAfter: 24,
-            autoplay: {
-              delay: 1,
-            },
-            loop: true,
-            speed: 8000,
-          }}
-          className="about_members_swiper scroll-linear"
-          swiperContent={aboutMembers.members.map((cont, idx) => (
-            <div key={idx}>
-              <p className="member_name_en">{cont.nameEn}</p>
-              <MoreDetail
-                imgUrl={aboutMembers.imgUrl + cont.img}
-                imgAlt={cont.alt}
-                children={
-                  <div>
-                    <b>{cont.nameKo}</b>
-                    <p className="member_team">{cont.part}</p>
-                    <p className="member_hashtag">{cont.hashtag}</p>
-                  </div>
-                }
-              />
-            </div>
-          ))}
-        />
+
         {/* E: about members swiper 영역*/}
       </div>
     </main>

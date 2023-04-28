@@ -21,11 +21,16 @@ function Main() {
       <main className="main">
         {/* S: about us */}
         <section className="section_div is_black about_us">
-          <LottiePlayer className="text_keyvisual" data={lottieMainKeyVisual} />
-          <Disclaimer
-            className="keyvisual_disclaimer"
-            data="At Anchors, our executives and employees are hard at work to improve customer service with their professional expertise."
-          />
+          <div className="keyvisual_wrap">
+            <LottiePlayer
+              className="text_keyvisual"
+              data={lottieMainKeyVisual}
+            />
+            <Disclaimer
+              className="keyvisual_disclaimer"
+              data="At Anchors, our executives and employees are hard at work to improve customer service with their professional expertise."
+            />
+          </div>
           {/*RotateRolling*/}
           {/*<SwiperArea*/}
           {/*  type="single"*/}
@@ -45,180 +50,6 @@ function Main() {
           {/*  className="scroll-linear"*/}
           {/*  swiperContent={*/}
           {/*    <>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
-          {/*      <div>*/}
-          {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
-          {/*          alt=""*/}
-          {/*        />*/}
-          {/*      </div>*/}
           {/*      <div>*/}
           {/*        <img*/}
           {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
@@ -268,113 +99,12 @@ function Main() {
               ))}
             </div>
           </div>
-          <div className="section_div is_white bg_white">
-            <div className="swiper_bundle">
-              <SwiperArea
-                type="single"
-                swiperOption={{
-                  slidesPerView: 'auto',
-                  navigation: false,
-                  pagination: false,
-                  allowTouchMove: false,
-                  autoplay: {
-                    delay: 1,
-                  },
-                  loop: true,
-                  speed: 4000,
-                }}
-                className="scroll-linear"
-                swiperContent={main.service.whiteBgRolling.line1.map(
-                  (data, index) => (
-                    <>
-                      <span key={'text' + index}>{data.text}</span>
-                      <img
-                        key={'img' + index}
-                        src={main.imgUrl + data.image}
-                        alt={data.alt}
-                      />
-                    </>
-                  ),
-                )}
-              />
-              <SwiperArea
-                type="single"
-                swiperOption={{
-                  slidesPerView: 'auto',
-                  navigation: false,
-                  pagination: false,
-                  allowTouchMove: false,
-                  autoplay: {
-                    delay: 1,
-                    reverseDirection: true,
-                  },
-                  loop: true,
-                  speed: 4000,
-                }}
-                className="scroll-linear"
-                swiperContent={main.service.whiteBgRolling.line2.map(
-                  (data, index) => (
-                    <>
-                      <span key={'text' + index}>{data.text}</span>
-                      <img
-                        key={'img' + index}
-                        src={main.imgUrl + data.image}
-                        alt={data.alt}
-                      />
-                    </>
-                  ),
-                )}
-              />
-              <SwiperArea
-                type="single"
-                swiperOption={{
-                  slidesPerView: 'auto',
-                  navigation: false,
-                  pagination: false,
-                  allowTouchMove: false,
-                  autoplay: {
-                    delay: 1,
-                  },
-                  loop: true,
-                  speed: 4000,
-                }}
-                className="scroll-linear"
-                swiperContent={main.service.whiteBgRolling.line3.map(
-                  (data, index) => (
-                    <>
-                      <span key={'text' + index}>{data.text}</span>
-                      <img
-                        key={'img' + index}
-                        src={main.imgUrl + data.image}
-                        alt={data.alt}
-                      />
-                    </>
-                  ),
-                )}
-              />
-            </div>
-            <div className="intro_area">
-              <Description
-                className="intro_en"
-                data={main.service.introduction.en}
-                innerHTMLOption="Y"
-              />
-              <Description
-                className="intro_ko"
-                data={main.service.introduction.ko}
-                innerHTMLOption="Y"
-              />
-              <Btn type="link" className="" url="/pages/service" alt="Service">
-                Service
-              </Btn>
-            </div>
-          </div>
         </section>
         {/* E: service */}
 
         {/* S: our works */}
-        <section className="section_div is_white our_works">
-          <div className="rolling_wrap">
+        <section className="our_works">
+          <div className="section_div is_white rolling_wrap">
             <span className="rolling_text">{main.ourWorks.rollingBigText}</span>
             <div className="rolling_imgs">
               {main.ourWorks.rollingImages.map((data, index) => (
@@ -386,20 +116,6 @@ function Main() {
               ))}
             </div>
           </div>
-          <SwiperArea
-            type="single"
-            swiperOption={{
-              slidesPerView: 'auto',
-            }}
-            className="portfolio scroll-linear"
-            swiperContent={
-              <>
-                {main.ourWorks.portfolio.map((data, index) => (
-                  <FinderWorksList key={index} arrLength={index} />
-                ))}
-              </>
-            }
-          />
         </section>
         {/* E: our works */}
       </main>

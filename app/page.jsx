@@ -1,64 +1,138 @@
+import FinderWorksList from '@/app/pages/main/finderWorksList';
+import Btn from '@/components/Btn/Btn';
+import Description from '@/components/Description/Description';
+import Disclaimer from '@/components/Disclaimer/Disclaimer';
+import Header from '@/components/Header/Header';
+import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
+import SwiperArea from '@/components/SwiperArea/SwiperArea';
+import main from '@/helper/data/json/contents/main/main.json';
+import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 import './scss/main.scss';
-
-import Link from 'next/link';
-
-import variables from '@/public/assets/scss/_variables.module.scss';
 
 export const metadata = {
   title: 'Anchors',
-  description: 'Anchors',
+  description: '',
 };
 
-export default function Main() {
+function Main() {
   return (
     <>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <p
-        className="text"
-        style={{
-          backgroundColor: variables.colorGrey,
-          color: variables.colorWhite,
-          padding: 20,
-        }}
-      >
-        mediaQuery type -
-      </p>
-      <br />
-      <br />
-      <br />
-      <p>
-        <b>가이드페이지 링크</b>
-      </p>
-      <br />
-      <br />
-      <Link href="guide">&gt; GUIDE 바로가기</Link> <br /> <br />
-      <br />
-      <br />
-      <p>
-        <b>테스트 링크</b>
-      </p>
-      <br />
-      <Link href="guide/test/chchaa">&gt; chchaa test page 바로가기</Link>
-      <br />
-      <br />
-      <Link href="guide/test/jueun">&gt; jueun test page 바로가기</Link> <br />
-      <br />
-      <Link href="guide/test/mijeong">&gt; mijeong test page 바로가기</Link>
-      <br />
-      <br />
-      <Link href="guide/test/doi">&gt; doi test page 바로가기</Link> <br />
-      <br />
-      <Link href="guide/test/chaewon">&gt; chaewon test page 바로가기</Link>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      {/*<Header className="new_header is_black" />*/}
+      <main className="main is_white">
+        {/* S: about us */}
+        <section className="section_div is_black about_us">
+          <div className="keyvisual_wrap">
+            <LottiePlayer
+              className="text_keyvisual"
+              data={lottieMainKeyVisual}
+            />
+            <Disclaimer
+              className="keyvisual_disclaimer"
+              data="At Anchors, our executives and employees are hard at work to improve customer service with their professional expertise."
+            />
+          </div>
+          {/*RotateRolling*/}
+          {/*<SwiperArea*/}
+          {/*  type="single"*/}
+          {/*  swiperOption={{*/}
+          {/*    */}
+          {/*    */}
+          {/*    slidesPerView: 3,*/}
+          {/*    allowTouchMove: false,*/}
+          {/*    navigation: false,*/}
+          {/*    pagination: false,*/}
+          {/*    autoplay: {*/}
+          {/*      delay: 1,*/}
+          {/*    },*/}
+          {/*    loop: true,*/}
+          {/*    speed: 1000,*/}
+          {/*  }}*/}
+          {/*  className="scroll-linear"*/}
+          {/*  swiperContent={*/}
+          {/*    <>*/}
+          {/*      <div>*/}
+          {/*        <img*/}
+          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
+          {/*          alt=""*/}
+          {/*        />*/}
+          {/*      </div>*/}
+          {/*    </>*/}
+          {/*  }*/}
+          {/*/>*/}
+          <div className="intro_area">
+            <Description
+              className="intro_en"
+              data={main.aboutUs.introduction.en}
+              innerHTMLOption="Y"
+            />
+            <Description
+              className="intro_ko"
+              data={main.aboutUs.introduction.ko}
+              innerHTMLOption="Y"
+            />
+            <Btn
+              type="link"
+              className="btn_about_us"
+              url="/pages/about"
+              alt="About Us"
+            >
+              About Us
+            </Btn>
+          </div>
+        </section>
+        {/* E: about us */}
+
+        {/* S: service */}
+        <section className="service">
+          <div className="section_div is_black bg_blue rolling_wrap">
+            <span className="rolling_text">
+              {main.service.rollingBigText[0]}
+              <span>{main.service.rollingBigText[1]}</span>
+            </span>
+            {main.service.blueBgRollingImages.map((data, index) => (
+              <img key={index} src={main.imgUrl + data.image} alt={data.alt} />
+            ))}
+          </div>
+          <div className="section_div is_white bg_white">
+            <div className="swiper_bundle" />
+            <div className="intro_area">
+              <Description
+                className="intro_en"
+                data={main.service.introduction.en}
+                innerHTMLOption="Y"
+              />
+              <Description
+                className="intro_ko"
+                data={main.service.introduction.ko}
+                innerHTMLOption="Y"
+              />
+              <Btn type="link" className="" url="/pages/service" alt="Service">
+                Service
+              </Btn>
+            </div>
+          </div>
+        </section>
+        {/* E: service */}
+
+        {/* S: our works */}
+        <section className="our_works">
+          <div className="section_div is_white rolling_wrap">
+            <span className="rolling_text">{main.ourWorks.rollingBigText}</span>
+            <div className="rolling_imgs">
+              {main.ourWorks.rollingImages.map((data, index) => (
+                <img
+                  key={index}
+                  src={main.imgUrl + data.image}
+                  alt={data.alt}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* E: our works */}
+      </main>
     </>
   );
 }
+
+export default Main;

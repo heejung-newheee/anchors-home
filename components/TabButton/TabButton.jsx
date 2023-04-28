@@ -1,15 +1,18 @@
 'use client';
 
 import Link from 'next/link';
-
 import Btn from '@/components/Btn/Btn';
 
-const TAB_TEXT = ['tab1', 'tab2', 'tab3', 'tab4'];
+export default function TabButton({ dataList = [] }) {
+  const BUTTON_ARR = Array.isArray(dataList) ? dataList : [dataList];
 
-export default function TabButton() {
   return (
-    <li className="tab-button">
-      <Btn type="button">{TAB_TEXT[0]}</Btn>
-    </li>
+    <ul className="tab_btn_wrap">
+      {BUTTON_ARR.map((button, idx) => (
+        <li className="tab-button" data-tab-index={idx} key={idx}>
+          <Btn type="button">{button}</Btn>
+        </li>
+      ))}
+    </ul>
   );
 }
