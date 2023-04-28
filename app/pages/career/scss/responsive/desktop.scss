@@ -4,8 +4,7 @@
       height: 80rem;
     }
     .career_text{
-      margin: 16rem 0;
-      padding: 0 9rem;
+      padding: 16rem 9rem;
       font-weight: 400;
       p:nth-of-type(1){
         font-size: 4.2rem;
@@ -64,21 +63,17 @@
         margin-bottom: 6rem;
       }
       .swiper_comment_swiper{
+        width: 93vw;
+        height: 37vw;
         .swiper-scrollbar.swiper-scrollbar-horizontal{
           .swiper-scrollbar-drag{
-            //width: 2.6rem;
           }
         }
         .swiper-slide{
-          width: 38.9rem;
-          height: 48rem;
           .visual{
-            height: 48rem;
+            height: 37vw;
           }
-
           .detail_slide{
-            width: 38.9rem;
-            height: 48rem;
             .detail_btn{
               bottom: 4rem;
             }

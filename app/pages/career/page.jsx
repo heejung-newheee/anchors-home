@@ -55,12 +55,6 @@ function Career() {
           ))}
           firstSwiperOption={{
             effect: 'cards',
-            // breakpoints: {
-            //   360: {},
-            //   768: {},
-            //   1280: {},
-            //   1536: {},
-            // },
           }}
           secondSwiperOption={{
             pagination: false,
@@ -85,7 +79,10 @@ function Career() {
         />
         <SwiperArea
           type="single"
-          swiperContent={careerComment.content.map((cont, idx) => (
+          swiperContent={[
+            ...careerComment.content,
+            ...careerComment.content,
+          ].map((cont, idx) => (
             <div key={idx}>
               <Visual imgUrl={careerComment.imgUrl + cont.img} />
               <MoreDetail
@@ -102,18 +99,17 @@ function Career() {
             </div>
           ))}
           swiperOption={{
-            slidesPerView: 'auto',
+            spaceBetween: 16,
+            breakpoints: {
+              360: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1280: { slidesPerView: 3 },
+            },
             navigation: false,
             pagination: false,
             scrollbar: {
               draggable: true,
             },
-            // breakpoints: {
-            //   360: {},
-            //   768: {},
-            //   1280: {},
-            //   1536: {},
-            // },
             autoplay: {
               delay: 1,
             },

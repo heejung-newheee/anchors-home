@@ -4,8 +4,7 @@
       height: 57.6rem;
     }
     .career_text{
-      margin: 12rem 0;
-      padding: 0 4.4rem;
+      padding: 12rem 4.4rem;
       p:nth-of-type(1){
         font-size: 3.8rem;
         line-height: 5.4rem;
@@ -25,7 +24,7 @@
       margin-bottom: 8rem;
       overflow: hidden;
       .swiper-cards{
-        width: 36.3rem;
+        width: 47vw;
         margin-bottom: 8rem;
         .swiper-pagination{
           bottom:-3.6rem;
@@ -52,13 +51,15 @@
             margin-bottom: 3rem;
           }
         }
-        .swiper-slide{
-          transition: all 0.9s;
-          transition-delay: .1s;
-          transform: translateY(80%);
-        }
-        .swiper-slide-active{
-          transform: translateY(0);
+        &:last-child {
+          .swiper-slide{
+            transition: all 0.9s;
+            transition-delay: .1s;
+            transform: translateY(80%);
+          }
+          .swiper-slide-active{
+            transform: translateY(0);
+          }
         }
       }
     }
@@ -70,23 +71,16 @@
         line-height: 5rem;
       }
       .swiper_comment_swiper{
+        width: 93vw;
+        height: 56vw;
         .swiper-scrollbar.swiper-scrollbar-horizontal{
           transform: translate(-50%, 4rem);
-          //width: 8.6rem;
-          .swiper-scrollbar-drag{
-            //width: 2rem;
-          }
         }
         .swiper-slide{
-          width: 35rem;
-          height: 43rem;
           .visual{
-            height: 43rem;
+            height: 56vw;
           }
-
           .detail_slide{
-            width: 35rem;
-            height: 43rem;
             .detail_btn{
               bottom: 3.6rem;
             }
