@@ -16,11 +16,12 @@ import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
 import MoreDetail from '@/components/MoreDetail/MoreDetail';
+import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 
-// export const metadata = {
-//   title: 'Anchors',
-//   description: '',
-// };
+export const metadata = {
+  title: 'Anchors',
+  description: '',
+};
 
 function About() {
   return (
