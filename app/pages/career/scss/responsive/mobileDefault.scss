@@ -1,0 +1,205 @@
+
+.career{
+  .visual{
+    width: 100%;
+    height: 27rem;
+    background-color: #FFFFFF;
+  }
+  .career_text{
+    background-color: #FFFFFF;
+    padding: 8rem 2.4rem 9rem  2.4rem;
+    text-align: center;
+    font-weight: 400;
+    p:nth-of-type(1){
+      font-size: 2.2rem;
+      line-height: 3rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 2rem;
+      span{
+        font-size: 2.2rem;
+        font-family: $font_en_italic;
+      }
+    }
+    p:nth-of-type(2){
+      font-family: $font_ko;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+    }
+  }
+
+  //swiper_members 영역
+  .swiper_members{
+    background-color: #FFFFFF;
+    @extend %layout_fix;
+    margin-bottom: 8rem;
+    overflow: hidden;
+    .swiper-cards{
+      width: 67vw;
+      margin-bottom: 8rem;
+      .swiper-pagination{
+        bottom:-2.4rem;
+      }
+    }
+    .swiper_area{
+      .element_title{
+        margin-bottom: 1.4rem;
+      }
+      .disclaimer{
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2.2rem;
+        font-family : $font_ko;
+        color: #848484;
+        margin-bottom: 3rem;
+      }
+      .description{
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.6rem;
+        color: #1D1D1F;
+        &:nth-of-type(1){
+          margin-bottom: 2rem;
+        }
+      }
+      &:last-child {
+        .swiper-slide{
+          transition: all 0.9s;
+          transition-delay: .1s;
+          transform: translateY(80%);
+        }
+        .swiper-slide-active{
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+//  swiper_comment 영역
+  .swiper_comment{
+    @extend %layout_fix;
+    margin-bottom: 8rem;
+    .swiper_comment_text{
+      @extend %font_sectionTitle;
+      font-weight: 700;
+      line-height: 4rem;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .swiper_comment_swiper{
+      @extend %layout_fix;
+      overflow: visible;
+      width: 64vw;
+      height: 83vw;
+      .swiper_wrapper{
+      }
+      .swiper-scrollbar.swiper-scrollbar-horizontal{
+        transform: translate(-50%, 2.4rem);
+        .swiper-scrollbar-drag{
+        }
+      }
+        .visual{
+          width: 100%;
+          height: 83vw;
+        }
+
+        .detail_slide{
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          .detail{
+            background-color: rgba(255, 255, 255, 0);
+            transform: translateY(62%);
+            bottom: 0;
+            box-sizing: border-box;
+            padding: 0 2.1rem;
+            padding-top: 3.2rem;
+            display: flex;
+            flex-direction: column;
+            &::before{
+              content:'';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: #000000;
+              opacity: 0;
+              backdrop-filter: blur(8px);
+              z-index: -1;
+              transition: 0.5s;
+
+            }
+            .description{
+              color: $color_white;
+              font-size: 2.1rem;
+              font-weight: 700;
+              line-height: 3rem;
+              text-align: left;
+              box-sizing: border-box;
+              z-index: 10;
+              margin-bottom: 1.6rem;
+
+            }
+            .disclaimer{
+              font-size: 1.4rem;
+              line-height: 2.2rem;
+              text-align: justify;
+              opacity: 0;
+            }
+            &.on {
+              transform: translateY(0%);
+              &::before{
+                opacity: 0.4;
+              }
+              .disclaimer{
+                opacity: 1;
+              }
+            }
+          }
+        }
+    }
+  }
+
+//  welfare 영역
+  .welfare{
+    @extend %layout_fix;
+    //padding: 0 2.4rem;
+    .welfare_text{
+      @extend %font_sectionTitle;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 2.6rem;
+      padding: 0 2rem;
+    }
+    .welfare_list{
+      .base_article{
+        width: 100%;
+        border-bottom: 0.1rem solid #E4E4E4;
+        &:last-child{
+          margin-bottom: 8rem;
+        }
+        img{
+          width: 3.4rem;
+          height: 3.4rem;
+          margin-top: 3.3rem;
+          margin-bottom: 1.8rem;
+        }
+        p{
+          font-size: 1.8rem;
+          font-weight: 700;
+          line-height: 100%;
+          text-align: left;
+          margin: 0;
+          padding-bottom: 0.6rem ;
+        }
+        span{
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 2.2rem;
+          padding-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+@include desktop {
+  .career{
+    .visual{
+      height: 80rem;
+    }
+    .career_text{
+      padding: 16rem 9rem;
+      font-weight: 400;
+      p:nth-of-type(1){
+        font-size: 4.2rem;
+        line-height: 5.8rem;
+        margin-bottom: 4rem;
+        span{
+          font-size: 4.2rem;
+        }
+      }
+      p:nth-of-type(2){
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+      }
+    }
+
+    //swiper_members 영역
+    .swiper_members{
+      display: flex;
+      align-items: center;
+      padding: 0 5.5rem;
+      margin-bottom: 16rem;
+      overflow: visible;
+      .swiper-cards{
+        margin-bottom: 0;
+        .swiper-pagination{
+          bottom:-3.6rem;
+        }
+      }
+      .swiper_area{
+        width: 43rem;
+        .element_title{
+          font-size: 2.4rem;
+        }
+        .disclaimer{
+          font-size: 1.6rem;
+          font-weight: 400;
+          line-height: 1.6rem;
+          margin-bottom: 4rem;
+        }
+        .description{
+          font-size: 1.8rem;
+          line-height: 2.8rem;
+          &:nth-of-type(1){
+            margin-bottom: 3rem;
+          }
+        }
+      }
+    }
+
+    //  swiper_comment 영역
+    .swiper_comment{
+      margin-bottom: 16rem;
+      .swiper_comment_text{
+        line-height: 6.4rem;
+        text-align: center;
+        margin-bottom: 6rem;
+      }
+      .swiper_comment_swiper{
+        width: 93vw;
+        height: 37vw;
+        .swiper-scrollbar.swiper-scrollbar-horizontal{
+          .swiper-scrollbar-drag{
+          }
+        }
+        .swiper-slide{
+          .visual{
+            height: 37vw;
+          }
+          .detail_slide{
+            .detail_btn{
+              bottom: 4rem;
+            }
+            .detail{
+              transform: translateY(16%);
+              box-sizing: border-box;
+              .description{
+                font-size: 3.2rem;
+                line-height: 4.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //  welfare 영역
+    .welfare{
+      .welfare_text{
+        margin-bottom: 6rem;
+      }
+      .welfare_list{
+        .base_article{
+          width: calc(33.3333% - 3.8rem);
+          height: 37.4rem;
+          margin-bottom: 3.8rem;
+          padding: 4rem 5rem;
+          &:last-child{
+            margin-bottom: 16rem;
+          }
+          img{
+            width: 6rem;
+            height: 6rem;
+            margin-top: 7rem;
+            margin-bottom: 5rem;
+          }
+          p{
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 100%;
+            text-align: left;
+            margin: 0;
+            padding-bottom: 1.8rem;
+          }
+          span{
+            width: 100%;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

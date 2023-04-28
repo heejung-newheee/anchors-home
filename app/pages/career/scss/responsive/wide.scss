@@ -1,0 +1,127 @@
+@include wide {
+  .career{
+    .visual{
+      height: 96rem;
+    }
+    .career_text{
+      padding: 18rem 11.8rem;
+      p:nth-of-type(1){
+        font-size: 5rem;
+        line-height: 7rem;
+        margin-bottom: 6rem;
+        span{
+          font-size: 5rem;
+        }
+      }
+      p:nth-of-type(2){
+        font-size: 2rem;
+        line-height: 3.2rem;
+      }
+    }
+
+    //swiper_members 영역
+    .swiper_members{
+      margin-bottom: 18rem;
+      .swiper-cards{
+        margin-bottom: 0;
+        .swiper-pagination{
+          bottom: -4rem;
+        }
+      }
+      .swiper_area{
+        width: 52rem;
+        .element_title{
+          font-size: 2.8rem;
+        }
+        .disclaimer{
+          font-size: 1.8rem;
+          line-height: 1.8rem;
+          margin-bottom: 6rem;
+        }
+        .description{
+          font-size: 2rem;
+          line-height: 3.2rem;
+          &:nth-of-type(1){
+            margin-bottom: 4rem;
+          }
+        }
+      }
+    }
+
+    //  swiper_comment 영역
+    .swiper_comment{
+      margin-bottom: 18rem;
+      .swiper_comment_text{
+        line-height: 7.8rem;
+        margin-bottom: 8rem;
+      }
+      .swiper_comment_swiper{
+        width: 93vw;
+        height: 39vw;
+        .swiper-slide{
+          .visual{
+            height: 39vw;
+          }
+          .detail_slide{
+            .detail_btn{
+              bottom: 5rem;
+            }
+            .detail{
+              transform: translateY(17%);
+              padding: 0 4rem;
+              padding-bottom: 14rem;
+              .description{
+                font-size: 3.8rem;
+                line-height: 5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    //  welfare 영역
+    .welfare{
+      max-width: 115.6rem;
+      .welfare_text{
+        margin-bottom: 8rem;
+      }
+      .welfare_list{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        .base_article{
+          width: calc(33.3333% - 5.6rem);
+          height: 41.8rem;
+          margin-bottom: 5.6rem;
+          padding: 4rem 5rem;
+          &:last-child{
+            margin-bottom: 18rem;
+          }
+          img{
+            width: 8rem;
+            height: 8rem;
+            margin-top: 7rem;
+            margin-bottom: 5rem;
+          }
+          p{
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 100%;
+            text-align: left;
+            margin: 0;
+            padding-bottom: 2rem;
+          }
+          span{
+            width: 100%;
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 2.8rem;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

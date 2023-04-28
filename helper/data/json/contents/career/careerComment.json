@@ -1,24 +1,24 @@
 {
-  "imgUrl": "/assets/images/contents/career",
+  "imgUrl": "/assets/images/contents/career/",
   "content": [
     {
       "img": "img_comment_slide_swiper1.png",
-      "highlightText": "스스로 몰입하고 주도적으로 일해요",
+      "highlightText": "스스로 몰입하고 <br/>주도적으로 일해요",
       "text": "우리는 누가 시켜서 일하지 않아요. 개인의 아이디어나 도전해보고 싶은 분야가 있다면 언제든지 시도해볼 수 있어요. 스스로 판단하고 몰입할 때 나도 회사도 더 크게 성장해요."
     },
     {
       "img": "img_comment_slide_swiper2.png",
-      "highlightText": "형식 보단 일의 본질에 집중해요",
+      "highlightText": "형식 보단 일의 <br/>본질에 집중해요",
       "text": "형식적인 보고를 위한 문서나 이메일은 필요치 않아요. 우리는 효율적인 것, 그리고 자율에 따른 책임 문화를 지향하며 일하고 있어요. 일에 필요 없는 절차, 양식을 지양하고 실질적인 것에만 집중해요."
     },
     {
       "img": "img_comment_slide_swiper3.png",
-      "highlightText": "열린 마음으로 이야기해요",
+      "highlightText": "열린 마음으로 <br/>이야기해요",
       "text": "내가 틀릴 수 있고, 우리가 모두 정답일 수 있어요. 자기 생각이 맞다고 단정 짓지 않고, 동료의 다양한 의견을 경청해요. 상황과 상대방에 대한 열린 마음으로 우리는 함께 더 멀리 나아 갈 수 있어요."
     },
     {
       "img": "img_comment_slide_swiper4.png",
-      "highlightText": "동료는 최고의 원동력이에요",
+      "highlightText": "동료는 최고의 <br/>원동력이에요",
       "text": "끌어주고 받쳐줄 수 있는 신뢰감 있는 동료와 하나의 팀으로 일하고 있어요. 내가 존경할 수 있는 동료, 나보다 훌륭한 동료와 함께 일하는 것만으로 큰 자극이 되고, 배움과 성장의 원동력이 돼요."
     }
   ]

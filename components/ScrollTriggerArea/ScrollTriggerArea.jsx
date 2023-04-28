@@ -17,9 +17,9 @@ function ScrollTriggerArea({
   XAxes = { mobile: ['0px'], table: ['0px'], desktop: ['0px'], wide: ['0px'] },
   YAxes = { mobile: ['0px'], table: ['0px'], desktop: ['0px'], wide: ['0px'] },
   easing = 'elastic.out(0.1, 0)',
-  duration = 1,
-  toScale = 1,
-  fromScale = 1,
+  duration = [1],
+  toScale = [1],
+  fromScale = [1],
   children,
 }) {
   const COMPONENTS_REF = useRef();
@@ -113,12 +113,12 @@ function ScrollTriggerArea({
                 to={{
                   x: MUTITRIGGER_OPTION_XAXES[idx],
                   y: MUTITRIGGER_OPTION_YAXES[idx],
-                  scale: toScale,
+                  scale: toScale[idx],
                 }}
-                from={{ scale: fromScale }}
+                from={{ scale: fromScale[idx] }}
                 key={idx}
                 ease={easing}
-                duration={duration}
+                duration={duration[idx]}
               >
                 {contents}
               </Tween>

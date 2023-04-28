@@ -1,0 +1,169 @@
+@include tablet {
+  .career{
+    .visual{
+      height: 57.6rem;
+    }
+    .career_text{
+      padding: 12rem 4.4rem;
+      p:nth-of-type(1){
+        font-size: 3.8rem;
+        line-height: 5.4rem;
+        margin-bottom: 3rem;
+        span{
+          font-size: 3.8rem;
+        }
+      }
+    }
+
+    //swiper_members 영역
+    .swiper_members{
+      background-color: #FFFFFF;
+      padding: 0 12.6rem;
+      margin-bottom: 13rem;
+      @extend %layout_fix;
+      margin-bottom: 8rem;
+      overflow: hidden;
+      .swiper-cards{
+        width: 47vw;
+        margin-bottom: 8rem;
+        .swiper-pagination{
+          bottom:-3.6rem;
+        }
+      }
+      .swiper_area{
+        .element_title{
+          margin-bottom: 1.4rem;
+        }
+        .disclaimer{
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 2.2rem;
+          font-family : $font_ko;
+          color: #848484;
+          margin-bottom: 4rem;
+        }
+        .description{
+          font-size: 1.6rem;
+          font-weight: 400;
+          line-height: 2.6rem;
+          color: #1D1D1F;
+          &:nth-of-type(1){
+            margin-bottom: 3rem;
+          }
+        }
+        &:last-child {
+          .swiper-slide{
+            transition: all 0.9s;
+            transition-delay: .1s;
+            transform: translateY(80%);
+          }
+          .swiper-slide-active{
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+
+    //  swiper_comment 영역
+    .swiper_comment{
+      margin-bottom: 12rem;
+      .swiper_comment_text{
+        line-height: 5rem;
+      }
+      .swiper_comment_swiper{
+        width: 93vw;
+        height: 56vw;
+        .swiper-scrollbar.swiper-scrollbar-horizontal{
+          transform: translate(-50%, 4rem);
+        }
+        .swiper-slide{
+          .visual{
+            height: 56vw;
+          }
+          .detail_slide{
+            .detail_btn{
+              bottom: 3.6rem;
+            }
+            .detail{
+              transform: translateY(18%);
+              bottom: 0;
+              padding: 0 3rem;
+              padding-bottom: 10rem;
+              justify-content: flex-end;
+              &::before{}
+              .description{
+                font-size: 2.8rem;
+                line-height: 3.8rem;
+              }
+              .disclaimer{
+                font-size: 0;
+                line-height: 0;
+              }
+              &.on {
+                transform: translateY(0%);
+                &::before{
+                  opacity: 0.4;
+                }
+                .disclaimer{
+                  font-size: 1.6rem;
+                  line-height: 2.4rem;
+                  text-align: justify;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //  welfare 영역
+    .welfare{
+      .welfare_text{
+        margin-bottom: 4rem;
+        br.career_mo{
+          display: none;
+        }
+      }
+      .welfare_list{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        .base_article{
+          box-sizing: border-box;
+          width: calc(33.3333% - 1.8rem);
+          height: 27.8rem;
+          margin-bottom: 1.8rem;
+          padding: 3.4rem 2.4rem;
+          border: 0.1rem solid #E4E4E4;
+          &:nth-child(3),&:nth-child(6),&:nth-child(9),&:nth-child(12){
+            margin-right: 0;
+          }
+          &:last-child{
+            margin-bottom: 8rem;
+          }
+          img{
+            width: 4.6rem;
+            height: 4.6rem;
+            margin-top: 4.6rem;
+            margin-bottom: 3.6rem;
+          }
+          p{
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 100%;
+            text-align: left;
+            margin: 0;
+            padding-bottom: 1.4rem;
+          }
+          span{
+            width: 100%;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
