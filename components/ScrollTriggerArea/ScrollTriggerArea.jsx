@@ -26,6 +26,7 @@ function ScrollTriggerArea({
   const BREAKPOINT_MOBILE = useMediaQuery({ maxWidth: 768 });
   const BREAKPOINT_TABLE = useMediaQuery({ maxWidth: 1280 });
   const BREAKPOINT_DESKTOP = useMediaQuery({ maxWidth: 1536 });
+  const CHILDREN_ARR = Array.isArray(children) ? children : [children];
 
   let TRIGGER_OPTION_START = '';
   let TRIGGER_OPTION_END = '';
@@ -53,8 +54,6 @@ function ScrollTriggerArea({
     MUTITRIGGER_OPTION_XAXES = XAxes.wide;
     MUTITRIGGER_OPTION_YAXES = YAxes.wide;
   }
-
-  console.log(MUTITRIGGER_OPTION_XAXES, children);
 
   let TRIGGER_OPTION = {
     start: TRIGGER_OPTION_START + ' ' + triggerOffset,
@@ -109,7 +108,7 @@ function ScrollTriggerArea({
             scrub={triggerScrub}
             markers={triggerMarkers}
           >
-            {children.map((contents, idx) => (
+            {CHILDREN_ARR.map((contents, idx) => (
               <Tween
                 to={{
                   x: MUTITRIGGER_OPTION_XAXES[idx],
