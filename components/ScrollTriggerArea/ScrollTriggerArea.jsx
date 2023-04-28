@@ -61,6 +61,7 @@ function ScrollTriggerArea({
     markers: triggerMarkers,
     scrub: triggerScrub,
   };
+
   switch (type) {
     case 'lottieTrigger':
       TRIGGER_OPTION = {
