@@ -31,8 +31,9 @@
   }
 
   .rolling_wrap {
-    height: 100vh;
+    height: 300vh;
     position: relative;
+    padding-bottom: 30vh;
 
     .rolling_text {
       letter-spacing: $en_letterSpacing;
@@ -40,18 +41,42 @@
       white-space: nowrap;
       display: block;
       width: auto;
-      position: absolute;
+      position: sticky;
+      position: -webkit-sticky;
       left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 100vw; // $main
+      top: 10vh;
+      //transform: translateX(-300%);
+      font-size: 80vh; // $main
+
+      span {
+        font-size: inherit;
+        position: relative;
+        display: inline-block;
+        left: 100vw;
+        &:first-child {
+
+          //left: 50%;
+        }
+      }
     }
 
     img {
-      width: 50vw;
+      width: 40vh;
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      z-index: 2;
+
+      &:nth-child(1) {
+        left: 10%;
+        top: 10%;
+      }
+      &:nth-child(2) {
+        left: 45%;
+        bottom: 0;
+      }
+      &:nth-child(3) {
+        left: 85%;
+        top: 10%;
+      }
     }
   }
 
