@@ -19,6 +19,7 @@
         width: 33.854167vw;
         padding-bottom: 4rem;
         margin: 0;
+        max-width: 520px;
 
         .swiper-pagination {
           bottom: 0;
@@ -64,7 +65,7 @@
       h3 {
         font-size: 2.2rem;
         line-height: 2.2rem;
-        margin: 0 0 12rem;
+        margin: 0 auto 12rem;
         padding: 0 14rem;
       }
       div.profile_development {
@@ -73,7 +74,7 @@
         .profile_grow_number {
           font-size: 10.4rem;
         }
-        .profile_lottie_arrow {
+        .lottieTrigger {
           left: -31.9rem;
         }
       }
@@ -96,7 +97,7 @@
       }
       div.profile_partner {
         .description {
-          margin: 16rem 0 12rem;
+          margin: 16rem auto 12rem;
           padding: 0 14rem;
         }
         .swiper {

@@ -117,13 +117,14 @@
     padding-bottom: 10rem;
 
     h3 {
-      @extend %layout_fix;
+      padding: 0 2.4rem;
       font-family: $font_en;
       font-size: 1.6rem;
       line-height: 1.6rem;
       letter-spacing: -0.03em;
       margin-bottom: 6rem;
       font-weight: 400;
+      max-width: 1816px;
     }
     div.profile_development {
       @extend %layout_fix;
@@ -152,7 +153,7 @@
           letter-spacing: -0.03em;
         }
       }
-      .profile_lottie_arrow {
+      .lottieTrigger {
         position: absolute;
         bottom: 0;
         left: -24.1rem;
@@ -200,13 +201,14 @@
     }
     div.profile_partner {
       .description {
-        @extend %layout_fix;
+        padding: 0 2.4rem;
         font-family: $font_en;
         font-weight: 500;
         @extend %font_sectionTitle;
         letter-spacing: -0.03em;
         margin-bottom: 5rem;
         margin-top: 10rem;
+        max-width: 1816px;
       }
       .swiper {
         .swiper-slide {
@@ -236,7 +238,8 @@
   .about_members {
     background-color: $color_white;
     .about_members_desc {
-      @extend %layout_fix;
+      max-width: 1536px;
+      margin: 0 auto;
       .description {
         @extend %font_enIntro;
         font-family: $font-en;
