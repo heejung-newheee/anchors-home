@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 
 import RootLayout from '@/app/layout';

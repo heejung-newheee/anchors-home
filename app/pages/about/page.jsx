@@ -1,4 +1,3 @@
-import { Inter } from 'next/font/google';
 import headerFooter from 'helper/data/json/contents/headerFooter.json';
 
 import './scss/about.scss';
@@ -17,10 +16,31 @@ import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
 import MoreDetail from '@/components/MoreDetail/MoreDetail';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
+import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 
 export const metadata = {
   title: 'Anchors',
   description: '',
+};
+
+const LOTTIE_OPTION = {
+  data: lottie_arrow,
+  autoplay: false,
+  loop: false,
+};
+
+const TRIGGER_START = {
+  mobile: '-710px',
+  table: '-710px',
+  desktop: '-710px',
+  wide: '-750px',
+};
+
+const TRIGGER_END = {
+  mobile: '700px',
+  table: '700px',
+  desktop: '700px',
+  wide: '700px',
 };
 
 function About() {
@@ -114,7 +134,13 @@ function About() {
               </>
             }
           />
-          <LottiePlayer className="profile_lottie_arrow" data={lottie_arrow} />
+          <ScrollTriggerArea
+            type="lottieTrigger"
+            lottieOption={LOTTIE_OPTION}
+            triggerOffset={'center'}
+            triggerStart={TRIGGER_START}
+            triggerEnd={TRIGGER_END}
+          />
         </div>
         <div className="profile_award">
           <Description
@@ -241,7 +267,9 @@ function About() {
             slidesPerView: 'auto',
             navigation: false,
             pagination: false,
-            scrollbar: true,
+            scrollbar: {
+              draggable: true,
+            },
             spaceBetween: 16,
             slidesOffsetBefore: 24,
             slidesOffsetAfter: 24,
