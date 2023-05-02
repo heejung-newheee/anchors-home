@@ -35,7 +35,7 @@ export default function Guide() {
       </p>
       <br />
       <br />
-      <Link href="guide">&gt; GUIDE 바로가기</Link> <br /> <br />
+      <Link href="guide/pages/rule">&gt; GUIDE 바로가기</Link> <br /> <br />
       <br />
       <br />
       <p>
