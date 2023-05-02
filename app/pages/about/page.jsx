@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google';
 import headerFooter from 'helper/data/json/contents/headerFooter.json';
 
-import './scss/about.scss';
+import './about.scss';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import Visual from '@/components/Visual/Visual';
 import Description from '@/components/Description/Description';
@@ -16,12 +16,11 @@ import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
 import MoreDetail from '@/components/MoreDetail/MoreDetail';
-import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 
-export const metadata = {
-  title: 'Anchors',
-  description: '',
-};
+// export const metadata = {
+//   title: 'Anchors',
+//   description: '',
+// };
 
 function About() {
   return (
@@ -40,7 +39,7 @@ function About() {
           data={
             <>
               Innovative solutions, excellence in execution. We take your
-              <span> technological obstacles</span> and convert them into
+              <span>technological obstacles</span> and convert them into
               opportunities for <span>digital growth.</span>
             </>
           }
@@ -49,7 +48,6 @@ function About() {
           data={
             <>
               혁신적인 솔루션, 탁월한 실행력. 앵커스는 각 분야의 전문가들이 모여
-              <br />
               기술적 풍랑을 디지털 성장의 기회로 만드는 회사입니다.
             </>
           }
@@ -58,46 +56,40 @@ function About() {
       {/* E: Description 영역*/}
 
       {/* S: about intro swiper 영역*/}
-      <div className="about_intro_swiper section_div is_white">
-        <SwiperArea
-          type="double"
-          firstClassName="image_swiper"
-          secondClassName="text_swiper"
-          firstContent={aboutIntro.introduction.map((cont, idx) => (
-            <img key={idx} src={aboutIntro.imgUrl + cont.img} alt={cont.alt} />
-          ))}
-          secondContent={aboutIntro.introduction.map((cont, idx) => (
-            <div className="intro_text" key={idx}>
-              <pre>{cont.highlightText}</pre>
-              <p>{cont.text}</p>
-            </div>
-          ))}
-          firstSwiperOption={{
-            effect: 'cards',
-          }}
-          secondSwiperOption={{
-            navigation: false,
-            pagination: false,
-            spaceBetween: 24,
-          }}
-        />
-      </div>
+      <SwiperArea
+        type="double"
+        firstClassName="image_swiper"
+        secondClassName="text_swiper"
+        firstContent={aboutIntro.introduction.map((cont, idx) => (
+          <div key={idx}>
+            <img src={aboutIntro.imgUrl + cont.img} alt={cont.alt} />
+          </div>
+        ))}
+        secondContent={aboutIntro.introduction.map((cont, idx) => (
+          <div key={idx}>
+            <p>{cont.highlightText}</p>
+            <p>{cont.text}</p>
+          </div>
+        ))}
+        firstSwiperOption={{
+          pagination: false,
+          effect: 'cards',
+        }}
+        secondSwiperOption={{
+          navigation: false,
+        }}
+      />
       {/* E: about intro swiper 영역*/}
 
       {/* S: anchors profile 영역*/}
-      <div className="anchors_profile section_div is_black">
+      <div className="anchors_profile">
         <DepthTitle depthLevel="1" blindOption="visible">
           Anchors Profile
         </DepthTitle>
         <div className="profile_development">
           <Description
             className="profile_grow_text"
-            data={
-              <>
-                Anchors is a development company
-                <br /> established in 2018.
-              </>
-            }
+            data={<>Anchors is a development company established in 2018.</>}
           />
           <Description
             className="profile_grow_number"
@@ -119,38 +111,28 @@ function About() {
         <div className="profile_award">
           <Description
             className="profile_award_description"
-            data={
-              <>
-                Anchors have traveled a long road
-                <br /> within a small period.
-              </>
-            }
+            data={<>Anchors have traveled a long road within a small period.</>}
           />
           <img
             className="profile_award_icon"
             src="/assets/images/ico/ico_webaward.svg"
             alt="web award icon image"
           />
-          <div>
-            <BaseArticle
-              className="profile_award_list"
-              elementTitle={aboutProfile.award[0].name}
-              description={aboutProfile.award[0].description}
-            />
-            <BaseArticle
-              className="profile_award_list"
-              elementTitle={aboutProfile.award[1].name}
-              description={aboutProfile.award[1].description}
-            />
-          </div>
+          <BaseArticle
+            className="profile_award_list"
+            elementTitle={aboutProfile.award[0].name}
+            description={aboutProfile.award[0].description}
+          />
+          <BaseArticle
+            className="profile_award_list"
+            elementTitle={aboutProfile.award[1].name}
+            description={aboutProfile.award[1].description}
+          />
         </div>
         <div className="profile_partner">
           <Description
             data={
-              <>
-                We've been partnering with
-                <br /> our customers for a long time.
-              </>
+              <>We've been partnering with our customers for a long time.</>
             }
           />
           <SwiperArea
@@ -161,15 +143,13 @@ function About() {
               pagination: false,
               scrollbar: false,
               allowTouchMove: false,
-              observer: true,
-              observeParents: true,
               autoplay: {
                 delay: 1,
               },
               loop: true,
               speed: 4000,
             }}
-            className="single scroll-linear customer_logo_swiper_01"
+            className="single scroll-linear"
             swiperContent={aboutProfile.customerLogo.map((cont, idx) => (
               <div key={idx}>
                 <img src={aboutProfile.imgUrl + cont.img} alt={cont.alt} />
@@ -184,8 +164,6 @@ function About() {
               pagination: false,
               scrollbar: false,
               allowTouchMove: false,
-              observer: true,
-              observeParents: true,
               autoplay: {
                 delay: 1,
                 reverseDirection: true,
@@ -210,30 +188,27 @@ function About() {
       </div>
       {/* E: anchors profile 영역*/}
 
-      <div className="about_members section_div is_white">
+      <div className="about_members">
         <Visual imgUrl="/assets/images/contents/about/img_visual_members.png" />
-        <div className="about_members_desc">
-          <Description
-            data={
-              <>
-                We work with people <span>challenging and fun</span> to work
-                with than alone.
-                <span>Synergy</span> is a great driving force to sail through
-                any problem ahead.
-              </>
-            }
-          />
-          <Description
-            data={
-              <>
-                우리는 혼자보다 함께 일할 때 더 즐거운 사람들과 일하고 있습니다.
-                <br />
-                신뢰감 있는 동료와 함께 일할 때 나는 시너지는 어떠한 문제도
-                헤쳐나갈 수 있는 가장 큰 원동력입니다.
-              </>
-            }
-          />
-        </div>
+        <Description
+          data={
+            <>
+              We work with people <span>challenging and fun</span> to work with
+              than alone.
+              <span>Synergy</span> is a great driving force to sail through any
+              problem ahead.
+            </>
+          }
+        />
+        <Description
+          data={
+            <>
+              우리는 혼자보다 함께 일할 때 더 즐거운 사람들과 일하고 있습니다.
+              신뢰감 있는 동료와 함께 일할 때 나는 시너지는 어떠한 문제도
+              헤쳐나갈 수 있는 가장 큰 원동력입니다.
+            </>
+          }
+        />
         {/* S: about members swiper 영역*/}
         <SwiperArea
           type="single"
@@ -262,7 +237,7 @@ function About() {
                   <div>
                     <b>{cont.nameKo}</b>
                     <p className="member_team">{cont.part}</p>
-                    <pre className="member_hashtag">{cont.hashtag}</pre>
+                    <p className="member_hashtag">{cont.hashtag}</p>
                   </div>
                 }
               />
