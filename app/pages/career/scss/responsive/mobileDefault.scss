@@ -90,8 +90,8 @@
     .swiper_comment_swiper{
       @extend %layout_fix;
       overflow: visible;
-      width: 64vw;
-      height: 83vw;
+      width: 23rem;
+      height: 30rem;
       .swiper_wrapper{
       }
       .swiper-scrollbar.swiper-scrollbar-horizontal{
@@ -101,7 +101,7 @@
       }
         .visual{
           width: 100%;
-          height: 83vw;
+          height: 30rem;
         }
 
         .detail_slide{
