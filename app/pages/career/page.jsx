@@ -177,7 +177,7 @@ function Career() {
             triggerStart={TRIGGER_START}
             triggerEnd={TRIGGER_END}
             triggerOffset={'center'}
-            triggerMarkers={true}
+            triggerMarkers={false}
             YAxes={{
               mobile: ['10px'],
               table: ['10px'],
