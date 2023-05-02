@@ -41,8 +41,8 @@
       white-space: nowrap;
       display: block;
       width: auto;
-      position: sticky;
       position: -webkit-sticky;
+      position: sticky;
       left: 0;
       top: 10vh;
       //transform: translateX(-300%);
@@ -52,9 +52,8 @@
         font-size: inherit;
         position: relative;
         display: inline-block;
-        left: 100vw;
+        left: 150vw;
         &:first-child {
-
           //left: 50%;
         }
       }

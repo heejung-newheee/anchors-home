@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
 import Logo from '@/components/Logo/Logo';
+// eslint-disable-next-line import/order
 import Menu from '@/components/Menu/Menu';
 
 import './scss/Header.scss';
