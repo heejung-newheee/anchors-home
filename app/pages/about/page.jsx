@@ -1,6 +1,5 @@
 import headerFooter from 'helper/data/json/contents/headerFooter.json';
 
-import './scss/about.scss';
 import BaseArticle from '@/components/BaseArticle/BaseArticle';
 import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
@@ -19,6 +18,8 @@ import Visual from '@/components/Visual/Visual';
 import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
 import lottie_arrow from '@/public/assets/images/lottie/lottieAboutusUpArrow.json';
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
+
+import './scss/about.scss';
 
 export const metadata = {
   title: 'Anchors',

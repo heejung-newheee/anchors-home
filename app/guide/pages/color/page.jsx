@@ -1,7 +1,8 @@
+import Link from 'next/link';
+
 import variables from '@/public/assets/scss/_variables.module.scss';
 
 import '../../guide.scss';
-import Link from 'next/link';
 
 export default function GuideColor() {
   return (
