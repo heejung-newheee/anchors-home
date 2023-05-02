@@ -53,6 +53,7 @@ export default function Jueun() {
         SwiperArea Component
       </p>
       <SwiperArea
+        autoPlayStop="Y"
         type="single"
         swiperOption={{
           slidesPerView: 'auto',

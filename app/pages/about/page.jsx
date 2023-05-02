@@ -1,21 +1,23 @@
 import headerFooter from 'helper/data/json/contents/headerFooter.json';
 
 import './scss/about.scss';
-import PageTitle from '@/components/PageTitle/PageTitle';
-import Visual from '@/components/Visual/Visual';
-import Description from '@/components/Description/Description';
-import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
-import lottie_arrow from '@/public/assets/images/lottie/lottieAboutusUpArrow.json';
-import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import BaseArticle from '@/components/BaseArticle/BaseArticle';
-import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import Btn from '@/components/Btn/Btn';
+import DepthTitle from '@/components/DepthTitle/DepthTitle';
+import Description from '@/components/Description/Description';
+import Disclaimer from '@/components/Disclaimer/Disclaimer';
+import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
+
 import aboutProfile from '/helper/data/json/contents/about/aboutProfile.json';
 import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
-import SwiperArea from '@/components/SwiperArea/SwiperArea';
-import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
+
 import MoreDetail from '@/components/MoreDetail/MoreDetail';
+import PageTitle from '@/components/PageTitle/PageTitle';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
+import SwiperArea from '@/components/SwiperArea/SwiperArea';
+import Visual from '@/components/Visual/Visual';
+import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
+import lottie_arrow from '@/public/assets/images/lottie/lottieAboutusUpArrow.json';
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 
 export const metadata = {
