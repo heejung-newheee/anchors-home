@@ -1,9 +1,9 @@
-import FinderWorksList from '@/app/pages/main/finderWorksList';
+import FinderWorksList from '@/app/finderWorksList';
 import Btn from '@/components/Btn/Btn';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
-import Header from '@/components/Header/Header';
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
+import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import main from '@/helper/data/json/contents/main/main.json';
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
@@ -17,8 +17,7 @@ export const metadata = {
 function Main() {
   return (
     <>
-      {/*<Header className="new_header is_black" />*/}
-      <main className="main is_white">
+      <main className="main">
         {/* S: about us */}
         <section className="section_div is_black about_us">
           <div className="keyvisual_wrap">
@@ -86,15 +85,132 @@ function Main() {
         <section className="service">
           <div className="section_div is_black bg_blue rolling_wrap">
             <span className="rolling_text">
-              {main.service.rollingBigText[0]}
-              <span>{main.service.rollingBigText[1]}</span>
+              <ScrollTriggerArea
+                type="multiTrigger"
+                triggerStart={{ mobile: '300vh' }}
+                triggerEnd={{ mobile: '5000vh' }}
+                triggerOffset={'center'}
+                triggerMarkers={false}
+                XAxes={{
+                  mobile: ['-400vh', '-400vh'],
+                }}
+                duration={0.01}
+                // toScale={}
+              >
+                {/*{main.service.rollingBigText.map((data, index) => (*/}
+                {/*  <span key={index}>{data}</span>*/}
+                {/*))}*/}
+                <span>
+                  {main.service.rollingBigText[0]}
+                  <ScrollTriggerArea
+                    type="multiTrigger"
+                    triggerStart={{ mobile: '100vh' }}
+                    triggerEnd={{ mobile: '5000vh' }}
+                    triggerOffset={'center'}
+                    triggerMarkers={false}
+                    XAxes={{
+                      mobile: ['-100vh', '-100vh', '-100vh'],
+                    }}
+                    duration={0.01}
+                  >
+                    {main.service.blueBgRollingImages.map((data, index) => (
+                      <img
+                        key={index}
+                        src={main.imgUrl + data.image}
+                        alt={data.alt}
+                      />
+                    ))}
+                  </ScrollTriggerArea>
+                </span>
+                <span>{main.service.rollingBigText[1]}</span>
+              </ScrollTriggerArea>
             </span>
-            {main.service.blueBgRollingImages.map((data, index) => (
-              <img key={index} src={main.imgUrl + data.image} alt={data.alt} />
-            ))}
           </div>
           <div className="section_div is_white bg_white">
-            <div className="swiper_bundle" />
+            <div className="swiper_bundle">
+              <SwiperArea
+                type="single"
+                swiperOption={{
+                  slidesPerView: 'auto',
+                  navigation: false,
+                  pagination: false,
+                  allowTouchMove: false,
+                  autoplay: {
+                    delay: 1,
+                  },
+                  loop: true,
+                  speed: 4000,
+                }}
+                className="scroll-linear"
+                swiperContent={main.service.whiteBgRolling.line1.map(
+                  (data, index) => (
+                    <>
+                      <span key={'text' + index}>{data.text}</span>
+                      <img
+                        key={'img' + index}
+                        src={main.imgUrl + data.image}
+                        alt={data.alt}
+                      />
+                    </>
+                  ),
+                )}
+              />
+              <SwiperArea
+                type="single"
+                swiperOption={{
+                  slidesPerView: 'auto',
+                  navigation: false,
+                  pagination: false,
+                  allowTouchMove: false,
+                  autoplay: {
+                    delay: 1,
+                    reverseDirection: true,
+                  },
+                  loop: true,
+                  speed: 4000,
+                }}
+                className="scroll-linear"
+                swiperContent={main.service.whiteBgRolling.line2.map(
+                  (data, index) => (
+                    <>
+                      <span key={'text' + index}>{data.text}</span>
+                      <img
+                        key={'img' + index}
+                        src={main.imgUrl + data.image}
+                        alt={data.alt}
+                      />
+                    </>
+                  ),
+                )}
+              />
+              <SwiperArea
+                type="single"
+                swiperOption={{
+                  slidesPerView: 'auto',
+                  navigation: false,
+                  pagination: false,
+                  allowTouchMove: false,
+                  autoplay: {
+                    delay: 1,
+                  },
+                  loop: true,
+                  speed: 4000,
+                }}
+                className="scroll-linear"
+                swiperContent={main.service.whiteBgRolling.line3.map(
+                  (data, index) => (
+                    <>
+                      <span key={'text' + index}>{data.text}</span>
+                      <img
+                        key={'img' + index}
+                        src={main.imgUrl + data.image}
+                        alt={data.alt}
+                      />
+                    </>
+                  ),
+                )}
+              />
+            </div>
             <div className="intro_area">
               <Description
                 className="intro_en"
@@ -117,6 +233,30 @@ function Main() {
         {/* S: our works */}
         <section className="our_works">
           <div className="section_div is_white rolling_wrap">
+            {/*<ScrollTriggerArea*/}
+            {/*  type="multiTrigger"*/}
+            {/*  triggerStart={{*/}
+            {/*    mobile: '50vh',*/}
+            {/*    table: '0px',*/}
+            {/*    desktop: '50px',*/}
+            {/*    wide: '50px',*/}
+            {/*  }}*/}
+            {/*  triggerEnd={{*/}
+            {/*    mobile: '10000vh',*/}
+            {/*    table: '0px',*/}
+            {/*    desktop: '600px',*/}
+            {/*    wide: '600px',*/}
+            {/*  }}*/}
+            {/*  triggerOffset={'center'}*/}
+            {/*  triggerMarkers={true}*/}
+            {/*  XAxes={{*/}
+            {/*    mobile: ['-600vw'],*/}
+            {/*    table: ['0px'],*/}
+            {/*    desktop: ['500px'],*/}
+            {/*    wide: ['700px'],*/}
+            {/*  }}*/}
+            {/*  duration={20}*/}
+            {/*>*/}
             <span className="rolling_text">{main.ourWorks.rollingBigText}</span>
             <div className="rolling_imgs">
               {main.ourWorks.rollingImages.map((data, index) => (
@@ -127,7 +267,27 @@ function Main() {
                 />
               ))}
             </div>
+            {/*</ScrollTriggerArea>*/}
           </div>
+          <SwiperArea
+            type="single"
+            swiperOption={{
+              slidesPerView: 'auto',
+              effect: 'cards',
+              cardsEffect: {
+                perSlideRotate: 30,
+                perSlideOffset: 100,
+              },
+            }}
+            className="section_div is_photo scroll-linear portfolio"
+            swiperContent={
+              <>
+                {main.ourWorks.portfolio.map((data, index) => (
+                  <FinderWorksList key={index} arrLength={index} />
+                ))}
+              </>
+            }
+          />
         </section>
         {/* E: our works */}
       </main>
