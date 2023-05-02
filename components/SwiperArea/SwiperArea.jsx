@@ -68,6 +68,7 @@ function SwiperArea({
   secondClassName,
   autoPlayStop,
 }) {
+  const [uniqueSwiperKey, setUniqueSwiperKey] = React.useState(0);
   const [firstSwiper, setFirstSwiper] = React.useState(null);
   const [secondSwiper, setSecondSwiper] = React.useState(null);
 
@@ -80,6 +81,12 @@ function SwiperArea({
     ...DEFAULT_SWIPER_OPTION,
     ...secondSwiperOption,
   };
+
+  React.useEffect(() => {
+    window.addEventListener('resize', () =>
+      setUniqueSwiperKey(new Date().getTime()),
+    );
+  }, []);
 
   const GET_CLASSNAME1st =
     firstClassName == undefined
@@ -118,6 +125,7 @@ function SwiperArea({
       <>
         {/* S: double swiper */}
         <Swiper // first swiper
+          key={`ssw-${uniqueSwiperKey}-01`}
           modules={SWIPER_MODULE}
           onSwiper={setFirstSwiper}
           controller={{ control: secondSwiper }}
@@ -127,6 +135,7 @@ function SwiperArea({
           {FIRST_SWIPER_MAP}
         </Swiper>
         <Swiper // second swiper
+          key={`ssw-${uniqueSwiperKey}-02`}
           modules={SWIPER_MODULE}
           onSwiper={setSecondSwiper}
           controller={{ control: firstSwiper }}
@@ -166,6 +175,7 @@ function SwiperArea({
     >
       {/* S: single swiper */}
       <Swiper
+        key={`ssw-${uniqueSwiperKey}`}
         modules={SWIPER_MODULE}
         {...COMPUTED_SWIPER_OPTION}
         {...GET_CLASSNAME}
