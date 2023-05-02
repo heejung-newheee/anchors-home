@@ -5,6 +5,7 @@ import FinderWorksList from '@/components/finderWorksList';
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
+import WebGlCarousel from '@/components/WebGlCarousel/WebGlCarousel';
 import main from '@/helper/data/json/contents/main/main.json';
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 import './scss/main.scss';
@@ -18,6 +19,9 @@ function Main() {
   return (
     <>
       <main className="main">
+        <section className="section_div is_black">
+          <WebGlCarousel />
+        </section>
         {/* S: about us */}
         <section className="section_div is_black about_us">
           <div className="keyvisual_wrap">
