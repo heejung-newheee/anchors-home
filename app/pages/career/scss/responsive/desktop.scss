@@ -1,7 +1,7 @@
 @include desktop {
   .career{
-    .visual{
-      height: 80rem;
+    .key_visual{
+      height: 62vw;
     }
     .career_text{
       padding: 16rem 9rem;
@@ -127,6 +127,9 @@
           }
         }
       }
+    }
+    .sub_visual{
+      height: 35vw;
     }
   }
 }

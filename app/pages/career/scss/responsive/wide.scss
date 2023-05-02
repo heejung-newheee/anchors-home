@@ -1,8 +1,6 @@
 @include wide {
   .career{
-    .key_visual{
-      height: 75vw;
-    }
+    .key_visual{}
     .career_text{
       padding: 18rem 11.8rem;
       p:nth-of-type(1){
@@ -124,7 +122,7 @@
       }
     }
     .sub_visual{
-      height: 61vw;
+      height: 34vw;
     }
   }
 }
