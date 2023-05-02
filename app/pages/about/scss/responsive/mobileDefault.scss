@@ -9,6 +9,7 @@
   }
   .about_intro_text_wrap {
     padding-top: 6rem;
+    padding-bottom: 6rem;
     text-align: center;
     @extend %layout_fix;
     background-color: $color_white;
@@ -20,31 +21,113 @@
       color: #121212;
       & span {
         font-family: $font_en_italic;
+        @extend %font_enIntro;
       }
     }
     .description:nth-child(2) {
       font-family: $font_ko;
       @extend %font_primary;
-      margin-bottom: 6rem;
+
+      br {
+        display: none;
+      }
     }
   }
+  .about_intro_swiper {
+    .image_swiper {
+      width: 74.534161%;
+      .swiper-pagination {
+        bottom: -3.6rem;
+      }
+    }
+    .text_swiper {
+      padding: 8.6rem 2.4rem 0;
+      .swiper-slide {
+        position: relative;
+
+        &:first-child {
+          padding-bottom: 9rem;
+          margin-bottom: 10.6rem;
+        }
+        &:nth-child(2) {
+          padding-bottom: 10rem;
+          margin-bottom: 11.6rem;
+        }
+        &:nth-child(3) {
+          padding-bottom: 11.6rem;
+          margin-bottom: 11.6rem;
+        }
+
+        &:after {
+          display: block;
+          content: '';
+          position: absolute;
+          width: 17rem;
+          height: 1.6rem;
+          background: url(/assets/images/ico/ico_wave.svg) center / cover no-repeat;
+        }
+        &:first-child:after {
+          right: 0;
+          margin-top: 8.8rem;
+        }
+        &:nth-child(2):after {
+          right: 5rem;
+          margin-top: 5.2rem;
+        }
+        &:nth-child(3):after {
+          left: 0;
+          margin-top: 4.2rem;
+        }
+        .intro_text {
+          transition: .9s;
+          transition-delay: .1s;
+          position: relative;
+          opacity: 0;
+          font-family: $font-ko;
+          transform: translateY(50%);
+
+          pre {
+            @extend %font_contentsTitle;
+            font-weight: 700;
+            margin-bottom: 2.4rem;
+            white-space: pre-wrap;
+          }
+          p {
+            @extend %font_primary;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0 !important;
+        }
+
+        &.swiper-slide-active div {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
 
   .anchors_profile {
     background-color: $color_black;
     color: $color_white;
-    @extend %layout_fix;
     padding-top: 10rem;
     padding-bottom: 10rem;
 
     h3 {
+      padding: 0 2.4rem;
       font-family: $font_en;
       font-size: 1.6rem;
       line-height: 1.6rem;
       letter-spacing: -0.03em;
       margin-bottom: 6rem;
       font-weight: 400;
+      max-width: 1816px;
     }
     div.profile_development {
+      @extend %layout_fix;
       position: relative;
       padding-bottom: 12.1rem;
       &:last-child {
@@ -54,27 +137,31 @@
       .profile_grow_text {
         font-family: $font-en;
         @extend %font_sectionTitle;
+        font-weight: 500;
         margin-bottom: 5rem;
       }
       .profile_grow_number {
         font-size: 5rem;
         font-family: $font-en;
         letter-spacing: -0.03em;
-        & span {
+        span {
           @extend %font_visualDescription;
           line-height: 100%;
           margin-left: 0.8rem;
           display: inline-block;
           margin-bottom: 3rem;
+          letter-spacing: -0.03em;
         }
       }
-      .profile_lottie_arrow {
+      .lottieTrigger {
         position: absolute;
         bottom: 0;
         left: -24.1rem;
       }
     }
     div.profile_award {
+      @extend %layout_fix;
+      padding-top: 9rem;
       .profile_award_description {
         font-family: $font-en;
         font-weight: 500;
@@ -96,6 +183,7 @@
 
         &:first-child {
           border-top: 1px solid rgba(255,255,255,1);
+          border-bottom: unset;
         }
 
         .element_title {
@@ -113,12 +201,23 @@
     }
     div.profile_partner {
       .description {
+        padding: 0 2.4rem;
         font-family: $font_en;
         font-weight: 500;
         @extend %font_sectionTitle;
         letter-spacing: -0.03em;
         margin-bottom: 5rem;
         margin-top: 10rem;
+        max-width: 1816px;
+      }
+      .swiper {
+        .swiper-slide {
+          width: 16rem;
+          height: 4.7rem;
+        }
+        &.customer_logo_swiper_01 {
+          margin-bottom: 2.6rem;
+        }
       }
       .disclaimer {
         margin-bottom: 2.6rem;
@@ -137,23 +236,31 @@
     }
   }
   .about_members {
-    .description {
-      @extend %font_enIntro;
-      font-family: $font-en;
-      text-align: center;
-      letter-spacing: -0.03em;
-      margin-bottom: 3rem;
-      color: #121212;
+    background-color: $color_white;
+    .about_members_desc {
+      max-width: 1536px;
+      margin: 0 auto;
+      .description {
+        @extend %font_enIntro;
+        font-family: $font-en;
+        text-align: center;
+        letter-spacing: -0.03em;
+        margin-bottom: 3rem;
+        margin-top: 6rem;
+        color: #121212;
 
-      & span {
-        font-family: $font-en_italic;
-      }
+        & span {
+          font-family: $font-en_italic;
+          @extend %font_enIntro;
+        }
 
-      &:nth-child(3) {
-        font-family: $font-ko;
-        @extend %font_primary;
-        color: $color_black;
-        margin-bottom: 6rem;
+        &:nth-child(2) {
+          font-family: $font-ko;
+          @extend %font_primary;
+          color: $color_black;
+          margin-top: 0;
+          margin-bottom: 6rem;
+        }
       }
     }
     .about_members_swiper {
@@ -175,35 +282,38 @@
           line-height: 100%;
           letter-spacing: -0.03em;
           z-index: 1;
+          width: 100%;
+          text-align: center;
         }
 
-          .detail_slide {
-            width: 26rem;
-            height: 26rem;
-            position: relative;
-            overflow: hidden;
+        .detail_slide {
+          width: 26rem;
+          height: 26rem;
+          position: relative;
+          overflow: hidden;
 
-            .detail {
-              div {
-                padding: 3.4rem 1.8rem 1.8rem 2.8rem;
-                b {
-                  display: inline-block;
-                  margin-bottom: 0.6rem;
-                  font-size: 1.8rem;
-                  line-height: 100%;
-                }
-                .member_team {
-                  font-size: 1.4rem;
-                  line-height: 140%;
-                  margin-bottom: 2rem;
-                }
-                .member_hashtag {
-                  @extend %font_visualDescription;
-                }
+          .detail {
+            div {
+              padding: 3.4rem 1.8rem 1.8rem 2.8rem;
+              b {
+                display: inline-block;
+                margin-bottom: 0.6rem;
+                font-size: 1.8rem;
+                line-height: 100%;
+              }
+              .member_team {
+                font-size: 1.4rem;
+                line-height: 140%;
+                margin-bottom: 2rem;
+              }
+              .member_hashtag {
+                @extend %font_visualDescription;
+                white-space: pre-wrap;
               }
             }
           }
         }
+      }
       .swiper-scrollbar {
         bottom: 0;
       }

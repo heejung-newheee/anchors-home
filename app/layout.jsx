@@ -4,8 +4,8 @@ import Header from '@/components/Header/Header';
 
 export default function RootLayout({ children }) {
   return (
-    <html>
-      <body lang="ko">
+    <html lang="ko">
+      <body>
         <Header />
         {children}
         <Footer />

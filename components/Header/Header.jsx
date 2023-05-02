@@ -2,12 +2,35 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 
+import { usePathname } from 'next/navigation';
+
 import Logo from '@/components/Logo/Logo';
 import Menu from '@/components/Menu/Menu';
+
 import './scss/Header.scss';
+import { pagesIsBgBlack, pagesIsBgWhite } from '@/helper/view-helper';
+
+/*
+HEADER_NEXT : 상수
+HeaderNext : 클래스 or 선언
+headerNext : 실제 값을 가지는 변수
+header_next : (대소문자 구별하지 않는) 프로퍼티, Attributes
+*/
 
 export default function Header({ className }) {
-  const [headerBgType, setHeaderBgType] = useState('');
+  const location = usePathname();
+
+  const cl = React.useMemo(
+    () =>
+      pagesIsBgBlack.includes(location)
+        ? 'is_black'
+        : pagesIsBgWhite.includes(location)
+        ? 'is_white'
+        : 'is_photo',
+    [location],
+  );
+
+  const [headerBgType, setHeaderBgType] = useState(cl);
 
   const HandleScroll = () => {
     const HEADER = document.querySelector('.header');
@@ -38,10 +61,7 @@ export default function Header({ className }) {
   };
 
   useEffect(() => {
-    const HEADER = document.querySelector('.header');
-    const HEADER_NEXT = HEADER.nextElementSibling.className;
-    HEADER_NEXT.includes('new_header') && HEADER.remove();
-
+    // resetColorType();
     window.addEventListener('scroll', HandleScroll);
     return () => {
       window.removeEventListener('scroll', HandleScroll);
