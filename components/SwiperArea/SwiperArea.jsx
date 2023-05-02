@@ -66,6 +66,7 @@ function SwiperArea({
   className,
   firstClassName,
   secondClassName,
+  autoPlayStop,
 }) {
   const [firstSwiper, setFirstSwiper] = React.useState(null);
   const [secondSwiper, setSecondSwiper] = React.useState(null);
@@ -110,6 +111,8 @@ function SwiperArea({
     )),
   ];
 
+  const swiperRef = React.useRef(null);
+
   if (type === 'double') {
     return (
       <>
@@ -153,15 +156,25 @@ function SwiperArea({
   ];
 
   return (
-    // S: single swiper
-    <Swiper
-      modules={SWIPER_MODULE}
-      {...COMPUTED_SWIPER_OPTION}
-      {...GET_CLASSNAME}
+    <div
+      onMouseEnter={() =>
+        autoPlayStop === 'Y' ? swiperRef.current.swiper.autoplay.stop() : ''
+      }
+      onMouseLeave={() =>
+        autoPlayStop === 'Y' ? swiperRef.current.swiper.autoplay.start() : ''
+      }
     >
-      {SINGLE_SWIPER_MAP}
-    </Swiper>
-    // E: single swiper
+      {/* S: single swiper */}
+      <Swiper
+        modules={SWIPER_MODULE}
+        {...COMPUTED_SWIPER_OPTION}
+        {...GET_CLASSNAME}
+        ref={swiperRef}
+      >
+        {SINGLE_SWIPER_MAP}
+      </Swiper>
+      {/* E: single swiper */}
+    </div>
   );
 }
 
