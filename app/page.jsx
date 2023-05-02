@@ -1,7 +1,7 @@
-import FinderWorksList from '@/app/finderWorksList';
 import Btn from '@/components/Btn/Btn';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
+import FinderWorksList from '@/components/finderWorksList';
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
@@ -87,7 +87,7 @@ function Main() {
             <span className="rolling_text">
               <ScrollTriggerArea
                 type="multiTrigger"
-                triggerStart={{ mobile: '300vh' }}
+                triggerStart={{ mobile: '100vh' }}
                 triggerEnd={{ mobile: '5000vh' }}
                 triggerOffset={'center'}
                 triggerMarkers={false}
@@ -109,7 +109,7 @@ function Main() {
                     triggerOffset={'center'}
                     triggerMarkers={false}
                     XAxes={{
-                      mobile: ['-100vh', '-100vh', '-100vh'],
+                      mobile: ['-150vh', '-150vh', '-150vh'],
                     }}
                     duration={0.01}
                   >

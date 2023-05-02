@@ -8,13 +8,13 @@ import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import Header from '@/components/Header/Header';
+import ImageArray from '@/components/ImageArray/ImageArray';
 import Logo from '@/components/Logo/Logo';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import Visual from '@/components/Visual/Visual';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 import variables from '@/public/assets/scss/_variables.module.scss';
 import './chchaa.scss';
-import ImageArray from "@/components/ImageArray/ImageArray";
 
 const ACCORDION_CONTENTS = [
   {
@@ -34,16 +34,16 @@ const ACCORDION_CONTENTS = [
 
 const PAGETITLE_DATA = [{ word: 'Our' }, { word: 'Works' }];
 
-const DESCRIPTION_DATA = "description<b>tag text</b>"
+const DESCRIPTION_DATA = 'description<b>tag text</b>';
 
-const IMGARR_DATA = [{ url: '/assets/images/이미지', alt : 'alt값'}]
+const IMGARR_DATA = [{ url: '/assets/images/이미지', alt: 'alt값' }];
 export default function Chchaa() {
   return (
     <>
       <ImageArray data={IMGARR_DATA} bgColor="#ff0000" />
-      <Description data={DESCRIPTION_DATA} innerHTMLOption="Y"/>
-      <Description data={DESCRIPTION_DATA} innerHTMLOption="N"/>
-      <Description data={DESCRIPTION_DATA}/>
+      <Description data={DESCRIPTION_DATA} innerHTMLOption="Y" />
+      <Description data={DESCRIPTION_DATA} innerHTMLOption="N" />
+      <Description data={DESCRIPTION_DATA} />
       {/*<Accordion contents={headerFooter.test} />*/}
       {/*<Description dangerouslySetInnerHTML={{ __html: headerFooter.test }} />*/}
       <Header className="new_header is_black" />

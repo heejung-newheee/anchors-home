@@ -2,9 +2,8 @@ import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import Tab from '@/components/Tab/Tab';
 import LottieTest from '@/components/Test/LottieTest';
-import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 import worksList from '@/helper/data/json/contents/works/works.json';
-import React from 'react';
+import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 
 const LOTTIE_STYLE = {
   height: '600px',

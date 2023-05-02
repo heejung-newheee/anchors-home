@@ -1,6 +1,4 @@
 'use client';
-
-import Link from 'next/link';
 import Btn from '@/components/Btn/Btn';
 
 export default function TabButton({ dataList = [] }) {
