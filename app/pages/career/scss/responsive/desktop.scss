@@ -129,8 +129,13 @@
       }
     }
     .sub_visual{
-      img{
+      .visual{
         height: 35vw;
+        img{
+          top: -20px;
+
+          height: 42vw;
+        }
       }
     }
   }

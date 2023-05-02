@@ -24,17 +24,17 @@ export const metadata = {
   description: '',
 };
 const TRIGGER_START = {
-  mobile: '0px',
-  table: '0px',
-  desktop: '50px',
-  wide: '50px',
+  mobile: '10px',
+  table: '10px',
+  desktop: '10px',
+  wide: '10px',
 };
 
 const TRIGGER_END = {
-  mobile: '0px',
-  table: '0px',
+  mobile: '200px',
+  table: '200px',
   desktop: '600px',
-  wide: '600px',
+  wide: '1000px',
 };
 
 function Career() {
@@ -156,29 +156,43 @@ function Career() {
       </section>
       {/* E: welfare 영역 */}
 
-      {/* S: sub_visual 영역 */}
-      <ScrollTriggerArea
-        type="multiTrigger"
-        triggerStart={TRIGGER_START}
-        triggerEnd={TRIGGER_END}
-        triggerOffset={'center'}
-        triggerMarkers={false}
-        YAxes={{
-          mobile: ['10px'],
-          table: ['10px'],
-          desktop: ['50px'],
-          wide: ['50px'],
-        }}
-      >
-        <div>
-          <Visual className="sub_visual">
+      {/*S: sub_visual 영역 */}
+      {/*<ScrollTriggerArea*/}
+      {/*  type="multiTrigger"*/}
+      {/*  triggerStart={TRIGGER_START}*/}
+      {/*  triggerEnd={TRIGGER_END}*/}
+      {/*  triggerOffset={'center'}*/}
+      {/*  triggerMarkers={false}*/}
+      {/*  YAxes={{*/}
+      {/*    mobile: ['10px'],*/}
+      {/*    table: ['10px'],*/}
+      {/*    desktop: ['50px'],*/}
+      {/*    wide: ['50px'],*/}
+      {/*  }}*/}
+      {/*>*/}
+      <div className="sub_visual">
+        <Visual>
+          <ScrollTriggerArea
+            type="multiTrigger"
+            triggerStart={TRIGGER_START}
+            triggerEnd={TRIGGER_END}
+            triggerOffset={'center'}
+            triggerMarkers={true}
+            YAxes={{
+              mobile: ['10px'],
+              table: ['10px'],
+              desktop: ['30px'],
+              wide: ['30px'],
+            }}
+          >
             <img
               src="/assets/images/contents/career/img_visual_lights.png"
               alt="사무실 조명 이미지"
             />
-          </Visual>
-        </div>
-      </ScrollTriggerArea>
+          </ScrollTriggerArea>
+        </Visual>
+      </div>
+      {/*</ScrollTriggerArea>*/}
       {/* E: sub_visual 영역 */}
     </main>
   );

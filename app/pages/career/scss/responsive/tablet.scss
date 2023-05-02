@@ -164,8 +164,11 @@
       }
     }
     .sub_visual{
-      img{
+      .visual{
         height: 44vw;
+        img{
+          height: 50vw;
+        }
       }
     }
   }

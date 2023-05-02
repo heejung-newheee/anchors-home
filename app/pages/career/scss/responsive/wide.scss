@@ -57,7 +57,6 @@
         width: 93vw;
         height: 61rem;
         .swiper-slide{
-         max-height: 61rem;
           .visual{
             height: 61rem;
           }
@@ -123,8 +122,12 @@
       }
     }
     .sub_visual{
-      img{
-        height: 34vw;
+      .visual{
+        height: 56rem;
+        img{
+          top: -70px;
+          height: 63rem;
+        }
       }
     }
   }
