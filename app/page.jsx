@@ -19,6 +19,9 @@ function Main() {
   return (
     <>
       <main className="main">
+        <section className="section_div is_black">
+          <WebGlCarousel />
+        </section>
         {/* S: about us */}
         <section className="section_div is_black about_us">
           <div className="keyvisual_wrap">
