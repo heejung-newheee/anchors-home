@@ -11,6 +11,7 @@ import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Visual from '@/components/Visual/Visual';
 import careerComment from '@/helper/data/json/contents/career/careerComment.json';
 import careerMembers from '@/helper/data/json/contents/career/careerMembers.json';
+import careerProcess from '@/helper/data/json/contents/career/careerProcess.json';
 import careerText from '@/helper/data/json/contents/career/careerText.json';
 import careerWelfare from '@/helper/data/json/contents/career/careerWelfare.json';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
@@ -93,6 +94,7 @@ function Career() {
         />
         <SwiperArea
           type="single"
+          autoPlayStop="Y"
           swiperContent={[
             ...careerComment.content,
             ...careerComment.content,
@@ -157,19 +159,6 @@ function Career() {
       {/* E: welfare 영역 */}
 
       {/*S: sub_visual 영역 */}
-      {/*<ScrollTriggerArea*/}
-      {/*  type="multiTrigger"*/}
-      {/*  triggerStart={TRIGGER_START}*/}
-      {/*  triggerEnd={TRIGGER_END}*/}
-      {/*  triggerOffset={'center'}*/}
-      {/*  triggerMarkers={false}*/}
-      {/*  YAxes={{*/}
-      {/*    mobile: ['10px'],*/}
-      {/*    table: ['10px'],*/}
-      {/*    desktop: ['50px'],*/}
-      {/*    wide: ['50px'],*/}
-      {/*  }}*/}
-      {/*>*/}
       <div className="sub_visual">
         <Visual>
           <ScrollTriggerArea
@@ -192,8 +181,25 @@ function Career() {
           </ScrollTriggerArea>
         </Visual>
       </div>
-      {/*</ScrollTriggerArea>*/}
       {/* E: sub_visual 영역 */}
+
+      {/* S: 채용 tab 영역 */}
+      <section className="employment_area">
+        <Description
+          className="employment_text"
+          data={careerText.textList[3].text1}
+        />
+        <article className="process_tab">
+          {careerProcess.procedure.map((data, idx) => (
+            <div key={idx}>
+              <Disclaimer data={data.number} />
+              <Disclaimer data={data.text} />
+            </div>
+          ))}
+        </article>
+        <article className="faq_tab" />
+      </section>
+      {/* E: 채용 tab 영역 */}
     </main>
   );
 }

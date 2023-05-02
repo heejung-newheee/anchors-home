@@ -206,6 +206,7 @@
     }
   }
   .sub_visual{
+    margin-bottom: 8rem;
     overflow: hidden;
     .visual{
       height:61vw;
@@ -219,5 +220,37 @@
         object-position: center top;
       }
     }
+  }
+  .employment_area{
+    overflow: hidden;
+    @extend %layout_fix;
+    .employment_text{
+      @extend %font_sectionTitle;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 4rem;
+    }
+    .process_tab{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      div{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 13.4rem;
+        height: 13.4rem;
+        border-radius: 50%;
+        background-color: rgba(228, 228, 228, 0.4);
+        span{
+          font-size: 1.6rem;
+          font-weight: 700;
+          line-height: 1.6rem;
+          text-align: center;
+        }
+      }
+    }
+    .faq_tab{}
   }
 }
