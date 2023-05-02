@@ -5,6 +5,13 @@ import { useMediaQuery } from 'react-responsive';
 
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 
+const DEFAULT_AXES = {
+  mobile: ['0px'],
+  table: ['0px'],
+  desktop: ['0px'],
+  wide: ['0px'],
+};
+
 function ScrollTriggerArea({
   type,
   lottieOption,
@@ -14,8 +21,8 @@ function ScrollTriggerArea({
   triggerOffset = 'top',
   triggerMarkers = false,
   triggerScrub = 0.5,
-  XAxes = { mobile: ['0px'], table: ['0px'], desktop: ['0px'], wide: ['0px'] },
-  YAxes = { mobile: ['0px'], table: ['0px'], desktop: ['0px'], wide: ['0px'] },
+  XAxes = DEFAULT_AXES,
+  YAxes = DEFAULT_AXES,
   easing = 'elastic.out(0.1, 0)',
   duration = [1],
   toScale = [1],
@@ -28,6 +35,11 @@ function ScrollTriggerArea({
   const BREAKPOINT_DESKTOP = useMediaQuery({ maxWidth: 1536 });
   const CHILDREN_ARR = Array.isArray(children) ? children : [children];
 
+  // UncleCho : XAxes, YAxes 값 각 프로퍼티별 기본값 '0px' 유지하고 별도로 들어오는 프로퍼티만 적용하는 방식으로 변경함 (20230502)
+  const rXAxes = { ...DEFAULT_AXES, ...XAxes };
+  const rYAxes = { ...DEFAULT_AXES, ...YAxes };
+  // ---------------------------------------------------------------------------------------- 끝
+
   let TRIGGER_OPTION_START = '';
   let TRIGGER_OPTION_END = '';
   let MUTITRIGGER_OPTION_XAXES;
@@ -36,23 +48,23 @@ function ScrollTriggerArea({
   if (BREAKPOINT_MOBILE) {
     TRIGGER_OPTION_START = triggerStart.mobile;
     TRIGGER_OPTION_END = triggerEnd.mobile;
-    MUTITRIGGER_OPTION_XAXES = XAxes.mobile;
-    MUTITRIGGER_OPTION_YAXES = YAxes.mobile;
+    MUTITRIGGER_OPTION_XAXES = rXAxes.mobile;
+    MUTITRIGGER_OPTION_YAXES = rYAxes.mobile;
   } else if (BREAKPOINT_TABLE) {
     TRIGGER_OPTION_START = triggerStart.table;
     TRIGGER_OPTION_END = triggerEnd.table;
-    MUTITRIGGER_OPTION_XAXES = XAxes.table;
-    MUTITRIGGER_OPTION_YAXES = YAxes.table;
+    MUTITRIGGER_OPTION_XAXES = rXAxes.table;
+    MUTITRIGGER_OPTION_YAXES = rYAxes.table;
   } else if (BREAKPOINT_DESKTOP) {
     TRIGGER_OPTION_START = triggerStart.desktop;
     TRIGGER_OPTION_END = triggerEnd.desktop;
-    MUTITRIGGER_OPTION_XAXES = XAxes.desktop;
-    MUTITRIGGER_OPTION_YAXES = YAxes.desktop;
+    MUTITRIGGER_OPTION_XAXES = rXAxes.desktop;
+    MUTITRIGGER_OPTION_YAXES = rYAxes.desktop;
   } else {
     TRIGGER_OPTION_START = triggerStart.wide;
     TRIGGER_OPTION_END = triggerEnd.wide;
-    MUTITRIGGER_OPTION_XAXES = XAxes.wide;
-    MUTITRIGGER_OPTION_YAXES = YAxes.wide;
+    MUTITRIGGER_OPTION_XAXES = rXAxes.wide;
+    MUTITRIGGER_OPTION_YAXES = rYAxes.wide;
   }
 
   let TRIGGER_OPTION = {
