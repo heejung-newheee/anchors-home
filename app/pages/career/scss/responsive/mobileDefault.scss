@@ -206,6 +206,11 @@
     }
   }
   .sub_visual{
-    height: 61vw;
+    height:auto;
+    img{
+      height: 61vw;
+      object-fit: cover;
+      object-position: center top;
+    }
   }
 }

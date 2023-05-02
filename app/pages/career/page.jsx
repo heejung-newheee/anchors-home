@@ -5,6 +5,7 @@ import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
 import MoreDetail from '@/components/MoreDetail/MoreDetail';
 import PageTitle from '@/components/PageTitle/PageTitle';
+import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Visual from '@/components/Visual/Visual';
 import careerComment from '@/helper/data/json/contents/career/careerComment.json';
@@ -22,15 +23,31 @@ export const metadata = {
   title: 'Anchors',
   description: '',
 };
+const TRIGGER_START = {
+  mobile: '0px',
+  table: '0px',
+  desktop: '50px',
+  wide: '50px',
+};
+
+const TRIGGER_END = {
+  mobile: '0px',
+  table: '0px',
+  desktop: '600px',
+  wide: '600px',
+};
 
 function Career() {
   return (
     <main className="career">
       <PageTitle data={headerFooter.menuList[4].name} />
+
+      {/* S: key_visual 영역 */}
       <Visual
         imgUrl="/assets/images/contents/career/img_keyvisual_members.png"
         className="key_visual"
       />
+      {/* E: key_visual 영역 */}
 
       {/* S: 비주얼 이미지 아래 텍스트 */}
       <div className="career_text">
@@ -138,10 +155,31 @@ function Career() {
         </article>
       </section>
       {/* E: welfare 영역 */}
-      <Visual
-        imgUrl="/assets/images/contents/career/img_visual_lights.png"
-        className="sub_visual"
-      />
+
+      {/* S: sub_visual 영역 */}
+      <ScrollTriggerArea
+        type="multiTrigger"
+        triggerStart={TRIGGER_START}
+        triggerEnd={TRIGGER_END}
+        triggerOffset={'center'}
+        triggerMarkers={false}
+        YAxes={{
+          mobile: ['10px'],
+          table: ['10px'],
+          desktop: ['50px'],
+          wide: ['50px'],
+        }}
+      >
+        <div>
+          <Visual className="sub_visual">
+            <img
+              src="/assets/images/contents/career/img_visual_lights.png"
+              alt="사무실 조명 이미지"
+            />
+          </Visual>
+        </div>
+      </ScrollTriggerArea>
+      {/* E: sub_visual 영역 */}
     </main>
   );
 }
