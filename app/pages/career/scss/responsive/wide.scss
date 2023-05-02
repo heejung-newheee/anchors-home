@@ -1,7 +1,7 @@
 @include wide {
   .career{
-    .visual{
-      height: 96rem;
+    .key_visual{
+      height: 75vw;
     }
     .career_text{
       padding: 18rem 11.8rem;
@@ -122,6 +122,9 @@
           }
         }
       }
+    }
+    .sub_visual{
+      height: 61vw;
     }
   }
 }

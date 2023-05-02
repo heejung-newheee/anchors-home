@@ -27,7 +27,10 @@ function Career() {
   return (
     <main className="career">
       <PageTitle data={headerFooter.menuList[4].name} />
-      <Visual imgUrl="/assets/images/contents/career/img_keyvisual_members.png" />
+      <Visual
+        imgUrl="/assets/images/contents/career/img_keyvisual_members.png"
+        className="key_visual"
+      />
 
       {/* S: 비주얼 이미지 아래 텍스트 */}
       <div className="career_text">
@@ -59,12 +62,6 @@ function Career() {
           secondSwiperOption={{
             pagination: false,
             navigation: false,
-            // breakpoints: {
-            //   360: {},
-            //   768: {},
-            //   1280: {},
-            //   1536: {},
-            // },
           }}
         />
       </section>
@@ -141,6 +138,10 @@ function Career() {
         </article>
       </section>
       {/* E: welfare 영역 */}
+      <Visual
+        imgUrl="/assets/images/contents/career/img_visual_lights.png"
+        className="sub_visual"
+      />
     </main>
   );
 }
