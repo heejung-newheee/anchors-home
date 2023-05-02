@@ -57,6 +57,7 @@
         width: 93vw;
         height: 39vw;
         .swiper-slide{
+          height: 39vw;
           .visual{
             height: 39vw;
           }
@@ -122,7 +123,9 @@
       }
     }
     .sub_visual{
-      height: 34vw;
+      img{
+        height: 34vw;
+      }
     }
   }
 }
