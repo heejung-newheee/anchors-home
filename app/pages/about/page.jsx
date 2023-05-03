@@ -20,6 +20,8 @@ import lottie_arrow from '@/public/assets/images/lottie/lottieAboutusUpArrow.jso
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 
 import './scss/about.scss';
+import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
+import React from 'react';
 
 export const metadata = {
   title: 'Anchors',
@@ -187,55 +189,26 @@ function About() {
               </>
             }
           />
-          <SwiperArea
-            key="swiper02"
-            type="single"
-            swiperOption={{
-              slidesPerView: 'auto',
-              navigation: false,
-              pagination: false,
-              scrollbar: false,
-              allowTouchMove: false,
-              observer: true,
-              observeParents: true,
-              autoplay: {
-                delay: 1,
-              },
-              loop: true,
-              speed: 4000,
-            }}
-            className="single scroll-linear customer_logo_swiper_01"
-            swiperContent={aboutProfile.customerLogo.map((cont, idx) => (
-              <div key={`sw02-${idx}`}>
-                <img src={aboutProfile.imgUrl + cont.img} alt={cont.alt} />
-              </div>
-            ))}
-          />
-          <SwiperArea
-            key="swiper03"
-            type="single"
-            swiperOption={{
-              slidesPerView: 'auto',
-              navigation: false,
-              pagination: false,
-              scrollbar: false,
-              allowTouchMove: false,
-              observer: true,
-              observeParents: true,
-              autoplay: {
-                delay: 1,
-                reverseDirection: true,
-              },
-              loop: true,
-              speed: 4000,
-            }}
-            className="single scroll-linear"
-            swiperContent={aboutProfile.customerLogo.map((cont, idx) => (
-              <div key={`sw03-${idx}`}>
-                <img src={aboutProfile.imgUrl + cont.img} alt={cont.alt} />
-              </div>
-            ))}
-          />
+          <div>
+            <InfiniteRolling className="about_partner">
+              {aboutProfile.customerLogo.map((cont, idx) => (
+                <img
+                  key={idx}
+                  src={aboutProfile.imgUrl + cont.img}
+                  alt={cont.alt}
+                />
+              ))}
+            </InfiniteRolling>
+            <InfiniteRolling className="about_partner" reverse="Y">
+              {aboutProfile.customerLogo.map((cont, idx) => (
+                <img
+                  key={idx}
+                  src={aboutProfile.imgUrl + cont.img}
+                  alt={cont.alt}
+                />
+              ))}
+            </InfiniteRolling>
+          </div>
           <Disclaimer data={<>Want to know about us</>} />
           <Btn className="download_btn" type="a">
             Download

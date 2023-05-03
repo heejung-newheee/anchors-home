@@ -31,9 +31,9 @@
   }
 
   .rolling_wrap {
-    height: 300vh;
+    height: 100vh;
     position: relative;
-    padding-bottom: 30vh;
+    overflow: hidden;
 
     .rolling_text {
       letter-spacing: $en_letterSpacing;
@@ -41,20 +41,20 @@
       white-space: nowrap;
       display: block;
       width: auto;
-      position: -webkit-sticky;
-      position: sticky;
+      font-size: 80vh; // $main
+      //position: fixed;
       left: 0;
       top: 10vh;
-      //transform: translateX(-300%);
-      font-size: 80vh; // $main
+      //padding-bottom: 100vh;
 
       span {
         font-size: inherit;
         position: relative;
         display: inline-block;
-        left: 150vw;
-        &:first-child {
-          //left: 50%;
+        margin-left: 50vw;
+        &:last-child {
+          margin-left: 0;
+          z-index: -1;
         }
       }
     }
@@ -113,11 +113,19 @@
     .bg_white {
       background-color: $color_white;
 
+      &:before {
+        width: 100vw;
+        height: 80vh;
+        display: block;
+        content:'';
+        background-color: $color_blue;
+      }
+
       .swiper_bundle {
-        height: 100vh;
+        height: 80vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: top;
 
         .swiper {
           overflow: visible !important;
@@ -147,7 +155,9 @@
       }
 
       .intro_area {
-        height: 100vh;
+        position: relative;
+        z-index: 10;
+        color: $color_black;
 
         a {
           background-color: $color_black;
@@ -160,39 +170,63 @@
   .our_works {
 
     .rolling_wrap {
+      height: 200vh;
 
       .rolling_text {
+        top: 25vh;
+        margin-left: 30vw;
         font-size: 50vw; // $main
       }
-    }
 
-    .portfolio {
-      overflow: hidden;
-      background-color: $color_black;
-      color: $color_white;
-      text-align: center;
-      height: 100vh;
+      img {
+        width: 30vh;
 
-      .visual {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        .element_title {
-          @extend %font_visualTitle;
+        &:nth-child(1) {
+          top: 0;
         }
-        .disclaimer {
-          @extend %font_visualDescription;
+        &:nth-child(2) {
+          bottom: -10%;
         }
-        a {
-          @extend %btn_primary_ghost;
+        &:nth-child(3) {
+          top: 0;
         }
       }
-
-
     }
+
+     .portfolio_wrap {
+          //position: fixed;
+          left: 100vw;
+          top: 0;
+          width: 100vw;
+        .portfolio {
+         overflow: hidden;
+         background-color: $color_black;
+         color: $color_white;
+         text-align: center;
+         height: 100vh;
+
+         .visual {
+           height: 100%;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+
+           .element_title {
+             @extend %font_visualTitle;
+           }
+
+           .disclaimer {
+             @extend %font_visualDescription;
+           }
+
+           a {
+             @extend %btn_primary_ghost;
+           }
+         }
+       }
+
+      }
 
   }
 }

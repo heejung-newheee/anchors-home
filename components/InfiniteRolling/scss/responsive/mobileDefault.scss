@@ -1,0 +1,49 @@
+.InfiniteRolling {
+   position: relative;
+   overflow: hidden;
+   box-sizing: border-box;
+
+   &.reverse {
+     @keyframes infiniteRolling2 {
+          0% {
+              right: 0
+          }
+
+          to {
+              right: -100%
+          }
+     }
+
+     .rolling_inner {
+       animation: infiniteRolling2 40s linear infinite;
+     }
+
+   }
+
+   @keyframes infiniteRolling {
+     0% {
+         left: 0
+     }
+
+     to {
+         left: -100%
+         
+     }
+   }
+
+ .rolling_inner {
+   position: absolute;
+   animation: infiniteRolling 40s linear infinite;
+
+   ul {
+     display: flex;
+     width: fit-content;
+     li {
+       img {
+         width: 100%;
+         height: auto;
+       }
+     }
+   }
+ }
+}

@@ -1,9 +1,16 @@
 'use client';
 import React, { useRef } from 'react';
-import { Tween, ScrollTrigger } from 'react-gsap';
+import { Tween, ScrollTrigger, Timeline } from 'react-gsap';
 import { useMediaQuery } from 'react-responsive';
 
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
+
+const DEFAULT_AXES = {
+  mobile: ['0px'],
+  table: ['0px'],
+  desktop: ['0px'],
+  wide: ['0px'],
+};
 
 function ScrollTriggerArea({
   type,
@@ -14,8 +21,8 @@ function ScrollTriggerArea({
   triggerOffset = 'top',
   triggerMarkers = false,
   triggerScrub = 0.5,
-  XAxes = { mobile: ['0px'], table: ['0px'], desktop: ['0px'], wide: ['0px'] },
-  YAxes = { mobile: ['0px'], table: ['0px'], desktop: ['0px'], wide: ['0px'] },
+  XAxes = DEFAULT_AXES,
+  YAxes = DEFAULT_AXES,
   easing = 'elastic.out(0.1, 0)',
   duration = [1],
   toScale = [1],
@@ -23,10 +30,17 @@ function ScrollTriggerArea({
   children,
 }) {
   const COMPONENTS_REF = useRef();
+  const [isActive, setIsActive] = React.useState();
+
   const BREAKPOINT_MOBILE = useMediaQuery({ maxWidth: 768 });
   const BREAKPOINT_TABLE = useMediaQuery({ maxWidth: 1280 });
   const BREAKPOINT_DESKTOP = useMediaQuery({ maxWidth: 1536 });
   const CHILDREN_ARR = Array.isArray(children) ? children : [children];
+
+  // UncleCho : XAxes, YAxes 값 각 프로퍼티별 기본값 '0px' 유지하고 별도로 들어오는 프로퍼티만 적용하는 방식으로 변경함 (20230502)
+  const rXAxes = { ...DEFAULT_AXES, ...XAxes };
+  const rYAxes = { ...DEFAULT_AXES, ...YAxes };
+  // ---------------------------------------------------------------------------------------- 끝
 
   let TRIGGER_OPTION_START = '';
   let TRIGGER_OPTION_END = '';
@@ -36,23 +50,23 @@ function ScrollTriggerArea({
   if (BREAKPOINT_MOBILE) {
     TRIGGER_OPTION_START = triggerStart.mobile;
     TRIGGER_OPTION_END = triggerEnd.mobile;
-    MUTITRIGGER_OPTION_XAXES = XAxes.mobile;
-    MUTITRIGGER_OPTION_YAXES = YAxes.mobile;
+    MUTITRIGGER_OPTION_XAXES = rXAxes.mobile;
+    MUTITRIGGER_OPTION_YAXES = rYAxes.mobile;
   } else if (BREAKPOINT_TABLE) {
     TRIGGER_OPTION_START = triggerStart.table;
     TRIGGER_OPTION_END = triggerEnd.table;
-    MUTITRIGGER_OPTION_XAXES = XAxes.table;
-    MUTITRIGGER_OPTION_YAXES = YAxes.table;
+    MUTITRIGGER_OPTION_XAXES = rXAxes.table;
+    MUTITRIGGER_OPTION_YAXES = rYAxes.table;
   } else if (BREAKPOINT_DESKTOP) {
     TRIGGER_OPTION_START = triggerStart.desktop;
     TRIGGER_OPTION_END = triggerEnd.desktop;
-    MUTITRIGGER_OPTION_XAXES = XAxes.desktop;
-    MUTITRIGGER_OPTION_YAXES = YAxes.desktop;
+    MUTITRIGGER_OPTION_XAXES = rXAxes.desktop;
+    MUTITRIGGER_OPTION_YAXES = rYAxes.desktop;
   } else {
     TRIGGER_OPTION_START = triggerStart.wide;
     TRIGGER_OPTION_END = triggerEnd.wide;
-    MUTITRIGGER_OPTION_XAXES = XAxes.wide;
-    MUTITRIGGER_OPTION_YAXES = YAxes.wide;
+    MUTITRIGGER_OPTION_XAXES = rXAxes.wide;
+    MUTITRIGGER_OPTION_YAXES = rYAxes.wide;
   }
 
   let TRIGGER_OPTION = {
@@ -69,10 +83,12 @@ function ScrollTriggerArea({
         trigger: '.' + type,
         onEnter: (d) => {
           COMPONENTS_REF.current.controll('play');
+          setIsActive(d.isActive);
           console.log('play');
         },
-        onLeave: () => {
+        onLeave: (d) => {
           COMPONENTS_REF.current.controll('pause');
+          setIsActive(d.isActive);
           console.log('pause');
         },
         onUpdate: (d) => {
@@ -108,24 +124,66 @@ function ScrollTriggerArea({
             end={TRIGGER_OPTION_END + ' ' + triggerOffset}
             scrub={triggerScrub}
             markers={triggerMarkers}
+            onEnter={(d) => {
+              setIsActive(d.isActive);
+            }}
+            onLeave={(d) => {
+              setIsActive(d.isActive);
+            }}
           >
-            {CHILDREN_ARR.map((contents, idx) => (
-              <Tween
-                to={{
-                  x: MUTITRIGGER_OPTION_XAXES[idx],
-                  y: MUTITRIGGER_OPTION_YAXES[idx],
-                  scale: toScale[idx],
-                }}
-                from={{ scale: fromScale[idx] }}
-                key={idx}
-                ease={easing}
-                duration={duration[idx]}
-              >
-                {contents}
-              </Tween>
-            ))}
+            <div className={'wrapper ' + (isActive ? 'isActive' : '')}>
+              {CHILDREN_ARR.map((contents, idx) => (
+                <Tween
+                  to={{
+                    x: MUTITRIGGER_OPTION_XAXES[idx],
+                    y: MUTITRIGGER_OPTION_YAXES[idx],
+                    scale: toScale[idx],
+                  }}
+                  from={{ scale: fromScale[idx] }}
+                  key={idx}
+                  ease={easing}
+                  duration={duration[idx]}
+                >
+                  {contents}
+                </Tween>
+              ))}
+            </div>
           </ScrollTrigger>
         </>
+      );
+    case 'test':
+      return (
+        <ScrollTrigger
+          start={TRIGGER_OPTION_START + ' ' + triggerOffset}
+          end={TRIGGER_OPTION_END + ' ' + triggerOffset}
+          scrub={triggerScrub}
+          markers={triggerMarkers}
+          onEnter={(d) => {
+            setIsActive(d.isActive);
+          }}
+          onLeave={(d) => {
+            setIsActive(d.isActive);
+          }}
+        >
+          <div
+            className={'wrapper ' + (isActive ? 'isActive' : '')}
+            style={{ height: '600px' }}
+          >
+            <Tween to={{ x: '200px' }} duration={1}>
+              <div style={{ display: 'inline-block' }}>Expertis</div>
+            </Tween>
+            <Tween to={{ x: '200px' }} duration={1}>
+              <div style={{ display: 'inline-block' }}>
+                sfkdfbvnxvckjxkhkjjxvckjj
+              </div>
+            </Tween>
+            <Timeline target={<div style={{ display: 'inline-block' }}>e</div>}>
+              <Tween to={{ x: '150px' }} duration={1} />
+              <Tween to={{ scale: '30' }} duration={1} />
+              <Tween to={{ scale: '30' }} duration={1} />
+            </Timeline>
+          </div>
+        </ScrollTrigger>
       );
   }
 }
