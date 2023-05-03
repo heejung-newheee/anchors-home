@@ -19,9 +19,6 @@ function Main() {
   return (
     <>
       <main className="main">
-        <section className="section_div is_black">
-          <WebGlCarousel />
-        </section>
         {/* S: about us */}
         <section className="section_div is_black about_us">
           <div className="keyvisual_wrap">
@@ -34,7 +31,9 @@ function Main() {
               data="At Anchors, our executives and employees are hard at work to improve customer service with their professional expertise."
             />
           </div>
-          {/*RotateRolling*/}
+
+          <WebGlCarousel />
+
           <div className="intro_area">
             <Description
               className="intro_en"
