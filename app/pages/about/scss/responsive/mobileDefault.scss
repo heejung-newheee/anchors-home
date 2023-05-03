@@ -210,13 +210,16 @@
         margin-top: 10rem;
         max-width: 1816px;
       }
-      .swiper {
-        .swiper-slide {
-          width: 16rem;
-          height: 4.7rem;
-        }
-        &.customer_logo_swiper_01 {
+      .about_partner {
+        height: 4.7rem;
+
+        &:first-child {
           margin-bottom: 2.6rem;
+        }
+        .rolling_inner {
+          li {
+            width: 16rem;
+          }
         }
       }
       .disclaimer {
