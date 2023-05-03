@@ -1,7 +1,8 @@
 .InfiniteRolling {
    position: relative;
-   overflow: hidden;
+//    overflow: hidden;
    box-sizing: border-box;
+   width: 100vw;
 
    &.reverse {
      @keyframes infiniteRolling2 {
@@ -34,11 +35,11 @@
  .rolling_inner {
    position: absolute;
    animation: infiniteRolling 40s linear infinite;
-
+   display: flex;
    ul {
      display: flex;
-     width: fit-content;
      li {
+        display: flex;
        img {
          width: 100%;
          height: auto;

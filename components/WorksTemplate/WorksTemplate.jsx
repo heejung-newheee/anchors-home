@@ -10,6 +10,7 @@ import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import Visual from '@/components/Visual/Visual';
+import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import works from '@/helper/data/json/contents/works/works.json';
 import './scss/WorkTemplate.scss';
 
@@ -18,6 +19,20 @@ export default function WorksTemplate({ className }) {
     className == undefined
       ? { className: 'works_template' }
       : { className: 'works_template ' + className };
+
+  const TRIGGER_START = {
+    mobile: '1848px',
+    table: '2338px',
+    desktop: '2498px',
+    wide: '2800px',
+  };
+
+  const TRIGGER_END = {
+    mobile: '2000px',
+    table: '4000px',
+    desktop: '4000px',
+    wide: '4500px',
+  };
 
   return (
     <section {...GET_CLASSNAME}>
@@ -46,9 +61,23 @@ export default function WorksTemplate({ className }) {
       {/* E: Key Visual 영역 */}
 
       {/* S: View Website Button 영역 */}
-      <Btn className="view_website_btn" type="a" title="view website button">
-        View <br /> Website
-      </Btn>
+      <ScrollTriggerArea
+        type="multiTrigger"
+        triggerOffset={'center'}
+        triggerMarkers={true}
+        triggerStart={TRIGGER_START}
+        triggerEnd={TRIGGER_END}
+        YAxes={{
+          mobile: ['200px'],
+          table: ['0px'],
+          desktop: ['500px'],
+          wide: ['700px'],
+        }}
+      >
+        <Btn className="view_website_btn" type="a" title="view website button">
+          View <br /> Website
+        </Btn>
+      </ScrollTriggerArea>
       {/* E: View Website Button 영역 */}
 
       {/* S: Text 영역 */}

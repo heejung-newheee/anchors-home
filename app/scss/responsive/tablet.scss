@@ -1,2 +1,22 @@
 @include tablet {
+    .rolling_area_wrap {
+        margin-top: 35.8rem;
+        margin-bottom: 57.2rem;
+
+        .rolling_area {
+          height: 9.3rem;
+          margin-bottom: 1.5rem;
+
+          li {
+            span {
+              margin-right: 2.7rem;
+              font-size: 9.3rem;
+            }
+            img {
+              width: 13.5rem;
+              margin-right: 3.4rem;
+            }
+          }
+        }
+    }
 }

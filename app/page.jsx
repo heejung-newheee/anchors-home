@@ -6,6 +6,7 @@ import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import WebGlCarousel from '@/components/WebGlCarousel/WebGlCarousel';
+import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
 import main from '@/helper/data/json/contents/main/main.json';
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 import './scss/main.scss';
@@ -216,89 +217,47 @@ function Main() {
             </ScrollTriggerArea>
           </div>
           <div className="section_div is_white bg_white">
-            <div className="swiper_bundle">
-              <SwiperArea
-                type="single"
-                swiperOption={{
-                  slidesPerView: 'auto',
-                  navigation: false,
-                  pagination: false,
-                  allowTouchMove: false,
-                  autoplay: {
-                    delay: 1,
-                  },
-                  loop: true,
-                  speed: 4000,
-                }}
-                className="scroll-linear"
-                swiperContent={main.service.whiteBgRolling.line1.map(
-                  (data, index) => (
-                    <>
-                      <span key={'text' + index}>{data.text}</span>
-                      <img
-                        key={'img' + index}
-                        src={main.imgUrl + data.image}
-                        alt={data.alt}
-                      />
-                    </>
-                  ),
-                )}
-              />
-              <SwiperArea
-                type="single"
-                swiperOption={{
-                  slidesPerView: 'auto',
-                  navigation: false,
-                  pagination: false,
-                  allowTouchMove: false,
-                  autoplay: {
-                    delay: 1,
-                    reverseDirection: true,
-                  },
-                  loop: true,
-                  speed: 4000,
-                }}
-                className="scroll-linear"
-                swiperContent={main.service.whiteBgRolling.line2.map(
-                  (data, index) => (
-                    <>
-                      <span key={'text' + index}>{data.text}</span>
-                      <img
-                        key={'img' + index}
-                        src={main.imgUrl + data.image}
-                        alt={data.alt}
-                      />
-                    </>
-                  ),
-                )}
-              />
-              <SwiperArea
-                type="single"
-                swiperOption={{
-                  slidesPerView: 'auto',
-                  navigation: false,
-                  pagination: false,
-                  allowTouchMove: false,
-                  autoplay: {
-                    delay: 1,
-                  },
-                  loop: true,
-                  speed: 4000,
-                }}
-                className="scroll-linear"
-                swiperContent={main.service.whiteBgRolling.line3.map(
-                  (data, index) => (
-                    <>
-                      <span key={'text' + index}>{data.text}</span>
-                      <img
-                        key={'img' + index}
-                        src={main.imgUrl + data.image}
-                        alt={data.alt}
-                      />
-                    </>
-                  ),
-                )}
-              />
+            <div className="rolling_area_wrap">
+              <InfiniteRolling className="rolling_area" duration="20">
+                {main.service.whiteBgRolling.line1.map((data, index) => (
+                  <>
+                    <span key={'text' + index}>{data.text}</span>
+                    <img
+                      key={'img' + index}
+                      src={main.imgUrl + data.image}
+                      alt={data.alt}
+                    />
+                  </>
+                ))}
+              </InfiniteRolling>
+              <InfiniteRolling
+                className="rolling_area"
+                reverse="Y"
+                duration="20"
+              >
+                {main.service.whiteBgRolling.line2.map((data, index) => (
+                  <>
+                    <span key={'text' + index}>{data.text}</span>
+                    <img
+                      key={'img' + index}
+                      src={main.imgUrl + data.image}
+                      alt={data.alt}
+                    />
+                  </>
+                ))}
+              </InfiniteRolling>
+              <InfiniteRolling className="rolling_area" duration="20">
+                {main.service.whiteBgRolling.line3.map((data, index) => (
+                  <>
+                    <span key={'text' + index}>{data.text}</span>
+                    <img
+                      key={'img' + index}
+                      src={main.imgUrl + data.image}
+                      alt={data.alt}
+                    />
+                  </>
+                ))}
+              </InfiniteRolling>
             </div>
             <div className="intro_area">
               <Description

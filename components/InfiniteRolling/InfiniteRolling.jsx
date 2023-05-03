@@ -7,6 +7,7 @@ export default function InfiniteRolling({
   children,
   className,
   reverse = 'N',
+  duration = '40',
 }) {
   const REVERSE_CLASS = reverse === 'Y' ? ' reverse' : '';
   const GET_CLASSNAME =
@@ -22,7 +23,19 @@ export default function InfiniteRolling({
 
   return (
     <div {...GET_CLASSNAME}>
-      <div className="rolling_inner">
+      <div
+        className="rolling_inner"
+        style={{ animationDuration: duration + 's' }}
+      >
+        <ul>{CHILD_ARR_MAP}</ul>
+        <ul>{CHILD_ARR_MAP}</ul>
+        <ul>{CHILD_ARR_MAP}</ul>
+        <ul>{CHILD_ARR_MAP}</ul>
+        <ul>{CHILD_ARR_MAP}</ul>
+        <ul>{CHILD_ARR_MAP}</ul>
+        <ul>{CHILD_ARR_MAP}</ul>
+        <ul>{CHILD_ARR_MAP}</ul>
+        <ul>{CHILD_ARR_MAP}</ul>
         <ul>{CHILD_ARR_MAP}</ul>
         <ul>{CHILD_ARR_MAP}</ul>
       </div>
