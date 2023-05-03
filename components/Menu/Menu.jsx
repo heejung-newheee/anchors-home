@@ -1,8 +1,9 @@
 'use client';
 
 import Btn from '@/components/Btn/Btn';
-import './scss/Menu.scss';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
+import './scss/Menu.scss';
+
 export default function Menu() {
   const MenuBtnClass = () => {
     document.querySelector('button').classList.toggle('close');
@@ -19,7 +20,7 @@ export default function Menu() {
         <ul className="gnb">
           {headerFooter.menuList.map((menuList, idx) => (
             <li key={idx}>
-              <Btn type="link" url={menuList.url} alt={menuList.alt}>
+              <Btn type="a" url={menuList.url} alt={menuList.alt}>
                 {menuList.name[0].words}
                 {menuList.name[1] ? ' ' + menuList.name[1].words : ''}
               </Btn>
