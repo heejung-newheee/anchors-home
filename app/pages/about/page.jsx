@@ -5,6 +5,7 @@ import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
+import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 
 import aboutProfile from '/helper/data/json/contents/about/aboutProfile.json';
@@ -20,7 +21,6 @@ import lottie_arrow from '@/public/assets/images/lottie/lottieAboutusUpArrow.jso
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 
 import './scss/about.scss';
-import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
 import React from 'react';
 
 export const metadata = {
@@ -56,7 +56,7 @@ function About() {
       {/* E: PageTitle 영역*/}
 
       {/* S: Key Visual 영역*/}
-      <Visual imgUrl="/assets/images/contents/about/img_keyvisual_office.png" />
+      <Visual imgUrl="/assets/images/contents/about/img_keyvisual_office.jpg" />
       {/* E: Key Visual 영역*/}
 
       {/* S: Description 영역*/}
@@ -220,7 +220,7 @@ function About() {
       {/* E: anchors profile 영역*/}
 
       <div className="about_members section_div is_white">
-        <Visual imgUrl="/assets/images/contents/about/img_visual_members.png" />
+        <Visual imgUrl="/assets/images/contents/about/img_visual_members.jpg" />
         <div className="about_members_desc">
           <Description
             data={

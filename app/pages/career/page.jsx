@@ -45,7 +45,7 @@ function Career() {
 
       {/* S: key_visual 영역 */}
       <Visual
-        imgUrl="/assets/images/contents/career/img_keyvisual_members.png"
+        imgUrl="/assets/images/contents/career/img_keyvisual_members.jpg"
         className="key_visual"
       />
       {/* E: key_visual 영역 */}
