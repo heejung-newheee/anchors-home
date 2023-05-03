@@ -3,7 +3,7 @@ stages:
   - deploy
 
 variables:
-  TARGET_BRANCH: "cicd-test"
+  TARGET_BRANCH: "dev"
 
 workflow:
   rules:
@@ -24,7 +24,7 @@ build-job:
     - ls -al
     - echo "build success!"
   tags:
-    - instance-ssh
+    - instance-ssh #공통 runner 이용
 
 
 deploy-job:
@@ -37,4 +37,4 @@ deploy-job:
     - ls -al
     - echo "deploy success!"
   tags:
-    - instance-ssh
+    - instance-ssh #공통 runner 이용, 같은 서버내 배포로 cp 할 것이라 docker 아닌 ssh 로
