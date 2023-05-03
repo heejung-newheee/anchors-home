@@ -3,7 +3,7 @@ stages:
   - deploy
 
 variables:
-  TARGET_BRANCH: "cicd-test"
+  TARGET_BRANCH: "dev"
 
 workflow:
   rules:
