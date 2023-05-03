@@ -51,7 +51,7 @@ function MainTest() {
           {/*    <>*/}
           {/*      <div>*/}
           {/*        <img*/}
-          {/*          src="/assets/images/contents/main/img_expertise03.jpg"*/}
+          {/*          src="/assets/images/contents/main/img_expertise03.png"*/}
           {/*          alt=""*/}
           {/*        />*/}
           {/*      </div>*/}
