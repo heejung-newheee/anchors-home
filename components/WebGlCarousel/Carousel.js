@@ -137,7 +137,7 @@ const Carousel = ({ images = [] }) => {
     if (activePlane !== null && prevActivePlane === null) {
       progress.current = (activePlane / ($items.length - 1)) * 100; // Calculate the progress.current based on activePlane
     }
-  }, [activePlane, $items]);
+  }, [activePlane, $items, prevActivePlane]);
 
   /*--------------------
   Render Plane Events
