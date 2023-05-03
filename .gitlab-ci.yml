@@ -31,7 +31,6 @@ build-job:
   tags:
     - instance-ssh #공통 runner 이용
 
-
 deploy-job:
   stage: deploy
   before_script:
