@@ -1,16 +1,32 @@
-import './scss/service.scss';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
 import PageTitle from '@/components/PageTitle/PageTitle';
+import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import Visual from '@/components/Visual/Visual';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 import service from '@/helper/data/json/contents/service/service.json';
+
+import './scss/service.scss';
 
 export const metadata = {
   title: 'Anchors',
   description: '',
 };
+
+const TRIGGER_START = {
+  mobile: '-100px',
+  table: '-50px',
+  desktop: '-30px',
+  wide: '0',
+};
+
+// const TRIGGER_END = {
+//   mobile: '-50px',
+//   table: '100vh',
+//   desktop: '100vh',
+//   wide: '100vh',
+// };
 
 function Service() {
   return (
@@ -38,9 +54,15 @@ function Service() {
         {service.introduction.map((cont, idx) => (
           <>
             <div key={idx} className="container">
-              <span className="part_img">
-                <img src={service.imgUrl + cont.img} alt={cont.alt} />
-              </span>
+              <ScrollTriggerArea
+                type="toggleTrigger"
+                triggerStart={TRIGGER_START}
+                triggerMarkers={true}
+              >
+                <span className="part_img">
+                  <img src={service.imgUrl + cont.img} alt={cont.alt} />
+                </span>
+              </ScrollTriggerArea>
               <article className="part_introduction_wrap">
                 <ElementTitle data={cont.name} />
                 <div className="description_wrap">

@@ -1,9 +1,6 @@
 'use client';
 import React from 'react';
 
-import './scss/SwiperArea.scss';
-
-// S: swiper import
 import {
   Autoplay,
   Pagination,
@@ -18,6 +15,7 @@ import {
   Controller,
 } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -28,7 +26,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/effect-flip';
 import 'swiper/css/effect-cards';
 import 'swiper/css/effect-creative';
-// E: swiper import
+import './scss/SwiperArea.scss';
 
 const SWIPER_MODULE = [
   Autoplay,

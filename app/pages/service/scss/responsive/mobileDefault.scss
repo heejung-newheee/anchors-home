@@ -32,16 +32,35 @@
     margin-bottom: 6rem;
     .container {
       margin-top: 6rem;
+      .wrapper {
+        height: 18rem;
+        &.isActive {
+          .part_img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
       .part_img {
         display: block;
-        margin-bottom: 4rem;
+        position: relative;
+        overflow: hidden;
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+        transition: all .35s ease-in-out;
         img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
           height: 18rem;
           object-fit: cover;
-          object-position: center;
+          width: 100vw;
         }
       }
       .part_introduction_wrap {
+        margin-top: 4rem;
         @extend %layout_fix;
         .element_title {
           @extend %font_sectionTitle;
