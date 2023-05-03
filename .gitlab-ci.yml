@@ -24,7 +24,7 @@ build-job:
     - ls -al
     - echo "build success!"
   tags:
-    - gitlab-runner
+    - instance-ssh
 
 
 deploy-job:
@@ -37,4 +37,4 @@ deploy-job:
     - ls -al
     - echo "deploy success!"
   tags:
-    - gitlab-runner
+    - instance-ssh
