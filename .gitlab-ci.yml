@@ -3,7 +3,12 @@ stages:
   - deploy
 
 variables:
-  TARGET_BRANCH: "dev"
+  TARGET_BRANCH: "cicd-test"
+
+cache:
+  key: $CI_COMMIT_REF_SLUG
+  paths:
+    - node_modules
 
 workflow:
   rules:
