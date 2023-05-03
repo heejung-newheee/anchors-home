@@ -27,7 +27,7 @@ function Career() {
   return (
     <main className="career">
       <PageTitle data={headerFooter.menuList[4].name} />
-      <Visual imgUrl="/assets/images/contents/career/img_keyvisual_members.png" />
+      <Visual imgUrl="/assets/images/contents/career/img_keyvisual_members.jpg" />
 
       {/* S: 비주얼 이미지 아래 텍스트 */}
       <div className="career_text">

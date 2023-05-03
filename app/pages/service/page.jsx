@@ -17,7 +17,7 @@ function Service() {
     <main className="service">
       <PageTitle data={headerFooter.menuList[2].name} />
       <section className="visual_comment">
-        <Visual imgUrl="/assets/images/contents/service/img_keyvisual_officewide.png" />
+        <Visual imgUrl="/assets/images/contents/service/img_keyvisual_officewide.jpg" />
         <Description
           className="en_comment"
           data={
