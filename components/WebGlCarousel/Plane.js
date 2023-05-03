@@ -1,31 +1,32 @@
-import { useEffect, useMemo, useRef } from 'react'
-import { useThree } from '@react-three/fiber'
-import { useTexture } from '@react-three/drei'
-import gsap from 'gsap'
+import { useEffect, useMemo, useRef } from 'react';
+
+import { useTexture } from '@react-three/drei';
+import { useThree } from '@react-three/fiber';
+import gsap from 'gsap';
 
 const Plane = ({ texture, width, height, active, ...props }) => {
-  const $mesh = useRef()
-  const { viewport } = useThree()
-  const tex = useTexture(texture)
+  const $mesh = useRef();
+  const { viewport } = useThree();
+  const tex = useTexture(texture);
 
   useEffect(() => {
     if ($mesh.current.material) {
       //  Setting the 'uZoomScale' uniform in the 'Plane' component to resize the texture proportionally to the dimensions of the viewport.
       $mesh.current.material.uniforms.uZoomScale.value.x =
-        viewport.width / width
+        viewport.width / width;
       $mesh.current.material.uniforms.uZoomScale.value.y =
-        viewport.height / height
+        viewport.height / height;
 
       gsap.to($mesh.current.material.uniforms.uProgress, {
-        value: active ? 1 : 0
-      })
+        value: active ? 1 : 0,
+      });
 
       gsap.to($mesh.current.material.uniforms.uRes.value, {
         x: active ? viewport.width : width,
-        y: active ? viewport.height : height
-      })
+        y: active ? viewport.height : height,
+      });
     }
-  }, [viewport, active])
+  }, [viewport, active, width, height]);
 
   const shaderArgs = useMemo(
     () => ({
@@ -35,8 +36,8 @@ const Plane = ({ texture, width, height, active, ...props }) => {
         uTex: { value: tex },
         uRes: { value: { x: 1, y: 1 } },
         uImageRes: {
-          value: { x: tex.source.data.width, y: tex.source.data.height }
-        }
+          value: { x: tex.source.data.width, y: tex.source.data.height },
+        },
       },
       vertexShader: /* glsl */ `
         varying vec2 vUv;
@@ -82,17 +83,17 @@ const Plane = ({ texture, width, height, active, ...props }) => {
           vec3 tex = texture2D(uTex, uv).rgb;
           gl_FragColor = vec4( tex, 1.0 );
         }
-      `
+      `,
     }),
-    [tex]
-  )
+    [tex],
+  );
 
   return (
     <mesh ref={$mesh} {...props}>
       <planeGeometry args={[width, height, 30, 30]} />
       <shaderMaterial args={[shaderArgs]} />
     </mesh>
-  )
-}
+  );
+};
 
-export default Plane
+export default Plane;
