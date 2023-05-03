@@ -86,6 +86,16 @@ function Mijeong() {
         />
       </ScrollTriggerArea>
 
+      <p> ScrollTriggerArea 컴포넌트의 타입 기본 </p>
+
+      <ScrollTriggerArea
+        type="test"
+        triggerStart={TRIGGER_START}
+        triggerEnd={TRIGGER_END}
+        triggerOffset={'center'}
+        triggerMarkers={true}
+      ></ScrollTriggerArea>
+
       <p> Tab 컴포넌트의 타입 article </p>
       <Tab type="article" tabList={worksList.sort} />
 

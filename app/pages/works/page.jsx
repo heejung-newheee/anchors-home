@@ -17,8 +17,10 @@ function Works() {
       <PageTitle data={headerFooter.menuList[0].name} /> {/*our works*/}
       {/* S: portfolio list */}
       <Tab
-        type="portfolio_list"
-        tabList={worksList.sort}
+        type="sortList"
+        className="portfolio_list"
+        dataList={worksList.sort}
+        dataContens={worksList.content}
         contents={worksList.content.map((data, index) => (
           <BaseArticle
             key={index}

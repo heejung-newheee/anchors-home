@@ -1,6 +1,6 @@
 'use client';
 import React, { useRef } from 'react';
-import { Tween, ScrollTrigger } from 'react-gsap';
+import { Tween, ScrollTrigger, Timeline } from 'react-gsap';
 import { useMediaQuery } from 'react-responsive';
 
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
@@ -23,6 +23,8 @@ function ScrollTriggerArea({
   children,
 }) {
   const COMPONENTS_REF = useRef();
+  const [isActive, setIsActive] = React.useState();
+
   const BREAKPOINT_MOBILE = useMediaQuery({ maxWidth: 768 });
   const BREAKPOINT_TABLE = useMediaQuery({ maxWidth: 1280 });
   const BREAKPOINT_DESKTOP = useMediaQuery({ maxWidth: 1536 });
@@ -69,10 +71,12 @@ function ScrollTriggerArea({
         trigger: '.' + type,
         onEnter: (d) => {
           COMPONENTS_REF.current.controll('play');
+          setIsActive(d.isActive);
           console.log('play');
         },
         onLeave: () => {
           COMPONENTS_REF.current.controll('pause');
+          setIsActive(d.isActive);
           console.log('pause');
         },
         onUpdate: (d) => {
@@ -108,24 +112,66 @@ function ScrollTriggerArea({
             end={TRIGGER_OPTION_END + ' ' + triggerOffset}
             scrub={triggerScrub}
             markers={triggerMarkers}
+            onEnter={(d) => {
+              setIsActive(d.isActive);
+            }}
+            onLeave={(d) => {
+              setIsActive(d.isActive);
+            }}
           >
-            {CHILDREN_ARR.map((contents, idx) => (
-              <Tween
-                to={{
-                  x: MUTITRIGGER_OPTION_XAXES[idx],
-                  y: MUTITRIGGER_OPTION_YAXES[idx],
-                  scale: toScale[idx],
-                }}
-                from={{ scale: fromScale[idx] }}
-                key={idx}
-                ease={easing}
-                duration={duration[idx]}
-              >
-                {contents}
-              </Tween>
-            ))}
+            <div className={'wrapper ' + (isActive ? 'isActive' : '')}>
+              {CHILDREN_ARR.map((contents, idx) => (
+                <Tween
+                  to={{
+                    x: MUTITRIGGER_OPTION_XAXES[idx],
+                    y: MUTITRIGGER_OPTION_YAXES[idx],
+                    scale: toScale[idx],
+                  }}
+                  from={{ scale: fromScale[idx] }}
+                  key={idx}
+                  ease={easing}
+                  duration={duration[idx]}
+                >
+                  {contents}
+                </Tween>
+              ))}
+            </div>
           </ScrollTrigger>
         </>
+      );
+    case 'test':
+      return (
+        <ScrollTrigger
+          start={TRIGGER_OPTION_START + ' ' + triggerOffset}
+          end={TRIGGER_OPTION_END + ' ' + triggerOffset}
+          scrub={triggerScrub}
+          markers={triggerMarkers}
+          onEnter={(d) => {
+            setIsActive(d.isActive);
+          }}
+          onLeave={(d) => {
+            setIsActive(d.isActive);
+          }}
+        >
+          <div
+            className={'wrapper ' + (isActive ? 'isActive' : '')}
+            style={{ height: '600px' }}
+          >
+            <Tween to={{ x: '200px' }} duration={1}>
+              <div style={{ display: 'inline-block' }}>Expertis</div>
+            </Tween>
+            <Tween to={{ x: '200px' }} duration={1}>
+              <div style={{ display: 'inline-block' }}>
+                sfkdfbvnxvckjxkhkjjxvckjj
+              </div>
+            </Tween>
+            <Timeline target={<div style={{ display: 'inline-block' }}>e</div>}>
+              <Tween to={{ x: '150px' }} duration={1} />
+              <Tween to={{ scale: '30' }} duration={1} />
+              <Tween to={{ scale: '30' }} duration={1} />
+            </Timeline>
+          </div>
+        </ScrollTrigger>
       );
   }
 }

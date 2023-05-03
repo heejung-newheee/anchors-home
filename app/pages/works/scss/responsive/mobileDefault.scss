@@ -3,26 +3,28 @@
   background-color: transparent !important;
 
   .portfolio_list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 0;
+    .tab_content_wrap {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 0;
 
-    .base_article {
-      letter-spacing: $en_letterSpacing;
-      width: 100%; // $our_works_list
-      padding-bottom: 5rem; // $our_works_list
+      .base_article {
+        letter-spacing: $en_letterSpacing;
+        width: 100%; // $our_works_list
+        padding-bottom: 5rem; // $our_works_list
 
-      .element_title {
-        font-weight: 400;
-        padding: 2.2rem 0.2rem 0.8rem; // $our_works_list
+        .element_title {
+          font-weight: 400;
+          padding: 2.2rem 0.2rem 0.8rem; // $our_works_list
 
-      }
+        }
 
-      .disclaimer {
-        color: $color_darkgrey;
-        padding: 0 0.2rem; // $our_works_list
+        .disclaimer {
+          color: $color_darkgrey;
+          padding: 0 0.2rem; // $our_works_list
+        }
       }
     }
   }
