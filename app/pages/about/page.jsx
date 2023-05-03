@@ -20,6 +20,8 @@ import lottie_arrow from '@/public/assets/images/lottie/lottieAboutusUpArrow.jso
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 
 import './scss/about.scss';
+import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
+import React from 'react';
 
 export const metadata = {
   title: 'Anchors',
@@ -83,14 +85,19 @@ function About() {
       {/* S: about intro swiper 영역*/}
       <div className="about_intro_swiper section_div is_white">
         <SwiperArea
+          key="swiper01"
           type="double"
           firstClassName="image_swiper"
           secondClassName="text_swiper"
           firstContent={aboutIntro.introduction.map((cont, idx) => (
-            <img key={idx} src={aboutIntro.imgUrl + cont.img} alt={cont.alt} />
+            <img
+              key={`sw01-img-${idx}`}
+              src={aboutIntro.imgUrl + cont.img}
+              alt={cont.alt}
+            />
           ))}
           secondContent={aboutIntro.introduction.map((cont, idx) => (
-            <div className="intro_text" key={idx}>
+            <div className="intro_text" key={`sw01-div-${idx}`}>
               <pre>{cont.highlightText}</pre>
               <p>{cont.text}</p>
             </div>
@@ -182,53 +189,26 @@ function About() {
               </>
             }
           />
-          <SwiperArea
-            type="single"
-            swiperOption={{
-              slidesPerView: 'auto',
-              navigation: false,
-              pagination: false,
-              scrollbar: false,
-              allowTouchMove: false,
-              observer: true,
-              observeParents: true,
-              autoplay: {
-                delay: 1,
-              },
-              loop: true,
-              speed: 4000,
-            }}
-            className="single scroll-linear customer_logo_swiper_01"
-            swiperContent={aboutProfile.customerLogo.map((cont, idx) => (
-              <div key={idx}>
-                <img src={aboutProfile.imgUrl + cont.img} alt={cont.alt} />
-              </div>
-            ))}
-          />
-          <SwiperArea
-            type="single"
-            swiperOption={{
-              slidesPerView: 'auto',
-              navigation: false,
-              pagination: false,
-              scrollbar: false,
-              allowTouchMove: false,
-              observer: true,
-              observeParents: true,
-              autoplay: {
-                delay: 1,
-                reverseDirection: true,
-              },
-              loop: true,
-              speed: 4000,
-            }}
-            className="single scroll-linear"
-            swiperContent={aboutProfile.customerLogo.map((cont, idx) => (
-              <div key={idx}>
-                <img src={aboutProfile.imgUrl + cont.img} alt={cont.alt} />
-              </div>
-            ))}
-          />
+          <div>
+            <InfiniteRolling className="about_partner">
+              {aboutProfile.customerLogo.map((cont, idx) => (
+                <img
+                  key={idx}
+                  src={aboutProfile.imgUrl + cont.img}
+                  alt={cont.alt}
+                />
+              ))}
+            </InfiniteRolling>
+            <InfiniteRolling className="about_partner" reverse="Y">
+              {aboutProfile.customerLogo.map((cont, idx) => (
+                <img
+                  key={idx}
+                  src={aboutProfile.imgUrl + cont.img}
+                  alt={cont.alt}
+                />
+              ))}
+            </InfiniteRolling>
+          </div>
           <Disclaimer data={<>Want to know about us</>} />
           <Btn className="download_btn" type="a">
             Download
@@ -265,6 +245,7 @@ function About() {
         </div>
         {/* S: about members swiper 영역*/}
         <SwiperArea
+          key="swiper04"
           type="single"
           swiperOption={{
             slidesPerView: 'auto',
@@ -284,7 +265,7 @@ function About() {
           }}
           className="about_members_swiper scroll-linear"
           swiperContent={aboutMembers.members.map((cont, idx) => (
-            <div key={idx}>
+            <div key={`sw04-${idx}`}>
               <p className="member_name_en">{cont.nameEn}</p>
               <MoreDetail
                 imgUrl={aboutMembers.imgUrl + cont.img}

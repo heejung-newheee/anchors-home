@@ -119,13 +119,16 @@
           margin-top: 14rem;
           padding: 0 12rem;
         }
-        .swiper {
-          &.customer_logo_swiper_01 {
+        .about_partner {
+          height: 8.2rem;
+
+          &:first-child {
             margin-bottom: 5rem;
           }
-          .swiper-slide {
-            width: 28rem;
-            height: 8.2rem;
+          .rolling_inner {
+            li {
+              width: 28rem;
+            }
           }
         }
         .disclaimer {
