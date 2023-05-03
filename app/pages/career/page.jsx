@@ -19,6 +19,7 @@ import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 // import Elements from 'aos/src/js/helpers/elements';
 
 import './scss/ career.scss';
+import Accordion from '@/components/Accordion/Accordion';
 
 export const metadata = {
   title: 'Anchors',
@@ -175,7 +176,7 @@ function Career() {
             }}
           >
             <img
-              src="/assets/images/contents/career/img_visual_lights.png"
+              src="/assets/images/contents/career/img_visual_lights.jpg"
               alt="사무실 조명 이미지"
             />
           </ScrollTriggerArea>
@@ -190,14 +191,36 @@ function Career() {
           data={careerText.textList[3].text1}
         />
         <article className="process_tab">
-          {careerProcess.procedure.map((data, idx) => (
-            <div key={idx}>
-              <Disclaimer data={data.number} />
-              <Disclaimer data={data.text} />
-            </div>
-          ))}
+          <div className="process_number_wrap">
+            {careerProcess.process.map((data, idx) => (
+              <div key={idx} className="process_number">
+                <Description data={data.number} />
+                <Description data={data.text} />
+              </div>
+            ))}
+          </div>
+          <div className="process_description">
+            <Description data={careerProcess.description[0].text1} />
+            <Description data={careerProcess.description[0].text2} />
+          </div>
+          <div className="process_detail_description">
+            {careerProcess.detail_description.map((data, idx) => (
+              <div key={idx} className="detail_description_list">
+                <Description data={data.number} />
+                <Description data={data.title} />
+                <Disclaimer data={data.text} />
+              </div>
+            ))}
+          </div>
         </article>
-        <article className="faq_tab" />
+        <article className="faq_tab">
+          <Accordion
+            contents={[
+              { title: 'accordionTitle1', content: 'accordioncontent1' },
+              { title: 'accordionTitle1', content: 'accordioncontent1' },
+            ]}
+          />
+        </article>
       </section>
       {/* E: 채용 tab 영역 */}
     </main>
