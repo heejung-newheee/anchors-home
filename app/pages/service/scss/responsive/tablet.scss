@@ -16,13 +16,18 @@
       margin-bottom: 6rem;
       .container {
         margin-top: 10rem;
+        .wrapper {
+          height: 25rem;
+        }
         .part_img {
-          margin-bottom: 7rem;
-          img {
-            height: 25rem;
+          .img_scroll_wrap {
+            img {
+              height: 31rem;
+            }
           }
         }
         .part_introduction_wrap {
+          margin-bottom: 7rem;
           padding: 0 3.4rem;
           display: flex;
           .element_title {

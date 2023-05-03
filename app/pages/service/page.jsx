@@ -15,18 +15,25 @@ export const metadata = {
 };
 
 const TRIGGER_START = {
-  mobile: '-100px',
-  table: '-50px',
-  desktop: '-30px',
-  wide: '0',
+  mobile: '-130px',
+  table: '-130px',
+  desktop: '-130px',
+  wide: '-130px',
 };
 
-// const TRIGGER_END = {
-//   mobile: '-50px',
-//   table: '100vh',
-//   desktop: '100vh',
-//   wide: '100vh',
-// };
+const MULTI_TRIGGER_START = {
+  mobile: '-30px',
+  table: '-30px',
+  desktop: '-30px',
+  wide: '-30px',
+};
+
+const MULTI_TRIGGER_END = {
+  mobile: '100px',
+  table: '100px',
+  desktop: '100px',
+  wide: '100px',
+};
 
 function Service() {
   return (
@@ -58,9 +65,26 @@ function Service() {
                 type="toggleTrigger"
                 triggerStart={TRIGGER_START}
                 triggerMarkers={true}
+                triggerOffset={'center'}
               >
                 <span className="part_img">
-                  <img src={service.imgUrl + cont.img} alt={cont.alt} />
+                  <ScrollTriggerArea
+                    type="multiTrigger"
+                    triggerStart={MULTI_TRIGGER_START}
+                    triggerEnd={MULTI_TRIGGER_END}
+                    triggerOffset={'center'}
+                    triggerMarkers={true}
+                    YAxes={{
+                      mobile: ['20px'],
+                      table: ['25px'],
+                      desktop: ['30px'],
+                      wide: ['35px'],
+                    }}
+                  >
+                    <span className="img_scroll_wrap">
+                      <img src={service.imgUrl + cont.img} alt={cont.alt} />
+                    </span>
+                  </ScrollTriggerArea>
                 </span>
               </ScrollTriggerArea>
               <article className="part_introduction_wrap">

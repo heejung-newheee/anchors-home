@@ -13,13 +13,18 @@
       margin-bottom: 14rem;
       .container {
         margin-top: 14rem;
+        .wrapper {
+          height: 36rem;
+        }
         .part_img {
-          margin-bottom: 8rem;
-          img {
-            height: 36rem;
+          .img_scroll_wrap {
+            img {
+              height: 42rem;
+            }
           }
         }
         .part_introduction_wrap {
+          margin-bottom: 8rem;
           max-width: 100rem;
           .element_title {
             min-width: 40rem;

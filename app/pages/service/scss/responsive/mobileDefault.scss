@@ -46,17 +46,33 @@
         position: relative;
         overflow: hidden;
         width: 50%;
-        height: 50%;
+        height: 40%;
         margin: 0 auto;
         transition: all .35s ease-in-out;
-        img {
-          position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        .wrapper {
+          position: relative;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
+        }
+        .img_scroll_wrap {
+          display: block;
           height: 18rem;
-          object-fit: cover;
-          width: 100vw;
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 24rem;
+            object-fit: cover;
+            width: 100vw;
+          }
         }
       }
       .part_introduction_wrap {
