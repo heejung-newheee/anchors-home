@@ -2,29 +2,30 @@
   .our_works_list {
 
     .portfolio_list {
+      .tab_content_wrap {
+        gap: 2.4rem;
 
-      gap: 2.4rem;
+        .base_article {
+          width: calc(50% - 1.2rem);  // $our_works_list
+          padding-bottom: 9rem; // $our_works_list
 
-      .base_article {
-        width: calc(50% - 1.2rem);  // $our_works_list
-        padding-bottom: 9rem; // $our_works_list
+          &:nth-child(2) {
+            margin-top: 18rem; // $our_works_list
+          }
+          &:nth-child(odd) {
+            margin-top: -18rem; // $our_works_list
+          }
+          &:first-child {
+            margin-top: 0; // $our_works_list
+          }
 
-        &:nth-child(2) {
-          margin-top: 18rem; // $our_works_list
-        }
-        &:nth-child(odd) {
-          margin-top: -18rem; // $our_works_list
-        }
-        &:first-child {
-          margin-top: 0; // $our_works_list
-        }
+          .element_title {
+            padding: 3rem 0.6rem 1.4rem; // $our_works_list
+          }
 
-        .element_title {
-          padding: 3rem 0.6rem 1.4rem; // $our_works_list
-        }
-
-        .disclaimer {
-          padding: 0 0.6rem; // $our_works_list
+          .disclaimer {
+            padding: 0 0.6rem; // $our_works_list
+          }
         }
       }
     }
