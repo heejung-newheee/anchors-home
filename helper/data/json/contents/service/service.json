@@ -7,7 +7,7 @@
       "textLine2" : "웹과 애플리케이션, AEM, Salesforce 등 다양한 솔루션을 개발합니다. 기발하고 다양한 인터렉션을 통해 디자인에 생동감을 불어넣습니다.",
       "hashtag": ["#Web & App Development","#Salesforce Project Development","#Global IT Service Development","#AEM Project Development"],
       "tagClassname": "해시태그 style 클래스 명",
-      "img": "img_rdlab.png",
+      "img": "img_rdlab.jpg",
       "alt": "앵커스 R&D Lab실 이미지"
     },
     {
@@ -16,7 +16,7 @@
       "textLine2" : "빠르게 변화하는 비즈니스 환경에서 사용자의 새로운 경험과 가치창출을 위해 다년간의 경험을 바탕으로 최적의 Counsulting Service를 제공합니다.",
       "hashtag": ["#Brand Strategy Consulting","#e-Business Consulting","#AEM Project Consulting"],
       "tagClassname": "해시태그 style 클래스 명",
-      "img": "img_consulting.png",
+      "img": "img_consulting.jpg",
       "alt": "포스트잇이 여러 장 붙어있는 이미지"
     },
     {
@@ -25,7 +25,7 @@
       "textLine2" : "Anchors는 IT의 전문성을 통해 고객사 비즈니스에 도움이 될 수 있도록 Maintenance Service를 제공합니다.",
       "hashtag": ["#Web & App Maintenance","#Global IT Service Maintenance"],
       "tagClassname": "해시태그 style 클래스 명",
-      "img": "img_maintenance.png",
+      "img": "img_maintenance.jpg",
       "alt": "노트북으로 소스코딩하고 있는 이미지"
     },
     {
@@ -34,7 +34,7 @@
       "textLine2" : "크리에이티브한 디자인은 많은 사용자들에게 확장될 수 있는 쉽고 안정적인 UX환경을 만들어냅니다.",
       "hashtag": ["#User Experience Design","#User Interface Design"],
       "tagClassname": "해시태그 style 클래스 명",
-      "img": "img_design.png",
+      "img": "img_design.jpg",
       "alt": "만년필로 그림을 그리고 있는 이미지"
     }
   ]

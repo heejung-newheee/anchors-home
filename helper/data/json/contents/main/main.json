@@ -11,15 +11,15 @@
     "rollingBigText": ["Expertis", "e"],
     "blueBgRollingImages" : [
       {
-        "image": "img_expertise01.png",
+        "image": "img_expertise01.jpg",
         "alt": "만년필로 그림을 그리고 있는 이미지"
       },
       {
-        "image": "img_expertise02.png",
+        "image": "img_expertise02.jpg",
         "alt": "앵커스 R&D Lab실 이미지"
       },
       {
-        "image": "img_expertise03.png",
+        "image": "img_expertise03.jpg",
         "alt": "노트북으로 소스코딩하고 있는 이미지"
       }
     ],
@@ -27,51 +27,51 @@
       "line1": [
         {
           "text" : "Systematic",
-          "image" : "img_service01.png",
+          "image" : "img_service01.jpg",
           "alt": "여성이 휴대폰을 보고 있는 이미지"
         },
         {
           "text" : "Architecture",
-          "image" : "img_service02.png",
+          "image" : "img_service02.jpg",
           "alt": "Wireframe을 보고 있는 이미지"
         },
         {
           "text" : "Analysis",
-          "image" : "img_service03.png",
+          "image" : "img_service03.jpg",
           "alt": "포스트잇으로 분석하는 이미지"
         }
       ],
       "line2": [
         {
           "text" : "Development",
-          "image" : "img_service04.png",
+          "image" : "img_service04.jpg",
           "alt": "소스코딩하고 있는 이미지"
         },
         {
           "text" : "UI Design",
-          "image" : "img_service05.png",
+          "image" : "img_service05.jpg",
           "alt": "휴대폰 UI Design 이미지"
         },
         {
           "text" : "UX Design",
-          "image" : "img_service06.png",
+          "image" : "img_service06.jpg",
           "alt": "UX Design 이미지"
         }
       ],
       "line3": [
         {
           "text" : "Passion",
-          "image" : "img_service07.png",
+          "image" : "img_service07.jpg",
           "alt": "전구 이미지"
         },
         {
           "text" : "Creative works",
-          "image" : "img_service08.png",
+          "image" : "img_service08.jpg",
           "alt": "사무실 조명 이미지"
         },
         {
           "text" : "Possibilities",
-          "image" : "img_service09.png",
+          "image" : "img_service09.jpg",
           "alt": "도로 이미지"
         }
       ]
@@ -85,15 +85,15 @@
     "rollingBigText": "Our creative works",
     "rollingImages" : [
       {
-        "image": "img_ourworks01.png",
+        "image": "img_ourworks01.jpg",
         "alt": "현대자동차 브랜드홈(BMS 2.0) Website 이미지"
       },
       {
-        "image": "img_ourworks02.png",
+        "image": "img_ourworks02.jpg",
         "alt": "현대자동차그룹 N-brand Website 이미지"
       },
       {
-        "image": "img_ourworks03.png",
+        "image": "img_ourworks03.jpg",
         "alt": "현대자동차 J플랫폼(일본법인 신 고객경험 플랫폼) Website 이미지"
       }
     ],
