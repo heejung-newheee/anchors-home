@@ -151,6 +151,41 @@ function ScrollTriggerArea({
           </ScrollTrigger>
         </>
       );
+
+    case 'toggleTrigger':
+      return (
+        <>
+          <ScrollTrigger
+            start={TRIGGER_OPTION_START + ' ' + triggerOffset}
+            scrub={triggerScrub}
+            markers={triggerMarkers}
+            onEnter={(d) => {
+              setIsActive(d.isActive);
+            }}
+            onLeaveBack={(d) => {
+              setIsActive(d.isActive);
+            }}
+          >
+            <div className={'wrapper ' + (isActive ? 'isActive' : '')}>
+              {CHILDREN_ARR.map((contents, idx) => (
+                <Tween
+                  to={{
+                    x: MUTITRIGGER_OPTION_XAXES[idx],
+                    y: MUTITRIGGER_OPTION_YAXES[idx],
+                    scale: toScale[idx],
+                  }}
+                  from={{ scale: fromScale[idx] }}
+                  key={idx}
+                  ease={easing}
+                  duration={duration[idx]}
+                >
+                  {contents}
+                </Tween>
+              ))}
+            </div>
+          </ScrollTrigger>
+        </>
+      );
     case 'test':
       return (
         <ScrollTrigger
