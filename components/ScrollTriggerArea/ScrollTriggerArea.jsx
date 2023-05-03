@@ -86,7 +86,7 @@ function ScrollTriggerArea({
           setIsActive(d.isActive);
           console.log('play');
         },
-        onLeave: () => {
+        onLeave: (d) => {
           COMPONENTS_REF.current.controll('pause');
           setIsActive(d.isActive);
           console.log('pause');
