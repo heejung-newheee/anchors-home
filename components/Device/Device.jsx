@@ -26,7 +26,7 @@ export default function Device({
   ];
   return (
     <article {...GET_CLASSNAME}>
-      <ElementTitle data={elementTitle} />
+      <ElementTitle data={elementTitle} className="device_title" />
       <Description data={description} />
       <div className="device-img">
         {DEVICE_DATA.map((data, index) => (
