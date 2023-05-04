@@ -1,6 +1,8 @@
 @include wide {
   .career{
-    .key_visual{}
+    .visual{
+      height: 96rem;
+    }
     .career_text{
       padding: 18rem 11.8rem;
       p:nth-of-type(1){

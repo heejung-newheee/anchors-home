@@ -164,6 +164,7 @@ function SwiperArea({
 
   return (
     <div
+      className="single_swiper_wrap"
       onMouseEnter={() =>
         autoPlayStop === 'Y' ? swiperRef.current.swiper.autoplay.stop() : ''
       }
