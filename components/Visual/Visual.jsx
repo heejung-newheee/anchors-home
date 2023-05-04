@@ -34,14 +34,13 @@ export default function Visual({
           wide: '100%',
         }}
         triggerOffset={'center'}
-        triggerMarkers={true}
+        triggerMarkers={false}
         YAxes={{
-          mobile: ['10%'],
-          table: ['10%'],
-          desktop: ['76px'],
-          wide: ['76px'],
+          mobile: ['5%'],
+          table: ['5%'],
+          desktop: ['5%'],
+          wide: ['5%'],
         }}
-        duration={10}
       >
         <img src={imgUrl} alt={alt} />
       </ScrollTriggerArea>

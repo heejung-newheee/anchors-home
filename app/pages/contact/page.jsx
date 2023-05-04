@@ -28,37 +28,25 @@ const TRIGGER_END = {
 
 function Contact() {
   return (
-    <main className="contact">
+    <main className="contact section_div is_photo">
       <PageTitle data={headerFooter.menuList[3].name} />
       <Visual imgUrl={contact.imgUrl + contact.img}>
-        <ScrollTriggerArea
-          type="multiTrigger"
-          triggerStart={TRIGGER_START}
-          triggerEnd={TRIGGER_END}
-          YAxes={{
-            mobile: ['-30px'],
-            table: ['-30px'],
-            desktop: ['-150px'],
-            wide: ['-50px'],
-          }}
-        >
-          <div className="contact_cont_wrap">
-            <span className="wordbubble">
-              <img
-                src={contact.imgUrl + contact.bubbleImg}
-                alt={contact.bubbleAlt}
-              />
-            </span>
-            <article className="contact_address">
-              <Description data={contact.address} />
-            </article>
-            <article className="contact_info">
-              <BaseArticle elementTitle="Email" description={contact.email} />
-              <BaseArticle elementTitle="Phone" description={contact.phone} />
-              <BaseArticle elementTitle="Fax" description={contact.fax} />
-            </article>
-          </div>
-        </ScrollTriggerArea>
+        <div className="contact_cont_wrap">
+          <span className="wordbubble">
+            <img
+              src={contact.imgUrl + contact.bubbleImg}
+              alt={contact.bubbleAlt}
+            />
+          </span>
+          <article className="contact_address">
+            <Description data={contact.address} />
+          </article>
+          <article className="contact_info">
+            <BaseArticle elementTitle="Email" description={contact.email} />
+            <BaseArticle elementTitle="Phone" description={contact.phone} />
+            <BaseArticle elementTitle="Fax" description={contact.fax} />
+          </article>
+        </div>
       </Visual>
     </main>
   );

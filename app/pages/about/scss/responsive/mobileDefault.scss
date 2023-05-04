@@ -266,59 +266,62 @@
         }
       }
     }
-    .about_members_swiper {
-      padding-bottom: 4rem;
-      margin-bottom: 6rem;
+    .single_swiper_wrap {
+      padding-bottom: 6rem;
 
-      .swiper-slide {
-        width: unset;
+      .about_members_swiper {
+        padding-bottom: 4rem;
 
-        .member_name_en {
-          position: absolute;
-          bottom: 2.4rem;
-          left: 50%;
-          -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-          color: $color_white;
-          font-family: $font-en;
-          font-size: 1.8rem;
-          line-height: 100%;
-          letter-spacing: -0.03em;
-          z-index: 1;
-          width: 100%;
-          text-align: center;
-        }
+        .swiper-slide {
+          width: unset;
 
-        .detail_slide {
-          width: 26rem;
-          height: 26rem;
-          position: relative;
-          overflow: hidden;
+          .member_name_en {
+            position: absolute;
+            bottom: 2.4rem;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            color: $color_white;
+            font-family: $font-en;
+            font-size: 1.8rem;
+            line-height: 100%;
+            letter-spacing: -0.03em;
+            z-index: 1;
+            width: 100%;
+            text-align: center;
+          }
 
-          .detail {
-            div {
-              padding: 3.4rem 1.8rem 1.8rem 2.8rem;
-              b {
-                display: inline-block;
-                margin-bottom: 0.6rem;
-                font-size: 1.8rem;
-                line-height: 100%;
-              }
-              .member_team {
-                font-size: 1.4rem;
-                line-height: 140%;
-                margin-bottom: 2rem;
-              }
-              .member_hashtag {
-                @extend %font_visualDescription;
-                white-space: pre-wrap;
+          .detail_slide {
+            width: 26rem;
+            height: 26rem;
+            position: relative;
+            overflow: hidden;
+
+            .detail {
+              div {
+                padding: 3.4rem 1.8rem 1.8rem 2.8rem;
+                b {
+                  display: inline-block;
+                  margin-bottom: 0.6rem;
+                  font-size: 1.8rem;
+                  line-height: 100%;
+                }
+                .member_team {
+                  font-size: 1.4rem;
+                  line-height: 140%;
+                  margin-bottom: 2rem;
+                }
+                .member_hashtag {
+                  @extend %font_visualDescription;
+                  white-space: pre-wrap;
+                }
               }
             }
           }
         }
-      }
-      .swiper-scrollbar {
-        bottom: 0;
+        .swiper-scrollbar {
+          bottom: 0;
+        }
       }
     }
   }

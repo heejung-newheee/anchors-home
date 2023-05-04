@@ -60,7 +60,7 @@ function About() {
       {/* E: Key Visual 영역*/}
 
       {/* S: Description 영역*/}
-      <div className="about_intro_text_wrap">
+      <div className="about_intro_text_wrap section_div is_photo">
         <Description
           data={
             <>
@@ -83,7 +83,7 @@ function About() {
       {/* E: Description 영역*/}
 
       {/* S: about intro swiper 영역*/}
-      <div className="about_intro_swiper section_div is_white">
+      <div className="about_intro_swiper section_div is_photo">
         <SwiperArea
           key="swiper01"
           type="double"
@@ -219,7 +219,7 @@ function About() {
       </div>
       {/* E: anchors profile 영역*/}
 
-      <div className="about_members section_div is_white">
+      <div className="about_members section_div is_photo">
         <Visual imgUrl="/assets/images/contents/about/img_visual_members.jpg" />
         <div className="about_members_desc">
           <Description

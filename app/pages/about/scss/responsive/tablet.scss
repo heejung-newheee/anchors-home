@@ -148,29 +148,32 @@
           }
         }
       }
-      .about_members_swiper {
-        padding-bottom: 6.2rem;
-        margin-bottom: 12rem;
 
-        .swiper-slide {
-          .member_name_en {
-            bottom: 3rem;
-            font-size: 2.2rem;
-          }
+      .single_swiper_wrap {
+        padding-bottom: 12rem;
+        .about_members_swiper {
+          padding-bottom: 6.2rem;
 
-          .detail_slide {
-            width: 34rem;
-            height: 34rem;
+          .swiper-slide {
+            .member_name_en {
+              bottom: 3rem;
+              font-size: 2.2rem;
+            }
 
-            .detail {
-              div {
-                padding: 5rem 2rem 2rem 4rem;
-                b {
-                  margin-bottom: 1.2rem;
-                  font-size: 2.2rem;
-                }
-                .member_team {
-                  margin-bottom: 3.4rem;
+            .detail_slide {
+              width: 34rem;
+              height: 34rem;
+
+              .detail {
+                div {
+                  padding: 5rem 2rem 2rem 4rem;
+                  b {
+                    margin-bottom: 1.2rem;
+                    font-size: 2.2rem;
+                  }
+                  .member_team {
+                    margin-bottom: 3.4rem;
+                  }
                 }
               }
             }
