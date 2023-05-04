@@ -1,7 +1,12 @@
 'use client';
 import './scss/ImageArray.scss';
 
-export default function ImageArray({ data, className, bgColor = '#FFFFFF' }) {
+export default function ImageArray({
+  data,
+  className,
+  bgColor = '#FFFFFF',
+  imgUrl = '',
+}) {
   const GET_CLASSNAME =
     className === undefined
       ? { className: 'image_array' }
@@ -9,7 +14,7 @@ export default function ImageArray({ data, className, bgColor = '#FFFFFF' }) {
   return (
     <article {...GET_CLASSNAME} style={{ backgroundColor: bgColor }}>
       {data.map((imgs, index) => (
-        <img key={index} src={imgs.url} alt={imgs.alt} />
+        <img key={index} src={imgUrl + imgs.url} alt={imgs.alt} />
       ))}
     </article>
   );
