@@ -151,7 +151,16 @@
       ],
       "img_array": {
         "bg_color" : "#05141F",
-        "img": ["img_kia_imgarray1.jpg","img_kia_imgarray2.jpg"]
+        "img" : [
+          {
+            "url": "img_kia_imgarray1.jpg",
+            "alt": "Kia K-WCMS Website VR Showroom 시뮬레이션 화면 이미지"
+          },
+          {
+            "url": "img_kia_imgarray2.jpg",
+            "alt": "Kia K-WCMS Website VR Showroom 시뮬레이션 화면 이미지"
+          }
+        ]
       }
     },
     {
@@ -218,7 +227,16 @@
       ],
       "img_array": {
         "bg_color" : "#92C13D",
-        "img": ["img_happymove_imgarray1.jpg","img_happymove_imgarray2.jpg"]
+        "img" : [
+          {
+            "url": "img_happymove_imgarray1.jpg",
+            "alt": "Hyundai Hyundai Happy Move Website Main 화면 이미지"
+          },
+          {
+            "url": "img_happymove_imgarray2.jpg",
+            "alt": "Hyundai Hyundai Happy Move Website Main 화면 이미지"
+          }
+        ]
       }
     },
     {
@@ -264,7 +282,20 @@
       ],
       "img_array": {
         "bg_color" : "#002C5F",
-        "img": ["img_wwn_imgarray1.jpg","img_wwn_imgarray2.jpg","img_wwn_imgarray3.jpg"]
+        "img" : [
+          {
+            "url": "img_wwn_imgarray1.jpg",
+            "alt": "Hyundai WWN 3.0 국내 통합 개편 웹사이트 화면 이미지"
+          },
+          {
+            "url": "img_wwn_imgarray2.jpg",
+            "alt": "Hyundai WWN 3.0 국내 통합 개편 웹사이트 화면 이미지"
+          },
+          {
+            "url": "img_wwn_imgarray3.jpg",
+            "alt": "Hyundai WWN 3.0 국내 통합 개편 웹사이트 화면 이미지"
+          }
+        ]
       }
     },
     {
@@ -289,7 +320,20 @@
       ],
       "img_array": {
         "bg_color" : "#252525",
-        "img": ["img_genesis_imgarray1.jpg","img_genesis_imgarray2.jpg","img_genesis_imgarray3.jpg"]
+        "img" : [
+          {
+            "url": "img_genesis_imgarray1.jpg",
+            "alt": "Hyundai Genesis Global Main 화면 이미지"
+          },
+          {
+            "url": "img_genesis_imgarray2.jpg",
+            "alt": "Hyundai Genesis Global Main 화면 이미지"
+          },
+          {
+            "url": "img_genesis_imgarray3.jpg",
+            "alt": "Hyundai Genesis Global Main 화면 이미지"
+          }
+        ]
       }
     }
   ]
