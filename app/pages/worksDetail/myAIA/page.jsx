@@ -1,7 +1,8 @@
-import React from 'react';
-
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import works from '@/helper/data/json/contents/works/works.json';
+export const metadata = {
+  title: 'Our works',
+};
 
 export default function MyAIA() {
   return (

@@ -11,7 +11,7 @@ export default function GuideLayout() {
 
         <ul>
           <li>
-            <Link href="guide">Rule</Link>
+            <Link href="guide/pages/rule">Rule</Link>
           </li>
           <li className="active">
             <Link href="guide/pages/layout">Layout</Link>

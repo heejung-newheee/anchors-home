@@ -11,7 +11,7 @@ export default function GuideButton() {
 
         <ul>
           <li>
-            <Link href="guide">Rule</Link>
+            <Link href="guide/pages/rule">Rule</Link>
           </li>
           <li>
             <Link href="guide/pages/layout">Layout</Link>

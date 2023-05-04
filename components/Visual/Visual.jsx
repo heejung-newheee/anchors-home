@@ -16,7 +16,6 @@ export default function Visual({
     className == undefined
       ? { className: 'visual' + DIMM_CLASS }
       : { className: 'visual ' + className + DIMM_CLASS };
-  console.log(imgUrl);
   return (
     <article {...GET_CLASSNAME}>
       <ScrollTriggerArea

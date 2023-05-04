@@ -1,8 +1,6 @@
 'use client';
 
-import React from 'react';
-
-import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 import BaseArticle from '@/components/BaseArticle/BaseArticle';
 import Btn from '@/components/Btn/Btn';
@@ -48,6 +46,30 @@ export default function WorksTemplate({
     desktop: '4000px',
     wide: '4500px',
   };
+
+  let STATE = '';
+  const [hideClass, setHideClass] = useState('');
+  const HandleScroll = () => {
+    const VIEWPORT_HEIGHT = window.innerHeight;
+    const VIEW_BTN = document.querySelector('.view_website_btn');
+    const VIEW_BTN_HEIGHT = VIEW_BTN.getBoundingClientRect().height;
+    const NEXTWORK = document.querySelector('.detail_next_work_wrap');
+    const NEXTWORK_OFFSET = NEXTWORK.getBoundingClientRect().top;
+    const SCROLL_TOP = document.documentElement.scrollTop;
+    const ENVENT_OFFSET =
+      NEXTWORK_OFFSET + SCROLL_TOP - VIEWPORT_HEIGHT + VIEW_BTN_HEIGHT + 50;
+
+    // STATE = SCROLL_TOP < ENVENT_OFFSET ? ' show' : ' hide';
+
+    SCROLL_TOP < ENVENT_OFFSET ? setHideClass('') : setHideClass(' hide');
+  };
+  useEffect(() => {
+    // resetColorType();
+    window.addEventListener('scroll', HandleScroll);
+    return () => {
+      window.removeEventListener('scroll', HandleScroll);
+    };
+  }, []);
 
   return (
     <section {...GET_CLASSNAME}>
@@ -173,6 +195,17 @@ export default function WorksTemplate({
         </Btn>
         {/* E: Portfolio list button 영역 */}
       </div>
+
+      {/* S: View Website Button 영역 */}
+      <Btn
+        className={`view_website_btn${hideClass}`}
+        type="a"
+        title="view website button"
+      >
+        View <br /> Website
+      </Btn>
+      {/* E: View Website Button 영역 */}
+
       {/* E: Next work 영역 */}
     </section>
   );

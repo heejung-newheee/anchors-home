@@ -5,11 +5,11 @@ import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea'
 import Visual from '@/components/Visual/Visual';
 import contact from '@/helper/data/json/contents/contact/contact.json';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
+
 import './scss/contact.scss';
 
 export const metadata = {
-  title: 'Anchors',
-  description: '',
+  title: 'Contact',
 };
 
 const TRIGGER_START = {

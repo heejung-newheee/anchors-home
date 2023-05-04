@@ -11,11 +11,6 @@ import main from '@/helper/data/json/contents/main/main.json';
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 import './scss/main.scss';
 
-export const metadata = {
-  title: 'Anchors',
-  description: '',
-};
-
 function Main() {
   return (
     <>

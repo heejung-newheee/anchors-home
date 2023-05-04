@@ -1,5 +1,4 @@
-/*import { Inter } from 'next/font/google';*/
-
+import Accordion from '@/components/Accordion/Accordion';
 import BaseArticle from '@/components/BaseArticle/BaseArticle';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
@@ -17,14 +16,10 @@ import careerText from '@/helper/data/json/contents/career/careerText.json';
 import careerWelfare from '@/helper/data/json/contents/career/careerWelfare.json';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 
-// import Elements from 'aos/src/js/helpers/elements';
-
 import './scss/ career.scss';
-import Accordion from '@/components/Accordion/Accordion';
 
 export const metadata = {
-  title: 'Anchors',
-  description: '',
+  title: 'Career',
 };
 const TRIGGER_START = {
   mobile: '10px',
