@@ -2,11 +2,11 @@ import Btn from '@/components/Btn/Btn';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import FinderWorksList from '@/components/finderWorksList';
+import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import WebGlCarousel from '@/components/WebGlCarousel/WebGlCarousel';
-import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
 import main from '@/helper/data/json/contents/main/main.json';
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 import './scss/main.scss';
@@ -21,7 +21,7 @@ function Main() {
     <>
       <main className="main">
         <section className="section_div is_black">
-          <WebGlCarousel />
+          {/*<WebGlCarousel />*/}
         </section>
         {/* S: about us */}
         <section className="section_div is_black about_us">
