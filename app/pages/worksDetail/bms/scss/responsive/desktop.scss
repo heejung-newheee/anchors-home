@@ -1,0 +1,54 @@
+@include desktop {
+  .custom_area {
+    .video {
+      margin: 0 3.2rem;
+      margin-bottom: 10rem;
+    }
+    .custom_element_title {
+      margin-bottom: 3.4rem;
+    }
+    .custom_description {
+      max-width: 100rem;
+    }
+    .main_wrap {
+      .main_text_wrap {
+        .description {
+          margin-bottom: 8rem;
+        }
+      }
+      .main_img_wrap {
+        padding: 0;
+        margin-bottom: 10rem;
+      }
+    }
+    .brand_asset_wrap {
+      padding-top: 14rem;
+      padding-bottom: 14rem;
+
+      .description {
+        margin-bottom: 10rem;
+      }
+      .asset_list {
+        padding: 0 5.8rem;
+        .description {
+          font-size: 1.4rem;
+          margin-bottom: 3rem;
+        }
+        img {
+          margin-bottom: 10rem;
+        }
+      }
+    }
+    .identity_system_wrap {
+      padding-top: 14rem;
+      padding-bottom: 14rem;
+
+      .description {
+        margin-bottom: 10rem;
+      }
+      div {
+        padding: 0 4.7rem;
+      }
+    }
+  }
+}
