@@ -34,9 +34,9 @@ const TRIGGER_START = {
 };
 
 const TRIGGER_END = {
-  mobile: '200px',
-  table: '200px',
-  desktop: '600px',
+  mobile: '500px',
+  table: '500px',
+  desktop: '1000px',
   wide: '1000px',
 };
 
