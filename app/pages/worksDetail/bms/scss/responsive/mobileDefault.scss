@@ -1,0 +1,71 @@
+.custom_area {
+  .video {
+    margin-bottom: 5rem;
+  }
+  .custom_element_title {
+    font-family: $font-en;
+    @extend %font_sectionTitle;
+    line-height: 100%;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #000;
+    font-family : $en_letterSpacing
+  }
+  .custom_description {
+    font-family: $font-ko;
+    @extend %font_primary;
+    color: #000;
+  }
+  .main_wrap {
+    .main_text_wrap {
+      @extend %layout_fix;
+      .description {
+        margin-bottom: 5rem;
+      }
+    }
+    .main_img_wrap {
+      padding: 0 2.4rem;
+      margin-bottom: 5rem;
+    }
+  }
+  .brand_asset_wrap {
+    padding-top: 6rem;
+    padding-bottom: 6.2rem;
+    background-color: #f4f4f4;
+    @extend %layout_fix;
+
+    .description {
+      margin-bottom: 5rem;
+    }
+    .asset_list {
+      .description {
+        font-size: 1.2rem;
+        text-align: left;
+        margin-bottom: 2rem;
+        color: #000;
+        font-family: $font-ko;
+      }
+      img {
+        display: inline-block;
+        margin-bottom: 5rem;
+      }
+      &:last-child {
+        img{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .identity_system_wrap {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+    .description {
+      @extend %layout_fix;
+      margin-bottom: 4rem;
+    }
+    div {
+      padding: 0 4rem;
+    }
+  }
+}
