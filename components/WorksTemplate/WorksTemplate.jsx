@@ -14,11 +14,26 @@ import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea'
 import works from '@/helper/data/json/contents/works/works.json';
 import './scss/WorkTemplate.scss';
 
-export default function WorksTemplate({ className }) {
+export default function WorksTemplate({
+  className,
+  visualImgUrl,
+  visualChildren,
+  disclaimerChildren,
+  detailTextDescEn,
+  detailTextDescKo,
+  customChildren,
+  subVisualImgUrl,
+  workContent,
+  firstNextWork,
+  secondNextWork,
+  thirdNextWork,
+  custom = 'N',
+}) {
+  const HAS_CUSTOM = custom === 'Y' ? ' custom' : '';
   const GET_CLASSNAME =
     className == undefined
-      ? { className: 'works_template' }
-      : { className: 'works_template ' + className };
+      ? { className: 'works_template' + HAS_CUSTOM }
+      : { className: 'works_template ' + className + HAS_CUSTOM };
 
   const TRIGGER_START = {
     mobile: '1848px',
@@ -41,16 +56,10 @@ export default function WorksTemplate({ className }) {
         <Visual
           dimm="Y"
           className="detail_key_visual"
-          imgUrl="/assets/images/contents/works/img_keyvisual_aia.png"
-          pageTitleData={
-            <>
-              AIA Life insurance
-              <br />
-              ‘MY AIA’ site
-            </>
-          }
+          imgUrl={visualImgUrl}
+          pageTitleData={visualChildren}
         >
-          <Disclaimer data={works.content[0].description} />
+          <Disclaimer data={disclaimerChildren} />
         </Visual>
         <img
           className="scroll_icon"
@@ -82,34 +91,11 @@ export default function WorksTemplate({ className }) {
 
       {/* S: Text 영역 */}
       <div className="detail_text_wrap">
-        <Description
-          data={
-            <>
-              Global insurance company AIA Life Insurance claim screen, MY AIA
-              enhance project. The
-              <span> user interface has been improved </span>
-              to make insurance claims more convenient. Anchors carried out the
-              project based on <span>our experienced AEM know-how,</span> and we
-              are recognized for its ability to perform. MY AIA annual operation
-              project is also underway.
-            </>
-          }
-        />
-        <Description
-          data={
-            <>
-              글로벌 보험사 AIA생명의 MY AIA 보험금 청구 화면 개편 사업으로 보다
-              <br />
-              편리하게 보험금 청구가 가능하도록 User Interface를 개선하였습니다.
-              <br />
-              자사의 숙련된 AEM Know-how를 바탕으로 프로젝트를 수행하였으며,
-              <br />
-              수행 능력을 인정받아 MY AIA 연간 운영 사업도 진행하고 있습니다.
-            </>
-          }
-        />
+        <Description data={detailTextDescEn} />
+        <Description data={detailTextDescKo} />
         {/* works.json => 받아와야 할 순서의 contents key값 중에 'projectInformation' 받아와서 적용 */}
-        {works.content[4].projectInfomation.map((data, index) => (
+        {/* 해당 값은 각 페이지 workContent props에 담아줘야 함 */}
+        {workContent.map((data, index) => (
           <BaseArticle
             key={index}
             elementTitle={data.title}
@@ -119,18 +105,24 @@ export default function WorksTemplate({ className }) {
       </div>
       {/* E: Text 영역 */}
 
+      {/* S: custom 영역 */}
+      <div className="custom_area">{customChildren}</div>
+      {/* E: custom 영역 */}
+
       {/* S: Sub Visual 영역 */}
       <Visual
         dimm="Y"
         className="detail_sub_visual_wrap"
-        imgUrl="/assets/images/contents/works/img_subvisual_aia.png"
+        imgUrl={subVisualImgUrl}
       >
         <div className="sub_visual_text">
           <Description data="Thank you!" />
           {/* works.json => 받아와야 할 순서의 contents key값 중에 'projectInformation' 받아와서 적용 */}
-          {works.content[4].projectInfomation.map((data, index) => (
+          {/* 해당 값은 각 페이지 workContent props에 담아줘야 함 */}
+          {workContent.map((data, index) => (
             <BaseArticle
               key={index}
+              업
               elementTitle={data.title}
               description={data.contents}
             />
@@ -145,28 +137,28 @@ export default function WorksTemplate({ className }) {
           Next Work
         </DepthTitle>
         <div>
-          <a href="#">
+          <a href={firstNextWork.websiteUrl}>
             <BaseArticle
-              imgUrl={works.imgUrl + works.content[4].thumbnail}
-              imgAlt="next work thumnail image"
-              elementTitle={works.content[4].title}
-              description={works.content[4].description}
+              imgUrl={works.imgUrl + firstNextWork.thumbnail}
+              imgAlt={firstNextWork.thumbnailAlt}
+              elementTitle={firstNextWork.title}
+              description={firstNextWork.description}
             />
           </a>
-          <a href="#">
+          <a href={secondNextWork.websiteUrl}>
             <BaseArticle
-              imgUrl={works.imgUrl + works.content[4].thumbnail}
-              imgAlt="next work thumnail image"
-              elementTitle={works.content[4].title}
-              description={works.content[4].description}
+              imgUrl={works.imgUrl + secondNextWork.thumbnail}
+              imgAlt={secondNextWork.thumbnailAlt}
+              elementTitle={secondNextWork.title}
+              description={secondNextWork.description}
             />
           </a>
-          <a href="#">
+          <a href={thirdNextWork.websiteUrl}>
             <BaseArticle
-              imgUrl={works.imgUrl + works.content[4].thumbnail}
-              imgAlt="next work thumnail image"
-              elementTitle={works.content[4].title}
-              description={works.content[4].description}
+              imgUrl={works.imgUrl + thirdNextWork.thumbnail}
+              imgAlt={thirdNextWork.thumbnailAlt}
+              elementTitle={thirdNextWork.title}
+              description={thirdNextWork.description}
             />
           </a>
         </div>
