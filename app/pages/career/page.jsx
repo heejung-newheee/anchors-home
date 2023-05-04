@@ -10,6 +10,7 @@ import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea'
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Visual from '@/components/Visual/Visual';
 import careerComment from '@/helper/data/json/contents/career/careerComment.json';
+import careerFaq from '@/helper/data/json/contents/career/careerFaq.json';
 import careerMembers from '@/helper/data/json/contents/career/careerMembers.json';
 import careerProcess from '@/helper/data/json/contents/career/careerProcess.json';
 import careerText from '@/helper/data/json/contents/career/careerText.json';
@@ -47,14 +48,17 @@ function Career() {
       {/* S: key_visual 영역 */}
       <Visual
         imgUrl="/assets/images/contents/career/img_keyvisual_members.jpg"
-        className="key_visual"
+        // className="key_visual"
       />
       {/* E: key_visual 영역 */}
 
       {/* S: 비주얼 이미지 아래 텍스트 */}
       <div className="career_text">
-        <Description innerHTMLOption="Y" data={careerText.textList[0].text1} />
-        <Description data={careerText.textList[0].text2} />
+        <Description
+          innerHTMLOption="Y"
+          data={careerText.textList[0].text_en}
+        />
+        <Description data={careerText.textList[0].text_ko} />
       </div>
       {/* E: 비주얼 이미지 아래 텍스트 */}
 
@@ -91,7 +95,7 @@ function Career() {
         <Description
           className="swiper_comment_text"
           innerHTMLOption="Y"
-          data={careerText.textList[1].text1}
+          data={careerText.textList[0].comment_text}
         />
         <SwiperArea
           type="single"
@@ -143,7 +147,7 @@ function Career() {
         <Description
           className="welfare_text"
           innerHTMLOption="Y"
-          data={careerText.textList[2].text1}
+          data={careerText.textList[0].welfare_text}
         />
         <article className="welfare_list">
           {careerWelfare.content.map((data, idx) => (
@@ -188,7 +192,7 @@ function Career() {
       <section className="employment_area">
         <Description
           className="employment_text"
-          data={careerText.textList[3].text1}
+          data={careerText.textList[0].employment_text}
         />
         <article className="process_tab">
           <div className="process_number_wrap">
@@ -215,10 +219,11 @@ function Career() {
         </article>
         <article className="faq_tab">
           <Accordion
-            contents={[
-              { title: 'accordionTitle1', content: 'accordioncontent1' },
-              { title: 'accordionTitle1', content: 'accordioncontent1' },
-            ]}
+            contents={careerFaq.content.map((data, idx) => ({
+              key: idx,
+              title: data.title,
+              content: data.text,
+            }))}
           />
         </article>
       </section>
