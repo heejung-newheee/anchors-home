@@ -1,6 +1,8 @@
 @include tablet {
   .career{
-    .key_visual{}
+    .visual{
+      height: 57.6rem;
+    }
     .career_text{
       padding: 12rem 4.4rem;
       p:nth-of-type(1){
