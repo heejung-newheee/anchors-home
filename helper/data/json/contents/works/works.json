@@ -148,7 +148,11 @@
         { "title" :  "Client" , "contents" :  "기아 주식회사(Kia Corp.), 인도법인(Kia India), 현대오토에버"},
         { "title" :  "Year" , "contents" :  "2019.10"},
         { "title" :  "Service" , "contents" :  "AEM, Java, Responsive Web, e-Commerce"}
-      ]
+      ],
+      "img_array": {
+        "bg_color" : "#05141F",
+        "img": ["img_kia_imgarray1.jpg","img_kia_imgarray2.jpg"]
+      }
     },
     {
       "id": "0009",
@@ -211,7 +215,11 @@
         { "title" :  "Client" , "contents" :  "현대오토에버, 현대자동차"},
         { "title" :  "Year" , "contents" :  "2019.03"},
         { "title" :  "Service" , "contents" :  "eCore 기반, JAVA, iOS, Android, Salesforce"}
-      ]
+      ],
+      "img_array": {
+        "bg_color" : "#92C13D",
+        "img": ["img_happymove_imgarray1.jpg","img_happymove_imgarray2.jpg"]
+      }
     },
     {
       "id": "0006",
@@ -253,7 +261,11 @@
         { "title" :  "Client" , "contents" :  "현대오토에버, 현대자동차"},
         { "title" :  "Year" , "contents" :  "2018.03"},
         { "title" :  "Service" , "contents" :  "eCore 기반, JAVA, iOS, Android, Salesforce"}
-      ]
+      ],
+      "img_array": {
+        "bg_color" : "#002C5F",
+        "img": ["img_wwn_imgarray1.jpg","img_wwn_imgarray2.jpg","img_wwn_imgarray3.jpg"]
+      }
     },
     {
       "id": "0004",
@@ -274,7 +286,11 @@
         { "title" :  "Client" , "contents" :  "현대오토에버, 제네시스 유럽 법인"},
         { "title" :  "Year" , "contents" :  "2020.09"},
         { "title" :  "Service" , "contents" :  "AEM Framework 기반의 Java/HTL, Oracle, Tibero, ETL, rest API 등"}
-      ]
+      ],
+      "img_array": {
+        "bg_color" : "#252525",
+        "img": ["img_genesis_imgarray1.jpg","img_genesis_imgarray2.jpg","img_genesis_imgarray3.jpg"]
+      }
     }
   ]
 }
