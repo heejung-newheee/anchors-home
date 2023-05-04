@@ -9,8 +9,8 @@ import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
-import Visual from '@/components/Visual/Visual';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
+import Visual from '@/components/Visual/Visual';
 import works from '@/helper/data/json/contents/works/works.json';
 import './scss/WorkTemplate.scss';
 
@@ -52,7 +52,7 @@ export default function WorksTemplate({
   return (
     <section {...GET_CLASSNAME}>
       {/* S: Key Visual 영역 */}
-      <div className="detail_key_visual_wrap">
+      <div className="detail_key_visual_wrap section_div is_black">
         <Visual
           dimm="Y"
           className="detail_key_visual"
@@ -70,28 +70,28 @@ export default function WorksTemplate({
       {/* E: Key Visual 영역 */}
 
       {/* S: View Website Button 영역 */}
-      <ScrollTriggerArea
-        type="multiTrigger"
-        triggerOffset={'center'}
-        triggerMarkers={true}
-        triggerStart={TRIGGER_START}
-        triggerEnd={TRIGGER_END}
-        YAxes={{
-          mobile: ['200px'],
-          table: ['0px'],
-          desktop: ['500px'],
-          wide: ['700px'],
-        }}
-      >
-        <Btn className="view_website_btn" type="a" title="view website button">
-          View <br /> Website
-        </Btn>
-      </ScrollTriggerArea>
+      {/*<ScrollTriggerArea*/}
+      {/*  type="multiTrigger"*/}
+      {/*  triggerOffset={'center'}*/}
+      {/*  triggerMarkers={false}*/}
+      {/*  triggerStart={TRIGGER_START}*/}
+      {/*  triggerEnd={TRIGGER_END}*/}
+      {/*  YAxes={{*/}
+      {/*    mobile: ['200px'],*/}
+      {/*    table: ['0px'],*/}
+      {/*    desktop: ['500px'],*/}
+      {/*    wide: ['700px'],*/}
+      {/*  }}*/}
+      {/*>*/}
+      {/*  <Btn className="view_website_btn" type="a" title="view website button">*/}
+      {/*    View <br /> Website*/}
+      {/*  </Btn>*/}
+      {/*</ScrollTriggerArea>*/}
       {/* E: View Website Button 영역 */}
 
       {/* S: Text 영역 */}
-      <div className="detail_text_wrap">
-        <Description data={detailTextDescEn} />
+      <div className="detail_text_wrap section_div is_photo">
+        <Description data={detailTextDescEn} innerHTMLOption="Y" />
         <Description data={detailTextDescKo} />
         {/* works.json => 받아와야 할 순서의 contents key값 중에 'projectInformation' 받아와서 적용 */}
         {/* 해당 값은 각 페이지 workContent props에 담아줘야 함 */}
@@ -106,13 +106,13 @@ export default function WorksTemplate({
       {/* E: Text 영역 */}
 
       {/* S: custom 영역 */}
-      <div className="custom_area">{customChildren}</div>
+      <div className="custom_area section_div is_photo">{customChildren}</div>
       {/* E: custom 영역 */}
 
       {/* S: Sub Visual 영역 */}
       <Visual
         dimm="Y"
-        className="detail_sub_visual_wrap"
+        className="detail_sub_visual_wrap section_div is_black"
         imgUrl={subVisualImgUrl}
       >
         <div className="sub_visual_text">
@@ -132,7 +132,7 @@ export default function WorksTemplate({
       {/* E: Sub Visual 영역 */}
 
       {/* S: Next work 영역 */}
-      <div className="detail_next_work_wrap">
+      <div className="detail_next_work_wrap section_div is_photo">
         <DepthTitle depthLevel="1" blindOption="visible">
           Next Work
         </DepthTitle>
@@ -162,18 +162,18 @@ export default function WorksTemplate({
             />
           </a>
         </div>
+
+        {/* S: Portfolio list button 영역 */}
+        <Btn
+          className="portfolio_list_btn"
+          type="a"
+          title="portfolio list button"
+        >
+          Portfolio list
+        </Btn>
+        {/* E: Portfolio list button 영역 */}
       </div>
       {/* E: Next work 영역 */}
-
-      {/* S: Portfolio list button 영역 */}
-      <Btn
-        className="portfolio_list_btn"
-        type="a"
-        title="portfolio list button"
-      >
-        Portfolio list
-      </Btn>
-      {/* E: Portfolio list button 영역 */}
     </section>
   );
 }
