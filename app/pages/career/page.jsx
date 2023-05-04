@@ -42,7 +42,7 @@ const TRIGGER_END = {
 
 function Career() {
   return (
-    <main className="career">
+    <main className="career section_div is_photo">
       <PageTitle data={headerFooter.menuList[4].name} />
 
       {/* S: key_visual 영역 */}
