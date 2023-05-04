@@ -57,7 +57,7 @@
       letter-spacing: -0.03em;
     }
     .description:first-child {
-      margin-top: 6rem;
+      padding-top: 6rem;
       span {
         font-family: $font_en_italic;
         @extend %font_enIntro;
@@ -89,7 +89,8 @@
       }
       &:last-child {
         .description {
-          margin-bottom: 6rem;
+          margin-bottom: 0;
+          padding-bottom: 6rem;
         }
       }
     }
@@ -114,7 +115,7 @@
         font-family: $font_en_italic;
         font-size: 3.6rem;
         margin-bottom: 4.4rem;
-        letter-spacing: 0.03em;
+        letter-spacing: $en_letterSpacing;
         line-height: 4.7rem;
       }
       .base_article {

@@ -17,7 +17,7 @@
     .detail_text_wrap {
       padding: 0 14rem;
       .description:first-child {
-        margin-top: 14rem;
+        padding-top: 14rem;
       }
       .base_article {
         .element_title {
@@ -30,7 +30,7 @@
         }
         &:last-child {
           .description {
-            margin-bottom: 14rem;
+            padding-bottom: 14rem;
           }
         }
       }

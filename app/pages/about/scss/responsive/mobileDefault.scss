@@ -15,7 +15,7 @@
     background-color: $color_white;
     .description:first-child {
       @extend %font_enIntro;
-      letter-spacing: -0.03em;
+      letter-spacing: $en_letterSpacing;
       font-family: $font-en;
       margin-bottom: 3rem;
       color: #121212;
@@ -121,7 +121,7 @@
       font-family: $font_en;
       font-size: 1.6rem;
       line-height: 1.6rem;
-      letter-spacing: -0.03em;
+      letter-spacing: $en_letterSpacing;
       margin-bottom: 6rem;
       font-weight: 400;
       max-width: 1816px;
@@ -143,14 +143,14 @@
       .profile_grow_number {
         font-size: 5rem;
         font-family: $font-en;
-        letter-spacing: -0.03em;
+        letter-spacing: $en_letterSpacing;
         span {
           @extend %font_visualDescription;
           line-height: 100%;
           margin-left: 0.8rem;
           display: inline-block;
           margin-bottom: 3rem;
-          letter-spacing: -0.03em;
+          letter-spacing: $en_letterSpacing;
         }
       }
       .lottieTrigger {
@@ -165,7 +165,7 @@
       .profile_award_description {
         font-family: $font-en;
         font-weight: 500;
-        letter-spacing: -0.03em;
+        letter-spacing: $en_letterSpacing;
         @extend %font_sectionTitle;
         margin-bottom: 6.4rem;
       }
@@ -188,14 +188,14 @@
 
         .element_title {
           @extend %font_listTitle;
-          letter-spacing: -0.03em;
+          letter-spacing: $en_letterSpacing;
           font-weight: 400;
           margin-bottom: 1.4rem;
         }
         .description {
           font-size: 1.4rem;
           line-height: 100%;
-          letter-spacing: -0.03em;
+          letter-spacing: $en_letterSpacing;
         }
       }
     }
@@ -205,7 +205,7 @@
         font-family: $font_en;
         font-weight: 500;
         @extend %font_sectionTitle;
-        letter-spacing: -0.03em;
+        letter-spacing: $en_letterSpacing;
         margin-bottom: 5rem;
         margin-top: 10rem;
         max-width: 1816px;
@@ -228,7 +228,7 @@
         font-family: $font_en;
         @extend %font_visualDescription;
         text-align: center;
-        letter-spacing: -0.03em;
+        letter-spacing: $en_letterSpacing;
         line-height: 2.2rem;
       }
       .download_btn {
@@ -247,7 +247,7 @@
         @extend %font_enIntro;
         font-family: $font-en;
         text-align: center;
-        letter-spacing: -0.03em;
+        letter-spacing: $en_letterSpacing;
         margin-bottom: 3rem;
         margin-top: 6rem;
         color: #121212;
@@ -285,7 +285,7 @@
             font-family: $font-en;
             font-size: 1.8rem;
             line-height: 100%;
-            letter-spacing: -0.03em;
+            letter-spacing: $en_letterSpacing;
             z-index: 1;
             width: 100%;
             text-align: center;

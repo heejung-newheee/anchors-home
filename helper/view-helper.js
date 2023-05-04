@@ -1,2 +1,2 @@
-export const pagesIsBgBlack = ['/'];
+export const pagesIsBgBlack = ['/', '/pages/worksDetail/myAIA'];
 export const pagesIsBgWhite = [];
