@@ -64,7 +64,7 @@ function Service() {
               <ScrollTriggerArea
                 type="toggleTrigger"
                 triggerStart={TRIGGER_START}
-                triggerMarkers={true}
+                triggerMarkers={false}
                 triggerOffset={'center'}
               >
                 <span className="part_img">
@@ -73,7 +73,7 @@ function Service() {
                     triggerStart={MULTI_TRIGGER_START}
                     triggerEnd={MULTI_TRIGGER_END}
                     triggerOffset={'center'}
-                    triggerMarkers={true}
+                    triggerMarkers={false}
                     YAxes={{
                       mobile: ['20px'],
                       table: ['25px'],

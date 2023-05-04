@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   height: 64rem;
+  overflow: hidden;
   background-size: cover;
   background-position: center;
   &.dimmed::after {
@@ -16,5 +17,17 @@
   }
   h2 {
     @extend %font_visualTitle;
+  }
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    img  {
+      object-fit: cover;
+      width: 100%;
+      height: 150%;
+      position: absolute;
+      bottom:0;
+      left: 0;
+    }
   }
 }

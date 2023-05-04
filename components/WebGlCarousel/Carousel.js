@@ -12,8 +12,8 @@ import { lerp, getPiramidalIndex } from './utils';
 Plane Settings
 ------------------------------*/
 const planeSettings = {
-  width: 1,
-  height: 2.5,
+  width: 2,
+  height: 5,
   gap: 0.1,
 };
 
@@ -67,7 +67,7 @@ const Carousel = ({ images = [] }) => {
   RAF
   --------------------*/
   useFrame(() => {
-    progress.current = Math.max(0, Math.min(progress.current, 100));
+    progress.current = Math.max(0, Math.min(progress.current + 0.1, 100));
 
     const active = Math.floor((progress.current / 100) * ($items.length - 1));
     $items.forEach((item, index) => displayItems(item, index, active));

@@ -1,10 +1,11 @@
 'use client';
 
-import Link from 'next/link';
 import './scss/Visual.scss';
+import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 
 export default function Visual({
   imgUrl,
+  alt,
   dimm = 'N',
   children,
   className,
@@ -15,8 +16,35 @@ export default function Visual({
     className == undefined
       ? { className: 'visual' + DIMM_CLASS }
       : { className: 'visual ' + className + DIMM_CLASS };
+  console.log(imgUrl);
   return (
-    <article {...GET_CLASSNAME} style={{ backgroundImage: `url(${imgUrl})` }}>
+    <article {...GET_CLASSNAME}>
+      <ScrollTriggerArea
+        type="multiTrigger"
+        triggerStart={{
+          mobile: '50%',
+          table: '50%',
+          desktop: '50%',
+          wide: '50%',
+        }}
+        triggerEnd={{
+          mobile: '100%',
+          table: '100%',
+          desktop: '100%',
+          wide: '100%',
+        }}
+        triggerOffset={'center'}
+        triggerMarkers={true}
+        YAxes={{
+          mobile: ['10%'],
+          table: ['10%'],
+          desktop: ['76px'],
+          wide: ['76px'],
+        }}
+        duration={10}
+      >
+        <img src={imgUrl} alt={alt} />
+      </ScrollTriggerArea>
       {pageTitleData && <h2>{pageTitleData}</h2>}
       {children}
     </article>
