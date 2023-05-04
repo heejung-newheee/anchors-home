@@ -5,45 +5,27 @@ import gsap from 'gsap';
 
 import CarouselItem from './CarouselItem';
 import PostProcessing from './PostProcessing';
-import { usePrevious } from './utils';
 import { lerp, getPiramidalIndex } from './utils';
 
-/*------------------------------
-Plane Settings
-------------------------------*/
 const planeSettings = {
-  width: 1,
-  height: 2.5,
+  width: 1.4,
+  height: 3.6,
   gap: 0.1,
 };
 
-/*------------------------------
-Gsap Defaults
-------------------------------*/
 gsap.defaults({
   duration: 2.5,
   ease: 'power3.out',
 });
 
-/*------------------------------
-Carousel
-------------------------------*/
 const Carousel = ({ images = [] }) => {
   const [$root, setRoot] = useState();
   const $post = useRef();
-
-  const [activePlane, setActivePlane] = useState(null);
-  const prevActivePlane = usePrevious(activePlane);
   const { viewport } = useThree();
 
-  /*--------------------
-  Vars
-  --------------------*/
+  const [isMouseOver, setIsMouseOver] = useState(false);
+
   const progress = useRef(0);
-  const startX = useRef(0);
-  const isDown = useRef(false);
-  const speedWheel = 0.02;
-  const speedDrag = -0.3;
   const oldProgress = useRef(0);
   const speed = useRef(0);
   const $items = useMemo(() => {
@@ -52,22 +34,24 @@ const Carousel = ({ images = [] }) => {
     }
   }, [$root]);
 
-  /*--------------------
-  Diaplay Items
-  --------------------*/
   const displayItems = (item, index, active) => {
     const piramidalIndex = getPiramidalIndex($items, active)[index];
     gsap.to(item.position, {
       x: (index - active) * (planeSettings.width + planeSettings.gap),
       y: $items.length * -0.1 + piramidalIndex * 0.1,
     });
+
+    /*gsap.to(item.rotation, {
+      y: (Math.PI / 45) * (active - index),
+    });*/
   };
 
-  /*--------------------
-  RAF
-  --------------------*/
   useFrame(() => {
-    progress.current = Math.max(0, Math.min(progress.current, 100));
+    const autoScrollSpeed = !isMouseOver ? 0.7 / images.length : 0;
+    progress.current = Math.max(
+      0,
+      Math.min(progress.current + autoScrollSpeed, 100),
+    );
 
     const active = Math.floor((progress.current / 100) * ($items.length - 1));
     $items.forEach((item, index) => displayItems(item, index, active));
@@ -84,84 +68,15 @@ const Carousel = ({ images = [] }) => {
     }
   });
 
-  /*--------------------
-  Handle Wheel
-  --------------------*/
-  const handleWheel = (e) => {
-    if (activePlane !== null) {
-      return;
-    }
-    const isVerticalScroll = Math.abs(e.deltaY) > Math.abs(e.deltaX);
-    const wheelProgress = isVerticalScroll ? e.deltaY : e.deltaX;
-    progress.current = progress.current + wheelProgress * speedWheel;
-  };
-
-  /*--------------------
-  Handle Down
-  --------------------*/
-  const handleDown = (e) => {
-    if (activePlane !== null) {
-      return;
-    }
-    isDown.current = true;
-    startX.current = e.clientX || (e.touches && e.touches[0].clientX) || 0;
-  };
-
-  /*--------------------
-  Handle Up
-  --------------------*/
-  const handleUp = () => {
-    isDown.current = false;
-  };
-
-  /*--------------------
-  Handle Move
-  --------------------*/
-  const handleMove = (e) => {
-    if (activePlane !== null || !isDown.current) {
-      return;
-    }
-    const x = e.clientX || (e.touches && e.touches[0].clientX) || 0;
-    const mouseProgress = (x - startX.current) * speedDrag;
-    progress.current = progress.current + mouseProgress;
-    startX.current = x;
-  };
-
-  /*--------------------
-  Click
-  --------------------*/
-  useEffect(() => {
-    if (!$items) {
-      return;
-    }
-    if (activePlane !== null && prevActivePlane === null) {
-      progress.current = (activePlane / ($items.length - 1)) * 100; // Calculate the progress.current based on activePlane
-    }
-  }, [activePlane, $items]);
-
-  /*--------------------
-  Render Plane Events
-  --------------------*/
   const renderPlaneEvents = () => {
     return (
-      <mesh
-        position={[0, 0, -0.01]}
-        onWheel={handleWheel}
-        onPointerDown={handleDown}
-        onPointerUp={handleUp}
-        onPointerMove={handleMove}
-        onPointerLeave={handleUp}
-        onPointerCancel={handleUp}
-      >
+      <mesh position={[0, 0, -0.01]}>
         <planeGeometry args={[viewport.width, viewport.height]} />
         <meshBasicMaterial transparent={true} opacity={0} />
       </mesh>
     );
   };
 
-  /*--------------------
-  Render Slider
-  --------------------*/
   const renderSlider = () => {
     return (
       <group ref={setRoot}>
@@ -169,8 +84,7 @@ const Carousel = ({ images = [] }) => {
           <CarouselItem
             width={planeSettings.width}
             height={planeSettings.height}
-            setActivePlane={setActivePlane}
-            activePlane={activePlane}
+            onHandOver={(value) => setIsMouseOver(value)}
             key={item.image}
             item={item}
             index={i}
