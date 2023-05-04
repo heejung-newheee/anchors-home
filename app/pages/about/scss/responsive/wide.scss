@@ -12,8 +12,8 @@
     }
     .about_intro_swiper {
       max-width: 130.6rem;
-      margin: 0 auto 18rem;
-      padding: 0 8.4rem;
+      margin: 0 auto;
+      padding: 0 8.4rem 18rem;
 
       .image_swiper {
         width: 33.854167vw;
@@ -133,13 +133,15 @@
           }
         }
       }
-      .about_members_swiper {
-        padding-bottom: 7.2rem;
-        margin-bottom: 18rem;
-        .swiper-slide {
-          .member_name_en {
-            bottom: 4rem;
-            font-size: 2.8rem;
+      .single_swiper_wrap {
+        padding-bottom: 18rem;
+        .about_members_swiper {
+          padding-bottom: 7.2rem;
+          .swiper-slide {
+            .member_name_en {
+              bottom: 4rem;
+              font-size: 2.8rem;
+            }
           }
         }
       }

@@ -37,7 +37,7 @@ const MULTI_TRIGGER_END = {
 
 function Service() {
   return (
-    <main className="service">
+    <main className="service section_div is_photo">
       <PageTitle data={headerFooter.menuList[2].name} />
       <section className="visual_comment">
         <Visual imgUrl="/assets/images/contents/service/img_keyvisual_officewide.jpg" />
@@ -62,7 +62,7 @@ function Service() {
           <>
             <div key={idx} className="container">
               <ScrollTriggerArea
-                type="toggleTrigger"
+                type="multiTrigger"
                 triggerStart={TRIGGER_START}
                 triggerMarkers={false}
                 triggerOffset={'center'}

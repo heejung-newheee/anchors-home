@@ -165,26 +165,10 @@ function Career() {
 
       {/*S: sub_visual 영역 */}
       <div className="sub_visual">
-        <Visual>
-          <ScrollTriggerArea
-            type="multiTrigger"
-            triggerStart={TRIGGER_START}
-            triggerEnd={TRIGGER_END}
-            triggerOffset={'center'}
-            triggerMarkers={false}
-            YAxes={{
-              mobile: ['10px'],
-              table: ['10px'],
-              desktop: ['30px'],
-              wide: ['30px'],
-            }}
-          >
-            <img
-              src="/assets/images/contents/career/img_visual_lights.jpg"
-              alt="사무실 조명 이미지"
-            />
-          </ScrollTriggerArea>
-        </Visual>
+        <Visual
+          imgUrl="/assets/images/contents/career/img_visual_lights.jpg"
+          alt="사무실 조명 이미지"
+        />
       </div>
       {/* E: sub_visual 영역 */}
 
