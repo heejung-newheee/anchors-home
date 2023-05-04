@@ -50,7 +50,7 @@ export default function WebGlCarousel() {
     <div className="main-carousel">
       <Canvas>
         <Suspense fallback={null}>
-          <Carousel images={images} />
+          <Carousel images={[...images, ...images]} />
         </Suspense>
       </Canvas>
     </div>
