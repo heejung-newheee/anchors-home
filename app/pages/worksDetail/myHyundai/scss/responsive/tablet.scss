@@ -1,0 +1,15 @@
+@include tablet {
+  .visual {
+    h2 {
+      max-width: 60rem;
+    }
+    .disclaimer {
+      padding: 0;
+    }
+  }
+  .myhyundai_device {
+    .description {
+      width: 46.4rem !important;
+    }
+  }
+}
