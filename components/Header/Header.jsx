@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
 import Logo from '@/components/Logo/Logo';
-// eslint-disable-next-line import/order
 import Menu from '@/components/Menu/Menu';
 
 import './scss/Header.scss';
@@ -68,6 +67,12 @@ export default function Header({ className }) {
       window.removeEventListener('scroll', HandleScroll);
     };
   }, []);
+
+  // const linkLocation = use
+  // const routers = useRouter();
+  useEffect(() => {
+    setHeaderBgType(cl);
+  }, [location]);
 
   const GET_CLASSNAME =
     className == undefined

@@ -7,25 +7,23 @@ import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
-
-import aboutProfile from '/helper/data/json/contents/about/aboutProfile.json';
-import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
-
 import MoreDetail from '@/components/MoreDetail/MoreDetail';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Visual from '@/components/Visual/Visual';
+
+import aboutProfile from '/helper/data/json/contents/about/aboutProfile.json';
+import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
+
 import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
 import lottie_arrow from '@/public/assets/images/lottie/lottieAboutusUpArrow.json';
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 
 import './scss/about.scss';
-import React from 'react';
 
 export const metadata = {
-  title: 'Anchors',
-  description: '',
+  title: 'About us',
 };
 
 const LOTTIE_OPTION = {

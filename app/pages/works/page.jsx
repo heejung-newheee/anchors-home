@@ -1,14 +1,13 @@
 import BaseArticle from '@/components/BaseArticle/BaseArticle';
+import Btn from '@/components/Btn/Btn';
 import PageTitle from '@/components/PageTitle/PageTitle';
+import Tab from '@/components/Tab/Tab';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 import worksList from '@/helper/data/json/contents/works/works.json';
-import './scss/works.scss';
-import Btn from '@/components/Btn/Btn';
-import Tab from '@/components/Tab/Tab';
 
+import './scss/works.scss';
 export const metadata = {
-  title: 'Anchors',
-  description: '',
+  title: 'Our works',
 };
 
 function Works() {

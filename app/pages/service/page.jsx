@@ -10,8 +10,7 @@ import service from '@/helper/data/json/contents/service/service.json';
 import './scss/service.scss';
 
 export const metadata = {
-  title: 'Anchors',
-  description: '',
+  title: 'Service',
 };
 
 const TRIGGER_START = {
