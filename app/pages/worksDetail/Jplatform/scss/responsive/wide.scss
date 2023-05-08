@@ -1,0 +1,33 @@
+@include wide {
+  .custom_area{
+    .video{
+      max-width: 1536px;
+      margin: 0 auto;
+    }
+    .main_text{
+      padding-top: 16rem;
+      padding-bottom: 14rem;
+      .element_title{
+      }
+      .description{
+        padding-top: 4rem;
+      }
+    }
+    .main_img{
+      max-width: 1536px;
+      //padding-bottom: 14rem;
+      img{
+        &:nth-child(1){
+          padding-bottom: 0rem;
+          width: 107rem;
+          height: 60rem;
+        }
+        &:nth-child(2){
+          width: 83rem;
+          height: 47rem;
+          transform: translate(606px, -141px);
+        }
+      }
+    }
+  }
+}

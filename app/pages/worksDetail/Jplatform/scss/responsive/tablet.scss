@@ -1,0 +1,35 @@
+@include tablet {
+  .custom_area{
+    .video{
+      margin : 0 2.4rem;
+    }
+    .main_text{
+      width: 68rem;
+      padding-top: 10rem;
+      padding-bottom: 8rem;
+      .element_title{
+      }
+      .description{
+        padding-top: 2.8rem;
+      }
+    }
+    .main_img{
+      max-width: 768px;
+      padding-bottom: 8rem;
+      justify-content: space-between;
+      //flex-wrap: nowrap;
+      img{
+        &:nth-child(1){
+          padding-bottom: 0rem;
+          width: 53.6rem;
+          height: 30rem;
+        }
+        &:nth-child(2){
+          width: 41.4rem;
+          height: 23.3rem;
+          transform: translate(307px, -74px);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.custom_area{
+  .video{
+    //@extend %layout_fix;
+  }
+  .main_text{
+    @extend %layout_fix;
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+    .element_title{
+      @extend %font_sectionTitle;
+      font-weight: 400;
+  }
+    .description{
+      @extend %font_primary;
+      font-family : $font_ko;
+      padding-top: 2rem;
+    }
+  }
+  .main_img{
+    @extend %layout_fix;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    img{
+      width: 31.2rem;
+      height: 18.8rem;
+      &:nth-child(1){
+        padding-bottom: 2rem;
+      }
+    }
+  }
+}
