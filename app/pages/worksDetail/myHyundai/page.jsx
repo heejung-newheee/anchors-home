@@ -16,7 +16,7 @@ export default function MyHyundai() {
         detailTextDescEn={works.content[8].text.en}
         detailTextDescKo={works.content[8].text.ko}
         customChildren={
-          <>
+          <div className="myhyundai_device_wrap">
             <Device
               className="myhyundai_device"
               type="A"
@@ -30,7 +30,7 @@ export default function MyHyundai() {
               caption={['1. 스플래시 화면', '2. 소모품 교환이력', '3. 이벤트']}
               alt="myhyundai app 이미지"
             />
-          </>
+          </div>
         }
         subVisualImgUrl={works.imgUrl + works.content[8].subVisual}
         workContent={works.content[8].projectInfomation}
