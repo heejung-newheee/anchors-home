@@ -117,8 +117,8 @@
       "thumbnail": "img_thumbnail_koreanair.jpg",
       "thumbnailAlt": "대한항공 KALPOS 블루투스 통신모듈 개발 이미지",
       "websiteUrl": "",
-      "visual": "",
-      "subVisual": "",
+      "visual": "img_keyvisual_koreanair.jpg",
+      "subVisual": "img_subvisual_koreanair.jpg",
       "text": {
         "en": "Korean Air's in_flight duty_free sales system, KALPOS App. It is a native App used without network for in_flight usage, with a core function of offline barcode scanner, credit card reader, POS machine. Anchors had <span>operated Android_based Custom OS terminal</span>, with our professional IT knowledge. We had <span>successfully constructed</span> data management in a network_restricted environment.",
         "ko": "대한항공 기내 면세품 판매 시스템 App 운영한 프로젝트입니다. KALPOS App은 비행중 사용을 위해 네트워크를 사용하지 않는 네이티브 App으로 바코드 스캐너, 신용카드 리더 및 프린트 단말기 등 오프라인 포스기 역할을 하는 App입니다. Android 기반 Custom OS 단말기 운영하며 앵커스의 전문 IT 지식을 총동원하여 네트워크가 제한된 환경에서의 Data 관리를 성공적으로 마쳤습니다."
@@ -172,8 +172,8 @@
       "thumbnail": "img_thumbnail_koreanairandroid.jpg",
       "thumbnailAlt": "대한항공 Android App 개편 구축 이미지",
       "websiteUrl": "",
-      "visual": "",
-      "subVisual": "",
+      "visual": "img_keyvisual_koreanairandroid.jpg",
+      "subVisual": "img_subvisual_koreanairandroid.jpg",
       "text": {
         "en": "Korean Air App for providing smart function, advancing the original service. Anchors had switched <span>major services to Native</span> for hospitable UX. We joined <span>entire process</span>, maturing the operation system.",
         "ko": "대한항공 App 사용자에게 스마트한 기능을 제공한 프로젝트입니다. 고객사의 산업 이해도를 바탕으로 최고의 방법을 연구하여 페이지를 페이지를 구축했습니다. 앵커스는 주요 서비스를 Native로 전환하여 고도화 된 기능을 쾌적하게 풀어냈습니다."
