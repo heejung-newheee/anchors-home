@@ -15,20 +15,56 @@
     }
     .main_img{
       max-width: 768px;
-      padding-bottom: 8rem;
-      justify-content: space-between;
-      //flex-wrap: nowrap;
+      padding-bottom: 53rem;
+      position: relative;
       img{
+        position: absolute;
         &:nth-child(1){
           padding-bottom: 0rem;
           width: 53.6rem;
           height: 30rem;
+          left: 2.4rem;
         }
         &:nth-child(2){
           width: 41.4rem;
           height: 23.3rem;
-          transform: translate(307px, -74px);
+          top: 21.7rem;
+          right: 2.4rem;
         }
+      }
+    }
+    .pip_text{
+      width: 68rem;
+      padding-top: 10rem;
+      padding-bottom: 8rem;
+      .element_title{
+      }
+      .description{
+        padding-top: 2.8rem;
+      }
+    }
+    .identity_text{
+      width: 68rem;
+      //padding-top: 10rem;
+      padding-bottom: 8rem;
+      .element_title{
+      }
+      .description{
+        padding-top: 2.8rem;
+      }
+    }
+    .identify_img{
+      max-width: 768px;
+      padding-bottom: 10rem;
+      img{
+        &:nth-child(1){
+          width: 60rem;
+          height: 42.2rem;
+          margin-bottom: 8rem;
+        }
+        &:nth-child(2){
+          width: 51.4rem;
+          height: 31rem;}
       }
     }
   }

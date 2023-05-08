@@ -15,18 +15,48 @@
     }
     .main_img{
       max-width: 1536px;
-      //padding-bottom: 14rem;
+      padding-bottom: 104rem;
       img{
         &:nth-child(1){
-          padding-bottom: 0rem;
           width: 107rem;
           height: 60rem;
         }
         &:nth-child(2){
           width: 83rem;
           height: 47rem;
-          transform: translate(606px, -141px);
+          top: 43.3rem;
         }
+      }
+    }
+    .pip_text{
+      padding-top: 16rem;
+      padding-bottom: 14rem;
+      .element_title{
+      }
+      .description{
+        padding-top: 4rem;
+      }
+    }
+    .identity_text{
+      //padding-top: 16rem;
+      padding-bottom: 14rem;
+      .element_title{
+      }
+      .description{
+        padding-top: 4rem;
+      }
+    }
+    .identify_img{
+      max-width: 1536px;
+      padding-bottom: 16rem;
+      img{
+        &:nth-child(1){
+          width: 70.8rem;
+          height: 49.4rem;
+        }
+        &:nth-child(2){
+          width: 59.7rem;
+          height: 36rem;}
       }
     }
   }

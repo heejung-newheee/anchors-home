@@ -1,4 +1,13 @@
 .custom_area{
+  .device{
+    .device_title{
+      font-family: stolzl;
+      font-weight: 400;
+    }
+  }
+  .type_b{
+    padding-top: 0rem;
+  }
   .video{
     //@extend %layout_fix;
   }
@@ -28,6 +37,52 @@
       &:nth-child(1){
         padding-bottom: 2rem;
       }
+    }
+  }
+  .pip_text{
+    @extend %layout_fix;
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+    .element_title{
+      @extend %font_sectionTitle;
+      font-weight: 400;
+    }
+    .description{
+      @extend %font_primary;
+      font-family : $font_ko;
+      padding-top: 2rem;
+    }
+  }
+  .identity_text{
+    @extend %layout_fix;
+    //padding-top: 6rem;
+    padding-bottom: 5rem;
+    .element_title{
+      @extend %font_sectionTitle;
+      font-weight: 400;
+    }
+    .description{
+      @extend %font_primary;
+      font-family : $font_ko;
+      padding-top: 2rem;
+    }
+  }
+  .identify_img{
+    @extend %layout_fix;
+    max-width: 360px;
+    display: flex;
+    padding-bottom: 6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    img{
+      &:nth-child(1){
+        width: 32rem;
+        height: 22.4rem;
+        margin-bottom: 6rem;
+      }
+      &:nth-child(2){
+        width: 27rem;
+        height: 16.3rem;}
     }
   }
 }

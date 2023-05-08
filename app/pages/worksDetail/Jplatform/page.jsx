@@ -60,23 +60,11 @@ export default function Jplatform() {
               <article className="pip_text">
                 <ElementTitle data="PIP" />
                 <Description
-                  data="E-Commerce를 통합함으로써 소비까지 이어지는 사용자 경험을 성공적으로 이끌어냈습니다.
-특히, 짜임새 있는 스토리로 하여금 두 모델이
-가지고 있는 기능과 효율을
-고객들에게 효과적으로 전달하였습니다."
+                  data="E-Commerce를 통합함으로써 소비까지 이어지는 사용자 경험을 성공적으로 이끌어냈습니다.<br/> 특히, 짜임새 있는 스토리로 하여금 두 모델이 가지고 있는 기능과 효율을 고객들에게 효과적으로 전달하였습니다."
                   innerHTMLOption="Y"
                 />
               </article>
-              <article className="main_img">
-                <img
-                  src="/assets/images/contents/works/img_web1_jplatform.jpg"
-                  alt="현대자동차 J플랫폼 Main 화면 이미지"
-                />
-                <img
-                  src="/assets/images/contents/works/img_web2_jplatform.jpg"
-                  alt="현대자동차 J플랫폼 Main 화면 이미지"
-                />
-              </article>
+              <Video videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" />
             </section>
             {/* E: PIP 설명 영역 */}
 
@@ -118,6 +106,22 @@ export default function Jplatform() {
               type="B"
             />
             {/* E: device 영역 */}
+
+            {/* S: Identity system 설명 영역 */}
+            <section className="identity_section">
+              <article className="identity_text">
+                <ElementTitle data="Identity system" />
+                <Description
+                  data="현대의 주컬러를 활용하여 아이덴티티를 명확히 보여주고, 아이콘을 활용한 일관성 있는 UI를 제공합니다."
+                  innerHTMLOption="Y"
+                />
+              </article>
+              <article className="identify_img">
+                <img src="/assets/images/contents/works/img_color_jplatform.jpg" />
+                <img src="/assets/images/contents/works/img_icon_jplatform.jpg" />
+              </article>
+            </section>
+            {/* E: Identity system 설명 영역 */}
           </>
         }
         firstNextWork={works.content[3]}

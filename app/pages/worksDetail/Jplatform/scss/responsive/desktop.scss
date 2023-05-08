@@ -1,8 +1,15 @@
 @include desktop {
   .custom_area{
+    .device{
+      .device_title{
+        font-family: stolzl;
+        font-weight: 400;
+      }
+    }
     .video{
       margin : 0 3.2rem;
     }
+
     .main_text{
       width: 100rem;
       padding-top: 14rem;
@@ -15,18 +22,51 @@
     }
     .main_img{
       max-width: 1280px;
-      //padding-bottom: 12rem;
+      padding-bottom: 128rem;
       img{
         &:nth-child(1){
-        padding-bottom: 0rem;
         width: 91rem;
         height: 51rem;
       }
         &:nth-child(2){
           width: 70rem;
           height: 39.4rem;
-          transform: translate(513px, -120px);
+          top: 36.5rem;
         }
+      }
+    }
+    .pip_text{
+      width: 120rem;
+      padding-top: 14rem;
+      padding-bottom: 12rem;
+      .element_title{
+      }
+      .description{
+        padding-top: 3.4rem;
+      }
+    }
+    .identity_text{
+      width: 120rem;
+      //padding-top: 14rem;
+      padding-bottom: 12rem;
+      .element_title{
+      }
+      .description{
+        padding-top: 3.4rem;
+      }
+    }
+    .identify_img{
+      max-width: 1280px;
+      padding-bottom: 10rem;
+      justify-content: space-between;
+      align-items: center;
+      img{
+        &:nth-child(1){
+          margin-bottom: 0rem;
+        }
+        &:nth-child(2){
+          width: 51.4rem;
+          height: 31rem;}
       }
     }
   }
