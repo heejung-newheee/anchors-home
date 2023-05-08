@@ -1,9 +1,9 @@
 import React from 'react';
 
-import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
-import Video from '@/components/Video/Video';
-import ElementTitle from '@/components/ElementTitle/ElementTitle';
 import Description from '@/components/Description/Description';
+import ElementTitle from '@/components/ElementTitle/ElementTitle';
+import Video from '@/components/Video/Video';
+import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import works from '@/helper/data/json/contents/works/works.json';
 import './scss/bms.scss';
 export default function BMS() {
@@ -18,7 +18,10 @@ export default function BMS() {
         detailTextDescKo={works.content[3].text.ko}
         customChildren={
           <>
-            <Video videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" />
+            <Video
+              className="bms_video"
+              videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+            />
             <div className="main_wrap">
               <div className="main_text_wrap">
                 <ElementTitle className="custom_element_title" data="Main" />
@@ -117,7 +120,7 @@ export default function BMS() {
         firstNextWork={works.content[4]}
         secondNextWork={works.content[5]}
         thirdNextWork={works.content[6]}
-      ></WorksTemplate>
+      />
     </>
   );
 }
