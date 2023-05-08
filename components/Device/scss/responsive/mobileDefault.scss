@@ -1,5 +1,6 @@
 .device{
-  padding: 0 2.4rem;
+  @extend %layout_fix;
+  padding: 6rem 2.4rem 10rem;
   .device_title{
     font-family: 'stolzl';
     font-style: normal;
