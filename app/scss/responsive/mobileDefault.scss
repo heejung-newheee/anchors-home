@@ -22,6 +22,7 @@
     .intro_ko {
       @extend %layout_fix;
       @extend %font_primary;
+      font-family: $font_ko;
     }
     a {
       @extend %btn_secondary_up;
@@ -41,7 +42,7 @@
       white-space: nowrap;
       display: block;
       width: auto;
-      font-size: 80vh; // $main
+      font-size: 56vh; // $main
       //position: fixed;
       left: 0;
       top: 10vh;
@@ -52,29 +53,38 @@
         position: relative;
         display: inline-block;
         margin-left: 50vw;
+        transform: translateY(20%);
         &:last-child {
           margin-left: 0;
           z-index: -1;
         }
       }
-    }
-
-    img {
-      width: 40vh;
-      position: absolute;
-      z-index: 2;
-
-      &:nth-child(1) {
-        left: 10%;
-        top: 10%;
-      }
-      &:nth-child(2) {
-        left: 45%;
-        bottom: 0;
-      }
-      &:nth-child(3) {
-        left: 85%;
-        top: 10%;
+      .text_expertis {
+        img {
+          width: 25vh;
+          position: absolute;
+          z-index: 2;
+        }
+        .wrapper {
+          &:nth-child(1) {
+           img {
+             top: 10%;
+             left: 12%;
+           }
+          }
+          &:nth-child(2) {
+            img {
+              top: 68%;
+              left: 42.5%;
+            }
+          }
+          &:nth-child(3) {
+            img {
+              top: 17.5%;
+              left: 85.5%;
+            }
+          }
+        }
       }
     }
   }
@@ -86,19 +96,49 @@
     padding-top: 13rem; // $main
 
     .keyvisual_wrap {
-      .text_keyvisual {
-        max-width: 1476px;
-        margin: 0 auto;
+      padding: 0 1.8rem;
+      position: relative;
+      .text_keyvisual_wrap {
+        height: 44vw;
+      }
+      .text_keycisual {
+        height: 44vw;
+      }
+      .smile_keyvisual {
+        position: absolute;
+        top: -13%;
+        right: 4%;
+        width: 17vw;
+      }
+      .underline_keyvisual {
+        position: absolute;
+        top: 9%;
+        right: 1%;
+        width: 55vw;
+      }
+      .ourwork_keyvisual {
+        position: absolute;
+        bottom: 9%;
+        left: 50%;
+        width: 45px;
+        transform: translateX(-335%);
       }
       .keyvisual_disclaimer {
         @extend %font_primary;
         @extend %layout_fix;
         letter-spacing: $en_letterSpacing;
         display: block;
-        padding-top: 3rem; // $main
+        padding-top: 1rem; // $main
         padding-bottom: 10.7rem; // $main
 
         max-width: 31.2rem; // $main
+      }
+    }
+    .intro_area {
+      .btn_about_us {
+        span {
+          color: $color_blue;
+        }
       }
     }
   }
@@ -109,13 +149,12 @@
       color: $color_white;
 
     }
-
     .bg_white {
       background-color: $color_white;
 
       &:before {
         width: 100vw;
-        height: 80vh;
+        height: 110vh;
         display: block;
         content:'';
         background-color: $color_blue;
@@ -124,7 +163,6 @@
       .rolling_area_wrap {
        margin-top: 23.2rem;
        margin-bottom: 29.2rem;
-
         .rolling_area {
           height: 5.2rem;
           margin-bottom: 1rem;
@@ -159,68 +197,124 @@
         }
       }
     }
-  }
-
-  .our_works {
-
     .rolling_wrap {
-      height: 200vh;
-
-      .rolling_text {
-        top: 25vh;
-        margin-left: 30vw;
-        font-size: 50vw; // $main
+      .wrapper.isActive {
+        position: fixed;
+        top: 0;
       }
-
-      img {
-        width: 30vh;
-
-        &:nth-child(1) {
-          top: 0;
+      .rolling_text {
+        height: 100vh;
+        .wrapper {
+          height: 80vh;
+          &.isActive {
+            position: unset;
+          }
+          .text_e {
+            position: absolute;
+            top: 0;
+            right: -34vh;
+            font-size: 56vh;
+          }
         }
-        &:nth-child(2) {
-          bottom: -10%;
-        }
-        &:nth-child(3) {
-          top: 0;
+        .text_expertis {
+          .wrapper {
+            height: auto;
+          }
         }
       }
     }
+  }
 
-     .portfolio_wrap {
-          //position: fixed;
-          left: 100vw;
+  .our_works {
+    .rolling_wrap {
+      .wrapper {
+        transition: background 1s;
+        &.isActive {
+          position: fixed;
           top: 0;
-          width: 100vw;
-        .portfolio {
-         overflow: hidden;
-         background-color: $color_black;
-         color: $color_white;
-         text-align: center;
-         height: 100vh;
-
-         .visual {
-           height: 100%;
-           display: flex;
-           flex-direction: column;
-           justify-content: center;
-           align-items: center;
-
-           .element_title {
-             @extend %font_visualTitle;
-           }
-
-           .disclaimer {
-             @extend %font_visualDescription;
-           }
-
-           a {
-             @extend %btn_primary_ghost;
-           }
+          background-color: $color_black;
+          .rolling_text {
+            color: $color_white;
+          }
+        }
+      }
+      .rolling_text {
+        top: 25vh;
+        margin-left: 30vw;
+        font-size: 54vw; // $main
+        transition: color 1s;
+        height: 100vh;
+        .text_ourworks {
+          margin-left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          img {
+            width: 30vh;
+            position: absolute;
+            z-index: 2;
+          }
+          .wrapper {
+            &.isActive {
+              position: unset;
+            }
+            &:nth-child(1) {
+              img {
+                top: 1.5%;
+                left: 13.5%;
+              }
+            }
+            &:nth-child(2) {
+              img {
+                top: 69%;
+                left: 45%;
+              }
+            }
+            &:nth-child(3) {
+              img {
+                top: 0%;
+                left: 85.5%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .portfolio_wrap {
+      //position: fixed;
+      &:before {
+        width: 100vw;
+        height: 50vh;
+        display: block;
+        content:'';
+      }
+      left: 100vw;
+      top: 0;
+      width: 100vw;
+      .portfolio {
+        overflow: hidden;
+        background-color: $color_black;
+        color: $color_white;
+        text-align: center;
+        height: 100vh;
+        .visual {
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+          .element_title {
+            @extend %font_visualTitle;
+          }
+          .disclaimer {
+            @extend %font_visualDescription;
+          }
+          a {
+            @extend %btn_primary_ghost;
          }
        }
+     }
 
-      }
+    }
 
   }
 }
