@@ -4,12 +4,12 @@
     color: #000;
   }
   .visual_comment {
-    background-color: $color_white;
     .visual {
       height: 27rem;
       margin-bottom: 6rem;
     }
     .description{
+      background-color: $color_white;
       text-align: center;
       @extend %layout_fix;
       &.en_comment {

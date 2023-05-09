@@ -64,7 +64,7 @@ function Service() {
               <ScrollTriggerArea
                 type="multiTrigger"
                 triggerStart={TRIGGER_START}
-                triggerMarkers={false}
+                triggerMarkers={true}
                 triggerOffset={'center'}
               >
                 <span className="part_img">
@@ -74,12 +74,14 @@ function Service() {
                     triggerEnd={MULTI_TRIGGER_END}
                     triggerOffset={'center'}
                     triggerMarkers={false}
-                    YAxes={{
-                      mobile: ['20px'],
-                      table: ['25px'],
-                      desktop: ['30px'],
-                      wide: ['35px'],
-                    }}
+                    YAxes={[
+                      {
+                        mobile: '20px',
+                        table: '25px',
+                        desktop: '30px',
+                        wide: '35px',
+                      },
+                    ]}
                   >
                     <span className="img_scroll_wrap">
                       <img src={service.imgUrl + cont.img} alt={cont.alt} />
