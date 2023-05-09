@@ -227,7 +227,7 @@ function Main() {
                     wide: '0px',
                   }}
                   triggerMarkers={true}
-                  toScale={[30]}
+                  toScale={[{ mobile: 30, table: 30, desktop: 30, wide: 30 }]}
                   YAxes={[
                     {
                       mobile: '-200%',
