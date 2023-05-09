@@ -7,8 +7,12 @@ import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import WebGlCarousel from '@/components/WebGlCarousel/WebGlCarousel';
+/* import WebGlCarousel from '@/components/WebGlCarousel/WebGlCarousel'; */
 import main from '@/helper/data/json/contents/main/main.json';
-import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
+import lottieMainKeyVisualOurwork from '@/public/assets/images/lottie/lottieMainKeyVisualOurwork.json';
+import lottieMainKeyVisualSmile from '@/public/assets/images/lottie/lottieMainKeyVisualSmile.json';
+import lottieMainKeyVisualText from '@/public/assets/images/lottie/lottieMainKeyVisualText.json';
+import lottieMainKeyVisualUnderline from '@/public/assets/images/lottie/lottieMainKeyVisualUnderline.json';
 import './scss/main.scss';
 
 function Main() {
@@ -21,9 +25,27 @@ function Main() {
         {/* S: about us */}
         <section className="section_div is_black about_us">
           <div className="keyvisual_wrap">
+            <div className="text_keyvisual_wrap">
+              <LottiePlayer
+                className="text_keyvisual"
+                data={lottieMainKeyVisualText}
+                loop={false}
+              />
+            </div>
             <LottiePlayer
-              className="text_keyvisual"
-              data={lottieMainKeyVisual}
+              className="smile_keyvisual"
+              data={lottieMainKeyVisualSmile}
+              loop={false}
+            />
+            <LottiePlayer
+              className="underline_keyvisual"
+              data={lottieMainKeyVisualUnderline}
+              loop={false}
+            />
+            <LottiePlayer
+              className="ourwork_keyvisual"
+              data={lottieMainKeyVisualOurwork}
+              loop={false}
             />
             <Disclaimer
               className="keyvisual_disclaimer"
@@ -57,10 +79,11 @@ function Main() {
         {/* S: service */}
         <section className="service">
           <div className="section_div is_black bg_blue rolling_wrap">
+            {/* Expertise 텍스트 영역 'Expertis' */}
             <ScrollTriggerArea
               type="multiTrigger"
               triggerStart={{
-                mobile: '1200vh',
+                mobile: '0',
                 tablet: '0px',
                 desktop: '0px',
                 wide: '0px',
@@ -71,7 +94,6 @@ function Main() {
                 desktop: '0px',
                 wide: '0px',
               }}
-              triggerOffset={'center'}
               triggerMarkers={false}
               XAxes={{
                 mobile: ['-360vh'],
@@ -82,23 +104,23 @@ function Main() {
               duration={0.001}
             >
               <span className="rolling_text">
-                <span>
+                <span className="text_expertis">
                   {main.service.rollingBigText[0]}
+                  {/* Expertise 첫번째 이미지 */}
                   <ScrollTriggerArea
                     type="multiTrigger"
                     triggerStart={{
-                      mobile: '1150vh',
+                      mobile: '-120%',
                       tablet: '0px',
                       desktop: '0px',
                       wide: '0px',
                     }}
                     triggerEnd={{
-                      mobile: '1650vh',
+                      mobile: '1000vh',
                       tablet: '0px',
                       desktop: '0px',
                       wide: '0px',
                     }}
-                    triggerOffset={'center'}
                     triggerMarkers={false}
                     XAxes={{
                       mobile: ['-200%'],
@@ -116,21 +138,21 @@ function Main() {
                     />
                   </ScrollTriggerArea>
 
+                  {/* Expertise 두번째 이미지 */}
                   <ScrollTriggerArea
                     type="multiTrigger"
                     triggerStart={{
-                      mobile: '800vh',
+                      mobile: '-300%',
                       tablet: '0px',
                       desktop: '0px',
                       wide: '0px',
                     }}
                     triggerEnd={{
-                      mobile: '1300vh',
+                      mobile: '1000vh',
                       tablet: '0px',
                       desktop: '0px',
                       wide: '0px',
                     }}
-                    triggerOffset={'center'}
                     triggerMarkers={false}
                     XAxes={{
                       mobile: ['-200%'],
@@ -148,21 +170,21 @@ function Main() {
                     />
                   </ScrollTriggerArea>
 
+                  {/* Expertise 세번째 이미지 */}
                   <ScrollTriggerArea
                     type="multiTrigger"
                     triggerStart={{
-                      mobile: '1200vh',
+                      mobile: '20%',
                       tablet: '0px',
                       desktop: '0px',
                       wide: '0px',
                     }}
                     triggerEnd={{
-                      mobile: '1700vh',
+                      mobile: '1000vh',
                       tablet: '0px',
                       desktop: '0px',
                       wide: '0px',
                     }}
-                    triggerOffset={'center'}
                     triggerMarkers={false}
                     XAxes={{
                       mobile: ['-200%'],
@@ -181,21 +203,21 @@ function Main() {
                   </ScrollTriggerArea>
                 </span>
 
+                {/* Expertise 텍스트 영역 'e' */}
                 <ScrollTriggerArea
                   type="multiTrigger"
                   triggerStart={{
-                    mobile: '1650vh',
+                    mobile: '45%',
                     tablet: '0px',
                     desktop: '0px',
                     wide: '0px',
                   }}
                   triggerEnd={{
-                    mobile: '2150vh',
+                    mobile: '2000vh',
                     tablet: '0px',
                     desktop: '0px',
                     wide: '0px',
                   }}
-                  triggerOffset={'center'}
                   triggerMarkers={false}
                   toScale={[30]}
                   YAxes={{
@@ -206,7 +228,9 @@ function Main() {
                   }}
                   duration={0.001}
                 >
-                  <span>{main.service.rollingBigText[1]}</span>
+                  <span className="text_e">
+                    {main.service.rollingBigText[1]}
+                  </span>
                 </ScrollTriggerArea>
               </span>
             </ScrollTriggerArea>
@@ -276,21 +300,21 @@ function Main() {
         {/* S: our works */}
         <section className="our_works">
           <div className="section_div is_white rolling_wrap">
+            {/* Our works 텍스트 영역 */}
             <ScrollTriggerArea
               type="multiTrigger"
               triggerStart={{
-                mobile: '3500vh',
+                mobile: '0',
                 tablet: '0px',
                 desktop: '0px',
                 wide: '0px',
               }}
               triggerEnd={{
-                mobile: '4500vh',
+                mobile: '1000vh',
                 tablet: '0px',
                 desktop: '0px',
                 wide: '0px',
               }}
-              triggerOffset={'center'}
               triggerMarkers={false}
               XAxes={{
                 mobile: ['-360vh'],
@@ -301,96 +325,98 @@ function Main() {
               duration={0.001}
             >
               <span className="rolling_text">
-                {main.ourWorks.rollingBigText}
-                <ScrollTriggerArea
-                  type="multiTrigger"
-                  triggerStart={{
-                    mobile: '3500vh',
-                    tablet: '0px',
-                    desktop: '0px',
-                    wide: '0px',
-                  }}
-                  triggerEnd={{
-                    mobile: '4000vh',
-                    tablet: '0px',
-                    desktop: '0px',
-                    wide: '0px',
-                  }}
-                  triggerOffset={'center'}
-                  triggerMarkers={false}
-                  XAxes={{
-                    mobile: ['-200%'],
-                    tablet: ['-200%'],
-                    desktop: ['-200%'],
-                    wide: ['-200%'],
-                  }}
-                  duration={0.01}
-                >
-                  <img
-                    src={main.imgUrl + main.ourWorks.rollingImages[0].image}
-                    alt={main.ourWorks.rollingImages[0].alt}
-                  />
-                </ScrollTriggerArea>
+                <span className="text_ourworks">
+                  {main.ourWorks.rollingBigText}
+                  {/* Our works 첫번째 이미지 */}
+                  <ScrollTriggerArea
+                    type="multiTrigger"
+                    triggerStart={{
+                      mobile: '-205%',
+                      tablet: '0px',
+                      desktop: '0px',
+                      wide: '0px',
+                    }}
+                    triggerEnd={{
+                      mobile: '2000vh',
+                      tablet: '0px',
+                      desktop: '0px',
+                      wide: '0px',
+                    }}
+                    triggerMarkers={false}
+                    XAxes={{
+                      mobile: ['-200%'],
+                      tablet: ['-200%'],
+                      desktop: ['-200%'],
+                      wide: ['-200%'],
+                    }}
+                    duration={0.01}
+                  >
+                    <img
+                      src={main.imgUrl + main.ourWorks.rollingImages[0].image}
+                      alt={main.ourWorks.rollingImages[0].alt}
+                    />
+                  </ScrollTriggerArea>
 
-                <ScrollTriggerArea
-                  type="multiTrigger"
-                  triggerStart={{
-                    mobile: '3400vh',
-                    tablet: '0px',
-                    desktop: '0px',
-                    wide: '0px',
-                  }}
-                  triggerEnd={{
-                    mobile: '3900vh',
-                    tablet: '0px',
-                    desktop: '0px',
-                    wide: '0px',
-                  }}
-                  triggerOffset={'center'}
-                  triggerMarkers={false}
-                  XAxes={{
-                    mobile: ['-200%'],
-                    tablet: ['-200%'],
-                    desktop: ['-200%'],
-                    wide: ['-200%'],
-                  }}
-                  duration={0.01}
-                >
-                  <img
-                    src={main.imgUrl + main.ourWorks.rollingImages[1].image}
-                    alt={main.ourWorks.rollingImages[1].alt}
-                  />
-                </ScrollTriggerArea>
+                  {/* Our works 두번째 이미지 */}
+                  <ScrollTriggerArea
+                    type="multiTrigger"
+                    triggerStart={{
+                      mobile: '-290%',
+                      tablet: '0px',
+                      desktop: '0px',
+                      wide: '0px',
+                    }}
+                    triggerEnd={{
+                      mobile: '2000vh',
+                      tablet: '0px',
+                      desktop: '0px',
+                      wide: '0px',
+                    }}
+                    triggerMarkers={false}
+                    XAxes={{
+                      mobile: ['-200%'],
+                      tablet: ['-200%'],
+                      desktop: ['-200%'],
+                      wide: ['-200%'],
+                    }}
+                    duration={0.01}
+                  >
+                    <img
+                      src={main.imgUrl + main.ourWorks.rollingImages[1].image}
+                      alt={main.ourWorks.rollingImages[1].alt}
+                    />
+                  </ScrollTriggerArea>
 
-                <ScrollTriggerArea
-                  type="multiTrigger"
-                  triggerStart={{
-                    mobile: '3500vh',
-                    tablet: '0px',
-                    desktop: '0px',
-                    wide: '0px',
-                  }}
-                  triggerEnd={{
-                    mobile: '4000vh',
-                    tablet: '0px',
-                    desktop: '0px',
-                    wide: '0px',
-                  }}
-                  triggerOffset={'center'}
-                  triggerMarkers={false}
-                  XAxes={{
-                    mobile: ['-200%'],
-                    tablet: ['-200%'],
-                    desktop: ['-200%'],
-                    wide: ['-200%'],
-                  }}
-                  duration={0.01}
-                >
-                  <img
-                    src={main.imgUrl + main.ourWorks.rollingImages[2].image}
-                    alt={main.ourWorks.rollingImages[2].alt}
-                  />
-                </ScrollTriggerArea>
+                  {/* Our works 세번째 이미지 */}
+                  <ScrollTriggerArea
+                    type="multiTrigger"
+                    triggerStart={{
+                      mobile: '-100%',
+                      tablet: '0px',
+                      desktop: '0px',
+                      wide: '0px',
+                    }}
+                    triggerEnd={{
+                      mobile: '2000vh',
+                      tablet: '0px',
+                      desktop: '0px',
+                      wide: '0px',
+                    }}
+                    triggerMarkers={false}
+                    XAxes={{
+                      mobile: ['-200%'],
+                      tablet: ['-200%'],
+                      desktop: ['-200%'],
+                      wide: ['-200%'],
+                    }}
+                    duration={0.01}
+                  >
+                    <img
+                      src={main.imgUrl + main.ourWorks.rollingImages[2].image}
+                      alt={main.ourWorks.rollingImages[2].alt}
+                    />
+                  </ScrollTriggerArea>
+                </span>
               </span>
             </ScrollTriggerArea>
           </div>
