@@ -2,10 +2,11 @@ import React from 'react';
 
 import ImageArray from '@/components/ImageArray/ImageArray';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
+import seo from '@/helper/data/json/contents/SEO.json';
 import works from '@/helper/data/json/contents/works/works.json';
 
 export const metadata = {
-  title: 'Our works',
+  title: seo.title.subPage.detail.happyMove + ' : ' + seo.title.subPage.works,
 };
 export default function HappyMove() {
   return (

@@ -43,18 +43,26 @@ function ScrollTriggerArea({
   const CHILDREN_ARR = Array.isArray(children) ? children : [children];
 
   // UncleCho : XAxes, YAxes 값 각 프로퍼티별 기본값 '0px' 유지하고 별도로 들어오는 프로퍼티만 적용하는 방식으로 변경함 (20230502)
-  const TRIGGER_START = { ...DEFAULT_TRIGGER, ...triggerStart };
-  const TRIGGER_END = { ...DEFAULT_TRIGGER, ...triggerEnd };
+  const X_AXES = [...DEFAULT_AXES, ...XAxes];
+  const Y_AXES = [...DEFAULT_AXES, ...YAxes];
 
   const SetOption = () => {
-    TRIGGER_OPTION_START = TRIGGER_START[BREAKPOINT_TYPE];
-    TRIGGER_OPTION_END = TRIGGER_END[BREAKPOINT_TYPE];
-    XAxes.map(function (i, index) {
-      MUTITRIGGER_OPTION_X_AXES[index] = i[BREAKPOINT_TYPE];
+    TRIGGER_OPTION_START = triggerStart[BREAKPOINT_TYPE];
+    TRIGGER_OPTION_END = triggerEnd[BREAKPOINT_TYPE];
+    XAxes.map(function (el, index) {
+      MUTITRIGGER_OPTION_X_AXES[index] = el[BREAKPOINT_TYPE];
     });
 
-    YAxes.map(function (i, index) {
-      MUTITRIGGER_OPTION_Y_AXES[index] = i[type];
+    YAxes.map(function (el, index) {
+      MUTITRIGGER_OPTION_Y_AXES[index] = el[BREAKPOINT_TYPE];
+    });
+
+    toScale.map(function (el, index) {
+      MUTITRIGGER_OPTION_TO_SCALE[index] = el[BREAKPOINT_TYPE];
+    });
+
+    fromScale.map(function (el, index) {
+      MUTITRIGGER_OPTION_FREOM_SCALE[index] = el[BREAKPOINT_TYPE];
     });
   };
 
@@ -63,6 +71,8 @@ function ScrollTriggerArea({
   let BREAKPOINT_TYPE;
   let MUTITRIGGER_OPTION_X_AXES = [];
   let MUTITRIGGER_OPTION_Y_AXES = [];
+  let MUTITRIGGER_OPTION_TO_SCALE = [];
+  let MUTITRIGGER_OPTION_FREOM_SCALE = [];
 
   if (BREAKPOINT_MOBILE) {
     BREAKPOINT_TYPE = 'mobile';
@@ -76,14 +86,32 @@ function ScrollTriggerArea({
 
   SetOption();
 
-  function TweenComponents() {
-    switch (type) {
-      case 'lottieTrigger':
-        return (
-          <Tween
-            ease={easing}
-            // duration={duration[0]}
-          >
+  switch (type) {
+    case 'lottieTrigger':
+      return (
+        <ScrollTrigger
+          start={TRIGGER_OPTION_START + ' ' + triggerOffset}
+          end={TRIGGER_OPTION_END + ' ' + triggerOffset}
+          scrub={triggerScrub}
+          markers={triggerMarkers}
+          trigger={'.' + type}
+          onEnter={(d) => {
+            COMPONENTS_REF.current.controll('play');
+          }}
+          onLeave={(d) => {
+            COMPONENTS_REF.current.controll('pause');
+          }}
+          onLeaveBack={(d) => {
+            COMPONENTS_REF.current.controll('pause');
+          }}
+          onEnterBack={(d) => {
+            COMPONENTS_REF.current.controll('play');
+          }}
+          onUpdate={(d) => {
+            // console.log(d);
+          }}
+        >
+          <Tween ease={easing} duration={duration[0]}>
             <LottiePlayer
               ref={COMPONENTS_REF}
               className={type}
@@ -93,31 +121,88 @@ function ScrollTriggerArea({
               style={lottieStyle}
             />
           </Tween>
-        );
+        </ScrollTrigger>
+      );
 
-      case 'multiTrigger':
-        return (
-          <section className={type + (isActive ? ' isActive' : '')}>
+    case 'multiTrigger':
+      console.log(
+        TRIGGER_OPTION_START,
+        TRIGGER_OPTION_END,
+        triggerOffset,
+        MUTITRIGGER_OPTION_X_AXES,
+        MUTITRIGGER_OPTION_Y_AXES,
+        MUTITRIGGER_OPTION_TO_SCALE,
+        MUTITRIGGER_OPTION_FREOM_SCALE,
+      );
+
+      return (
+        <ScrollTrigger
+          start={TRIGGER_OPTION_START + ' ' + triggerOffset}
+          end={TRIGGER_OPTION_END + ' ' + triggerOffset}
+          scrub={triggerScrub}
+          markers={triggerMarkers}
+          trigger={'.wrapper'}
+          onEnter={(d) => {
+            setIsActive(d.isActive);
+            console.log(d.isActive);
+          }}
+          onLeave={(d) => {
+            // setIsActive(d.isActive);
+          }}
+          onLeaveBack={(d) => {
+            setIsActive(d.isActive);
+          }}
+          onEnterBack={(d) => {
+            //setIsActive(d.isActive);
+          }}
+          onUpdate={(d) => {
+            // console.log(d);
+          }}
+        >
+          <div className={'wrapper' + (isActive ? ' is_active' : '')}>
             {CHILDREN_ARR.map((contents, idx) => (
               <Tween
                 to={{
                   x: MUTITRIGGER_OPTION_X_AXES[idx],
                   y: MUTITRIGGER_OPTION_Y_AXES[idx],
-                  //scale: toScale[idx],
+                  scale: MUTITRIGGER_OPTION_TO_SCALE[idx],
                 }}
-                //from={{ scale: fromScale[idx] }}
+                from={{ scale: MUTITRIGGER_OPTION_FREOM_SCALE[idx] }}
                 key={idx}
                 ease={easing}
-                //duration={duration[idx]}
+                duration={duration[idx]}
               >
                 {contents}
               </Tween>
             ))}
-          </section>
-        );
-      case 'test':
-        return (
-          <section className={type + (isActive ? ' isActive' : '')}>
+          </div>
+        </ScrollTrigger>
+      );
+    case 'test':
+      return (
+        <ScrollTrigger
+          start={TRIGGER_OPTION_START + ' ' + triggerOffset}
+          end={TRIGGER_OPTION_END + ' ' + triggerOffset}
+          scrub={triggerScrub}
+          markers={triggerMarkers}
+          trigger={'.' + type}
+          onEnter={(d) => {
+            setIsActive(d.isActive);
+          }}
+          onLeave={(d) => {
+            setIsActive(d.isActive);
+          }}
+          onLeaveBack={(d) => {
+            //setIsActive(d.isActive);
+          }}
+          onEnterBack={(d) => {
+            //setIsActive(d.isActive);
+          }}
+          onUpdate={(d) => {
+            // console.log(d);
+          }}
+        >
+          <div className={type + (isActive ? ' is_active' : '')}>
             {CHILDREN_ARR.map((contents, idx) => (
               <div className="tweenChildren" key={idx} data-tween-index={idx}>
                 {contents.props.className !== 'timeLine' ? (
@@ -125,7 +210,7 @@ function ScrollTriggerArea({
                     to={{
                       x: MUTITRIGGER_OPTION_X_AXES[idx],
                       y: MUTITRIGGER_OPTION_Y_AXES[idx] || '0px',
-                      scale: toScale[idx],
+                      scale: MUTITRIGGER_OPTION_TO_SCALE[idx],
                     }}
                     from={{
                       x: '0px',
@@ -144,7 +229,7 @@ function ScrollTriggerArea({
                       to={{
                         x: MUTITRIGGER_OPTION_X_AXES[idx],
                         y: MUTITRIGGER_OPTION_Y_AXES[idx],
-                        //scale: toScale[idx],
+                        //scale: MUTITRIGGER_OPTION_TO_SCALE[idx],
                       }}
                       //duration={duration[idx]}
                     />
@@ -153,7 +238,7 @@ function ScrollTriggerArea({
                       to={{
                         x: MUTITRIGGER_OPTION_X_AXES[idx],
                         y: MUTITRIGGER_OPTION_Y_AXES[idx],
-                        scale: toScale[idx],
+                        scale: MUTITRIGGER_OPTION_TO_SCALE[idx],
                       }}
                       //duration={duration[idx]}
                     />
@@ -161,41 +246,10 @@ function ScrollTriggerArea({
                 )}
               </div>
             ))}
-          </section>
-        );
-    }
+          </div>
+        </ScrollTrigger>
+      );
   }
-
-  return (
-    <ScrollTrigger
-      start={TRIGGER_OPTION_START + ' ' + triggerOffset}
-      end={TRIGGER_OPTION_END + ' ' + triggerOffset}
-      scrub={triggerScrub}
-      markers={triggerMarkers}
-      trigger={'.' + type}
-      onEnter={(d) => {
-        setIsActive(d.isActive);
-        if (type == 'lottieTrigger') COMPONENTS_REF.current.controll('play');
-      }}
-      onLeave={(d) => {
-        setIsActive(d.isActive);
-        if (type == 'lottieTrigger') COMPONENTS_REF.current.controll('pause');
-      }}
-      onLeaveBack={(d) => {
-        //setIsActive(d.isActive);
-        if (type == 'lottieTrigger') COMPONENTS_REF.current.controll('pause');
-      }}
-      onEnterBack={(d) => {
-        //setIsActive(d.isActive);
-        if (type == 'lottieTrigger') COMPONENTS_REF.current.controll('play');
-      }}
-      onUpdate={(d) => {
-        // console.log(d);
-      }}
-    >
-      {TweenComponents()}
-    </ScrollTrigger>
-  );
 }
 
 export default ScrollTriggerArea;

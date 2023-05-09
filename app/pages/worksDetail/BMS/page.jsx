@@ -6,7 +6,7 @@ import Video from '@/components/Video/Video';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import seo from '@/helper/data/json/contents/SEO.json';
 import works from '@/helper/data/json/contents/works/works.json';
-import './scss/bms.scss';
+import './scss/BMS.scss';
 export const metadata = {
   title: seo.title.subPage.detail.BMS + ' : ' + seo.title.subPage.works,
 };
