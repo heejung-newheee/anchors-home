@@ -1,7 +1,11 @@
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
+import seo from '@/helper/data/json/contents/SEO.json';
 import works from '@/helper/data/json/contents/works/works.json';
+
+import './chanel.scss';
+
 export const metadata = {
-  title: 'Our works',
+  title: seo.title.subPage.detail.chanel + ' : ' + seo.title.subPage.works,
 };
 
 export default function Chanel() {

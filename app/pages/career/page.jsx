@@ -7,8 +7,10 @@ import MoreDetail from '@/components/MoreDetail/MoreDetail';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
+import Tab from '@/components/Tab/Tab';
 import Visual from '@/components/Visual/Visual';
 import careerComment from '@/helper/data/json/contents/career/careerComment.json';
+import careerEmployment from '@/helper/data/json/contents/career/careerEmployment.json';
 import careerFaq from '@/helper/data/json/contents/career/careerFaq.json';
 import careerMembers from '@/helper/data/json/contents/career/careerMembers.json';
 import careerProcess from '@/helper/data/json/contents/career/careerProcess.json';
@@ -46,7 +48,6 @@ function Career() {
         imgUrl="/assets/images/contents/career/img_keyvisual_members.jpg"
         // className="key_visual"
       />
-      {/* E: key_visual 영역 */}
 
       {/* S: 비주얼 이미지 아래 텍스트 */}
       <div className="career_text">
@@ -174,6 +175,44 @@ function Career() {
           className="employment_text"
           data={careerText.textList[0].employment_text}
         />
+        {/*  <article className="process_tab">*/}
+        {/*    <div className="process_number_wrap">*/}
+        {/*      {careerProcess.process.map((data, idx) => (*/}
+        {/*        <div key={idx} className="process_number">*/}
+        {/*          <Description data={data.number} />*/}
+        {/*          <Description data={data.text} />*/}
+        {/*        </div>*/}
+        {/*      ))}*/}
+        {/*    </div>*/}
+        {/*    <div className="process_description">*/}
+        {/*      <Description data={careerProcess.description[0].text1} />*/}
+        {/*      <Description data={careerProcess.description[0].text2} />*/}
+        {/*    </div>*/}
+        {/*    <div className="process_detail_description">*/}
+        {/*      {careerProcess.detail_description.map((data, idx) => (*/}
+        {/*        <div key={idx} className="detail_description_list">*/}
+        {/*          <Description data={data.number} />*/}
+        {/*          <Description data={data.title} />*/}
+        {/*          <Disclaimer data={data.text} />*/}
+        {/*        </div>*/}
+        {/*      ))}*/}
+        {/*    </div>*/}
+        {/*  </article>*/}
+        {/*  <article className="faq_tab">*/}
+        {/*    <Accordion*/}
+        {/*      contents={careerFaq.content.map((data, idx) => ({*/}
+        {/*        key: idx,*/}
+        {/*        title: data.title,*/}
+        {/*        content: data.text,*/}
+        {/*      }))}*/}
+        {/*    />*/}
+        {/*  </article>*/}
+      </section>
+      {/* E: 채용 tab 영역 */}
+
+      {/* S: 채용 tab 영역 테스트 */}
+
+      <Tab type="article" tabList={careerEmployment.title}>
         <article className="process_tab">
           <div className="process_number_wrap">
             {careerProcess.process.map((data, idx) => (
@@ -206,8 +245,9 @@ function Career() {
             }))}
           />
         </article>
-      </section>
-      {/* E: 채용 tab 영역 */}
+      </Tab>
+
+      {/* E: 채용 tab 영역 테스트 */}
     </main>
   );
 }

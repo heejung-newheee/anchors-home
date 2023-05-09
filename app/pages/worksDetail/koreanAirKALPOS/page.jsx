@@ -5,12 +5,14 @@ import ImageArray from '@/components/ImageArray/ImageArray';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import works from '@/helper/data/json/contents/works/works.json';
 
-import './ koreanAir_KALPOS.scss';
+import './koreanAirKALPOS.scss';
+import seo from '@/helper/data/json/contents/SEO.json';
 
 export const metadata = {
-  title: 'Our works',
+  title:
+    seo.title.subPage.detail.koreanAirKALPOS + ' : ' + seo.title.subPage.works,
 };
-export default function koreanAir_KALPOS() {
+export default function KoreanAir_KALPOS() {
   return (
     <>
       <WorksTemplate

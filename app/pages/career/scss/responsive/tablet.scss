@@ -179,6 +179,20 @@
     .employment_area{
       .employment_text{
       }
+    }
+    .tab_btn_wrap{
+      padding-bottom: 6rem;
+      width: 28.5rem;
+      .tab-button{
+        span{
+        }
+      }
+      .isActive{
+        span{
+        }
+      }
+    }
+    .tab_content_wrap{
       .process_tab{
         .process_number_wrap{
           width: 66.2rem;
@@ -258,7 +272,9 @@
           }
         }
       }
-      .faq_tab{}
+      .faq_tab{
+        margin-bottom: 12rem;
+      }
     }
   }
 }
