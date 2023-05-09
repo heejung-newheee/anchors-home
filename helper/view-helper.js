@@ -1,6 +1,7 @@
 export const pagesIsBgBlack = [
   '/',
   '/pages/worksDetail/myAIA',
+  '/pages/worksDetail/BMS',
   '/pages/worksDetail/chanel',
   '/pages/worksDetail/hyundaiDCXT',
   '/pages/worksDetail/genesisGlobal',
@@ -9,7 +10,8 @@ export const pagesIsBgBlack = [
   '/pages/worksDetail/koreanAirKALPOS',
   '/pages/worksDetail/myHyundai',
   '/pages/worksDetail/happyMove',
-  '/pages/worksDetail/wwn',
-  '/pages/worksDetail/wcms',
+  '/pages/worksDetail/WWN',
+  '/pages/worksDetail/WCMS',
+  '/pages/worksDetail/nBrand',
 ];
 export const pagesIsBgWhite = [];

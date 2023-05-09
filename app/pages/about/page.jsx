@@ -12,18 +12,19 @@ import PageTitle from '@/components/PageTitle/PageTitle';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Visual from '@/components/Visual/Visual';
+import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
+import seo from '@/helper/data/json/contents/SEO.json';
 
 import aboutProfile from '/helper/data/json/contents/about/aboutProfile.json';
 import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
 
-import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
 import lottie_arrow from '@/public/assets/images/lottie/lottieAboutusUpArrow.json';
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 
 import './scss/about.scss';
 
 export const metadata = {
-  title: 'About us',
+  title: seo.title.subPage.about,
 };
 
 const LOTTIE_OPTION = {

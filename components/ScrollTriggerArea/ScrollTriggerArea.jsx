@@ -52,18 +52,17 @@ function ScrollTriggerArea({
     XAxes.map(function (i, index) {
       MUTITRIGGER_OPTION_X_AXES[index] = i[BREAKPOINT_TYPE];
     });
-    YAxes.map(function (i, index) {
-      if (index > 0) MUTITRIGGER_OPTION_Y_AXES[index] = i[type];
-    });
 
-    console.log(type, XAxes, TRIGGER_OPTION_START, TRIGGER_OPTION_END);
+    YAxes.map(function (i, index) {
+      MUTITRIGGER_OPTION_Y_AXES[index] = i[type];
+    });
   };
 
   let TRIGGER_OPTION_START;
   let TRIGGER_OPTION_END;
   let BREAKPOINT_TYPE;
   let MUTITRIGGER_OPTION_X_AXES = [];
-  let MUTITRIGGER_OPTION_Y_AXES;
+  let MUTITRIGGER_OPTION_Y_AXES = [];
 
   if (BREAKPOINT_MOBILE) {
     BREAKPOINT_TYPE = 'mobile';
@@ -103,7 +102,7 @@ function ScrollTriggerArea({
               <Tween
                 to={{
                   x: MUTITRIGGER_OPTION_X_AXES[idx],
-                  //y: MUTITRIGGER_OPTION_Y_AXES[idx],
+                  y: MUTITRIGGER_OPTION_Y_AXES[idx],
                   //scale: toScale[idx],
                 }}
                 //from={{ scale: fromScale[idx] }}
@@ -125,7 +124,7 @@ function ScrollTriggerArea({
                   <Tween
                     to={{
                       x: MUTITRIGGER_OPTION_X_AXES[idx],
-                      //y: MUTITRIGGER_OPTION_Y_AXES[idx] || '0px',
+                      y: MUTITRIGGER_OPTION_Y_AXES[idx] || '0px',
                       scale: toScale[idx],
                     }}
                     from={{
@@ -144,7 +143,7 @@ function ScrollTriggerArea({
                       from={{ scale: fromScale[idx] }}
                       to={{
                         x: MUTITRIGGER_OPTION_X_AXES[idx],
-                        //y: MUTITRIGGER_OPTION_Y_AXES[idx],
+                        y: MUTITRIGGER_OPTION_Y_AXES[idx],
                         //scale: toScale[idx],
                       }}
                       //duration={duration[idx]}
@@ -153,7 +152,7 @@ function ScrollTriggerArea({
                       from={{ scale: fromScale[idx] }}
                       to={{
                         x: MUTITRIGGER_OPTION_X_AXES[idx],
-                        //y: MUTITRIGGER_OPTION_Y_AXES[idx],
+                        y: MUTITRIGGER_OPTION_Y_AXES[idx],
                         scale: toScale[idx],
                       }}
                       //duration={duration[idx]}

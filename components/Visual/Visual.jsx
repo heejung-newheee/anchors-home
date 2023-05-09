@@ -16,7 +16,6 @@ export default function Visual({
     className == undefined
       ? { className: 'visual' + DIMM_CLASS }
       : { className: 'visual ' + className + DIMM_CLASS };
-  console.log(imgUrl);
   return (
     <article {...GET_CLASSNAME}>
       <ScrollTriggerArea
@@ -35,12 +34,7 @@ export default function Visual({
         }}
         triggerOffset={'center'}
         triggerMarkers={false}
-        YAxes={{
-          mobile: ['5%'],
-          table: ['5%'],
-          desktop: ['5%'],
-          wide: ['5%'],
-        }}
+        YAxes={[{ mobile: '5%', table: '5%', desktop: '5%', wide: '5%' }]}
       >
         <img src={imgUrl} alt={alt} />
       </ScrollTriggerArea>

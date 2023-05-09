@@ -19,9 +19,7 @@ function Main() {
   return (
     <>
       <main className="main">
-        <section className="section_div is_black">
-          {/*<WebGlCarousel />*/}
-        </section>
+        <section className="section_div is_black" />
         {/* S: about us */}
         <section className="section_div is_black about_us">
           <div className="keyvisual_wrap">
@@ -53,6 +51,7 @@ function Main() {
             />
           </div>
           {/*RotateRolling*/}
+          <WebGlCarousel />
           <div className="intro_area">
             <Description
               className="intro_en"
@@ -95,12 +94,14 @@ function Main() {
                 wide: '0px',
               }}
               triggerMarkers={false}
-              XAxes={{
-                mobile: ['-360vh'],
-                tablet: ['-400vh'],
-                desktop: ['-400vh'],
-                wide: ['-400vh'],
-              }}
+              XAxes={[
+                {
+                  mobile: '-360vh',
+                  tablet: '-400vh',
+                  desktop: '-400vh',
+                  wide: '-400vh',
+                },
+              ]}
               duration={0.001}
             >
               <span className="rolling_text">
@@ -121,13 +122,15 @@ function Main() {
                       desktop: '0px',
                       wide: '0px',
                     }}
-                    triggerMarkers={false}
-                    XAxes={{
-                      mobile: ['-200%'],
-                      tablet: ['-200%'],
-                      desktop: ['-200%'],
-                      wide: ['-200%'],
-                    }}
+                    triggerMarkers={true}
+                    XAxes={[
+                      {
+                        mobile: '-200%',
+                        tablet: '-200%',
+                        desktop: '-200%',
+                        wide: '-200%',
+                      },
+                    ]}
                     duration={0.01}
                   >
                     <img
@@ -153,13 +156,15 @@ function Main() {
                       desktop: '0px',
                       wide: '0px',
                     }}
-                    triggerMarkers={false}
-                    XAxes={{
-                      mobile: ['-200%'],
-                      tablet: ['-200%'],
-                      desktop: ['-200%'],
-                      wide: ['-200%'],
-                    }}
+                    triggerMarkers={true}
+                    XAxes={[
+                      {
+                        mobile: '-200%',
+                        tablet: '-200%',
+                        desktop: '-200%',
+                        wide: '-200%',
+                      },
+                    ]}
                     duration={0.01}
                   >
                     <img
@@ -185,13 +190,15 @@ function Main() {
                       desktop: '0px',
                       wide: '0px',
                     }}
-                    triggerMarkers={false}
-                    XAxes={{
-                      mobile: ['-200%'],
-                      tablet: ['-200%'],
-                      desktop: ['-200%'],
-                      wide: ['-200%'],
-                    }}
+                    triggerMarkers={true}
+                    XAxes={[
+                      {
+                        mobile: '-200%',
+                        tablet: '-200%',
+                        desktop: '-200%',
+                        wide: '-200%',
+                      },
+                    ]}
                     duration={0.01}
                   >
                     <img
@@ -207,7 +214,7 @@ function Main() {
                 <ScrollTriggerArea
                   type="multiTrigger"
                   triggerStart={{
-                    mobile: '45%',
+                    mobile: '65%',
                     tablet: '0px',
                     desktop: '0px',
                     wide: '0px',
@@ -218,14 +225,16 @@ function Main() {
                     desktop: '0px',
                     wide: '0px',
                   }}
-                  triggerMarkers={false}
+                  triggerMarkers={true}
                   toScale={[30]}
-                  YAxes={{
-                    mobile: ['-200%'],
-                    tablet: ['-200%'],
-                    desktop: ['-200%'],
-                    wide: ['-200%'],
-                  }}
+                  YAxes={[
+                    {
+                      mobile: '-200%',
+                      tablet: '-200%',
+                      desktop: '-200%',
+                      wide: '-200%',
+                    },
+                  ]}
                   duration={0.001}
                 >
                   <span className="text_e">
@@ -316,12 +325,14 @@ function Main() {
                 wide: '0px',
               }}
               triggerMarkers={false}
-              XAxes={{
-                mobile: ['-360vh'],
-                tablet: ['-400vh'],
-                desktop: ['-400vh'],
-                wide: ['-400vh'],
-              }}
+              XAxes={[
+                {
+                  mobile: '-200%',
+                  tablet: '-200%',
+                  desktop: '-200%',
+                  wide: '-200%',
+                },
+              ]}
               duration={0.001}
             >
               <span className="rolling_text">
@@ -331,24 +342,26 @@ function Main() {
                   <ScrollTriggerArea
                     type="multiTrigger"
                     triggerStart={{
-                      mobile: '-205%',
+                      mobile: '-215%',
                       tablet: '0px',
                       desktop: '0px',
                       wide: '0px',
                     }}
                     triggerEnd={{
-                      mobile: '2000vh',
+                      mobile: '1500vh',
                       tablet: '0px',
                       desktop: '0px',
                       wide: '0px',
                     }}
-                    triggerMarkers={false}
-                    XAxes={{
-                      mobile: ['-200%'],
-                      tablet: ['-200%'],
-                      desktop: ['-200%'],
-                      wide: ['-200%'],
-                    }}
+                    triggerMarkers={true}
+                    XAxes={[
+                      {
+                        mobile: '-200%',
+                        tablet: '-200%',
+                        desktop: '-200%',
+                        wide: '-200%',
+                      },
+                    ]}
                     duration={0.01}
                   >
                     <img
@@ -361,24 +374,26 @@ function Main() {
                   <ScrollTriggerArea
                     type="multiTrigger"
                     triggerStart={{
-                      mobile: '-290%',
+                      mobile: '-260%',
                       tablet: '0px',
                       desktop: '0px',
                       wide: '0px',
                     }}
                     triggerEnd={{
-                      mobile: '2000vh',
+                      mobile: '1500vh',
                       tablet: '0px',
                       desktop: '0px',
                       wide: '0px',
                     }}
-                    triggerMarkers={false}
-                    XAxes={{
-                      mobile: ['-200%'],
-                      tablet: ['-200%'],
-                      desktop: ['-200%'],
-                      wide: ['-200%'],
-                    }}
+                    triggerMarkers={true}
+                    XAxes={[
+                      {
+                        mobile: '-200%',
+                        tablet: '-200%',
+                        desktop: '-200%',
+                        wide: '-200%',
+                      },
+                    ]}
                     duration={0.01}
                   >
                     <img
@@ -402,13 +417,15 @@ function Main() {
                       desktop: '0px',
                       wide: '0px',
                     }}
-                    triggerMarkers={false}
-                    XAxes={{
-                      mobile: ['-200%'],
-                      tablet: ['-200%'],
-                      desktop: ['-200%'],
-                      wide: ['-200%'],
-                    }}
+                    triggerMarkers={true}
+                    XAxes={[
+                      {
+                        mobile: '-200%',
+                        tablet: '-200%',
+                        desktop: '-200%',
+                        wide: '-200%',
+                      },
+                    ]}
                     duration={0.01}
                   >
                     <img
@@ -436,12 +453,14 @@ function Main() {
             }}
             triggerOffset={'center'}
             triggerMarkers={false}
-            XAxes={{
-              mobile: ['-100%'],
-              tablet: ['-100%'],
-              desktop: ['-100%'],
-              wide: ['-100%'],
-            }}
+            XAxes={[
+              {
+                mobile: '-100%',
+                tablet: '-100%',
+                desktop: '-100%',
+                wide: '-100%',
+              },
+            ]}
             duration={0.01}
           >
             <div className="portfolio_wrap">

@@ -17,11 +17,12 @@ import careerProcess from '@/helper/data/json/contents/career/careerProcess.json
 import careerText from '@/helper/data/json/contents/career/careerText.json';
 import careerWelfare from '@/helper/data/json/contents/career/careerWelfare.json';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
+import seo from '@/helper/data/json/contents/SEO.json';
 
 import './scss/ career.scss';
 
 export const metadata = {
-  title: 'Career',
+  title: seo.title.subPage.career,
 };
 const TRIGGER_START = {
   mobile: '10px',
