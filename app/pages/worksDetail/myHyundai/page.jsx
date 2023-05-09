@@ -4,7 +4,11 @@ import Device from '@/components/Device/Device';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import works from '@/helper/data/json/contents/works/works.json';
 
-import './scss/MyHyundai.scss';
+import './scss/myHyundai.scss';
+
+export const metadata = {
+  title: 'Our works',
+};
 export default function MyHyundai() {
   return (
     <>

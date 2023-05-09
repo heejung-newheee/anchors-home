@@ -7,6 +7,9 @@ import works from '@/helper/data/json/contents/works/works.json';
 
 import './scss/wcms.scss';
 
+export const metadata = {
+  title: 'Our works',
+};
 export default function WCMS() {
   return (
     <>
