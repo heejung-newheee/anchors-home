@@ -147,6 +147,7 @@ export default function WorksTemplate({
               업
               elementTitle={data.title}
               description={data.contents}
+              innerHTMLOption="Y"
             />
           ))}
         </div>

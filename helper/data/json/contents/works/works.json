@@ -41,7 +41,7 @@
       },
       "projectInfomation" : [
         { "title" :  "Client" , "contents" :  "현대자동차 일본법인(HMJ), 현대자동차 인도법인(HMID), 현대자동차 싱가포르법인(HMGICS), 현대오토에버"},
-        { "title" :  "Year" , "contents" :  "2021. 12 (HMJ) 2022. 08 (HMID) 2022. 11 (HMGICS)"},
+        { "title" :  "Year" , "contents" :  "2021. 12 (HMJ) <br/> 2022. 08 (HMID) <br/> 2022. 11 (HMGICS)"},
         { "title" :  "Service" , "contents" :  "Salesforce Core, I/F, DB Migration, Foundation"}
       ]
     },
