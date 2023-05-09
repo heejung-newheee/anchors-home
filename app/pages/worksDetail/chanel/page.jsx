@@ -1,5 +1,8 @@
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import works from '@/helper/data/json/contents/works/works.json';
+
+import './chanel.scss';
+
 export const metadata = {
   title: 'Our works',
 };

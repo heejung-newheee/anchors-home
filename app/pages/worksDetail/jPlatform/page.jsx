@@ -1,20 +1,20 @@
 import React from 'react';
 
+import Description from '@/components/Description/Description';
 import Device from '@/components/Device/Device';
+import Disclaimer from '@/components/Disclaimer/Disclaimer';
+import ElementTitle from '@/components/ElementTitle/ElementTitle';
 import ImageArray from '@/components/ImageArray/ImageArray';
 import Video from '@/components/Video/Video';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import works from '@/helper/data/json/contents/works/works.json';
 
-import './scss/Jplatform.scss';
-import Description from '@/components/Description/Description';
-import Disclaimer from '@/components/Disclaimer/Disclaimer';
-import ElementTitle from '@/components/ElementTitle/ElementTitle';
+import './scss/jPlatform.scss';
 
 export const metadata = {
   title: 'Our works',
 };
-export default function Jplatform() {
+export default function JPlatform() {
   return (
     <>
       <WorksTemplate

@@ -5,7 +5,9 @@ import ImageArray from '@/components/ImageArray/ImageArray';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import works from '@/helper/data/json/contents/works/works.json';
 
-export default function genesis_Global() {
+import './genesisGlobal.scss';
+
+export default function GenesisGlobal() {
   return (
     <>
       <WorksTemplate
