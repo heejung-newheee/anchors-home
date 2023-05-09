@@ -37,7 +37,7 @@ const Carousel = ({ images = [] }) => {
   const displayItems = (item, index, active) => {
     const cycles = Math.floor(active / $items.length);
     const half = Math.floor($items.length / 2);
-    const yPos = Math.sin((index / $items.length) * Math.PI * 2) * 0.5;
+    const yPos = Math.sin((index / $items.length) * Math.PI * 8) * 0.5;
 
     // 약간 야매로 처리한 느낌은 있는데, 아무튼 됩니다 무한 스크롤...
     if (active - index < 1) {

@@ -1,12 +1,15 @@
 {
   "imgUrl": "/assets/images/contents/service/",
+  "textList" : {
+    "textEn": "Anchors is a <span>software development</span> company established\nin 2018. Although short in history, we are Powered by\n<span>Technology</span> and Driven by <span>Talent.</span>",
+    "textKo": "앵커스는 2018년에 설립된 소프트웨어 개발 회사입니다. 회사의 짧은 역사지만, 우리는 기술에 의해 구동되고 인재에 의해 구동됩니다."
+  },
   "introduction": [
     {
       "name":"Development",
       "textLine1" : "진화하는 플랫폼과 디지털 기술에 대한 지속적인 습득은 급변하는 e-Business 환경에 유연하게 대처할 수 있습니다.",
       "textLine2" : "웹과 애플리케이션, AEM, Salesforce 등 다양한 솔루션을 개발합니다. 기발하고 다양한 인터렉션을 통해 디자인에 생동감을 불어넣습니다.",
       "hashtag": ["#Web & App Development","#Salesforce Project Development","#Global IT Service Development","#AEM Project Development"],
-      "tagClassname": "해시태그 style 클래스 명",
       "img": "img_rdlab.jpg",
       "alt": "앵커스 R&D Lab실 이미지"
     },
@@ -15,7 +18,6 @@
       "textLine1" : "고객의 비즈니스 목적에 맞는 체계적인 분석과 탁월한 전략, 통합적인 시각으로 항상 최적의 서비스를 생각합니다.",
       "textLine2" : "빠르게 변화하는 비즈니스 환경에서 사용자의 새로운 경험과 가치창출을 위해 다년간의 경험을 바탕으로 최적의 Counsulting Service를 제공합니다.",
       "hashtag": ["#Brand Strategy Consulting","#e-Business Consulting","#AEM Project Consulting"],
-      "tagClassname": "해시태그 style 클래스 명",
       "img": "img_consulting.jpg",
       "alt": "포스트잇이 여러 장 붙어있는 이미지"
     },
@@ -24,7 +26,6 @@
       "textLine1" : "정보기술이 발전하면서 새로운 기술들이 끊임없이 나오고 있는 상황에서신기술을 통한 업무한경 개선이 중요해지고 있으며, 고객의 요구사항도 계속해서 다변화되고 있습니다.",
       "textLine2" : "Anchors는 IT의 전문성을 통해 고객사 비즈니스에 도움이 될 수 있도록 Maintenance Service를 제공합니다.",
       "hashtag": ["#Web & App Maintenance","#Global IT Service Maintenance"],
-      "tagClassname": "해시태그 style 클래스 명",
       "img": "img_maintenance.jpg",
       "alt": "노트북으로 소스코딩하고 있는 이미지"
     },
@@ -33,7 +34,6 @@
       "textLine1" : "항상 사용자 입장에서 생각하며 사용하기 편하고 즐거운 디자인을 만듭니다. 트랜드에 예민하게 반응하며 필요에 따라 독창적으로, 때로는 심플한 디자인을 합니다.",
       "textLine2" : "크리에이티브한 디자인은 많은 사용자들에게 확장될 수 있는 쉽고 안정적인 UX환경을 만들어냅니다.",
       "hashtag": ["#User Experience Design","#User Interface Design"],
-      "tagClassname": "해시태그 style 클래스 명",
       "img": "img_design.jpg",
       "alt": "만년필로 그림을 그리고 있는 이미지"
     }

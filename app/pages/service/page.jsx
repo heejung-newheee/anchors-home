@@ -43,79 +43,67 @@ function Service() {
         <Visual imgUrl="/assets/images/contents/service/img_keyvisual_officewide.jpg" />
         <Description
           className="en_comment"
-          data={
-            <>
-              Anchors is a <span>software development</span> company established
-              in 2018. Although short in history, we are Powered by
-              <span>Technology</span> and Driven by <span>Talent.</span>
-            </>
-          }
+          data={service.textList.textEn}
+          innerHTMLOption="Y"
         />
-        <Description
-          className="ko_comment"
-          data="앵커스는 2018년에 설립된 소프트웨어 개발 회사입니다.
-회사의 짧은 역사지만, 우리는 기술에 의해 구동되고 인재에 의해 구동됩니다."
-        />
+        <Description className="ko_comment" data={service.textList.textKo} />
       </section>
       <section className="anchors_part">
         {service.introduction.map((cont, idx) => (
           <>
-            <div key={idx} className="container">
-              <ScrollTriggerArea
-                type="multiTrigger"
-                triggerStart={TRIGGER_START}
-                triggerMarkers={true}
-                triggerOffset={'center'}
-                defaultID={`scrollTriggerArea_0${idx}`}
-              >
-                <span className="part_img">
-                  <ScrollTriggerArea
-                    type="multiTrigger"
-                    triggerStart={MULTI_TRIGGER_START}
-                    triggerEnd={MULTI_TRIGGER_END}
-                    triggerOffset={'center'}
-                    triggerMarkers={false}
-                    defaultID={`scrollTriggerArea_0${idx}_01`}
-                    YAxes={[
-                      {
-                        mobile: '20px',
-                        table: '25px',
-                        desktop: '30px',
-                        wide: '35px',
-                      },
-                    ]}
-                  >
-                    <span className="img_scroll_wrap">
-                      <img src={service.imgUrl + cont.img} alt={cont.alt} />
-                    </span>
-                  </ScrollTriggerArea>
-                </span>
-              </ScrollTriggerArea>
-              <article className="part_introduction_wrap">
-                <ElementTitle data={cont.name} />
-                <div className="description_wrap">
-                  <Description
-                    data={
-                      <>
-                        <span>{cont.textLine1}</span>
-                        <span>{cont.textLine2}</span>
-                      </>
-                    }
-                  />
-                  <Disclaimer
-                    data={
-                      <>
-                        {cont.hashtag.map((tag, idx) => (
-                          <span key={idx} className="hashtag">
-                            {tag}
-                          </span>
-                        ))}
-                      </>
-                    }
-                  />
-                </div>
-              </article>
-            </div>
+            <ScrollTriggerArea
+              type="multiTrigger"
+              triggerStart={TRIGGER_START}
+              triggerMarkers={false}
+              triggerOffset={'center'}
+              defaultID={`scrollTriggerArea_0${idx}`}
+            >
+              <span className="part_img" key={`part_img${idx}`}>
+                <ScrollTriggerArea
+                  type="multiTrigger"
+                  triggerStart={MULTI_TRIGGER_START}
+                  triggerEnd={MULTI_TRIGGER_END}
+                  triggerOffset={'center'}
+                  triggerMarkers={false}
+                  defaultID={`scrollTriggerArea_0${idx}_01`}
+                  YAxes={[
+                    {
+                      mobile: '20px',
+                      table: '25px',
+                      desktop: '30px',
+                      wide: '35px',
+                    },
+                  ]}
+                >
+                  <img src={service.imgUrl + cont.img} alt={cont.alt} />
+                </ScrollTriggerArea>
+              </span>
+            </ScrollTriggerArea>
+            <article
+              className="part_introduction_wrap"
+              key={`part_introduction_wrap${idx}`}
+            >
+              <ElementTitle data={cont.name} />
+              <Description
+                data={
+                  <>
+                    <span>{cont.textLine1}</span>
+                    <span>{cont.textLine2}</span>
+                  </>
+                }
+              />
+              <Disclaimer
+                data={
+                  <>
+                    {cont.hashtag.map((tag, idx) => (
+                      <span key={idx} className="hashtag">
+                        {tag}
+                      </span>
+                    ))}
+                  </>
+                }
+              />
+            </article>
           </>
         ))}
       </section>
