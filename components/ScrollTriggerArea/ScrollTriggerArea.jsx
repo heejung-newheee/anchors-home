@@ -14,9 +14,6 @@ const DEFAULT_TRIGGER = {
 const DEFAULT_AXES = [
   { mobile: '0px', table: '0px', desktop: '0px', wide: '0px' },
 ];
-
-const DEFAULT_SCALE = [{ mobile: 0, table: 0, desktop: 0, wide: 0 }];
-
 function ScrollTriggerArea({
   type,
   lottieOption,
@@ -29,9 +26,10 @@ function ScrollTriggerArea({
   XAxes = DEFAULT_AXES,
   YAxes = DEFAULT_AXES,
   easing = 'elastic.out(0.1, 0)',
-  duration = DEFAULT_SCALE,
-  toScale = DEFAULT_SCALE,
-  fromScale = DEFAULT_SCALE,
+  duration = 1,
+  toScale,
+  fromScale,
+  className,
   children,
 }) {
   const [isActive, setIsActive] = React.useState();
@@ -57,13 +55,17 @@ function ScrollTriggerArea({
       MUTITRIGGER_OPTION_Y_AXES[index] = el[BREAKPOINT_TYPE];
     });
 
-    toScale.map(function (el, index) {
-      MUTITRIGGER_OPTION_TO_SCALE[index] = el[BREAKPOINT_TYPE];
-    });
+    if (toScale !== undefined) {
+      toScale.map(function (el, index) {
+        MUTITRIGGER_OPTION_TO_SCALE[index] = el[BREAKPOINT_TYPE];
+      });
+    }
 
-    fromScale.map(function (el, index) {
-      MUTITRIGGER_OPTION_FREOM_SCALE[index] = el[BREAKPOINT_TYPE];
-    });
+    if (fromScale !== undefined) {
+      fromScale.map(function (el, index) {
+        MUTITRIGGER_OPTION_FROM_SCALE[index] = el[BREAKPOINT_TYPE];
+      });
+    }
   };
 
   let TRIGGER_OPTION_START;
@@ -72,7 +74,7 @@ function ScrollTriggerArea({
   let MUTITRIGGER_OPTION_X_AXES = [];
   let MUTITRIGGER_OPTION_Y_AXES = [];
   let MUTITRIGGER_OPTION_TO_SCALE = [];
-  let MUTITRIGGER_OPTION_FREOM_SCALE = [];
+  let MUTITRIGGER_OPTION_FROM_SCALE = [];
 
   if (BREAKPOINT_MOBILE) {
     BREAKPOINT_TYPE = 'mobile';
@@ -111,7 +113,7 @@ function ScrollTriggerArea({
             // console.log(d);
           }}
         >
-          <Tween ease={easing} duration={duration[0]}>
+          <Tween ease={easing} duration={duration}>
             <LottiePlayer
               ref={COMPONENTS_REF}
               className={type}
@@ -132,7 +134,7 @@ function ScrollTriggerArea({
         MUTITRIGGER_OPTION_X_AXES,
         MUTITRIGGER_OPTION_Y_AXES,
         MUTITRIGGER_OPTION_TO_SCALE,
-        MUTITRIGGER_OPTION_FREOM_SCALE,
+        MUTITRIGGER_OPTION_FROM_SCALE,
       );
 
       return (
@@ -159,7 +161,13 @@ function ScrollTriggerArea({
             // console.log(d);
           }}
         >
-          <div className={'wrapper' + (isActive ? ' is_active' : '')}>
+          <div
+            className={
+              'wrapper' +
+              (className === undefined ? '' : ` ${className}`) +
+              (isActive ? ' is_active' : '')
+            }
+          >
             {CHILDREN_ARR.map((contents, idx) => (
               <Tween
                 to={{
@@ -167,10 +175,10 @@ function ScrollTriggerArea({
                   y: MUTITRIGGER_OPTION_Y_AXES[idx],
                   scale: MUTITRIGGER_OPTION_TO_SCALE[idx],
                 }}
-                from={{ scale: MUTITRIGGER_OPTION_FREOM_SCALE[idx] }}
+                from={{ scale: MUTITRIGGER_OPTION_FROM_SCALE[idx] }}
                 key={idx}
                 ease={easing}
-                duration={duration[idx]}
+                duration={duration}
               >
                 {contents}
               </Tween>
@@ -215,7 +223,7 @@ function ScrollTriggerArea({
                     from={{
                       x: '0px',
                       y: '0px',
-                      scale: fromScale[idx] || 1,
+                      scale: MUTITRIGGER_OPTION_FROM_SCALE[idx] || 1,
                     }}
                     // ease={easing}
                     //duration={duration[idx] || 1}
@@ -225,7 +233,7 @@ function ScrollTriggerArea({
                 ) : (
                   <Timeline target={contents} key={idx}>
                     <Tween
-                      from={{ scale: fromScale[idx] }}
+                      from={{ scale: MUTITRIGGER_OPTION_FROM_SCALE[idx] }}
                       to={{
                         x: MUTITRIGGER_OPTION_X_AXES[idx],
                         y: MUTITRIGGER_OPTION_Y_AXES[idx],
@@ -234,7 +242,7 @@ function ScrollTriggerArea({
                       //duration={duration[idx]}
                     />
                     <Tween
-                      from={{ scale: fromScale[idx] }}
+                      from={{ scale: MUTITRIGGER_OPTION_FROM_SCALE[idx] }}
                       to={{
                         x: MUTITRIGGER_OPTION_X_AXES[idx],
                         y: MUTITRIGGER_OPTION_Y_AXES[idx],
