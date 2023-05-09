@@ -7,6 +7,10 @@ import works from '@/helper/data/json/contents/works/works.json';
 
 import './koreanAir_Android.scss';
 
+export const metadata = {
+  title: 'Our works',
+};
+
 export default function koreanAir_Android() {
   return (
     <>

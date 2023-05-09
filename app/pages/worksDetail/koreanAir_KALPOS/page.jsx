@@ -7,6 +7,9 @@ import works from '@/helper/data/json/contents/works/works.json';
 
 import './ koreanAir_KALPOS.scss';
 
+export const metadata = {
+  title: 'Our works',
+};
 export default function koreanAir_KALPOS() {
   return (
     <>

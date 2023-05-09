@@ -5,11 +5,7 @@ import ImageArray from '@/components/ImageArray/ImageArray';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import works from '@/helper/data/json/contents/works/works.json';
 
-export default function genesis() {
-  // const TEST = [
-  //   { url: '이미지경로', alt: '123' },
-  //   { url: '이미지경로', alt: '123' },
-  // ];
+export default function genesis_Global() {
   return (
     <>
       <WorksTemplate

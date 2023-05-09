@@ -10,6 +10,10 @@ import './scss/Jplatform.scss';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
+
+export const metadata = {
+  title: 'Our works',
+};
 export default function Jplatform() {
   return (
     <>
