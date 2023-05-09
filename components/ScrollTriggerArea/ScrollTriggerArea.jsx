@@ -47,13 +47,17 @@ function ScrollTriggerArea({
   const SetOption = () => {
     TRIGGER_OPTION_START = triggerStart[BREAKPOINT_TYPE];
     TRIGGER_OPTION_END = triggerEnd[BREAKPOINT_TYPE];
-    XAxes.map(function (el, index) {
-      MUTITRIGGER_OPTION_X_AXES[index] = el[BREAKPOINT_TYPE];
-    });
+    if (XAxes !== undefined) {
+      XAxes.map(function (el, index) {
+        MUTITRIGGER_OPTION_X_AXES[index] = el[BREAKPOINT_TYPE];
+      });
+    }
 
-    YAxes.map(function (el, index) {
-      MUTITRIGGER_OPTION_Y_AXES[index] = el[BREAKPOINT_TYPE];
-    });
+    if (YAxes !== undefined) {
+      YAxes.map(function (el, index) {
+        MUTITRIGGER_OPTION_Y_AXES[index] = el[BREAKPOINT_TYPE];
+      });
+    }
 
     if (toScale !== undefined) {
       toScale.map(function (el, index) {
