@@ -19,9 +19,7 @@ function Main() {
   return (
     <>
       <main className="main">
-        <section className="section_div is_black">
-          {/*<WebGlCarousel />*/}
-        </section>
+        <section className="section_div is_black" />
         {/* S: about us */}
         <section className="section_div is_black about_us">
           <div className="keyvisual_wrap">
@@ -53,6 +51,7 @@ function Main() {
             />
           </div>
           {/*RotateRolling*/}
+          <WebGlCarousel />
           <div className="intro_area">
             <Description
               className="intro_en"

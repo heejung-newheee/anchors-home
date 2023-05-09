@@ -14,8 +14,8 @@ const planeSettings = {
 };
 
 gsap.defaults({
-  duration: 2.5,
-  ease: 'power3.out',
+  duration: 2,
+  ease: 'none',
 });
 
 const Carousel = ({ images = [] }) => {

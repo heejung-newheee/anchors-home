@@ -4,6 +4,7 @@
     color: #000;
   }
   .visual_comment {
+    background-color: $color_white;
     .visual {
       height: 27rem;
       margin-bottom: 6rem;
@@ -29,6 +30,7 @@
     }
   }
   .anchors_part {
+    background-color: $color_white;
     padding-bottom: 6rem;
     .container {
       margin-top: 6rem;

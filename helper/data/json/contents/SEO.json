@@ -1,0 +1,38 @@
+{
+  "icon": "/assets/images/favicon.png",
+  "title": {
+    "default": "ANCHORS.Inc",
+    "template": "%s : Anchors",
+    "subPage" : {
+      "works" : "Our Works",
+      "about" : "About Us",
+      "service" : "Service",
+      "contact" : "Contact",
+      "career" : "Career",
+      "detail" : {
+        "jPlatform" : "Hyundai Motor J Platform",
+        "bms": "Hyundai Motor BMS renewal",
+        "myAIA" : "AIA Life insurance ‘MY AIA’ site",
+        "koreanAirKALPOS" : "Korean Air KALPOS App",
+        "wcms" : "Kia K-WCMS renewal",
+        "koreanAirAndroid" : "Korean Air android App",
+        "myHyundai" : "Hyundai Motor 'myHyundai APP",
+        "happyMove" : "Hyundai Motor Happy Move",
+        "nBland" : "Hyundai Motor N-brand Website",
+        "wwn" : "Hyundai Motor WWN 3.0",
+        "genesisGlobal" : "Genesis Global site",
+        "DCXT" : "Hyundai Motor DCXT",
+        "chanel" : "CHANEL KOREA"
+       }
+    }
+  },
+  "keywords" : "ANCHORS.Inc | Anything is Possible",
+  "description": "주식회사 앵커스는 2018년에 설립되어, 사원수 60여명 규모로 매년 50% 이상 성장하고 있습니다. 사업분야는 AEM Consulting & Development, Salesforce Consulting & Development, Digital Service 구축 및 운영, System Integration 등이며, 삼성, 현대, KIA, Chanel 등 대기업 프로젝트를 주로 진행하고 있습니다.",
+  "openGraph": {
+    "locale": "ko-KR",
+    "type": "website",
+    "title": "ANCHORS.Inc",
+    "description": "Anything is Possible",
+    "siteName": "ANCHORS.Inc"
+  }
+}

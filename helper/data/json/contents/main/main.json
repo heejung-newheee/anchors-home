@@ -5,7 +5,29 @@
     "introduction" : {
       "en": "<span>Anything is Possible</span> for Anchors. We are Total Digital Agency built to navigate this new world. We are looking for the Smart Answer.",
       "ko" : "앵커스는 어떤 풍랑이나 암초에도 좌초되지 않고 <br />목적지에 무사히 안착할 수 있도록 <br />묵묵히 노력하는 사람들의 회사입니다."
-    }
+    },
+    "portfolio": [
+      {"image": "img_portfolio_thumbnail01.jpg"},
+      {"image": "img_portfolio_thumbnail02.jpg"},
+      {"image": "img_portfolio_thumbnail03.jpg"},
+      {"image": "img_portfolio_thumbnail04.jpg"},
+      {"image": "img_portfolio_thumbnail05.jpg"},
+      {"image": "img_portfolio_thumbnail06.jpg"},
+      {"image": "img_portfolio_thumbnail07.jpg"},
+      {"image": "img_portfolio_thumbnail08.jpg"},
+      {"image": "img_portfolio_thumbnail09.jpg"},
+      {"image": "img_portfolio_thumbnail10.jpg"},
+      {"image": "img_portfolio_thumbnail11.jpg"},
+      {"image": "img_portfolio_thumbnail12.jpg"},
+      {"image": "img_portfolio_thumbnail13.jpg"},
+      {"image": "img_portfolio_thumbnail14.jpg"},
+      {"image": "img_portfolio_thumbnail15.jpg"},
+      {"image": "img_portfolio_thumbnail16.jpg"},
+      {"image": "img_portfolio_thumbnail17.jpg"},
+      {"image": "img_portfolio_thumbnail18.jpg"},
+      {"image": "img_portfolio_thumbnail19.jpg"},
+      {"image": "img_portfolio_thumbnail20.jpg"}
+    ]
   },
   "service": {
     "rollingBigText": ["Expertis", "e"],

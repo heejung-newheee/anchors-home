@@ -5,11 +5,12 @@ import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea'
 import Visual from '@/components/Visual/Visual';
 import contact from '@/helper/data/json/contents/contact/contact.json';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
+import seo from '@/helper/data/json/contents/SEO.json';
 
 import './scss/contact.scss';
 
 export const metadata = {
-  title: 'Contact',
+  title: seo.title.subPage.contact,
 };
 
 const TRIGGER_START = {

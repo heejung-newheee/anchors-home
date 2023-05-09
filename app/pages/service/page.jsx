@@ -5,12 +5,13 @@ import PageTitle from '@/components/PageTitle/PageTitle';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import Visual from '@/components/Visual/Visual';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
+import seo from '@/helper/data/json/contents/SEO.json';
 import service from '@/helper/data/json/contents/service/service.json';
 
 import './scss/service.scss';
 
 export const metadata = {
-  title: 'Service',
+  title: seo.title.subPage.service,
 };
 
 const TRIGGER_START = {

@@ -4,8 +4,12 @@ import Description from '@/components/Description/Description';
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
 import Video from '@/components/Video/Video';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
+import seo from '@/helper/data/json/contents/SEO.json';
 import works from '@/helper/data/json/contents/works/works.json';
 import './scss/bms.scss';
+export const metadata = {
+  title: seo.title.subPage.detail.bms + ' : ' + seo.title.subPage.works,
+};
 export default function BMS() {
   return (
     <>
