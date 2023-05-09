@@ -66,6 +66,7 @@ function Service() {
                 triggerStart={TRIGGER_START}
                 triggerMarkers={true}
                 triggerOffset={'center'}
+                defaultID={`scrollTriggerArea_0${idx}`}
               >
                 <span className="part_img">
                   <ScrollTriggerArea
@@ -74,6 +75,7 @@ function Service() {
                     triggerEnd={MULTI_TRIGGER_END}
                     triggerOffset={'center'}
                     triggerMarkers={false}
+                    defaultID={`scrollTriggerArea_0${idx}_01`}
                     YAxes={[
                       {
                         mobile: '20px',

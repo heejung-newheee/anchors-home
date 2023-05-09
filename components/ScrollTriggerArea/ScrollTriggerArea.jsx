@@ -23,13 +23,14 @@ function ScrollTriggerArea({
   triggerScrub = 0.5,
   triggerStart = DEFAULT_TRIGGER,
   triggerEnd = DEFAULT_TRIGGER,
-  XAxes = DEFAULT_AXES,
-  YAxes = DEFAULT_AXES,
+  XAxes,
+  YAxes,
   easing = 'elastic.out(0.1, 0)',
   duration = 1,
   toScale,
   fromScale,
   className,
+  defaultID,
   children,
 }) {
   const [isActive, setIsActive] = React.useState();
@@ -39,10 +40,6 @@ function ScrollTriggerArea({
   const BREAKPOINT_TABLE = useMediaQuery({ maxWidth: 1280 });
   const BREAKPOINT_DESKTOP = useMediaQuery({ maxWidth: 1536 });
   const CHILDREN_ARR = Array.isArray(children) ? children : [children];
-
-  // UncleCho : XAxes, YAxes 값 각 프로퍼티별 기본값 '0px' 유지하고 별도로 들어오는 프로퍼티만 적용하는 방식으로 변경함 (20230502)
-  const X_AXES = [...DEFAULT_AXES, ...XAxes];
-  const Y_AXES = [...DEFAULT_AXES, ...YAxes];
 
   const SetOption = () => {
     TRIGGER_OPTION_START = triggerStart[BREAKPOINT_TYPE];
@@ -132,12 +129,19 @@ function ScrollTriggerArea({
 
     case 'multiTrigger':
       console.log(
+        'TRIGGER_OPTION_START : ',
         TRIGGER_OPTION_START,
+        'TRIGGER_OPTION_END : ',
         TRIGGER_OPTION_END,
+        'triggerOffset',
         triggerOffset,
+        'MUTITRIGGER_OPTION_X_AXES : ',
         MUTITRIGGER_OPTION_X_AXES,
+        'MUTITRIGGER_OPTION_Y_AXES : ',
         MUTITRIGGER_OPTION_Y_AXES,
+        'MUTITRIGGER_OPTION_TO_SCALE : ',
         MUTITRIGGER_OPTION_TO_SCALE,
+        'MUTITRIGGER_OPTION_FROM_SCALE : ',
         MUTITRIGGER_OPTION_FROM_SCALE,
       );
 
@@ -147,7 +151,7 @@ function ScrollTriggerArea({
           end={TRIGGER_OPTION_END + ' ' + triggerOffset}
           scrub={triggerScrub}
           markers={triggerMarkers}
-          trigger={'.wrapper'}
+          trigger={'.' + defaultID}
           onEnter={(d) => {
             setIsActive(d.isActive);
             console.log(d.isActive);
@@ -157,6 +161,7 @@ function ScrollTriggerArea({
           }}
           onLeaveBack={(d) => {
             setIsActive(d.isActive);
+            console.log(d.isActive);
           }}
           onEnterBack={(d) => {
             //setIsActive(d.isActive);
@@ -167,7 +172,8 @@ function ScrollTriggerArea({
         >
           <div
             className={
-              'wrapper' +
+              'wrapper ' +
+              defaultID +
               (className === undefined ? '' : ` ${className}`) +
               (isActive ? ' is_active' : '')
             }
