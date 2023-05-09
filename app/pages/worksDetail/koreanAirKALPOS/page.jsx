@@ -6,9 +6,11 @@ import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import works from '@/helper/data/json/contents/works/works.json';
 
 import './koreanAirKALPOS.scss';
+import seo from '@/helper/data/json/contents/SEO.json';
 
 export const metadata = {
-  title: 'Our works',
+  title:
+    seo.title.subPage.detail.koreanAirKALPOS + ' : ' + seo.title.subPage.works,
 };
 export default function KoreanAir_KALPOS() {
   return (

@@ -3,12 +3,14 @@ import React from 'react';
 import Device from '@/components/Device/Device';
 import ImageArray from '@/components/ImageArray/ImageArray';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
+import seo from '@/helper/data/json/contents/SEO.json';
 import works from '@/helper/data/json/contents/works/works.json';
 
 import './koreanAirAndroid.scss';
 
 export const metadata = {
-  title: 'Our works',
+  title:
+    seo.title.subPage.detail.koreanAirAndroid + ' : ' + seo.title.subPage.works,
 };
 
 export default function KoreanAir_Android() {
