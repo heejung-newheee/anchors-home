@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState, useMemo } from 'react';
+import { useRef, useState, useMemo } from 'react';
 
 import { useFrame, useThree } from '@react-three/fiber';
 import gsap from 'gsap';
 
 import CarouselItem from './CarouselItem';
 import PostProcessing from './PostProcessing';
-import { lerp, getPiramidalIndex } from './utils';
+import { lerp } from './utils';
 
 const planeSettings = {
   width: 1.4,
@@ -35,25 +35,47 @@ const Carousel = ({ images = [] }) => {
   }, [$root]);
 
   const displayItems = (item, index, active) => {
-    const piramidalIndex = getPiramidalIndex($items, active)[index];
-    gsap.to(item.position, {
-      x: (index - active) * (planeSettings.width + planeSettings.gap),
-      y: $items.length * -0.1 + piramidalIndex * 0.1,
-    });
+    const cycles = Math.floor(active / $items.length);
+    const half = Math.floor($items.length / 2);
+    const yPos = Math.sin((index / $items.length) * Math.PI * 2) * 0.5;
 
-    /*gsap.to(item.rotation, {
-      y: (Math.PI / 45) * (active - index),
-    });*/
+    // 약간 야매로 처리한 느낌은 있는데, 아무튼 됩니다 무한 스크롤...
+    if (active - index < 1) {
+      gsap.to(item.position, {
+        x: (index - active - half) * (planeSettings.width + planeSettings.gap),
+        y: yPos,
+      });
+    } else if (active - index === 1) {
+      gsap.to(item.position, {
+        x:
+          (index - active - half + $items.length * (cycles + 1)) *
+          (planeSettings.width + planeSettings.gap),
+        y: 100,
+      });
+    } else if (active - index === 0) {
+      gsap.to(item.position, {
+        x:
+          (index - active - half + $items.length * (cycles + 1)) *
+          (planeSettings.width + planeSettings.gap),
+        y: 100,
+      });
+    } else {
+      gsap.to(item.position, {
+        x:
+          (index - active - half + $items.length * (cycles + 1)) *
+          (planeSettings.width + planeSettings.gap),
+        y: yPos,
+      });
+    }
   };
 
   useFrame(() => {
     const autoScrollSpeed = !isMouseOver ? 0.7 / images.length : 0;
-    progress.current = Math.max(
-      0,
-      Math.min(progress.current + autoScrollSpeed, 100),
-    );
+    progress.current = Math.max(0, progress.current + autoScrollSpeed);
 
-    const active = Math.floor((progress.current / 100) * ($items.length - 1));
+    const active =
+      Math.floor((progress.current / 100) * ($items.length - 1)) %
+      $items.length;
     $items.forEach((item, index) => displayItems(item, index, active));
     speed.current = lerp(
       speed.current,
@@ -85,7 +107,7 @@ const Carousel = ({ images = [] }) => {
             width={planeSettings.width}
             height={planeSettings.height}
             onHandOver={(value) => setIsMouseOver(value)}
-            key={item.image}
+            key={`${item.image}-${i}`}
             item={item}
             index={i}
           />

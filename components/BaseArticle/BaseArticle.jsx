@@ -13,6 +13,7 @@ export default function BaseArticle({
   description = '',
   disclaimer = '',
   className,
+  innerHTMLOption = 'N',
 }) {
   const GET_CLASSNAME =
     className == undefined
@@ -25,9 +26,15 @@ export default function BaseArticle({
           <img src={imgUrl} alt={imgAlt} />
         </span>
       )}
-      {elementTitle != '' && <ElementTitle data={elementTitle} />}
-      {description != '' && <Description data={description} />}
-      {disclaimer != '' && <Disclaimer data={disclaimer} />}
+      {elementTitle != '' && (
+        <ElementTitle data={elementTitle} innerHTMLOption={innerHTMLOption} />
+      )}
+      {description != '' && (
+        <Description data={description} innerHTMLOption={innerHTMLOption} />
+      )}
+      {disclaimer != '' && (
+        <Disclaimer data={disclaimer} innerHTMLOption={innerHTMLOption} />
+      )}
     </article>
   );
 }
