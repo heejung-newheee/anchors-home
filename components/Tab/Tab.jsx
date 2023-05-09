@@ -4,48 +4,39 @@ import Link from 'next/link';
 
 import TabButton from '@/components/TabButton/TabButton';
 import TabContents from '@/components/TabContents/TabContents';
-
-function TabEvent(e, type, dataContens) {
-  console.log('sdkjdfshkfkhkfkj', type, e.target.innerText);
-
+import React from 'react';
+import Btn from '@/components/Btn/Btn';
+function TabContentsEvent(type, index, children, data) {
   switch (type) {
+    case 'article':
+      return children[index];
     case 'sortList':
-      console.log(SORT_DATA);
-
-      let SORT_INIT = 0;
-      let SORT_COUNT = 0;
-      let SORT_DATA = e.target.innerText;
-      let BINDING = [];
-
-      dataContens < 6 ? (SORT_COUNT = dataContens.length) : (SORT_COUNT = 6);
-
-      for (let i = SORT_INIT; i < SORT_COUNT; i++) {
-        if (dataContens[i].sort.includes(SORT_DATA) === true) {
-          BINDING[i] = {
-            url: dataContens.url + _getData.result.content[i].pageName,
-            index: i,
-            src: _getData.result.imgUrl + _getData.result.content[i].imgName,
-            alt: _getData.result.content[i].alt,
-            title: _getData.result.content[i].title,
-            text: _getData.result.content[i].text,
-          };
-        }
-      }
-
-      break;
+      // const CHILDREN_ARR = Array.isArray(children) ? children : [children];
+      console.log(data);
   }
 }
-function Tab({ type, className, dataList, dataContens, contents }) {
+
+function Tab({ type, className, data, tabList, children }) {
+  const BUTTON_ARR = Array.isArray(tabList) ? tabList : [tabList];
+  const [tabCurrent, setTabCurrent] = React.useState(0);
+
   return (
     <section className={`tab ${className}`} data-tab-type={type}>
-      <TabButton
-        dataList={dataList}
-        className="tabButton"
-        onClick={(e) => {
-          TabEvent(e, type, dataContens);
-        }}
+      <ul className="tab_btn_wrap">
+        {BUTTON_ARR.map((button, idx) => (
+          <TabButton
+            current={tabCurrent}
+            index={idx}
+            key={idx}
+            event={() => setTabCurrent(idx)}
+          >
+            {button}
+          </TabButton>
+        ))}
+      </ul>
+      <TabContents
+        dataContents={TabContentsEvent(type, tabCurrent, children, data)}
       />
-      <TabContents dataContents={contents} />
     </section>
   );
 }

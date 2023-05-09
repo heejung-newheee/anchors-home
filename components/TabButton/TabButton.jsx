@@ -1,19 +1,14 @@
 'use client';
 import Btn from '@/components/Btn/Btn';
+import React from 'react';
 
-function TabButton({ dataList = [], onClick, className }) {
-  const BUTTON_ARR = Array.isArray(dataList) ? dataList : [dataList];
-
+function TabButton({ current, index, children, event }) {
   return (
-    <ul className="tab_btn_wrap">
-      {BUTTON_ARR.map((button, idx) => (
-        <li className="tab-button" data-tab-index={idx} key={idx}>
-          <Btn type="button" onClick={onClick} className={className}>
-            {button}
-          </Btn>
-        </li>
-      ))}
-    </ul>
+    <li className={'tab-button' + (index == current ? ' isActive' : '')}>
+      <Btn type="button" onClick={event}>
+        {children}
+      </Btn>
+    </li>
   );
 }
 

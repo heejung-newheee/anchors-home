@@ -4,37 +4,55 @@ import Tab from '@/components/Tab/Tab';
 import LottieTest from '@/components/Test/LottieTest';
 import worksList from '@/helper/data/json/contents/works/works.json';
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
+import React from 'react';
 
-const LOTTIE_STYLE = {
-  height: '600px',
-  width: '600px',
-  backgroundColor: '#1D1D1F',
+const LOTTIE_TYPE = {
+  style: {
+    height: '600px',
+    width: '600px',
+    backgroundColor: '#1D1D1F',
+  },
 };
 
-const LOTTIE_STYLE2 = {
-  height: '600px',
-  backgroundColor: '#1D1D1F',
-};
-
-const LOTTIE_OPTION = {
-  // lottie Class 명은 ScrollTriggerArea의 타입 명과 동일합니다.
-  data: lottieMainKeyVisual,
-  autoplay: false,
-  loop: false,
-};
-
-const TRIGGER_START = {
-  mobile: '0px',
-  table: '0px',
-  desktop: '50px',
-  wide: '50px',
-};
-
-const TRIGGER_END = {
-  mobile: '0px',
-  table: '0px',
-  desktop: '600px',
-  wide: '600px',
+const SCROLL_TRIGGER_OPTION = {
+  triggerStart: [
+    { mobile: '0px', table: '0px', desktop: '200px', wide: '200px' },
+    { mobile: '0px', table: '0px', desktop: '200px', wide: '200px' },
+    { mobile: '0px', table: '0px', desktop: '200px', wide: '200px' },
+  ],
+  triggerEnd: [
+    { mobile: '0px', table: '0px', desktop: '600px', wide: '600px' },
+    { mobile: '0px', table: '0px', desktop: '600px', wide: '600px' },
+    { mobile: '0px', table: '0px', desktop: '600px', wide: '600px' },
+  ],
+  XAxes: {
+    multiTrigger: [
+      { mobile: '0px', table: '0px', desktop: '200px', wide: '200px' },
+      { mobile: '0px', table: '0px', desktop: '200px', wide: '200px' },
+    ],
+    test: [
+      { mobile: '0px', table: '0px', desktop: '200px', wide: '200px' },
+      { mobile: '0px', table: '0px', desktop: '200px', wide: '200px' },
+      { mobile: '0px', table: '0px', desktop: '200px', wide: '200px' },
+    ],
+  },
+  toScale: {
+    test: [
+      { mobile: 0, table: 0, desktop: 0, wide: 0 },
+      { mobile: 0, table: 0, desktop: 0, wide: 0 },
+      { mobile: 0, table: 0, desktop: 0, wide: 0 },
+    ],
+  },
+  lottie: {
+    option: {
+      data: lottieMainKeyVisual,
+      autoplay: false,
+    },
+    style: {
+      height: '600px',
+      backgroundColor: '#1D1D1F',
+    },
+  },
 };
 
 const TAB_CONTENTS = {};
@@ -46,7 +64,7 @@ function Mijeong() {
       <LottiePlayer
         className="lottieName"
         data={lottieMainKeyVisual}
-        style={LOTTIE_STYLE}
+        style={LOTTIE_TYPE.style}
       />
       <p>
         ScrollTriggerArea 컴포넌트의 타입 로티
@@ -55,26 +73,21 @@ function Mijeong() {
       </p>
       <ScrollTriggerArea
         type="lottieTrigger"
-        lottieOption={LOTTIE_OPTION}
-        triggerStart={TRIGGER_START}
-        triggerEnd={TRIGGER_END}
+        lottieOption={SCROLL_TRIGGER_OPTION.lottie.option}
+        triggerStart={SCROLL_TRIGGER_OPTION.triggerStart[0]}
+        triggerEnd={SCROLL_TRIGGER_OPTION.triggerEnd[0]}
         triggerOffset={'center'}
         triggerMarkers={true}
-        lottieStyle={LOTTIE_STYLE2}
+        lottieStyle={SCROLL_TRIGGER_OPTION.lottie.style}
       />
       <p> ScrollTriggerArea 컴포넌트의 타입 멀티 컨텐츠 </p>
       <ScrollTriggerArea
         type="multiTrigger"
-        triggerStart={TRIGGER_START}
-        triggerEnd={TRIGGER_END}
+        triggerStart={SCROLL_TRIGGER_OPTION.triggerStart[1]}
+        triggerEnd={SCROLL_TRIGGER_OPTION.triggerEnd[1]}
         triggerOffset={'center'}
         triggerMarkers={true}
-        XAxes={{
-          mobile: ['0px', '0px'],
-          table: ['0px', '0px'],
-          desktop: ['500px', '300px'],
-          wide: ['700px', '500px'],
-        }}
+        XAxes={SCROLL_TRIGGER_OPTION.XAxes.multiTrigger}
       >
         <div
           className="area01"
@@ -86,31 +99,36 @@ function Mijeong() {
         />
       </ScrollTriggerArea>
 
-      <p> ScrollTriggerArea 컴포넌트의 타입 기본 </p>
-
-      <ScrollTriggerArea
-        type="test"
-        triggerStart={TRIGGER_START}
-        triggerEnd={TRIGGER_END}
-        triggerOffset={'center'}
-        triggerMarkers={true}
-      ></ScrollTriggerArea>
+      <p> ScrollTriggerArea 컴포넌트의 타입 Timeline </p>
+      <div style={{ height: '600px' }}>
+        <ScrollTriggerArea
+          type="test"
+          triggerStart={SCROLL_TRIGGER_OPTION.triggerStart[2]}
+          triggerEnd={SCROLL_TRIGGER_OPTION.triggerEnd[2]}
+          triggerOffset={'center'}
+          triggerMarkers={true}
+          XAxes={SCROLL_TRIGGER_OPTION.XAxes.test}
+          toScale={SCROLL_TRIGGER_OPTION.toScale.test}
+        >
+          <div> Expertis</div>
+          <div className="timeLine" style={{ display: 'inline-block' }}>
+            e
+          </div>
+          <div>sfkdfbvnxvckjxkhkjjxvckjj</div>
+        </ScrollTriggerArea>
+      </div>
 
       <p> Tab 컴포넌트의 타입 article </p>
-      <Tab type="article" tabList={worksList.sort} />
+      <Tab type="article" tabList={worksList.sort}>
+        <div>Tab 컨텐츠 1</div>
+        <div>Tab 컨텐츠 2</div>
+        <div>Tab 컨텐츠 3</div>
+      </Tab>
 
-      {/*
+      <p> Tab 컴포넌트의 타입 sortList </p>
+      <Tab type="sortList" data={worksList} tabList={worksList.sort} />
 
-      <LottieTest />
-
-
-      <p> 탭 - link </p>
-      <Tab type="link" tabList={LINK_BTN_LIST} />
-
-      <p> 탭 - sortList </p>
-      <Tab type="sortList" tabList={SORT_BTN_LIST} />
- */}
-      {/*  */}
+      {/*<LottieTest />*/}
     </>
   );
 }
