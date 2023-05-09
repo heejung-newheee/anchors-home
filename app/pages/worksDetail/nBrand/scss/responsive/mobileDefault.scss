@@ -1,0 +1,40 @@
+.custom_area {
+  .nbrand_video {
+    margin-bottom: 6rem;
+  }
+  .nbrand_main_wrap {
+    padding-bottom: 6rem;
+    .main_text_wrap {
+      @extend %layout_fix;
+      margin-bottom: 5rem;
+    }
+
+    .main_img_wrap {
+      @extend %layout_fix;
+      .main_img {
+        margin-bottom: 2rem;
+
+        &:last-child {
+          margin-bottom: 5rem;
+        }
+      }
+    }
+  }
+  .nbrand_sub_wrap {
+    @extend %layout_fix;
+    padding-bottom: 6.1rem;
+
+    .custom_description {
+      margin-bottom: 5rem;
+    }
+    .sub_img_wrap {
+      .sub_img {
+        margin-bottom: 4.1rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

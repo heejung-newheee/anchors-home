@@ -1,0 +1,41 @@
+@include desktop {
+  .custom_area {
+    .nbrand_video {
+      margin: 0 3.2rem 14rem;
+    }
+    .nbrand_main_wrap {
+      padding-bottom: 13.9rem;
+      .main_text_wrap {
+        margin-bottom: 12rem;
+      }
+
+      .main_img_wrap {
+        margin-bottom: 12rem;
+        height: 76rem;
+        max-width: 121.6rem;
+        .main_img {
+          left: 3.2rem;
+          width: 90.7rem;
+
+          &:last-child {
+            top: 36.6rem;
+            right: 3.2rem;
+            width: 70.1rem;
+          }
+        }
+      }
+    }
+    .nbrand_sub_wrap {
+      padding-bottom: 14rem;
+
+      .custom_description {
+        margin-bottom: 12rem;
+      }
+      .sub_img_wrap {
+        .sub_img {
+          margin-bottom: 10rem;
+        }
+      }
+    }
+  }
+}

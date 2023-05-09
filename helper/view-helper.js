@@ -11,5 +11,6 @@ export const pagesIsBgBlack = [
   '/pages/worksDetail/happyMove',
   '/pages/worksDetail/wwn',
   '/pages/worksDetail/wcms',
+  '/pages/worksDetail/nBrand',
 ];
 export const pagesIsBgWhite = [];

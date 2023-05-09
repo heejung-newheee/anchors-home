@@ -1,0 +1,47 @@
+@include tablet {
+  .custom_area {
+    .nbrand_video {
+      margin: 0 2.4rem 10rem;
+    }
+    .nbrand_main_wrap {
+      padding-bottom: 10rem;
+      .main_text_wrap {
+        margin-bottom: 8rem;
+      }
+
+      .main_img_wrap {
+        margin-bottom: 8rem;
+        position: relative;
+        height: 45rem;
+        max-width: 72rem;
+        .main_img {
+          margin-bottom: 0;
+          position: absolute;
+          top: 0;
+          left: 2.4rem;
+          width: 53.7rem;
+
+          &:last-child {
+            margin-bottom: 0;
+            top: 21.7rem;
+            left: unset;
+            right: 2.4rem;
+            width: 41.5rem;
+          }
+        }
+      }
+    }
+    .nbrand_sub_wrap {
+      padding-bottom: 10rem;
+
+      .custom_description {
+        margin-bottom: 8rem;
+      }
+      .sub_img_wrap {
+        .sub_img {
+          margin-bottom: 8rem;
+        }
+      }
+    }
+  }
+}

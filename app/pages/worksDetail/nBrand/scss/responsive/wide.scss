@@ -1,0 +1,42 @@
+@include wide {
+  .custom_area {
+    .nbrand_video {
+      max-width: 144rem;
+      margin: 0 auto 16rem;
+    }
+    .nbrand_main_wrap {
+      padding-bottom: 16rem;
+      .main_text_wrap {
+        margin-bottom: 14rem;
+      }
+
+      .main_img_wrap {
+        margin-bottom: 14rem;
+        max-width: 144rem;
+        height: 90rem;
+        .main_img {
+          left: 4.8rem;
+          width: 107.4rem;
+
+          &:last-child {
+            top: 43.4rem;
+            right: 4.8rem;
+            width: 83rem;
+          }
+        }
+      }
+    }
+    .nbrand_sub_wrap {
+      padding-bottom: 16rem;
+
+      .custom_description {
+        margin-bottom: 14rem;
+      }
+      .sub_img_wrap {
+        .sub_img {
+          margin-bottom: 12rem;
+        }
+      }
+    }
+  }
+}
