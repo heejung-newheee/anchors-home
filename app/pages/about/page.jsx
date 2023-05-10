@@ -6,7 +6,6 @@ import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
-import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import MoreDetail from '@/components/MoreDetail/MoreDetail';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
@@ -19,7 +18,6 @@ import aboutProfile from '/helper/data/json/contents/about/aboutProfile.json';
 import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
 
 import lottie_arrow from '@/public/assets/images/lottie/lottieAboutusUpArrow.json';
-import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 
 import './scss/about.scss';
 
@@ -111,7 +109,7 @@ function About() {
           </DepthTitle>
           <Description
             className="profile_grow_text"
-            data={aboutIntro.introProfile.profileDevelopment}
+            data={aboutProfile.introProfile.profileDevelopment}
           />
           <Description
             className="profile_grow_number"
@@ -143,7 +141,7 @@ function About() {
           <Description
             innerHTMLOption="Y"
             className="profile_award_description"
-            data={aboutIntro.introProfile.profileAward}
+            data={aboutProfile.introProfile.profileAward}
           />
           <img
             className="profile_award_icon"
@@ -169,7 +167,7 @@ function About() {
           </DepthTitle>
           <Description
             innerHTMLOption="Y"
-            data={aboutIntro.introProfile.profilePartner}
+            data={aboutProfile.introProfile.profilePartner}
           />
           <div>
             <InfiniteRolling className="about_partner">
@@ -206,11 +204,11 @@ function About() {
         <div className="about_members_desc">
           <Description
             innerHTMLOption="Y"
-            data={aboutIntro.membersText.textEn}
+            data={aboutMembers.membersText.textEn}
           />
           <Description
             innerHTMLOption="Y"
-            data={aboutIntro.membersText.textKo}
+            data={aboutMembers.membersText.textKo}
           />
         </div>
         {/* S: about members swiper 영역*/}
