@@ -8,7 +8,7 @@ import Logo from '@/components/Logo/Logo';
 import Menu from '@/components/Menu/Menu';
 
 import './scss/Header.scss';
-import { pagesIsBgBlack, pagesIsBgWhite } from '@/helper/view-helper';
+import { pagesIsBgBlack, pagesIsBgWhite } from '@/helper/headerHelper';
 
 /*
 HEADER_NEXT : 상수

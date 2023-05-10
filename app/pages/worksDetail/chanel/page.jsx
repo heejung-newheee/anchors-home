@@ -22,6 +22,7 @@ export default function Chanel() {
         firstNextWork={works.content[1]}
         secondNextWork={works.content[2]}
         thirdNextWork={works.content[3]}
+        webSiteUrl={works.content[3].pageUrl}
       />
     </>
   );
