@@ -9,6 +9,7 @@ import seo from '@/helper/data/json/contents/SEO.json';
 import service from '@/helper/data/json/contents/service/service.json';
 
 import './scss/service.scss';
+import DepthTitle from '@/components/DepthTitle/DepthTitle';
 
 export const metadata = {
   title: seo.title.subPage.service,
@@ -38,7 +39,11 @@ const MULTI_TRIGGER_END = {
 function Service() {
   return (
     <main className="service section_div is_photo">
+      {/* S: PageTitle 영역 */}
       <PageTitle data={headerFooter.menuList[2].name} />
+      {/* E: PageTitle 영역 */}
+
+      {/* S: visual 영역 */}
       <section className="visual_comment">
         <Visual imgUrl="/assets/images/contents/service/img_keyvisual_officewide.jpg" />
         <Description
@@ -48,9 +53,18 @@ function Service() {
         />
         <Description className="ko_comment" data={service.textList.textKo} />
       </section>
+      {/* E: visual 영역 */}
+
+      {/* S: part 영역 */}
       <section className="anchors_part">
+        <DepthTitle depthLevel="1" blindOption="hidden">
+          Anchors Part Introduction
+        </DepthTitle>
         {service.introduction.map((cont, idx) => (
-          <>
+          <article key={idx}>
+            <DepthTitle depthLevel="2" blindOption="hidden">
+              {cont.name + ' part'}
+            </DepthTitle>
             <ScrollTriggerArea
               type="multiTrigger"
               triggerStart={TRIGGER_START}
@@ -58,7 +72,7 @@ function Service() {
               triggerOffset={'center'}
               defaultID={`scrollTriggerArea_0${idx}`}
             >
-              <span className="part_img" key={`part_img${idx}`}>
+              <article className="part_img" key={`part_img${idx}`}>
                 <ScrollTriggerArea
                   type="multiTrigger"
                   triggerStart={MULTI_TRIGGER_START}
@@ -77,7 +91,7 @@ function Service() {
                 >
                   <img src={service.imgUrl + cont.img} alt={cont.alt} />
                 </ScrollTriggerArea>
-              </span>
+              </article>
             </ScrollTriggerArea>
             <article
               className="part_introduction_wrap"
@@ -104,9 +118,10 @@ function Service() {
                 }
               />
             </article>
-          </>
+          </article>
         ))}
       </section>
+      {/* E: part 영역 */}
     </main>
   );
 }
