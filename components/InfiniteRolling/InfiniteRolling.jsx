@@ -10,10 +10,9 @@ export default function InfiniteRolling({
   duration = '40',
 }) {
   const REVERSE_CLASS = reverse === 'Y' ? ' reverse' : '';
-  const GET_CLASSNAME =
-    className == undefined
-      ? { className: 'InfiniteRolling' + REVERSE_CLASS }
-      : { className: 'InfiniteRolling ' + className + REVERSE_CLASS };
+  const GET_CLASSNAME = !className
+    ? { className: 'InfiniteRolling' + REVERSE_CLASS }
+    : { className: 'InfiniteRolling ' + className + REVERSE_CLASS };
 
   const CHILD_ARR = Array.isArray(children) ? children : [children];
 

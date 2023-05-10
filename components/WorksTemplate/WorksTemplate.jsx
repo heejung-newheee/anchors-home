@@ -26,13 +26,12 @@ export default function WorksTemplate({
   secondNextWork,
   thirdNextWork,
   custom = 'N',
-  webSiteUrl = '',
+  webSiteUrl,
 }) {
   const HAS_CUSTOM = custom === 'Y' ? ' custom' : '';
-  const GET_CLASSNAME =
-    className == undefined
-      ? { className: 'works_template' + HAS_CUSTOM }
-      : { className: 'works_template ' + className + HAS_CUSTOM };
+  const GET_CLASSNAME = !className
+    ? { className: 'works_template' + HAS_CUSTOM }
+    : { className: 'works_template ' + className + HAS_CUSTOM };
 
   const [hideClass, setHideClass] = useState('');
   const HandleScroll = () => {
@@ -165,7 +164,7 @@ export default function WorksTemplate({
       </section>
 
       {/* S: View Website Button 영역 */}
-      {webSiteUrl != '' && (
+      {!!webSiteUrl && (
         <Btn
           className={`view_website_btn${hideClass}`}
           type="a"

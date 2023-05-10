@@ -8,21 +8,20 @@ import './scss/BaseArticle.scss';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 
 export default function BaseArticle({
-  imgUrl = '',
-  imgAlt = '',
-  elementTitle = '',
-  description = '',
-  disclaimer = '',
+  imgUrl,
+  imgAlt,
+  elementTitle,
+  description,
+  disclaimer,
   className,
   innerHTMLOption = 'N',
 }) {
-  const GET_CLASSNAME =
-    className == undefined
-      ? { className: 'base_article' }
-      : { className: 'base_article ' + className };
+  const GET_CLASSNAME = !className
+    ? { className: 'base_article' }
+    : { className: 'base_article ' + className };
   return (
     <article {...GET_CLASSNAME}>
-      {imgUrl != '' && (
+      {!!imgUrl && (
         <span className="base_article_img_box">
           <ScrollTriggerArea
             type="multiTrigger"
@@ -46,13 +45,13 @@ export default function BaseArticle({
           </ScrollTriggerArea>
         </span>
       )}
-      {elementTitle != '' && (
+      {!!elementTitle && (
         <ElementTitle data={elementTitle} innerHTMLOption={innerHTMLOption} />
       )}
-      {description != '' && (
+      {!!description && (
         <Description data={description} innerHTMLOption={innerHTMLOption} />
       )}
-      {disclaimer != '' && (
+      {!!disclaimer && (
         <Disclaimer data={disclaimer} innerHTMLOption={innerHTMLOption} />
       )}
     </article>

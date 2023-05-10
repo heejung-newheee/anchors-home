@@ -11,10 +11,9 @@ export default function Video({ videoUrl, className }) {
     document.querySelector('video').classList.add('on');
     document.querySelector('button.video_btn').classList.add('hide');
   };
-  const GET_CLASSNAME =
-    className == undefined
-      ? { className: 'video' }
-      : { className: 'video ' + className };
+  const GET_CLASSNAME = !className
+    ? { className: 'video' }
+    : { className: 'video ' + className };
   return (
     <div {...GET_CLASSNAME}>
       <video src={videoUrl} controls />

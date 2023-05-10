@@ -6,10 +6,9 @@ export default function ElementTitle({
   className,
   innerHTMLOption = 'N',
 }) {
-  const GET_CLASSNAME =
-    className == undefined
-      ? { className: 'element_title' }
-      : { className: 'element_title ' + className };
+  const GET_CLASSNAME = !className
+    ? { className: 'element_title' }
+    : { className: 'element_title ' + className };
   return innerHTMLOption === 'Y' ? (
     <strong dangerouslySetInnerHTML={{ __html: data }} {...GET_CLASSNAME} />
   ) : (

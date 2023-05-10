@@ -73,10 +73,9 @@ export default function Header({ className }) {
     setHeaderBgType(CL);
   }, [CL, LOCATION]);
 
-  const GET_CLASSNAME =
-    className == undefined
-      ? { className: 'header ' + headerBgType }
-      : { className: 'header ' + className + ' ' + headerBgType };
+  const GET_CLASSNAME = !className
+    ? { className: 'header ' + headerBgType }
+    : { className: 'header ' + className + ' ' + headerBgType };
 
   return (
     <header {...GET_CLASSNAME}>

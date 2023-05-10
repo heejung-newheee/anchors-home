@@ -86,15 +86,13 @@ function SwiperArea({
     );
   }, []);
 
-  const GET_CLASSNAME1st =
-    firstClassName == undefined
-      ? { className: 'swiper_area' }
-      : { className: 'swiper_area ' + firstClassName };
+  const GET_CLASSNAME1st = !firstClassName
+    ? { className: 'swiper_area' }
+    : { className: 'swiper_area ' + firstClassName };
 
-  const GET_CLASSNAME2st =
-    secondClassName == undefined
-      ? { className: 'swiper_area' }
-      : { className: 'swiper_area ' + secondClassName };
+  const GET_CLASSNAME2st = !secondClassName
+    ? { className: 'swiper_area' }
+    : { className: 'swiper_area ' + secondClassName };
 
   const FIRST_SWIPER_ARR = Array.isArray(firstContent)
     ? firstContent
@@ -147,10 +145,9 @@ function SwiperArea({
     );
   }
 
-  const GET_CLASSNAME =
-    className == undefined
-      ? { className: 'swiper_area' }
-      : { className: 'swiper_area ' + className };
+  const GET_CLASSNAME = !className
+    ? { className: 'swiper_area' }
+    : { className: 'swiper_area ' + className };
 
   const SINGLE_SWIPER_ARR = Array.isArray(swiperContent)
     ? swiperContent
