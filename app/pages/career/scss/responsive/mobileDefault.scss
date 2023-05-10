@@ -259,11 +259,12 @@
         flex-wrap: wrap;
         justify-content: center;
         .process_number_wrap{
-          margin: 0 auto;
+          min-width: 26.8rem;
           width: 26.8rem;
           height: 100%;
           display: flex;
           flex-wrap: wrap;
+          justify-content: center;
           margin-bottom: 4.3rem;
           .process_number{
             display: flex;
@@ -336,9 +337,12 @@
               @extend %font_baseArticleTitle;
               font-weight: 700;
               margin-bottom: 0.8rem;
-              &:first-child{
+              &:nth-of-type(1){
                 width: 2.5rem;
                 margin-right: 0.8rem;
+              }
+              &:nth-of-type(2){
+                margin-right: 1.5rem;
               }
             }
             .description{

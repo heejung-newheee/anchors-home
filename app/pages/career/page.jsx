@@ -59,7 +59,9 @@ function Career() {
 
       {/* S: swiper_members 영역 */}
       <section className="swiper_members">
-        <DepthTitle blindOption="hidden" depthLevel="2" data="members_area" />
+        <DepthTitle blindOption="hidden" depthLevel="1">
+          Member Introduction
+        </DepthTitle>
         <SwiperArea
           type="double"
           firstContent={careerMembers.members.map((img, idx) => (
@@ -88,7 +90,9 @@ function Career() {
 
       {/* S: swiper_comment 영역 */}
       <section className="swiper_comment">
-        <DepthTitle blindOption="hidden" depthLevel="2" data="comment_area" />
+        <DepthTitle blindOption="hidden" depthLevel="1">
+          Our Philosophy
+        </DepthTitle>
         <Description
           className="swiper_comment_text"
           innerHTMLOption="Y"
@@ -148,7 +152,9 @@ function Career() {
 
       {/* S: welfare 영역 */}
       <section className="welfare">
-        <DepthTitle blindOption="hidden" depthLevel="2" data="welfare_area" />
+        <DepthTitle blindOption="hidden" depthLevel="1">
+          Welfare List
+        </DepthTitle>
         <Description
           className="welfare_text"
           innerHTMLOption="Y"
@@ -179,11 +185,9 @@ function Career() {
 
       {/* S: 채용 tab 영역 */}
       <section className="employment_area">
-        <DepthTitle
-          blindOption="hidden"
-          depthLevel="2"
-          data="employment_area"
-        />
+        <DepthTitle blindOption="hidden" depthLevel="1">
+          How to join Anchors
+        </DepthTitle>
         <Description
           className="employment_text"
           data={careerText.textList[0].employmentText}
