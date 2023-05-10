@@ -144,9 +144,12 @@
       }
     }
     .tab{
+      max-width: 1536px;
+      margin: 0 auto;
       .tab_btn_wrap{
         width: 15.9rem;
         height: 9.6rem;
+        margin-left: 8.1rem;
         flex-wrap: wrap;
         flex-shrink: 0;
         .tab-button{
@@ -160,14 +163,16 @@
         }
       }
       .tab_content_wrap {
+        margin-left: 9.2rem;
         .process_tab{
+          width: 107.4rem;
           .process_number_wrap{
             width: 108rem;
             height: 100%;
             margin-bottom: 6rem;
             .process_number{
-              width: 27rem;
-              height: 27rem;
+              width: 25rem;
+              height: 25rem;
               &:last-child{
               }
               &:nth-child(1){

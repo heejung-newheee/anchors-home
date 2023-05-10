@@ -51,11 +51,8 @@ function Career() {
 
       {/* S: 비주얼 이미지 아래 텍스트 */}
       <div className="career_text">
-        <Description
-          innerHTMLOption="Y"
-          data={careerText.textList[0].text_en}
-        />
-        <Description data={careerText.textList[0].text_ko} />
+        <Description innerHTMLOption="Y" data={careerText.textList[0].textEn} />
+        <Description data={careerText.textList[0].textKo} />
       </div>
       {/* E: 비주얼 이미지 아래 텍스트 */}
 
@@ -92,7 +89,7 @@ function Career() {
         <Description
           className="swiper_comment_text"
           innerHTMLOption="Y"
-          data={careerText.textList[0].comment_text}
+          data={careerText.textList[0].commentText}
         />
         <SwiperArea
           type="single"
@@ -142,7 +139,7 @@ function Career() {
       {/* S: welfare 영역 */}
       <section className="welfare">
         <Description
-          className="welfare_text"
+          className="welfareText"
           innerHTMLOption="Y"
           data={careerText.textList[0].welfare_text}
         />
@@ -173,44 +170,9 @@ function Career() {
       <section className="employment_area">
         <Description
           className="employment_text"
-          data={careerText.textList[0].employment_text}
+          data={careerText.textList[0].employmentText}
         />
-        {/*  <article className="process_tab">*/}
-        {/*    <div className="process_number_wrap">*/}
-        {/*      {careerProcess.process.map((data, idx) => (*/}
-        {/*        <div key={idx} className="process_number">*/}
-        {/*          <Description data={data.number} />*/}
-        {/*          <Description data={data.text} />*/}
-        {/*        </div>*/}
-        {/*      ))}*/}
-        {/*    </div>*/}
-        {/*    <div className="process_description">*/}
-        {/*      <Description data={careerProcess.description[0].text1} />*/}
-        {/*      <Description data={careerProcess.description[0].text2} />*/}
-        {/*    </div>*/}
-        {/*    <div className="process_detail_description">*/}
-        {/*      {careerProcess.detail_description.map((data, idx) => (*/}
-        {/*        <div key={idx} className="detail_description_list">*/}
-        {/*          <Description data={data.number} />*/}
-        {/*          <Description data={data.title} />*/}
-        {/*          <Disclaimer data={data.text} />*/}
-        {/*        </div>*/}
-        {/*      ))}*/}
-        {/*    </div>*/}
-        {/*  </article>*/}
-        {/*  <article className="faq_tab">*/}
-        {/*    <Accordion*/}
-        {/*      contents={careerFaq.content.map((data, idx) => ({*/}
-        {/*        key: idx,*/}
-        {/*        title: data.title,*/}
-        {/*        content: data.text,*/}
-        {/*      }))}*/}
-        {/*    />*/}
-        {/*  </article>*/}
       </section>
-      {/* E: 채용 tab 영역 */}
-
-      {/* S: 채용 tab 영역 테스트 */}
 
       <Tab type="article" tabList={careerEmployment.title}>
         <article className="process_tab">
@@ -246,8 +208,7 @@ function Career() {
           />
         </article>
       </Tab>
-
-      {/* E: 채용 tab 영역 테스트 */}
+      {/* E: 채용 tab 영역*/}
     </main>
   );
 }
