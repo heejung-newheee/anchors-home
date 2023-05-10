@@ -1,11 +1,6 @@
 .about {
   .visual {
-    width: 100%;
     height: 27rem;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
   }
   .about_intro_text_wrap {
     padding-top: 6rem;
@@ -240,8 +235,8 @@
     }
   }
   .about_members {
-    background-color: $color_white;
     .about_members_desc {
+      @extend %layout_fix;
       max-width: 1536px;
       margin: 0 auto;
       .description {
