@@ -1,5 +1,6 @@
 import Accordion from '@/components/Accordion/Accordion';
 import BaseArticle from '@/components/BaseArticle/BaseArticle';
+import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
@@ -58,6 +59,7 @@ function Career() {
 
       {/* S: swiper_members 영역 */}
       <section className="swiper_members">
+        <DepthTitle blindOption="hidden" depthLevel="2" data="members_area" />
         <SwiperArea
           type="double"
           firstContent={careerMembers.members.map((img, idx) => (
@@ -66,12 +68,12 @@ function Career() {
             </div>
           ))}
           secondContent={careerMembers.members.map((txt, idx) => (
-            <div key={idx}>
-              <ElementTitle data={txt.name} />
-              <Disclaimer data={txt.part} />
-              <Description data={txt.text[0]} />
-              <Description data={txt.text[1]} />
-            </div>
+            <>
+              <ElementTitle key={`title${idx}`} data={txt.name} />
+              <Disclaimer key={`part${idx}`} data={txt.part} />
+              <Description key={`text1_${idx}`} data={txt.text[0]} />
+              <Description key={`text2_${idx}`} data={txt.text[1]} />
+            </>
           ))}
           firstSwiperOption={{
             effect: 'cards',
@@ -86,6 +88,7 @@ function Career() {
 
       {/* S: swiper_comment 영역 */}
       <section className="swiper_comment">
+        <DepthTitle blindOption="hidden" depthLevel="2" data="comment_area" />
         <Description
           className="swiper_comment_text"
           innerHTMLOption="Y"
@@ -99,18 +102,25 @@ function Career() {
             ...careerComment.content,
           ].map((cont, idx) => (
             <div key={idx}>
-              <Visual imgUrl={careerComment.imgUrl + cont.img} />
-              <MoreDetail
-                children={
-                  <>
-                    <Description
-                      innerHTMLOption="Y"
-                      data={cont.highlightText}
-                    />
-                    <Disclaimer data={cont.text} />
-                  </>
-                }
-              />
+              <>
+                {/*<Visual*/}
+                {/*  key={`visual${idx}`}*/}
+                {/*  imgUrl={careerComment.imgUrl + cont.img}*/}
+                {/*/>*/}
+                <MoreDetail
+                  key={`detail${idx}`}
+                  imgUrl={careerComment.imgUrl + cont.img}
+                  children={
+                    <>
+                      <Description
+                        innerHTMLOption="Y"
+                        data={cont.highlightText}
+                      />
+                      <Disclaimer data={cont.text} />
+                    </>
+                  }
+                />
+              </>
             </div>
           ))}
           swiperOption={{
@@ -138,10 +148,11 @@ function Career() {
 
       {/* S: welfare 영역 */}
       <section className="welfare">
+        <DepthTitle blindOption="hidden" depthLevel="2" data="welfare_area" />
         <Description
-          className="welfareText"
+          className="welfare_text"
           innerHTMLOption="Y"
-          data={careerText.textList[0].welfare_text}
+          data={careerText.textList[0].welfareText}
         />
         <article className="welfare_list">
           {careerWelfare.content.map((data, idx) => (
@@ -168,46 +179,50 @@ function Career() {
 
       {/* S: 채용 tab 영역 */}
       <section className="employment_area">
+        <DepthTitle
+          blindOption="hidden"
+          depthLevel="2"
+          data="employment_area"
+        />
         <Description
           className="employment_text"
           data={careerText.textList[0].employmentText}
         />
+        <Tab type="article" tabList={careerEmployment.title}>
+          <article className="process_tab">
+            <div className="process_number_wrap">
+              {careerProcess.process.map((data, idx) => (
+                <div key={idx} className="process_number">
+                  <Description data={data.number} />
+                  <Description data={data.text} />
+                </div>
+              ))}
+            </div>
+            <div className="process_description">
+              <Description data={careerProcess.description[0].text1} />
+              <Description data={careerProcess.description[0].text2} />
+            </div>
+            <div className="process_detail_description">
+              {careerProcess.detail_description.map((data, idx) => (
+                <div key={idx} className="detail_description_list">
+                  <ElementTitle data={data.number} />
+                  <ElementTitle data={data.title} />
+                  <Description data={data.text} />
+                </div>
+              ))}
+            </div>
+          </article>
+          <article className="faq_tab">
+            <Accordion
+              contents={careerFaq.content.map((data, idx) => ({
+                key: idx,
+                title: data.title,
+                content: data.text,
+              }))}
+            />
+          </article>
+        </Tab>
       </section>
-
-      <Tab type="article" tabList={careerEmployment.title}>
-        <article className="process_tab">
-          <div className="process_number_wrap">
-            {careerProcess.process.map((data, idx) => (
-              <div key={idx} className="process_number">
-                <Description data={data.number} />
-                <Description data={data.text} />
-              </div>
-            ))}
-          </div>
-          <div className="process_description">
-            <Description data={careerProcess.description[0].text1} />
-            <Description data={careerProcess.description[0].text2} />
-          </div>
-          <div className="process_detail_description">
-            {careerProcess.detail_description.map((data, idx) => (
-              <div key={idx} className="detail_description_list">
-                <Description data={data.number} />
-                <Description data={data.title} />
-                <Disclaimer data={data.text} />
-              </div>
-            ))}
-          </div>
-        </article>
-        <article className="faq_tab">
-          <Accordion
-            contents={careerFaq.content.map((data, idx) => ({
-              key: idx,
-              title: data.title,
-              content: data.text,
-            }))}
-          />
-        </article>
-      </Tab>
       {/* E: 채용 tab 영역*/}
     </main>
   );
