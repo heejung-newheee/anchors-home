@@ -2,7 +2,7 @@ import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import seo from '@/helper/data/json/contents/SEO.json';
 import works from '@/helper/data/json/contents/works/works.json';
 
-import './chanel.scss';
+import './scss/chanel.scss';
 
 export const metadata = {
   title: seo.title.subPage.detail.chanel + ' : ' + seo.title.subPage.works,

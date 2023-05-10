@@ -77,9 +77,9 @@
           transform: translate(-50%, 4rem);
         }
         .swiper-slide{
-          .visual{
-            height: 56vw;
-          }
+          //.visual{
+          //  height: 56vw;
+          //}
           .detail_slide{
             .detail_btn{
               bottom: 3.6rem;
@@ -179,101 +179,101 @@
     .employment_area{
       .employment_text{
       }
-    }
-    .tab_btn_wrap{
-      padding-bottom: 6rem;
-      width: 28.5rem;
-      .tab-button{
-        span{
+      .tab_btn_wrap{
+        padding-bottom: 6rem;
+        width: 28.5rem;
+        .tab-button{
+          span{
+          }
+        }
+        .isActive{
+          span{
+          }
         }
       }
-      .isActive{
-        span{
-        }
-      }
-    }
-    .tab_content_wrap{
-      .process_tab{
-        .process_number_wrap{
-          width: 66.2rem;
-          justify-content: space-between;
-          padding: 0 2.9rem;
-          margin-bottom: 3.6rem;
-          .process_number{
-            width: 16rem;
-            height: 16rem;
-            &:nth-child(1){
-              transform: translateX(0);
-            }
-            &:nth-child(2){
-              transform: translateX(-15%);
-            }
-            &:nth-child(3){
-              transform: translate(-30%,0);
-            }
-            &:nth-child(4){
-              transform: translate(0,0);
-              position: relative;
-              &::before{
-                position: absolute;
-                top: 50%;
-                left: -2.5rem;
-                transform: translateX(-50%);
-                content:"";
-                width: 2.4rem;
-                height: 2.4rem;
-                background: url("/assets/images/ico/ico_arrow_next_black.svg");
-                background-size: cover;
+      .tab_content_wrap{
+        .process_tab{
+          .process_number_wrap{
+            width: 66.2rem;
+            justify-content: space-between;
+            padding: 0 2.9rem;
+            margin-bottom: 3.6rem;
+            .process_number{
+              width: 15rem;
+              height: 15rem;
+              &:nth-child(1){
+                transform: translateX(0);
+              }
+              &:nth-child(2){
+                transform: translateX(-15%);
+              }
+              &:nth-child(3){
+                transform: translate(-30%,0);
+              }
+              &:nth-child(4){
+                transform: translate(0,0);
+                position: relative;
+                &::before{
+                  position: absolute;
+                  top: 50%;
+                  left: -2.5rem;
+                  transform: translateX(-50%);
+                  content:"";
+                  width: 2.4rem;
+                  height: 2.4rem;
+                  background: url("/assets/images/ico/ico_arrow_next_black.svg");
+                  background-size: cover;
+                }
+              }
+              p{
+                font-size: 1.8rem;
+                &:first-child{
+                  font-size: 1.6rem;
+                  font-weight: 400;
+                  padding-bottom: 1.4rem;
+                }
               }
             }
+          }
+          .process_description{
+            width: 100%;
+            padding-left: 2.9rem;
             p{
-              font-size: 1.8rem;
+              &::before{
+              }
+            }
+          }
+          .process_detail_description{
+            width: 100%;
+            margin-bottom: 12rem;
+            .detail_description_list{
+              display: flex;
+              vertical-align: middle;
+              padding: 3rem 0;
+              flex-wrap: nowrap;
               &:first-child{
-                font-size: 1.6rem;
-                font-weight: 400;
-                padding-bottom: 1.4rem;
+              }
+              .element_title{
+                margin-bottom: 0;
+                width: 45%;
+                display: flex;
+                align-items: center;
+                &:first-child{
+                  width: 3.1rem;
+                  margin-right: 2.6rem;
+                }
+              }
+              .description{
+                display: flex;
+                align-items: center;
+                width: 55%;
               }
             }
           }
         }
-        .process_description{
-          width: 100%;
-          padding-left: 2.9rem;
-          p{
-            &::before{
-            }
-          }
-        }
-        .process_detail_description{
-          width: 100%;
+        .faq_tab{
           margin-bottom: 12rem;
-          .detail_description_list{
-            display: flex;
-            vertical-align: middle;
-            padding: 3rem 0;
-            flex-wrap: nowrap;
-            &:first-child{
-            }
-            .description{
-              margin-bottom: 0;
-              width: 45%;
-              display: flex;
-              align-items: center;
-              &:first-child{
-                width: 3.1rem;
-                margin-right: 2.6rem;
-              }
-            }
-            .disclaimer{
-              display: flex;
-              align-items: center;
-              width: 55%;
-            }
-          }
         }
-      }
-      .faq_tab{
-        margin-bottom: 12rem;
       }
     }
   }

@@ -5,7 +5,7 @@ import ImageArray from '@/components/ImageArray/ImageArray';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import works from '@/helper/data/json/contents/works/works.json';
 
-import './koreanAirKALPOS.scss';
+import './scss/koreanAirKALPOS.scss';
 import seo from '@/helper/data/json/contents/SEO.json';
 
 export const metadata = {

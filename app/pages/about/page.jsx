@@ -5,6 +5,7 @@ import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
+import ElementTitle from '@/components/ElementTitle/ElementTitle';
 import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
 import MoreDetail from '@/components/MoreDetail/MoreDetail';
 import PageTitle from '@/components/PageTitle/PageTitle';
@@ -57,14 +58,14 @@ function About() {
       {/* E: Key Visual 영역*/}
 
       {/* S: Description 영역*/}
-      <div className="about_intro_text_wrap section_div is_photo">
+      <section className="about_intro_text_wrap section_div is_photo">
         <Description innerHTMLOption="Y" data={aboutIntro.introText.textEn} />
-        <Description data={aboutIntro.introText.textKo} />
-      </div>
+        <Description innerHTMLOption="Y" data={aboutIntro.introText.textKo} />
+      </section>
       {/* E: Description 영역*/}
 
       {/* S: about intro swiper 영역*/}
-      <div className="about_intro_swiper section_div is_photo">
+      <section className="about_intro_swiper section_div is_photo">
         <DepthTitle depthLevel="1" blindOption="hidden">
           Anchors Intro Swiper
         </DepthTitle>
@@ -74,16 +75,22 @@ function About() {
           firstClassName="image_swiper"
           secondClassName="text_swiper"
           firstContent={aboutIntro.introduction.map((cont, idx) => (
-            <img
-              key={`sw01-img-${idx}`}
-              src={aboutIntro.imgUrl + cont.img}
-              alt={cont.alt}
-            />
+            <span>
+              <img
+                key={`sw01-img-${idx}`}
+                src={aboutIntro.imgUrl + cont.img}
+                alt={cont.alt}
+              />
+            </span>
           ))}
           secondContent={aboutIntro.introduction.map((cont, idx) => (
             <div className="intro_text" key={`sw01-div-${idx}`}>
-              <pre>{cont.highlightText}</pre>
-              <p>{cont.text}</p>
+              <ElementTitle
+                className="intro_title"
+                innerHTMLOption="Y"
+                data={cont.highlightText}
+              />
+              <Disclaimer className="intro_disclaimer" data={cont.text} />
             </div>
           ))}
           firstSwiperOption={{
@@ -95,15 +102,15 @@ function About() {
             spaceBetween: 24,
           }}
         />
-      </div>
+      </section>
       {/* E: about intro swiper 영역*/}
 
       {/* S: anchors profile 영역*/}
-      <div className="anchors_profile section_div is_black">
+      <section className="anchors_profile section_div is_black">
         <DepthTitle depthLevel="1" blindOption="visible">
           Anchors Profile
         </DepthTitle>
-        <div className="profile_development">
+        <section className="profile_development">
           <DepthTitle depthLevel="2" blindOption="hidden">
             Anchors Profile Development
           </DepthTitle>
@@ -133,8 +140,8 @@ function About() {
             triggerStart={TRIGGER_START}
             triggerEnd={TRIGGER_END}
           />
-        </div>
-        <div className="profile_award">
+        </section>
+        <section className="profile_award">
           <DepthTitle depthLevel="2" blindOption="hidden">
             Anchors Profile Award
           </DepthTitle>
@@ -143,12 +150,13 @@ function About() {
             className="profile_award_description"
             data={aboutProfile.introProfile.profileAward}
           />
-          <img
-            className="profile_award_icon"
-            src="/assets/images/ico/ico_webaward.svg"
-            alt="web award icon image"
-          />
-          <div>
+          <span className="profile_award_icon">
+            <img
+              src="/assets/images/ico/ico_webaward.svg"
+              alt="web award icon image"
+            />
+          </span>
+          <section>
             <BaseArticle
               className="profile_award_list"
               elementTitle={aboutProfile.award[0].name}
@@ -159,9 +167,9 @@ function About() {
               elementTitle={aboutProfile.award[1].name}
               description={aboutProfile.award[1].description}
             />
-          </div>
-        </div>
-        <div className="profile_partner">
+          </section>
+        </section>
+        <section className="profile_partner">
           <DepthTitle depthLevel="2" blindOption="hidden">
             Anchors Profile Partner
           </DepthTitle>
@@ -169,39 +177,43 @@ function About() {
             innerHTMLOption="Y"
             data={aboutProfile.introProfile.profilePartner}
           />
-          <div>
+          <article>
             <InfiniteRolling className="about_partner">
               {aboutProfile.customerLogo.map((cont, idx) => (
-                <img
-                  key={idx}
-                  src={aboutProfile.imgUrl + cont.img}
-                  alt={cont.alt}
-                />
+                <span>
+                  <img
+                    key={idx}
+                    src={aboutProfile.imgUrl + cont.img}
+                    alt={cont.alt}
+                  />
+                </span>
               ))}
             </InfiniteRolling>
             <InfiniteRolling className="about_partner" reverse="Y">
               {aboutProfile.customerLogo.map((cont, idx) => (
-                <img
-                  key={idx}
-                  src={aboutProfile.imgUrl + cont.img}
-                  alt={cont.alt}
-                />
+                <span>
+                  <img
+                    key={idx}
+                    src={aboutProfile.imgUrl + cont.img}
+                    alt={cont.alt}
+                  />
+                </span>
               ))}
             </InfiniteRolling>
-          </div>
+          </article>
           <Disclaimer data={<>Want to know about us</>} />
           <Btn className="download_btn" type="a">
             Download
             <br />
             Profiles
           </Btn>
-        </div>
-      </div>
+        </section>
+      </section>
       {/* E: anchors profile 영역*/}
 
-      <div className="about_members section_div is_photo">
+      <section className="about_members section_div is_photo">
         <Visual imgUrl="/assets/images/contents/about/img_visual_members.jpg" />
-        <div className="about_members_desc">
+        <section className="about_members_desc">
           <Description
             innerHTMLOption="Y"
             data={aboutMembers.membersText.textEn}
@@ -210,7 +222,7 @@ function About() {
             innerHTMLOption="Y"
             data={aboutMembers.membersText.textKo}
           />
-        </div>
+        </section>
         {/* S: about members swiper 영역*/}
         <DepthTitle depthLevel="1" blindOption="hidden">
           Anchors Intro Swiper
@@ -236,24 +248,28 @@ function About() {
           }}
           className="about_members_swiper scroll-linear"
           swiperContent={aboutMembers.members.map((cont, idx) => (
-            <div key={`sw04-${idx}`}>
-              <p className="member_name_en">{cont.nameEn}</p>
+            <article key={`sw04-${idx}`}>
+              <ElementTitle data={cont.nameEn} className="member_name_en" />
               <MoreDetail
                 imgUrl={aboutMembers.imgUrl + cont.img}
                 imgAlt={cont.alt}
                 children={
-                  <div>
-                    <b>{cont.nameKo}</b>
-                    <p className="member_team">{cont.part}</p>
-                    <pre className="member_hashtag">{cont.hashtag}</pre>
-                  </div>
+                  <article>
+                    <ElementTitle data={cont.nameKo} />
+                    <Description className="member_team" data={cont.part} />
+                    <Description
+                      innerHTMLOption="Y"
+                      className="member_hashtag"
+                      data={cont.hashtag}
+                    />
+                  </article>
                 }
               />
-            </div>
+            </article>
           ))}
         />
         {/* E: about members swiper 영역*/}
-      </div>
+      </section>
     </main>
   );
 }
