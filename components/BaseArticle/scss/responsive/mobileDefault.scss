@@ -1,3 +1,10 @@
 .base_article {
   .element_title { @extend %font_baseArticleTitle; }
+  .base_article_img_box {
+    display: inline-block;
+    overflow: hidden;
+    img {
+      display: inline-block;
+    }
+  }
 }

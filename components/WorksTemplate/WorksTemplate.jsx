@@ -34,20 +34,6 @@ export default function WorksTemplate({
       ? { className: 'works_template' + HAS_CUSTOM }
       : { className: 'works_template ' + className + HAS_CUSTOM };
 
-  const TRIGGER_START = {
-    mobile: '1848px',
-    table: '2338px',
-    desktop: '2498px',
-    wide: '2800px',
-  };
-
-  const TRIGGER_END = {
-    mobile: '2000px',
-    table: '4000px',
-    desktop: '4000px',
-    wide: '4500px',
-  };
-
   const [hideClass, setHideClass] = useState('');
   const HandleScroll = () => {
     const VIEWPORT_HEIGHT = window.innerHeight;
@@ -62,7 +48,6 @@ export default function WorksTemplate({
     SCROLL_TOP < ENVENT_OFFSET ? setHideClass('') : setHideClass(' hide');
   };
   useEffect(() => {
-    // resetColorType();
     window.addEventListener('scroll', HandleScroll);
     return () => {
       window.removeEventListener('scroll', HandleScroll);
