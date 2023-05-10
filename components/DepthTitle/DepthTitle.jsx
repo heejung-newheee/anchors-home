@@ -9,10 +9,9 @@ export default function DepthTitle({
   className,
 }) {
   const BLIND_OPTIOIN = blindOption === 'visible' ? 'visible' : 'hidden';
-  const GET_CLASSNAME =
-    className == undefined
-      ? { className: BLIND_OPTIOIN }
-      : { className: BLIND_OPTIOIN + ' ' + className };
+  const GET_CLASSNAME = !className
+    ? { className: BLIND_OPTIOIN }
+    : { className: BLIND_OPTIOIN + ' ' + className };
   return (
     <>
       {depthLevel === '1' && <h3 {...GET_CLASSNAME}>{children}</h3>}

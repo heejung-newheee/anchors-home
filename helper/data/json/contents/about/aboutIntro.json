@@ -1,20 +1,24 @@
 {
   "imgUrl": "/assets/images/contents/about/",
+  "introText": {
+      "textEn": "Innovative solutions, excellence in execution. We take your <span>technological obstacles</span> and convert them into opportunities for <span>digital growth.</span>",
+      "textKo": "혁신적인 솔루션, 탁월한 실행력. 앵커스는 각 분야의 전문가들이 모여<br/> 기술적 풍랑을 디지털 성장의 기회로 만드는 회사입니다."
+  },
   "introduction" : [
     {
-      "highlightText": "우리는 새로운 항로를\n개척하는 탐험가입니다.",
+      "highlightText": "우리는 새로운 항로를<br/>개척하는 탐험가입니다.",
       "text": "익숙함 속에서 새로움을 찾아 같은 문제도 다르게 보고 생각합니다.",
       "img": "img_intro_card_swiper1.jpg",
       "alt": "인재상 이미지"
     },
     {
-      "highlightText": "우리는 모두가\n능숙한 항해사입니다.",
+      "highlightText": "우리는 모두가<br/>능숙한 항해사입니다.",
       "text": "어떤 풍랑에도 좌초되지 않고 목적지에 무사히 안착할 수 있도록 역할, 범위에 국한하지 않고, 프로젝트 그 자체에 집중하고 협업합니다.",
       "img": "img_intro_card_swiper2.jpg",
       "alt": "인재상 이미지"
     },
     {
-      "highlightText": "우리는 즐거운\n크리에이터입니다.",
+      "highlightText": "우리는 즐거운<br/>크리에이터입니다.",
       "text": "열린 마음과 유연한 태도로 브랜드와 소비자, 그리고 우리의 내일을 더 우아하게 만듭니다.",
       "img": "img_intro_card_swiper3.jpg",
       "alt": "인재상 이미지"

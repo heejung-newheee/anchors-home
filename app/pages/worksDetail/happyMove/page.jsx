@@ -29,6 +29,7 @@ export default function HappyMove() {
         }
         subVisualImgUrl={works.imgUrl + works.content[9].subVisual}
         workContent={works.content[9].projectInfomation}
+        webSiteUrl={works.content[9].websiteUrl}
         firstNextWork={works.content[10]}
         secondNextWork={works.content[11]}
         thirdNextWork={works.content[12]}

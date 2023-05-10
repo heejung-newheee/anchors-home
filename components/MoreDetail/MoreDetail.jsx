@@ -13,16 +13,15 @@ function MoreDetail({ className, imgUrl, imgAlt, children }) {
     MORE_DETAIL_BTN.classList.toggle('on');
     MORE_DETAIL_BTN.nextElementSibling.classList.toggle('on');
   };
-  const GET_CLASSNAME =
-    className == undefined
-      ? { className: 'detail_slide' }
-      : { className: 'detail_slide' + className };
+  const GET_CLASSNAME = !className
+    ? { className: 'detail_slide' }
+    : { className: 'detail_slide' + className };
   return (
-    <div {...GET_CLASSNAME}>
+    <article {...GET_CLASSNAME}>
       <img src={imgUrl} alt={imgAlt} />
       <Btn className="detail_btn" type="button" onClick={SHOW_DETAIL} />
       <div className="detail">{children}</div>
-    </div>
+    </article>
   );
 }
 

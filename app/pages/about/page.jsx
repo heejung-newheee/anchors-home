@@ -5,8 +5,8 @@ import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
+import ElementTitle from '@/components/ElementTitle/ElementTitle';
 import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
-import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import MoreDetail from '@/components/MoreDetail/MoreDetail';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
@@ -19,7 +19,6 @@ import aboutProfile from '/helper/data/json/contents/about/aboutProfile.json';
 import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
 
 import lottie_arrow from '@/public/assets/images/lottie/lottieAboutusUpArrow.json';
-import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 
 import './scss/about.scss';
 
@@ -59,46 +58,39 @@ function About() {
       {/* E: Key Visual 영역*/}
 
       {/* S: Description 영역*/}
-      <div className="about_intro_text_wrap section_div is_photo">
-        <Description
-          data={
-            <>
-              Innovative solutions, excellence in execution. We take your
-              <span> technological obstacles</span> and convert them into
-              opportunities for <span>digital growth.</span>
-            </>
-          }
-        />
-        <Description
-          data={
-            <>
-              혁신적인 솔루션, 탁월한 실행력. 앵커스는 각 분야의 전문가들이 모여
-              <br />
-              기술적 풍랑을 디지털 성장의 기회로 만드는 회사입니다.
-            </>
-          }
-        />
-      </div>
+      <section className="about_intro_text_wrap section_div is_photo">
+        <Description innerHTMLOption="Y" data={aboutIntro.introText.textEn} />
+        <Description innerHTMLOption="Y" data={aboutIntro.introText.textKo} />
+      </section>
       {/* E: Description 영역*/}
 
       {/* S: about intro swiper 영역*/}
-      <div className="about_intro_swiper section_div is_photo">
+      <section className="about_intro_swiper section_div is_photo">
+        <DepthTitle depthLevel="1" blindOption="hidden">
+          Anchors Introduction
+        </DepthTitle>
         <SwiperArea
           key="swiper01"
           type="double"
           firstClassName="image_swiper"
           secondClassName="text_swiper"
           firstContent={aboutIntro.introduction.map((cont, idx) => (
-            <img
-              key={`sw01-img-${idx}`}
-              src={aboutIntro.imgUrl + cont.img}
-              alt={cont.alt}
-            />
+            <span>
+              <img
+                key={`sw01-img-${idx}`}
+                src={aboutIntro.imgUrl + cont.img}
+                alt={cont.alt}
+              />
+            </span>
           ))}
           secondContent={aboutIntro.introduction.map((cont, idx) => (
             <div className="intro_text" key={`sw01-div-${idx}`}>
-              <pre>{cont.highlightText}</pre>
-              <p>{cont.text}</p>
+              <ElementTitle
+                className="intro_title"
+                innerHTMLOption="Y"
+                data={cont.highlightText}
+              />
+              <Disclaimer className="intro_disclaimer" data={cont.text} />
             </div>
           ))}
           firstSwiperOption={{
@@ -110,23 +102,21 @@ function About() {
             spaceBetween: 24,
           }}
         />
-      </div>
+      </section>
       {/* E: about intro swiper 영역*/}
 
       {/* S: anchors profile 영역*/}
-      <div className="anchors_profile section_div is_black">
+      <section className="anchors_profile section_div is_black">
         <DepthTitle depthLevel="1" blindOption="visible">
           Anchors Profile
         </DepthTitle>
-        <div className="profile_development">
+        <section className="profile_development">
+          <DepthTitle depthLevel="2" blindOption="hidden">
+            About Anchors Development History
+          </DepthTitle>
           <Description
             className="profile_grow_text"
-            data={
-              <>
-                Anchors is a development company
-                <br /> established in 2018.
-              </>
-            }
+            data={aboutProfile.introProfile.profileDevelopment}
           />
           <Description
             className="profile_grow_number"
@@ -150,23 +140,23 @@ function About() {
             triggerStart={TRIGGER_START}
             triggerEnd={TRIGGER_END}
           />
-        </div>
-        <div className="profile_award">
+        </section>
+        <section className="profile_award">
+          <DepthTitle depthLevel="2" blindOption="hidden">
+            About Anchors Awards List
+          </DepthTitle>
           <Description
+            innerHTMLOption="Y"
             className="profile_award_description"
-            data={
-              <>
-                Anchors have traveled a long road
-                <br /> within a small period.
-              </>
-            }
+            data={aboutProfile.introProfile.profileAward}
           />
-          <img
-            className="profile_award_icon"
-            src="/assets/images/ico/ico_webaward.svg"
-            alt="web award icon image"
-          />
-          <div>
+          <span className="profile_award_icon">
+            <img
+              src="/assets/images/ico/ico_webaward.svg"
+              alt="web award icon image"
+            />
+          </span>
+          <section>
             <BaseArticle
               className="profile_award_list"
               elementTitle={aboutProfile.award[0].name}
@@ -177,72 +167,66 @@ function About() {
               elementTitle={aboutProfile.award[1].name}
               description={aboutProfile.award[1].description}
             />
-          </div>
-        </div>
-        <div className="profile_partner">
+          </section>
+        </section>
+        <section className="profile_partner">
+          <DepthTitle depthLevel="2" blindOption="hidden">
+            About Anchors Partners List
+          </DepthTitle>
           <Description
-            data={
-              <>
-                We've been partnering with
-                <br /> our customers for a long time.
-              </>
-            }
+            innerHTMLOption="Y"
+            data={aboutProfile.introProfile.profilePartner}
           />
-          <div>
+          <article>
             <InfiniteRolling className="about_partner">
               {aboutProfile.customerLogo.map((cont, idx) => (
-                <img
-                  key={idx}
-                  src={aboutProfile.imgUrl + cont.img}
-                  alt={cont.alt}
-                />
+                <span>
+                  <img
+                    key={idx}
+                    src={aboutProfile.imgUrl + cont.img}
+                    alt={cont.alt}
+                  />
+                </span>
               ))}
             </InfiniteRolling>
             <InfiniteRolling className="about_partner" reverse="Y">
               {aboutProfile.customerLogo.map((cont, idx) => (
-                <img
-                  key={idx}
-                  src={aboutProfile.imgUrl + cont.img}
-                  alt={cont.alt}
-                />
+                <span>
+                  <img
+                    key={idx}
+                    src={aboutProfile.imgUrl + cont.img}
+                    alt={cont.alt}
+                  />
+                </span>
               ))}
             </InfiniteRolling>
-          </div>
+          </article>
           <Disclaimer data={<>Want to know about us</>} />
           <Btn className="download_btn" type="a">
             Download
             <br />
             Profiles
           </Btn>
-        </div>
-      </div>
+        </section>
+      </section>
       {/* E: anchors profile 영역*/}
 
-      <div className="about_members section_div is_photo">
+      <section className="about_members section_div is_photo">
         <Visual imgUrl="/assets/images/contents/about/img_visual_members.jpg" />
-        <div className="about_members_desc">
+        <section className="about_members_desc">
           <Description
-            data={
-              <>
-                We work with people <span>challenging and fun</span> to work
-                with than alone.
-                <span>Synergy</span> is a great driving force to sail through
-                any problem ahead.
-              </>
-            }
+            innerHTMLOption="Y"
+            data={aboutMembers.membersText.textEn}
           />
           <Description
-            data={
-              <>
-                우리는 혼자보다 함께 일할 때 더 즐거운 사람들과 일하고 있습니다.
-                <br />
-                신뢰감 있는 동료와 함께 일할 때 나는 시너지는 어떠한 문제도
-                헤쳐나갈 수 있는 가장 큰 원동력입니다.
-              </>
-            }
+            innerHTMLOption="Y"
+            data={aboutMembers.membersText.textKo}
           />
-        </div>
+        </section>
         {/* S: about members swiper 영역*/}
+        <DepthTitle depthLevel="1" blindOption="hidden">
+          About Anchors Members Introduction
+        </DepthTitle>
         <SwiperArea
           key="swiper04"
           type="single"
@@ -264,24 +248,28 @@ function About() {
           }}
           className="about_members_swiper scroll-linear"
           swiperContent={aboutMembers.members.map((cont, idx) => (
-            <div key={`sw04-${idx}`}>
-              <p className="member_name_en">{cont.nameEn}</p>
+            <article key={`sw04-${idx}`}>
+              <ElementTitle data={cont.nameEn} className="member_name_en" />
               <MoreDetail
                 imgUrl={aboutMembers.imgUrl + cont.img}
                 imgAlt={cont.alt}
                 children={
-                  <div>
-                    <b>{cont.nameKo}</b>
-                    <p className="member_team">{cont.part}</p>
-                    <pre className="member_hashtag">{cont.hashtag}</pre>
-                  </div>
+                  <article>
+                    <ElementTitle data={cont.nameKo} />
+                    <Description className="member_team" data={cont.part} />
+                    <Description
+                      innerHTMLOption="Y"
+                      className="member_hashtag"
+                      data={cont.hashtag}
+                    />
+                  </article>
                 }
               />
-            </div>
+            </article>
           ))}
         />
         {/* E: about members swiper 영역*/}
-      </div>
+      </section>
     </main>
   );
 }

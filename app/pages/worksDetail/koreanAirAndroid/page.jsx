@@ -6,7 +6,7 @@ import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import seo from '@/helper/data/json/contents/SEO.json';
 import works from '@/helper/data/json/contents/works/works.json';
 
-import './koreanAirAndroid.scss';
+import './scss/koreanAirAndroid.scss';
 
 export const metadata = {
   title:

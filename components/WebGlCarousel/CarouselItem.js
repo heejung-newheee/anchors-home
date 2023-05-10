@@ -18,7 +18,7 @@ const CarouselItem = ({ index, width, height, item, onHandOver }) => {
     });
 
     onHandOver?.(hover);
-  }, [hover]);
+  }, [hover, onHandOver]);
 
   return (
     <group

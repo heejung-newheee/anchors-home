@@ -52,9 +52,10 @@ export default function WCMS() {
         }
         subVisualImgUrl={works.imgUrl + works.content[6].subVisual}
         workContent={works.content[6].projectInfomation}
-        firstNextWork={works.content[10]}
-        secondNextWork={works.content[11]}
-        thirdNextWork={works.content[12]}
+        webSiteUrl={works.content[6].websiteUrl}
+        firstNextWork={works.content[7]}
+        secondNextWork={works.content[8]}
+        thirdNextWork={works.content[9]}
       />
     </>
   );

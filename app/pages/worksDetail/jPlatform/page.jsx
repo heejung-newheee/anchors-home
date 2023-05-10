@@ -27,6 +27,7 @@ export default function JPlatform() {
         detailTextDescKo={works.content[2].text.ko}
         subVisualImgUrl={works.imgUrl + works.content[2].subVisual}
         workContent={works.content[2].projectInfomation}
+        webSiteUrl={works.content[2].websiteUrl}
         customChildren={
           <>
             <Video videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" />

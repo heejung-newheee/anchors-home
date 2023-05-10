@@ -14,10 +14,9 @@ export default function Device({
   type = 'A',
 }) {
   const TYPE_OPTION = type === 'B' ? ' type_b' : '';
-  const GET_CLASSNAME =
-    className == undefined
-      ? { className: 'device' + TYPE_OPTION }
-      : { className: 'device ' + className + TYPE_OPTION };
+  const GET_CLASSNAME = !className
+    ? { className: 'device' + TYPE_OPTION }
+    : { className: 'device ' + className + TYPE_OPTION };
 
   const DEVICE_DATA = [
     { caption: caption[0], imgUrl: imgUrl[0], alt: alt },

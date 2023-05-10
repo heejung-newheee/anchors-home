@@ -6,7 +6,6 @@
   .visual_comment {
     .visual {
       height: 27rem;
-      margin-bottom: 6rem;
     }
     .description{
       background-color: $color_white;
@@ -14,6 +13,7 @@
       @extend %layout_fix;
       &.en_comment {
         @extend %font_enIntro;
+        padding-top: 6rem;
         letter-spacing: $en_letterSpacing;
         font-family: $font_en;
         margin-bottom: 3rem;
@@ -32,78 +32,74 @@
   .anchors_part {
     background-color: $color_white;
     padding-bottom: 6rem;
-    .container {
-      margin-top: 6rem;
+    padding-top: 6rem;
+    .wrapper {
+      height: 18rem;
+      &.is_active {
+        .part_img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .part_img {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      width: 50%;
+      height: 40%;
+      margin: 0 auto;
+      transition: all .35s ease-in-out;
+      top: 50%;
+      transform: translateY(-50%);
       .wrapper {
-        height: 18rem;
-        &.is_active {
-          .part_img {
-            width: 100%;
-            height: 100%;
-          }
-        }
-      }
-      .part_img {
-        display: block;
-        position: relative;
-        overflow: hidden;
-        width: 50%;
-        height: 40%;
-        margin: 0 auto;
-        transition: all .35s ease-in-out;
+        position: absolute;
         top: 50%;
-        transform: translateY(-50%);
-        .wrapper {
-          position: relative;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-        .img_scroll_wrap {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        height: 18rem;
+      }
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 24rem;
+        object-fit: cover;
+        width: 100vw;
+      }
+    }
+    .part_introduction_wrap {
+      margin-top: 4rem;
+      padding-bottom: 6rem;
+      @extend %layout_fix;
+      .element_title {
+        @extend %font_sectionTitle;
+        line-height: 1;
+        letter-spacing: $en_letterSpacing;
+        margin-bottom: 3rem;
+      }
+      .description {
+        span {
+          @extend %font_primary;
+          font-family: $font_ko;
+          margin-bottom: 1.8rem;
           display: block;
-          height: 18rem;
-          position: relative;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            height: 24rem;
-            object-fit: cover;
-            width: 100vw;
-          }
         }
       }
-      .part_introduction_wrap {
-        margin-top: 4rem;
-        @extend %layout_fix;
-        .element_title {
-          @extend %font_sectionTitle;
+      .disclaimer {
+        .hashtag {
+          color: $color_darkgrey;
+          font-size: 1.4rem;
           line-height: 1;
-          letter-spacing: $en_letterSpacing;
-          margin-bottom: 3rem;
+          font-family: $font_ko;
+          display: block;
+          padding-top: 1.2rem;
         }
-        .description {
-          span {
-            @extend %font_primary;
-            font-family: $font_ko;
-            margin-bottom: 1.8rem;
-            display: block;
-          }
-        }
-        .disclaimer {
-          .hashtag {
-            color: $color_darkgrey;
-            font-size: 1.4rem;
-            line-height: 1;
-            font-family: $font_ko;
-            display: block;
-            padding-top: 1.2rem;
-          }
-        }
+      }
+      &:last-child {
+        padding-bottom: 0;
       }
     }
   }

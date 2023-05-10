@@ -6,10 +6,9 @@ export default function Description({
   className,
   innerHTMLOption = 'N',
 }) {
-  const GET_CLASSNAME =
-    className == undefined
-      ? { className: 'description' }
-      : { className: 'description ' + className };
+  const GET_CLASSNAME = !className
+    ? { className: 'description' }
+    : { className: 'description ' + className };
   return innerHTMLOption === 'Y' ? (
     <p dangerouslySetInnerHTML={{ __html: data }} {...GET_CLASSNAME} />
   ) : (

@@ -39,6 +39,7 @@ export default function MyHyundai() {
         }
         subVisualImgUrl={works.imgUrl + works.content[8].subVisual}
         workContent={works.content[8].projectInfomation}
+        webSiteUrl={works.content[8].websiteUrl}
         firstNextWork={works.content[9]}
         secondNextWork={works.content[10]}
         thirdNextWork={works.content[11]}

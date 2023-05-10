@@ -12,10 +12,9 @@ export default function Visual({
   pageTitleData,
 }) {
   const DIMM_CLASS = dimm === 'Y' ? ' dimmed' : '';
-  const GET_CLASSNAME =
-    className == undefined
-      ? { className: 'visual' + DIMM_CLASS }
-      : { className: 'visual ' + className + DIMM_CLASS };
+  const GET_CLASSNAME = !className
+    ? { className: 'visual' + DIMM_CLASS }
+    : { className: 'visual ' + className + DIMM_CLASS };
   return (
     <article {...GET_CLASSNAME}>
       <ScrollTriggerArea

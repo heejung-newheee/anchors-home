@@ -3,45 +3,43 @@
     .visual_comment {
       .visual {
         height: 96rem;
-        margin-bottom: 16rem;
       }
       .description{
-        max-width: 120rem;
+        //max-width: 120rem;
         &.en_comment {
+          padding-top: 16rem;
           margin-bottom: 6rem;
         }
       }
     }
     .anchors_part {
       padding-bottom: 14rem;
-      .container {
-        margin-top: 16rem;
-        .wrapper {
-          height: 42rem;
+      padding-top: 16rem;
+      .wrapper {
+        height: 42rem;
+      }
+      .part_img {
+          img {
+            height: 48rem;
+          }
+      }
+      .part_introduction_wrap {
+        margin-bottom: 10rem;
+        max-width: 119.6rem;
+        .element_title {
+          min-width: 42.4rem;
         }
-        .part_img {
-          .img_scroll_wrap {
-            img {
-              height: 48rem;
-            }
+        .description {
+          width: calc(100% - 48.8rem);
+          padding-bottom: 2.2rem;
+          span {
+            margin-bottom: 2rem;
           }
         }
-        .part_introduction_wrap {
-          margin-bottom: 10rem;
-          max-width: 119.6rem;
-          .element_title {
-            min-width: 42.4rem;
-          }
-          .description {
-            padding-bottom: 2.2rem;
-            span {
-              margin-bottom: 2rem;
-            }
-          }
-          .disclaimer {
-            .hashtag {
-              font-size: 1.8rem;
-            }
+        .disclaimer {
+          padding-left: 48.8rem;
+          .hashtag {
+            font-size: 1.8rem;
           }
         }
       }

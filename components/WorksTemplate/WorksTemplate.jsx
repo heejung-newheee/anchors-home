@@ -26,45 +26,27 @@ export default function WorksTemplate({
   secondNextWork,
   thirdNextWork,
   custom = 'N',
+  webSiteUrl,
 }) {
   const HAS_CUSTOM = custom === 'Y' ? ' custom' : '';
-  const GET_CLASSNAME =
-    className == undefined
-      ? { className: 'works_template' + HAS_CUSTOM }
-      : { className: 'works_template ' + className + HAS_CUSTOM };
+  const GET_CLASSNAME = !className
+    ? { className: 'works_template' + HAS_CUSTOM }
+    : { className: 'works_template ' + className + HAS_CUSTOM };
 
-  const TRIGGER_START = {
-    mobile: '1848px',
-    table: '2338px',
-    desktop: '2498px',
-    wide: '2800px',
-  };
-
-  const TRIGGER_END = {
-    mobile: '2000px',
-    table: '4000px',
-    desktop: '4000px',
-    wide: '4500px',
-  };
-
-  let STATE = '';
   const [hideClass, setHideClass] = useState('');
   const HandleScroll = () => {
     const VIEWPORT_HEIGHT = window.innerHeight;
     const VIEW_BTN = document.querySelector('.view_website_btn');
-    const VIEW_BTN_HEIGHT = VIEW_BTN.getBoundingClientRect().height;
+    const VIEW_BTN_HEIGHT = VIEW_BTN?.getBoundingClientRect().height;
     const NEXTWORK = document.querySelector('.detail_next_work_wrap');
-    const NEXTWORK_OFFSET = NEXTWORK.getBoundingClientRect().top;
+    const NEXTWORK_OFFSET = NEXTWORK?.getBoundingClientRect().top;
     const SCROLL_TOP = document.documentElement.scrollTop;
     const ENVENT_OFFSET =
       NEXTWORK_OFFSET + SCROLL_TOP - VIEWPORT_HEIGHT + VIEW_BTN_HEIGHT + 50;
 
-    // STATE = SCROLL_TOP < ENVENT_OFFSET ? ' show' : ' hide';
-
     SCROLL_TOP < ENVENT_OFFSET ? setHideClass('') : setHideClass(' hide');
   };
   useEffect(() => {
-    // resetColorType();
     window.addEventListener('scroll', HandleScroll);
     return () => {
       window.removeEventListener('scroll', HandleScroll);
@@ -74,7 +56,7 @@ export default function WorksTemplate({
   return (
     <section {...GET_CLASSNAME}>
       {/* S: Key Visual 영역 */}
-      <div className="detail_key_visual_wrap section_div is_black">
+      <section className="detail_key_visual_wrap section_div is_black">
         <Visual
           dimm="Y"
           className="detail_key_visual"
@@ -88,31 +70,11 @@ export default function WorksTemplate({
           src="/assets/images/contents/works/img_scroll.png"
           alt="scroll for more image"
         />
-      </div>
+      </section>
       {/* E: Key Visual 영역 */}
 
-      {/* S: View Website Button 영역 */}
-      {/*<ScrollTriggerArea*/}
-      {/*  type="multiTrigger"*/}
-      {/*  triggerOffset={'center'}*/}
-      {/*  triggerMarkers={false}*/}
-      {/*  triggerStart={TRIGGER_START}*/}
-      {/*  triggerEnd={TRIGGER_END}*/}
-      {/*  YAxes={{*/}
-      {/*    mobile: ['200px'],*/}
-      {/*    table: ['0px'],*/}
-      {/*    desktop: ['500px'],*/}
-      {/*    wide: ['700px'],*/}
-      {/*  }}*/}
-      {/*>*/}
-      {/*  <Btn className="view_website_btn" type="a" title="view website button">*/}
-      {/*    View <br /> Website*/}
-      {/*  </Btn>*/}
-      {/*</ScrollTriggerArea>*/}
-      {/* E: View Website Button 영역 */}
-
       {/* S: Text 영역 */}
-      <div className="detail_text_wrap section_div is_photo">
+      <section className="detail_text_wrap section_div is_photo">
         <Description data={detailTextDescEn} innerHTMLOption="Y" />
         <Description data={detailTextDescKo} />
         {/* works.json => 받아와야 할 순서의 contents key값 중에 'projectInformation' 받아와서 적용 */}
@@ -122,13 +84,16 @@ export default function WorksTemplate({
             key={index}
             elementTitle={data.title}
             description={data.contents}
+            innerHTMLOption="Y"
           />
         ))}
-      </div>
+      </section>
       {/* E: Text 영역 */}
 
       {/* S: custom 영역 */}
-      <div className="custom_area section_div is_photo">{customChildren}</div>
+      <section className="custom_area section_div is_photo">
+        {customChildren}
+      </section>
       {/* E: custom 영역 */}
 
       {/* S: Sub Visual 영역 */}
@@ -155,56 +120,60 @@ export default function WorksTemplate({
       {/* E: Sub Visual 영역 */}
 
       {/* S: Next work 영역 */}
-      <div className="detail_next_work_wrap section_div is_photo">
+      <section className="detail_next_work_wrap section_div is_photo">
         <DepthTitle depthLevel="1" blindOption="visible">
           Next Work
         </DepthTitle>
         <div>
-          <a href={firstNextWork.websiteUrl}>
+          <Btn type="link" url={firstNextWork.pageUrl}>
             <BaseArticle
               imgUrl={works.imgUrl + firstNextWork.thumbnail}
               imgAlt={firstNextWork.thumbnailAlt}
               elementTitle={firstNextWork.title}
               description={firstNextWork.description}
             />
-          </a>
-          <a href={secondNextWork.websiteUrl}>
+          </Btn>
+          <Btn type="link" url={secondNextWork.pageUrl}>
             <BaseArticle
               imgUrl={works.imgUrl + secondNextWork.thumbnail}
               imgAlt={secondNextWork.thumbnailAlt}
               elementTitle={secondNextWork.title}
               description={secondNextWork.description}
             />
-          </a>
-          <a href={thirdNextWork.websiteUrl}>
+          </Btn>
+          <Btn type="link" url={thirdNextWork.pageUrl}>
             <BaseArticle
               imgUrl={works.imgUrl + thirdNextWork.thumbnail}
               imgAlt={thirdNextWork.thumbnailAlt}
               elementTitle={thirdNextWork.title}
               description={thirdNextWork.description}
             />
-          </a>
+          </Btn>
         </div>
 
         {/* S: Portfolio list button 영역 */}
         <Btn
           className="portfolio_list_btn"
-          type="a"
+          type="link"
           title="portfolio list button"
+          url="/pages/works"
         >
           Portfolio list
         </Btn>
         {/* E: Portfolio list button 영역 */}
-      </div>
+      </section>
 
       {/* S: View Website Button 영역 */}
-      <Btn
-        className={`view_website_btn${hideClass}`}
-        type="a"
-        title="view website button"
-      >
-        View <br /> Website
-      </Btn>
+      {!!webSiteUrl && (
+        <Btn
+          className={`view_website_btn${hideClass}`}
+          type="a"
+          title="view website button"
+          url={webSiteUrl}
+        >
+          View <br /> Website
+        </Btn>
+      )}
       {/* E: View Website Button 영역 */}
 
       {/* E: Next work 영역 */}

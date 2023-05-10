@@ -10,7 +10,8 @@
       "title": "CHANEL KOREA",
       "description": "e-Commerce, Website, Mobile Web, CRM",
       "thumbnail": "img_thumbnail_chanel.jpg",
-      "thumbnailAlt": "",
+      "thumbnailAlt": "샤넬코리아 시스템 분석 컨설팅 및 총괄 운영 이미지",
+      "pageUrl": "/pages/worksDetail/chanel",
       "websiteUrl": "프로젝트 Url",
       "visual": "img_keyvisual_chanel.jpg",
       "subVisual": "img_subvisual_chanel.jpg",
@@ -31,7 +32,8 @@
       "title": "Hyundai Motor DCXT",
       "description": "Salesforce Marketing Cloud",
       "thumbnail": "img_thumbnail_hyundaimotor.jpg",
-      "thumbnailAlt": "",
+      "thumbnailAlt": "현대자동차 DCXT Phase 1.5 ~ 2.0 인도 구축 이미지",
+      "pageUrl": "/pages/worksDetail/hyundaiDCXT",
       "websiteUrl": "",
       "visual": "img_keyvisual_hyundaimotor.jpg",
       "subVisual": "img_subvisual_hyundaimotor.jpg",
@@ -40,7 +42,7 @@
         "ko": "현대자동차 각 국가 법인에서 보다 효율적인 세일즈 데이터 관리를 위해 DCXT(Connex)를 구축하였습니다. 여러 비즈니스 활동을 통해 디지털 채널에서 발생하는 고객 데이터를 중앙 집중하고, 담당자와 고객 간의 지속적인 연결로 비대면 영업 및 마케팅 환경에서도 고객 경험을 강화했습니다."
       },
       "projectInfomation" : [
-        { "title" :  "Client" , "contents" :  "현대자동차 일본법인(HMJ), 현대자동차 인도법인(HMID), 현대자동차 싱가포르법인(HMGICS), 현대오토에버"},
+        { "title" :  "Client" , "contents" :  "현대자동차 일본법인(HMJ), 현대자동차 인도법인(HMID), 현대자동차 싱가포르법인<br/>(HMGICS), 현대오토에버"},
         { "title" :  "Year" , "contents" :  "2021. 12 (HMJ) <br/> 2022. 08 (HMID) <br/> 2022. 11 (HMGICS)"},
         { "title" :  "Service" , "contents" :  "Salesforce Core, I/F, DB Migration, Foundation"}
       ]
@@ -53,7 +55,8 @@
       "description": "Online sales, e-Commerce, Website, Mobile Web, PIP",
       "thumbnail": "img_thumbnail_jplatform.jpg",
       "thumbnailAlt": "현대자동차 J플랫폼(일본법인 신 고객경험 플랫폼) 구축 이미지",
-      "websiteUrl": "",
+      "pageUrl": "/pages/worksDetail/jPlatform",
+      "websiteUrl": "https://www.hyundai.com/jp/",
       "visual": "img_keyvisual_jplatform.jpg",
       "subVisual": "img_subvisual_jplatform.jpg",
       "text": {
@@ -74,7 +77,8 @@
       "description": "Website, Mobile Web, PIP",
       "thumbnail": "img_thumbnail_bms.jpg",
       "thumbnailAlt": "현대자동차 브랜드홈(BMS 2.0) 개편 구축 이미지",
-      "websiteUrl": "",
+      "pageUrl": "/pages/worksDetail/BMS",
+      "websiteUrl": "https://bms.hmc.co.kr/",
       "visual": "img_keyvisual_bms.jpg",
       "subVisual": "img_subvisual_bms.jpg",
       "text": {
@@ -95,7 +99,8 @@
       "description": "Website, Mobile Web, PIP",
       "thumbnail": "img_thumbnail_aia.jpg",
       "thumbnailAlt": "AIA생명 ‘MY AIA’ 보험금 청구 화면 개편 이미지",
-      "websiteUrl": "",
+      "pageUrl": "/pages/worksDetail/myAIA",
+      "websiteUrl": "https://www.aia.co.kr/ko/my-aia/pre-login.html",
       "visual": "img_keyvisual_aia.jpg",
       "subVisual": "img_subvisual_aia.jpg",
       "text": {
@@ -116,6 +121,7 @@
       "description": "Mobile Web, PIP",
       "thumbnail": "img_thumbnail_koreanair.jpg",
       "thumbnailAlt": "대한항공 KALPOS 블루투스 통신모듈 개발 이미지",
+      "pageUrl": "/pages/worksDetail/koreanAirKALPOS",
       "websiteUrl": "",
       "visual": "img_keyvisual_koreanair.jpg",
       "subVisual": "img_subvisual_koreanair.jpg",
@@ -137,7 +143,8 @@
       "description": "Online sales, e-Commerce, Website, Mobile Web, PIP",
       "thumbnail": "img_thumbnail_kia.jpg",
       "thumbnailAlt": "기아 주식회사 K-WCMS 인도법인 확산 및 딜러사이트 구축 이미지",
-      "websiteUrl": "",
+      "pageUrl": "/pages/worksDetail/WCMS",
+      "websiteUrl": "https://www.kia.com/in",
       "visual": "img_keyvisual_kia.jpg",
       "subVisual": "img_subvisual_kia.jpg",
       "text": {
@@ -171,6 +178,7 @@
       "description": "Website, Mobile Web, PIP",
       "thumbnail": "img_thumbnail_koreanairandroid.jpg",
       "thumbnailAlt": "대한항공 Android App 개편 구축 이미지",
+      "pageUrl": "/pages/worksDetail/koreanAirAndroid",
       "websiteUrl": "",
       "visual": "img_keyvisual_koreanairandroid.jpg",
       "subVisual": "img_subvisual_koreanairandroid.jpg",
@@ -192,7 +200,8 @@
       "description": "Online sales, e-Commerce, Website, Mobile Web, PIP",
       "thumbnail": "img_thumbnail_myhyundai.jpg",
       "thumbnailAlt": "현대자동차 고객서비스통합 APP 'myHyundai App' 구축 이미지",
-      "websiteUrl": "",
+      "pageUrl": "/pages/worksDetail/myHyundai",
+      "websiteUrl": "https://www.hyundai.com/kr/ko/app-download",
       "visual": "img_keyvisual_myhyundai.jpg",
       "subVisual": "img_subvisual_muhyundai.jpg",
       "text": {
@@ -213,7 +222,8 @@
       "description": "Website, PIP",
       "thumbnail": "img_thumbnail_happymove.jpg",
       "thumbnailAlt": "현대자동차그룹 Happy Move 웹사이트 구축 이미지",
-      "websiteUrl": "",
+      "pageUrl": "/pages/worksDetail/happyMove",
+      "websiteUrl": "https://happymove.hyundaimotorgroup.com/",
       "visual": "img_keyvisual_happymove.jpg",
       "subVisual": "img_subvisual_happymove.jpg",
       "text": {
@@ -247,7 +257,8 @@
       "description": "Website, PIP",
       "thumbnail": "img_thumbnail_nbrand.jpg",
       "thumbnailAlt": "현대자동차그룹 N-brand 웹사이트 구축 이미지",
-      "websiteUrl": "",
+      "pageUrl": "/pages/worksDetail/nBrand",
+      "websiteUrl": "https://www.hyundai-n.com/",
       "visual": "img_keyvisual_nbrand.jpg",
       "subVisual": "img_subvisual_nbrand.jpg",
       "text": {
@@ -268,7 +279,8 @@
       "description": "Website, PIP",
       "thumbnail": "img_thumbnail_wwn.jpg",
       "thumbnailAlt": "현대자동차 WWN 3.0 국내 통합 개편 구축 이미지",
-      "websiteUrl": "",
+      "pageUrl": "/pages/worksDetail/WWN",
+      "websiteUrl": "https://www.hyundai.com",
       "visual": "img_keyvisual_wwn.jpg",
       "subVisual": "img_subvisual_wwn.jpg",
       "text": {
@@ -306,7 +318,8 @@
       "description": "Online sales, e-Commerce, Website, PIP",
       "thumbnail": "img_thumbnail_genesis.jpg",
       "thumbnailAlt": "제네시스 국내/글로벌 통합 운영 개발 이미지",
-      "websiteUrl": "",
+      "pageUrl": "/pages/worksDetail/genesisGlobal",
+      "websiteUrl": "https://www.genesis.com",
       "visual": "img_keyvisual_genesis.jpg",
       "subVisual": "img_subvisual_genesis.jpg",
       "text": {

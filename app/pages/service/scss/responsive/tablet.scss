@@ -3,45 +3,46 @@
     .visual_comment {
       .visual {
         height: 57.6rem;
-        margin-bottom: 10rem;
       }
       .description{
-        max-width: 62rem;
+        //max-width: 62rem;
         &.en_comment {
+          padding-top: 10rem;
           margin-bottom: 4rem;
         }
       }
     }
     .anchors_part {
       padding-bottom: 6rem;
-      .container {
-        margin-top: 10rem;
-        .wrapper {
-          height: 25rem;
+      padding-top: 10rem;
+      .wrapper {
+        height: 25rem;
+      }
+      .part_img {
+          img {
+            height: 31rem;
+          }
+      }
+      .part_introduction_wrap {
+        margin-bottom: 7rem;
+        padding: 0 3.4rem;
+        display: flex;
+        flex-wrap: wrap;
+        .element_title {
+          width: 26rem;
+          height: 100%;
+          margin-right: 4rem;
+          flex-shrink: 0;
         }
-        .part_img {
-          .img_scroll_wrap {
-            img {
-              height: 31rem;
-            }
-          }
+        .description {
+          width: calc(100% - 30rem);
+          padding-bottom: .8rem;
         }
-        .part_introduction_wrap {
-          margin-bottom: 7rem;
-          padding: 0 3.4rem;
-          display: flex;
-          .element_title {
-            min-width: 26rem;
-            margin-right: 4rem;
-          }
-          .description {
-            padding-bottom: .8rem;
-          }
-          .disclaimer {
-            .hashtag {
-              display: inline-block;
-              padding: 1.4rem 1.8rem 0 0;
-            }
+        .disclaimer {
+          padding-left: 30rem;
+          .hashtag {
+            display: inline-block;
+            padding: 1.4rem 1.8rem 0 0;
           }
         }
       }

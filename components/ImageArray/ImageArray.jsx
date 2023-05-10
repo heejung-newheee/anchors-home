@@ -5,12 +5,11 @@ export default function ImageArray({
   data,
   className,
   bgColor = '#FFFFFF',
-  imgUrl = '',
+  imgUrl,
 }) {
-  const GET_CLASSNAME =
-    className === undefined
-      ? { className: 'image_array' }
-      : { className: 'image_array ' + className };
+  const GET_CLASSNAME = !className
+    ? { className: 'image_array' }
+    : { className: 'image_array ' + className };
   return (
     <article {...GET_CLASSNAME} style={{ backgroundColor: bgColor }}>
       {data.map((imgs, index) => (

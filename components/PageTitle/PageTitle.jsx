@@ -5,10 +5,9 @@ import { useEffect } from 'react';
 import './scss/PageTitle.scss';
 
 export default function PageTitle({ data, className }) {
-  const GET_CLASSNAME =
-    className == undefined
-      ? { className: 'page_title' }
-      : { className: 'page_title ' + className };
+  const GET_CLASSNAME = !className
+    ? { className: 'page_title' }
+    : { className: 'page_title ' + className };
   const [animation, setAnimation] = useState('');
 
   const HandleScroll = () => {
