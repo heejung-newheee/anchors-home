@@ -2,11 +2,11 @@
 {
   "textList" : [
     {
-      "text_en" : "Anything is Possible Initiate the <span>Special ‘A’</span>",
-      "text_ko" : "Anchor는 정복하고자 하는 해결사, 일과 삶 속에 모든 것에서 Smart Answer를 찾기 위해 고민하는 당신을 기다립니다.",
-      "comment_text" : "우리는 함께 <br/> 성장할 수 있다고 믿어요.",
-      "welfare_text" : "구성원의 성장을 위해서라면 <br />아낌없이 지원합니다.",
-      "employment_text" : "지금, 앵커스의 여정에 함께하세요"
+      "textEn" : "Anything is Possible Initiate the <span>Special ‘A’</span>",
+      "textKo" : "Anchor는 정복하고자 하는 해결사, 일과 삶 속에 모든 것에서 Smart Answer를 찾기 위해 고민하는 당신을 기다립니다.",
+      "commentText" : "우리는 함께 <br/> 성장할 수 있다고 믿어요.",
+      "welfareText" : "구성원의 성장을 위해서라면 <br />아낌없이 지원합니다.",
+      "employmentText" : "지금, 앵커스의 여정에 함께하세요"
     }
   ]
 }
