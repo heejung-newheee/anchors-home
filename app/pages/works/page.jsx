@@ -31,10 +31,6 @@ function Works() {
           />
         ))}
       />
-      <BaseArticle
-        imgUrl={worksList.imgUrl + worksList.content[0].thumbnail}
-        imgAlt={worksList.content[0].thumbnailAlt}
-      />
       <Btn type="button" className="view_more_btn">
         View more
       </Btn>
