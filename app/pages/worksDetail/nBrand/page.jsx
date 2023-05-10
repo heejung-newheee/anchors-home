@@ -96,6 +96,7 @@ export default function Nbrand() {
         }
         subVisualImgUrl={works.imgUrl + works.content[10].subVisual}
         workContent={works.content[10].projectInfomation}
+        webSiteUrl={works.content[10].websiteUrl}
         firstNextWork={works.content[11]}
         secondNextWork={works.content[12]}
         thirdNextWork={works.content[0]}

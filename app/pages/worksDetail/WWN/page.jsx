@@ -43,6 +43,7 @@ export default function WWN() {
         }
         subVisualImgUrl={works.imgUrl + works.content[11].subVisual}
         workContent={works.content[11].projectInfomation}
+        webSiteUrl={works.content[11].websiteUrl}
         firstNextWork={works.content[12]}
         secondNextWork={works.content[0]}
         thirdNextWork={works.content[1]}
