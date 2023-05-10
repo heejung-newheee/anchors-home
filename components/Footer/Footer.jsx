@@ -37,7 +37,7 @@ export default function Footer() {
         />
       </div>
       <div className="btn_wrap">
-        <Btn type="submit" alt="send mail">
+        <Btn type="a" alt="send mail" url={`mailto:${copyright.sendEmail}`}>
           Send mail
         </Btn>
       </div>
