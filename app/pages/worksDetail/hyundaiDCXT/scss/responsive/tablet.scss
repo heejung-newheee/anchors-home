@@ -1,5 +1,12 @@
 @include tablet {
   .works_template{
+    .detail_text_wrap{
+      .base_article{
+        .description{
+          line-height: 2.4rem;
+        }
+      }
+    }
     .detail_sub_visual_wrap{
       .sub_visual_text{
         .base_article{

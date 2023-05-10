@@ -122,6 +122,7 @@ export default function WorksTemplate({
             key={index}
             elementTitle={data.title}
             description={data.contents}
+            innerHTMLOption="Y"
           />
         ))}
       </div>
