@@ -1,11 +1,13 @@
 'use client';
 
+import React from 'react';
+
 import Link from 'next/link';
 
+import Btn from '@/components/Btn/Btn';
 import TabButton from '@/components/TabButton/TabButton';
 import TabContents from '@/components/TabContents/TabContents';
-import React from 'react';
-import Btn from '@/components/Btn/Btn';
+
 function TabContentsEvent(type, index, children, data) {
   switch (type) {
     case 'article':

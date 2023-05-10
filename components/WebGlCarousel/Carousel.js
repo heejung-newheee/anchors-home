@@ -5,7 +5,7 @@ import gsap from 'gsap';
 
 import CarouselItem from './CarouselItem';
 import PostProcessing from './PostProcessing';
-import { getPiramidalIndex, lerp } from "./utils";
+import { getPiramidalIndex, lerp } from './utils';
 
 const planeSettings = {
   width: 1.5,
@@ -45,8 +45,11 @@ const Carousel = ({ images = [] }) => {
       if (active - index === 0) {
         item.visible = false;
       } else {
-        if (active === 0 && index === $items.length - 1) item.visible = false;
-        else item.visible = true;
+        if (active === 0 && index === $items.length - 1) {
+          item.visible = false;
+        } else {
+          item.visible = true;
+        }
       }
 
       gsap.to(item.position, {
@@ -54,8 +57,11 @@ const Carousel = ({ images = [] }) => {
         y: $items.length * -0.3 + piramidalIndex * 0.3,
       });
     } else {
-      if (active - index === 1) item.visible = false;
-      else item.visible = true;
+      if (active - index === 1) {
+        item.visible = false;
+      } else {
+        item.visible = true;
+      }
 
       gsap.to(item.position, {
         x:

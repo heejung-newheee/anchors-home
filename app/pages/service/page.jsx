@@ -1,3 +1,4 @@
+import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
@@ -7,9 +8,7 @@ import Visual from '@/components/Visual/Visual';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 import seo from '@/helper/data/json/contents/SEO.json';
 import service from '@/helper/data/json/contents/service/service.json';
-
 import './scss/service.scss';
-import DepthTitle from '@/components/DepthTitle/DepthTitle';
 
 export const metadata = {
   title: seo.title.subPage.service,

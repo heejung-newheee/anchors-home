@@ -1,6 +1,7 @@
 'use client';
-import Btn from '@/components/Btn/Btn';
 import React from 'react';
+
+import Btn from '@/components/Btn/Btn';
 
 function TabButton({ current, index, children, event }) {
   return (

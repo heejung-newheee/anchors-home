@@ -1,7 +1,7 @@
 'use client';
 import React, { useRef, useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import { Tween, ScrollTrigger, Timeline } from 'react-gsap';
+import { useMediaQuery } from 'react-responsive';
 
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 
@@ -199,17 +199,25 @@ function ScrollTriggerArea({
       trigger={type == 'lottieTrigger' ? '.' + type : '.' + defaultID}
       onEnter={(d) => {
         setIsActive(d.isActive);
-        if (type == 'lottieTrigger') COMPONENTS_REF.current.controll('play');
+        if (type == 'lottieTrigger') {
+          COMPONENTS_REF.current.controll('play');
+        }
       }}
       onLeave={(d) => {
-        if (type == 'lottieTrigger') COMPONENTS_REF.current.controll('pause');
+        if (type == 'lottieTrigger') {
+          COMPONENTS_REF.current.controll('pause');
+        }
       }}
       onLeaveBack={(d) => {
         setIsActive(d.isActive);
-        if (type == 'lottieTrigger') COMPONENTS_REF.current.controll('pause');
+        if (type == 'lottieTrigger') {
+          COMPONENTS_REF.current.controll('pause');
+        }
       }}
       onEnterBack={(d) => {
-        if (type == 'lottieTrigger') COMPONENTS_REF.current.controll('play');
+        if (type == 'lottieTrigger') {
+          COMPONENTS_REF.current.controll('play');
+        }
       }}
       onUpdate={(d) => {}}
     >

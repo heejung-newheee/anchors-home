@@ -1,10 +1,11 @@
+import React from 'react';
+
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import Tab from '@/components/Tab/Tab';
 import LottieTest from '@/components/Test/LottieTest';
 import worksList from '@/helper/data/json/contents/works/works.json';
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
-import React from 'react';
 
 const LOTTIE_TYPE = {
   style: {

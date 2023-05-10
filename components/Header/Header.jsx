@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 
 import Logo from '@/components/Logo/Logo';
 import Menu from '@/components/Menu/Menu';
-
 import './scss/Header.scss';
 import { pagesIsBgBlack, pagesIsBgWhite } from '@/helper/headerHelper';
 
@@ -72,7 +71,7 @@ export default function Header({ className }) {
   // const routers = useRouter();
   useEffect(() => {
     setHeaderBgType(CL);
-  }, [LOCATION]);
+  }, [CL, LOCATION]);
 
   const GET_CLASSNAME =
     className == undefined

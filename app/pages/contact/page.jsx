@@ -1,4 +1,5 @@
 import BaseArticle from '@/components/BaseArticle/BaseArticle';
+import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
@@ -6,9 +7,7 @@ import Visual from '@/components/Visual/Visual';
 import contact from '@/helper/data/json/contents/contact/contact.json';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 import seo from '@/helper/data/json/contents/SEO.json';
-
 import './scss/contact.scss';
-import DepthTitle from '@/components/DepthTitle/DepthTitle';
 
 export const metadata = {
   title: seo.title.subPage.contact,
