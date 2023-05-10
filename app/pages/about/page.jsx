@@ -6,7 +6,6 @@ import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
-import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import MoreDetail from '@/components/MoreDetail/MoreDetail';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
@@ -19,7 +18,6 @@ import aboutProfile from '/helper/data/json/contents/about/aboutProfile.json';
 import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
 
 import lottie_arrow from '@/public/assets/images/lottie/lottieAboutusUpArrow.json';
-import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 
 import './scss/about.scss';
 
@@ -60,29 +58,16 @@ function About() {
 
       {/* S: Description 영역*/}
       <div className="about_intro_text_wrap section_div is_photo">
-        <Description
-          data={
-            <>
-              Innovative solutions, excellence in execution. We take your
-              <span> technological obstacles</span> and convert them into
-              opportunities for <span>digital growth.</span>
-            </>
-          }
-        />
-        <Description
-          data={
-            <>
-              혁신적인 솔루션, 탁월한 실행력. 앵커스는 각 분야의 전문가들이 모여
-              <br />
-              기술적 풍랑을 디지털 성장의 기회로 만드는 회사입니다.
-            </>
-          }
-        />
+        <Description innerHTMLOption="Y" data={aboutIntro.introText.textEn} />
+        <Description data={aboutIntro.introText.textKo} />
       </div>
       {/* E: Description 영역*/}
 
       {/* S: about intro swiper 영역*/}
       <div className="about_intro_swiper section_div is_photo">
+        <DepthTitle depthLevel="1" blindOption="hidden">
+          Anchors Intro Swiper
+        </DepthTitle>
         <SwiperArea
           key="swiper01"
           type="double"
@@ -119,14 +104,12 @@ function About() {
           Anchors Profile
         </DepthTitle>
         <div className="profile_development">
+          <DepthTitle depthLevel="2" blindOption="hidden">
+            Anchors Profile Development
+          </DepthTitle>
           <Description
             className="profile_grow_text"
-            data={
-              <>
-                Anchors is a development company
-                <br /> established in 2018.
-              </>
-            }
+            data={aboutProfile.introProfile.profileDevelopment}
           />
           <Description
             className="profile_grow_number"
@@ -152,14 +135,13 @@ function About() {
           />
         </div>
         <div className="profile_award">
+          <DepthTitle depthLevel="2" blindOption="hidden">
+            Anchors Profile Award
+          </DepthTitle>
           <Description
+            innerHTMLOption="Y"
             className="profile_award_description"
-            data={
-              <>
-                Anchors have traveled a long road
-                <br /> within a small period.
-              </>
-            }
+            data={aboutProfile.introProfile.profileAward}
           />
           <img
             className="profile_award_icon"
@@ -180,13 +162,12 @@ function About() {
           </div>
         </div>
         <div className="profile_partner">
+          <DepthTitle depthLevel="2" blindOption="hidden">
+            Anchors Profile Partner
+          </DepthTitle>
           <Description
-            data={
-              <>
-                We've been partnering with
-                <br /> our customers for a long time.
-              </>
-            }
+            innerHTMLOption="Y"
+            data={aboutProfile.introProfile.profilePartner}
           />
           <div>
             <InfiniteRolling className="about_partner">
@@ -222,27 +203,18 @@ function About() {
         <Visual imgUrl="/assets/images/contents/about/img_visual_members.jpg" />
         <div className="about_members_desc">
           <Description
-            data={
-              <>
-                We work with people <span>challenging and fun</span> to work
-                with than alone.
-                <span>Synergy</span> is a great driving force to sail through
-                any problem ahead.
-              </>
-            }
+            innerHTMLOption="Y"
+            data={aboutMembers.membersText.textEn}
           />
           <Description
-            data={
-              <>
-                우리는 혼자보다 함께 일할 때 더 즐거운 사람들과 일하고 있습니다.
-                <br />
-                신뢰감 있는 동료와 함께 일할 때 나는 시너지는 어떠한 문제도
-                헤쳐나갈 수 있는 가장 큰 원동력입니다.
-              </>
-            }
+            innerHTMLOption="Y"
+            data={aboutMembers.membersText.textKo}
           />
         </div>
         {/* S: about members swiper 영역*/}
+        <DepthTitle depthLevel="1" blindOption="hidden">
+          Anchors Intro Swiper
+        </DepthTitle>
         <SwiperArea
           key="swiper04"
           type="single"

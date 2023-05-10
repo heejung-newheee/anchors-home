@@ -1,5 +1,9 @@
 {
   "imgUrl": "/assets/images/contents/about/",
+  "introText": {
+      "textEn": "Innovative solutions, excellence in execution. We take your <span>technological obstacles</span> and convert them into opportunities for <span>digital growth.</span>",
+      "textKo": "혁신적인 솔루션, 탁월한 실행력. 앵커스는 각 분야의 전문가들이 모여 기술적 풍랑을 디지털 성장의 기회로 만드는 회사입니다."
+  },
   "introduction" : [
     {
       "highlightText": "우리는 새로운 항로를\n개척하는 탐험가입니다.",
