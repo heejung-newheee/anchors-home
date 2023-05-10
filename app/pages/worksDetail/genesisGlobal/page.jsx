@@ -23,6 +23,7 @@ export default function GenesisGlobal() {
         detailTextDescKo={works.content[12].text.ko}
         subVisualImgUrl={works.imgUrl + works.content[12].subVisual}
         workContent={works.content[12].projectInfomation}
+        webSiteUrl={works.content[12].websiteUrl}
         customChildren={
           <>
             <ImageArray
