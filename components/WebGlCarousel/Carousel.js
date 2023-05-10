@@ -5,10 +5,10 @@ import gsap from 'gsap';
 
 import CarouselItem from './CarouselItem';
 import PostProcessing from './PostProcessing';
-import { lerp } from './utils';
+import { getPiramidalIndex, lerp } from "./utils";
 
 const planeSettings = {
-  width: 1.4,
+  width: 1.5,
   height: 3.6,
   gap: 0.1,
 };
@@ -25,7 +25,7 @@ const Carousel = ({ images = [] }) => {
 
   const [isMouseOver, setIsMouseOver] = useState(false);
 
-  const progress = useRef(0);
+  const progress = useRef(-50);
   const oldProgress = useRef(0);
   const speed = useRef(0);
   const $items = useMemo(() => {
@@ -35,43 +35,56 @@ const Carousel = ({ images = [] }) => {
   }, [$root]);
 
   const displayItems = (item, index, active) => {
-    const cycles = Math.floor(active / $items.length);
     const half = Math.floor($items.length / 2);
-    const yPos = Math.sin((index / $items.length) * Math.PI * 2) * 0.5;
+    const piramidalIndex = getPiramidalIndex($items, active + half)[index];
+    //const cycles = Math.floor(active / $items.length);
+    //const yPos = Math.sin((index / $items.length) * Math.PI * 2) * 0.5;
 
     // 약간 야매로 처리한 느낌은 있는데, 아무튼 됩니다 무한 스크롤...
     if (active - index < 1) {
+      if (active - index === 0) {
+        item.visible = false;
+      } else {
+        if (active === 0 && index === $items.length - 1) item.visible = false;
+        else item.visible = true;
+      }
+
       gsap.to(item.position, {
         x: (index - active - half) * (planeSettings.width + planeSettings.gap),
-        y: yPos,
+        y: $items.length * -0.3 + piramidalIndex * 0.3,
       });
-    } else if (active - index === 1) {
+    } else {
+      if (active - index === 1) item.visible = false;
+      else item.visible = true;
+
       gsap.to(item.position, {
         x:
-          (index - active - half + $items.length * (cycles + 1)) *
+          (index - active - half + $items.length) *
+          (planeSettings.width + planeSettings.gap),
+        y: $items.length * -0.3 + piramidalIndex * 0.3,
+      });
+    }
+
+    /*else if (active - index === 1) {
+      gsap.to(item.position, {
+        x:
+          (index - active + $items.length * (cycles + 1)) *
           (planeSettings.width + planeSettings.gap),
         y: 100,
       });
     } else if (active - index === 0) {
       gsap.to(item.position, {
         x:
-          (index - active - half + $items.length * (cycles + 1)) *
+          (index - active + $items.length * (cycles + 1)) *
           (planeSettings.width + planeSettings.gap),
         y: 100,
       });
-    } else {
-      gsap.to(item.position, {
-        x:
-          (index - active - half + $items.length * (cycles + 1)) *
-          (planeSettings.width + planeSettings.gap),
-        y: yPos,
-      });
-    }
+    } */
   };
 
   useFrame(() => {
     const autoScrollSpeed = !isMouseOver ? 0.7 / images.length : 0;
-    progress.current = Math.max(0, progress.current + autoScrollSpeed);
+    progress.current = Math.max(-50, progress.current + autoScrollSpeed);
 
     const active =
       Math.floor((progress.current / 100) * ($items.length - 1)) %
