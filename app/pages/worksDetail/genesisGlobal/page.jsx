@@ -7,6 +7,7 @@ import seo from '@/helper/data/json/contents/SEO.json';
 import works from '@/helper/data/json/contents/works/works.json';
 
 import './scss/genesisGlobal.scss';
+import DepthTitle from '@/components/DepthTitle/DepthTitle';
 export const metadata = {
   title:
     seo.title.subPage.detail.genesisGlobal + ' : ' + seo.title.subPage.works,
@@ -26,36 +27,50 @@ export default function GenesisGlobal() {
         webSiteUrl={works.content[12].websiteUrl}
         customChildren={
           <>
-            <ImageArray
-              imgUrl={works.imgUrl}
-              data={works.content[12].img_array.img}
-              bgColor={works.content[12].img_array.bg_color}
-            />
-            {/*bgColor={works.content[12].img_array.bg_color} */}
-            <Device
-              elementTitle={['Responsive Web']}
-              description={
-                <>
-                  제네시스 브랜드 사이트를 반응형 웹으로 구현하였고, 한국을
-                  비롯하여 캐나다, 호주, 중동 등 13개의 해외 주요 글로벌
-                  사이트로의 확산을 효과적으로 하였습니다.
-                </>
-              }
-              caption={['Korea', 'Middle East', 'Canada, Australia']}
-              imgUrl={[
-                '/assets/images/contents/works/img_phone_responsiveweb1_genesis.png',
-                '/assets/images/contents/works/img_phone_responsiveweb2_genesis.png',
-                '/assets/images/contents/works/img_phone_responsiveweb3_genesis.png',
-              ]}
-              alt={['Hyundai Genesis의 국문, 중동, 유럽 Main 화면 이미지']}
-              type="B"
-            />
+            {/* S: image_array 영역*/}
+            <section className="image_array">
+              <DepthTitle depthLevel="1" blindOption="hidden">
+                Website example image
+              </DepthTitle>
+              <ImageArray
+                imgUrl={works.imgUrl}
+                data={works.content[12].img_array.img}
+                bgColor={works.content[12].img_array.bg_color}
+              />
+            </section>
+            {/* S: image_array 영역*/}
+
+            {/* S: Device 영역*/}
+            <section className="device">
+              <DepthTitle depthLevel="1" blindOption="hidden">
+                Device example image
+              </DepthTitle>
+              <Device
+                elementTitle={['Responsive Web']}
+                description={
+                  <>
+                    제네시스 브랜드 사이트를 반응형 웹으로 구현하였고, 한국을
+                    비롯하여 캐나다, 호주, 중동 등 13개의 해외 주요 글로벌
+                    사이트로의 확산을 효과적으로 하였습니다.
+                  </>
+                }
+                caption={['Korea', 'Middle East', 'Canada, Australia']}
+                imgUrl={[
+                  '/assets/images/contents/works/img_phone_responsiveweb1_genesis.png',
+                  '/assets/images/contents/works/img_phone_responsiveweb2_genesis.png',
+                  '/assets/images/contents/works/img_phone_responsiveweb3_genesis.png',
+                ]}
+                alt={['Hyundai Genesis의 국문, 중동, 유럽 Main 화면 이미지']}
+                type="B"
+              />
+            </section>
           </>
         }
         firstNextWork={works.content[0]}
         secondNextWork={works.content[1]}
         thirdNextWork={works.content[2]}
       />
+      {/* E: Device 영역*/}
     </>
   );
 }

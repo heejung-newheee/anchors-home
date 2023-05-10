@@ -11,6 +11,7 @@ import seo from '@/helper/data/json/contents/SEO.json';
 import works from '@/helper/data/json/contents/works/works.json';
 
 import './scss/jPlatform.scss';
+import DepthTitle from '@/components/DepthTitle/DepthTitle';
 
 export const metadata = {
   title: seo.title.subPage.detail.jPlatform + ' : ' + seo.title.subPage.works,
@@ -30,10 +31,18 @@ export default function JPlatform() {
         webSiteUrl={works.content[2].websiteUrl}
         customChildren={
           <>
-            <Video videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" />
+            <section className="video">
+              <DepthTitle depthLevel="1" blindOption="hidden">
+                Promotion Video
+              </DepthTitle>
+              <Video videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" />
+            </section>
 
             {/* S: main 설명 영역 */}
             <section className="main_section">
+              <DepthTitle depthLevel="1" blindOption="hidden">
+                Website Introduction
+              </DepthTitle>
               <article className="main_text">
                 <ElementTitle data="Main" />
                 <Description
@@ -63,6 +72,9 @@ export default function JPlatform() {
 
             {/* S: PIP 설명 영역 */}
             <section className="pip_section">
+              <DepthTitle depthLevel="1" blindOption="hidden">
+                PIP Introduction
+              </DepthTitle>
               <article className="pip_text">
                 <ElementTitle data="PIP" />
                 <Description
@@ -75,46 +87,64 @@ export default function JPlatform() {
             {/* E: PIP 설명 영역 */}
 
             {/* S: device 영역 */}
-            <Device
-              elementTitle={['Configurator']}
-              description={
-                <>
-                  3D Configurator 및 쇼룸을 통해 원하는 차량 커스텀 및 간접적
-                  체험이 가능하고, 예상 견적을 제공합니다.
-                </>
-              }
-              caption={['1. Step setting', '2. Step setting', '3. Total']}
-              imgUrl={[
-                '/assets/images/contents/works/img_phone_configurator1_jplatform.png',
-                '/assets/images/contents/works/img_phone_configurator2_jplatform.png',
-                '/assets/images/contents/works/img_phone_configurator3_jplatform.png',
-              ]}
-              alt={['현대자동차 J플랫폼 Step setting, Total 화면 이미지']}
-              type="A"
-            />
-            <Device
-              elementTitle={['e-Commerce']}
-              description={
-                <>
-                  차량 및 부품 구매가 가능한 온라인 샵을 홈페이지와
-                  통합함으로서, 고객의 구매까지 이어지도록 하였습니다.
-                </>
-              }
-              caption={['1. Purchase', '2. Shop', '3. Shop category']}
-              imgUrl={[
-                '/assets/images/contents/works/img_phone_ecommerce1_jplatform.png',
-                '/assets/images/contents/works/img_phone_ecommerce2_jplatform.png',
-                '/assets/images/contents/works/img_phone_ecommerce3_jplatform.png',
-              ]}
-              alt={[
-                '현대자동차 J플랫폼 Purchase, Shop, Shop category 화면 이미지',
-              ]}
-              type="B"
-            />
+            <section className="device">
+              <DepthTitle depthLevel="1" blindOption="hidden">
+                Mobile example image
+              </DepthTitle>
+              <article className="Configurator_mobile">
+                <DepthTitle depthLevel="2" blindOption="hidden">
+                  Configurator mobile image
+                </DepthTitle>
+                <Device
+                  elementTitle={['Configurator']}
+                  description={
+                    <>
+                      3D Configurator 및 쇼룸을 통해 원하는 차량 커스텀 및
+                      간접적 체험이 가능하고, 예상 견적을 제공합니다.
+                    </>
+                  }
+                  caption={['1. Step setting', '2. Step setting', '3. Total']}
+                  imgUrl={[
+                    '/assets/images/contents/works/img_phone_configurator1_jplatform.png',
+                    '/assets/images/contents/works/img_phone_configurator2_jplatform.png',
+                    '/assets/images/contents/works/img_phone_configurator3_jplatform.png',
+                  ]}
+                  alt={['현대자동차 J플랫폼 Step setting, Total 화면 이미지']}
+                  type="A"
+                />
+              </article>
+              <article className="eCommerce_mobile">
+                <DepthTitle depthLevel="2" blindOption="hidden">
+                  E-Commerce mobile image
+                </DepthTitle>
+                <Device
+                  elementTitle={['e-Commerce']}
+                  description={
+                    <>
+                      차량 및 부품 구매가 가능한 온라인 샵을 홈페이지와
+                      통합함으로서, 고객의 구매까지 이어지도록 하였습니다.
+                    </>
+                  }
+                  caption={['1. Purchase', '2. Shop', '3. Shop category']}
+                  imgUrl={[
+                    '/assets/images/contents/works/img_phone_ecommerce1_jplatform.png',
+                    '/assets/images/contents/works/img_phone_ecommerce2_jplatform.png',
+                    '/assets/images/contents/works/img_phone_ecommerce3_jplatform.png',
+                  ]}
+                  alt={[
+                    '현대자동차 J플랫폼 Purchase, Shop, Shop category 화면 이미지',
+                  ]}
+                  type="B"
+                />
+              </article>
+            </section>
             {/* E: device 영역 */}
 
             {/* S: Identity system 설명 영역 */}
             <section className="identity_section">
+              <DepthTitle depthLevel="1" blindOption="hidden">
+                Website Identity Introduction
+              </DepthTitle>
               <article className="identity_text">
                 <ElementTitle data="Identity system" />
                 <Description

@@ -7,6 +7,7 @@ import seo from '@/helper/data/json/contents/SEO.json';
 import works from '@/helper/data/json/contents/works/works.json';
 
 import './scss/koreanAirAndroid.scss';
+import DepthTitle from '@/components/DepthTitle/DepthTitle';
 
 export const metadata = {
   title:
@@ -27,24 +28,29 @@ export default function KoreanAir_Android() {
         workContent={works.content[7].projectInfomation}
         customChildren={
           <>
-            <Device
-              elementTitle={['App']}
-              description={
-                <>
-                  대한항공과 사용자가 지속적인 여행 파트너가 될 수 있도록
-                  구현하고 직관적인 UI를 통해 사용자의 디지털 경험을
-                  강화했습니다.
-                </>
-              }
-              caption={['1. 항공기 안내', '2. 기종안내', '3. 기종안내']}
-              imgUrl={[
-                '/assets/images/contents/works/img_phone_app1_koreanairandroid.png',
-                '/assets/images/contents/works/img_phone_app2_koreanairandroid.png',
-                '/assets/images/contents/works/img_phone_app3_koreanairandroid.png',
-              ]}
-              alt={['대한항공 App 항공기 안내, 기종안내 화면 이미지']}
-              type="A"
-            />
+            <section className="device_example">
+              <DepthTitle depthLevel="1" blindOption="hidden">
+                Application example image
+              </DepthTitle>
+              <Device
+                elementTitle={['App']}
+                description={
+                  <>
+                    대한항공과 사용자가 지속적인 여행 파트너가 될 수 있도록
+                    구현하고 직관적인 UI를 통해 사용자의 디지털 경험을
+                    강화했습니다.
+                  </>
+                }
+                caption={['1. 항공기 안내', '2. 기종안내', '3. 기종안내']}
+                imgUrl={[
+                  '/assets/images/contents/works/img_phone_app1_koreanairandroid.png',
+                  '/assets/images/contents/works/img_phone_app2_koreanairandroid.png',
+                  '/assets/images/contents/works/img_phone_app3_koreanairandroid.png',
+                ]}
+                alt={['대한항공 App 항공기 안내, 기종안내 화면 이미지']}
+                type="A"
+              />
+            </section>
           </>
         }
         firstNextWork={works.content[8]}

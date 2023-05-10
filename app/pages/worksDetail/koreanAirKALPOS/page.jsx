@@ -25,26 +25,31 @@ export default function KoreanAir_KALPOS() {
         workContent={works.content[5].projectInfomation}
         customChildren={
           <>
-            <Device
-              elementTitle={['App']}
-              description={
-                <>
-                  KALPOS 블루투스 통신 모듈을
-                  <br />
-                  개발하였습니다.
-                </>
-              }
-              caption={['1. Index', '2. Meal Inventory', '2. Meal Inventory']}
-              imgUrl={[
-                '/assets/images/contents/works/img_phone_app1_koreanair.png',
-                '/assets/images/contents/works/img_phone_app2_koreanair.png',
-                '/assets/images/contents/works/img_phone_app3_koreanair.png',
-              ]}
-              alt={[
-                '대한항공 KALPOS App Index, Meal Inventory, Meal Order 화면 이미지',
-              ]}
-              type="B"
-            />
+            <section className="device_example">
+              <DepthTitle depthLevel="1" blindOption="hidden">
+                Application example image
+              </DepthTitle>
+              <Device
+                elementTitle={['App']}
+                description={
+                  <>
+                    KALPOS 블루투스 통신 모듈을
+                    <br />
+                    개발하였습니다.
+                  </>
+                }
+                caption={['1. Index', '2. Meal Inventory', '2. Meal Inventory']}
+                imgUrl={[
+                  '/assets/images/contents/works/img_phone_app1_koreanair.png',
+                  '/assets/images/contents/works/img_phone_app2_koreanair.png',
+                  '/assets/images/contents/works/img_phone_app3_koreanair.png',
+                ]}
+                alt={[
+                  '대한항공 KALPOS App Index, Meal Inventory, Meal Order 화면 이미지',
+                ]}
+                type="B"
+              />
+            </section>
           </>
         }
         firstNextWork={works.content[6]}
