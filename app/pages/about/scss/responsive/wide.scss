@@ -50,7 +50,7 @@
             bottom: 23.7rem;
           }
           .intro_text {
-            p {
+            .intro_disclaimer {
               margin-bottom: 24.4rem;
             }
           }
@@ -68,7 +68,7 @@
         margin: 0 auto 12rem;
         padding: 0 14rem;
       }
-      div.profile_development {
+      .profile_development {
         padding: 0 14rem 24.6rem;
 
         .profile_grow_number {
@@ -78,7 +78,7 @@
           left: -31.9rem;
         }
       }
-      div.profile_award {
+      .profile_award {
         padding: 25.4rem 14rem 0;
         .profile_award_description {
           margin-bottom: 10rem;
@@ -95,7 +95,7 @@
           }
         }
       }
-      div.profile_partner {
+      .profile_partner {
         .description {
           margin: 16rem auto 12rem;
           padding: 0 14rem;
