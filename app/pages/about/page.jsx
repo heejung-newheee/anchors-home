@@ -67,7 +67,7 @@ function About() {
       {/* S: about intro swiper 영역*/}
       <section className="about_intro_swiper section_div is_photo">
         <DepthTitle depthLevel="1" blindOption="hidden">
-          Anchors Intro Swiper
+          Anchors Introduction
         </DepthTitle>
         <SwiperArea
           key="swiper01"
@@ -112,7 +112,7 @@ function About() {
         </DepthTitle>
         <section className="profile_development">
           <DepthTitle depthLevel="2" blindOption="hidden">
-            Anchors Profile Development
+            About Anchors Development History
           </DepthTitle>
           <Description
             className="profile_grow_text"
@@ -143,7 +143,7 @@ function About() {
         </section>
         <section className="profile_award">
           <DepthTitle depthLevel="2" blindOption="hidden">
-            Anchors Profile Award
+            About Anchors Awards List
           </DepthTitle>
           <Description
             innerHTMLOption="Y"
@@ -171,7 +171,7 @@ function About() {
         </section>
         <section className="profile_partner">
           <DepthTitle depthLevel="2" blindOption="hidden">
-            Anchors Profile Partner
+            About Anchors Partners List
           </DepthTitle>
           <Description
             innerHTMLOption="Y"
@@ -225,7 +225,7 @@ function About() {
         </section>
         {/* S: about members swiper 영역*/}
         <DepthTitle depthLevel="1" blindOption="hidden">
-          Anchors Intro Swiper
+          About Anchors Members Introduction
         </DepthTitle>
         <SwiperArea
           key="swiper04"

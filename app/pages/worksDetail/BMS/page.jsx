@@ -121,6 +121,7 @@ export default function BMS() {
         }
         subVisualImgUrl={works.imgUrl + works.content[3].subVisual}
         workContent={works.content[3].projectInfomation}
+        webSiteUrl={works.content[3].websiteUrl}
         firstNextWork={works.content[4]}
         secondNextWork={works.content[5]}
         thirdNextWork={works.content[6]}

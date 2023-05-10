@@ -16,6 +16,7 @@ export default function MyAIA() {
         detailTextDescKo={works.content[4].text.ko}
         subVisualImgUrl={works.imgUrl + works.content[4].subVisual}
         workContent={works.content[4].projectInfomation}
+        webSiteUrl={works.content[4].websiteUrl}
         firstNextWork={works.content[5]}
         secondNextWork={works.content[6]}
         thirdNextWork={works.content[7]}

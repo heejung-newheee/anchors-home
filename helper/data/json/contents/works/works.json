@@ -78,7 +78,7 @@
       "thumbnail": "img_thumbnail_bms.jpg",
       "thumbnailAlt": "현대자동차 브랜드홈(BMS 2.0) 개편 구축 이미지",
       "pageUrl": "/pages/worksDetail/BMS",
-      "websiteUrl": "",
+      "websiteUrl": "https://bms.hmc.co.kr/",
       "visual": "img_keyvisual_bms.jpg",
       "subVisual": "img_subvisual_bms.jpg",
       "text": {
@@ -100,7 +100,7 @@
       "thumbnail": "img_thumbnail_aia.jpg",
       "thumbnailAlt": "AIA생명 ‘MY AIA’ 보험금 청구 화면 개편 이미지",
       "pageUrl": "/pages/worksDetail/myAIA",
-      "websiteUrl": "",
+      "websiteUrl": "https://www.aia.co.kr/ko/my-aia/pre-login.html",
       "visual": "img_keyvisual_aia.jpg",
       "subVisual": "img_subvisual_aia.jpg",
       "text": {
@@ -144,7 +144,7 @@
       "thumbnail": "img_thumbnail_kia.jpg",
       "thumbnailAlt": "기아 주식회사 K-WCMS 인도법인 확산 및 딜러사이트 구축 이미지",
       "pageUrl": "/pages/worksDetail/WCMS",
-      "websiteUrl": "",
+      "websiteUrl": "https://www.kia.com/in",
       "visual": "img_keyvisual_kia.jpg",
       "subVisual": "img_subvisual_kia.jpg",
       "text": {
@@ -201,7 +201,7 @@
       "thumbnail": "img_thumbnail_myhyundai.jpg",
       "thumbnailAlt": "현대자동차 고객서비스통합 APP 'myHyundai App' 구축 이미지",
       "pageUrl": "/pages/worksDetail/myHyundai",
-      "websiteUrl": "",
+      "websiteUrl": "https://www.hyundai.com/kr/ko/app-download",
       "visual": "img_keyvisual_myhyundai.jpg",
       "subVisual": "img_subvisual_muhyundai.jpg",
       "text": {
@@ -223,7 +223,7 @@
       "thumbnail": "img_thumbnail_happymove.jpg",
       "thumbnailAlt": "현대자동차그룹 Happy Move 웹사이트 구축 이미지",
       "pageUrl": "/pages/worksDetail/happyMove",
-      "websiteUrl": "",
+      "websiteUrl": "https://happymove.hyundaimotorgroup.com/",
       "visual": "img_keyvisual_happymove.jpg",
       "subVisual": "img_subvisual_happymove.jpg",
       "text": {
@@ -258,7 +258,7 @@
       "thumbnail": "img_thumbnail_nbrand.jpg",
       "thumbnailAlt": "현대자동차그룹 N-brand 웹사이트 구축 이미지",
       "pageUrl": "/pages/worksDetail/nBrand",
-      "websiteUrl": "",
+      "websiteUrl": "https://www.hyundai-n.com/",
       "visual": "img_keyvisual_nbrand.jpg",
       "subVisual": "img_subvisual_nbrand.jpg",
       "text": {
@@ -280,7 +280,7 @@
       "thumbnail": "img_thumbnail_wwn.jpg",
       "thumbnailAlt": "현대자동차 WWN 3.0 국내 통합 개편 구축 이미지",
       "pageUrl": "/pages/worksDetail/WWN",
-      "websiteUrl": "",
+      "websiteUrl": "https://www.hyundai.com",
       "visual": "img_keyvisual_wwn.jpg",
       "subVisual": "img_subvisual_wwn.jpg",
       "text": {
