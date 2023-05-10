@@ -18,11 +18,11 @@ function MoreDetail({ className, imgUrl, imgAlt, children }) {
       ? { className: 'detail_slide' }
       : { className: 'detail_slide' + className };
   return (
-    <div {...GET_CLASSNAME}>
+    <article {...GET_CLASSNAME}>
       <img src={imgUrl} alt={imgAlt} />
       <Btn className="detail_btn" type="button" onClick={SHOW_DETAIL} />
       <div className="detail">{children}</div>
-    </div>
+    </article>
   );
 }
 

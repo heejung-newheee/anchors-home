@@ -18,19 +18,19 @@ header_next : (대소문자 구별하지 않는) 프로퍼티, Attributes
 */
 
 export default function Header({ className }) {
-  const location = usePathname();
+  const LOCATION = usePathname();
 
-  const cl = React.useMemo(
+  const CL = React.useMemo(
     () =>
-      pagesIsBgBlack.includes(location)
+      pagesIsBgBlack.includes(LOCATION)
         ? 'is_black'
-        : pagesIsBgWhite.includes(location)
+        : pagesIsBgWhite.includes(LOCATION)
         ? 'is_white'
         : 'is_photo',
-    [location],
+    [LOCATION],
   );
 
-  const [headerBgType, setHeaderBgType] = useState(cl);
+  const [headerBgType, setHeaderBgType] = useState(CL);
 
   const HandleScroll = () => {
     const HEADER = document.querySelector('.header');
@@ -71,8 +71,8 @@ export default function Header({ className }) {
   // const linkLocation = use
   // const routers = useRouter();
   useEffect(() => {
-    setHeaderBgType(cl);
-  }, [location]);
+    setHeaderBgType(CL);
+  }, [LOCATION]);
 
   const GET_CLASSNAME =
     className == undefined

@@ -14,7 +14,7 @@ const LottiePlayer = forwardRef(
 
     useImperativeHandle(ref, () => ({
       controll(value) {
-        console.log('로티 컴포넌트', value);
+        // console.log('로티 컴포넌트', value);
         switch (value) {
           case 'play':
             LOTTIE_REF.current.play();

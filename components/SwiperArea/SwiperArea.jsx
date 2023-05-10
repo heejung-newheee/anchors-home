@@ -116,7 +116,7 @@ function SwiperArea({
     )),
   ];
 
-  const swiperRef = React.useRef(null);
+  const SWIPER_REF = React.useRef(null);
 
   if (type === 'double') {
     return (
@@ -166,10 +166,10 @@ function SwiperArea({
     <div
       className="single_swiper_wrap"
       onMouseEnter={() =>
-        autoPlayStop === 'Y' ? swiperRef.current.swiper.autoplay.stop() : ''
+        autoPlayStop === 'Y' ? SWIPER_REF.current.swiper.autoplay.stop() : ''
       }
       onMouseLeave={() =>
-        autoPlayStop === 'Y' ? swiperRef.current.swiper.autoplay.start() : ''
+        autoPlayStop === 'Y' ? SWIPER_REF.current.swiper.autoplay.start() : ''
       }
     >
       {/* S: single swiper */}
@@ -178,7 +178,7 @@ function SwiperArea({
         modules={SWIPER_MODULE}
         {...COMPUTED_SWIPER_OPTION}
         {...GET_CLASSNAME}
-        ref={swiperRef}
+        ref={SWIPER_REF}
       >
         {SINGLE_SWIPER_MAP}
       </Swiper>
