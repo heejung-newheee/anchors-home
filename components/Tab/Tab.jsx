@@ -1,12 +1,11 @@
 'use client';
 
-import Link from 'next/link';
 import React from 'react';
 
-import TabButton from '@/components/TabButton/TabButton';
-import TabContents from '@/components/TabContents/TabContents';
 import BaseArticle from '@/components/BaseArticle/BaseArticle';
 import Btn from '@/components/Btn/Btn';
+import TabButton from '@/components/TabButton/TabButton';
+import TabContents from '@/components/TabContents/TabContents';
 
 const DEFAULT_INDEX = 0;
 const DEFAULT_COUNT = 6;

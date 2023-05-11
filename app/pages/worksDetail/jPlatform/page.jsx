@@ -1,17 +1,15 @@
 import React from 'react';
 
+import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import Device from '@/components/Device/Device';
-import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
-import ImageArray from '@/components/ImageArray/ImageArray';
 import Video from '@/components/Video/Video';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import seo from '@/helper/data/json/contents/SEO.json';
 import works from '@/helper/data/json/contents/works/works.json';
 
 import './scss/jPlatform.scss';
-import DepthTitle from '@/components/DepthTitle/DepthTitle';
 
 export const metadata = {
   title: seo.title.subPage.detail.jPlatform + ' : ' + seo.title.subPage.works,

@@ -2,9 +2,8 @@ import React from 'react';
 
 import PageTitle from '@/components/PageTitle/PageTitle';
 import Tab from '@/components/Tab/Tab';
-
-import seo from '@/helper/data/json/contents/SEO.json';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
+import seo from '@/helper/data/json/contents/SEO.json';
 import worksList from '@/helper/data/json/contents/works/works.json';
 
 import './scss/works.scss';
