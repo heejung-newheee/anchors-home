@@ -130,8 +130,8 @@ export default function JPlatform() {
                 />
               </article>
               <article className="identify_img">
-                <img src="/assets/images/contents/works/img_color_jplatform.jpg" />
-                <img src="/assets/images/contents/works/img_icon_jplatform.jpg" />
+                <img src="/assets/images/contents/works/img_color_jplatform.jpg" alt="현대자동차 J플랫폼 Identity system 이미지" />
+                <img src="/assets/images/contents/works/img_icon_jplatform.jpg" alt="현대자동차 J플랫폼 Identity system 이미지" />
               </article>
             </section>
             {/* E: Identity system 설명 영역 */}
