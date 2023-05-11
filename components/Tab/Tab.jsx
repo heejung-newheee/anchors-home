@@ -31,18 +31,20 @@ function Tab({ type = 'article', className, json, tabList, children }) {
         const IMG_URL = json.imgUrl;
         const JSON_FILTER = json.content.filter(({ sort }) => sort.includes(sortFilter));
 
-        return JSON_FILTER.map(({ sort, thumbnail, thumbnailAlt, title, description }, idx, array) =>
+        return JSON_FILTER.map(({ sort, thumbnail, thumbnailAlt, title, description, pageUrl }, idx, array) =>
           idx < sortContents
             ? ((SORT_CONTENT_LENGTH = array.length),
               (
-                <BaseArticle
-                  key={idx}
-                  imgUrl={IMG_URL + thumbnail}
-                  imgAlt={thumbnailAlt}
-                  elementTitle={title}
-                  description={description}
-                  defaultID={'sortContents_' + idx} // [2022-05-11 : CHO] scrollTrigger 설정을 위합 값 이벤트를 실행 하기 위한 target 값입니다.
-                />
+                <Btn type="a" url={pageUrl}>
+                  <BaseArticle
+                    key={idx}
+                    imgUrl={IMG_URL + thumbnail}
+                    imgAlt={thumbnailAlt}
+                    elementTitle={title}
+                    description={description}
+                    defaultID={'sortContents_' + idx} // [2022-05-11 : CHO] scrollTrigger 설정을 위합 값 이벤트를 실행 하기 위한 target 값입니다.
+                  />
+                </Btn>
               ))
             : '',
         );

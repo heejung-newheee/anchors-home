@@ -16,10 +16,10 @@ export default function BaseArticle({ imgUrl, imgAlt, elementTitle, description,
           <ScrollTriggerArea
             type="multiTrigger"
             triggerStart={{
-              mobile: '50%',
-              table: '50%',
-              desktop: '50%',
-              wide: '50%',
+              mobile: '20%',
+              table: '20%',
+              desktop: '20%',
+              wide: '20%',
             }}
             triggerEnd={{
               mobile: '100%',

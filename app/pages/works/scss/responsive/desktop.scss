@@ -2,12 +2,12 @@
   .our_works_list {
 
     .portfolio_list {
+      padding-bottom: 12rem;
       .tab_content_wrap {
         gap: 2.4rem;
 
-        .base_article {
+        a {
           width: calc(50% - 1.2rem);  // $our_works_list
-          padding-bottom: 9rem; // $our_works_list
 
           &:nth-child(2) {
             margin-top: 18rem; // $our_works_list
@@ -18,13 +18,35 @@
           &:first-child {
             margin-top: 0; // $our_works_list
           }
+          .base_article {
+            padding-bottom: 9rem; // $our_works_list
 
-          .element_title {
-            padding: 3rem 0.6rem 1.4rem; // $our_works_list
+            .element_title {
+              padding: 3rem 0.6rem 1.4rem; // $our_works_list
+            }
+
+            .description {
+              padding: 0 0.6rem; // $our_works_list
+              font-size: 16px;
+            }
           }
+        }
+      }
+    }
+    .view_more_btn {
+      margin: -108px auto 108px; // $our_works_list
+    }
 
-          .disclaimer {
-            padding: 0 0.6rem; // $our_works_list
+    .tab {
+      .tab_btn_wrap {
+        top: calc(100vh - 108px);
+        padding: 1.2rem;
+        .tab-button {
+          margin-left: 1.2rem;
+
+          button {
+            font-size: 22px;
+            padding: 1.4rem 3rem;
           }
         }
       }

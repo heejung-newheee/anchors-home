@@ -3,27 +3,32 @@
   background-color: transparent !important;
 
   .portfolio_list {
+    padding-bottom: 6rem;
     .tab_content_wrap {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       align-items: flex-start;
       gap: 0;
+      margin-top: -50px;
+      padding-bottom: 60px;
 
-      .base_article {
-        letter-spacing: $en_letterSpacing;
+      a {
         width: 100%; // $our_works_list
-        padding-bottom: 5rem; // $our_works_list
+        .base_article {
+          letter-spacing: $en_letterSpacing;
+          padding-bottom: 5rem; // $our_works_list
 
-        .element_title {
-          font-weight: 400;
-          padding: 2.2rem 0.2rem 0.8rem; // $our_works_list
+          .element_title {
+            font-weight: 400;
+            padding: 2.2rem 0.2rem 0.8rem; // $our_works_list
+          }
 
-        }
-
-        .disclaimer {
-          color: $color_darkgrey;
-          padding: 0 0.2rem; // $our_works_list
+          .description {
+            color: $color_darkgrey;
+            padding: 0 0.2rem; // $our_works_list
+            font-size: 14px;
+          }
         }
       }
     }
@@ -32,7 +37,8 @@
   .view_more_btn {
     position: relative;
     display: block;
-    margin: 0 auto 6rem; // $our_works_list
+    height: 68.5px;
+    margin: -74px auto 74px; // $our_works_list
     padding-bottom: 4.2rem; // $our_works_list
 
     &:after {
@@ -58,6 +64,48 @@
 
     span {
       @extend %font_disclaimer;
+    }
+  }
+
+  .tab {
+    position: relative;
+    .tab_btn_wrap {
+      position: sticky;
+      left: 50%;
+      top: calc(100vh - 72px);
+      transform: translateX(-50%);
+      z-index: 50;
+      padding: 0.8rem;
+      border-radius: 100rem;
+      background-color: rgba(0,0,0,0.6);
+      display: inline-block;
+      .tab-button {
+        display: inline-block;
+        margin-left: 0.8rem;
+
+        &:first-child {
+          margin-left: 0;
+        }
+        button {
+          font-size: 14px;
+          letter-spacing: $en_letterSpacing;
+          border: 1px solid rgba(255,255,255,0.6);
+          color: rgba(255,255,255,0.6);
+          border-radius: 100rem;
+          padding: 1rem 2rem;
+
+          span {
+            font-size: inherit;
+          }
+        }
+
+        &.is_active {
+          button {
+            background-color: $color-white;
+            color: $color-black;
+          }
+        }
+      }
     }
   }
 }

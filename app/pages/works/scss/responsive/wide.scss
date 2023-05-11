@@ -2,12 +2,12 @@
   .our_works_list {
 
     .portfolio_list {
+      padding-bottom: 14rem;
       .tab_content_wrap {
         gap: 2.4rem;
 
-        .base_article {
+        a {
           width: calc(50% - 1.2rem);  // $our_works_list
-          padding-bottom: 10rem; // $our_works_list
 
           &:nth-child(2) {
             margin-top: 20rem; // $our_works_list
@@ -19,12 +19,16 @@
             margin-top: 0; // $our_works_list
           }
 
-          .element_title {
-            padding: 3rem 0.6rem 1.6rem; // $our_works_list
-          }
+          .base_article {
+            padding-bottom: 10rem; // $our_works_list
 
-          .disclaimer {
-            padding: 0 0.6rem; // $our_works_list
+            .element_title {
+              padding: 3rem 0.6rem 1.6rem; // $our_works_list
+            }
+            .description {
+              padding: 0 0.6rem; // $our_works_list
+              font-size: 18px;
+            }
           }
         }
       }
