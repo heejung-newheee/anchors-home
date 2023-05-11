@@ -1,7 +1,7 @@
 'use client';
 
-function TabContents({ dataContents }) {
-  return <article className="tab_content_wrap">{dataContents}</article>;
+function TabContents({ children }) {
+  return <article className="tab_content_wrap">{children}</article>;
 }
 
 export default TabContents;

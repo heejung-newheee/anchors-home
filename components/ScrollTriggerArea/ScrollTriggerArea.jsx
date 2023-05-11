@@ -20,7 +20,7 @@ function ScrollTriggerArea({
   triggerScrub = 0.5,
   easing = 'elastic.out(0.1, 0)',
   duration = 1,
-  type,
+  type = 'multiTrigger',
   lottieOption,
   lottieStyle,
   XAxes,
@@ -33,9 +33,9 @@ function ScrollTriggerArea({
 }) {
   const COMPONENTS_REF = useRef();
   const [isActive, setIsActive] = useState();
-  const BREAKPOINT_MOBILE = useMediaQuery({ maxWidth: 768 });
-  const BREAKPOINT_TABLE = useMediaQuery({ maxWidth: 1280 });
-  const BREAKPOINT_DESKTOP = useMediaQuery({ maxWidth: 1536 });
+  const BREAKPOINT_MOBILE = useMediaQuery({ maxWidth: 767 });
+  const BREAKPOINT_TABLE = useMediaQuery({ maxWidth: 1279 });
+  const BREAKPOINT_DESKTOP = useMediaQuery({ maxWidth: 1535 });
   const CHILDREN_ARR = Array.isArray(children) ? children : [children];
 
   let TRIGGER_OPTION_START;
@@ -197,29 +197,29 @@ function ScrollTriggerArea({
       scrub={triggerScrub}
       markers={triggerMarkers}
       trigger={type === 'lottieTrigger' ? '.' + type : '.' + defaultID}
-      onEnter={(d) => {
+      onEnter={d => {
         setIsActive(d.isActive);
         if (type === 'lottieTrigger') {
           COMPONENTS_REF.current.controll('play');
         }
       }}
-      onLeave={(d) => {
+      onLeave={d => {
         if (type === 'lottieTrigger') {
           COMPONENTS_REF.current.controll('pause');
         }
       }}
-      onLeaveBack={(d) => {
+      onLeaveBack={d => {
         setIsActive(d.isActive);
         if (type === 'lottieTrigger') {
           COMPONENTS_REF.current.controll('pause');
         }
       }}
-      onEnterBack={(d) => {
+      onEnterBack={d => {
         if (type === 'lottieTrigger') {
           COMPONENTS_REF.current.controll('play');
         }
       }}
-      onUpdate={(d) => {}}
+      onUpdate={d => {}}
     >
       {TweenComponents()}
     </ScrollTrigger>
