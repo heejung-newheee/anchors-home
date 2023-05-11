@@ -1,12 +1,9 @@
 @include wide {
   .custom_area {
-    .bms_video_wrap {
+    .bms_video {
       max-width: 1440px;
       margin: 0 auto;
-      .bms_video {
-        margin: 0 4.8rem;
-        margin-bottom: 12rem;
-      }
+      margin-bottom: 12rem;
     }
     .custom_element_title {
       margin-bottom: 4rem;

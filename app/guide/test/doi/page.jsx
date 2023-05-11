@@ -17,9 +17,9 @@ export default function Doi() {
       {/* <Disclaimer data="disclaimer" /> */}
       {/* <Video videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" /> */}
       {/* <Footer /> */}
-      <About />
+      {/*<About />*/}
       {/*<MyAIA />*/}
-      {/*<BMS />*/}
+      <BMS />
       {/*<MyHyundai />*/}
       {/*<HappyMove />*/}
       {/*<WWN />*/}

@@ -23,12 +23,10 @@ export default function BMS() {
         detailTextDescKo={works.content[3].text.ko}
         customChildren={
           <>
-            <section className="bms_video_wrap">
-              <Video
-                className="bms_video"
-                videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
-              />
-            </section>
+            <Video
+              className="bms_video"
+              videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+            />
             <section className="main_wrap">
               <DepthTitle depthLevel="1" blindOption="hidden">
                 BMS Website Introduction
