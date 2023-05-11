@@ -77,7 +77,7 @@ function Main() {
                 {
                   mobile: '-360vh',
                   table: '-400vh',
-                  desktop: '-400vh',
+                  desktop: '-600vh',
                   wide: '-400vh',
                 },
               ]}
@@ -187,16 +187,16 @@ function Main() {
                   triggerStart={{
                     mobile: '280px',
                     table: '130px',
-                    desktop: '0px',
+                    desktop: '350px',
                     wide: '0px',
                   }}
                   triggerEnd={{
                     mobile: '3000vh',
                     table: '4000vh',
-                    desktop: '0px',
+                    desktop: '5300vh',
                     wide: '0px',
                   }}
-                  triggerMarkers={false}
+                  triggerMarkers={true}
                   fromScale={[
                     {
                       mobile: 1,
@@ -209,7 +209,7 @@ function Main() {
                     {
                       mobile: 30,
                       table: 40,
-                      desktop: 30,
+                      desktop: 60,
                       wide: 30,
                     },
                   ]}
@@ -283,9 +283,9 @@ function Main() {
               type="multiTrigger"
               triggerStart={{
                 mobile: '0',
-                table: '0px',
-                desktop: '0px',
-                wide: '0px',
+                table: '0',
+                desktop: '0',
+                wide: '0',
               }}
               triggerEnd={{
                 mobile: '4000vh',
@@ -293,7 +293,7 @@ function Main() {
                 desktop: '0px',
                 wide: '0px',
               }}
-              triggerMarkers={true}
+              triggerMarkers={false}
               XAxes={[
                 {
                   mobile: '-200%',
@@ -314,13 +314,13 @@ function Main() {
                     type="multiTrigger"
                     triggerStart={{
                       mobile: '-215px',
-                      table: '0px',
+                      table: '-390px',
                       desktop: '0px',
                       wide: '0px',
                     }}
                     triggerEnd={{
                       mobile: '1500vh',
-                      table: '0px',
+                      table: '1500vh',
                       desktop: '0px',
                       wide: '0px',
                     }}
@@ -345,13 +345,13 @@ function Main() {
                     type="multiTrigger"
                     triggerStart={{
                       mobile: '-350px',
-                      table: '0px',
+                      table: '-500px',
                       desktop: '0px',
                       wide: '0px',
                     }}
                     triggerEnd={{
                       mobile: '1500vh',
-                      table: '0px',
+                      table: '1500vh',
                       desktop: '0px',
                       wide: '0px',
                     }}
@@ -376,13 +376,13 @@ function Main() {
                     type="multiTrigger"
                     triggerStart={{
                       mobile: '-220px',
-                      table: '0px',
+                      table: '-220px',
                       desktop: '0px',
                       wide: '0px',
                     }}
                     triggerEnd={{
                       mobile: '2000vh',
-                      table: '0px',
+                      table: '2000vh',
                       desktop: '0px',
                       wide: '0px',
                     }}
@@ -411,15 +411,15 @@ function Main() {
             type="multiTrigger"
             triggerStart={{
               mobile: '0',
-              table: '0px',
-              desktop: '0px',
-              wide: '0px',
+              table: '0',
+              desktop: '0',
+              wide: '0',
             }}
             triggerEnd={{
               mobile: '4500vh',
-              table: '0px',
-              desktop: '0px',
-              wide: '0px',
+              table: '4500vh',
+              desktop: '0',
+              wide: '0',
             }}
             triggerOffset={'center'}
             triggerMarkers={false}

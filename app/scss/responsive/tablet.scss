@@ -104,6 +104,13 @@
           .text_ourworks {
             font-size: 24.3vh;
           }
+          .ourworks_img {
+            max-width: 25.8rem;
+            &:nth-child(3) {
+              top: -5.5%;
+              left: 85%;
+            }
+          }
         }
       }
     }

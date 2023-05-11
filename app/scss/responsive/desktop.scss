@@ -1,2 +1,74 @@
 @include desktop {
+  .main {
+
+    .intro_area {
+
+      .intro_en {
+        padding: 0 9rem 5rem;
+      }
+      a {
+        margin-top: 6rem;
+      }
+    }
+
+    .about_us {
+      padding-top: 18.6rem;
+      .keyvisual_wrap {
+        padding: 0 21.7rem;
+        .text_keyvisual_wrap {
+          height: 33vw;
+        }
+        .text_keyvisual {
+          height: 33vw;
+        }
+        .smile_keyvisual {
+          top: -6%;
+          right: 17%;
+          width: 10vw;
+        }
+        .underline_keyvisual {
+          top: 10.5%;
+          right: 11%;
+          width: 45vw;
+        }
+        .ourwork_keyvisual {
+          bottom: 18%;
+          left: 7.5%;
+          width: 100px;
+          transform: translateX(34%);
+        }
+        .keyvisual_disclaimer {
+          max-width: 80rem; // $main
+          padding-top: 0;
+        }
+      }
+    }
+
+    .service {
+      .rolling_wrap {
+        .rolling_text {
+          .text_expertis,
+          .text_e {
+            font-size: 83.5vh;
+          }
+          .expertise_img {
+            max-width: 34.2rem;
+            width: 43vh;
+            &:nth-child(1) {
+              top: 7.5%;
+              left: 9%;
+            }
+            &:nth-child(2) {
+              top: 65%;
+              left: 41%;
+            }
+            &:nth-child(3) {
+              top: 12.5%;
+              left: 109%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
