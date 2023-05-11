@@ -15,48 +15,36 @@ function Tab({ type, className, json, tabList, children }) {
   const [sortFilter, setSortFilter] = React.useState(tabList[DEFAULT_INDEX]);
   const [sortContents, setSortContents] = React.useState(DEFAULT_COUNT);
 
-  const SORT_CONTENT_LENGTH = json ? json.content.length : 0;
+  let SORT_CONTENT_LENGTH = json ? json.content.length : 0;
   function TabButtonEvent(button, index) {
-    console.log();
-
-    type === 'portfolioList'
-      ? (setSortFilter(button), setSortContents(DEFAULT_COUNT))
-      : setTabCurrent(index);
+    type === 'portfolioList' ? (setSortFilter(button), setSortContents(DEFAULT_COUNT)) : setTabCurrent(index);
   }
 
   function moreEvent() {
-    setSortContents(
-      sortContents + DEFAULT_COUNT >= SORT_CONTENT_LENGTH
-        ? SORT_CONTENT_LENGTH
-        : sortContents + DEFAULT_COUNT,
-    );
+    setSortContents(sortContents + DEFAULT_COUNT >= SORT_CONTENT_LENGTH ? SORT_CONTENT_LENGTH : sortContents + DEFAULT_COUNT);
   }
 
   function TabContentsEvent() {
     switch (type) {
       case 'portfolioList':
         const IMG_URL = json.imgUrl;
+        const JSON_FILTER = json.content.filter(({ sort }) => sort.includes(sortFilter));
 
-        return json.content.map(
-          ({ sort, thumbnail, thumbnailAlt, title, description }, idx, array) =>
-            sort.includes(sortFilter) ? (
-              idx < sortContents ? (
+        return JSON_FILTER.map(({ sort, thumbnail, thumbnailAlt, title, description }, idx, array) =>
+          idx < sortContents
+            ? ((SORT_CONTENT_LENGTH = array.length),
+              (
                 <BaseArticle
                   key={idx}
                   imgUrl={IMG_URL + thumbnail}
                   imgAlt={thumbnailAlt}
                   elementTitle={title}
                   description={description}
-                  defaultID={'sort_' + idx}
+                  defaultID={'sortContents_' + idx}
                 />
-              ) : (
-                ''
-              )
-            ) : (
-              ''
-            ),
+              ))
+            : '',
         );
-
       case 'article':
         return children[tabCurrent];
     }
@@ -66,23 +54,14 @@ function Tab({ type, className, json, tabList, children }) {
     <section className={`tab ${className}`} data-tab-type={type}>
       <ul className="tab_btn_wrap">
         {BUTTON_ARR.map((button, idx) => (
-          <TabButton
-            current={tabCurrent}
-            index={idx}
-            key={idx}
-            event={() => TabButtonEvent(button, idx)}
-          >
+          <TabButton current={tabCurrent} index={idx} key={idx} event={() => TabButtonEvent(button, idx)}>
             {button}
           </TabButton>
         ))}
       </ul>
       <TabContents dataContents={TabContentsEvent()} />
-      {type === 'portfolioList' && sortContents !== SORT_CONTENT_LENGTH ? (
-        <Btn
-          type="button"
-          className="view_more_btn"
-          onClick={() => moreEvent()}
-        >
+      {type === 'portfolioList' && sortContents < SORT_CONTENT_LENGTH && sortContents !== SORT_CONTENT_LENGTH ? (
+        <Btn type="button" className="view_more_btn" onClick={() => moreEvent()}>
           View more
         </Btn>
       ) : (
