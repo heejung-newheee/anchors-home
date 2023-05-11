@@ -90,7 +90,6 @@ const Carousel = ({ images = [] }) => {
   useFrame(() => {
     const autoScrollSpeed = !isOver.current ? 1.5 / images.length : 0;
     progress.current = Math.max(-50, progress.current + autoScrollSpeed);
-    console.log(isOver.current)
 
     const active =
       Math.floor((progress.current / 100) * ($items.length - 1)) %
