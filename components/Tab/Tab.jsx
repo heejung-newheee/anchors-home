@@ -9,7 +9,7 @@ import TabContents from '@/components/TabContents/TabContents';
 
 const DEFAULT_INDEX = 0;
 const DEFAULT_COUNT = 6;
-function Tab({ type, className, json, tabList, children }) {
+function Tab({ type = 'article', className, json, tabList, children }) {
   const BUTTON_ARR = Array.isArray(tabList) ? tabList : [tabList];
   const [tabCurrent, setTabCurrent] = React.useState(DEFAULT_INDEX);
   const [sortFilter, setSortFilter] = React.useState(tabList[DEFAULT_INDEX]);
@@ -17,7 +17,8 @@ function Tab({ type, className, json, tabList, children }) {
 
   let SORT_CONTENT_LENGTH = json ? json.content.length : 0;
   function TabButtonEvent(button, index) {
-    type === 'portfolioList' ? (setSortFilter(button), setSortContents(DEFAULT_COUNT)) : setTabCurrent(index);
+    setTabCurrent(index);
+    if (type === 'portfolioList') setSortFilter(button), setSortContents(DEFAULT_COUNT);
   }
 
   function moreEvent() {
