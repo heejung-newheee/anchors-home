@@ -46,7 +46,7 @@
       .sub_visual_text {
         .description {
           font-size: 4.2rem;
-          line-height: 4.2rem;
+          line-height: 100%;
         }
         .base_article {
           .description {
@@ -65,8 +65,9 @@
       div {
         display: flex;
         justify-content: space-between;
-        a {
-          margin-right: 1.6rem;
+        .next_work_list {
+          width: 32%;
+          margin-right: 2%;
           &:last-child {
             margin-right: 0;
           }
