@@ -19,7 +19,7 @@ export default function Doi() {
       {/* <Footer /> */}
       {/*<About />*/}
       {/*<MyAIA />*/}
-      <BMS />
+      {/* <BMS /> */}
       {/*<MyHyundai />*/}
       {/*<HappyMove />*/}
       {/*<WWN />*/}

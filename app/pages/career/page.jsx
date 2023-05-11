@@ -112,17 +112,13 @@ function Career() {
                 {/*/>*/}
                 <MoreDetail
                   key={`detail${idx}`}
-                  imgUrl={careerComment.imgUrl + cont.img}
-                  children={
-                    <>
-                      <Description
-                        innerHTMLOption="Y"
-                        data={cont.highlightText}
-                      />
-                      <Disclaimer data={cont.text} />
-                    </>
-                  }
-                />
+                  imgUrl={careerComment.imgUrl + cont.img}>
+                    <Description
+                      innerHTMLOption="Y"
+                      data={cont.highlightText}
+                    />
+                    <Disclaimer data={cont.text} />
+                </MoreDetail>
               </>
             </div>
           ))}

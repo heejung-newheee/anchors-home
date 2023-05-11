@@ -20,14 +20,12 @@ export default function Video({ videoUrl, className }) {
       <Btn
         className="video_btn"
         type="button"
-        onClick={VIDEO_PLAY}
-        children={
+        onClick={VIDEO_PLAY}>
           <img
             src="/assets/images/ico/ico_btn_play.svg"
             alt="video play button"
           />
-        }
-      />
+      </Btn>
     </div>
   );
 }

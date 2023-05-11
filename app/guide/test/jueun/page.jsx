@@ -90,7 +90,7 @@ export default function Jueun() {
           </div>
         ))}
         secondContent={aboutIntro.introduction.map((cont, idx) => (
-          <div>
+          <div key={idx}>
             <p>{cont.text}</p>
           </div>
         ))}

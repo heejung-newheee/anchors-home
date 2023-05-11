@@ -75,9 +75,8 @@ function About() {
           firstClassName="image_swiper"
           secondClassName="text_swiper"
           firstContent={aboutIntro.introduction.map((cont, idx) => (
-            <span>
+            <span key={`sw01-img-${idx}`}>
               <img
-                key={`sw01-img-${idx}`}
                 src={aboutIntro.imgUrl + cont.img}
                 alt={cont.alt}
               />
@@ -180,9 +179,8 @@ function About() {
           <article>
             <InfiniteRolling className="about_partner">
               {aboutProfile.customerLogo.map((cont, idx) => (
-                <span>
+                <span key={idx}>
                   <img
-                    key={idx}
                     src={aboutProfile.imgUrl + cont.img}
                     alt={cont.alt}
                   />
@@ -191,9 +189,8 @@ function About() {
             </InfiniteRolling>
             <InfiniteRolling className="about_partner" reverse="Y">
               {aboutProfile.customerLogo.map((cont, idx) => (
-                <span>
+                <span key={idx}>
                   <img
-                    key={idx}
                     src={aboutProfile.imgUrl + cont.img}
                     alt={cont.alt}
                   />
@@ -252,19 +249,17 @@ function About() {
               <ElementTitle data={cont.nameEn} className="member_name_en" />
               <MoreDetail
                 imgUrl={aboutMembers.imgUrl + cont.img}
-                imgAlt={cont.alt}
-                children={
-                  <article>
-                    <ElementTitle data={cont.nameKo} />
-                    <Description className="member_team" data={cont.part} />
-                    <Description
-                      innerHTMLOption="Y"
-                      className="member_hashtag"
-                      data={cont.hashtag}
-                    />
-                  </article>
-                }
-              />
+                imgAlt={cont.alt}>
+                <article>
+                  <ElementTitle data={cont.nameKo} />
+                  <Description className="member_team" data={cont.part} />
+                  <Description
+                    innerHTMLOption="Y"
+                    className="member_hashtag"
+                    data={cont.hashtag}
+                  />
+                </article>
+              </MoreDetail>
             </article>
           ))}
         />
