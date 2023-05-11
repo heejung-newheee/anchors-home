@@ -18,6 +18,7 @@ const CarouselItem = ({ index, width, height, item, onHandOver }) => {
     });
 
     onHandOver?.(hover);
+    console.log(hover);
   }, [hover, onHandOver]);
 
   return (

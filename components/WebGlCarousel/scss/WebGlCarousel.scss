@@ -1,5 +1,25 @@
 .main {
   .main-carousel {
-    height: 100vh;
+    height: 90vw;
   }
 }
+@include tablet {
+  .main {
+    .main-carousel {
+      height: 60vw;
+    }
+  }
+}
+@include desktop {
+  .main {
+    .main-carousel {
+      height: 45vw;
+    }
+  }
+}
+@include wide {
+  .main {
+    .main-carousel {
+      height: 40vw;
+    }
+  }}

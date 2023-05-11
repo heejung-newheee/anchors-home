@@ -1,4 +1,4 @@
-import { useRef, useState, useMemo } from 'react';
+import React, { useRef, useState, useMemo } from 'react';
 
 import { useFrame, useThree } from '@react-three/fiber';
 import gsap from 'gsap';
@@ -8,22 +8,21 @@ import PostProcessing from './PostProcessing';
 import { getPiramidalIndex, lerp } from './utils';
 
 const planeSettings = {
-  width: 1.5,
-  height: 3.6,
-  gap: 0.1,
+  width: 1.6,
+  height: 4.5,
+  gap: 0.15,
 };
 
 gsap.defaults({
-  duration: 2,
+  duration: 1,
   ease: 'none',
 });
 
 const Carousel = ({ images = [] }) => {
+  const isOver = useRef(false);
   const [$root, setRoot] = useState();
   const $post = useRef();
   const { viewport } = useThree();
-
-  const [isMouseOver, setIsMouseOver] = useState(false);
 
   const progress = useRef(-50);
   const oldProgress = useRef(0);
@@ -54,7 +53,7 @@ const Carousel = ({ images = [] }) => {
 
       gsap.to(item.position, {
         x: (index - active - half) * (planeSettings.width + planeSettings.gap),
-        y: $items.length * -0.3 + piramidalIndex * 0.3,
+        y: $items.length * -0.3 + piramidalIndex * 0.3 + 1.1,
       });
     } else {
       if (active - index === 1) {
@@ -67,7 +66,7 @@ const Carousel = ({ images = [] }) => {
         x:
           (index - active - half + $items.length) *
           (planeSettings.width + planeSettings.gap),
-        y: $items.length * -0.3 + piramidalIndex * 0.3,
+        y: $items.length * -0.3 + piramidalIndex * 0.3 + 1.1,
       });
     }
 
@@ -89,8 +88,9 @@ const Carousel = ({ images = [] }) => {
   };
 
   useFrame(() => {
-    const autoScrollSpeed = !isMouseOver ? 0.7 / images.length : 0;
+    const autoScrollSpeed = !isOver.current ? 1.5 / images.length : 0;
     progress.current = Math.max(-50, progress.current + autoScrollSpeed);
+    console.log(isOver.current)
 
     const active =
       Math.floor((progress.current / 100) * ($items.length - 1)) %
@@ -107,6 +107,7 @@ const Carousel = ({ images = [] }) => {
     if ($post.current) {
       $post.current.thickness = speed.current;
     }
+
   });
 
   const renderPlaneEvents = () => {
@@ -118,6 +119,10 @@ const Carousel = ({ images = [] }) => {
     );
   };
 
+  const _setOver = (value) => {
+    isOver.current = value;
+  };
+
   const renderSlider = () => {
     return (
       <group ref={setRoot}>
@@ -125,7 +130,7 @@ const Carousel = ({ images = [] }) => {
           <CarouselItem
             width={planeSettings.width}
             height={planeSettings.height}
-            onHandOver={(value) => setIsMouseOver(value)}
+            onHandOver={(value) => _setOver(value)}
             key={`${item.image}-${i}`}
             item={item}
             index={i}
