@@ -64,7 +64,8 @@
       @extend %layout_fix;
       margin-bottom: 4rem;
     }
-    div {
+    .identity_img {
+      display: block;
       padding: 0 4rem;
     }
   }

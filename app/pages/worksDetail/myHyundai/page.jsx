@@ -6,6 +6,7 @@ import seo from '@/helper/data/json/contents/SEO.json';
 import works from '@/helper/data/json/contents/works/works.json';
 
 import './scss/myHyundai.scss';
+import DepthTitle from '@/components/DepthTitle/DepthTitle';
 
 export const metadata = {
   title: seo.title.subPage.detail.myHyundai + ' : ' + seo.title.subPage.works,
@@ -22,6 +23,9 @@ export default function MyHyundai() {
         detailTextDescKo={works.content[8].text.ko}
         customChildren={
           <div className="myhyundai_device_wrap">
+            <DepthTitle depthLevel="1" blindOption="hidden">
+              About MyHyundai App Device
+            </DepthTitle>
             <Device
               className="myhyundai_device"
               type="A"

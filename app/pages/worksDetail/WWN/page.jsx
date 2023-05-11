@@ -1,5 +1,6 @@
 import React from 'react';
 
+import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Device from '@/components/Device/Device';
 import ImageArray from '@/components/ImageArray/ImageArray';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
@@ -21,6 +22,9 @@ export default function WWN() {
         detailTextDescKo={works.content[11].text.ko}
         customChildren={
           <>
+            <DepthTitle depthLevel="1" blindOption="hidden">
+              About WWN Website and App
+            </DepthTitle>
             <ImageArray
               data={works.content[11].img_array.img}
               bgColor={works.content[11].img_array.bg_color}
