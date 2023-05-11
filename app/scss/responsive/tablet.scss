@@ -1,12 +1,82 @@
 @include tablet {
-    .rolling_area_wrap {
-        margin-top: 35.8rem;
-        margin-bottom: 57.2rem;
+  .main {
 
+    .intro_area {
+
+      .intro_en {
+        padding: 0 7.4rem 4rem;
+      }
+      a {
+        margin-top: 5rem;
+      }
+    }
+
+    .about_us {
+      padding-top: 15.6rem;
+      .keyvisual_wrap {
+        padding: 0 6.7rem;
+        .text_keyvisual_wrap {
+          height: 41vw;
+        }
+        .text_keyvisual {
+          height: 41vw;
+        }
+        .smile_keyvisual {
+          top: -5%;
+          right: 9%;
+          width: 12vw;
+        }
+        .underline_keyvisual {
+          top: 11.7%;
+          right: 4%;
+          width: 53vw;
+        }
+        .ourwork_keyvisual {
+          bottom: 7%;
+          left: 0;
+          width: 78px;
+          transform: translateX(34%);
+        }
+        .keyvisual_disclaimer {
+          max-width: 60rem; // $main
+        }
+      }
+    }
+
+    .service {
+      .bg_white {
+        &.is_photo {
+          padding-bottom: 21.5rem;
+        }
+      }
+      .rolling_wrap {
+        .rolling_text {
+          margin-left: 70vw;
+          .text_expertis,
+          .text_e {
+            font-size: 56vh;
+          }
+          .expertise_img {
+            max-width: 25.7rem;
+            &:nth-child(1) {
+              top: 10.5%;
+              left: 10.5%;
+            }
+            &:nth-child(2) {
+              left: 42.5%;
+            }
+            &:nth-child(3) {
+              top: 15.5%;
+              left: 86%;
+            }
+          }
+        }
+      }
+      .rolling_area_wrap {
+        margin-bottom: 35.8rem;
         .rolling_area {
           height: 9.3rem;
           margin-bottom: 1.5rem;
-
           li {
             span {
               margin-right: 2.7rem;
@@ -18,5 +88,24 @@
             }
           }
         }
+      }
+      .intro_area {
+        padding-top: 21.5rem;
+        .intro_ko {
+          padding: 0 7.4rem;
+        }
+      }
     }
+
+    .our_works {
+      .rolling_wrap {
+        .rolling_text {
+          margin-left: 14vw;
+          .text_ourworks {
+            font-size: 24.3vh;
+          }
+        }
+      }
+    }
+  }
 }
