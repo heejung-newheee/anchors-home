@@ -234,6 +234,9 @@
     }
   }
   .about_members {
+    .visual {
+      height: 23rem;
+    }
     .about_members_desc {
       @extend %layout_fix;
       max-width: 1536px;

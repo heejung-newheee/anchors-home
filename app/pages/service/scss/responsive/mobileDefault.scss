@@ -31,7 +31,7 @@
   }
   .anchors_part {
     background-color: $color_white;
-    padding-bottom: 6rem;
+    //padding-bottom: 6rem;
     padding-top: 6rem;
     .wrapper {
       height: 18rem;
@@ -97,9 +97,6 @@
           display: block;
           padding-top: 1.2rem;
         }
-      }
-      &:last-child {
-        padding-bottom: 0;
       }
     }
   }
