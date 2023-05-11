@@ -45,11 +45,7 @@ function Service() {
       {/* S: visual 영역 */}
       <section className="visual_comment">
         <Visual imgUrl="/assets/images/contents/service/img_keyvisual_officewide.jpg" />
-        <Description
-          className="en_comment"
-          data={service.textList.textEn}
-          innerHTMLOption="Y"
-        />
+        <Description className="en_comment" data={service.textList.textEn} innerHTMLOption="Y" />
         <Description className="ko_comment" data={service.textList.textKo} />
       </section>
       {/* E: visual 영역 */}
@@ -69,7 +65,7 @@ function Service() {
               triggerStart={TRIGGER_START}
               triggerMarkers={false}
               triggerOffset={'center'}
-              defaultID={`scrollTriggerArea_0${idx}`}
+              defaultID={`scrollTriggerArea_0${idx}`} /// [2022-05-11 : CHO] scrollTrigger 설정을 위합 값 이벤트를 실행 하기 위한 target 값입니다.
             >
               <article className="part_img" key={`part_img${idx}`}>
                 <ScrollTriggerArea
@@ -78,7 +74,7 @@ function Service() {
                   triggerEnd={MULTI_TRIGGER_END}
                   triggerOffset={'center'}
                   triggerMarkers={false}
-                  defaultID={`scrollTriggerArea_0${idx}_01`}
+                  defaultID={`scrollTriggerArea_0${idx}_01`} // [2022-05-11 : CHO] scrollTrigger 설정을 위합 값 이벤트를 실행 하기 위한 target 값입니다.
                   YAxes={[
                     {
                       mobile: '20px',
@@ -92,10 +88,7 @@ function Service() {
                 </ScrollTriggerArea>
               </article>
             </ScrollTriggerArea>
-            <article
-              className="part_introduction_wrap"
-              key={`part_introduction_wrap${idx}`}
-            >
+            <article className="part_introduction_wrap" key={`part_introduction_wrap${idx}`}>
               <ElementTitle data={cont.name} />
               <Description
                 data={

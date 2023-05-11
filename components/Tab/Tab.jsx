@@ -40,7 +40,7 @@ function Tab({ type, className, json, tabList, children }) {
                   imgAlt={thumbnailAlt}
                   elementTitle={title}
                   description={description}
-                  defaultID={'sortContents_' + idx}
+                  defaultID={'sortContents_' + idx} // [2022-05-11 : CHO] scrollTrigger 설정을 위합 값 이벤트를 실행 하기 위한 target 값입니다.
                 />
               ))
             : '',

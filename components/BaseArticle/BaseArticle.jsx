@@ -7,19 +7,8 @@ import ElementTitle from '@/components/ElementTitle/ElementTitle';
 import './scss/BaseArticle.scss';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 
-export default function BaseArticle({
-  imgUrl,
-  imgAlt,
-  elementTitle,
-  description,
-  disclaimer,
-  className,
-  defaultID,
-  innerHTMLOption = 'N',
-}) {
-  const GET_CLASSNAME = !className
-    ? { className: 'base_article' }
-    : { className: 'base_article ' + className };
+export default function BaseArticle({ imgUrl, imgAlt, elementTitle, description, disclaimer, className, defaultID, innerHTMLOption = 'N' }) {
+  const GET_CLASSNAME = !className ? { className: 'base_article' } : { className: 'base_article ' + className };
   return (
     <article {...GET_CLASSNAME}>
       {!!imgUrl && (
@@ -38,7 +27,7 @@ export default function BaseArticle({
               desktop: '100%',
               wide: '100%',
             }}
-            defaultID={defaultID}
+            defaultID={defaultID} // [2022-05-11 : CHO] scrollTrigger 설정을 위합 값 이벤트를 실행 하기 위한 target 값입니다.
             triggerOffset={'center'}
             triggerMarkers={false}
             YAxes={[{ mobile: '5%', table: '5%', desktop: '5%', wide: '5%' }]}
@@ -47,15 +36,9 @@ export default function BaseArticle({
           </ScrollTriggerArea>
         </span>
       )}
-      {!!elementTitle && (
-        <ElementTitle data={elementTitle} innerHTMLOption={innerHTMLOption} />
-      )}
-      {!!description && (
-        <Description data={description} innerHTMLOption={innerHTMLOption} />
-      )}
-      {!!disclaimer && (
-        <Disclaimer data={disclaimer} innerHTMLOption={innerHTMLOption} />
-      )}
+      {!!elementTitle && <ElementTitle data={elementTitle} innerHTMLOption={innerHTMLOption} />}
+      {!!description && <Description data={description} innerHTMLOption={innerHTMLOption} />}
+      {!!disclaimer && <Disclaimer data={disclaimer} innerHTMLOption={innerHTMLOption} />}
     </article>
   );
 }

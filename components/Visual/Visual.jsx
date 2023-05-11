@@ -3,18 +3,9 @@
 import './scss/Visual.scss';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 
-export default function Visual({
-  imgUrl,
-  alt,
-  dimm = 'N',
-  children,
-  className,
-  pageTitleData,
-}) {
+export default function Visual({ imgUrl, alt, dimm = 'N', children, className, pageTitleData }) {
   const DIMM_CLASS = dimm === 'Y' ? ' dimmed' : '';
-  const GET_CLASSNAME = !className
-    ? { className: 'visual' + DIMM_CLASS }
-    : { className: 'visual ' + className + DIMM_CLASS };
+  const GET_CLASSNAME = !className ? { className: 'visual' + DIMM_CLASS } : { className: 'visual ' + className + DIMM_CLASS };
   return (
     <article {...GET_CLASSNAME}>
       <ScrollTriggerArea
@@ -31,6 +22,7 @@ export default function Visual({
           desktop: '100%',
           wide: '100%',
         }}
+        defaultID="visual_article" // [2022-05-11 : CHO] scrollTrigger 설정을 위합 값 이벤트를 실행 하기 위한 target 값입니다.
         triggerOffset={'center'}
         triggerMarkers={false}
         YAxes={[{ mobile: '5%', table: '5%', desktop: '5%', wide: '5%' }]}
