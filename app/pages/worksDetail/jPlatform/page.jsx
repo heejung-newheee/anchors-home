@@ -29,15 +29,15 @@ export default function JPlatform() {
         webSiteUrl={works.content[2].websiteUrl}
         customChildren={
           <>
-            <section className="video">
+            <section className="video_wrap">
               <DepthTitle depthLevel="1" blindOption="hidden">
                 Promotion Video
               </DepthTitle>
-              <Video videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" />
+              <Video videoUrl="/assets/images/video/video_jplatform_main.mp4" />
             </section>
 
             {/* S: main 설명 영역 */}
-            <section className="main_section">
+            <section className="main_section_wrap">
               <DepthTitle depthLevel="1" blindOption="hidden">
                 Website Introduction
               </DepthTitle>
@@ -49,27 +49,18 @@ export default function JPlatform() {
                 />
               </article>
               <article className="main_img">
-                <img
-                  src="/assets/images/contents/works/img_web1_jplatform.jpg"
-                  alt="현대자동차 J플랫폼 Main 화면 이미지"
-                />
-                <img
-                  src="/assets/images/contents/works/img_web2_jplatform.jpg"
-                  alt="현대자동차 J플랫폼 Main 화면 이미지"
-                />
+                <img src="/assets/images/contents/works/img_web1_jplatform.jpg" alt="현대자동차 J플랫폼 Main 화면 이미지" />
+                <img src="/assets/images/contents/works/img_web2_jplatform.jpg" alt="현대자동차 J플랫폼 Main 화면 이미지" />
               </article>
             </section>
             {/* E: main 설명 영역 */}
 
             {/* S: full_img 영역 */}
-            <img
-              src="/assets/images/contents/works/img_full_jplatform.jpg"
-              alt="현대자동차 J플랫폼 구축 Ideation 화면 이미지"
-            />
+            <img src="/assets/images/contents/works/img_full_jplatform.jpg" alt="현대자동차 J플랫폼 구축 Ideation 화면 이미지" />
             {/* E: full_img 영역 */}
 
             {/* S: PIP 설명 영역 */}
-            <section className="pip_section">
+            <section className="pip_section_wrap">
               <DepthTitle depthLevel="1" blindOption="hidden">
                 PIP Introduction
               </DepthTitle>
@@ -80,12 +71,12 @@ export default function JPlatform() {
                   innerHTMLOption="Y"
                 />
               </article>
-              <Video videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" />
+              <Video videoUrl="/assets/images/video/video_jplatform_3D.mp4" />
             </section>
             {/* E: PIP 설명 영역 */}
 
             {/* S: device 영역 */}
-            <section className="device">
+            <section className="device_wrap">
               <DepthTitle depthLevel="1" blindOption="hidden">
                 Mobile example image
               </DepthTitle>
@@ -95,12 +86,7 @@ export default function JPlatform() {
                 </DepthTitle>
                 <Device
                   elementTitle={['Configurator']}
-                  description={
-                    <>
-                      3D Configurator 및 쇼룸을 통해 원하는 차량 커스텀 및
-                      간접적 체험이 가능하고, 예상 견적을 제공합니다.
-                    </>
-                  }
+                  description={<>3D Configurator 및 쇼룸을 통해 원하는 차량 커스텀 및 간접적 체험이 가능하고, 예상 견적을 제공합니다.</>}
                   caption={['1. Step setting', '2. Step setting', '3. Total']}
                   imgUrl={[
                     '/assets/images/contents/works/img_phone_configurator1_jplatform.png',
@@ -117,21 +103,14 @@ export default function JPlatform() {
                 </DepthTitle>
                 <Device
                   elementTitle={['e-Commerce']}
-                  description={
-                    <>
-                      차량 및 부품 구매가 가능한 온라인 샵을 홈페이지와
-                      통합함으로서, 고객의 구매까지 이어지도록 하였습니다.
-                    </>
-                  }
+                  description={<>차량 및 부품 구매가 가능한 온라인 샵을 홈페이지와 통합함으로서, 고객의 구매까지 이어지도록 하였습니다.</>}
                   caption={['1. Purchase', '2. Shop', '3. Shop category']}
                   imgUrl={[
                     '/assets/images/contents/works/img_phone_ecommerce1_jplatform.png',
                     '/assets/images/contents/works/img_phone_ecommerce2_jplatform.png',
                     '/assets/images/contents/works/img_phone_ecommerce3_jplatform.png',
                   ]}
-                  alt={[
-                    '현대자동차 J플랫폼 Purchase, Shop, Shop category 화면 이미지',
-                  ]}
+                  alt={['현대자동차 J플랫폼 Purchase, Shop, Shop category 화면 이미지']}
                   type="B"
                 />
               </article>
@@ -139,7 +118,7 @@ export default function JPlatform() {
             {/* E: device 영역 */}
 
             {/* S: Identity system 설명 영역 */}
-            <section className="identity_section">
+            <section className="identity_section_wrap">
               <DepthTitle depthLevel="1" blindOption="hidden">
                 Website Identity Introduction
               </DepthTitle>

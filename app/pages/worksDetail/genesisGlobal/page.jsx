@@ -28,7 +28,7 @@ export default function GenesisGlobal() {
         customChildren={
           <>
             {/* S: image_array 영역*/}
-            <section className="image_array">
+            <section className="image_array_wrap">
               <DepthTitle depthLevel="1" blindOption="hidden">
                 Website example image
               </DepthTitle>
@@ -41,7 +41,7 @@ export default function GenesisGlobal() {
             {/* S: image_array 영역*/}
 
             {/* S: Device 영역*/}
-            <section className="device">
+            <section className="device_wrap">
               <DepthTitle depthLevel="1" blindOption="hidden">
                 Device example image
               </DepthTitle>

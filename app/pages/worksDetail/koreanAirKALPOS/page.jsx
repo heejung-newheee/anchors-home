@@ -8,8 +8,7 @@ import works from '@/helper/data/json/contents/works/works.json';
 import './scss/koreanAirKALPOS.scss';
 
 export const metadata = {
-  title:
-    seo.title.subPage.detail.koreanAirKALPOS + ' : ' + seo.title.subPage.works,
+  title: seo.title.subPage.detail.koreanAirKALPOS + ' : ' + seo.title.subPage.works,
 };
 export default function KoreanAir_KALPOS() {
   return (
@@ -25,7 +24,7 @@ export default function KoreanAir_KALPOS() {
         workContent={works.content[5].projectInfomation}
         customChildren={
           <>
-            <section className="device_example">
+            <section className="device_wrap">
               <DepthTitle depthLevel="1" blindOption="hidden">
                 Application example image
               </DepthTitle>
@@ -44,9 +43,7 @@ export default function KoreanAir_KALPOS() {
                   '/assets/images/contents/works/img_phone_app2_koreanair.png',
                   '/assets/images/contents/works/img_phone_app3_koreanair.png',
                 ]}
-                alt={[
-                  '대한항공 KALPOS App Index, Meal Inventory, Meal Order 화면 이미지',
-                ]}
+                alt={['대한항공 KALPOS App Index, Meal Inventory, Meal Order 화면 이미지']}
                 type="B"
               />
             </section>

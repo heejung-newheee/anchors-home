@@ -9,8 +9,7 @@ import works from '@/helper/data/json/contents/works/works.json';
 import './scss/koreanAirAndroid.scss';
 
 export const metadata = {
-  title:
-    seo.title.subPage.detail.koreanAirAndroid + ' : ' + seo.title.subPage.works,
+  title: seo.title.subPage.detail.koreanAirAndroid + ' : ' + seo.title.subPage.works,
 };
 
 export default function KoreanAir_Android() {
@@ -27,18 +26,14 @@ export default function KoreanAir_Android() {
         workContent={works.content[7].projectInfomation}
         customChildren={
           <>
-            <section className="device_example">
+            <section className="device_wrap">
               <DepthTitle depthLevel="1" blindOption="hidden">
                 Application example image
               </DepthTitle>
               <Device
                 elementTitle={['App']}
                 description={
-                  <>
-                    대한항공과 사용자가 지속적인 여행 파트너가 될 수 있도록
-                    구현하고 직관적인 UI를 통해 사용자의 디지털 경험을
-                    강화했습니다.
-                  </>
+                  <>대한항공과 사용자가 지속적인 여행 파트너가 될 수 있도록 구현하고 직관적인 UI를 통해 사용자의 디지털 경험을 강화했습니다.</>
                 }
                 caption={['1. 항공기 안내', '2. 기종안내', '3. 기종안내']}
                 imgUrl={[
