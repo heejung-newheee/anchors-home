@@ -59,11 +59,7 @@ function Mijeong() {
   return (
     <>
       <p> LottiePlayer 컴모넌트 적용</p>
-      <LottiePlayer
-        className="lottieName"
-        data={lottieMainKeyVisual}
-        style={LOTTIE_TYPE.style}
-      />
+      <LottiePlayer className="lottieName" data={lottieMainKeyVisual} style={LOTTIE_TYPE.style} />
       <p>
         ScrollTriggerArea 컴포넌트의 타입 로티
         <br />
@@ -87,18 +83,12 @@ function Mijeong() {
         triggerMarkers={true}
         XAxes={SCROLL_TRIGGER_OPTION.XAxes.multiTrigger}
       >
-        <div
-          className="area01"
-          style={{ width: '100px', height: '100px', background: '#ccc' }}
-        />
-        <div
-          className="area02"
-          style={{ width: '100px', height: '100px', background: '#999' }}
-        />
+        <div className="area01" style={{ width: '100px', height: '100px', background: '#ccc' }} />
+        <div className="area02" style={{ width: '100px', height: '100px', background: '#999' }} />
       </ScrollTriggerArea>
 
       <p> Tab 컴포넌트의 타입 article </p>
-      <Tab type="article" tabList={worksList.sort}>
+      <Tab tabList={worksList.sort}>
         <div>Tab 컨텐츠 1</div>
         <div>Tab 컨텐츠 2</div>
         <div>Tab 컨텐츠 3</div>

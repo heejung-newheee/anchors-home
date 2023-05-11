@@ -35,9 +35,8 @@ function Tab({ type = 'article', className, json, tabList, children }) {
           idx < sortContents
             ? ((SORT_CONTENT_LENGTH = array.length),
               (
-                <Btn type="a" url={pageUrl}>
+                <Btn key={idx} type="a" url={pageUrl}>
                   <BaseArticle
-                    key={idx}
                     imgUrl={IMG_URL + thumbnail}
                     imgAlt={thumbnailAlt}
                     elementTitle={title}
@@ -62,7 +61,7 @@ function Tab({ type = 'article', className, json, tabList, children }) {
           </TabButton>
         ))}
       </ul>
-      <TabContents dataContents={TabContentsEvent()} />
+      <TabContents>{TabContentsEvent()}</TabContents>
       {type === 'portfolioList' && sortContents < SORT_CONTENT_LENGTH && sortContents !== SORT_CONTENT_LENGTH ? (
         <Btn type="button" className="view_more_btn" onClick={() => moreEvent()}>
           View more
