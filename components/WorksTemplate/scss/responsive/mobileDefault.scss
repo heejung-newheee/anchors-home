@@ -55,6 +55,7 @@
     .description {
       @extend %font_enIntro;
       letter-spacing: -0.03em;
+      color: #000;
     }
     .description:first-child {
       padding-top: 6rem;
@@ -69,6 +70,7 @@
       font-family: $font_ko;
       max-width: 120rem;
       text-align: center;
+      color: $color_black;
       br {
         display: none;
       }
@@ -85,7 +87,7 @@
         margin-top: 1.2rem;
         margin-bottom: 3.6rem;
         font-size: 1.4rem;
-        line-height: 2.2rem;
+        line-height: 100%;
       }
       &:last-child {
         .description {
@@ -144,33 +146,46 @@
       font-weight: 700;
       line-height: 5rem;
     }
-    .base_article {
-      font-family: $font_en;
-      margin-top: 4rem;
-      text-align: left;
-      .base_article_img_box {
-        display: block;
-        overflow: hidden;
-        margin-bottom: 2.2rem;
-        img {
-          transition: all 0.3s;
+    .next_work_list {
+      display: block;
+      .base_article {
+        font-family: $font_en;
+        margin-top: 4rem;
+        text-align: left;
+        .base_article_img_box {
+          display: block;
+          overflow: hidden;
+          margin-bottom: 2.2rem;
+          img {
+            transition: all 0.3s;
+          }
+          &:hover img {
+            transform: scale(1.1);
+          }
         }
-        &:hover img {
-          transform: scale(1.1);
+        .element_title {
+          font-size: 1.8rem;
+          line-height: 1.8rem;
+          font-weight: 400;
+          display: inline-block;
+          margin-bottom: 0.8rem;
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 1;
         }
-      }
-      .element_title {
-        font-size: 1.8rem;
-        line-height: 1.8rem;
-        font-weight: 400;
-        display: inline-block;
-        margin-bottom: 0.8rem;
-      }
-      .description {
-        color: $color_darkgrey;
-        font-size: 1.4rem;
-        line-height: 1.4rem;
-        letter-spacing: -0.03em;
+        .description {
+          color: $color_darkgrey;
+          font-size: 1.4rem;
+          line-height: 1.4rem;
+          letter-spacing: -0.03em;
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 1;
+        }
       }
     }
   }
