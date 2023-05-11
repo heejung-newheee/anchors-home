@@ -194,13 +194,14 @@
       .tab_content_wrap{
         .process_tab{
           .process_number_wrap{
-            width: 66.2rem;
+            width: 100%;
             justify-content: space-between;
-            padding: 0 2.9rem;
+            flex-wrap: nowrap;
+            //padding: 0 2.9rem;
             margin-bottom: 3.6rem;
             .process_number{
-              width: 15rem;
-              height: 15rem;
+              width: 22vw;
+              height: 22vw;
               &:nth-child(1){
                 transform: translateX(0);
               }
@@ -237,7 +238,7 @@
           }
           .process_description{
             width: 100%;
-            padding-left: 2.9rem;
+            //padding-left: 2.9rem;
             p{
               &::before{
               }
