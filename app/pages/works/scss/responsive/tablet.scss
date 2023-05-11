@@ -9,6 +9,7 @@
 
         a {
           width: calc(50% - 0.8rem);  // $our_works_list
+          margin-bottom: 6rem; // $our_works_list
 
           &:nth-child(2) {
             margin-top: 12rem; // $our_works_list
@@ -20,7 +21,6 @@
             margin-top: 0; // $our_works_list
           }
           .base_article {
-            padding-bottom: 6rem; // $our_works_list
 
             .element_title {
               padding: 2.4rem 0.4rem 1rem; // $our_works_list
