@@ -8,6 +8,7 @@ import seo from '@/helper/data/json/contents/SEO.json';
 import works from '@/helper/data/json/contents/works/works.json';
 
 import './scss/nBrand.scss';
+import DepthTitle from '@/components/DepthTitle/DepthTitle';
 
 export const metadata = {
   title: seo.title.subPage.detail.nBrand + ' : ' + seo.title.subPage.works,
@@ -29,7 +30,10 @@ export default function Nbrand() {
               className="nbrand_video"
               videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
             />
-            <div className="nbrand_main_wrap">
+            <section className="nbrand_main_wrap">
+              <DepthTitle depthLevel="1" blindOption="hidden">
+                NBrand Website Introduction
+              </DepthTitle>
               <div className="main_text_wrap">
                 <ElementTitle className="custom_element_title" data="Main" />
                 <Description
@@ -57,13 +61,18 @@ export default function Nbrand() {
                   alt="NBrand main 이미지"
                 />
               </div>
-              <img
-                className="main_detail_img"
-                src="/assets/images/contents/works/img_full_nbrand.jpg"
-                alt="NBrand website 상세페이지 관련 이미지"
-              />
-            </div>
-            <div className="nbrand_sub_wrap">
+              <span>
+                <img
+                  className="main_detail_img"
+                  src="/assets/images/contents/works/img_full_nbrand.jpg"
+                  alt="NBrand website 상세페이지 관련 이미지"
+                />
+              </span>
+            </section>
+            <section className="nbrand_sub_wrap">
+              <DepthTitle depthLevel="1" blindOption="hidden">
+                About NBrand Website Sub Works
+              </DepthTitle>
               <ElementTitle className="custom_element_title" data="Sub" />
               <Description
                 className="custom_description"
@@ -91,7 +100,7 @@ export default function Nbrand() {
                   alt="NBrand sub 이미지"
                 />
               </div>
-            </div>
+            </section>
           </>
         }
         subVisualImgUrl={works.imgUrl + works.content[10].subVisual}
