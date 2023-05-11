@@ -19,6 +19,8 @@
     }
     .detail_text_wrap {
       padding: 0 16.8rem;
+      max-width: 1200px;
+      margin: 0 auto;
       .description:first-child {
         padding-top: 16rem;
       }
