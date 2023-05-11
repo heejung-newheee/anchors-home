@@ -53,6 +53,7 @@ function Tab({ type, className, json, tabList, children }) {
                   imgAlt={thumbnailAlt}
                   elementTitle={title}
                   description={description}
+                  defaultID={'sort_' + idx}
                 />
               ) : (
                 ''

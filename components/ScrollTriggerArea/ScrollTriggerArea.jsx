@@ -110,8 +110,8 @@ function ScrollTriggerArea({
           <div
             className={
               'wrapper ' +
-              defaultID +
-              (className === undefined ? '' : ` ${className}`) +
+              (!defaultID || defaultID == '' ? '' : ` ${defaultID}`) +
+              (!className || className == '' ? '' : ` ${className}`) +
               (isActive ? ' is_active' : '')
             }
           >
@@ -136,9 +136,9 @@ function ScrollTriggerArea({
         return (
           <div
             className={
-              'wrapper ' +
-              defaultID +
-              (className === undefined ? '' : ` ${className}`) +
+              'wrapper' +
+              (!defaultID || defaultID == '' ? '' : ` ${defaultID}`) +
+              (!className || className == '' ? '' : ` ${className}`) +
               (isActive ? ' is_active' : '')
             }
           >

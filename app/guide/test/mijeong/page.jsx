@@ -1,9 +1,8 @@
 import React from 'react';
-
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import Tab from '@/components/Tab/Tab';
-import LottieTest from '@/components/Test/LottieTest';
+
 import worksList from '@/helper/data/json/contents/works/works.json';
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 
@@ -100,7 +99,18 @@ function Mijeong() {
         />
       </ScrollTriggerArea>
 
-      <p> ScrollTriggerArea 컴포넌트의 타입 Timeline </p>
+      <p> Tab 컴포넌트의 타입 article </p>
+      <Tab type="article" tabList={worksList.sort}>
+        <div>Tab 컨텐츠 1</div>
+        <div>Tab 컨텐츠 2</div>
+        <div>Tab 컨텐츠 3</div>
+      </Tab>
+
+      <p> Tab 컴포넌트의 타입 sortList </p>
+      <Tab type="sortList" json={worksList} tabList={worksList.sort} />
+
+      {/*
+       <p> ScrollTriggerArea 컴포넌트의 타입 Timeline </p>
       <div style={{ height: '600px' }}>
         <ScrollTriggerArea
           type="test"
@@ -118,18 +128,7 @@ function Mijeong() {
           <div>sfkdfbvnxvckjxkhkjjxvckjj</div>
         </ScrollTriggerArea>
       </div>
-
-      <p> Tab 컴포넌트의 타입 article </p>
-      <Tab type="article" tabList={worksList.sort}>
-        <div>Tab 컨텐츠 1</div>
-        <div>Tab 컨텐츠 2</div>
-        <div>Tab 컨텐츠 3</div>
-      </Tab>
-
-      <p> Tab 컴포넌트의 타입 sortList </p>
-      <Tab type="sortList" data={worksList} tabList={worksList.sort} />
-
-      {/*<LottieTest />*/}
+      */}
     </>
   );
 }

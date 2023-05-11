@@ -14,6 +14,7 @@ export default function BaseArticle({
   description,
   disclaimer,
   className,
+  defaultID,
   innerHTMLOption = 'N',
 }) {
   const GET_CLASSNAME = !className
@@ -37,6 +38,7 @@ export default function BaseArticle({
               desktop: '100%',
               wide: '100%',
             }}
+            defaultID={defaultID}
             triggerOffset={'center'}
             triggerMarkers={false}
             YAxes={[{ mobile: '5%', table: '5%', desktop: '5%', wide: '5%' }]}
