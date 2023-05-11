@@ -1,5 +1,6 @@
 import React from 'react';
 
+import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
 import Video from '@/components/Video/Video';
@@ -7,7 +8,6 @@ import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import seo from '@/helper/data/json/contents/SEO.json';
 import works from '@/helper/data/json/contents/works/works.json';
 import './scss/BMS.scss';
-import DepthTitle from '@/components/DepthTitle/DepthTitle';
 export const metadata = {
   title: seo.title.subPage.detail.BMS + ' : ' + seo.title.subPage.works,
 };

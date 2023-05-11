@@ -1,12 +1,12 @@
 import React from 'react';
 
+import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Device from '@/components/Device/Device';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import seo from '@/helper/data/json/contents/SEO.json';
 import works from '@/helper/data/json/contents/works/works.json';
 
 import './scss/myHyundai.scss';
-import DepthTitle from '@/components/DepthTitle/DepthTitle';
 
 export const metadata = {
   title: seo.title.subPage.detail.myHyundai + ' : ' + seo.title.subPage.works,

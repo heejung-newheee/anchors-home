@@ -7,7 +7,6 @@ import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
-import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import Visual from '@/components/Visual/Visual';
 import works from '@/helper/data/json/contents/works/works.json';
 import './scss/WorkTemplate.scss';

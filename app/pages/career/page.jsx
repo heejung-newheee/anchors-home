@@ -6,7 +6,6 @@ import Disclaimer from '@/components/Disclaimer/Disclaimer';
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
 import MoreDetail from '@/components/MoreDetail/MoreDetail';
 import PageTitle from '@/components/PageTitle/PageTitle';
-import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Tab from '@/components/Tab/Tab';
 import Visual from '@/components/Visual/Visual';
@@ -25,19 +24,19 @@ import './scss/ career.scss';
 export const metadata = {
   title: seo.title.subPage.career,
 };
-const TRIGGER_START = {
-  mobile: '10px',
-  table: '10px',
-  desktop: '10px',
-  wide: '10px',
-};
-
-const TRIGGER_END = {
-  mobile: '500px',
-  table: '500px',
-  desktop: '1000px',
-  wide: '1000px',
-};
+// const TRIGGER_START = {
+//   mobile: '10px',
+//   table: '10px',
+//   desktop: '10px',
+//   wide: '10px',
+// };
+//
+// const TRIGGER_END = {
+//   mobile: '500px',
+//   table: '500px',
+//   desktop: '1000px',
+//   wide: '1000px',
+// };
 
 function Career() {
   return (

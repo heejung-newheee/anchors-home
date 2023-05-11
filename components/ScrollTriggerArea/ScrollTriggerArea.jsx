@@ -110,8 +110,8 @@ function ScrollTriggerArea({
           <div
             className={
               'wrapper ' +
-              (!defaultID || defaultID == '' ? '' : ` ${defaultID}`) +
-              (!className || className == '' ? '' : ` ${className}`) +
+              (!defaultID || defaultID === '' ? '' : ` ${defaultID}`) +
+              (!className || className === '' ? '' : ` ${className}`) +
               (isActive ? ' is_active' : '')
             }
           >
@@ -137,8 +137,8 @@ function ScrollTriggerArea({
           <div
             className={
               'wrapper' +
-              (!defaultID || defaultID == '' ? '' : ` ${defaultID}`) +
-              (!className || className == '' ? '' : ` ${className}`) +
+              (!defaultID || defaultID === '' ? '' : ` ${defaultID}`) +
+              (!className || className === '' ? '' : ` ${className}`) +
               (isActive ? ' is_active' : '')
             }
           >
@@ -196,26 +196,26 @@ function ScrollTriggerArea({
       end={TRIGGER_OPTION_END + ' ' + triggerOffset}
       scrub={triggerScrub}
       markers={triggerMarkers}
-      trigger={type == 'lottieTrigger' ? '.' + type : '.' + defaultID}
+      trigger={type === 'lottieTrigger' ? '.' + type : '.' + defaultID}
       onEnter={(d) => {
         setIsActive(d.isActive);
-        if (type == 'lottieTrigger') {
+        if (type === 'lottieTrigger') {
           COMPONENTS_REF.current.controll('play');
         }
       }}
       onLeave={(d) => {
-        if (type == 'lottieTrigger') {
+        if (type === 'lottieTrigger') {
           COMPONENTS_REF.current.controll('pause');
         }
       }}
       onLeaveBack={(d) => {
         setIsActive(d.isActive);
-        if (type == 'lottieTrigger') {
+        if (type === 'lottieTrigger') {
           COMPONENTS_REF.current.controll('pause');
         }
       }}
       onEnterBack={(d) => {
-        if (type == 'lottieTrigger') {
+        if (type === 'lottieTrigger') {
           COMPONENTS_REF.current.controll('play');
         }
       }}

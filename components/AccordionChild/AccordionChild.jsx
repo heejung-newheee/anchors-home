@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 
 import Btn from '@/components/Btn/Btn';
 import './scss/AccordionChild.scss';

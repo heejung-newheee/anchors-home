@@ -1,20 +1,20 @@
 'use client';
 import React from 'react';
 
-import Accordion from '@/components/Accordion/Accordion';
-import BaseArticle from '@/components/BaseArticle/BaseArticle';
-import Btn from '@/components/Btn/Btn';
-import DepthTitle from '@/components/DepthTitle/DepthTitle';
-import Description from '@/components/Description/Description';
-import Disclaimer from '@/components/Disclaimer/Disclaimer';
-import Header from '@/components/Header/Header';
-import ImageArray from '@/components/ImageArray/ImageArray';
-import Logo from '@/components/Logo/Logo';
-import PageTitle from '@/components/PageTitle/PageTitle';
-import Visual from '@/components/Visual/Visual';
+// import Accordion from '@/components/Accordion/Accordion';
+// import BaseArticle from '@/components/BaseArticle/BaseArticle';
+// import Btn from '@/components/Btn/Btn';
+// import DepthTitle from '@/components/DepthTitle/DepthTitle';
+// import Description from '@/components/Description/Description';
+// import Disclaimer from '@/components/Disclaimer/Disclaimer';
+// import Header from '@/components/Header/Header';
+// import ImageArray from '@/components/ImageArray/ImageArray';
+// import Logo from '@/components/Logo/Logo';
+// import PageTitle from '@/components/PageTitle/PageTitle';
+// import Visual from '@/components/Visual/Visual';
 import WebGlCarousel from '@/components/WebGlCarousel/WebGlCarousel';
-import headerFooter from '@/helper/data/json/contents/headerFooter.json';
-import variables from '@/public/assets/scss/_variables.module.scss';
+// import headerFooter from '@/helper/data/json/contents/headerFooter.json';
+// import variables from '@/public/assets/scss/_variables.module.scss';
 import './chchaa.scss';
 
 // const ACCORDION_CONTENTS = [

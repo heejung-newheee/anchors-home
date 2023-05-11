@@ -19,7 +19,7 @@ function Tab({ type, className, json, tabList, children }) {
   function TabButtonEvent(button, index) {
     console.log();
 
-    type == 'portfolioList'
+    type === 'portfolioList'
       ? (setSortFilter(button), setSortContents(DEFAULT_COUNT))
       : setTabCurrent(index);
   }
@@ -38,12 +38,7 @@ function Tab({ type, className, json, tabList, children }) {
         const IMG_URL = json.imgUrl;
 
         return json.content.map(
-          (
-            { sort, thumbnail, thumbnailAlt, title, description },
-            idx,
-            array,
-          ) => (
-            console.log(),
+          ({ sort, thumbnail, thumbnailAlt, title, description }, idx, array) =>
             sort.includes(sortFilter) ? (
               idx < sortContents ? (
                 <BaseArticle
@@ -59,8 +54,7 @@ function Tab({ type, className, json, tabList, children }) {
               )
             ) : (
               ''
-            )
-          ),
+            ),
         );
 
       case 'article':
@@ -83,7 +77,7 @@ function Tab({ type, className, json, tabList, children }) {
         ))}
       </ul>
       <TabContents dataContents={TabContentsEvent()} />
-      {type == 'portfolioList' && sortContents !== SORT_CONTENT_LENGTH ? (
+      {type === 'portfolioList' && sortContents !== SORT_CONTENT_LENGTH ? (
         <Btn
           type="button"
           className="view_more_btn"

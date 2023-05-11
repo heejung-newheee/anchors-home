@@ -55,8 +55,6 @@ const SCROLL_TRIGGER_OPTION = {
   },
 };
 
-const TAB_CONTENTS = {};
-
 function Mijeong() {
   return (
     <>

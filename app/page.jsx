@@ -7,7 +7,7 @@ import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
-import WebGlCarousel from '@/components/WebGlCarousel/WebGlCarousel';
+// import WebGlCarousel from '@/components/WebGlCarousel/WebGlCarousel';
 /* import WebGlCarousel from '@/components/WebGlCarousel/WebGlCarousel'; */
 import main from '@/helper/data/json/contents/main/main.json';
 import lottieMainKeyVisualOurwork from '@/public/assets/images/lottie/lottieMainKeyVisualOurwork.json';

@@ -108,8 +108,8 @@ function Service() {
               <Disclaimer
                 data={
                   <>
-                    {cont.hashtag.map((tag, idx) => (
-                      <span key={idx} className="hashtag">
+                    {cont.hashtag.map((tag, idx2) => (
+                      <span key={idx2} className="hashtag">
                         {tag}
                       </span>
                     ))}

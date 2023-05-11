@@ -1,6 +1,6 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
-import { Controls, PlayState, Reveal, Timeline, Tween } from 'react-gsap';
+import { useRef } from 'react';
+import { Controls, PlayState, Reveal, Tween } from 'react-gsap';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';

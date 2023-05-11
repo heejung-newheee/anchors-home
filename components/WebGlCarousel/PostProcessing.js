@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 
 import { MeshTransmissionMaterial } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
-import { useControls } from 'leva';
+// import { useControls } from 'leva';
 import { Color } from 'three';
 
 const PostProcessing = forwardRef((_, ref) => {

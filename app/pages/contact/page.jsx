@@ -2,7 +2,6 @@ import BaseArticle from '@/components/BaseArticle/BaseArticle';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import PageTitle from '@/components/PageTitle/PageTitle';
-import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import Visual from '@/components/Visual/Visual';
 import contact from '@/helper/data/json/contents/contact/contact.json';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
@@ -13,19 +12,19 @@ export const metadata = {
   title: seo.title.subPage.contact,
 };
 
-const TRIGGER_START = {
-  mobile: '-50px',
-  table: '-50px',
-  desktop: '-30px',
-  wide: '0',
-};
-
-const TRIGGER_END = {
-  mobile: '100vh',
-  table: '100vh',
-  desktop: '100vh',
-  wide: '100vh',
-};
+// const TRIGGER_START = {
+//   mobile: '-50px',
+//   table: '-50px',
+//   desktop: '-30px',
+//   wide: '0',
+// };
+//
+// const TRIGGER_END = {
+//   mobile: '100vh',
+//   table: '100vh',
+//   desktop: '100vh',
+//   wide: '100vh',
+// };
 
 function Contact() {
   return (
