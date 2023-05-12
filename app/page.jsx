@@ -31,17 +31,14 @@ function Main() {
             <LottiePlayer className="smile_keyvisual" data={lottieMainKeyVisualSmile} loop={false} />
             <LottiePlayer className="underline_keyvisual" data={lottieMainKeyVisualUnderline} loop={false} />
             <LottiePlayer className="ourwork_keyvisual" data={lottieMainKeyVisualOurwork} loop={false} />
-            <Disclaimer
-              className="keyvisual_disclaimer"
-              data="At Anchors, our executives and employees are hard at work to improve customer service with their professional expertise."
-            />
+            <Disclaimer className="keyvisual_disclaimer" data={main.aboutUs.keyVisualText} />
           </section>
           <WebGlCarousel />
           {/* E: intro + rotate keyvisual */}
           {/* S: intro text + button */}
           <section className="intro_area">
             <Description className="intro_en" data={main.aboutUs.introduction.en} innerHTMLOption="Y" />
-            <Description className="intro_ko" data={main.aboutUs.introduction.ko} innerHTMLOption="Y" />
+            <Description className="intro_ko" data={main.aboutUs.introduction.ko} />
             <Btn type="link" className="btn_about_us" url="/pages/about" alt="About Us">
               About Us
             </Btn>
@@ -78,7 +75,7 @@ function Main() {
                   mobile: '-360vh',
                   table: '-400vh',
                   desktop: '-600vh',
-                  wide: '-400vh',
+                  wide: '-600vh',
                 },
               ]}
               duration={0.001}
@@ -94,14 +91,14 @@ function Main() {
                     triggerStart={{
                       mobile: '-160px',
                       table: '-300px',
-                      desktop: '0px',
-                      wide: '0px',
+                      desktop: '-110px',
+                      wide: '-100px',
                     }}
                     triggerEnd={{
                       mobile: '1000vh',
                       table: '1500vh',
-                      desktop: '1000vh',
-                      wide: '1000vh',
+                      desktop: '3000vh',
+                      wide: '3000vh',
                     }}
                     triggerMarkers={false}
                     XAxes={[
@@ -125,14 +122,14 @@ function Main() {
                     triggerStart={{
                       mobile: '-350px',
                       table: '-550px',
-                      desktop: '0px',
-                      wide: '0px',
+                      desktop: '-410px',
+                      wide: '-550px',
                     }}
                     triggerEnd={{
                       mobile: '1000vh',
                       table: '1500vh',
-                      desktop: '0px',
-                      wide: '0px',
+                      desktop: '2000vh',
+                      wide: '2000vh',
                     }}
                     triggerMarkers={false}
                     XAxes={[
@@ -156,14 +153,14 @@ function Main() {
                     triggerStart={{
                       mobile: '0',
                       table: '-200px',
-                      desktop: '0px',
-                      wide: '0px',
+                      desktop: '-150px',
+                      wide: '50px',
                     }}
                     triggerEnd={{
                       mobile: '1000vh',
                       table: '1500vh',
-                      desktop: '0px',
-                      wide: '0px',
+                      desktop: '3000vh',
+                      wide: '3000vh',
                     }}
                     triggerMarkers={false}
                     XAxes={[
@@ -188,15 +185,15 @@ function Main() {
                     mobile: '280px',
                     table: '130px',
                     desktop: '350px',
-                    wide: '0px',
+                    wide: '530px',
                   }}
                   triggerEnd={{
                     mobile: '3000vh',
                     table: '4000vh',
                     desktop: '5300vh',
-                    wide: '0px',
+                    wide: '6900vh',
                   }}
-                  triggerMarkers={true}
+                  triggerMarkers={false}
                   fromScale={[
                     {
                       mobile: 1,
@@ -290,16 +287,16 @@ function Main() {
               triggerEnd={{
                 mobile: '4000vh',
                 table: '4000vh',
-                desktop: '0px',
-                wide: '0px',
+                desktop: '4000vh',
+                wide: '4000vh',
               }}
               triggerMarkers={false}
               XAxes={[
                 {
                   mobile: '-200%',
                   table: '-200%',
-                  desktop: '-200%',
-                  wide: '-200%',
+                  desktop: '-300%',
+                  wide: '-300%',
                 },
               ]}
               duration={0.001}
@@ -315,14 +312,14 @@ function Main() {
                     triggerStart={{
                       mobile: '-215px',
                       table: '-390px',
-                      desktop: '0px',
-                      wide: '0px',
+                      desktop: '-220px',
+                      wide: '-230px',
                     }}
                     triggerEnd={{
                       mobile: '1500vh',
                       table: '1500vh',
-                      desktop: '0px',
-                      wide: '0px',
+                      desktop: '1500vh',
+                      wide: '1500vh',
                     }}
                     triggerMarkers={false}
                     XAxes={[
@@ -346,14 +343,14 @@ function Main() {
                     triggerStart={{
                       mobile: '-350px',
                       table: '-500px',
-                      desktop: '0px',
-                      wide: '0px',
+                      desktop: '-420px',
+                      wide: '-540px',
                     }}
                     triggerEnd={{
                       mobile: '1500vh',
                       table: '1500vh',
-                      desktop: '0px',
-                      wide: '0px',
+                      desktop: '1500vh',
+                      wide: '1500vh',
                     }}
                     triggerMarkers={false}
                     XAxes={[
@@ -377,14 +374,14 @@ function Main() {
                     triggerStart={{
                       mobile: '-220px',
                       table: '-220px',
-                      desktop: '0px',
-                      wide: '0px',
+                      desktop: '-200px',
+                      wide: '-150px',
                     }}
                     triggerEnd={{
                       mobile: '2000vh',
                       table: '2000vh',
-                      desktop: '0px',
-                      wide: '0px',
+                      desktop: '2000vh',
+                      wide: '2000vh',
                     }}
                     triggerMarkers={false}
                     XAxes={[
@@ -413,24 +410,16 @@ function Main() {
               mobile: '0',
               table: '0',
               desktop: '0',
-              wide: '0',
+              wide: '-200px',
             }}
             triggerEnd={{
               mobile: '4500vh',
               table: '4500vh',
-              desktop: '0',
-              wide: '0',
+              desktop: '4500vh',
+              wide: '4500vh',
             }}
             triggerOffset={'center'}
             triggerMarkers={false}
-            /* XAxes={[
-              {
-                mobile: '300%',
-                table: '-100%',
-                desktop: '-100%',
-                wide: '-100%',
-              },
-            ]} */
             duration={0.01}
           >
             <div className="portfolio_wrap">
