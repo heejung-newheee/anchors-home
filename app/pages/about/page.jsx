@@ -202,7 +202,6 @@ function About() {
             },
             loop: true,
             speed: 8000,
-            정,
           }}
           className="about_members_swiper scroll-linear"
           swiperContent={[...aboutMembers.members, ...aboutMembers.members].map((cont, idx) => (
