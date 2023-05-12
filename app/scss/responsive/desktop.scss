@@ -38,15 +38,21 @@
           transform: translateX(34%);
         }
         .keyvisual_disclaimer {
-          max-width: 80rem; // $main
+          /*max-width: 80rem; // $main*/
           padding-top: 0;
         }
       }
     }
 
     .service {
+      .bg_white {
+        &.is_photo {
+          padding-bottom: 6rem;
+        }
+      }
       .rolling_wrap {
         .rolling_text {
+          margin-left: 81vw;
           .text_expertis,
           .text_e {
             font-size: 83.5vh;
@@ -64,7 +70,54 @@
             }
             &:nth-child(3) {
               top: 12.5%;
-              left: 109%;
+              left: 84%;
+            }
+          }
+        }
+      }
+      .rolling_area_wrap {
+        margin-bottom: 19.4rem;
+        .rolling_area {
+          height: 12.4rem;
+          margin-bottom: 2rem;
+          li {
+            span {
+              margin-right: 3.6rem;
+              font-size: 12.4rem;
+            }
+            img {
+              width: 18rem;
+              margin-right: 4.5rem;
+            }
+          }
+        }
+      }
+      .intro_area {
+        padding-top: 6rem;
+      }
+    }
+
+    .our_works {
+      .rolling_wrap {
+        .rolling_text {
+          margin-left: 33.7vw;
+          .text_ourworks {
+            font-size: 40vh;
+          }
+          .ourworks_img {
+            max-width: 34.4rem;
+            width: 42vw;
+            &:nth-child(1) {
+              top: -4%;
+              left: 13%;
+            }
+            &:nth-child(2) {
+              top: 68%;
+              left: 44.8%;
+            }
+            &:nth-child(3) {
+              top: -5.5%;
+              left: 84.8%;
             }
           }
         }
