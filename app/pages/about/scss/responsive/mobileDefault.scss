@@ -153,8 +153,9 @@
       .lottieTrigger {
         position: absolute;
         bottom: 0;
-        left: -24.1rem;
-        width: 601px;
+        right: 0;
+        max-width: 900px;
+        width: 161vw;
       }
     }
     .profile_award {
