@@ -42,7 +42,7 @@
         "ko": "현대자동차 각 국가 법인에서 보다 효율적인 세일즈 데이터 관리를 위해 DCXT(Connex)를 구축하였습니다. 여러 비즈니스 활동을 통해 디지털 채널에서 발생하는 고객 데이터를 중앙 집중하고, 담당자와 고객 간의 지속적인 연결로 비대면 영업 및 마케팅 환경에서도 고객 경험을 강화했습니다."
       },
       "projectInfomation" : [
-        { "title" :  "Client" , "contents" :  "현대자동차 일본법인(HMJ), 현대자동차 인도법인(HMID), 현대자동차 싱가포르법인<br/>(HMGICS), 현대오토에버"},
+        { "title" :  "Client" , "contents" :  "현대자동차 일본법인(HMJ), 현대자동차 인도법인(HMID),<br/> 현대자동차 싱가포르법인(HMGICS), 현대오토에버"},
         { "title" :  "Year" , "contents" :  "2021. 12 (HMJ) <br/> 2022. 08 (HMID) <br/> 2022. 11 (HMGICS)"},
         { "title" :  "Service" , "contents" :  "Salesforce Core, I/F, DB Migration, Foundation"}
       ]
