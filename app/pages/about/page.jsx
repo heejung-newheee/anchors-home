@@ -12,6 +12,7 @@ import PageTitle from '@/components/PageTitle/PageTitle';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Visual from '@/components/Visual/Visual';
+import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
 import seo from '@/helper/data/json/contents/SEO.json';
 
@@ -21,30 +22,31 @@ import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
 import lottie_arrow from '@/public/assets/images/lottie/lottieAboutusUpArrow.json';
 
 import './scss/about.scss';
+import lottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 
 export const metadata = {
   title: seo.title.subPage.about,
 };
 
-const LOTTIE_OPTION = {
-  data: lottie_arrow,
-  autoplay: false,
-  loop: false,
-};
+// const LOTTIE_OPTION = {
+//   data: lottie_arrow,
+//   autoplay: false,
+//   loop: false,
+// };
 
-const TRIGGER_START = {
-  mobile: '-710px',
-  table: '-710px',
-  desktop: '-710px',
-  wide: '-750px',
-};
-
-const TRIGGER_END = {
-  mobile: '700px',
-  table: '700px',
-  desktop: '700px',
-  wide: '700px',
-};
+// const TRIGGER_START = {
+//   mobile: '-710px',
+//   table: '-710px',
+//   desktop: '-710px',
+//   wide: '-750px',
+// };
+//
+// const TRIGGER_END = {
+//   mobile: '700px',
+//   table: '700px',
+//   desktop: '700px',
+//   wide: '700px',
+// };
 
 function About() {
   return (
@@ -122,13 +124,14 @@ function About() {
               </>
             }
           />
-          <ScrollTriggerArea
-            type="lottieTrigger"
-            lottieOption={LOTTIE_OPTION}
-            triggerOffset={'center'}
-            triggerStart={TRIGGER_START}
-            triggerEnd={TRIGGER_END}
-          />
+          {/*<ScrollTriggerArea*/}
+          {/*  type="lottieTrigger"*/}
+          {/*  lottieOption={LOTTIE_OPTION}*/}
+          {/*  triggerOffset={'center'}*/}
+          {/*  triggerStart={TRIGGER_START}*/}
+          {/*  triggerEnd={TRIGGER_END}*/}
+          {/*/>*/}
+          <LottiePlayer className="arrow_lottie" data={lottie_arrow} />
         </section>
         <section className="profile_award">
           <DepthTitle depthLevel="2" blindOption="hidden">
