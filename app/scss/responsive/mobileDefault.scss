@@ -64,6 +64,7 @@
     .keyvisual_wrap {
       padding: 0 1.8rem;
       position: relative;
+      z-index: 1;
       .text_keyvisual_wrap {
         height: 44vw;
       }
@@ -100,6 +101,9 @@
 
         /*max-width: 31.2rem; // $main*/
       }
+    }
+    .main_carousel {
+      margin-top: -5rem;
     }
     .intro_area {
       .btn_about_us {
