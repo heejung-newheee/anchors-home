@@ -204,7 +204,7 @@ function About() {
             speed: 8000,
           }}
           className="about_members_swiper scroll-linear"
-          swiperContent={aboutMembers.members.map((cont, idx) => (
+          swiperContent={[...aboutMembers.members, ...aboutMembers.members].map((cont, idx) => (
             <article key={`sw04-${idx}`}>
               <ElementTitle data={cont.nameEn} className="member_name_en" />
               <MoreDetail imgUrl={aboutMembers.imgUrl + cont.img} imgAlt={cont.alt}>
