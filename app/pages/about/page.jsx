@@ -28,25 +28,25 @@ export const metadata = {
   title: seo.title.subPage.about,
 };
 
-// const LOTTIE_OPTION = {
-//   data: lottie_arrow,
-//   autoplay: false,
-//   loop: false,
-// };
+const LOTTIE_OPTION = {
+  data: lottie_arrow,
+  autoplay: false,
+  loop: false,
+};
 
-// const TRIGGER_START = {
-//   mobile: '-710px',
-//   table: '-710px',
-//   desktop: '-710px',
-//   wide: '-750px',
-// };
-//
-// const TRIGGER_END = {
-//   mobile: '700px',
-//   table: '700px',
-//   desktop: '700px',
-//   wide: '700px',
-// };
+const TRIGGER_START = {
+  mobile: '-710px',
+  table: '-710px',
+  desktop: '-710px',
+  wide: '-750px',
+};
+
+const TRIGGER_END = {
+  mobile: '700px',
+  table: '700px',
+  desktop: '700px',
+  wide: '700px',
+};
 
 function About() {
   return (
@@ -124,14 +124,14 @@ function About() {
               </>
             }
           />
-          {/*<ScrollTriggerArea*/}
-          {/*  type="lottieTrigger"*/}
-          {/*  lottieOption={LOTTIE_OPTION}*/}
-          {/*  triggerOffset={'center'}*/}
-          {/*  triggerStart={TRIGGER_START}*/}
-          {/*  triggerEnd={TRIGGER_END}*/}
-          {/*/>*/}
-          <LottiePlayer className="arrow_lottie" data={lottie_arrow} />
+          <ScrollTriggerArea
+            type="lottieTrigger"
+            lottieOption={LOTTIE_OPTION}
+            triggerOffset={'center'}
+            triggerStart={TRIGGER_START}
+            triggerEnd={TRIGGER_END}
+          />
+          {/*<LottiePlayer className="arrow_lottie" data={lottie_arrow} />*/}
         </section>
         <section className="profile_award">
           <DepthTitle depthLevel="2" blindOption="hidden">
