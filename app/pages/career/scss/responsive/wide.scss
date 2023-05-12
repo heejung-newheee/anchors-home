@@ -146,19 +146,21 @@
         max-width: 1536px;
         margin: 0 auto;
         .tab_btn_wrap{
-          width: 15.9rem;
-          height: 9.6rem;
-          margin-left: 8.1rem;
-          flex-wrap: wrap;
-          flex-shrink: 0;
-          .tab-button{
-            span{}
-            &:nth-child(1){
-              margin-bottom: 3.6rem;
+          ul{
+            width: 15.9rem;
+            height: 9.6rem;
+            margin-left: 8.1rem;
+            flex-wrap: wrap;
+            flex-shrink: 0;
+            .tab-button{
+              span{}
+              &:nth-child(1){
+                margin-bottom: 3.6rem;
+              }
             }
-          }
-          .isActive{
-            span{}
+            .isActive{
+              span{}
+            }
           }
         }
         .tab_content_wrap {

@@ -236,27 +236,30 @@
       margin-bottom: 4rem;
     }
     .tab_btn_wrap{
-      margin: 0 auto;
-      padding-bottom: 5.7rem;
-      width: 23rem;
-      display: flex;
-      justify-content: space-between;
-      .tab-button{
-        span{
-          @extend %font_baseArticleTitle;
-          font-family : $font_ko;
-          font-weight: 700;
-          color: #D6D6D6;
+      ul{
+        margin: 0 auto;
+        padding-bottom: 5.7rem;
+        width: 23rem;
+        display: flex;
+        justify-content: space-between;
+        .tab-button{
+          span{
+            @extend %font_baseArticleTitle;
+            font-family : $font_ko;
+            font-weight: 700;
+            color: #D6D6D6;
+          }
+        }
+        .is_active{
+          span{
+            color: #1D1D1F;
+          }
         }
       }
-      .is_active{
-        span{
-          color: #1D1D1F;
-        }
-      }
+
     }
     .tab_content_wrap{
-      @extend %layout_fix;
+      //@extend %layout_fix;
       .process_tab{
         display: flex;
         flex-wrap: wrap;

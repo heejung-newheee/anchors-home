@@ -149,20 +149,22 @@
         //padding: 0 8rem;
         display: flex;
         .tab_btn_wrap{
-          padding-bottom: 0rem;
-          margin-left: 7.6rem;
-          width: 13.6rem;
-          height: 8.4rem;
-          flex-wrap: wrap;
-          flex-shrink: 0;
-          .tab-button{
-            span{}
-            &:nth-child(1){
-              margin-bottom: 3.6rem;
+          ul{
+            padding-bottom: 0rem;
+            margin-left: 7.6rem;
+            width: 13.6rem;
+            height: 8.4rem;
+            flex-wrap: wrap;
+            flex-shrink: 0;
+            .tab-button{
+              span{}
+              &:nth-child(1){
+                margin-bottom: 3.6rem;
+              }
             }
-          }
-          .isActive{
-            span{}
+            .isActive{
+              span{}
+            }
           }
         }
         .tab_content_wrap{

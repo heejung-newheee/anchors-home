@@ -180,14 +180,16 @@
       .employment_text{
       }
       .tab_btn_wrap{
-        padding-bottom: 6rem;
-        width: 28.5rem;
-        .tab-button{
-          span{
+        ul{
+          padding-bottom: 6rem;
+          width: 28.5rem;
+          .tab-button{
+            span{
+            }
           }
-        }
-        .isActive{
-          span{
+          .isActive{
+            span{
+            }
           }
         }
       }
