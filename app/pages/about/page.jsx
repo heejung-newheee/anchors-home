@@ -12,7 +12,6 @@ import PageTitle from '@/components/PageTitle/PageTitle';
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Visual from '@/components/Visual/Visual';
-import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
 import seo from '@/helper/data/json/contents/SEO.json';
 
@@ -22,7 +21,6 @@ import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
 import lottie_arrow from '@/public/assets/images/lottie/lottieAboutusUpArrow.json';
 
 import './scss/about.scss';
-import lottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 
 export const metadata = {
   title: seo.title.subPage.about,
@@ -108,7 +106,7 @@ function About() {
           <DepthTitle depthLevel="2" blindOption="hidden">
             About Anchors Development History
           </DepthTitle>
-          <Description className="profile_grow_text" data={aboutProfile.introProfile.profileDevelopment} />
+          <Description innerHTMLOption="Y" className="profile_grow_text" data={aboutProfile.introProfile.profileDevelopment} />
           <Description
             className="profile_grow_number"
             data={
@@ -131,7 +129,6 @@ function About() {
             triggerStart={TRIGGER_START}
             triggerEnd={TRIGGER_END}
           />
-          {/*<LottiePlayer className="arrow_lottie" data={lottie_arrow} />*/}
         </section>
         <section className="profile_award">
           <DepthTitle depthLevel="2" blindOption="hidden">
