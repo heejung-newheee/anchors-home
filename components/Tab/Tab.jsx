@@ -54,13 +54,15 @@ function Tab({ type = 'article', className, json, tabList, children }) {
 
   return (
     <section className={`tab ${className}`} data-tab-type={type}>
-      <ul className="tab_btn_wrap">
+      <article className="tab_btn_wrap">
+        <ul>
         {BUTTON_ARR.map((button, idx) => (
           <TabButton current={tabCurrent} index={idx} key={idx} event={() => TabButtonEvent(button, idx)}>
             {button}
           </TabButton>
         ))}
-      </ul>
+        </ul>
+      </article>
       <TabContents>{TabContentsEvent()}</TabContents>
       {type === 'portfolioList' && sortContents < SORT_CONTENT_LENGTH && sortContents !== SORT_CONTENT_LENGTH ? (
         <Btn type="button" className="view_more_btn" onClick={() => moreEvent()}>
