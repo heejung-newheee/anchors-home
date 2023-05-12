@@ -76,19 +76,12 @@ function About() {
           secondClassName="text_swiper"
           firstContent={aboutIntro.introduction.map((cont, idx) => (
             <span key={`sw01-img-${idx}`}>
-              <img
-                src={aboutIntro.imgUrl + cont.img}
-                alt={cont.alt}
-              />
+              <img src={aboutIntro.imgUrl + cont.img} alt={cont.alt} />
             </span>
           ))}
           secondContent={aboutIntro.introduction.map((cont, idx) => (
             <div className="intro_text" key={`sw01-div-${idx}`}>
-              <ElementTitle
-                className="intro_title"
-                innerHTMLOption="Y"
-                data={cont.highlightText}
-              />
+              <ElementTitle className="intro_title" innerHTMLOption="Y" data={cont.highlightText} />
               <Disclaimer className="intro_disclaimer" data={cont.text} />
             </div>
           ))}
@@ -113,10 +106,7 @@ function About() {
           <DepthTitle depthLevel="2" blindOption="hidden">
             About Anchors Development History
           </DepthTitle>
-          <Description
-            className="profile_grow_text"
-            data={aboutProfile.introProfile.profileDevelopment}
-          />
+          <Description className="profile_grow_text" data={aboutProfile.introProfile.profileDevelopment} />
           <Description
             className="profile_grow_number"
             data={
@@ -144,62 +134,38 @@ function About() {
           <DepthTitle depthLevel="2" blindOption="hidden">
             About Anchors Awards List
           </DepthTitle>
-          <Description
-            innerHTMLOption="Y"
-            className="profile_award_description"
-            data={aboutProfile.introProfile.profileAward}
-          />
+          <Description innerHTMLOption="Y" className="profile_award_description" data={aboutProfile.introProfile.profileAward} />
           <span className="profile_award_icon">
-            <img
-              src="/assets/images/ico/ico_webaward.svg"
-              alt="web award icon image"
-            />
+            <img src="/assets/images/ico/ico_webaward.svg" alt="web award icon image" />
           </span>
           <section>
-            <BaseArticle
-              className="profile_award_list"
-              elementTitle={aboutProfile.award[0].name}
-              description={aboutProfile.award[0].description}
-            />
-            <BaseArticle
-              className="profile_award_list"
-              elementTitle={aboutProfile.award[1].name}
-              description={aboutProfile.award[1].description}
-            />
+            <BaseArticle className="profile_award_list" elementTitle={aboutProfile.award[0].name} description={aboutProfile.award[0].description} />
+            <BaseArticle className="profile_award_list" elementTitle={aboutProfile.award[1].name} description={aboutProfile.award[1].description} />
           </section>
         </section>
         <section className="profile_partner">
           <DepthTitle depthLevel="2" blindOption="hidden">
             About Anchors Partners List
           </DepthTitle>
-          <Description
-            innerHTMLOption="Y"
-            data={aboutProfile.introProfile.profilePartner}
-          />
+          <Description innerHTMLOption="Y" data={aboutProfile.introProfile.profilePartner} />
           <article>
             <InfiniteRolling className="about_partner">
               {aboutProfile.customerLogo.map((cont, idx) => (
                 <span key={idx}>
-                  <img
-                    src={aboutProfile.imgUrl + cont.img}
-                    alt={cont.alt}
-                  />
+                  <img src={aboutProfile.imgUrl + cont.img} alt={cont.alt} />
                 </span>
               ))}
             </InfiniteRolling>
             <InfiniteRolling className="about_partner" reverse="Y">
               {aboutProfile.customerLogo.map((cont, idx) => (
                 <span key={idx}>
-                  <img
-                    src={aboutProfile.imgUrl + cont.img}
-                    alt={cont.alt}
-                  />
+                  <img src={aboutProfile.imgUrl + cont.img} alt={cont.alt} />
                 </span>
               ))}
             </InfiniteRolling>
           </article>
           <Disclaimer data={<>Want to know about us</>} />
-          <Btn className="download_btn" type="a">
+          <Btn className="download_btn" type="a" url="/assets/images/pdf/[Anchors]Company_Profile_A4_0831.pdf">
             Download
             <br />
             Profiles
@@ -211,14 +177,8 @@ function About() {
       <section className="about_members section_div is_photo">
         <Visual imgUrl="/assets/images/contents/about/img_visual_members.jpg" />
         <section className="about_members_desc">
-          <Description
-            innerHTMLOption="Y"
-            data={aboutMembers.membersText.textEn}
-          />
-          <Description
-            innerHTMLOption="Y"
-            data={aboutMembers.membersText.textKo}
-          />
+          <Description innerHTMLOption="Y" data={aboutMembers.membersText.textEn} />
+          <Description innerHTMLOption="Y" data={aboutMembers.membersText.textKo} />
         </section>
         {/* S: about members swiper 영역*/}
         <DepthTitle depthLevel="1" blindOption="hidden">
@@ -247,17 +207,11 @@ function About() {
           swiperContent={aboutMembers.members.map((cont, idx) => (
             <article key={`sw04-${idx}`}>
               <ElementTitle data={cont.nameEn} className="member_name_en" />
-              <MoreDetail
-                imgUrl={aboutMembers.imgUrl + cont.img}
-                imgAlt={cont.alt}>
+              <MoreDetail imgUrl={aboutMembers.imgUrl + cont.img} imgAlt={cont.alt}>
                 <article>
                   <ElementTitle data={cont.nameKo} />
                   <Description className="member_team" data={cont.part} />
-                  <Description
-                    innerHTMLOption="Y"
-                    className="member_hashtag"
-                    data={cont.hashtag}
-                  />
+                  <Description innerHTMLOption="Y" className="member_hashtag" data={cont.hashtag} />
                 </article>
               </MoreDetail>
             </article>
