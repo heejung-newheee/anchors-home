@@ -26,7 +26,7 @@ export default function Device({
   return (
     <article {...GET_CLASSNAME}>
       <ElementTitle data={elementTitle} className="device_title" />
-      <Description data={description} />
+      <Description data={description} innerHTMLOption="Y"/>
       <div className="device-img">
         {DEVICE_DATA.map((data, index) => (
           <div key={index}>
