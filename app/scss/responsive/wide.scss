@@ -101,6 +101,18 @@
           }
         }
       }
+      .portfolio_wrap {
+        .single_swiper_wrap {
+          .swiper_area {
+            .swiper-button-prev {
+              left: 3.8rem;
+            }
+            .swiper-button-next {
+              right: 3.8rem;
+            }
+          }
+        }
+      }
     }
   }
 }
