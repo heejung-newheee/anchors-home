@@ -2,6 +2,20 @@
   .nbrand_video {
     margin-bottom: 6rem;
   }
+  .custom_element_title {
+    font-family: $font-en;
+    @extend %font_sectionTitle;
+    line-height: 100%;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #000;
+    letter-spacing : $en_letterSpacing;
+  }
+  .custom_description {
+    font-family: $font-ko;
+    @extend %font_primary;
+    color: #000;
+  }
   .nbrand_main_wrap {
     padding-bottom: 6rem;
     .main_text_wrap {
