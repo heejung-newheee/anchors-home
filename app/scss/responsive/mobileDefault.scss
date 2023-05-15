@@ -284,10 +284,16 @@
           }
           a {
             @extend %btn_primary_ghost;
-         }
-       }
-     }
-
+          }
+        }
+      }
+      .single_swiper_wrap {
+        .swiper_area {
+          .swiper-button-prev, .swiper-button-next {
+            display: none;
+          }
+        }
+      }
     }
 
   }
