@@ -122,6 +122,21 @@
           }
         }
       }
+      .portfolio_wrap {
+        .single_swiper_wrap {
+          .swiper_area {
+            .swiper-button-prev, .swiper-button-next {
+              display: block;
+            }
+            .swiper-button-prev {
+              left: 2rem;
+            }
+            .swiper-button-next {
+              right: 2rem;
+            }
+          }
+        }
+      }
     }
   }
 }
