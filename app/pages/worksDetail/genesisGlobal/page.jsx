@@ -1,5 +1,3 @@
-import React from 'react';
-
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Device from '@/components/Device/Device';
 import ImageArray from '@/components/ImageArray/ImageArray';
@@ -13,18 +11,21 @@ export const metadata = {
     seo.title.subPage.detail.genesisGlobal + ' : ' + seo.title.subPage.works,
 };
 export default function GenesisGlobal() {
+  
+  const GENESIS =works.content[12]
+  
   return (
     <>
       <WorksTemplate
         custom="Y"
-        visualImgUrl={works.imgUrl + works.content[12].visual}
-        visualChildren={works.content[12].title}
-        disclaimerChildren={works.content[12].description}
-        detailTextDescEn={works.content[12].text.en}
-        detailTextDescKo={works.content[12].text.ko}
-        subVisualImgUrl={works.imgUrl + works.content[12].subVisual}
-        workContent={works.content[12].projectInfomation}
-        webSiteUrl={works.content[12].websiteUrl}
+        visualImgUrl={works.imgUrl + GENESIS.visual}
+        visualChildren={GENESIS.title}
+        disclaimerChildren={GENESIS.description}
+        detailTextDescEn={GENESIS.text.en}
+        detailTextDescKo={GENESIS.text.ko}
+        subVisualImgUrl={works.imgUrl + GENESIS.subVisual}
+        workContent={GENESIS.projectInfomation}
+        webSiteUrl={GENESIS.websiteUrl}
         customChildren={
           <>
             {/* S: image_array 영역*/}
@@ -34,8 +35,8 @@ export default function GenesisGlobal() {
               </DepthTitle>
               <ImageArray
                 imgUrl={works.imgUrl}
-                data={works.content[12].img_array.img}
-                bgColor={works.content[12].img_array.bg_color}
+                data={GENESIS.custom[0].img_array.img}
+                bgColor={GENESIS.custom[0].img_array.bg_color}
               />
             </section>
             {/* S: image_array 영역*/}
@@ -46,22 +47,12 @@ export default function GenesisGlobal() {
                 Device example image
               </DepthTitle>
               <Device
-                elementTitle={['Responsive Web']}
-                description={
-                  <>
-                    제네시스 브랜드 사이트를 반응형 웹으로 구현하였고, 한국을
-                    비롯하여 캐나다, 호주, 중동 등 13개의 해외 주요 글로벌
-                    사이트로의 확산을 효과적으로 하였습니다.
-                  </>
-                }
-                caption={['Korea', 'Middle East', 'Canada, Australia']}
-                imgUrl={[
-                  '/assets/images/contents/works/img_phone_responsiveweb1_genesis.png',
-                  '/assets/images/contents/works/img_phone_responsiveweb2_genesis.png',
-                  '/assets/images/contents/works/img_phone_responsiveweb3_genesis.png',
-                ]}
-                alt={['Hyundai Genesis의 국문, 중동, 유럽 Main 화면 이미지']}
-                type="B"
+                elementTitle={GENESIS.custom[1].device.elementTitle}
+                description={GENESIS.custom[1].device.description}
+                caption={GENESIS.custom[1].device.caption}
+                imgUrl={GENESIS.custom[1].device.imgUrl.map( (url) => works.imgUrl + url )}
+                alt={GENESIS.custom[1].device.alt}
+                type={GENESIS.custom[1].device.type}
               />
             </section>
           </>

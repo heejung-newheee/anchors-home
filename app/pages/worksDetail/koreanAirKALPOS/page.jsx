@@ -1,5 +1,3 @@
-import React from 'react';
-
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Device from '@/components/Device/Device';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
@@ -11,17 +9,20 @@ export const metadata = {
   title: seo.title.subPage.detail.koreanAirKALPOS + ' : ' + seo.title.subPage.works,
 };
 export default function KoreanAir_KALPOS() {
+  
+  const KALPOS = works.content[5]
+  
   return (
     <>
       <WorksTemplate
         custom="Y"
-        visualImgUrl={works.imgUrl + works.content[5].visual}
-        visualChildren={works.content[5].title}
-        disclaimerChildren={works.content[5].description}
-        detailTextDescEn={works.content[5].text.en}
-        detailTextDescKo={works.content[5].text.ko}
-        subVisualImgUrl={works.imgUrl + works.content[5].subVisual}
-        workContent={works.content[5].projectInfomation}
+        visualImgUrl={works.imgUrl + KALPOS.visual}
+        visualChildren={KALPOS.title}
+        disclaimerChildren={KALPOS.description}
+        detailTextDescEn={KALPOS.text.en}
+        detailTextDescKo={KALPOS.text.ko}
+        subVisualImgUrl={works.imgUrl + KALPOS.subVisual}
+        workContent={KALPOS.projectInfomation}
         customChildren={
           <>
             <section className="device_wrap">
@@ -29,22 +30,12 @@ export default function KoreanAir_KALPOS() {
                 Application example image
               </DepthTitle>
               <Device
-                elementTitle={['App']}
-                description={
-                  <>
-                    KALPOS 블루투스 통신 모듈을
-                    <br />
-                    개발하였습니다.
-                  </>
-                }
-                caption={['1. Index', '2. Meal Inventory', '2. Meal Inventory']}
-                imgUrl={[
-                  '/assets/images/contents/works/img_phone_app1_koreanair.png',
-                  '/assets/images/contents/works/img_phone_app2_koreanair.png',
-                  '/assets/images/contents/works/img_phone_app3_koreanair.png',
-                ]}
-                alt={['대한항공 KALPOS App Index, Meal Inventory, Meal Order 화면 이미지']}
-                type="B"
+                elementTitle={KALPOS.custom[0].device[0].elementTitle}
+                description={KALPOS.custom[0].device[0].description}
+                caption={KALPOS.custom[0].device[0].caption}
+                imgUrl={KALPOS.custom[0].device[0].imgUrl.map( (url) => works.imgUrl + url )}
+                alt={KALPOS.custom[0].device[0].alt}
+                type={KALPOS.custom[0].device[0].type}
               />
             </section>
           </>
