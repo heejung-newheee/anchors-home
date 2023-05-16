@@ -1,12 +1,15 @@
 @include desktop {
-  .visual {
-    h2 {
-      max-width: 110rem;
+  .my_hyundai {
+    .visual {
+      h2 {
+        max-width: 110rem;
+      }
     }
-  }
-  .myhyundai_device {
-    .description {
-      width: 49rem !important;
+
+    .myhyundai_device {
+      .description {
+        width: 49rem !important;
+      }
     }
   }
 }

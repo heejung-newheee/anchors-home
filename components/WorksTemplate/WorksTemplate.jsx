@@ -63,7 +63,7 @@ export default function WorksTemplate({
       {/* S: Text 영역 */}
       <section className="detail_text_wrap section_div is_photo">
         <Description data={detailTextDescEn} innerHTMLOption="Y" />
-        <Description data={detailTextDescKo} />
+        <Description data={detailTextDescKo} innerHTMLOption="Y" />
         {/* works.json => 받아와야 할 순서의 contents key값 중에 'projectInformation' 받아와서 적용 */}
         {/* 해당 값은 각 페이지 workContent props에 담아줘야 함 */}
         {workContent.map((data, index) => (
