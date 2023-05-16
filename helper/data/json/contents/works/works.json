@@ -214,7 +214,7 @@
       "id": "0010",
       "sort": ["All","Website"],
       "htmlName": "",
-      "title": "Kia K_WCMS renewal",
+      "title": "Kia K-WCMS renewal",
       "description": "Online sales, e-Commerce, Website, Mobile Web, PIP",
       "thumbnail": "img_thumbnail_kia.jpg",
       "thumbnailAlt": "기아 주식회사 K-WCMS 인도법인 확산 및 딜러사이트 구축 이미지",
@@ -306,7 +306,7 @@
       "subVisual": "img_subvisual_muhyundai.jpg",
       "text": {
         "en": "Hyundai Motor management apps, Bluemembers and mycar were intergrated into unified website. Anchors had <span>increased convenience</span> for customers’ overtime car life. We are participating in customer journey through <span>stable and immediate</span> operational answers.",
-        "ko": "현대자동차 고객들이 차량 구매 이후 현대자동차의 서비스를 편하게 이용할 수 있는 차량 관리 앱을 구현한 프로젝트입니다. 기존 Blumembers, mycar 등 차량 관리 앱을 통합하여 사용자의 카라이프를 용이하게 접근하도록 하였습니다."
+        "ko": "현대자동차 고객들이 차량 구매 이후 현대자동차의 서비스를 편하게 이용할 수 있는 차량 관리 앱을 구현한 프로젝트입니다.<br/> 기존 Blumembers, mycar 등 차량 관리 앱을 통합하여 사용자의 카라이프를 용이하게 접근하도록 하였습니다."
       },
       "projectInfomation" : [
         { "title" :  "Client" , "contents" :  "현대오토에버, 현대자동차"},
@@ -339,7 +339,7 @@
       "visual": "img_keyvisual_happymove.jpg",
       "subVisual": "img_subvisual_happymove.jpg",
       "text": {
-        "en": "Hyundai Motor’s overseas volunteer group recruit and management site. Anchors provided <span>user convenience</span> by introducing solution for order, Traffic for official annoucement, and HTML editor function for <span>operation convenience.</span>",
+        "en": "Hyundai Motor’s overseas volunteer group recruit and management site. Anchors provided <span>user convenience</span> by introducing solution for order, traffic for official annoucement, and HTML editor function for <span>operation convenience.</span>",
         "ko": "현대자동차에서 주체하는 해외 봉사단 모집/관리 사이트 구축 프로젝트입니다. 앵커스는 지원 및 합격자 발표 시 트래픽, 순번을 위한 솔루션 도입, 운영 편의를 위한 HTML editor 기능을 도입하여 사용자에게 편의성을 제공하였습니다."
       },
       "projectInfomation" : [
@@ -367,7 +367,7 @@
       "id": "0006",
       "sort": ["All","Website"],
       "htmlName": "",
-      "title": "Hyundai Motor N_brand Website",
+      "title": "Hyundai Motor N-brand Website",
       "description": "Website, PIP",
       "thumbnail": "img_thumbnail_nbrand.jpg",
       "thumbnailAlt": "현대자동차그룹 N-brand 웹사이트 구축 이미지",
@@ -376,7 +376,7 @@
       "visual": "img_keyvisual_nbrand.jpg",
       "subVisual": "img_subvisual_nbrand.jpg",
       "text": {
-        "en": "Hyundai Motor's high_end brand, N brand online website for <span>global introduction</span>. Anchors had unified content operation to enhance information accessibility. We led it to <span>maximize user experience</span> by variety of interactions and motions, showing amazing visual concentration.",
+        "en": "Hyundai Motor's high-end brand, N brand online website for <span>global introduction</span>. Anchors had unified content operation to enhance information accessibility. We led it to <span>maximize user experience</span> by variety of interactions and motions, showing amazing visual concentration.",
         "ko": "현대자동차 고성능 브랜드인 N 브랜드의 글로벌 소개 및 이미지 제고를 위한 웹사이트를 구축했습니다. 앵커스는 다양한 인터렉션과 모션을 통해 시각적 정보 집중도를 높이면서, 리소스의 최적화를 시현하여 N 브랜드 제품에 대한 고객 경험의 최대화를 이끌어냈습니다."
       },
       "projectInfomation" : [

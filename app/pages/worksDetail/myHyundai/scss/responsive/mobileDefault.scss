@@ -1,8 +1,20 @@
-.visual {
-  .disclaimer {
-    padding: 0 3rem;
+.my_hyundai {
+  .visual {
+    .disclaimer {
+      padding: 0 3rem;
+    }
   }
-}
-.myhyundai_device_wrap {
-  background-color: #f4f4f4;
+  .detail_text_wrap {
+    .description {
+      &:nth-child(2) {
+        br {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .myhyundai_device_wrap {
+    background-color: #f4f4f4;
+  }
 }
