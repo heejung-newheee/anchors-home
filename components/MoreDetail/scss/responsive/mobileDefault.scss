@@ -1,6 +1,10 @@
+.member_name_en {
+  cursor: pointer;
+}
 .detail_slide {
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 
   .detail_btn {
     position: absolute;
