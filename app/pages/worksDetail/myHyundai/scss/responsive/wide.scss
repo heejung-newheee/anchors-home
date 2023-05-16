@@ -1,12 +1,15 @@
 @include wide {
-  .visual {
-    h2 {
-      max-width: 120rem;
+  .my_hyundai {
+    .visual {
+      h2 {
+        max-width: 120rem;
+      }
     }
-  }
-  .myhyundai_device {
-    .description {
-      width: 58rem !important;
+
+    .myhyundai_device {
+      .description {
+        width: 58rem !important;
+      }
     }
   }
 }

@@ -11,12 +11,12 @@ export const metadata = {
   title: seo.title.subPage.detail.WCMS + ' : ' + seo.title.subPage.works,
 };
 export default function WCMS() {
-  
-  const WCMS =works.content[6]
-  
+  const WCMS = works.content[6];
+
   return (
     <>
       <WorksTemplate
+        className="kia_kcms"
         custom="Y"
         visualImgUrl={works.imgUrl + WCMS.visual}
         visualChildren={WCMS.title}
@@ -27,27 +27,19 @@ export default function WCMS() {
           <>
             <section className="web_img_wrap">
               <span>
-                <img
-                  className="kia_web_img"
-                  src={works.imgUrl + WCMS.custom[0].image}
-                  alt={WCMS.custom[0].alt}
-                />
+                <img className="kia_web_img" src={works.imgUrl + WCMS.custom[0].image} alt={WCMS.custom[0].alt} />
               </span>
             </section>
             <div>
               <DepthTitle depthLevel="1" blindOption="hidden">
                 About WCMS Website and Mobile Website
               </DepthTitle>
-              <ImageArray
-                data={WCMS.custom[1].img_array.img}
-                bgColor={WCMS.custom[1].img_array.bg_color}
-                imgUrl={works.imgUrl}
-              />
+              <ImageArray data={WCMS.custom[1].img_array.img} bgColor={WCMS.custom[1].img_array.bg_color} imgUrl={works.imgUrl} />
               <Device
                 elementTitle={WCMS.custom[2].device.elementTitle}
                 description={WCMS.custom[2].device.description}
                 caption={WCMS.custom[2].device.caption}
-                imgUrl={WCMS.custom[2].device.imgUrl.map( (url) => works.imgUrl + url )}
+                imgUrl={WCMS.custom[2].device.imgUrl.map(url => works.imgUrl + url)}
                 alt={WCMS.custom[2].device.alt}
                 type={WCMS.custom[2].device.type}
               />
