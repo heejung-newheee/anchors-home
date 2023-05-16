@@ -225,6 +225,14 @@
           }
           .faq_tab{
             margin-bottom: 17.9rem;
+            .accordion{
+              dd{
+                a{
+                  font-size: 1.8rem;
+                  line-height: 2.8rem;
+                }
+              }
+            }
           }
         }
       }
