@@ -130,7 +130,7 @@ export default function WorksTemplate({
 
       {/* S: View Website Button 영역 */}
       {!!webSiteUrl && (
-        <Btn className={`view_website_btn${hideClass}`} type="a" title="view website button" url={webSiteUrl}>
+        <Btn className={`view_website_btn${hideClass}`} type="a" title="view website button" url={webSiteUrl} target="_black">
           View <br /> Website
         </Btn>
       )}

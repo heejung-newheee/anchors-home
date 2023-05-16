@@ -8,7 +8,7 @@ import PostProcessing from './PostProcessing';
 import { getPiramidalIndex, lerp } from './utils';
 
 const planeSettings = {
-  width: 1.6,
+  width: 1.8,
   height: 4.5,
   gap: 0.15,
 };

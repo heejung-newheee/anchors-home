@@ -8,14 +8,19 @@ export default function Accordion({ contents, className }) {
     ? { className: 'accordion' }
     : { className: 'accordion ' + className };
   const [selected, setSelected] = useState(0);
+
+  const TOGGLE = (e) => {
+    const target = e.currentTarget;
+    target.classList.contains('active') ? target.classList.remove('active') : target.classList.add('active');
+  }
   return (
     <dl {...GET_CLASSNAME}>
       {contents.map((accordionChild, index) => (
         <AccordionChild
           key={index}
           titleData={accordionChild.title}
-          activeOption={selected === index ? 'Y' : 'N'}
-          onClick={() => setSelected(index)}
+          onClick={TOGGLE}
+          index={index}
         >
           {accordionChild.content}
         </AccordionChild>

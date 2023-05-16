@@ -35,7 +35,7 @@ function Tab({ type = 'article', className, json, tabList, children }) {
           idx < sortContents
             ? ((SORT_CONTENT_LENGTH = array.length),
               (
-                <Btn key={idx} type="link" url={pageUrl}>
+                <Btn key={idx} type="a" url={pageUrl}>
                   <BaseArticle
                     imgUrl={IMG_URL + thumbnail}
                     imgAlt={thumbnailAlt}

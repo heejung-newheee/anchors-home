@@ -1,2 +1,6 @@
 @include tablet {
+  .infinite_rolling {
+    width: 450vw;
+    max-width: 3680px;
+  }
 }

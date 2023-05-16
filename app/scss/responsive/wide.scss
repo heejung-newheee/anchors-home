@@ -70,6 +70,50 @@
               margin-right: 6rem;
             }
           }
+
+
+          &:nth-child(1) {
+            .infinite_rolling_inner {
+              animation-name: infiniteRollingSolo !important;
+
+              @keyframes infiniteRollingSolo {
+                0% {
+                  left: 0;
+                }
+                100% {
+                  left: -3837.9px;
+                }
+              }
+            }
+          }
+          &:nth-child(2) {
+            .infinite_rolling_inner {
+              animation-name: infiniteRollingSolo2 !important;
+
+              @keyframes infiniteRollingSolo2 {
+                0% {
+                  right: 0;
+                }
+                100% {
+                  right: -3832.1px;
+                }
+              }
+            }
+          }
+          &:nth-child(3) {
+            .infinite_rolling_inner {
+              animation-name: infiniteRollingSolo3 !important;
+
+              @keyframes infiniteRollingSolo3 {
+                0% {
+                  left: 0;
+                }
+                100% {
+                  left: -4015.6px;
+                }
+              }
+            }
+          }
         }
       }
       .intro_area {

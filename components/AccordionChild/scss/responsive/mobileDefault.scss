@@ -21,6 +21,7 @@
       right: 1rem; // $accordion_buttonRight
       top: 50%;
       transform: translateY(-50%);
+      transition: transform .5s;
 
       span {
         @extend %blind;
@@ -32,14 +33,12 @@
         background: url(/assets/images/ico/ico_accordion_minus.svg) no-repeat center;
         background-size: 100%;
         transform: translateY(-50%) rotate(180deg);
-        transition: transform .5s;
       }
     }
 
     &.active + dd {
       padding: 1.2rem 1rem 4rem; // $accordion_ddPadding
       height: auto;
-      transition: all .3s;
     }
   }
 
@@ -49,5 +48,6 @@
     overflow: hidden;
     padding: 0 1rem;
     @extend %font_tabAccContents;
+    transition: all .3s;
   }
 }
