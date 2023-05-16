@@ -59,9 +59,6 @@
         width: 93vw;
         height: 61rem;
         .swiper-slide{
-          //.visual{
-          //  height: 61rem;
-          //}
           .detail_slide{
             .detail_btn{
               bottom: 5rem;
@@ -174,14 +171,6 @@
               .process_number{
                 width: 27rem;
                 height: 27rem;
-                &:last-child{
-                }
-                &:nth-child(1){
-                }
-                &:nth-child(2){
-                }
-                &:nth-child(3){
-                }
                 &:nth-child(4){
                   &::before{
                     left: -3.7rem;
