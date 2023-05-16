@@ -17,11 +17,10 @@
 
     //swiper_members 영역
     .swiper_members{
+      @extend %layout_fix;
       background-color: #FFFFFF;
       padding: 0 12.6rem;
-      margin-bottom: 13rem;
-      @extend %layout_fix;
-      margin-bottom: 8rem;
+      margin-bottom: 12rem;
       overflow: hidden;
       .swiper-cards{
         width: 47vw;
@@ -51,16 +50,6 @@
             margin-bottom: 3rem;
           }
         }
-        &:last-child {
-          .swiper-slide{
-            transition: all 0.9s;
-            transition-delay: .1s;
-            transform: translateY(80%);
-          }
-          .swiper-slide-active{
-            transform: translateY(0);
-          }
-        }
       }
     }
 
@@ -77,9 +66,6 @@
           transform: translate(-50%, 4rem);
         }
         .swiper-slide{
-          //.visual{
-          //  height: 56vw;
-          //}
           .detail_slide{
             .detail_btn{
               bottom: 3.6rem;
@@ -177,20 +163,10 @@
 
     //채용 tab 영역
     .employment_area{
-      .employment_text{
-      }
       .tab_btn_wrap{
         ul{
           padding-bottom: 6rem;
           width: 28.5rem;
-          .tab-button{
-            span{
-            }
-          }
-          .isActive{
-            span{
-            }
-          }
         }
       }
       .tab_content_wrap{
@@ -240,11 +216,6 @@
           }
           .process_description{
             width: 100%;
-            //padding-left: 2.9rem;
-            p{
-              &::before{
-              }
-            }
           }
           .process_detail_description{
             width: 100%;
