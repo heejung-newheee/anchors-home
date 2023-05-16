@@ -303,6 +303,7 @@
             .detail {
               article {
                 padding: 3.4rem 1.8rem 1.8rem 2.8rem;
+                height: -webkit-fill-available;
                 .element_title {
                   display: inline-block;
                   margin-bottom: 0.6rem;

@@ -149,14 +149,14 @@ function About() {
           </DepthTitle>
           <Description innerHTMLOption="Y" data={aboutProfile.introProfile.profilePartner} />
           <article>
-            <InfiniteRolling className="about_partner">
+            <InfiniteRolling className="about_partner" reverse="Y">
               {aboutProfile.customerLogo.map((cont, idx) => (
                 <span key={idx}>
                   <img src={aboutProfile.imgUrl + cont.img} alt={cont.alt} />
                 </span>
               ))}
             </InfiniteRolling>
-            <InfiniteRolling className="about_partner" reverse="Y">
+            <InfiniteRolling className="about_partner">
               {aboutProfile.customerLogo.map((cont, idx) => (
                 <span key={idx}>
                   <img src={aboutProfile.imgUrl + cont.img} alt={cont.alt} />
@@ -165,7 +165,7 @@ function About() {
             </InfiniteRolling>
           </article>
           <Disclaimer data={<>Want to know about us</>} />
-          <Btn className="download_btn" type="a" url="/assets/images/pdf/[Anchors]Company_Profile_A4_0831.pdf">
+          <Btn className="download_btn" type="a" url="/assets/images/pdf/[Anchors]Company_Profile_A4_230320.pdf">
             Download
             <br />
             Profiles
