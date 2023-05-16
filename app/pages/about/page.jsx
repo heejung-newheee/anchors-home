@@ -202,6 +202,24 @@ function About() {
             },
             loop: true,
             speed: 8000,
+            breakpoints: {
+              768: {
+                spaceBetween: 24,
+              },
+              1280: {
+                spaceBetween: 32,
+                slidesOffsetBefore: 32,
+                slidesOffsetAfter: 32,
+              },
+              1536: {
+                spaceBetween: 48,
+                slidesOffsetBefore: 48,
+                slidesOffsetAfter: 48,
+              },
+              1920: {
+                slidesOffsetBefore: 240,
+              },
+            },
           }}
           className="about_members_swiper scroll-linear"
           swiperContent={[...aboutMembers.members, ...aboutMembers.members].map((cont, idx) => (
