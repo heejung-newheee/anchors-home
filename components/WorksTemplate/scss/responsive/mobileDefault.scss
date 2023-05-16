@@ -156,13 +156,6 @@
           display: block;
           overflow: hidden;
           margin-bottom: 2.2rem;
-          img {
-            transition: all 0.3s;
-          }
-          &:hover img {
-            translate: none;
-            transform: scale(1.1) !important;
-          }
         }
         .element_title {
           font-size: 1.8rem;
