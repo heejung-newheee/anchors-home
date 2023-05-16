@@ -187,6 +187,7 @@ function About() {
         <SwiperArea
           key="swiper04"
           type="single"
+          autoPlayStop="Y"
           swiperOption={{
             slidesPerView: 'auto',
             navigation: false,
