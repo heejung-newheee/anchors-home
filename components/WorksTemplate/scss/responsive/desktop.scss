@@ -39,6 +39,7 @@
       height: 63.4rem;
       .sub_visual_text {
         .description {
+          font-size: 5.4rem;
           margin-bottom: 5.4rem;
         }
         .base_article {
@@ -59,12 +60,20 @@
         line-height: 9rem;
       }
       div {
-        a {
+        .next_work_list {
           margin-right: 2.4rem;
           .base_article {
             margin-top: 7rem;
             .base_article_img_box {
               margin-bottom: 3rem;
+
+              img {
+                transition: all 0.3s;
+              }
+              &:hover img {
+                translate: none;
+                transform: scale(1.1) !important;
+              }
             }
             .element_title {
               margin-bottom: 1rem;

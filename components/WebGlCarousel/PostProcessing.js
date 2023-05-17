@@ -9,20 +9,19 @@ const PostProcessing = forwardRef((_, ref) => {
   const { viewport } = useThree();
 
   const active = true;
-  const ior = 0.8;
+  const ior = 0.9;
 
   return active ? (
     <mesh position={[0, 0, 1]}>
-      <planeGeometry args={[viewport.width, viewport.height]} />
+      <planeGeometry args={[viewport.width, viewport.height]} />{/*4625c2*/}
       <MeshTransmissionMaterial
         ref={ref}
-        background={new Color('#4625C2')}
-        transmission={0.7}
+        background={new Color('#522de1')}
+        transmission={0.5}
+        // anisotropy={2}
+        ior={ior}
         roughness={0}
         thickness={0}
-        chromaticAberration={0.06}
-        anisotropy={0}
-        ior={ior}
       />
     </mesh>
   ) : null;

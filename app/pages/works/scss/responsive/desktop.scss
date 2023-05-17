@@ -40,13 +40,15 @@
     .tab {
       .tab_btn_wrap {
         top: calc(100vh - 108px);
-        padding: 1.2rem;
-        .tab-button {
-          margin-left: 1.2rem;
+        ul {
+          padding: 1.2rem;
+          .tab-button {
+            margin-left: 1.2rem;
 
-          button {
-            font-size: 22px;
-            padding: 1.4rem 3rem;
+            button {
+              font-size: 22px;
+              padding: 1.4rem 3rem;
+            }
           }
         }
       }

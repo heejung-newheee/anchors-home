@@ -1,5 +1,3 @@
-import React from 'react';
-
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import ElementTitle from '@/components/ElementTitle/ElementTitle';
@@ -12,54 +10,38 @@ export const metadata = {
   title: seo.title.subPage.detail.BMS + ' : ' + seo.title.subPage.works,
 };
 export default function BMS() {
+
+  const BMS = works.content[3]
+
   return (
     <>
       <WorksTemplate
         custom="Y"
-        visualImgUrl={works.imgUrl + works.content[3].visual}
-        visualChildren={works.content[3].title}
-        disclaimerChildren={works.content[3].description}
-        detailTextDescEn={works.content[3].text.en}
-        detailTextDescKo={works.content[3].text.ko}
+        visualImgUrl={works.imgUrl + BMS.visual}
+        visualChildren={BMS.title}
+        disclaimerChildren={BMS.description}
+        detailTextDescEn={BMS.text.en}
+        detailTextDescKo={BMS.text.ko}
         customChildren={
           <>
-            <Video
-              className="bms_video"
-              videoUrl="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
-            />
+            <Video className="bms_video" videoUrl={works.videoUrl + BMS.custom[0].video} />
             <section className="main_wrap">
               <DepthTitle depthLevel="1" blindOption="hidden">
                 BMS Website Introduction
               </DepthTitle>
               <div className="main_text_wrap">
-                <ElementTitle className="custom_element_title" data="Main" />
+                <ElementTitle className="custom_element_title" data={BMS.custom[1].text} />
                 <Description
                   className="custom_description"
-                  data={
-                    <>
-                      기존 사용자의 니즈를 파악하여 이를 효과적으로
-                      녹여내었습니다. 사용자들이 익숙한 오토웨이 사이트와의
-                      연동을 통해 임직원 관리를 실시하여 접근 편의성을
-                      개선하였습니다. 자주 확인하는 메뉴를 메인에 배치하고, 최근
-                      업데이트 되는 콘텐츠를 한눈에 파악할 수 있도록 하여
-                      고객들의 만족도를 높였습니다.
-                    </>
-                  }
+                  data={BMS.custom[2].text}
+                  innerHTMLOption="Y"
                 />
               </div>
               <div className="main_img_wrap">
-                <img
-                  className="main_img"
-                  src="/assets/images/contents/works/img_web_bms.jpg"
-                  alt="BMS website 이미지"
-                />
+                <img className="main_img" src={works.imgUrl + BMS.custom[3].image} alt={BMS.custom[3].alt} />
               </div>
               <span>
-                <img
-                  className="main_detail_img"
-                  src="/assets/images/contents/works/img_full_bms.jpg"
-                  alt="BMS website 상세페이지 관련 이미지"
-                />
+                <img className="main_detail_img" src={works.imgUrl + BMS.custom[4].image} alt={BMS.custom[4].alt}/>
               </span>
             </section>
             <section className="brand_asset_wrap">
@@ -67,42 +49,23 @@ export default function BMS() {
                 <DepthTitle depthLevel="1" blindOption="hidden">
                   BMS Media Asset Introduction
                 </DepthTitle>
-                <ElementTitle
-                  className="custom_element_title"
-                  data="Brand Asset"
-                />
+                <ElementTitle className="custom_element_title" data={BMS.custom[5].text} />
                 <Description
                   className="custom_description"
-                  data={
-                    <>
-                      대용량 콘텐츠를 관리하는 방법을 개선하여 성공적으로
-                      사용자의 접근 편의성을 제공한 케이스입니다. 각국에서
-                      업로드하는 수 많은 Media Asset들에 대한 카테고리 별로
-                      분류하고, 효과적으로 관리하기 위해 단계를 줄이는 기능을
-                      적용하였습니다.
-                    </>
-                  }
+                  data={BMS.custom[6].text}
+                  innerHTMLOption="Y"
                 />
                 <div className="asset_list">
-                  <Description data="Brand library" />
-                  <img
-                    src="/assets/images/contents/works/img_web_brandasset1_bms.jpg"
-                    alt="BMS website brand library 이미지"
-                  />
+                  <Description data={BMS.custom[7].text} />
+                  <img src={works.imgUrl + BMS.custom[8].image} alt={BMS.custom[8].alt}/>
                 </div>
                 <div className="asset_list">
-                  <Description data="Brand asset" />
-                  <img
-                    src="/assets/images/contents/works/img_web_brandasset2_bms.jpg"
-                    alt="BMS website brand asset 이미지"
-                  />
+                  <Description data={BMS.custom[9].text} />
+                  <img src={works.imgUrl + BMS.custom[10].image} alt={BMS.custom[10].alt}/>
                 </div>
                 <div className="asset_list">
-                  <Description data="Brand book" />
-                  <img
-                    src="/assets/images/contents/works/img_web_brandasset3_bms.jpg"
-                    alt="BMS website brand book 이미지"
-                  />
+                  <Description data={BMS.custom[11].text} />
+                  <img src={works.imgUrl + BMS.custom[12].image} alt={BMS.custom[12].alt}/>
                 </div>
               </div>
             </section>
@@ -110,31 +73,20 @@ export default function BMS() {
               <DepthTitle depthLevel="1" blindOption="hidden">
                 BMS Identity System Introduction
               </DepthTitle>
-              <ElementTitle
-                className="custom_element_title"
-                data="Identity system"
-              />
+              <ElementTitle className="custom_element_title" data={BMS.custom[13].text} />
               <Description
                 className="custom_description"
-                data={
-                  <>
-                    현대의 주컬러를 활용하여 아이덴티티를 명확히 보여주고,
-                    아이콘을 활용한 일관성 있는 UI를 제공합니다.
-                  </>
-                }
+                data={BMS.custom[14].text}
               />
               <span className="identity_img">
-                <img
-                  src="/assets/images/contents/works/img_color_bms_mo.jpg"
-                  alt="BMS website Indentity system 관련 이미지"
-                />
+                  <img src={works.imgUrl + BMS.custom[15].image} alt={BMS.custom[15].alt}/>
               </span>
             </section>
           </>
         }
-        subVisualImgUrl={works.imgUrl + works.content[3].subVisual}
-        workContent={works.content[3].projectInfomation}
-        webSiteUrl={works.content[3].websiteUrl}
+        subVisualImgUrl={works.imgUrl + BMS.subVisual}
+        workContent={BMS.projectInfomation}
+        webSiteUrl={BMS.websiteUrl}
         firstNextWork={works.content[4]}
         secondNextWork={works.content[5]}
         thirdNextWork={works.content[6]}

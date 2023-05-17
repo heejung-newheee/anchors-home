@@ -9,7 +9,7 @@ const CarouselItem = ({ index, width, height, item, onHandOver }) => {
   const [hover, setHover] = useState(false);
 
   useEffect(() => {
-    const hoverScale = hover ? 1.1 : 1;
+    const hoverScale = 1;
     gsap.to($root.current.scale, {
       x: hoverScale,
       y: hoverScale,

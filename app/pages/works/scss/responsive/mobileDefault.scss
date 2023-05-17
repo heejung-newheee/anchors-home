@@ -66,22 +66,25 @@
 
     span {
       @extend %font_disclaimer;
+      color: $color-black;
     }
   }
 
   .tab {
     position: relative;
     .tab_btn_wrap {
+      width: 100%;
       position: sticky;
-      left: 50%;
+      left: 0;
       top: calc(100vh - 72px);
-      transform: translateX(-50%);
       z-index: 50;
-      padding: 0.8rem;
-      border-radius: 100rem;
-      background-color: rgba(0,0,0,0.6);
-      display: inline-block;
-      .tab-button {
+      text-align: center;
+      ul {
+        padding: 0.8rem;
+        border-radius: 100rem;
+        background-color: rgba(0,0,0,0.6);
+        display: inline-block;
+        .tab-button {
         display: inline-block;
         margin-left: 0.8rem;
 
@@ -107,6 +110,7 @@
             color: $color-black;
           }
         }
+      }
       }
     }
   }

@@ -9,15 +9,17 @@ export default function AccordionChild({
   titleData,
   activeOption = 'N',
   onClick,
+  index
 }) {
-  const CLASSNAME_OPTION = activeOption === 'Y' ? { className: 'active' } : {};
+  const CLASSNAME_OPTION = activeOption === 'Y' ? { className: 'active' } : index === 0 ? { className: 'active' } : {};
+
   return (
     <>
       <dt {...CLASSNAME_OPTION} onClick={onClick}>
         {titleData}
         <Btn type="button">목록 버튼</Btn>
       </dt>
-      <dd>{children}</dd>
+      <dd dangerouslySetInnerHTML={{ __html: children }} />
     </>
   );
 }

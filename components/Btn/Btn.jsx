@@ -9,6 +9,7 @@ export default function Btn({
   className,
   children,
   onClick,
+  target
 }) {
   return (
     <>
@@ -25,15 +26,15 @@ export default function Btn({
       )}
 
       {type === 'a' && (
-        <a href={url} title={alt} className={className} onClick={onClick}>
+        <a href={url} title={alt} className={className} onClick={onClick} target={target}>
           <span>{children}</span>
         </a>
       )}
 
       {type === 'link' && (
-        <Link href={url} title={alt} className={className} onClick={onClick}>
+        <a href={url} title={alt} className={className} onClick={onClick}>
           <span>{children}</span>
-        </Link>
+        </a>
       )}
     </>
   );

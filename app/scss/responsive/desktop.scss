@@ -1,2 +1,192 @@
 @include desktop {
+  .main {
+
+    .intro_area {
+
+      .intro_en {
+        padding: 0 9rem 5rem;
+      }
+      a {
+        margin-top: 6rem;
+      }
+    }
+
+    .about_us {
+      padding-top: 18.6rem;
+      .keyvisual_wrap {
+        padding: 0 21.7rem;
+        .text_keyvisual_wrap {
+          height: 33vw;
+        }
+        .text_keyvisual {
+          height: 33vw;
+        }
+        .smile_keyvisual {
+          top: -6%;
+          right: 17%;
+          width: 10vw;
+        }
+        .underline_keyvisual {
+          top: 10.5%;
+          right: 11%;
+          width: 45vw;
+        }
+        .ourwork_keyvisual {
+          bottom: 18%;
+          left: 7.5%;
+          width: 100px;
+          transform: translateX(34%);
+        }
+        .keyvisual_disclaimer {
+          /*max-width: 80rem; // $main*/
+          padding-top: 0;
+        }
+      }
+    }
+
+    .service {
+      .bg_white {
+        &.is_photo {
+          padding-bottom: 6rem;
+        }
+      }
+      .rolling_wrap {
+        .rolling_text {
+          margin-left: 81vw;
+          .text_expertis,
+          .text_e {
+            font-size: 83.5vh;
+          }
+          .expertise_img {
+            max-width: 34.2rem;
+            width: 43vh;
+            &:nth-child(1) {
+              top: 7.5%;
+              left: 9%;
+            }
+            &:nth-child(2) {
+              top: 65%;
+              left: 41%;
+            }
+            &:nth-child(3) {
+              top: 12.5%;
+              left: 84%;
+            }
+          }
+        }
+      }
+      .rolling_area_wrap {
+        margin-bottom: 19.4rem;
+        .rolling_area {
+          height: 12.4rem;
+          margin-bottom: 2rem;
+          li {
+            span {
+              margin-right: 3.6rem;
+              font-size: 12.4rem;
+            }
+            img {
+              width: 18rem;
+              margin-right: 4.5rem;
+            }
+          }
+
+          &:nth-child(1) {
+            .infinite_rolling_inner {
+              animation-name: infiniteRollingSolo !important;
+
+              @keyframes infiniteRollingSolo {
+                0% {
+                  left: 0;
+                }
+                100% {
+                  left: -2882.7px;
+                }
+              }
+            }
+          }
+          &:nth-child(2) {
+            .infinite_rolling_inner {
+              animation-name: infiniteRollingSolo2 !important;
+
+              @keyframes infiniteRollingSolo2 {
+                0% {
+                  right: 0;
+                }
+                100% {
+                  right: -2878.3px;
+                }
+              }
+            }
+          }
+          &:nth-child(3) {
+            .infinite_rolling_inner {
+              animation-name: infiniteRollingSolo3 !important;
+
+              @keyframes infiniteRollingSolo3 {
+                0% {
+                  left: 0;
+                }
+                100% {
+                  left: -3016.2px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .intro_area {
+        padding-top: 6rem;
+      }
+    }
+
+    .our_works {
+      .rolling_wrap {
+        .rolling_text {
+          margin-left: 33.7vw;
+          .text_ourworks {
+            font-size: 40vh;
+          }
+          .ourworks_img {
+            max-width: 34.4rem;
+            width: 42vw;
+            &:nth-child(1) {
+              top: -4%;
+              left: 13%;
+            }
+            &:nth-child(2) {
+              top: 68%;
+              left: 44.8%;
+            }
+            &:nth-child(3) {
+              top: -5.5%;
+              left: 84.8%;
+            }
+          }
+        }
+      }
+      .portfolio_wrap {
+        .portfolio {
+          .visual {
+            .disclaimer {
+              margin-bottom: 6rem;
+            }
+          }
+        }
+        .single_swiper_wrap {
+          .swiper_area {
+            .swiper-button-prev, .swiper-button-next {
+              display: block;
+            }
+            .swiper-button-prev {
+              left: 2rem;
+            }
+            .swiper-button-next {
+              right: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }

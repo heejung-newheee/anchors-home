@@ -1,5 +1,3 @@
-import React from 'react';
-
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Device from '@/components/Device/Device';
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
@@ -12,38 +10,36 @@ export const metadata = {
   title: seo.title.subPage.detail.myHyundai + ' : ' + seo.title.subPage.works,
 };
 export default function MyHyundai() {
+  const MYHYUNDAI = works.content[8];
+
   return (
     <>
       <WorksTemplate
+        className="my_hyundai"
         custom="Y"
-        visualImgUrl={works.imgUrl + works.content[8].visual}
-        visualChildren={works.content[8].title}
-        disclaimerChildren={works.content[8].description}
-        detailTextDescEn={works.content[8].text.en}
-        detailTextDescKo={works.content[8].text.ko}
+        visualImgUrl={works.imgUrl + MYHYUNDAI.visual}
+        visualChildren={MYHYUNDAI.title}
+        disclaimerChildren={MYHYUNDAI.description}
+        detailTextDescEn={MYHYUNDAI.text.en}
+        detailTextDescKo={MYHYUNDAI.text.ko}
         customChildren={
           <div className="myhyundai_device_wrap">
             <DepthTitle depthLevel="1" blindOption="hidden">
               About MyHyundai App Device
             </DepthTitle>
             <Device
-              className="myhyundai_device"
-              type="A"
-              elementTitle="App"
-              description="차량정보 확인, 차량 유지비 관리를 포함한 쉬운 차량 관리 기능을 도입하고, 보유 차량에 따라 맞춤 정보를 카드형 UI로 확인 가능하도록 하여 고객들의 접근 편의성을 향상했습니다."
-              imgUrl={[
-                '/assets/images/contents/works/img_phone_app1_myhyundai.png',
-                '/assets/images/contents/works/img_phone_app3_myhyundai.png',
-                '/assets/images/contents/works/img_phone_app2_myhyundai.png',
-              ]}
-              caption={['1. 스플래시 화면', '2. 소모품 교환이력', '3. 이벤트']}
-              alt="myhyundai app 이미지"
+              elementTitle={MYHYUNDAI.custom[0].device.elementTitle}
+              description={MYHYUNDAI.custom[0].device.description}
+              caption={MYHYUNDAI.custom[0].device.caption}
+              imgUrl={MYHYUNDAI.custom[0].device.imgUrl.map(url => works.imgUrl + url)}
+              alt={MYHYUNDAI.custom[0].device.alt}
+              type={MYHYUNDAI.custom[0].device.type}
             />
           </div>
         }
-        subVisualImgUrl={works.imgUrl + works.content[8].subVisual}
-        workContent={works.content[8].projectInfomation}
-        webSiteUrl={works.content[8].websiteUrl}
+        subVisualImgUrl={works.imgUrl + MYHYUNDAI.subVisual}
+        workContent={MYHYUNDAI.projectInfomation}
+        webSiteUrl={MYHYUNDAI.websiteUrl}
         firstNextWork={works.content[9]}
         secondNextWork={works.content[10]}
         thirdNextWork={works.content[11]}

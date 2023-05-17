@@ -1,4 +1,5 @@
 .main {
+  overflow-x: hidden;
 
   .intro_area {
     text-align: center;
@@ -34,7 +35,7 @@
   .rolling_wrap {
     height: 100vh;
     position: relative;
-    overflow: hidden;
+    //overflow: hidden;
     .line1_flow {
       &.is_active {
         position: fixed;
@@ -63,10 +64,11 @@
     .keyvisual_wrap {
       padding: 0 1.8rem;
       position: relative;
+      z-index: 1;
       .text_keyvisual_wrap {
         height: 44vw;
       }
-      .text_keycisual {
+      .text_keyvisual {
         height: 44vw;
       }
       .smile_keyvisual {
@@ -92,12 +94,16 @@
         @extend %font_primary;
         @extend %layout_fix;
         letter-spacing: $en_letterSpacing;
+        font-family: $font_ko;
         display: block;
         padding-top: 1rem; // $main
         padding-bottom: 10.7rem; // $main
 
-        max-width: 31.2rem; // $main
+        /*max-width: 31.2rem; // $main*/
       }
+    }
+    .main_carousel {
+      margin-top: -5rem;
     }
     .intro_area {
       .btn_about_us {
@@ -109,13 +115,15 @@
   }
 
   .service {
-    padding-bottom: 6rem;
     .bg_blue {
       background-color: $color_blue;
       color: $color_white;
     }
     .bg_white {
       background-color: $color_white;
+      &.is_photo {
+        padding-bottom: 6rem;
+      }
 
       &:before {
         width: 100vw;
@@ -123,43 +131,6 @@
         display: block;
         content:'';
         background-color: $color_blue;
-      }
-
-      .rolling_area_wrap {
-       margin-top: 23.2rem;
-       margin-bottom: 29.2rem;
-        .rolling_area {
-          height: 5.2rem;
-          margin-bottom: 1rem;
-
-          li {
-
-            span {
-             margin-right: 1.5rem;
-             font-family: $font_en;
-             font-family : $en_letterSpacing;
-             font-size: 5.2rem;
-             line-height: 100%;
-             color: #121212;
-             white-space: nowrap;
-            }
-            img {
-             width: 7.6rem;
-             margin-right: 1.9rem;
-            }
-          }
-        }
-      }
-
-      .intro_area {
-        position: relative;
-        z-index: 10;
-        color: $color_black;
-
-        a {
-          background-color: $color_black;
-          color: $color_white;
-        }
       }
     }
     .rolling_wrap {
@@ -192,6 +163,83 @@
               left: 84.5%;
           }
         }
+      }
+    }
+    .rolling_area_wrap {
+      margin-top: 23.2rem;
+      margin-bottom: 29.2rem;
+      .rolling_area {
+        height: 5.2rem;
+        margin-bottom: 1rem;
+        li {
+          align-items: center;
+          span {
+            margin-right: 1.5rem;
+            font-family: $font_en;
+            font-family : $en_letterSpacing;
+            font-size: 5.2rem;
+            line-height: 100%;
+            color: #000;
+            white-space: nowrap;
+          }
+          img {
+            width: 7.6rem;
+            margin-right: 1.9rem;
+          }
+        }
+
+        &:nth-child(1) {
+          .infinite_rolling_inner {
+            animation-name: infiniteRollingSolo !important;
+
+            @keyframes infiniteRollingSolo {
+              0% {
+                left: 0;
+              }
+              100% {
+                left: -1210.5px;
+              }
+            }
+          }
+        }
+        &:nth-child(2) {
+          .infinite_rolling_inner {
+            animation-name: infiniteRollingSolo2 !important;
+
+            @keyframes infiniteRollingSolo2 {
+              0% {
+                right: 0;
+              }
+              100% {
+                right: -1208.7px;
+              }
+            }
+          }
+        }
+        &:nth-child(3) {
+           .infinite_rolling_inner {
+             animation-name: infiniteRollingSolo3 !important;
+
+             @keyframes infiniteRollingSolo3 {
+               0% {
+                 left: 0;
+               }
+               100% {
+                 left: -1266.5px;
+               }
+             }
+           }
+         }
+      }
+    }
+    .intro_area {
+      position: relative;
+      z-index: 10;
+      color: $color_black;
+      padding-top: 6rem;
+      a {
+        background-color: $color_black;
+        color: $color_white;
       }
     }
   }
@@ -239,12 +287,12 @@
     }
     .scroll_swiper {
       .single_swiper_wrap {
-        transform: translateX(200%) rotate(25deg) scale(0);
-        transition: transform 1.5s;
+        transform: translate(200%, -200%) rotate(25deg) scale(0);
+        transition: transform 1s;
       }
       &.is_active {
         .single_swiper_wrap {
-          transform: translateX(0) rotate(0) scale(1);
+          transform: translate(0) rotate(0) scale(1);
         }
       }
     }
@@ -276,13 +324,20 @@
           }
           .disclaimer {
             @extend %font_visualDescription;
+            margin-bottom: 5rem;
           }
           a {
             @extend %btn_primary_ghost;
-         }
-       }
-     }
-
+          }
+        }
+      }
+      .single_swiper_wrap {
+        .swiper_area {
+          .swiper-button-prev, .swiper-button-next {
+            display: none;
+          }
+        }
+      }
     }
 
   }

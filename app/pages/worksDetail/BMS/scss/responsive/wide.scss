@@ -38,9 +38,16 @@
           padding: 0;
           .description {
             font-size: 1.6rem;
+            margin-bottom: 3rem;
           }
           img {
             margin-bottom: 12rem;
+          }
+
+          &:last-child {
+            img{
+              margin-bottom: 0;
+            }
           }
         }
       }

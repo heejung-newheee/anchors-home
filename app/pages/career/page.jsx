@@ -78,6 +78,7 @@ function Career() {
           ))}
           firstSwiperOption={{
             effect: 'cards',
+            touchAngle: 180,
           }}
           secondSwiperOption={{
             pagination: false,
@@ -92,32 +93,20 @@ function Career() {
         <DepthTitle blindOption="hidden" depthLevel="1">
           Our Philosophy
         </DepthTitle>
-        <Description
-          className="swiper_comment_text"
-          innerHTMLOption="Y"
-          data={careerText.textList[0].commentText}
-        />
+        <Description className="swiper_comment_text" innerHTMLOption="Y" data={careerText.textList[0].commentText} />
         <SwiperArea
           type="single"
           autoPlayStop="Y"
-          swiperContent={[
-            ...careerComment.content,
-            ...careerComment.content,
-          ].map((cont, idx) => (
+          swiperContent={[...careerComment.content, ...careerComment.content].map((cont, idx) => (
             <div key={idx}>
               <>
                 {/*<Visual*/}
                 {/*  key={`visual${idx}`}*/}
                 {/*  imgUrl={careerComment.imgUrl + cont.img}*/}
                 {/*/>*/}
-                <MoreDetail
-                  key={`detail${idx}`}
-                  imgUrl={careerComment.imgUrl + cont.img}>
-                    <Description
-                      innerHTMLOption="Y"
-                      data={cont.highlightText}
-                    />
-                    <Disclaimer data={cont.text} />
+                <MoreDetail key={`detail${idx}`} imgUrl={careerComment.imgUrl + cont.img}>
+                  <Description innerHTMLOption="Y" data={cont.highlightText} />
+                  <Disclaimer data={cont.text} />
                 </MoreDetail>
               </>
             </div>
@@ -150,20 +139,10 @@ function Career() {
         <DepthTitle blindOption="hidden" depthLevel="1">
           Welfare List
         </DepthTitle>
-        <Description
-          className="welfare_text"
-          innerHTMLOption="Y"
-          data={careerText.textList[0].welfareText}
-        />
+        <Description className="welfare_text" innerHTMLOption="Y" data={careerText.textList[0].welfareText} />
         <article className="welfare_list">
           {careerWelfare.content.map((data, idx) => (
-            <BaseArticle
-              key={idx}
-              imgUrl={careerWelfare.imgUrl + data.img}
-              imgAlt={data.alt}
-              description={data.title}
-              disclaimer={data.text}
-            />
+            <BaseArticle key={idx} imgUrl={careerWelfare.imgUrl + data.img} imgAlt={data.alt} description={data.title} disclaimer={data.text} />
           ))}
         </article>
       </section>
@@ -171,10 +150,7 @@ function Career() {
 
       {/*S: sub_visual 영역 */}
       <div className="sub_visual">
-        <Visual
-          imgUrl="/assets/images/contents/career/img_visual_lights.jpg"
-          alt="사무실 조명 이미지"
-        />
+        <Visual imgUrl="/assets/images/contents/career/img_visual_lights.jpg" alt="사무실 조명 이미지" />
       </div>
       {/* E: sub_visual 영역 */}
 
@@ -183,10 +159,7 @@ function Career() {
         <DepthTitle blindOption="hidden" depthLevel="1">
           How to join Anchors
         </DepthTitle>
-        <Description
-          className="employment_text"
-          data={careerText.textList[0].employmentText}
-        />
+        <Description className="employment_text" data={careerText.textList[0].employmentText} />
         <Tab type="article" tabList={careerEmployment.title}>
           <article className="process_tab">
             <div className="process_number_wrap">
