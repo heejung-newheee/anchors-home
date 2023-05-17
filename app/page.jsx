@@ -85,8 +85,13 @@ function Main() {
               <artice className="rolling_text">
                 <div className="text_expertis">
                   {main.service.rollingBigText[0]}
+                  <div className="expertise_img">
+                    <img src={main.imgUrl + main.service.blueBgRollingImages[0].image} alt={main.service.blueBgRollingImages[0].alt} />
+                    <img src={main.imgUrl + main.service.blueBgRollingImages[1].image} alt={main.service.blueBgRollingImages[1].alt} />
+                    <img src={main.imgUrl + main.service.blueBgRollingImages[2].image} alt={main.service.blueBgRollingImages[2].alt} />
+                  </div>
                   {/* Expertise 첫번째 이미지 */}
-                  <ScrollTriggerArea
+                  {/* <ScrollTriggerArea
                     className="expertise_img"
                     defaultID="scroll_trigger02"
                     type="multiTrigger"
@@ -114,10 +119,10 @@ function Main() {
                     duration={0.01}
                   >
                     <img src={main.imgUrl + main.service.blueBgRollingImages[0].image} alt={main.service.blueBgRollingImages[0].alt} />
-                  </ScrollTriggerArea>
+                  </ScrollTriggerArea> */}
 
                   {/* Expertise 두번째 이미지 */}
-                  <ScrollTriggerArea
+                  {/* <ScrollTriggerArea
                     className="expertise_img"
                     defaultID="scroll_trigger03"
                     type="multiTrigger"
@@ -145,10 +150,10 @@ function Main() {
                     duration={0.01}
                   >
                     <img src={main.imgUrl + main.service.blueBgRollingImages[1].image} alt={main.service.blueBgRollingImages[1].alt} />
-                  </ScrollTriggerArea>
+                  </ScrollTriggerArea> */}
 
                   {/* Expertise 세번째 이미지 */}
-                  <ScrollTriggerArea
+                  {/* <ScrollTriggerArea
                     className="expertise_img"
                     defaultID="scroll_trigger04"
                     type="multiTrigger"
@@ -176,7 +181,7 @@ function Main() {
                     duration={0.01}
                   >
                     <img src={main.imgUrl + main.service.blueBgRollingImages[2].image} alt={main.service.blueBgRollingImages[2].alt} />
-                  </ScrollTriggerArea>
+                  </ScrollTriggerArea> */}
                 </div>
 
                 {/* Expertise 텍스트 영역 'e' */}
@@ -306,8 +311,13 @@ function Main() {
               <article className="rolling_text">
                 <div className="text_ourworks">
                   {main.ourWorks.rollingBigText}
+                  <div className="ourworks_img">
+                    <img src={main.imgUrl + main.ourWorks.rollingImages[0].image} alt={main.ourWorks.rollingImages[0].alt} />
+                    <img src={main.imgUrl + main.ourWorks.rollingImages[1].image} alt={main.ourWorks.rollingImages[1].alt} />
+                    <img src={main.imgUrl + main.ourWorks.rollingImages[2].image} alt={main.ourWorks.rollingImages[2].alt} />
+                  </div>
                   {/* Our works 첫번째 이미지 */}
-                  <ScrollTriggerArea
+                  {/* <ScrollTriggerArea
                     className="ourworks_img"
                     defaultID="scroll_trigger07"
                     type="multiTrigger"
@@ -335,10 +345,10 @@ function Main() {
                     duration={0.01}
                   >
                     <img src={main.imgUrl + main.ourWorks.rollingImages[0].image} alt={main.ourWorks.rollingImages[0].alt} />
-                  </ScrollTriggerArea>
+                  </ScrollTriggerArea> */}
 
                   {/* Our works 두번째 이미지 */}
-                  <ScrollTriggerArea
+                  {/* <ScrollTriggerArea
                     className="ourworks_img"
                     defaultID="scroll_trigger08"
                     type="multiTrigger"
@@ -366,10 +376,10 @@ function Main() {
                     duration={0.01}
                   >
                     <img src={main.imgUrl + main.ourWorks.rollingImages[1].image} alt={main.ourWorks.rollingImages[1].alt} />
-                  </ScrollTriggerArea>
+                  </ScrollTriggerArea> */}
 
                   {/* Our works 세번째 이미지 */}
-                  <ScrollTriggerArea
+                  {/* <ScrollTriggerArea
                     className="ourworks_img"
                     defaultID="scroll_trigger09"
                     type="multiTrigger"
@@ -397,7 +407,7 @@ function Main() {
                     duration={0.01}
                   >
                     <img src={main.imgUrl + main.ourWorks.rollingImages[2].image} alt={main.ourWorks.rollingImages[2].alt} />
-                  </ScrollTriggerArea>
+                  </ScrollTriggerArea> */}
                 </div>
               </article>
             </ScrollTriggerArea>
