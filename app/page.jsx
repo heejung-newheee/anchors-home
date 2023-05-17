@@ -66,10 +66,10 @@ function Main() {
                 wide: '0',
               }}
               triggerEnd={{
-                mobile: '2200vh',
-                table: '2200vh',
-                desktop: '2200vh',
-                wide: '2200vh',
+                mobile: '100%',
+                table: '100%',
+                desktop: '100%',
+                wide: '100%',
               }}
               triggerMarkers={false}
               XAxes={[
@@ -195,10 +195,10 @@ function Main() {
                     wide: '530px',
                   }}
                   triggerEnd={{
-                    mobile: '3000vh',
-                    table: '4000vh',
-                    desktop: '5300vh',
-                    wide: '6900vh',
+                    mobile: '100%',
+                    table: '100%',
+                    desktop: '100%',
+                    wide: '100%',
                   }}
                   triggerMarkers={false}
                   fromScale={[
@@ -292,10 +292,10 @@ function Main() {
                 wide: '0',
               }}
               triggerEnd={{
-                mobile: '4000vh',
-                table: '4000vh',
-                desktop: '4000vh',
-                wide: '4000vh',
+                mobile: '100%',
+                table: '100%',
+                desktop: '100%',
+                wide: '100%',
               }}
               triggerMarkers={false}
               XAxes={[
@@ -425,10 +425,10 @@ function Main() {
               wide: '-200px',
             }}
             triggerEnd={{
-              mobile: '4500vh',
-              table: '4500vh',
-              desktop: '4500vh',
-              wide: '4500vh',
+              mobile: '100%',
+              table: '100%',
+              desktop: '100%',
+              wide: '100%',
             }}
             triggerOffset={'center'}
             triggerMarkers={false}
