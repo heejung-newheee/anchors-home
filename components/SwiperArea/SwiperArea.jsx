@@ -66,7 +66,7 @@ function SwiperArea({
   secondClassName,
   autoPlayStop,
 }) {
-  const [uniqueSwiperKey, setUniqueSwiperKey] = React.useState(0);
+  // const [uniqueSwiperKey, setUniqueSwiperKey] = React.useState(0);
   const [firstSwiper, setFirstSwiper] = React.useState(null);
   const [secondSwiper, setSecondSwiper] = React.useState(null);
 
@@ -80,9 +80,9 @@ function SwiperArea({
     ...secondSwiperOption,
   }; */
 
-  React.useEffect(() => {
-    window.addEventListener('resize', () => setUniqueSwiperKey(new Date().getTime()));
-  }, []);
+  // React.useEffect(() => {
+  //   window.addEventListener('resize', () => setUniqueSwiperKey(new Date().getTime()));
+  // }, []);
 
   const SINGLE_SWIPER_OPTION = !swiperOption
     ? {
