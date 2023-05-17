@@ -94,6 +94,7 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
+        allowTouchMove: false,
       }
     : {
         slidesPerView: 1,
@@ -104,6 +105,7 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
+        allowTouchMove: false,
         ...swiperOption,
       };
   const FIRST_SWIPER_OPTION = !firstSwiperOption
@@ -116,6 +118,7 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
+        allowTouchMove: false,
       }
     : {
         slidesPerView: 1,
@@ -126,6 +129,7 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
+        allowTouchMove: false,
         ...firstSwiperOption,
       };
 
@@ -139,6 +143,7 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
+        allowTouchMove: false,
       }
     : {
         slidesPerView: 1,
@@ -149,6 +154,7 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
+        allowTouchMove: false,
         ...secondSwiperOption,
       };
 
