@@ -31,7 +31,7 @@ export default function MobileScrollAnimation({ className, firstText, secondText
 
   const _resetStartPoint = () => {
     if (rollingRef.current?.styles?.position !== 'fixed') {
-      startPoint.current = rollingRef.current?.getBoundingClientRect().top + window.scrollY;
+      //startPoint.current = rollingRef.current?.getBoundingClientRect().top + window.scrollY;
     }
   };
 
