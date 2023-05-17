@@ -195,7 +195,7 @@ function SwiperArea({
       <>
         {/* S: double swiper */}
         <Swiper // first swiper
-          key={`ssw-${uniqueSwiperKey}-01`}
+          key={`ssw-01`}
           modules={SWIPER_MODULE}
           onSwiper={setFirstSwiper}
           controller={{ control: secondSwiper }}
@@ -205,7 +205,7 @@ function SwiperArea({
           {FIRST_SWIPER_MAP}
         </Swiper>
         <Swiper // second swiper
-          key={`ssw-${uniqueSwiperKey}-02`}
+          key={`ssw-02`}
           modules={SWIPER_MODULE}
           onSwiper={setSecondSwiper}
           controller={{ control: firstSwiper }}
@@ -232,7 +232,7 @@ function SwiperArea({
       onMouseLeave={() => (autoPlayStop === 'Y' ? SWIPER_REF.current.swiper.autoplay.start() : '')}
     >
       {/* S: single swiper */}
-      <Swiper key={`ssw-${uniqueSwiperKey}`} modules={SWIPER_MODULE} {...SINGLE_SWIPER_OPTION} {...GET_CLASSNAME} ref={SWIPER_REF}>
+      <Swiper key={`ssw`} modules={SWIPER_MODULE} {...SINGLE_SWIPER_OPTION} {...GET_CLASSNAME} ref={SWIPER_REF}>
         {SINGLE_SWIPER_MAP}
       </Swiper>
       {/* E: single swiper */}
