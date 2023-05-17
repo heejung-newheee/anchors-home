@@ -13,8 +13,8 @@ const DEFAULT_TRIGGER = {
 };
 
 function ScrollTriggerArea({
-  triggerStart = DEFAULT_TRIGGER,
-  triggerEnd = DEFAULT_TRIGGER,
+  triggerStart,
+  triggerEnd,
   triggerOffset = 'top',
   triggerMarkers = false,
   triggerScrub = 0.5,
@@ -60,8 +60,9 @@ function ScrollTriggerArea({
   }
 
   function SetOption() {
-    TRIGGER_OPTION_START = triggerStart[BREAKPOINT_TYPE];
-    TRIGGER_OPTION_END = triggerEnd[BREAKPOINT_TYPE];
+    !triggerStart || triggerStart === '' ? (triggerStart = DEFAULT_TRIGGER) : (TRIGGER_OPTION_START = triggerStart[BREAKPOINT_TYPE]);
+    !triggerEnd || triggerEnd === '' ? (triggerEnd = DEFAULT_TRIGGER) : (TRIGGER_OPTION_END = triggerEnd[BREAKPOINT_TYPE]);
+
     if (XAxes !== undefined) {
       XAxes.map(function (el, index) {
         MUTITRIGGER_OPTION_X_AXES[index] = el[BREAKPOINT_TYPE];
