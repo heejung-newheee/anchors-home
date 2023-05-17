@@ -15,7 +15,7 @@ export default function MobileScrollAnimation({ className, firstText, secondText
       </span>
     )),
   ];
-  const [scrollY, setScrollY] = useState(0);
+  const [animationScrollY, setAnimationScrollY] = useState(0);
   //const animating = React.useRef(false);
   const rollingRef = React.useRef(); // article dom
   const startPoint = React.useRef(0); // article Y coordinate
@@ -26,7 +26,7 @@ export default function MobileScrollAnimation({ className, firstText, secondText
   //const oldScrollY = usePrevious(scrollY); // 직전 scroll 위치 값
 
   const _scrollHandler = e => {
-    setScrollY(window.scrollY); // 이전 scroll Y값 저장
+    setAnimationScrollY(window.scrollY); // 이전 scroll Y값 저장
   };
 
   const _resetStartPoint = () => {
@@ -47,9 +47,10 @@ export default function MobileScrollAnimation({ className, firstText, secondText
 
   useEffect(() => {
     //const crit = rollingRef.current?.getBoundingClientRect().top;
+    console.log(window.scrollY, window, scrollY);
     const stPoint = 1143;
     const dur1 = (animationDuration * 2) / 3; // expertise animation 시간
-    if (scrollY > stPoint && scrollY <= stPoint + dur1) {
+    if (animationScrollY > stPoint && animationScrollY <= stPoint + dur1) {
       // 첫번째 애니메이션 구간
       contStyle.current = {
         position: 'fixed',
@@ -60,12 +61,12 @@ export default function MobileScrollAnimation({ className, firstText, secondText
         transform: `scale(1) translateY(0px)`,
       };
       wrapStyle.current = {
-        marginLeft: `${33 - (278 / dur1) * (scrollY - stPoint)}vh`,
+        marginLeft: `${33 - (278 / dur1) * (animationScrollY - stPoint)}vh`,
       };
-    } else if (scrollY > stPoint + dur1 && scrollY <= stPoint + animationDuration) {
+    } else if (animationScrollY > stPoint + dur1 && animationScrollY <= stPoint + animationDuration) {
       // 두번째 애니메이션 구간
       const dur2 = animationDuration - dur1;
-      const cur2 = (scrollY - stPoint - dur1) / dur2;
+      const cur2 = (animationScrollY - stPoint - dur1) / dur2;
       contStyle.current = {
         position: 'fixed',
         zIndex: 1,
@@ -77,7 +78,7 @@ export default function MobileScrollAnimation({ className, firstText, secondText
       charStyle.current = {
         transform: `scale(${30 * cur2 + 1}) translateY(-${20 * cur2}px)`,
       };
-    } else if (scrollY <= stPoint) {
+    } else if (animationScrollY <= stPoint) {
       // 첫번째 애니메이션 이전 구간
       contStyle.current = { position: 'relative' };
       charStyle.current = { transform: `scale(1) translateY(0px)` };
@@ -90,7 +91,7 @@ export default function MobileScrollAnimation({ className, firstText, secondText
       };
       wrapStyle.current = { marginLeft: '-245vh' };
     }
-  }, [scrollY]);
+  }, [animationScrollY]);
 
   return (
     <article ref={rollingRef} {...GET_CLASSNAME} style={contStyle.current}>
