@@ -291,11 +291,11 @@ function Main() {
         {/* E: service */}
 
         {/* S: our works */}
-        <section className="our_works">
+        {/* <section className="our_works">
           <DepthTitle depthLevel="1">Our Works</DepthTitle>
-          {/* S: our works scroll 영역 */}
+          S: our works scroll 영역
           <section className="section_div is_black rolling_wrap">
-            {/* Our works 텍스트 영역 */}
+            Our works 텍스트 영역
             <ScrollTriggerArea
               className="line1_flow"
               defaultID="scroll_trigger06"
@@ -326,7 +326,7 @@ function Main() {
               <article className="rolling_text">
                 <div className="text_ourworks">
                   {main.ourWorks.rollingBigText}
-                  {/* Our works 첫번째 이미지 */}
+                  Our works 첫번째 이미지
                   <ScrollTriggerArea
                     className="ourworks_img"
                     defaultID="scroll_trigger07"
@@ -356,8 +356,7 @@ function Main() {
                   >
                     <img src={main.imgUrl + main.ourWorks.rollingImages[0].image} alt={main.ourWorks.rollingImages[0].alt} />
                   </ScrollTriggerArea>
-
-                  {/* Our works 두번째 이미지 */}
+                  Our works 두번째 이미지
                   <ScrollTriggerArea
                     className="ourworks_img"
                     defaultID="scroll_trigger08"
@@ -387,8 +386,7 @@ function Main() {
                   >
                     <img src={main.imgUrl + main.ourWorks.rollingImages[1].image} alt={main.ourWorks.rollingImages[1].alt} />
                   </ScrollTriggerArea>
-
-                  {/* Our works 세번째 이미지 */}
+                  Our works 세번째 이미지
                   <ScrollTriggerArea
                     className="ourworks_img"
                     defaultID="scroll_trigger09"
@@ -422,8 +420,7 @@ function Main() {
               </article>
             </ScrollTriggerArea>
           </section>
-          {/* E: our works scroll 영역 */}
-          {/* S: card swiper 영역 */}
+          E: our works scroll 영역 S: card swiper 영역
           <ScrollTriggerArea
             className="scroll_swiper"
             defaultID="scroll_trigger10"
@@ -467,8 +464,8 @@ function Main() {
               />
             </div>
           </ScrollTriggerArea>
-          {/* E: card swiper 영역 */}
-        </section>
+          E: card swiper 영역
+        </section> */}
         {/* E: our works */}
       </main>
     </>
