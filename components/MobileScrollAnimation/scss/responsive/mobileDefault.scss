@@ -1,0 +1,78 @@
+.rolling_animation {
+  overflow: hidden;
+  height :100vh;
+  display: flex;
+  align-items: center;
+  &.action {
+    .rolling_animation_wrap {
+      animation-name: rollingAnimation;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+      animation-duration: 2s;
+      .animation_text {
+        &.text_second {
+          animation-name: extendText;
+          animation-delay:  2s;
+          animation-duration: 1s;
+          animation-timing-function: linear;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+  }
+  .rolling_animation_wrap {
+    position :relative;
+    display: flex;
+    margin-left: 33vh;
+    .animation_text{
+      font-size: 60vh;
+      font-family: $font_en;
+      letter-spacing: $en_letterSpacing;
+      font-weight: bold;
+      white-space: nowrap;
+      display: inline-block;
+    }
+    .animation_image {
+      img {
+        position: absolute;
+        /*top: 0;
+        left: 0;*/
+        max-width: 19.3rem;
+        width: 30.2vh;
+      }
+      span {
+        &:nth-child(1) img {
+          top: 8.5%;
+          left: 9%;
+        }
+        &:nth-child(2) img {
+          top: 64%;
+          left: 41.5%;
+        }
+        &:nth-child(3) img {
+          top: 12.5%;
+          left: 70.5%;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes rollingAnimation {
+  from {
+    margin-left: 33vh;
+  }
+  to {
+    margin-left: -245vh;
+  }
+}
+
+@keyframes extendText {
+  from {
+    transform: scale(1) translateY(0);
+  }
+  to {
+    transform: scale(30) translateY(-20px);
+  }
+}

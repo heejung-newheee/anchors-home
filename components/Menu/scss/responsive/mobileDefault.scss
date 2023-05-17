@@ -38,7 +38,7 @@
       left: 4rem;
     }
     .gnb {
-      bottom: 9.8rem;
+      bottom: 16.8rem;
       li {
         margin-bottom: 1.6rem;
         font-size: initial;
@@ -55,11 +55,12 @@
       }
     }
     .copy {
-      bottom: 2.6rem;
+      bottom: 9.6rem;
       @extend %font_disclaimer;
       color: $color_darkgrey;
       letter-spacing: $en_letterSpacing;
       line-height: 1;
+      font-family: $font_en;
     }
   }
 }

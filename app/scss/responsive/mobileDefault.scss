@@ -116,7 +116,7 @@
 
   .service {
     .bg_blue {
-      background-color: $color_blue;
+      background-color: $c정olor_blue;
       color: $color_white;
     }
     .bg_white {
@@ -124,10 +124,9 @@
       &.is_photo {
         padding-bottom: 6rem;
       }
-
       &:before {
         width: 100vw;
-        height: 110vh;
+        height: 200vh;
         display: block;
         content:'';
         background-color: $color_blue;
@@ -339,6 +338,6 @@
         }
       }
     }
-
   }
+
 }
