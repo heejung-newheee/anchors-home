@@ -1,17 +1,17 @@
 .rolling_animation {
-  overflow: hidden;
+  //overflow: hidden;
   height :100vh;
   display: flex;
   align-items: center;
   &.action {
     .rolling_animation_wrap {
-      animation-name: rollingAnimation;
+      //animation-name: rollingAnimation;
       animation-fill-mode: forwards;
       animation-timing-function: ease-in-out;
       animation-duration: 2s;
       .animation_text {
         &.text_second {
-          animation-name: extendText;
+          //animation-name: extendText;
           animation-delay:  2s;
           animation-duration: 1s;
           animation-timing-function: linear;
