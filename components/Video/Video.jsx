@@ -14,7 +14,7 @@ export default function Video({ videoUrl, className, posterImg }) {
   const GET_CLASSNAME = !className ? { className: 'video' } : { className: 'video ' + className };
   return (
     <div {...GET_CLASSNAME}>
-      <video src={videoUrl} controls poster={posterImg} playsInline/>
+      <video src={`${videoUrl}#t=0.5`} controls poster={posterImg} playsInline/>
       <Btn className="video_btn" type="button" onClick={VIDEO_PLAY}>
         <img src="/assets/images/ico/ico_btn_play.svg" alt="video play button" />
       </Btn>
