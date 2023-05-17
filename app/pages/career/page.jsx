@@ -78,7 +78,7 @@ function Career() {
           ))}
           firstSwiperOption={{
             effect: 'cards',
-            touchAngle: 180,
+            // touchAngle: 180,
           }}
           secondSwiperOption={{
             pagination: false,

@@ -42,7 +42,7 @@ const SWIPER_MODULE = [
   Controller,
 ];
 
-const DEFAULT_SWIPER_OPTION = {
+/* const DEFAULT_SWIPER_OPTION = {
   slidesPerView: 1,
   spaceBetween: 0,
   effect: 'slide',
@@ -51,13 +51,13 @@ const DEFAULT_SWIPER_OPTION = {
   scrollbar: false,
   autoplay: false,
   loop: false,
-};
+}; */
 
 function SwiperArea({
   type,
-  swiperOption = DEFAULT_SWIPER_OPTION,
-  firstSwiperOption = DEFAULT_SWIPER_OPTION,
-  secondSwiperOption = DEFAULT_SWIPER_OPTION,
+  swiperOption,
+  firstSwiperOption,
+  secondSwiperOption,
   swiperContent,
   firstContent,
   secondContent,
@@ -70,49 +70,99 @@ function SwiperArea({
   const [firstSwiper, setFirstSwiper] = React.useState(null);
   const [secondSwiper, setSecondSwiper] = React.useState(null);
 
-  const COMPUTED_SWIPER_OPTION = { ...DEFAULT_SWIPER_OPTION, ...swiperOption };
-  const COMPUTED_FIRST_SWIPER_OPTION = {
+  //const COMPUTED_SWIPER_OPTION = { ...DEFAULT_SWIPER_OPTION, ...swiperOption };
+  /* const COMPUTED_FIRST_SWIPER_OPTION = {
     ...DEFAULT_SWIPER_OPTION,
     ...firstSwiperOption,
   };
   const COMPUTED_SCOND_SWIPER_OPTION = {
     ...DEFAULT_SWIPER_OPTION,
     ...secondSwiperOption,
-  };
+  }; */
 
   React.useEffect(() => {
-    window.addEventListener('resize', () =>
-      setUniqueSwiperKey(new Date().getTime()),
-    );
+    window.addEventListener('resize', () => setUniqueSwiperKey(new Date().getTime()));
   }, []);
 
-  const GET_CLASSNAME1st = !firstClassName
-    ? { className: 'swiper_area' }
-    : { className: 'swiper_area ' + firstClassName };
+  const SINGLE_SWIPER_OPTION = !swiperOption
+    ? {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        effect: 'slide',
+        pagination: { clickable: true },
+        navigation: true,
+        scrollbar: false,
+        autoplay: false,
+        loop: false,
+      }
+    : {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        effect: 'slide',
+        pagination: { clickable: true },
+        navigation: true,
+        scrollbar: false,
+        autoplay: false,
+        loop: false,
+        ...swiperOption,
+      };
+  const FIRST_SWIPER_OPTION = !firstSwiperOption
+    ? {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        effect: 'slide',
+        pagination: { clickable: true },
+        navigation: true,
+        scrollbar: false,
+        autoplay: false,
+        loop: false,
+      }
+    : {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        effect: 'slide',
+        pagination: { clickable: true },
+        navigation: true,
+        scrollbar: false,
+        autoplay: false,
+        loop: false,
+        ...firstSwiperOption,
+      };
 
-  const GET_CLASSNAME2st = !secondClassName
-    ? { className: 'swiper_area' }
-    : { className: 'swiper_area ' + secondClassName };
+  const SECOND_SWIPER_OPTION = !secondSwiperOption
+    ? {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        effect: 'slide',
+        pagination: { clickable: true },
+        navigation: true,
+        scrollbar: false,
+        autoplay: false,
+        loop: false,
+      }
+    : {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        effect: 'slide',
+        pagination: { clickable: true },
+        navigation: true,
+        scrollbar: false,
+        autoplay: false,
+        loop: false,
+        ...secondSwiperOption,
+      };
 
-  const FIRST_SWIPER_ARR = Array.isArray(firstContent)
-    ? firstContent
-    : [firstContent];
+  const GET_CLASSNAME1st = !firstClassName ? { className: 'swiper_area' } : { className: 'swiper_area ' + firstClassName };
 
-  const FIRST_SWIPER_MAP = [
-    FIRST_SWIPER_ARR.map((contentArrays, idx) => (
-      <SwiperSlide key={idx}>{contentArrays}</SwiperSlide>
-    )),
-  ];
+  const GET_CLASSNAME2st = !secondClassName ? { className: 'swiper_area' } : { className: 'swiper_area ' + secondClassName };
 
-  const SECOND_SWIPER_ARR = Array.isArray(secondContent)
-    ? secondContent
-    : [secondContent];
+  const FIRST_SWIPER_ARR = Array.isArray(firstContent) ? firstContent : [firstContent];
 
-  const SECOND_SWIPER_MAP = [
-    SECOND_SWIPER_ARR.map((contentArrays, idx) => (
-      <SwiperSlide key={idx}>{contentArrays}</SwiperSlide>
-    )),
-  ];
+  const FIRST_SWIPER_MAP = [FIRST_SWIPER_ARR.map((contentArrays, idx) => <SwiperSlide key={idx}>{contentArrays}</SwiperSlide>)];
+
+  const SECOND_SWIPER_ARR = Array.isArray(secondContent) ? secondContent : [secondContent];
+
+  const SECOND_SWIPER_MAP = [SECOND_SWIPER_ARR.map((contentArrays, idx) => <SwiperSlide key={idx}>{contentArrays}</SwiperSlide>)];
 
   const SWIPER_REF = React.useRef(null);
 
@@ -125,7 +175,7 @@ function SwiperArea({
           modules={SWIPER_MODULE}
           onSwiper={setFirstSwiper}
           controller={{ control: secondSwiper }}
-          {...COMPUTED_FIRST_SWIPER_OPTION}
+          {...FIRST_SWIPER_OPTION}
           {...GET_CLASSNAME1st}
         >
           {FIRST_SWIPER_MAP}
@@ -135,7 +185,7 @@ function SwiperArea({
           modules={SWIPER_MODULE}
           onSwiper={setSecondSwiper}
           controller={{ control: firstSwiper }}
-          {...COMPUTED_SCOND_SWIPER_OPTION}
+          {...SECOND_SWIPER_OPTION}
           {...GET_CLASSNAME2st}
         >
           {SECOND_SWIPER_MAP}
@@ -145,38 +195,20 @@ function SwiperArea({
     );
   }
 
-  const GET_CLASSNAME = !className
-    ? { className: 'swiper_area' }
-    : { className: 'swiper_area ' + className };
+  const GET_CLASSNAME = !className ? { className: 'swiper_area' } : { className: 'swiper_area ' + className };
 
-  const SINGLE_SWIPER_ARR = Array.isArray(swiperContent)
-    ? swiperContent
-    : [swiperContent];
+  const SINGLE_SWIPER_ARR = Array.isArray(swiperContent) ? swiperContent : [swiperContent];
 
-  const SINGLE_SWIPER_MAP = [
-    SINGLE_SWIPER_ARR.map((contentArrays, idx) => (
-      <SwiperSlide key={idx}>{contentArrays}</SwiperSlide>
-    )),
-  ];
+  const SINGLE_SWIPER_MAP = [SINGLE_SWIPER_ARR.map((contentArrays, idx) => <SwiperSlide key={idx}>{contentArrays}</SwiperSlide>)];
 
   return (
     <div
       className="single_swiper_wrap"
-      onMouseEnter={() =>
-        autoPlayStop === 'Y' ? SWIPER_REF.current.swiper.autoplay.stop() : ''
-      }
-      onMouseLeave={() =>
-        autoPlayStop === 'Y' ? SWIPER_REF.current.swiper.autoplay.start() : ''
-      }
+      onMouseEnter={() => (autoPlayStop === 'Y' ? SWIPER_REF.current.swiper.autoplay.stop() : '')}
+      onMouseLeave={() => (autoPlayStop === 'Y' ? SWIPER_REF.current.swiper.autoplay.start() : '')}
     >
       {/* S: single swiper */}
-      <Swiper
-        key={`ssw-${uniqueSwiperKey}`}
-        modules={SWIPER_MODULE}
-        {...COMPUTED_SWIPER_OPTION}
-        {...GET_CLASSNAME}
-        ref={SWIPER_REF}
-      >
+      <Swiper key={`ssw-${uniqueSwiperKey}`} modules={SWIPER_MODULE} {...SINGLE_SWIPER_OPTION} {...GET_CLASSNAME} ref={SWIPER_REF}>
         {SINGLE_SWIPER_MAP}
       </Swiper>
       {/* E: single swiper */}

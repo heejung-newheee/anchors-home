@@ -49,13 +49,6 @@
         &.is_photo {
           padding-bottom: 6rem;
         }
-        &:before {
-          width: 100vw;
-          height: 110vh;
-          display: block;
-          content:'';
-          background-color: $color_blue;
-        }
       }
       .rolling_wrap {
         .rolling_text {
