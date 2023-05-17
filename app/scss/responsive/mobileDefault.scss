@@ -65,7 +65,10 @@
       padding: 0 1.8rem;
       position: relative;
       z-index: 1;
-      .text_keyvisual_wrap {
+      .lottie {
+        height: 38vw;
+      }
+      /*.text_keyvisual_wrap {
         height: 44vw;
       }
       .text_keyvisual {
@@ -89,7 +92,7 @@
         left: 50%;
         width: 45px;
         transform: translateX(-335%);
-      }
+      }*/
       .keyvisual_disclaimer {
         @extend %font_primary;
         @extend %layout_fix;

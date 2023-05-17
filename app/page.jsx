@@ -10,10 +10,11 @@ import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import WebGlCarousel from '@/components/WebGlCarousel/WebGlCarousel';
 
 import main from '@/helper/data/json/contents/main/main.json';
-import lottieMainKeyVisualOurwork from '@/public/assets/images/lottie/lottieMainKeyVisualOurwork.json';
+/* import lottieMainKeyVisualOurwork from '@/public/assets/images/lottie/lottieMainKeyVisualOurwork.json';
 import lottieMainKeyVisualSmile from '@/public/assets/images/lottie/lottieMainKeyVisualSmile.json';
 import lottieMainKeyVisualText from '@/public/assets/images/lottie/lottieMainKeyVisualText.json';
-import lottieMainKeyVisualUnderline from '@/public/assets/images/lottie/lottieMainKeyVisualUnderline.json';
+import lottieMainKeyVisualUnderline from '@/public/assets/images/lottie/lottieMainKeyVisualUnderline.json'; */
+import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 import './scss/main.scss';
 
 function Main() {
@@ -25,12 +26,13 @@ function Main() {
           <DepthTitle depthLevel="1">About US</DepthTitle>
           {/* S: intro + rotate keyvisual */}
           <section className="keyvisual_wrap">
-            <div className="text_keyvisual_wrap">
+            <LottiePlayer className="lottie" data={lottieMainKeyVisual} loop={false} />
+            {/* <div className="text_keyvisual_wrap">
               <LottiePlayer className="text_keyvisual" data={lottieMainKeyVisualText} loop={false} />
             </div>
             <LottiePlayer className="smile_keyvisual" data={lottieMainKeyVisualSmile} loop={false} />
             <LottiePlayer className="underline_keyvisual" data={lottieMainKeyVisualUnderline} loop={false} />
-            <LottiePlayer className="ourwork_keyvisual" data={lottieMainKeyVisualOurwork} loop={false} />
+            <LottiePlayer className="ourwork_keyvisual" data={lottieMainKeyVisualOurwork} loop={false} /> */}
             <Disclaimer className="keyvisual_disclaimer" data={main.aboutUs.keyVisualText} />
           </section>
           <WebGlCarousel />
