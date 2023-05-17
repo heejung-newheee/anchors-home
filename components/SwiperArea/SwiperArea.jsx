@@ -94,7 +94,10 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
-        allowTouchMove: false,
+        nested: true,
+        resistance: false,
+        observer: true,
+        touchStartForcePreventDefault: true,
       }
     : {
         slidesPerView: 1,
@@ -105,7 +108,10 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
-        allowTouchMove: false,
+        nested: true,
+        resistance: false,
+        observer: true,
+        touchStartForcePreventDefault: true,
         ...swiperOption,
       };
   const FIRST_SWIPER_OPTION = !firstSwiperOption
@@ -118,7 +124,10 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
-        allowTouchMove: false,
+        nested: true,
+        resistance: false,
+        observer: true,
+        touchStartForcePreventDefault: true,
       }
     : {
         slidesPerView: 1,
@@ -129,7 +138,10 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
-        allowTouchMove: false,
+        nested: true,
+        resistance: false,
+        observer: true,
+        touchStartForcePreventDefault: true,
         ...firstSwiperOption,
       };
 
@@ -143,7 +155,10 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
-        allowTouchMove: false,
+        nested: true,
+        resistance: false,
+        observer: true,
+        touchStartForcePreventDefault: true,
       }
     : {
         slidesPerView: 1,
@@ -154,7 +169,10 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
-        allowTouchMove: false,
+        nested: true,
+        resistance: false,
+        observer: true,
+        touchStartForcePreventDefault: true,
         ...secondSwiperOption,
       };
 
