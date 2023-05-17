@@ -22,7 +22,7 @@ export default function MobileScrollAnimation({ className, firstText, secondText
   const marginLeft = React.useRef(33);
   const wrapStyle = React.useRef({}); // text scroll animation
   const contStyle = React.useRef({}); // position fixed
-  const charStyle = React.useRef({}); // text extend animatio
+  const charStyle = React.useRef({}); // text extend animation
   //const oldScrollY = usePrevious(scrollY); // 직전 scroll 위치 값
 
   const _scrollHandler = e => {
@@ -46,7 +46,7 @@ export default function MobileScrollAnimation({ className, firstText, secondText
   _resetStartPoint();
 
   useEffect(() => {
-    const crit = rollingRef.current?.getBoundingClientRect().top;
+    //const crit = rollingRef.current?.getBoundingClientRect().top;
     const stPoint = 1143;
     const dur1 = (animationDuration * 2) / 3; // expertise animation 시간
     if (scrollY > stPoint && scrollY <= stPoint + dur1) {
