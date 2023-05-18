@@ -3,23 +3,7 @@
   height :100vh;
   display: flex;
   align-items: center;
-  &.action {
-    .rolling_animation_wrap {
-      //animation-name: rollingAnimation;
-      animation-fill-mode: forwards;
-      animation-timing-function: ease-in-out;
-      animation-duration: 2s;
-      .animation_text {
-        &.text_second {
-          //animation-name: extendText;
-          animation-delay:  2s;
-          animation-duration: 1s;
-          animation-timing-function: linear;
-          animation-fill-mode: forwards;
-        }
-      }
-    }
-  }
+  width: 100%;
   .rolling_animation_wrap {
     position :relative;
     display: flex;
@@ -55,24 +39,5 @@
         }
       }
     }
-  }
-}
-
-
-@keyframes rollingAnimation {
-  from {
-    margin-left: 33vh;
-  }
-  to {
-    margin-left: -245vh;
-  }
-}
-
-@keyframes extendText {
-  from {
-    transform: scale(1) translateY(0);
-  }
-  to {
-    transform: scale(30) translateY(-20px);
   }
 }

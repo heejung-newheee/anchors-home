@@ -65,10 +65,10 @@
       padding: 0 1.8rem;
       position: relative;
       z-index: 1;
-      .lottie {
+      /*.lottie {
         height: 38vw;
-      }
-      /*.text_keyvisual_wrap {
+      }*/ // single lottie css
+      .text_keyvisual_wrap {
         height: 44vw;
       }
       .text_keyvisual {
@@ -92,7 +92,7 @@
         left: 50%;
         width: 45px;
         transform: translateX(-335%);
-      }*/
+      }
       .keyvisual_disclaimer {
         @extend %font_primary;
         @extend %layout_fix;
@@ -130,7 +130,7 @@
 
       &:before {
         width: 100vw;
-        height: 80vh;
+        height: 120vh;
         display: block;
         content:'';
         background-color: $color_blue;

@@ -1,4 +1,4 @@
-//'use client';
+'use client';
 
 import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
@@ -13,14 +13,14 @@ import WebGlCarousel from '@/components/WebGlCarousel/WebGlCarousel';
 import MobileScrollAnimation from '@/components/MobileScrollAnimation/MobileScrollAnimation';
 
 import main from '@/helper/data/json/contents/main/main.json';
-// import lottieMainKeyVisualOurwork from '@/public/assets/images/lottie/lottieMainKeyVisualOurwork.json';
-// import lottieMainKeyVisualSmile from '@/public/assets/images/lottie/lottieMainKeyVisualSmile.json';
-// import lottieMainKeyVisualText from '@/public/assets/images/lottie/lottieMainKeyVisualText.json';
-// import lottieMainKeyVisualUnderline from '@/public/assets/images/lottie/lottieMainKeyVisualUnderline.json';
-import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
+import lottieMainKeyVisualOurwork from '@/public/assets/images/lottie/lottieMainKeyVisualOurwork.json';
+import lottieMainKeyVisualSmile from '@/public/assets/images/lottie/lottieMainKeyVisualSmile.json';
+import lottieMainKeyVisualText from '@/public/assets/images/lottie/lottieMainKeyVisualText.json';
+import lottieMainKeyVisualUnderline from '@/public/assets/images/lottie/lottieMainKeyVisualUnderline.json';
+//import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 import './scss/main.scss';
 
-//const deviceWidth = window.innerWidth;
+const deviceWidth = window.innerWidth;
 
 function Main() {
   return (
@@ -31,13 +31,15 @@ function Main() {
           <DepthTitle depthLevel="1">About US</DepthTitle>
           {/* S: intro + rotate keyvisual */}
           <section className="keyvisual_wrap">
-            <LottiePlayer className="lottie" data={lottieMainKeyVisual} loop={false} />
-            {/* <div className="text_keyvisual_wrap">
+            {/* single lottie */}
+            {/* <LottiePlayer className="lottie" data={lottieMainKeyVisual} loop={false} /> */}
+            {/* multi lottie */}
+            <div className="text_keyvisual_wrap">
               <LottiePlayer className="text_keyvisual" data={lottieMainKeyVisualText} loop={false} />
             </div>
             <LottiePlayer className="smile_keyvisual" data={lottieMainKeyVisualSmile} loop={false} />
             <LottiePlayer className="underline_keyvisual" data={lottieMainKeyVisualUnderline} loop={false} />
-            <LottiePlayer className="ourwork_keyvisual" data={lottieMainKeyVisualOurwork} loop={false} /> */}
+            <LottiePlayer className="ourwork_keyvisual" data={lottieMainKeyVisualOurwork} loop={false} />
             <Disclaimer className="keyvisual_disclaimer" data={main.aboutUs.keyVisualText} />
           </section>
           <WebGlCarousel />
@@ -59,9 +61,9 @@ function Main() {
           <DepthTitle depthLevel="1">Service</DepthTitle>
           {/* S: Expertise scroll 영역 */}
           <section className="section_div is_black bg_blue rolling_wrap">
-            {/* {deviceWidth >= 1280 ? (
+            {deviceWidth >= 1280 ? (
               <>
-                Expertise 텍스트 영역 'Expertis'
+                {/* Expertise 텍스트 영역 'Expertis' */}
                 <ScrollTriggerArea
                   className="line1_flow scroll_expertise"
                   defaultID="scroll_trigger01"
@@ -92,7 +94,7 @@ function Main() {
                   <article className="rolling_text">
                     <div className="text_expertis">
                       {main.service.rollingBigText[0]}
-                      Expertise 첫번째 이미지
+                      {/* Expertise 첫번째 이미지 */}
                       <ScrollTriggerArea
                         className="expertise_img"
                         defaultID="scroll_trigger02"
@@ -122,7 +124,7 @@ function Main() {
                       >
                         <img src={main.imgUrl + main.service.blueBgRollingImages[0].image} alt={main.service.blueBgRollingImages[0].alt} />
                       </ScrollTriggerArea>
-                      Expertise 두번째 이미지
+                      {/* Expertise 두번째 이미지 */}
                       <ScrollTriggerArea
                         className="expertise_img"
                         defaultID="scroll_trigger03"
@@ -152,7 +154,7 @@ function Main() {
                       >
                         <img src={main.imgUrl + main.service.blueBgRollingImages[1].image} alt={main.service.blueBgRollingImages[1].alt} />
                       </ScrollTriggerArea>
-                      Expertise 세번째 이미지
+                      {/* Expertise 세번째 이미지 */}
                       <ScrollTriggerArea
                         className="expertise_img"
                         defaultID="scroll_trigger04"
@@ -183,7 +185,7 @@ function Main() {
                         <img src={main.imgUrl + main.service.blueBgRollingImages[2].image} alt={main.service.blueBgRollingImages[2].alt} />
                       </ScrollTriggerArea>
                     </div>
-                    Expertise 텍스트 영역 'e'
+                    {/* Expertise 텍스트 영역 'e' */}
                     <ScrollTriggerArea
                       defaultID="scroll_trigger05"
                       type="multiTrigger"
@@ -241,7 +243,7 @@ function Main() {
                 ))}
                 animationDuration={1000}
               />
-            )} */}
+            )}
             <MobileScrollAnimation
               type="doubleText"
               firstText={main.service.rollingBigText[0]}
