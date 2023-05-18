@@ -20,7 +20,7 @@ import main from '@/helper/data/json/contents/main/main.json';
 import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 import './scss/main.scss';
 
-const deviceWidth = window.innerWidth;
+//const deviceWidth = window.innerWidth;
 
 function Main() {
   return (
@@ -58,10 +58,10 @@ function Main() {
         <section className="service">
           <DepthTitle depthLevel="1">Service</DepthTitle>
           {/* S: Expertise scroll 영역 */}
-          <section className="section_div is_black bg_blue rolling_wrap">
+          {/* <section className="section_div is_black bg_blue rolling_wrap">
             {deviceWidth >= 1280 ? (
               <>
-                {/* Expertise 텍스트 영역 'Expertis' */}
+                Expertise 텍스트 영역 'Expertis'
                 <ScrollTriggerArea
                   className="line1_flow scroll_expertise"
                   defaultID="scroll_trigger01"
@@ -92,7 +92,7 @@ function Main() {
                   <article className="rolling_text">
                     <div className="text_expertis">
                       {main.service.rollingBigText[0]}
-                      {/* Expertise 첫번째 이미지 */}
+                      Expertise 첫번째 이미지
                       <ScrollTriggerArea
                         className="expertise_img"
                         defaultID="scroll_trigger02"
@@ -122,8 +122,7 @@ function Main() {
                       >
                         <img src={main.imgUrl + main.service.blueBgRollingImages[0].image} alt={main.service.blueBgRollingImages[0].alt} />
                       </ScrollTriggerArea>
-
-                      {/* Expertise 두번째 이미지 */}
+                      Expertise 두번째 이미지
                       <ScrollTriggerArea
                         className="expertise_img"
                         defaultID="scroll_trigger03"
@@ -153,8 +152,7 @@ function Main() {
                       >
                         <img src={main.imgUrl + main.service.blueBgRollingImages[1].image} alt={main.service.blueBgRollingImages[1].alt} />
                       </ScrollTriggerArea>
-
-                      {/* Expertise 세번째 이미지 */}
+                      Expertise 세번째 이미지
                       <ScrollTriggerArea
                         className="expertise_img"
                         defaultID="scroll_trigger04"
@@ -185,8 +183,7 @@ function Main() {
                         <img src={main.imgUrl + main.service.blueBgRollingImages[2].image} alt={main.service.blueBgRollingImages[2].alt} />
                       </ScrollTriggerArea>
                     </div>
-
-                    {/* Expertise 텍스트 영역 'e' */}
+                    Expertise 텍스트 영역 'e'
                     <ScrollTriggerArea
                       defaultID="scroll_trigger05"
                       type="multiTrigger"
@@ -245,7 +242,7 @@ function Main() {
                 animationDuration={1000}
               />
             )}
-          </section>
+          </section> */}
           {/* E: Expertise scroll 영역 */}
 
           {/* S: InfiniteRolling swiper + text 영역 */}

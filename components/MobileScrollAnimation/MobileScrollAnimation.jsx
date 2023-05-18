@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 
 import './scss/MobileScrollAnimation.scss';
-import { usePrevious } from '@/helper/utils';
 
 export default function MobileScrollAnimation({ className, firstText, secondText, animationImage, animationDuration, type = 'singleText' }) {
   const GET_CLASSNAME = !className ? { className: 'rolling_animation bg_blue' } : { className: 'rolling_animation bg_blue ' + className };
@@ -31,7 +30,7 @@ export default function MobileScrollAnimation({ className, firstText, secondText
 
   const _resetStartPoint = () => {
     if (rollingRef.current?.styles?.position !== 'fixed') {
-      //startPoint.current = rollingRef.current?.getBoundingClientRect().top + window.scrollY;
+      startPoint.current = rollingRef.current?.getBoundingClientRect().top + window.scrollY;
     }
   };
 
@@ -47,7 +46,6 @@ export default function MobileScrollAnimation({ className, firstText, secondText
 
   useEffect(() => {
     //const crit = rollingRef.current?.getBoundingClientRect().top;
-    console.log(window.scrollY, window, scrollY);
     const stPoint = 1143;
     const dur1 = (animationDuration * 2) / 3; // expertise animation 시간
     if (animationScrollY > stPoint && animationScrollY <= stPoint + dur1) {
