@@ -1,4 +1,4 @@
-'use client';
+//'use client';
 
 import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
@@ -58,8 +58,8 @@ function Main() {
         <section className="service">
           <DepthTitle depthLevel="1">Service</DepthTitle>
           {/* S: Expertise scroll 영역 */}
-          {/* <section className="section_div is_black bg_blue rolling_wrap">
-            {deviceWidth >= 1280 ? (
+          <section className="section_div is_black bg_blue rolling_wrap">
+            {/* {deviceWidth >= 1280 ? (
               <>
                 Expertise 텍스트 영역 'Expertis'
                 <ScrollTriggerArea
@@ -241,8 +241,17 @@ function Main() {
                 ))}
                 animationDuration={1000}
               />
-            )}
-          </section> */}
+            )} */}
+            <MobileScrollAnimation
+              type="doubleText"
+              firstText={main.service.rollingBigText[0]}
+              secondText={main.service.rollingBigText[1]}
+              animationImage={main.service.blueBgRollingImages.map((content, idx) => (
+                <img key={idx} src={main.imgUrl + content.image} alt={content.alt} />
+              ))}
+              animationDuration={1000}
+            />
+          </section>
           {/* E: Expertise scroll 영역 */}
 
           {/* S: InfiniteRolling swiper + text 영역 */}
