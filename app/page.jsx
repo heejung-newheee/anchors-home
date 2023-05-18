@@ -1,5 +1,7 @@
 'use client';
 
+import React, { useEffect, useState } from 'react';
+
 import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
@@ -20,9 +22,15 @@ import lottieMainKeyVisualUnderline from '@/public/assets/images/lottie/lottieMa
 //import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
 import './scss/main.scss';
 
-const deviceWidth = window.innerWidth;
-
 function Main() {
+  const [windowWidth, setWindowWidth] = React.useState(0);
+
+  useEffect(() => {
+    const DEVICE_WIDTH = window.innerWidth;
+    setWindowWidth(DEVICE_WIDTH);
+  }, []);
+
+  console.log(windowWidth);
   return (
     <>
       <main className="main">
@@ -61,7 +69,7 @@ function Main() {
           <DepthTitle depthLevel="1">Service</DepthTitle>
           {/* S: Expertise scroll 영역 */}
           <section className="section_div is_black bg_blue rolling_wrap">
-            {deviceWidth >= 1280 ? (
+            {windowWidth >= 1280 ? (
               <>
                 {/* Expertise 텍스트 영역 'Expertis' */}
                 <ScrollTriggerArea
@@ -244,15 +252,6 @@ function Main() {
                 animationDuration={1000}
               />
             )}
-            <MobileScrollAnimation
-              type="doubleText"
-              firstText={main.service.rollingBigText[0]}
-              secondText={main.service.rollingBigText[1]}
-              animationImage={main.service.blueBgRollingImages.map((content, idx) => (
-                <img key={idx} src={main.imgUrl + content.image} alt={content.alt} />
-              ))}
-              animationDuration={1000}
-            />
           </section>
           {/* E: Expertise scroll 영역 */}
 
