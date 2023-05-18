@@ -127,7 +127,11 @@ function Career() {
               delay: 1,
             },
             loop: true,
-            speed: 4000,
+            speed: 2000,
+            // freemode: true,
+            // freeModeSticky: true,
+            // centeredSlides: true,
+            // grabCursor: true
           }}
           className="single scroll-linear swiper_comment_swiper"
         />

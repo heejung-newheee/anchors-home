@@ -22,7 +22,7 @@ export default function WebGlCarousel() {
     const INTRO_EN = document.querySelector('.intro_en');
     const INTRO_EN_TOP = INTRO_EN.getBoundingClientRect().top;
 
-    INTRO_EN_TOP < 0 ? setIsVisible(false) : setIsVisible(true);
+    INTRO_EN_TOP < -1000 ? setIsVisible(false) : setIsVisible(true);
   };
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function WebGlCarousel() {
     const CAROUSEL = document.querySelector('.main_carousel');
     const CAROUSEL_TOP = CAROUSEL.getBoundingClientRect().top;
 
-    INTRO_EN_TOP < 0 || CAROUSEL_TOP > 300 ? setIsVisible(false) : setIsVisible(true);
+    INTRO_EN_TOP < -1000 || CAROUSEL_TOP > 300 ? setIsVisible(false) : setIsVisible(true);
 
     window.addEventListener('scroll', HandleScroll);
     return () => {

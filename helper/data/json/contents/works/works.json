@@ -13,7 +13,7 @@
       "thumbnail": "img_thumbnail_chanel.jpg",
       "thumbnailAlt": "샤넬코리아 시스템 분석 컨설팅 및 총괄 운영 이미지",
       "pageUrl": "/pages/worksDetail/chanel",
-      "websiteUrl": "프로젝트 Url",
+      "websiteUrl": "",
       "visual": "img_keyvisual_chanel.jpg",
       "subVisual": "img_subvisual_chanel.jpg",
       "text": {
@@ -452,7 +452,6 @@
     {
       "id": "0004",
       "sort": ["All","Website"],
-      "htmlName": "",
       "title": "Genesis Global Site",
       "description": "Online sales, e-Commerce, Website, PIP",
       "thumbnail": "img_thumbnail_genesis.jpg",

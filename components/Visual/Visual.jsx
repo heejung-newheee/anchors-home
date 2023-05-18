@@ -1,20 +1,22 @@
 'use client';
 
-import './scss/Visual.scss';
+import React from 'react'
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
+import './scss/Visual.scss';
 
 export default function Visual({ imgUrl, alt, dimm = 'N', children, className, pageTitleData }) {
   const DIMM_CLASS = dimm === 'Y' ? ' dimmed' : '';
   const GET_CLASSNAME = !className ? { className: 'visual' + DIMM_CLASS } : { className: 'visual ' + className + DIMM_CLASS };
+  const RANDOM_NUMBER = Math.floor(Math.random() * 99)
   return (
     <article {...GET_CLASSNAME}>
       <ScrollTriggerArea
         type="multiTrigger"
         triggerStart={{
-          mobile: '20%',
-          table: '20%',
-          desktop: '20%',
-          wide: '20%',
+          mobile: '100px',
+          table: '100px',
+          desktop: '100px',
+          wide: '100px',
         }}
         triggerEnd={{
           mobile: '2000vh',
@@ -22,10 +24,10 @@ export default function Visual({ imgUrl, alt, dimm = 'N', children, className, p
           desktop: '2000vh',
           wide: '2000vh',
         }}
-        defaultID="visual_article" // [2022-05-11 : CHO] scrollTrigger 설정을 위합 값 이벤트를 실행 하기 위한 target 값입니다.
-        triggerOffset={'center'}
-        triggerMarkers={false}
-        YAxes={[{ mobile: '10%', table: '10%', desktop: '10%', wide: '10%' }]}
+        defaultID={`visual_article${RANDOM_NUMBER}`} // [2022-05-11 : CHO] scrollTrigger 설정을 위합 값 이벤트를 실행 하기 위한 target 값입니다.
+        triggerOffset={'top'}
+        triggerMarkers={true}
+        YAxes={[{ mobile: '15%', table: '15%', desktop: '15%', wide: '15%' }]}
       >
         <img src={imgUrl} alt={alt} />
       </ScrollTriggerArea>
