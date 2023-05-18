@@ -44,7 +44,7 @@ function Service() {
 
       {/* S: visual 영역 */}
       <section className="visual_comment">
-        <Visual imgUrl="/assets/images/contents/service/img_keyvisual_officewide.jpg" />
+        <Visual defaultId="scroll_main_visual" imgUrl="/assets/images/contents/service/img_keyvisual_officewide.jpg" />
         <Description className="en_comment" data={service.textList.textEn} innerHTMLOption="Y" />
         <Description className="ko_comment" data={service.textList.textKo} />
       </section>

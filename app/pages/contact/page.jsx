@@ -34,7 +34,7 @@ function Contact() {
       {/* E: PageTitle 영역 */}
 
       {/* S: visual 영역 */}
-      <Visual imgUrl={contact.imgUrl + contact.img}>
+      <Visual defaultId="scroll_main_visual" imgUrl={contact.imgUrl + contact.img}>
         <section className="contact_cont_wrap">
           <DepthTitle depthLevel="1" blindOption="hidden">
             Anchors Contact Infomation

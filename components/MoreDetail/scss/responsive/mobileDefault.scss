@@ -41,5 +41,10 @@
     &.on {
       bottom: 0;
     }
+
+    &.on + .detail_btn {
+      background-image: url(/assets/images/ico/ico_btn_minus_white.svg);
+    }
   }
+
 }

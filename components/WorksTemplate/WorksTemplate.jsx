@@ -58,9 +58,9 @@ export default function WorksTemplate({
     <section {...GET_CLASSNAME}>
       {/* S: Key Visual 영역 */}
       <section className="detail_key_visual_wrap section_div is_black">
-        {/*<Visual dimm="Y" className="detail_key_visual" imgUrl={works.imgUrl + FILTERED.visual} pageTitleData={FILTERED.title}>*/}
-        {/*  <Disclaimer data={FILTERED.description} />*/}
-        {/*</Visual>*/}
+        <Visual dimm="Y" defaultId="scroll_main_visual" className="detail_key_visual" imgUrl={works.imgUrl + FILTERED.visual} pageTitleData={FILTERED.title}>
+          <Disclaimer data={FILTERED.description} />
+        </Visual>
         <img className="scroll_icon" src="/assets/images/contents/works/img_scroll.png" alt="scroll for more image" />
       </section>
       {/* E: Key Visual 영역 */}
@@ -83,13 +83,13 @@ export default function WorksTemplate({
 
       {/* S: Sub Visual 영역 */}
       <section>
-        <Visual dimm="Y" className="detail_sub_visual_wrap section_div is_black" imgUrl={works.imgUrl + FILTERED.subVisual}>
+        <Visual dimm="Y" defaultId="scroll_sub_visual" className="detail_sub_visual_wrap section_div is_black" imgUrl={works.imgUrl + FILTERED.subVisual}>
           <div className="sub_visual_text">
             <Description data="Thank you!" />
             {/* works.json => 받아와야 할 순서의 contents key값 중에 'projectInformation' 받아와서 적용 */}
             {/* 해당 값은 각 페이지 workContent props에 담아줘야 함 */}
             {FILTERED.projectInfomation.map((data, index) => (
-              <BaseArticle key={index} 업 elementTitle={data.title} description={data.contents} innerHTMLOption="Y" />
+              <BaseArticle key={index} elementTitle={data.title} description={data.contents} innerHTMLOption="Y" />
             ))}
           </div>
         </Visual>

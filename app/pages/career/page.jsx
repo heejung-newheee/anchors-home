@@ -45,6 +45,7 @@ function Career() {
 
       {/* S: key_visual 영역 */}
       <Visual
+        defaultId="scroll_main_visual"
         imgUrl="/assets/images/contents/career/img_keyvisual_members.jpg"
         // className="key_visual"
       />
@@ -154,7 +155,7 @@ function Career() {
 
       {/*S: sub_visual 영역 */}
       <div className="sub_visual">
-        <Visual imgUrl="/assets/images/contents/career/img_visual_lights.jpg" alt="사무실 조명 이미지" />
+        <Visual defaultId="scroll_sub_visual" imgUrl="/assets/images/contents/career/img_visual_lights.jpg" alt="사무실 조명 이미지" />
       </div>
       {/* E: sub_visual 영역 */}
 
