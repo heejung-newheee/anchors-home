@@ -76,7 +76,7 @@ export default function MobileScrollAnimation({ className, firstText, secondText
         marginLeft: `-245vh`,
       };
       charStyle.current = {
-        transform: `scale(${30 * cur2 + 1}) translateY(-${20 * cur2}px)`,
+        transform: `scale(${50 * cur2 + 1}) translateY(-${20 * cur2}px)`,
       };
     } else if (animationScrollY <= stPoint) {
       // 첫번째 애니메이션 이전 구간
@@ -87,9 +87,9 @@ export default function MobileScrollAnimation({ className, firstText, secondText
       // 두번째 애니메이션 이후 구간
       contStyle.current = { position: 'relative' };
       charStyle.current = {
-        transform: `scale(31) translateY(-20px)`,
+        transform: `scale(51) translateY(-20px)`,
       };
-      wrapStyle.current = { marginLeft: '-245vh' };
+      wrapStyle.current = { marginLeft: '-245vh', overflow: 'hidden' };
     }
   }, [animationScrollY]);
 
