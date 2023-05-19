@@ -335,6 +335,11 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          .wrapper {
+            img {
+              transform: translate(0) scale(1) !important;
+            }
+          }
           .element_title {
             @extend %font_visualTitle;
             padding: 0 2rem 1.8rem;
