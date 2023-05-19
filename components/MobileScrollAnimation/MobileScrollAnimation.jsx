@@ -4,17 +4,11 @@ import React, { useEffect, useState } from 'react';
 
 import './scss/MobileScrollAnimation.scss';
 
-export default function MobileScrollAnimation({ className, firstText, secondText, animationImage, animationDuration, type = 'singleText' }) {
-  const windowObject = React.useRef();
-  const GET_CLASSNAME = !className ? { className: 'rolling_animation bg_blue' } : { className: 'rolling_animation bg_blue ' + className };
-  const IMAGE_ARR = Array.isArray(animationImage) ? animationImage : [animationImage];
-  const IMAGE_ARR_MAP = [
-    IMAGE_ARR.map((content, idx) => (
-      <span key={idx} className="animation_image">
-        {content}
-      </span>
-    )),
-  ];
+export default function MobileScrollAnimation({ className, firstText, secondText, scrollImage, scrollDuration }) {
+  const WINDOW_Object = React.useRef();
+  const GET_CLASSNAME = !className ? { className: 'bg_blue expertise_scroll' } : { className: 'bg_blue expertise_rolling ' + className };
+  const IMAGE_ARR = Array.isArray(scrollImage) ? scrollImage : [scrollImage];
+  const IMAGE_ARR_MAP = [IMAGE_ARR.map((content, idx) => <span key={idx}>{content}</span>)];
   const [animationScrollY, setAnimationScrollY] = useState(0);
   //const animating = React.useRef(false);
   const rollingRef = React.useRef(); // article dom
@@ -31,7 +25,7 @@ export default function MobileScrollAnimation({ className, firstText, secondText
 
   const _resetStartPoint = () => {
     if (rollingRef.current?.styles?.position !== 'fixed') {
-      startPoint.current = rollingRef.current?.getBoundingClientRect().top + (windowObject.current?.scrollY ?? 0);
+      startPoint.current = rollingRef.current?.getBoundingClientRect().top + (WINDOW_Object.current?.scrollY ?? 0);
     }
   };
 
@@ -41,15 +35,15 @@ export default function MobileScrollAnimation({ className, firstText, secondText
     window.addEventListener('touchmove', _scrollHandler, { passive: false });
     window.addEventListener('resize', _resetStartPoint);
     startPoint.current = rollingRef.current?.getBoundingClientRect().top + window.scrollY;
-    windowObject.current = window;
+    WINDOW_Object.current = window;
   }, []);
 
   _resetStartPoint();
 
   useEffect(() => {
-    //const crit = rollingRef.current?.getBoundingClientRect().top;
+    const crit = rollingRef.current?.getBoundingClientRect().top;
     const stPoint = 1143;
-    const dur1 = (animationDuration * 2) / 3; // expertise animation 시간
+    const dur1 = (scrollDuration * 2) / 3; // expertise animation 시간
     if (animationScrollY > stPoint && animationScrollY <= stPoint + dur1) {
       // 첫번째 애니메이션 구간
       contStyle.current = {
@@ -63,9 +57,9 @@ export default function MobileScrollAnimation({ className, firstText, secondText
       wrapStyle.current = {
         marginLeft: `${33 - (278 / dur1) * (animationScrollY - stPoint)}vh`,
       };
-    } else if (animationScrollY > stPoint + dur1 && animationScrollY <= stPoint + animationDuration) {
+    } else if (animationScrollY > stPoint + dur1 && animationScrollY <= stPoint + scrollDuration) {
       // 두번째 애니메이션 구간
-      const dur2 = animationDuration - dur1;
+      const dur2 = scrollDuration - dur1;
       const cur2 = (animationScrollY - stPoint - dur1) / dur2;
       contStyle.current = {
         position: 'fixed',
@@ -95,21 +89,12 @@ export default function MobileScrollAnimation({ className, firstText, secondText
 
   return (
     <article ref={rollingRef} {...GET_CLASSNAME} style={contStyle.current}>
-      <div className="rolling_animation_wrap" style={wrapStyle.current}>
-        {type === 'doubleText' ? (
-          <>
-            <span className="animation_text text_first">{firstText}</span>
-            <span className="animation_text text_second" style={charStyle.current}>
-              {secondText}
-            </span>
-            <div className="animation_image">{IMAGE_ARR_MAP}</div>
-          </>
-        ) : (
-          <>
-            <span className="animation_text text_first">{firstText}</span>
-            <div className="animation_image">{IMAGE_ARR_MAP}</div>
-          </>
-        )}
+      <div className="scroll_wrap" style={wrapStyle.current}>
+        <span className="scroll_text text_first">{firstText}</span>
+        <span className="scroll_text text_second" style={charStyle.current}>
+          {secondText}
+        </span>
+        <div className="scroll_image_wrap">{IMAGE_ARR_MAP}</div>
       </div>
     </article>
   );

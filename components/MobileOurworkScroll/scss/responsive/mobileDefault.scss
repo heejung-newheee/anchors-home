@@ -1,14 +1,17 @@
-.expertise_scroll {
+.ourwork_scroll {
   height :100vh;
   display: flex;
   align-items: center;
   width: 100%;
+  transition: background-color 1s;
+  position: relative;
   .scroll_wrap {
     position :relative;
     display: flex;
-    margin-left: 33vh;
+    margin-left: 10vw;
+    transition: color 1s;
     .scroll_text{
-      font-size: 60vh;
+      font-size: 33vh;
       font-family: $font_en;
       letter-spacing: $en_letterSpacing;
       font-weight: bold;
@@ -38,5 +41,11 @@
         }
       }
     }
+  }
+  &.active {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: $color_black;
   }
 }
