@@ -39,9 +39,8 @@ export default function MobileScrollAnimation({ className, scrollText, scrollIma
   _resetStartPoint();
 
   useEffect(() => {
-    //const crit = rollingRef.current?.getBoundingClientRect().top;
     // const stPoint = 2520 + window.innerHeight * 2.2;
-
+    const DEVICE_WIDTH = WINDOW_Object.current.innerWidth;
     const elementMain = rollingRef.current?.parentNode.parentNode.parentNode;
     const section1 = elementMain?.querySelector('.about_us');
     const section2 = elementMain?.querySelector('.service');
@@ -52,34 +51,35 @@ export default function MobileScrollAnimation({ className, scrollText, scrollIma
 
     if (animationScrollY > stPoint && animationScrollY <= stPoint + dur1) {
       // 첫번째 애니메이션 구간
-      rollingRef.current?.classList.add('active');
-      rollingRef.current?.parentNode.parentNode.classList.add('active');
-      //rollingRef.current?.parentNode.nextElementSibling.classList.add('remove');
       contStyle.current = {
         position: 'fixed',
         top: '0',
         zIndex: '2',
         backgroundColor: '#1d1d1f',
       };
-      wrapStyle.current = {
-        marginLeft: `${10 - (700 / dur1) * (animationScrollY - stPoint)}vw`,
-        color: '#fff',
-      };
+      wrapStyle.current =
+        DEVICE_WIDTH < 768
+          ? {
+              marginLeft: `${10 - (700 / dur1) * (animationScrollY - stPoint)}vw`,
+              color: '#fff',
+            }
+          : {
+              marginLeft: `${14 - (328 / dur1) * (animationScrollY - stPoint)}vw`,
+              color: '#fff',
+            };
       rollingRef.current?.parentNode.classList.add('bg_black');
     } else if (animationScrollY <= stPoint) {
       // 첫번째 애니메이션 이전 구간
       contStyle.current = { position: 'relative', backgroundColor: '#fff' };
-      wrapStyle.current = { marginLeft: '10vw' };
+      wrapStyle.current = DEVICE_WIDTH < 768 ? { marginLeft: '10vw' } : { marginLeft: '14vw' };
       rollingRef.current?.parentNode.classList.remove('bg_black');
     } else {
       // 애니메이션 이후 구간
       rollingRef.current?.parentNode.classList.add('bg_black');
-      rollingRef.current?.classList.remove('active');
-      rollingRef.current?.parentNode.parentNode.classList.remove('active');
       contStyle.current = {
         backgroundColor: '#1d1d1f',
       };
-      wrapStyle.current = { marginLeft: '690vw' };
+      wrapStyle.current = DEVICE_WIDTH < 768 ? { marginLeft: '690vw' } : { marginLeft: '315vw' };
     }
   }, [animationScrollY]);
 

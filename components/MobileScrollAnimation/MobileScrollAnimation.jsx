@@ -13,7 +13,7 @@ export default function MobileScrollAnimation({ className, firstText, secondText
   //const animating = React.useRef(false);
   const rollingRef = React.useRef(); // article dom
   const startPoint = React.useRef(0); // article Y coordinate
-  const marginLeft = React.useRef(33);
+  const marginLeft = React.useRef(0);
   const wrapStyle = React.useRef({}); // text scroll animation
   const contStyle = React.useRef({}); // position fixed
   const charStyle = React.useRef({}); // text extend animation
@@ -41,9 +41,13 @@ export default function MobileScrollAnimation({ className, firstText, secondText
   _resetStartPoint();
 
   useEffect(() => {
-    const crit = rollingRef.current?.getBoundingClientRect().top;
-    const stPoint = 1143;
+    const DEVICE_WIDTH = WINDOW_Object.current.innerWidth;
+    //console.log(DEVICE_WIDTH);
+    //const crit = rollingRef.current?.getBoundingClientRect().top;
+    const stPoint = DEVICE_WIDTH < 768 ? 1143 : 1559;
     const dur1 = (scrollDuration * 2) / 3; // expertise animation 시간
+
+    //console.log(crit + animationScrollY);
     if (animationScrollY > stPoint && animationScrollY <= stPoint + dur1) {
       // 첫번째 애니메이션 구간
       contStyle.current = {
@@ -54,9 +58,14 @@ export default function MobileScrollAnimation({ className, firstText, secondText
       charStyle.current = {
         transform: `scale(1) translateY(0px)`,
       };
-      wrapStyle.current = {
-        marginLeft: `${33 - (278 / dur1) * (animationScrollY - stPoint)}vh`,
-      };
+      wrapStyle.current =
+        DEVICE_WIDTH < 768
+          ? {
+              marginLeft: `${33 - (278 / dur1) * (animationScrollY - stPoint)}vh`,
+            }
+          : {
+              marginLeft: `${53 - (276 / dur1) * (animationScrollY - stPoint)}vh`,
+            };
     } else if (animationScrollY > stPoint + dur1 && animationScrollY <= stPoint + scrollDuration) {
       // 두번째 애니메이션 구간
       const dur2 = scrollDuration - dur1;
@@ -66,9 +75,7 @@ export default function MobileScrollAnimation({ className, firstText, secondText
         zIndex: 1,
         top: 0,
       };
-      wrapStyle.current = {
-        marginLeft: `-245vh`,
-      };
+      wrapStyle.current = DEVICE_WIDTH < 768 ? { marginLeft: `-245vh` } : { marginLeft: `-223vh` };
       charStyle.current = {
         transform: `scale(${50 * cur2 + 1}) translateY(-${20 * cur2}px)`,
       };
@@ -76,14 +83,14 @@ export default function MobileScrollAnimation({ className, firstText, secondText
       // 첫번째 애니메이션 이전 구간
       contStyle.current = { position: 'relative' };
       charStyle.current = { transform: `scale(1) translateY(0px)` };
-      wrapStyle.current = { marginLeft: '33vh' };
+      wrapStyle.current = DEVICE_WIDTH < 768 ? { marginLeft: '33vh' } : { marginLeft: '53vh' };
     } else {
       // 두번째 애니메이션 이후 구간
       contStyle.current = { position: 'relative' };
       charStyle.current = {
         transform: `scale(51) translateY(-20px)`,
       };
-      wrapStyle.current = { marginLeft: '-245vh', overflow: 'hidden' };
+      wrapStyle.current = DEVICE_WIDTH < 768 ? { marginLeft: '-245vh', overflow: 'hidden' } : { marginLeft: '-223vh', overflow: 'hidden' };
     }
   }, [animationScrollY]);
 
