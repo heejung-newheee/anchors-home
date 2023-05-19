@@ -259,7 +259,7 @@ function Main() {
           <section className="section_div is_photo bg_white">
             {/* infinite rolling swiepr */}
             <section className="rolling_area_wrap">
-              <InfiniteRolling className="rolling_area" duration="10" length="solo" key="infiniteRoling1">
+              <InfiniteRolling className="rolling_area" duration="20" length="solo" key="infiniteRoling1">
                 {main.service.whiteBgRolling.line1.map((data, index) => (
                   <>
                     <span key={'text' + index}>{data.text}</span>
@@ -267,7 +267,7 @@ function Main() {
                   </>
                 ))}
               </InfiniteRolling>
-              <InfiniteRolling className="rolling_area" reverse="Y" duration="6" length="solo" key="infiniteRoling2">
+              <InfiniteRolling className="rolling_area" reverse="Y" duration="20" length="solo" key="infiniteRoling2">
                 {main.service.whiteBgRolling.line2.map((data, index) => (
                   <>
                     <span key={'text' + index}>{data.text}</span>
@@ -275,7 +275,7 @@ function Main() {
                   </>
                 ))}
               </InfiniteRolling>
-              <InfiniteRolling className="rolling_area" duration="6" length="solo" key="infiniteRoling3">
+              <InfiniteRolling className="rolling_area" duration="20" length="solo" key="infiniteRoling3">
                 {main.service.whiteBgRolling.line3.map((data, index) => (
                   <>
                     <span key={'text' + index}>{data.text}</span>

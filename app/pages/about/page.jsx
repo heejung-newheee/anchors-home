@@ -202,7 +202,7 @@ function About() {
               delay: 1,
             },
             loop: true,
-            speed: 8000,
+            speed: 2000,
             breakpoints: {
               768: {
                 spaceBetween: 24,

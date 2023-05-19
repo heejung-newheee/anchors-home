@@ -1,6 +1,5 @@
 'use client';
 
-import React, { useState, useEffect } from 'react'
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
 import './scss/Visual.scss';
 
@@ -25,7 +24,7 @@ export default function Visual({ imgUrl, alt, dimm = 'N', children, className, p
         }}
         defaultID={defaultId} // [2022-05-11 : CHO] scrollTrigger 설정을 위합 값 이벤트를 실행 하기 위한 target 값입니다.
         triggerOffset={'top'}
-        triggerMarkers={true}
+        triggerMarkers={false}
         YAxes={[{ mobile: '15%', table: '15%', desktop: '15%', wide: '15%' }]}
       >
         <img src={imgUrl} alt={alt} />

@@ -42,7 +42,6 @@ export default function WorksTemplate({
   const [isSecondNumber, setIsSecondNumber] = useState(0);
   const [isThirdNumber, setIsThirdNumber] = useState(0);
 
-
   useEffect(()=> {
     THIS_INDEX === works.content.length-1 ? setIsFirstNumber(0) : setIsFirstNumber(THIS_INDEX + 1)
     THIS_INDEX === works.content.length-1 ? setIsSecondNumber(1) : THIS_INDEX === works.content.length-2 ? setIsSecondNumber(0) : setIsSecondNumber(THIS_INDEX + 2)

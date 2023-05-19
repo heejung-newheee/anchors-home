@@ -194,6 +194,7 @@
         &:nth-child(1) {
           .infinite_rolling_inner {
             animation-name: infiniteRollingSolo !important;
+            animation-duration: 20s !important;
 
             @keyframes infiniteRollingSolo {
               0% {
@@ -208,6 +209,7 @@
         &:nth-child(2) {
           .infinite_rolling_inner {
             animation-name: infiniteRollingSolo2 !important;
+            animation-duration: 20s !important;
 
             @keyframes infiniteRollingSolo2 {
               0% {
@@ -222,6 +224,7 @@
         &:nth-child(3) {
           .infinite_rolling_inner {
             animation-name: infiniteRollingSolo3 !important;
+            animation-duration: 20s !important;
 
             @keyframes infiniteRollingSolo3 {
               0% {

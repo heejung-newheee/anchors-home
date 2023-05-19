@@ -228,8 +228,8 @@ function SwiperArea({
   return (
     <div
       className="single_swiper_wrap"
-      onMouseEnter={() => (autoPlayStop === 'Y' ? SWIPER_REF.current.swiper.autoplay.stop() : '')}
-      onMouseLeave={() => (autoPlayStop === 'Y' ? SWIPER_REF.current.swiper.autoplay.start() : '')}
+      onMouseEnter={() => (autoPlayStop === 'Y' && SWIPER_REF.current.swiper.autoplay.stop() )}
+      onMouseLeave={() => (autoPlayStop === 'Y' && SWIPER_REF.current.swiper.autoplay.start() )}
     >
       {/* S: single swiper */}
       <Swiper key={`ssw`} modules={SWIPER_MODULE} {...SINGLE_SWIPER_OPTION} {...GET_CLASSNAME} ref={SWIPER_REF}>
