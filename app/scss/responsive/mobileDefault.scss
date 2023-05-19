@@ -130,7 +130,7 @@
 
       &:before {
         width: 100vw;
-        height: 120vh;
+        height: 100vh;
         display: block;
         content:'';
         background-color: $color_white;
@@ -154,16 +154,16 @@
           max-width: 19.3rem;
           width: 30.2vh;
           &:nth-child(1) {
-            top: 8.5%;
-            left: 9%;
+            top: 2.5%;
+            left: 13.5%;
           }
           &:nth-child(2) {
-            top: 64%;
-            left: 41.5%;
+            top: 66%;
+            left: 44.5%;
           }
           &:nth-child(3) {
-            top: 12.5%;
-            left: 84.5%;
+            top: 7.5%;
+            left: 85%;
           }
         }
       }
