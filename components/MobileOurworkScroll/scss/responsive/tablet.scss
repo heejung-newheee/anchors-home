@@ -1,27 +1,26 @@
 @include tablet {
-  .expertise_scroll {
-
+  .ourwork_scroll {
     .scroll_wrap {
-
-      margin-left: 53vh;
+      margin-left: 14vw;
       .scroll_text{
-        font-size: 56vh;
+        font-size: 24.3vh;
       }
       .scroll_image_wrap {
         img {
-          max-width: 25.7rem;
+          max-width: 25.8rem;
         }
         span {
           &:nth-child(1) img {
-            top: 10.5%;
-            left: 10.5%;
+            top: -3%;
+            left: 13.5%;
           }
           &:nth-child(2) img {
-            left: 42.5%;
+            top: -65%;
+            left: 44.5%;
           }
           &:nth-child(3) img {
-            top: 15.5%;
-            left: 74%;
+            top: -3.5%;
+            left: 85.3%;
           }
         }
       }

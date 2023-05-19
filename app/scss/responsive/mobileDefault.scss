@@ -251,6 +251,22 @@
   }
 
   .our_works {
+    .is_black {
+      position: relative;
+      height: calc(100vh + 1000px);
+      //background: #000;
+      &:after {
+        width: 100vw;
+        height: 1000px;
+        display: block;
+        content:'';
+        //background-color: $color_black;
+      }
+      &.bg_black {
+        background-color: #1d1d1f;
+        transition: background-color 1s;
+      }
+    }
     .rolling_wrap {
       .line1_flow {
         transition: background-color 1s;
@@ -304,12 +320,6 @@
     }
     .portfolio_wrap {
       //position: fixed;
-      /*&:before {
-        width: 100vw;
-        height: 100vh;
-        display: block;
-        content:'';
-      }*/
       //left: 100vw;
       //top: 0;
       width: 100vw;

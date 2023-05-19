@@ -49,6 +49,9 @@
         &.is_photo {
           padding-bottom: 6rem;
         }
+        &:before {
+          background-color: $color_blue;
+        }
       }
       .rolling_wrap {
         .rolling_text {
@@ -141,6 +144,11 @@
     }
 
     .our_works {
+      .is_black {
+        &:after {
+          height: 120vh;
+        }
+      }
       .rolling_wrap {
         .rolling_text {
           margin-left: 33.7vw;
