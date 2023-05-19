@@ -269,10 +269,11 @@
       }
     }
     .single_swiper_wrap {
-      padding-bottom: 6rem;
+      margin-bottom: 10rem;
 
       .about_members_swiper {
-        padding-bottom: 4rem;
+        //margin-bottom: 4rem;
+        overflow: visible;
 
         .swiper-slide {
           width: unset;
@@ -323,7 +324,7 @@
           }
         }
         .swiper-scrollbar {
-          bottom: 0;
+          bottom: -4rem;
         }
       }
     }

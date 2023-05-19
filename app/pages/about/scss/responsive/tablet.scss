@@ -149,9 +149,9 @@
       }
 
       .single_swiper_wrap {
-        padding-bottom: 12rem;
+        margin-bottom: 18.2rem;
         .about_members_swiper {
-          padding-bottom: 6.2rem;
+          //margin-bottom: 6.2rem;
 
           .swiper-slide {
             .member_name_en {
@@ -176,6 +176,9 @@
                 }
               }
             }
+          }
+          .swiper-scrollbar {
+            bottom: -6.2rem;
           }
         }
       }

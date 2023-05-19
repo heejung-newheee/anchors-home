@@ -128,7 +128,7 @@ function Career() {
               delay: 1,
             },
             loop: true,
-            speed: 2000,
+            speed: 2500,
             // freemode: true,
             // freeModeSticky: true,
             // centeredSlides: true,
