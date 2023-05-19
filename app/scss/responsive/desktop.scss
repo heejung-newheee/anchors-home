@@ -145,8 +145,9 @@
 
     .our_works {
       .is_black {
+        height: 100vh;
         &:after {
-          height: 120vh;
+          height: 100vh;
         }
       }
       .rolling_wrap {
