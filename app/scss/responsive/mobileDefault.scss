@@ -352,6 +352,12 @@
           .swiper-button-prev, .swiper-button-next {
             display: none;
           }
+          .swiper-pagination {
+            bottom: 5rem;
+            .swiper-pagination-bullet-active {
+              background-color: $color_lightblue;
+            }
+          }
         }
       }
     }
