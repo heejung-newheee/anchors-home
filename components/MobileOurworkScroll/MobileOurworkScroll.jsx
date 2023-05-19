@@ -15,7 +15,7 @@ export default function MobileScrollAnimation({ className, scrollText, scrollIma
   const startPoint = React.useRef(0); // article Y coordinate
   const marginLeft = React.useRef(10);
   const wrapStyle = React.useRef({}); // text scroll animation
-  //const contStyle = React.useRef({}); // position fixed
+  const contStyle = React.useRef({}); // position fixed
 
   const _scrollHandler = e => {
     setAnimationScrollY(window.scrollY);
@@ -40,34 +40,51 @@ export default function MobileScrollAnimation({ className, scrollText, scrollIma
 
   useEffect(() => {
     //const crit = rollingRef.current?.getBoundingClientRect().top;
-    const stPoint = 2520 + window.innerHeight * 2.2;
-    const dur1 = scrollDuration; // expertise animation 시간
+    // const stPoint = 2520 + window.innerHeight * 2.2;
 
-    //console.log(document.body.clientHeight);
+    const elementMain = rollingRef.current?.parentNode.parentNode.parentNode;
+    const section1 = elementMain?.querySelector('.about_us');
+    const section2 = elementMain?.querySelector('.service');
+    const section1Height = section1?.getBoundingClientRect().height;
+    const section2Height = section2?.getBoundingClientRect().height;
+    const stPoint = section1Height + section2Height;
+    const dur1 = scrollDuration; // expertise animation 시간
 
     if (animationScrollY > stPoint && animationScrollY <= stPoint + dur1) {
       // 첫번째 애니메이션 구간
       rollingRef.current?.classList.add('active');
-      // contStyle.current = {
-      //   position: 'fixed',
-      //   zIndex: 2,
-      //   top: 0,
-      //   backgroundColor: '#1d1d1f',
-      // };
+      rollingRef.current?.parentNode.parentNode.classList.add('active');
+      //rollingRef.current?.parentNode.nextElementSibling.classList.add('remove');
+      contStyle.current = {
+        position: 'fixed',
+        top: '0',
+        zIndex: '2',
+        backgroundColor: '#1d1d1f',
+      };
       wrapStyle.current = {
         marginLeft: `${10 - (700 / dur1) * (animationScrollY - stPoint)}vw`,
         color: '#fff',
       };
+      rollingRef.current?.parentNode.classList.add('bg_black');
+    } else if (animationScrollY <= stPoint) {
+      // 첫번째 애니메이션 이전 구간
+      contStyle.current = { position: 'relative', backgroundColor: '#fff' };
+      wrapStyle.current = { marginLeft: '10vw' };
+      rollingRef.current?.parentNode.classList.remove('bg_black');
     } else {
       // 애니메이션 이후 구간
+      rollingRef.current?.parentNode.classList.add('bg_black');
       rollingRef.current?.classList.remove('active');
-      //contStyle.current = { position: 'relative' };
-      wrapStyle.current = { marginLeft: '10vw' };
+      rollingRef.current?.parentNode.parentNode.classList.remove('active');
+      contStyle.current = {
+        backgroundColor: '#1d1d1f',
+      };
+      wrapStyle.current = { marginLeft: '690vw' };
     }
   }, [animationScrollY]);
 
   return (
-    <article ref={rollingRef} {...GET_CLASSNAME}>
+    <article ref={rollingRef} {...GET_CLASSNAME} style={contStyle.current}>
       <div className="scroll_wrap" style={wrapStyle.current}>
         <span className="scroll_text text_first">{scrollText}</span>
         <div className="scroll_image_wrap">{IMAGE_ARR_MAP}</div>

@@ -250,13 +250,18 @@
   .our_works {
     .is_black {
       position: relative;
-      height: auto;
+      height: calc(100vh + 1000px);
+      //background: #000;
       &:after {
         width: 100vw;
         height: 1000px;
         display: block;
         content:'';
-        background-color: $color_black;
+        //background-color: $color_black;
+      }
+      &.bg_black {
+        background-color: #1d1d1f;
+        transition: background-color 1s;
       }
     }
     .rolling_wrap {
