@@ -71,6 +71,11 @@
                 font-size: 3.8rem;
                 line-height: 5rem;
               }
+              &.on {
+                .disclaimer{
+                  font-size: 1.8rem;
+                }
+              }
             }
           }
         }

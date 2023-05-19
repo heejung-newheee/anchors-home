@@ -145,7 +145,10 @@
           &.on {
             transform: translateY(0%);
             &::before{
-              opacity: 0.4;
+              opacity: 1;
+              background-color: rgba(0,0,0,0.4);
+              backdrop-filter: blur(1rem);
+              -webkit-backdrop-filter: blur(1rem);
             }
             .disclaimer{
               opacity: 1;

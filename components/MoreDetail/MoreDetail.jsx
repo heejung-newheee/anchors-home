@@ -9,7 +9,6 @@ function MoreDetail({ className, imgUrl, imgAlt, children }) {
   const DETAIL_SLIDE_AREA = useRef();
   const TOGGLE_BTN = () => {
     const CLICK_AREA = DETAIL_SLIDE_AREA.current.parentElement;
-    console.log(CLICK_AREA);
     isClick ? HIDE_EVENT(CLICK_AREA) : SHOW_EVENT(CLICK_AREA)
   }
   const SHOW_EVENT = clickArea => {
