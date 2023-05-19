@@ -337,10 +337,12 @@
           align-items: center;
           .element_title {
             @extend %font_visualTitle;
+            padding: 0 2rem 1.8rem;
           }
           .disclaimer {
             @extend %font_visualDescription;
             margin-bottom: 5rem;
+            padding: 0 2rem;
           }
           a {
             @extend %btn_primary_ghost;
