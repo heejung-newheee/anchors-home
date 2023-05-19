@@ -22,15 +22,15 @@ export default function BaseArticle({ imgUrl, imgAlt, elementTitle, description,
               wide: '-70%',
             }}
             triggerEnd={{
-              mobile: '2000vh',
-              table: '2000vh',
-              desktop: '2000vh',
-              wide: '2000vh',
+              mobile: '4000vh',
+              table: '4000vh',
+              desktop: '4000vh',
+              wide: '4000vh',
             }}
             defaultID={defaultID} // [2022-05-11 : CHO] scrollTrigger 설정을 위합 값 이벤트를 실행 하기 위한 target 값입니다.
             triggerOffset={'top'}
             triggerMarkers={false}
-            YAxes={[{ mobile: '15%', table: '15%', desktop: '15%', wide: '15%' }]}
+            YAxes={[{ mobile: '20%', table: '20%', desktop: '20%', wide: '20%' }]}
           >
             <img src={imgUrl} alt={imgAlt} />
           </ScrollTriggerArea>

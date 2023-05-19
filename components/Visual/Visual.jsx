@@ -17,15 +17,15 @@ export default function Visual({ imgUrl, alt, dimm = 'N', children, className, p
           wide: '0',
         }}
         triggerEnd={{
-          mobile: '2000vh',
-          table: '2000vh',
-          desktop: '2000vh',
-          wide: '2000vh',
+          mobile: '4000vh',
+          table: '4000vh',
+          desktop: '4000vh',
+          wide: '4000vh',
         }}
         defaultID={defaultId} // [2022-05-11 : CHO] scrollTrigger 설정을 위합 값 이벤트를 실행 하기 위한 target 값입니다.
         triggerOffset={'top'}
         triggerMarkers={false}
-        YAxes={[{ mobile: '15%', table: '15%', desktop: '15%', wide: '15%' }]}
+        YAxes={[{ mobile: '35%', table: '35%', desktop: '35%', wide: '35%' }]}
       >
         <img src={imgUrl} alt={alt} />
       </ScrollTriggerArea>
