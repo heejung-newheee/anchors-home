@@ -33,6 +33,11 @@
     }
 
     .service {
+      .bg_white {
+        &:before {
+          height: 150vh;
+        }
+      }
       .rolling_wrap {
         .rolling_text {
           .text_expertis,

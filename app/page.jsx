@@ -85,8 +85,8 @@ function Main() {
                   triggerEnd={{
                     mobile: '2200vh',
                     table: '2200vh',
-                    desktop: '2200vh',
-                    wide: '2200vh',
+                    desktop: '5000vh',
+                    wide: '5000vh',
                   }}
                   triggerMarkers={false}
                   XAxes={[
@@ -97,7 +97,6 @@ function Main() {
                       wide: '-600vh',
                     },
                   ]}
-                  duration={0.001}
                 >
                   <article className="rolling_text">
                     <div className="text_expertis">
@@ -200,8 +199,8 @@ function Main() {
                       triggerStart={{
                         mobile: '280px',
                         table: '130px',
-                        desktop: '350px',
-                        wide: '530px',
+                        desktop: '900px',
+                        wide: '1200px',
                       }}
                       triggerEnd={{
                         mobile: '3000vh',
@@ -316,8 +315,8 @@ function Main() {
                   triggerEnd={{
                     mobile: '4000vh',
                     table: '4000vh',
-                    desktop: '4000vh',
-                    wide: '4000vh',
+                    desktop: '10000vh',
+                    wide: '12000vh',
                   }}
                   triggerMarkers={false}
                   XAxes={[
@@ -436,8 +435,8 @@ function Main() {
                 triggerStart={{
                   mobile: '0',
                   table: '0',
-                  desktop: '0',
-                  wide: '-200px',
+                  desktop: '250px',
+                  wide: '300px',
                 }}
                 triggerEnd={{
                   mobile: '4500vh',
@@ -447,7 +446,6 @@ function Main() {
                 }}
                 triggerOffset={'center'}
                 triggerMarkers={false}
-                duration={0.01}
               >
                 <div className="portfolio_wrap">
                   <SwiperArea

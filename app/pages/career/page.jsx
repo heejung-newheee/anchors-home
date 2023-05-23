@@ -114,27 +114,22 @@ function Career() {
           ))}
           swiperOption={{
             spaceBetween: 16,
-            breakpoints: {
-              360: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1280: { slidesPerView: 3 },
-            },
             navigation: false,
-            pagination: false,
-            scrollbar: {
-              draggable: true,
+            pagination: {
+              clickable: true,
             },
             autoplay: {
               delay: 1,
             },
             loop: true,
-            speed: 2500,
-            // freemode: true,
-            // freeModeSticky: true,
-            // centeredSlides: true,
-            // grabCursor: true
+            speed: 4000,
+            breakpoints: {
+              360: { slidesPerView: 1, autoplay: false },
+              768: { slidesPerView: 2, autoplay: false },
+              1280: { slidesPerView: 3 },
+            },
           }}
-          className="single scroll-linear swiper_comment_swiper"
+          className="single swiper_comment_swiper"
         />
       </section>
       {/* E: swiper_comment 영역 */}

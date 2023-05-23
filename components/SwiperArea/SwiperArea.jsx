@@ -1,5 +1,6 @@
 'use client';
-import React from 'react';
+
+import React, { useEffect, useState } from 'react';
 
 import {
   Autoplay,
@@ -69,6 +70,12 @@ function SwiperArea({
   // const [uniqueSwiperKey, setUniqueSwiperKey] = React.useState(0);
   const [firstSwiper, setFirstSwiper] = React.useState(null);
   const [secondSwiper, setSecondSwiper] = React.useState(null);
+  const [windowWidth, setWindowWidth] = React.useState(0);
+
+  useEffect(() => {
+    const DEVICE_WIDTH = window.innerWidth;
+    setWindowWidth(DEVICE_WIDTH);
+  }, []);
 
   //const COMPUTED_SWIPER_OPTION = { ...DEFAULT_SWIPER_OPTION, ...swiperOption };
   /* const COMPUTED_FIRST_SWIPER_OPTION = {
@@ -94,10 +101,10 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
-        nested: true,
-        resistance: false,
-        observer: true,
-        touchStartForcePreventDefault: true,
+        //nested: true,
+        //resistance: false,
+        //observer: true,
+        //touchStartForcePreventDefault: true,
       }
     : {
         slidesPerView: 1,
@@ -108,10 +115,10 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
-        nested: true,
-        resistance: false,
-        observer: true,
-        touchStartForcePreventDefault: true,
+        //nested: true,
+        //resistance: false,
+        //observer: true,
+        //touchStartForcePreventDefault: true,
         ...swiperOption,
       };
   const FIRST_SWIPER_OPTION = !firstSwiperOption
@@ -124,10 +131,10 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
-        nested: true,
-        resistance: false,
-        observer: true,
-        touchStartForcePreventDefault: true,
+        //nested: true,
+        //resistance: false,
+        //observer: true,
+        //touchStartForcePreventDefault: true,
       }
     : {
         slidesPerView: 1,
@@ -138,10 +145,10 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
-        nested: true,
-        resistance: false,
-        observer: true,
-        touchStartForcePreventDefault: true,
+        //nested: true,
+        //resistance: false,
+        //observer: true,
+        //touchStartForcePreventDefault: true,
         ...firstSwiperOption,
       };
 
@@ -155,10 +162,10 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
-        nested: true,
-        resistance: false,
-        observer: true,
-        touchStartForcePreventDefault: true,
+        //nested: true,
+        //resistance: false,
+        //observer: true,
+        //touchStartForcePreventDefault: true,
       }
     : {
         slidesPerView: 1,
@@ -169,10 +176,10 @@ function SwiperArea({
         scrollbar: false,
         autoplay: false,
         loop: false,
-        nested: true,
-        resistance: false,
-        observer: true,
-        touchStartForcePreventDefault: true,
+        //nested: true,
+        //resistance: false,
+        //observer: true,
+        //touchStartForcePreventDefault: true,
         ...secondSwiperOption,
       };
 
@@ -228,10 +235,8 @@ function SwiperArea({
   return (
     <div
       className="single_swiper_wrap"
-      onMouseEnter={() => (autoPlayStop === 'Y' && SWIPER_REF.current.swiper.autoplay.stop() )}
-      onMouseLeave={() => (autoPlayStop === 'Y' && SWIPER_REF.current.swiper.autoplay.start() )}
-      onTouchStart={() => (autoPlayStop === 'Y' && SWIPER_REF.current.swiper.autoplay.stop() )}
-      onTouchEnd={() => (autoPlayStop === 'Y' && SWIPER_REF.current.swiper.autoplay.start() )}
+      onMouseEnter={() => autoPlayStop === 'Y' && windowWidth >= 1280 && SWIPER_REF.current.swiper.autoplay.stop()}
+      onMouseLeave={() => autoPlayStop === 'Y' && windowWidth >= 1280 && SWIPER_REF.current.swiper.autoplay.start()}
     >
       {/* S: single swiper */}
       <Swiper key={`ssw`} modules={SWIPER_MODULE} {...SINGLE_SWIPER_OPTION} {...GET_CLASSNAME} ref={SWIPER_REF}>

@@ -90,12 +90,12 @@
       overflow: visible;
       width: 23rem;
       height: 30rem;
-      .swiper_wrapper{
+      .swiper-slide {
+        /*height: 30rem;
+        width: 23rem;*/
       }
-      .swiper-scrollbar.swiper-scrollbar-horizontal{
-        transform: translate(-50%, 2.4rem);
-        .swiper-scrollbar-drag{
-        }
+      .swiper-pagination {
+        bottom: -3rem;
       }
       .detail_slide{
         position: absolute;
@@ -182,6 +182,7 @@
           height: 3.4rem;
           margin-top: 3.3rem;
           margin-bottom: 1.8rem;
+          transform: scale(1) !important;
         }
         p{
           font-size: 1.8rem;

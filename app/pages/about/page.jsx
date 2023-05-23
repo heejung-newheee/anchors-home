@@ -191,10 +191,6 @@ function About() {
           swiperOption={{
             slidesPerView: 'auto',
             navigation: false,
-            pagination: false,
-            scrollbar: {
-              draggable: true,
-            },
             spaceBetween: 16,
             slidesOffsetBefore: 24,
             slidesOffsetAfter: 24,
@@ -202,10 +198,14 @@ function About() {
               delay: 1,
             },
             loop: true,
-            speed: 2500,
+            speed: 4000,
             breakpoints: {
+              360: {
+                autoplay: false,
+              },
               768: {
                 spaceBetween: 24,
+                autoplay: false,
               },
               1280: {
                 spaceBetween: 32,
@@ -222,7 +222,7 @@ function About() {
               },
             },
           }}
-          className="about_members_swiper scroll-linear"
+          className="about_members_swiper"
           swiperContent={[...aboutMembers.members, ...aboutMembers.members].map((cont, idx) => (
             <article key={`sw04-${idx}`}>
               <ElementTitle data={cont.nameEn} className="member_name_en" />
