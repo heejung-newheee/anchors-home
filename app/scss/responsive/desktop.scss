@@ -207,5 +207,49 @@
         }
       }
     }
+
+    // scroll trigger test
+    .service {
+      .rolling_wrap {
+        .expertise_scroll_test {
+          display: flex;
+          position: relative;
+          &.is_active {
+            position: fixed;
+            top: 0;
+          }
+          .expertise_text {
+            font-size: 83.5vh;
+            font-family: $font_en;
+            letter-spacing: $en_letterSpacing;
+            font-weight: bold;
+            white-space: nowrap;
+            display: inline-block;
+            &.expertis_test {
+              margin-left: 81vw;
+            }
+          }
+          .expertise_img {
+            position: absolute;
+            img {
+              max-width: 34.2rem;
+              width: 43vh;
+            }
+            &.img_first_test {
+              top: 7.5%;
+              left: 9%;
+            }
+            &.img_second_test {
+              top: 65%;
+              left: 41%;
+            }
+            &.img_third_test {
+              top: 12.5%;
+              left: 84%;
+            }
+          }
+        }
+      }
+    }
   }
 }

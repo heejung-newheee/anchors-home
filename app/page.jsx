@@ -1,4 +1,6 @@
+'use client';
 
+import React, { useEffect, useState, useRef } from 'react';
 
 import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
@@ -22,7 +24,12 @@ import './scss/main.scss';
 import MobileOurworkScroll from '@/components/MobileOurworkScroll/MobileOurworkScroll';
 
 function Main() {
-  // const [f
+  const [windowWidth, setWindowWidth] = React.useState(0);
+
+  useEffect(() => {
+    const DEVICE_WIDTH = window.innerWidth;
+    setWindowWidth(DEVICE_WIDTH);
+  }, []);
 
   return (
     <>
@@ -61,6 +68,190 @@ function Main() {
         <section className="service">
           <DepthTitle depthLevel="1">Service</DepthTitle>
           {/* S: Expertise scroll 영역 */}
+          <section className="section_div is_black bg_blue rolling_wrap">
+            {windowWidth >= 1280 ? (
+              <>
+                {/* Expertise 텍스트 영역 'Expertis' */}
+                <ScrollTriggerArea
+                  className="line1_flow scroll_expertise"
+                  defaultID="scroll_trigger01"
+                  type="multiTrigger"
+                  triggerStart={{
+                    mobile: '0',
+                    table: '0',
+                    desktop: '0',
+                    wide: '0',
+                  }}
+                  triggerEnd={{
+                    mobile: '2200vh',
+                    table: '2200vh',
+                    desktop: '5000vh',
+                    wide: '5000vh',
+                  }}
+                  triggerMarkers={false}
+                  XAxes={[
+                    {
+                      mobile: '-360vh',
+                      table: '-400vh',
+                      desktop: '-600vh',
+                      wide: '-600vh',
+                    },
+                  ]}
+                >
+                  <article className="rolling_text">
+                    <div className="text_expertis">
+                      {main.service.rollingBigText[0]}
+                      {/* Expertise 첫번째 이미지 */}
+                      <ScrollTriggerArea
+                        className="expertise_img"
+                        defaultID="scroll_trigger02"
+                        type="multiTrigger"
+                        triggerStart={{
+                          mobile: '-160px',
+                          table: '-300px',
+                          desktop: '-110px',
+                          wide: '-100px',
+                        }}
+                        triggerEnd={{
+                          mobile: '1000vh',
+                          table: '1500vh',
+                          desktop: '3000vh',
+                          wide: '3000vh',
+                        }}
+                        triggerMarkers={false}
+                        XAxes={[
+                          {
+                            mobile: '-200%',
+                            table: '-200%',
+                            desktop: '-200%',
+                            wide: '-200%',
+                          },
+                        ]}
+                        duration={0.01}
+                      >
+                        <img src={main.imgUrl + main.service.blueBgRollingImages[0].image} alt={main.service.blueBgRollingImages[0].alt} />
+                      </ScrollTriggerArea>
+                      {/* Expertise 두번째 이미지 */}
+                      <ScrollTriggerArea
+                        className="expertise_img"
+                        defaultID="scroll_trigger03"
+                        type="multiTrigger"
+                        triggerStart={{
+                          mobile: '-350px',
+                          table: '-550px',
+                          desktop: '-410px',
+                          wide: '-550px',
+                        }}
+                        triggerEnd={{
+                          mobile: '1000vh',
+                          table: '1500vh',
+                          desktop: '2000vh',
+                          wide: '2000vh',
+                        }}
+                        triggerMarkers={false}
+                        XAxes={[
+                          {
+                            mobile: '-200%',
+                            table: '-200%',
+                            desktop: '-200%',
+                            wide: '-200%',
+                          },
+                        ]}
+                        duration={0.01}
+                      >
+                        <img src={main.imgUrl + main.service.blueBgRollingImages[1].image} alt={main.service.blueBgRollingImages[1].alt} />
+                      </ScrollTriggerArea>
+                      {/* Expertise 세번째 이미지 */}
+                      <ScrollTriggerArea
+                        className="expertise_img"
+                        defaultID="scroll_trigger04"
+                        type="multiTrigger"
+                        triggerStart={{
+                          mobile: '0',
+                          table: '-200px',
+                          desktop: '-150px',
+                          wide: '50px',
+                        }}
+                        triggerEnd={{
+                          mobile: '1000vh',
+                          table: '1500vh',
+                          desktop: '3000vh',
+                          wide: '3000vh',
+                        }}
+                        triggerMarkers={false}
+                        XAxes={[
+                          {
+                            mobile: '-200%',
+                            table: '-200%',
+                            desktop: '-200%',
+                            wide: '-200%',
+                          },
+                        ]}
+                        duration={0.01}
+                      >
+                        <img src={main.imgUrl + main.service.blueBgRollingImages[2].image} alt={main.service.blueBgRollingImages[2].alt} />
+                      </ScrollTriggerArea>
+                    </div>
+                    {/* Expertise 텍스트 영역 'e' */}
+                    <ScrollTriggerArea
+                      defaultID="scroll_trigger05"
+                      type="multiTrigger"
+                      triggerStart={{
+                        mobile: '280px',
+                        table: '130px',
+                        desktop: '900px',
+                        wide: '1200px',
+                      }}
+                      triggerEnd={{
+                        mobile: '3000vh',
+                        table: '4000vh',
+                        desktop: '5300vh',
+                        wide: '6900vh',
+                      }}
+                      triggerMarkers={false}
+                      fromScale={[
+                        {
+                          mobile: 1,
+                          table: 1,
+                          desktop: 1,
+                          wide: 1,
+                        },
+                      ]}
+                      toScale={[
+                        {
+                          mobile: 30,
+                          table: 40,
+                          desktop: 60,
+                          wide: 30,
+                        },
+                      ]}
+                      YAxes={[
+                        {
+                          mobile: '-200%',
+                          table: '-150%',
+                          desktop: '-200%',
+                          wide: '-200%',
+                        },
+                      ]}
+                      duration={0.001}
+                    >
+                      <span className="text_e">{main.service.rollingBigText[1]}</span>
+                    </ScrollTriggerArea>
+                  </article>
+                </ScrollTriggerArea>
+              </>
+            ) : (
+              <MobileScrollAnimation
+                firstText={main.service.rollingBigText[0]}
+                secondText={main.service.rollingBigText[1]}
+                scrollImage={main.service.blueBgRollingImages.map((content, idx) => (
+                  <img key={idx} src={main.imgUrl + content.image} alt={content.alt} />
+                ))}
+                scrollDuration={1000}
+              />
+            )}
+          </section>
+          {/* E: Expertise scroll 영역 */}
 
           {/* S: InfiniteRolling swiper + text 영역 */}
           <section className="section_div is_photo bg_white">
@@ -105,6 +296,211 @@ function Main() {
         {/* E: service */}
 
         {/* S: our works */}
+        <section className="our_works">
+          <DepthTitle depthLevel="1">Our Works</DepthTitle>
+          {windowWidth >= 1280 ? (
+            <>
+              <section className="section_div is_black rolling_wrap">
+                {/* Our works 텍스트 영역 */}
+                <ScrollTriggerArea
+                  className="line1_flow"
+                  defaultID="scroll_trigger06"
+                  type="multiTrigger"
+                  triggerStart={{
+                    mobile: '0',
+                    table: '0',
+                    desktop: '0',
+                    wide: '0',
+                  }}
+                  triggerEnd={{
+                    mobile: '4000vh',
+                    table: '4000vh',
+                    desktop: '10000vh',
+                    wide: '12000vh',
+                  }}
+                  triggerMarkers={false}
+                  XAxes={[
+                    {
+                      mobile: '-200%',
+                      table: '-200%',
+                      desktop: '-300%',
+                      wide: '-300%',
+                    },
+                  ]}
+                  duration={0.001}
+                >
+                  <article className="rolling_text">
+                    <div className="text_ourworks">
+                      {main.ourWorks.rollingBigText}
+                      {/* Our works 첫번째 이미지 */}
+                      <ScrollTriggerArea
+                        className="ourworks_img"
+                        defaultID="scroll_trigger07"
+                        type="multiTrigger"
+                        triggerStart={{
+                          mobile: '-215px',
+                          table: '-390px',
+                          desktop: '-220px',
+                          wide: '-230px',
+                        }}
+                        triggerEnd={{
+                          mobile: '1500vh',
+                          table: '1500vh',
+                          desktop: '1500vh',
+                          wide: '1500vh',
+                        }}
+                        triggerMarkers={false}
+                        XAxes={[
+                          {
+                            mobile: '-200%',
+                            table: '-200%',
+                            desktop: '-200%',
+                            wide: '-200%',
+                          },
+                        ]}
+                        duration={0.01}
+                      >
+                        <img src={main.imgUrl + main.ourWorks.rollingImages[0].image} alt={main.ourWorks.rollingImages[0].alt} />
+                      </ScrollTriggerArea>
+                      {/* Our works 두번째 이미지 */}
+                      <ScrollTriggerArea
+                        className="ourworks_img"
+                        defaultID="scroll_trigger08"
+                        type="multiTrigger"
+                        triggerStart={{
+                          mobile: '-350px',
+                          table: '-500px',
+                          desktop: '-420px',
+                          wide: '-540px',
+                        }}
+                        triggerEnd={{
+                          mobile: '1500vh',
+                          table: '1500vh',
+                          desktop: '1500vh',
+                          wide: '1500vh',
+                        }}
+                        triggerMarkers={false}
+                        XAxes={[
+                          {
+                            mobile: '-200%',
+                            table: '-200%',
+                            desktop: '-200%',
+                            wide: '-200%',
+                          },
+                        ]}
+                        duration={0.01}
+                      >
+                        <img src={main.imgUrl + main.ourWorks.rollingImages[1].image} alt={main.ourWorks.rollingImages[1].alt} />
+                      </ScrollTriggerArea>
+                      {/* Our works 세번째 이미지 */}
+                      <ScrollTriggerArea
+                        className="ourworks_img"
+                        defaultID="scroll_trigger09"
+                        type="multiTrigger"
+                        triggerStart={{
+                          mobile: '-220px',
+                          table: '-220px',
+                          desktop: '-200px',
+                          wide: '-150px',
+                        }}
+                        triggerEnd={{
+                          mobile: '2000vh',
+                          table: '2000vh',
+                          desktop: '2000vh',
+                          wide: '2000vh',
+                        }}
+                        triggerMarkers={false}
+                        XAxes={[
+                          {
+                            mobile: '-200%',
+                            table: '-200%',
+                            desktop: '-200%',
+                            wide: '-200%',
+                          },
+                        ]}
+                        duration={0.01}
+                      >
+                        <img src={main.imgUrl + main.ourWorks.rollingImages[2].image} alt={main.ourWorks.rollingImages[2].alt} />
+                      </ScrollTriggerArea>
+                    </div>
+                  </article>
+                </ScrollTriggerArea>
+              </section>
+              {/* E: our works scroll 영역 */}
+              {/* S: card swiper 영역 */}
+              <ScrollTriggerArea
+                className="scroll_swiper"
+                defaultID="scroll_trigger10"
+                type="multiTrigger"
+                triggerStart={{
+                  mobile: '0',
+                  table: '0',
+                  desktop: '250px',
+                  wide: '300px',
+                }}
+                triggerEnd={{
+                  mobile: '4500vh',
+                  table: '4500vh',
+                  desktop: '4500vh',
+                  wide: '4500vh',
+                }}
+                triggerOffset={'center'}
+                triggerMarkers={false}
+              >
+                <div className="portfolio_wrap">
+                  <SwiperArea
+                    type="single"
+                    swiperOption={{
+                      slidesPerView: 'auto',
+                      effect: 'cards',
+                      cardsEffect: {
+                        perSlideRotate: 30,
+                        perSlideOffset: 100,
+                      },
+                      speed: 1000,
+                    }}
+                    className="section_div is_photo scroll-linear portfolio"
+                    swiperContent={main.ourWorks.portfolio.map((data, index) => (
+                      <FinderWorksList key={index} arrLength={index} />
+                    ))}
+                  />
+                </div>
+              </ScrollTriggerArea>
+              {/* E: card swiper 영역 */}
+            </>
+          ) : (
+            <>
+              <section className="section_div is_black">
+                <MobileOurworkScroll
+                  scrollText={main.ourWorks.rollingBigText}
+                  scrollImage={main.ourWorks.rollingImages.map((content, idx) => (
+                    <img key={idx} src={main.imgUrl + content.image} alt={content.alt} />
+                  ))}
+                  scrollDuration={1000}
+                />
+              </section>
+              <div className="portfolio_wrap">
+                <SwiperArea
+                  type="single"
+                  swiperOption={{
+                    slidesPerView: 'auto',
+                    effect: 'cards',
+                    cardsEffect: {
+                      perSlideRotate: 30,
+                      perSlideOffset: 100,
+                    },
+                    speed: 1000,
+                  }}
+                  className="section_div is_photo scroll-linear portfolio"
+                  swiperContent={main.ourWorks.portfolio.map((data, index) => (
+                    <FinderWorksList key={index} arrLength={index} />
+                  ))}
+                />
+              </div>
+            </>
+          )}
+          {/* S: our works scroll 영역 */}
+        </section>
         {/* E: our works */}
       </main>
     </>
