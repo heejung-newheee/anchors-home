@@ -84,14 +84,20 @@
         .rolling_area {
           height: 12.4rem;
           margin-bottom: 2rem;
-          li {
-            span {
-              margin-right: 3.6rem;
-              font-size: 12.4rem;
-            }
-            img {
-              width: 18rem;
-              margin-right: 4.5rem;
+          .infinite_rolling_inner {
+            ul {
+              li {
+                div {
+                  span {
+                    margin-right: 3.6rem;
+                    font-size: 12.4rem;
+                  }
+                  img {
+                    width: 18rem;
+                    margin-right: 4.5rem;
+                  }
+                }
+              }
             }
           }
 
@@ -104,7 +110,7 @@
                   left: 0;
                 }
                 100% {
-                  left: -2882.7px;
+                  left: -4325.5px;
                 }
               }
             }
@@ -118,7 +124,7 @@
                   right: 0;
                 }
                 100% {
-                  right: -2878.3px;
+                  right: -4319px;
                 }
               }
             }
@@ -132,7 +138,7 @@
                   left: 0;
                 }
                 100% {
-                  left: -3016.2px;
+                  left: -4525.8px;
                 }
               }
             }

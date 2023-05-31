@@ -1,18 +1,15 @@
-.area {
-  width: 100%;
-  height: 200vh;
-  position: relative;
+html {
+  background-color: #000;
+}
+.about_partner {
+  height: 4.7rem;
 
-  span {
-    position: fixed;
-    left: 0;
-    top: 300px;
+  &:first-child {
+    margin-bottom: 2.6rem;
   }
-
-  &.area01{
-    background-color: #00BEFD;
-  }
-  &.area02 {
-    background-color: #92C13D;
+  .rolling_inner {
+    li {
+      width: 16rem;
+    }
   }
 }
