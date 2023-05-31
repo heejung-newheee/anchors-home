@@ -44,7 +44,7 @@ const SCROLL_TRIGGER_OPTION = {
   toScale: {
     test: [
       { mobile: 1, table: 1, desktop: 1, wide: 1 },
-      { mobile: 1, table: 1, desktop: 1, wide: 1 },
+      { mobile: 1, table: 1, desktop: 10, wide: 10 },
     ],
   },
   lottie: {
@@ -111,8 +111,8 @@ function Mijeong() {
           triggerOffset={'center'}
           triggerMarkers={true}
           XAxes={SCROLL_TRIGGER_OPTION.XAxes.test}
-          toScale={SCROLL_TRIGGER_OPTION.toScale.test}
-          fromScale={SCROLL_TRIGGER_OPTION.fromScale.test}
+          timeLineToScale={SCROLL_TRIGGER_OPTION.toScale.test}
+          timeLineFromScale={SCROLL_TRIGGER_OPTION.fromScale.test}
           defaultID="timeLine"
         >
           <div>Expertis</div>

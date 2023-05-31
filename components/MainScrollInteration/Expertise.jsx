@@ -20,10 +20,16 @@ const SCROLL_TRIGGER_OPTION = {
     ],
   },
   fromScale: {
-    expertiseFromScale: [{ mobile: 1, table: 1, desktop: 1, wide: 1 }],
+    expertiseFromScale: [
+      { mobile: 1, table: 1, desktop: 1, wide: 1 },
+      { mobile: 1, table: 1, desktop: 1, wide: 1 },
+    ],
   },
   toScale: {
-    expertiseToScale: [{ mobile: 1, table: 1, desktop: 30, wide: 30 }],
+    expertiseToScale: [
+      { mobile: 1, table: 1, desktop: 1, wide: 1 },
+      { mobile: 1, table: 1, desktop: 30, wide: 30 },
+    ],
   },
 };
 
@@ -51,8 +57,10 @@ function Expertise() {
             timeLineFromScale={SCROLL_TRIGGER_OPTION.fromScale.expertiseFromScale}
             timeLineToScale={SCROLL_TRIGGER_OPTION.toScale.expertiseToScale}
           >
-            <span className="expertise_text expertis_test">{main.service.rollingBigText[0]}</span>
-            <span className="expertise_text e_test timeLine">{main.service.rollingBigText[1]}</span>
+            <span className="expertise_text expertis">{main.service.rollingBigText[0]}</span>
+            <span className="expertise_text e timeLine" style={{ width: '645px' }}>
+              {main.service.rollingBigText[1]}
+            </span>
             <span className="expertise_img img_first_test">
               <img src={main.imgUrl + main.service.blueBgRollingImages[0].image} alt={main.service.blueBgRollingImages[0].alt} />
             </span>
