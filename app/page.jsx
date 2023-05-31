@@ -1,7 +1,13 @@
+'use client';
+
+import React, { useEffect, useState, useRef } from 'react';
+
 import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
+import FinderWorksList from '@/components/FinderWorksList/FinderWorksList';
+import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import WebGlCarousel from '@/components/WebGlCarousel/WebGlCarousel';
 import Expertise from '@/components/MainScrollInteration/Expertise';
@@ -114,6 +120,22 @@ function Main() {
           {/* E: InfiniteRolling swiper + text 영역 */}
         </section>
         {/* E: service */}
+        {/* S: InfiniteRolling swiper + text 영역 */}
+        <section className="section_div is_photo bg_white">
+          {/* infinite rolling swiepr */}
+
+          {/* text + button */}
+          <section className="intro_area">
+            <Description className="intro_en" data={main.service.introduction.en} innerHTMLOption="Y" />
+            <Description className="intro_ko" data={main.service.introduction.ko} innerHTMLOption="Y" />
+            <Btn type="link" className="" url="/pages/service" alt="Service">
+              Service
+            </Btn>
+          </section>
+        </section>
+        {/* E: InfiniteRolling swiper + text 영역 */}
+      </section>
+      {/* E: service */}
 
       {/* S: our works */}
       <section className="our_works">
