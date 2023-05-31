@@ -2,6 +2,7 @@ import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
+import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import WebGlCarousel from '@/components/WebGlCarousel/WebGlCarousel';
 import Expertise from '@/components/MainScrollInteration/Expertise';
@@ -11,7 +12,7 @@ import lottieMainKeyVisualOurwork from '@/public/assets/images/lottie/lottieMain
 import lottieMainKeyVisualSmile from '@/public/assets/images/lottie/lottieMainKeyVisualSmile.json';
 import lottieMainKeyVisualText from '@/public/assets/images/lottie/lottieMainKeyVisualText.json';
 import lottieMainKeyVisualUnderline from '@/public/assets/images/lottie/lottieMainKeyVisualUnderline.json';
-//import lottieMainKeyVisual from '@/public/assets/images/lottie/lottieMainKeyVisual.json';
+
 import './scss/main.scss';
 import OurWorks from '@/components/MainScrollInteration/OurWorks';
 
@@ -23,8 +24,6 @@ function Main() {
         <DepthTitle depthLevel="1">About US</DepthTitle>
         {/* S: intro + rotate keyvisual */}
         <section className="keyvisual_wrap">
-          {/* single lottie */}
-          {/* <LottiePlayer className="lottie" data={lottieMainKeyVisual} loop={false} /> */}
           {/* multi lottie */}
           <div className="text_keyvisual_wrap">
             <LottiePlayer className="text_keyvisual" data={lottieMainKeyVisualText} loop={false} />
@@ -60,7 +59,32 @@ function Main() {
         {/* S: InfiniteRolling swiper + text 영역 */}
         <section className="section_div is_photo bg_white">
           {/* infinite rolling swiepr */}
-
+          <section className="rolling_area_wrap">
+            <InfiniteRolling className="rolling_area" duration="20" widthFixed="Y">
+              {main.service.whiteBgRolling.line1.map((data, index) => (
+                <div key={index}>
+                  <span key={'text' + index}>{data.text}</span>
+                  <img key={'img' + index} src={main.imgUrl + data.image} alt={data.alt} />
+                </div>
+              ))}
+            </InfiniteRolling>
+            <InfiniteRolling className="rolling_area" reverse="Y" duration="20" widthFixed="Y">
+              {main.service.whiteBgRolling.line2.map((data, index) => (
+                <div key={index}>
+                  <span key={'text' + index}>{data.text}</span>
+                  <img key={'img' + index} src={main.imgUrl + data.image} alt={data.alt} />
+                </div>
+              ))}
+            </InfiniteRolling>
+            <InfiniteRolling className="rolling_area" duration="20" widthFixed="Y">
+              {main.service.whiteBgRolling.line3.map((data, index) => (
+                <div key={index}>
+                  <span key={'text' + index}>{data.text}</span>
+                  <img key={'img' + index} src={main.imgUrl + data.image} alt={data.alt} />
+                </div>
+              ))}
+            </InfiniteRolling>
+          </section>
           {/* text + button */}
           <section className="intro_area">
             <Description className="intro_en" data={main.service.introduction.en} innerHTMLOption="Y" />
