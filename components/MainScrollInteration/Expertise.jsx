@@ -12,18 +12,24 @@ const SCROLL_TRIGGER_OPTION = {
   triggerEnd: [{ mobile: '0px', table: '0px', desktop: '5000vh', wide: '200px' }],
   XAxes: {
     expertiseTrigger: [
-      { mobile: '0px', table: '0px', desktop: '-600vh', wide: '200px' },
-      { mobile: '0px', table: '0px', desktop: '-600vh', wide: '200px' },
-      { mobile: '0px', table: '0px', desktop: '-200vh', wide: '200px' },
-      { mobile: '0px', table: '0px', desktop: '-600vh', wide: '200px' },
-      { mobile: '0px', table: '0px', desktop: '-800vh', wide: '200px' },
+      { mobile: '0px', table: '0px', desktop: '-580vh', wide: '200px' },
+      { mobile: '0px', table: '0px', desktop: '-580vh', wide: '200px' },
+      { mobile: '0px', table: '0px', desktop: '-630vh', wide: '200px' },
+      { mobile: '0px', table: '0px', desktop: '-620vh', wide: '200px' },
+      { mobile: '0px', table: '0px', desktop: '-610vh', wide: '200px' },
     ],
   },
   fromScale: {
-    expertiseFromScale: [{ mobile: 1, table: 1, desktop: 1, wide: 1 }],
+    expertiseFromScale: [
+      { mobile: 1, table: 1, desktop: 1, wide: 1 },
+      { mobile: 1, table: 1, desktop: 1, wide: 1 },
+    ],
   },
   toScale: {
-    expertiseToScale: [{ mobile: 1, table: 1, desktop: 30, wide: 30 }],
+    expertiseToScale: [
+      { mobile: 1, table: 1, desktop: 1, wide: 1 },
+      { mobile: 1, table: 1, desktop: 30, wide: 30 },
+    ],
   },
 };
 
@@ -51,8 +57,10 @@ function Expertise() {
             timeLineFromScale={SCROLL_TRIGGER_OPTION.fromScale.expertiseFromScale}
             timeLineToScale={SCROLL_TRIGGER_OPTION.toScale.expertiseToScale}
           >
-            <span className="expertise_text expertis_test">{main.service.rollingBigText[0]}</span>
-            <span className="expertise_text e_test timeLine">{main.service.rollingBigText[1]}</span>
+            <span className="expertise_text expertis">{main.service.rollingBigText[0]}</span>
+            <span className="expertise_text e timeLine" style={{ width: '83.5vh' }}>
+              {main.service.rollingBigText[1]}
+            </span>
             <span className="expertise_img img_first_test">
               <img src={main.imgUrl + main.service.blueBgRollingImages[0].image} alt={main.service.blueBgRollingImages[0].alt} />
             </span>

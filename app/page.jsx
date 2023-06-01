@@ -101,9 +101,7 @@ function Main() {
       {/* S: our works */}
       <section className="our_works">
         <DepthTitle depthLevel="1">Our Works</DepthTitle>
-        <section className="section_div is_black rolling_wrap">
-          <OurWorks />
-        </section>
+        <OurWorks />
         {/* S: our works scroll 영역 */}
       </section>
       {/* E: our works */}
