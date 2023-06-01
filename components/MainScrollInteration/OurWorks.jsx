@@ -9,6 +9,20 @@ import MobileOurworkScroll from '@/components/MobileOurworkScroll/MobileOurworkS
 
 import main from '@/helper/data/json/contents/main/main.json';
 
+const OURWORKS_SCROLL_OPTION = {
+  triggerStart: [{ mobile: '0px', table: '0px', desktop: '0px', wide: '200px' }],
+  triggerEnd: [{ mobile: '0px', table: '0px', desktop: '5000vh', wide: '200px' }],
+  XAxes: {
+    expertiseTrigger: [
+      { mobile: '0px', table: '0px', desktop: '-580vh', wide: '200px' },
+      { mobile: '0px', table: '0px', desktop: '-580vh', wide: '200px' },
+      { mobile: '0px', table: '0px', desktop: '-630vh', wide: '200px' },
+      { mobile: '0px', table: '0px', desktop: '-620vh', wide: '200px' },
+      { mobile: '0px', table: '0px', desktop: '-610vh', wide: '200px' },
+    ],
+  },
+};
+
 function OurWorks({ className }) {
   const [windowWidth, setWindowWidth] = React.useState(0);
 
@@ -24,126 +38,25 @@ function OurWorks({ className }) {
           <section className="section_div is_black rolling_wrap">
             {/* Our works 텍스트 영역 */}
             <ScrollTriggerArea
+              type="multiTrigger"
               className="line1_flow"
               defaultID="scroll_trigger06"
-              type="multiTrigger"
-              triggerStart={{
-                mobile: '0',
-                table: '0',
-                desktop: '0',
-                wide: '0',
-              }}
-              triggerEnd={{
-                mobile: '4000vh',
-                table: '4000vh',
-                desktop: '10000vh',
-                wide: '12000vh',
-              }}
-              triggerMarkers={false}
-              XAxes={[
-                {
-                  mobile: '-200%',
-                  table: '-200%',
-                  desktop: '-300%',
-                  wide: '-300%',
-                },
-              ]}
-              duration={0.001}
+              triggerStart={OURWORKS_SCROLL_OPTION.triggerStart[0]}
+              triggerEnd={OURWORKS_SCROLL_OPTION.triggerEnd[0]}
+              triggerMarkers={true}
+              XAxes={OURWORKS_SCROLL_OPTION.XAxes.expertiseTrigger}
             >
               <article className="rolling_text">
-                <div className="text_ourworks">
-                  {main.ourWorks.rollingBigText}
-                  {/* Our works 첫번째 이미지 */}
-                  <ScrollTriggerArea
-                    className="ourworks_img"
-                    defaultID="scroll_trigger07"
-                    type="multiTrigger"
-                    triggerStart={{
-                      mobile: '-215px',
-                      table: '-390px',
-                      desktop: '-220px',
-                      wide: '-230px',
-                    }}
-                    triggerEnd={{
-                      mobile: '1500vh',
-                      table: '1500vh',
-                      desktop: '1500vh',
-                      wide: '1500vh',
-                    }}
-                    triggerMarkers={false}
-                    XAxes={[
-                      {
-                        mobile: '-200%',
-                        table: '-200%',
-                        desktop: '-200%',
-                        wide: '-200%',
-                      },
-                    ]}
-                    duration={0.01}
-                  >
-                    <img src={main.imgUrl + main.ourWorks.rollingImages[0].image} alt={main.ourWorks.rollingImages[0].alt} />
-                  </ScrollTriggerArea>
-                  {/* Our works 두번째 이미지 */}
-                  <ScrollTriggerArea
-                    className="ourworks_img"
-                    defaultID="scroll_trigger08"
-                    type="multiTrigger"
-                    triggerStart={{
-                      mobile: '-350px',
-                      table: '-500px',
-                      desktop: '-420px',
-                      wide: '-540px',
-                    }}
-                    triggerEnd={{
-                      mobile: '1500vh',
-                      table: '1500vh',
-                      desktop: '1500vh',
-                      wide: '1500vh',
-                    }}
-                    triggerMarkers={false}
-                    XAxes={[
-                      {
-                        mobile: '-200%',
-                        table: '-200%',
-                        desktop: '-200%',
-                        wide: '-200%',
-                      },
-                    ]}
-                    duration={0.01}
-                  >
-                    <img src={main.imgUrl + main.ourWorks.rollingImages[1].image} alt={main.ourWorks.rollingImages[1].alt} />
-                  </ScrollTriggerArea>
-                  {/* Our works 세번째 이미지 */}
-                  <ScrollTriggerArea
-                    className="ourworks_img"
-                    defaultID="scroll_trigger09"
-                    type="multiTrigger"
-                    triggerStart={{
-                      mobile: '-220px',
-                      table: '-220px',
-                      desktop: '-200px',
-                      wide: '-150px',
-                    }}
-                    triggerEnd={{
-                      mobile: '2000vh',
-                      table: '2000vh',
-                      desktop: '2000vh',
-                      wide: '2000vh',
-                    }}
-                    triggerMarkers={false}
-                    XAxes={[
-                      {
-                        mobile: '-200%',
-                        table: '-200%',
-                        desktop: '-200%',
-                        wide: '-200%',
-                      },
-                    ]}
-                    duration={0.01}
-                  >
-                    <img src={main.imgUrl + main.ourWorks.rollingImages[2].image} alt={main.ourWorks.rollingImages[2].alt} />
-                  </ScrollTriggerArea>
-                </div>
+                <div className="text_ourworks">{main.ourWorks.rollingBigText}</div>
+                <span className="ourworks_img">
+                  <img src={main.imgUrl + main.ourWorks.rollingImages[0].image} alt={main.ourWorks.rollingImages[0].alt} />
+                </span>
+                <span className="ourworks_img">
+                  <img src={main.imgUrl + main.ourWorks.rollingImages[1].image} alt={main.ourWorks.rollingImages[1].alt} />
+                </span>
+                <span className="ourworks_img">
+                  <img src={main.imgUrl + main.ourWorks.rollingImages[2].image} alt={main.ourWorks.rollingImages[2].alt} />
+                </span>
               </article>
             </ScrollTriggerArea>
           </section>

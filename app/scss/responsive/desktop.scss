@@ -80,16 +80,16 @@
               width: 43vh;
             }
             &.img_first_test {
-              top: 7.5%;
-              left: 9%;
+              top: 6rem;
+              left: 129rem;
             }
             &.img_second_test {
-              top: 65%;
-              left: 41%;
+              top: 43.5rem;
+              left: 217rem;
             }
             &.img_third_test {
-              top: 12.5%;
-              left: 84%;
+              top: 8.5rem;
+              left: 337rem;
             }
           }
         }
@@ -181,18 +181,7 @@
           .ourworks_img {
             max-width: 34.4rem;
             width: 42vw;
-            &:nth-child(1) {
-              top: -4%;
-              left: 13%;
-            }
-            &:nth-child(2) {
-              top: 68%;
-              left: 44.8%;
-            }
-            &:nth-child(3) {
-              top: -5.5%;
-              left: 84.8%;
-            }
+            position: absolute;
           }
         }
       }
