@@ -53,24 +53,30 @@
         }
       }
       .rolling_wrap {
-        .rolling_text {
-          margin-left: 70vw;
-          .text_expertis,
-          .text_e {
-            font-size: 56vh;
-          }
-          .expertise_img {
-            max-width: 25.7rem;
-            &:nth-child(1) {
-              top: 10.5%;
-              left: 10.5%;
+        .expertise_scroll {
+          .scroll_wrap {
+            margin-left: 53vh;
+            .scroll_text{
+              font-size: 56vh;
             }
-            &:nth-child(2) {
-              left: 42.5%;
-            }
-            &:nth-child(3) {
-              top: 15.5%;
-              left: 86%;
+            .scroll_image_wrap {
+              img {
+                max-width: 25.7rem;
+              }
+              span {
+                &:nth-child(1) img {
+                  top: 9.3%;
+                  left: 10.5%;
+                }
+                &:nth-child(2) img {
+                  top: 65%;
+                  left: 37%;
+                }
+                &:nth-child(3) img {
+                  top: 15.5%;
+                  left: 74%;
+                }
+              }
             }
           }
         }
@@ -152,18 +158,38 @@
     }
 
     .our_works {
+      .ourwork_scroll {
+        .scroll_wrap {
+          margin-left: 14vw;
+          .scroll_text{
+            font-size: 24.3vh;
+          }
+          .scroll_image_wrap {
+            img {
+              max-width: 25.8rem;
+            }
+            span {
+              &:nth-child(1) img {
+                top: -3%;
+                left: 13.5%;
+              }
+              &:nth-child(2) img {
+                top: 65%;
+                left: 44.5%;
+              }
+              &:nth-child(3) img {
+                top: -3.5%;
+                left: 85.3%;
+              }
+            }
+          }
+        }
+      }
       .rolling_wrap {
         .rolling_text {
           margin-left: 14vw;
           .text_ourworks {
             font-size: 24.3vh;
-          }
-          .ourworks_img {
-            max-width: 25.8rem;
-            &:nth-child(3) {
-              top: -5.5%;
-              left: 85%;
-            }
           }
         }
       }

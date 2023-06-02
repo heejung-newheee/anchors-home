@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Btn from '@/components/Btn/Btn';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
@@ -6,6 +8,7 @@ import InfiniteRolling from '@/components/InfiniteRolling/InfiniteRolling';
 import LottiePlayer from '@/components/LottiePlayer/LottiePlayer';
 import WebGlCarousel from '@/components/WebGlCarousel/WebGlCarousel';
 import Expertise from '@/components/MainScrollInteration/Expertise';
+import OurWorks from '@/components/MainScrollInteration/OurWorks';
 
 import main from '@/helper/data/json/contents/main/main.json';
 import lottieMainKeyVisualOurwork from '@/public/assets/images/lottie/lottieMainKeyVisualOurwork.json';
@@ -14,7 +17,6 @@ import lottieMainKeyVisualText from '@/public/assets/images/lottie/lottieMainKey
 import lottieMainKeyVisualUnderline from '@/public/assets/images/lottie/lottieMainKeyVisualUnderline.json';
 
 import './scss/main.scss';
-import OurWorks from '@/components/MainScrollInteration/OurWorks';
 
 function Main() {
   return (
@@ -52,7 +54,14 @@ function Main() {
         <DepthTitle depthLevel="1">Service</DepthTitle>
         {/* S: Expertise scroll 영역 */}
         <section className="section_div is_black bg_blue rolling_wrap">
-          <Expertise />
+          <Expertise
+            firstText={main.service.rollingBigText[0]}
+            secondText={main.service.rollingBigText[1]}
+            scrollImage={main.service.blueBgRollingImages.map((content, idx) => (
+              <img key={idx} src={main.imgUrl + content.image} alt={content.alt} />
+            ))}
+            scrollDuration={1000}
+          />
         </section>
         {/* E: Expertise scroll 영역 */}
 
@@ -101,7 +110,13 @@ function Main() {
       {/* S: our works */}
       <section className="our_works">
         <DepthTitle depthLevel="1">Our Works</DepthTitle>
-        <OurWorks />
+        <OurWorks
+          scrollText={main.ourWorks.rollingBigText}
+          scrollImage={main.ourWorks.rollingImages.map((content, idx) => (
+            <img key={idx} src={main.imgUrl + content.image} alt={content.alt} />
+          ))}
+          scrollDuration={1000}
+        />
         {/* S: our works scroll 영역 */}
       </section>
       {/* E: our works */}
