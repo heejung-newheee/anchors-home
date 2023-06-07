@@ -69,4 +69,4 @@ clean-up-job:
   script:
     - echo "Cleaning up caches ..."
     - rm -rf "%CACHE_PATH%/CI_PIPELINE_ID%"
-  whan: always
+  when: always
