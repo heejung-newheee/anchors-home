@@ -137,8 +137,47 @@
       }
     }
     .rolling_wrap {
+      .expertise_scroll {
+        height :100vh;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        .scroll_wrap {
+          position :relative;
+          display: flex;
+          margin-left: 33vh;
+          .scroll_text{
+            font-size: 60vh;
+            font-family: $font_en;
+            letter-spacing: $en_letterSpacing;
+            font-weight: bold;
+            white-space: nowrap;
+            display: inline-block;
+          }
+          .scroll_image_wrap {
+            img {
+              position: absolute;
+              max-width: 19.3rem;
+              width: 30.2vh;
+            }
+            span {
+              &:nth-child(1) img {
+                top: 8.5%;
+                left: 8%;
+              }
+              &:nth-child(2) img {
+                top: 63%;
+                left: 35.5%;
+              }
+              &:nth-child(3) img {
+                top: 13%;
+                left: 73%;
+              }
+            }
+          }
+        }
+      }
       .rolling_text {
-        margin-left: 61vw;
         .text_expertis,
         .text_e {
           position: relative;
@@ -148,23 +187,6 @@
           font-weight: bold;
           white-space: nowrap;
           display: inline-block;
-        }
-        .expertise_img {
-          position: absolute;
-          max-width: 19.3rem;
-          width: 30.2vh;
-          &:nth-child(1) {
-            top: 2.5%;
-            left: 13.5%;
-          }
-          &:nth-child(2) {
-            top: 66%;
-            left: 44.5%;
-          }
-          &:nth-child(3) {
-            top: 7.5%;
-            left: 85%;
-          }
         }
       }
     }
@@ -276,16 +298,52 @@
         transition: background-color 1s;
       }
     }
-    .rolling_wrap {
-      .line1_flow {
-        transition: background-color 1s;
-        &.is_active {
-          background-color: $color_black;
-          .text_ourworks {
-            color: $color_white;
+    .ourwork_scroll {
+      height :100vh;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      transition: background-color 1s;
+      position: relative;
+      .scroll_wrap {
+        position :relative;
+        display: flex;
+        margin-left: 10vw;
+        transition: color 1s;
+        .scroll_text{
+          font-size: 33vh;
+          font-family: $font_en;
+          letter-spacing: $en_letterSpacing;
+          font-weight: bold;
+          white-space: nowrap;
+          display: inline-block;
+        }
+        .scroll_image_wrap {
+          img {
+            position: absolute;
+            /*top: 0;
+            left: 0;*/
+            max-width: 19.3rem;
+            width: 30.2vh;
+          }
+          span {
+            &:nth-child(1) img {
+              top: 5.5%;
+              left: 13.5%;
+            }
+            &:nth-child(2) img {
+              top: 64%;
+              left: 41.5%;
+            }
+            &:nth-child(3) img {
+              top: 12.5%;
+              left: 70.5%;
+            }
           }
         }
       }
+    }
+    .rolling_wrap {
       .rolling_text {
         margin-left: 10vw;
         .text_ourworks {
@@ -296,23 +354,6 @@
           font-weight: bold;
           white-space: nowrap;
           position: relative;
-        }
-        .ourworks_img {
-          position: absolute;
-          max-width: 19.4rem;
-          width: 30.2vh;
-          &:nth-child(1) {
-            top: 0;
-            left: 13.5%;
-          }
-          &:nth-child(2) {
-            top: 66%;
-            left: 44.5%;
-          }
-          &:nth-child(3) {
-            top: 12.5%;
-            left: 84.5%;
-          }
         }
       }
     }
@@ -328,9 +369,6 @@
       }
     }
     .portfolio_wrap {
-      //position: fixed;
-      //left: 100vw;
-      //top: 0;
       width: 100vw;
       .portfolio {
         overflow: hidden;

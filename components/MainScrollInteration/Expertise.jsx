@@ -3,10 +3,10 @@
 import React, { useEffect, useState } from 'react';
 
 import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea';
-import MobileScrollAnimation from '@/components/MobileScrollAnimation/MobileScrollAnimation';
 
 import main from '@/helper/data/json/contents/main/main.json';
 
+// S: scroll trigger option
 const SCROLL_TRIGGER_OPTION = {
   triggerStart: [{ mobile: '0px', table: '0px', desktop: '0px', wide: '200px' }],
   triggerEnd: [{ mobile: '0px', table: '0px', desktop: '5000vh', wide: '200px' }],
@@ -32,8 +32,98 @@ const SCROLL_TRIGGER_OPTION = {
     ],
   },
 };
+// E: scroll trigger option
 
-function Expertise() {
+function Expertise({ className, firstText, secondText, scrollImage, scrollDuration }) {
+  const WINDOW_OBJECT = React.useRef();
+  const GET_CLASSNAME = !className ? { className: 'bg_blue expertise_scroll' } : { className: 'bg_blue expertise_rolling ' + className };
+  const IMAGE_ARR = Array.isArray(scrollImage) ? scrollImage : [scrollImage];
+  const IMAGE_ARR_MAP = [IMAGE_ARR.map((content, idx) => <span key={idx}>{content}</span>)];
+  const [animationScrollY, setAnimationScrollY] = useState(0);
+  //const animating = React.useRef(false);
+  const EXPERTISE_REF = React.useRef(); // article dom
+  const START_POINT = React.useRef(0); // article Y coordinate
+  //const marginLeft = React.useRef(0);
+  const WRAP_STYLE = React.useRef({}); // text scroll animation
+  const CONT_STYLE = React.useRef({}); // position fixed
+  const CHAR_STYLE = React.useRef({}); // text extend animation
+  //const oldScrollY = usePrevious(scrollY); // 직전 scroll 위치 값
+
+  const _scrollHandler = e => {
+    setAnimationScrollY(window.scrollY); // 이전 scroll Y값 저장
+  };
+
+  const _resetStartPoint = () => {
+    if (EXPERTISE_REF.current?.styles?.position !== 'fixed') {
+      START_POINT.current = EXPERTISE_REF.current?.getBoundingClientRect().top + (WINDOW_OBJECT.current?.scrollY ?? 0);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', _scrollHandler, { passive: false });
+    window.addEventListener('wheel', _scrollHandler, { passive: false });
+    window.addEventListener('touchmove', _scrollHandler, { passive: false });
+    window.addEventListener('resize', _resetStartPoint);
+    START_POINT.current = EXPERTISE_REF.current?.getBoundingClientRect().top + window.scrollY;
+    WINDOW_OBJECT.current = window;
+  }, []);
+
+  _resetStartPoint();
+
+  useEffect(() => {
+    const DEVICE_WIDTH = WINDOW_OBJECT.current.innerWidth;
+    //console.log(DEVICE_WIDTH);
+    //const crit = EXPERTISE_REF.current?.getBoundingClientRect().top;
+    const SCROLL_START = DEVICE_WIDTH < 768 ? 1143 : 1559;
+    const DURATION_1 = (scrollDuration * 2) / 3; // expertise animation 시간
+
+    //console.log(crit + animationScrollY);
+    if (animationScrollY > SCROLL_START && animationScrollY <= SCROLL_START + DURATION_1) {
+      // 첫번째 애니메이션 구간
+      CONT_STYLE.current = {
+        position: 'fixed',
+        zIndex: 1,
+        top: 0,
+      };
+      CHAR_STYLE.current = {
+        transform: `scale(1) translateY(0px)`,
+      };
+      WRAP_STYLE.current =
+        DEVICE_WIDTH < 768
+          ? {
+              marginLeft: `${33 - (278 / DURATION_1) * (animationScrollY - SCROLL_START)}vh`,
+            }
+          : {
+              marginLeft: `${53 - (276 / DURATION_1) * (animationScrollY - SCROLL_START)}vh`,
+            };
+    } else if (animationScrollY > SCROLL_START + DURATION_1 && animationScrollY <= SCROLL_START + scrollDuration) {
+      // 두번째 애니메이션 구간
+      const DURATION_2 = scrollDuration - DURATION_1;
+      const cur2 = (animationScrollY - SCROLL_START - DURATION_1) / DURATION_2;
+      CONT_STYLE.current = {
+        position: 'fixed',
+        zIndex: 1,
+        top: 0,
+      };
+      WRAP_STYLE.current = DEVICE_WIDTH < 768 ? { marginLeft: `-245vh` } : { marginLeft: `-223vh` };
+      CHAR_STYLE.current = {
+        transform: `scale(${50 * cur2 + 1}) translateY(-${20 * cur2}px)`,
+      };
+    } else if (animationScrollY <= SCROLL_START) {
+      // 첫번째 애니메이션 이전 구간
+      CONT_STYLE.current = { position: 'relative' };
+      CHAR_STYLE.current = { transform: `scale(1) translateY(0px)` };
+      WRAP_STYLE.current = DEVICE_WIDTH < 768 ? { marginLeft: '33vh' } : { marginLeft: '53vh' };
+    } else {
+      // 두번째 애니메이션 이후 구간
+      CONT_STYLE.current = { position: 'relative' };
+      CHAR_STYLE.current = {
+        transform: `scale(51) translateY(-20px)`,
+      };
+      WRAP_STYLE.current = DEVICE_WIDTH < 768 ? { marginLeft: '-245vh', overflow: 'hidden' } : { marginLeft: '-223vh', overflow: 'hidden' };
+    }
+  }, [animationScrollY]);
+
   const [windowWidth, setWindowWidth] = React.useState(0);
 
   useEffect(() => {
@@ -42,9 +132,9 @@ function Expertise() {
   }, []);
 
   return (
-    <article className="scroll_expertise">
+    <div className="scroll_expertise">
       {windowWidth >= 1280 ? (
-        <>
+        <article>
           <ScrollTriggerArea
             type="timeLine"
             defaultID="scroll_trigger01"
@@ -71,18 +161,19 @@ function Expertise() {
               <img src={main.imgUrl + main.service.blueBgRollingImages[2].image} alt={main.service.blueBgRollingImages[2].alt} />
             </span>
           </ScrollTriggerArea>
-        </>
+        </article>
       ) : (
-        <MobileScrollAnimation
-          firstText={main.service.rollingBigText[0]}
-          secondText={main.service.rollingBigText[1]}
-          scrollImage={main.service.blueBgRollingImages.map((content, idx) => (
-            <img key={idx} src={main.imgUrl + content.image} alt={content.alt} />
-          ))}
-          scrollDuration={1000}
-        />
+        <article ref={EXPERTISE_REF} {...GET_CLASSNAME} style={CONT_STYLE.current}>
+          <div className="scroll_wrap" style={WRAP_STYLE.current}>
+            <span className="scroll_text text_first">{firstText}</span>
+            <span className="scroll_text text_second" style={CHAR_STYLE.current}>
+              {secondText}
+            </span>
+            <div className="scroll_image_wrap">{IMAGE_ARR_MAP}</div>
+          </div>
+        </article>
       )}
-    </article>
+    </div>
   );
 }
 

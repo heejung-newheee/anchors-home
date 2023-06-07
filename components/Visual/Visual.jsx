@@ -11,7 +11,7 @@ export default function Visual({ imgUrl, alt, dimm = 'N', children, className, p
 
       {
         scrollTrigger === 'N'
-          ? <img src={imgUrl} alt={alt} />
+          ? <div className='wrapper no_scrollTrigger'><img src={imgUrl} alt={alt} /></div>
           : <ScrollTriggerArea
             type="multiTrigger"
             triggerStart={{

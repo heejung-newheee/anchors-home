@@ -173,6 +173,15 @@
         }
       }
       .rolling_wrap {
+        .line1_flow {
+          transition: background-color 1s;
+          &.is_active {
+            background-color: $color_black;
+            .text_ourworks {
+              color: $color_white;
+            }
+          }
+        }
         .rolling_text {
           margin-left: 33.7vw;
           .text_ourworks {
@@ -185,27 +194,38 @@
           }
         }
       }
-      .portfolio_wrap {
-        .portfolio {
-          .visual {
-            .element_title {
-              padding: 0 21.8rem 1.8rem;
-            }
-            .disclaimer {
-              margin-bottom: 6rem;
-            }
+      .scroll_swiper {
+        .single_swiper_wrap {
+          transform: translate(200%, -200%) rotate(25deg) scale(0);
+          transition: transform 1s;
+        }
+        &.is_active {
+          .single_swiper_wrap {
+            transform: translate(0) rotate(0) scale(1);
           }
         }
-        .single_swiper_wrap {
-          .swiper_area {
-            .swiper-button-prev, .swiper-button-next {
-              display: block;
+        .portfolio_wrap {
+          .portfolio {
+            .visual {
+              .element_title {
+                padding: 0 21.8rem 1.8rem;
+              }
+              .disclaimer {
+                margin-bottom: 6rem;
+              }
             }
-            .swiper-button-prev {
-              left: 2rem;
-            }
-            .swiper-button-next {
-              right: 2rem;
+          }
+          .single_swiper_wrap {
+            .swiper_area {
+              .swiper-button-prev, .swiper-button-next {
+                display: block;
+              }
+              .swiper-button-prev {
+                left: 2rem;
+              }
+              .swiper-button-next {
+                right: 2rem;
+              }
             }
           }
         }
