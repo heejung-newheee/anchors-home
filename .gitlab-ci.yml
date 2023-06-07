@@ -1,7 +1,6 @@
 stages:
   - build
   - deploy
-  - cleanup
 
 variables:
   DEV_BRANCH: "dev"
@@ -41,6 +40,7 @@ deploy-to-dev-job:
   script:
     - cp -r ./out/* /var/www/www-2022-dev
   after_script:
+    - rm -rf "%CACHE_PATH%/CI_PIPELINE_ID%"
     - ls -al
     - echo "deploy success!"
   tags:
@@ -55,18 +55,8 @@ deploy-to-prd-job:
   script:
     - cp -r ./out/* /var/www/www-2022-new
   after_script:
+    - rm -rf "%CACHE_PATH%/CI_PIPELINE_ID%"
     - ls -al
     - echo "deploy success!"
   tags:
     - instance-ssh #공통 runner 이용, 같은 서버내 배포로 cp 할 것이라 docker 아닌 ssh 로
-
-
-clean-up-job:
-  stage: cleanup
-  only:
-    - dev
-    - prd
-  script:
-    - echo "Cleaning up caches ..."
-    - rm -rf "%CACHE_PATH%/CI_PIPELINE_ID%"
-  when: always
