@@ -1,6 +1,7 @@
 stages:
   - build
   - deploy
+  - cleanup
 
 variables:
   DEV_BRANCH: "dev"
@@ -58,3 +59,14 @@ deploy-to-prd-job:
     - echo "deploy success!"
   tags:
     - instance-ssh #공통 runner 이용, 같은 서버내 배포로 cp 할 것이라 docker 아닌 ssh 로
+
+
+clean-up-job:
+  stage: cleanup
+  only:
+    - dev
+    - prd
+  script:
+    - echo "Cleaning up caches ..."
+    - rm -rf "%CACHE_PATH%/CI_PIPELINE_ID%"
+  whan: always
