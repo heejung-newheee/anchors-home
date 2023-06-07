@@ -7,7 +7,7 @@ export default function Logo() {
   return (
     <h1 className="logo">
       <Btn type="link" url="/" alt="Anchors">
-        Anchors
+        주식회사 앵커스 | ANCHORS.Inc
       </Btn>
     </h1>
   );
