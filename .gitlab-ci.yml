@@ -20,6 +20,7 @@ build-job:
   artifacts:
     paths:
       - ./out
+    expire_in: 1 hour
   before_script:
     - npm install --force
   script:
