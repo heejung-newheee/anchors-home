@@ -38,13 +38,6 @@
       ],
       "url" : "/pages/career",
       "alt" : "Careers"
-    },
-    {
-      "name" : [
-        {"words" : "ESG" }
-      ],
-      "url" : "/pages/ESG",
-      "alt" : "ESG"
     }
   ]
 }
