@@ -9,22 +9,8 @@ import seo from '@/helper/data/json/contents/SEO.json';
 import './scss/contact.scss';
 
 export const metadata = {
-  title: seo.title.subPage.contact,
+  title: seo.title.subPage.esg,
 };
-
-// const TRIGGER_START = {
-//   mobile: '-50px',
-//   table: '-50px',
-//   desktop: '-30px',
-//   wide: '0',
-// };
-//
-// const TRIGGER_END = {
-//   mobile: '100vh',
-//   table: '100vh',
-//   desktop: '100vh',
-//   wide: '100vh',
-// };
 
 function Contact() {
   return (
@@ -61,6 +47,16 @@ function Contact() {
         </section>
       </Visual>
       {/* E: visual 영역 */}
+
+      <div className="esg">
+        <img src='/assets/images/contents/contact/img_bottom_img00.png' className='img_00'/>
+        <div className='img_01'>
+          <div>
+            <img src='/assets/images/contents/contact/img_bottom_img02.png'/>
+            <img src='/assets/images/contents/contact/img_bottom_img03.png'/>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
