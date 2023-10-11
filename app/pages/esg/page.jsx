@@ -40,7 +40,7 @@ function Esg() {
       </div>
       {/* E: Visual 영역 */}
 
-      <Tab className="esg_tab_wrapper" type="article" tabList={["환경 경영방침", "인권 경영 현장","안전 보건 방침", "윤리 강영"]}>
+      <Tab className="esg_tab_wrapper" type="article" tabList={["환경 경영방침", "인권 경영 현장","안전 보건 방침", "윤리 강영", "ESG 정보방"]}>
         <article className="tab_content_00">
           <img src='/assets/images/contents/esg/img_tab00_img00.png' className='img_00'/>
           <div className='img_01'>
@@ -52,12 +52,14 @@ function Esg() {
           <img src='/assets/images/contents/esg/img_tab01_img00.png' className='img_00'/>
         </article>
         <article className="tab_content_02">
-          {/*<img src='/assets/images/contents/esg/img_tab03_img01.png' className='img_00'/>*/}
           <img src='/assets/images/contents/esg/img_tab02_img00.png' className='img_00'/>
         </article>
         <article className="tab_content_03" >
           <img src='/assets/images/contents/esg/img_tab03_img01.png' className='img_00'/>
           <img src='/assets/images/contents/esg/img_tab03_img00.png' className='img_01'/>
+        </article>
+        <article className="tab_content_04">
+          <img src='/assets/images/contents/esg/img_tab04_img00.png' className='img_00'/>
         </article>
       </Tab>
 
