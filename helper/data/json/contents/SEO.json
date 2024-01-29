@@ -9,6 +9,7 @@
       "service" : "Service",
       "contact" : "Contact",
       "career" : "Career",
+      "esg" : "Esg",
       "detail" : {
         "jPlatform" : "Hyundai Motor J Platform",
         "BMS": "Hyundai Motor BMS renewal",
