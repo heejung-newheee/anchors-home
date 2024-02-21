@@ -1,5 +1,6 @@
 import React from 'react';
 
+import HistoryPop from '@/components/HistoryPop/historyPop'
 import PageTitle from '@/components/PageTitle/PageTitle';
 import Tab from '@/components/Tab/Tab';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';

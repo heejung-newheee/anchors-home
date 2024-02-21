@@ -49,19 +49,15 @@
       position: absolute;
       left: 50%;
       bottom: 0;
-      transform: translateX(-50%);
+      transform: translateX(-50%) rotate(0);
       background: url(/assets/images/ico/ico_btn_more_black.svg) no-repeat center;
       background-size: 100%;
       width: 2.4rem; // $our_works_list
       height: 2.4rem; // $our_works_list
-    }
-    @keyframes viewMoreBtnAni {
-      from{transform: translateX(-50%) rotate(0);}
-      to{transform: translateX(-50%)  rotate(-180deg);}
+      transition: transform .5s;
     }
     &:hover:after {
-      -webkit-animation:viewMoreBtnAni .5s alternate;
-      animation:viewMoreBtnAni .5s alternate;
+      transform: translateX(-50%)  rotate(-180deg);
     }
 
     span {

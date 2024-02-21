@@ -16,13 +16,13 @@ const LOTTIE_TYPE = {
 
 const SCROLL_TRIGGER_OPTION = {
   triggerStart: [
-    { mobile: '0px', table: '0px', desktop: '200px', wide: '200px' },
-    { mobile: '0px', table: '0px', desktop: '200px', wide: '200px' },
-    { mobile: '0px', table: '0px', desktop: '200px', wide: '200px' },
+    { mobile: '0px', table: '0px', desktop: '0px', wide: '200px' },
+    { mobile: '0px', table: '0px', desktop: '0px', wide: '200px' },
+    { mobile: '0px', table: '0px', desktop: '0px', wide: '200px' },
   ],
   triggerEnd: [
     { mobile: '0px', table: '0px', desktop: '600px', wide: '600px' },
-    { mobile: '0px', table: '0px', desktop: '600px', wide: '600px' },
+    { mobile: '0px', table: '0px', desktop: '200px', wide: '600px' },
     { mobile: '0px', table: '0px', desktop: '600px', wide: '600px' },
   ],
   XAxes: {
@@ -32,15 +32,19 @@ const SCROLL_TRIGGER_OPTION = {
     ],
     test: [
       { mobile: '0px', table: '0px', desktop: '200px', wide: '200px' },
-      { mobile: '0px', table: '0px', desktop: '200px', wide: '200px' },
-      { mobile: '0px', table: '0px', desktop: '200px', wide: '200px' },
+      { mobile: '0px', table: '0px', desktop: '500px', wide: '200px' },
+    ],
+  },
+  fromScale: {
+    test: [
+      { mobile: 1, table: 1, desktop: 1, wide: 1 },
+      { mobile: 1, table: 1, desktop: 1, wide: 1 },
     ],
   },
   toScale: {
     test: [
-      { mobile: 0, table: 0, desktop: 0, wide: 0 },
-      { mobile: 0, table: 0, desktop: 0, wide: 0 },
-      { mobile: 0, table: 0, desktop: 0, wide: 0 },
+      { mobile: 1, table: 1, desktop: 1, wide: 1 },
+      { mobile: 1, table: 1, desktop: 10, wide: 10 },
     ],
   },
   lottie: {
@@ -82,6 +86,7 @@ function Mijeong() {
         triggerOffset={'center'}
         triggerMarkers={true}
         XAxes={SCROLL_TRIGGER_OPTION.XAxes.multiTrigger}
+        defaultID="multiTrigger"
       >
         <div className="area01" style={{ width: '100px', height: '100px', background: '#ccc' }} />
         <div className="area02" style={{ width: '100px', height: '100px', background: '#999' }} />
@@ -97,26 +102,25 @@ function Mijeong() {
       <p> Tab 컴포넌트의 타입 sortList </p>
       <Tab type="sortList" json={worksList} tabList={worksList.sort} />
 
-      {/*
-       <p> ScrollTriggerArea 컴포넌트의 타입 Timeline </p>
+      <p> ScrollTriggerArea 컴포넌트의 타입 Timeline </p>
       <div style={{ height: '600px' }}>
         <ScrollTriggerArea
-          type="test"
+          type="timeLine"
           triggerStart={SCROLL_TRIGGER_OPTION.triggerStart[2]}
           triggerEnd={SCROLL_TRIGGER_OPTION.triggerEnd[2]}
           triggerOffset={'center'}
           triggerMarkers={true}
           XAxes={SCROLL_TRIGGER_OPTION.XAxes.test}
-          toScale={SCROLL_TRIGGER_OPTION.toScale.test}
+          timeLineToScale={SCROLL_TRIGGER_OPTION.toScale.test}
+          timeLineFromScale={SCROLL_TRIGGER_OPTION.fromScale.test}
+          defaultID="timeLine"
         >
-          <div> Expertis</div>
-          <div className="timeLine" style={{ display: 'inline-block' }}>
+          <div>Expertis</div>
+          <div className="timeLine" style={{ width: '24px' }}>
             e
           </div>
-          <div>sfkdfbvnxvckjxkhkjjxvckjj</div>
         </ScrollTriggerArea>
       </div>
-      */}
     </>
   );
 }

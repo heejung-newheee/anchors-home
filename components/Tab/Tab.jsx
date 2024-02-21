@@ -18,7 +18,14 @@ function Tab({ type = 'article', className, json, tabList, children }) {
   let SORT_CONTENT_LENGTH = json ? json.content.length : 0;
   function TabButtonEvent(button, index) {
     setTabCurrent(index);
-    if (type === 'portfolioList') setSortFilter(button), setSortContents(DEFAULT_COUNT);
+    if (type === 'portfolioList') setSortFilter(button), setSortContents(DEFAULT_COUNT), topMoving(0);
+  }
+
+  function topMoving(value) {
+    window.scrollTo({
+      top: value,
+      behavior: 'smooth',
+    });
   }
 
   function moreEvent() {
@@ -53,14 +60,14 @@ function Tab({ type = 'article', className, json, tabList, children }) {
   }
 
   return (
-    <section className={`tab ${className}`} data-tab-type={type}>
+    <section className={'tab' + (!className || className === '' ? '' : ` ${className}`)} data-tab-type={type}>
       <article className="tab_btn_wrap">
         <ul>
-        {BUTTON_ARR.map((button, idx) => (
-          <TabButton current={tabCurrent} index={idx} key={idx} event={() => TabButtonEvent(button, idx)}>
-            {button}
-          </TabButton>
-        ))}
+          {BUTTON_ARR.map((button, idx) => (
+            <TabButton current={tabCurrent} index={idx} key={idx} event={() => TabButtonEvent(button, idx)}>
+              {button}
+            </TabButton>
+          ))}
         </ul>
       </article>
       <TabContents>{TabContentsEvent()}</TabContents>

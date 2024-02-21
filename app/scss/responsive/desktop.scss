@@ -49,6 +49,10 @@
         &.is_photo {
           padding-bottom: 6rem;
         }
+        &:before {
+          height: 130vh;
+          background-color: $color_blue;
+        }
       }
       .rolling_wrap {
         .rolling_text {
@@ -60,6 +64,7 @@
           .expertise_img {
             max-width: 34.2rem;
             width: 43vh;
+            position: absolute;
             &:nth-child(1) {
               top: 7.5%;
               left: 9%;
@@ -80,14 +85,20 @@
         .rolling_area {
           height: 12.4rem;
           margin-bottom: 2rem;
-          li {
-            span {
-              margin-right: 3.6rem;
-              font-size: 12.4rem;
-            }
-            img {
-              width: 18rem;
-              margin-right: 4.5rem;
+          .infinite_rolling_inner {
+            ul {
+              li {
+                div {
+                  span {
+                    margin-right: 3.6rem;
+                    font-size: 12.4rem;
+                  }
+                  img {
+                    width: 18rem;
+                    margin-right: 4.5rem;
+                  }
+                }
+              }
             }
           }
 
@@ -100,7 +111,7 @@
                   left: 0;
                 }
                 100% {
-                  left: -2882.7px;
+                  left: -4325.5px;
                 }
               }
             }
@@ -114,7 +125,7 @@
                   right: 0;
                 }
                 100% {
-                  right: -2878.3px;
+                  right: -4319px;
                 }
               }
             }
@@ -128,7 +139,7 @@
                   left: 0;
                 }
                 100% {
-                  left: -3016.2px;
+                  left: -4525.8px;
                 }
               }
             }
@@ -141,7 +152,22 @@
     }
 
     .our_works {
+      .is_black {
+        height: 100vh;
+        &:after {
+          height: 100vh;
+        }
+      }
       .rolling_wrap {
+        .line1_flow {
+          transition: background-color 1s;
+          &.is_active {
+            background-color: $color_black;
+            .text_ourworks {
+              color: $color_white;
+            }
+          }
+        }
         .rolling_text {
           margin-left: 33.7vw;
           .text_ourworks {
@@ -150,6 +176,7 @@
           .ourworks_img {
             max-width: 34.4rem;
             width: 42vw;
+            position: absolute;
             &:nth-child(1) {
               top: -4%;
               left: 13%;
@@ -165,24 +192,38 @@
           }
         }
       }
-      .portfolio_wrap {
-        .portfolio {
-          .visual {
-            .disclaimer {
-              margin-bottom: 6rem;
-            }
+      .scroll_swiper {
+        .single_swiper_wrap {
+          transform: translate(200%, -200%) rotate(25deg) scale(0);
+          transition: transform 1s;
+        }
+        &.is_active {
+          .single_swiper_wrap {
+            transform: translate(0) rotate(0) scale(1);
           }
         }
-        .single_swiper_wrap {
-          .swiper_area {
-            .swiper-button-prev, .swiper-button-next {
-              display: block;
+        .portfolio_wrap {
+          .portfolio {
+            .visual {
+              .element_title {
+                padding: 0 21.8rem 1.8rem;
+              }
+              .disclaimer {
+                margin-bottom: 6rem;
+              }
             }
-            .swiper-button-prev {
-              left: 2rem;
-            }
-            .swiper-button-next {
-              right: 2rem;
+          }
+          .single_swiper_wrap {
+            .swiper_area {
+              .swiper-button-prev, .swiper-button-next {
+                display: block;
+              }
+              .swiper-button-prev {
+                left: 2rem;
+              }
+              .swiper-button-next {
+                right: 2rem;
+              }
             }
           }
         }

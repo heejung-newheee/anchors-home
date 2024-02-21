@@ -45,6 +45,7 @@ function Career() {
 
       {/* S: key_visual 영역 */}
       <Visual
+        defaultId="scroll_main_visual"
         imgUrl="/assets/images/contents/career/img_keyvisual_members.jpg"
         // className="key_visual"
       />
@@ -78,7 +79,7 @@ function Career() {
           ))}
           firstSwiperOption={{
             effect: 'cards',
-            touchAngle: 180,
+            // touchAngle: 180,
           }}
           secondSwiperOption={{
             pagination: false,
@@ -113,23 +114,22 @@ function Career() {
           ))}
           swiperOption={{
             spaceBetween: 16,
-            breakpoints: {
-              360: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1280: { slidesPerView: 3 },
-            },
             navigation: false,
-            pagination: false,
-            scrollbar: {
-              draggable: true,
+            pagination: {
+              clickable: true,
             },
             autoplay: {
               delay: 1,
             },
             loop: true,
             speed: 4000,
+            breakpoints: {
+              360: { slidesPerView: 1, autoplay: false },
+              768: { slidesPerView: 2, autoplay: false },
+              1280: { slidesPerView: 3 },
+            },
           }}
-          className="single scroll-linear swiper_comment_swiper"
+          className="single swiper_comment_swiper"
         />
       </section>
       {/* E: swiper_comment 영역 */}
@@ -150,7 +150,7 @@ function Career() {
 
       {/*S: sub_visual 영역 */}
       <div className="sub_visual">
-        <Visual imgUrl="/assets/images/contents/career/img_visual_lights.jpg" alt="사무실 조명 이미지" />
+        <Visual defaultId="scroll_sub_visual" imgUrl="/assets/images/contents/career/img_visual_lights.jpg" alt="사무실 조명 이미지" />
       </div>
       {/* E: sub_visual 영역 */}
 

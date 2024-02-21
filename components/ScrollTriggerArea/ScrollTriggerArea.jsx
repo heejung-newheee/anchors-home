@@ -13,8 +13,8 @@ const DEFAULT_TRIGGER = {
 };
 
 function ScrollTriggerArea({
-  triggerStart = DEFAULT_TRIGGER,
-  triggerEnd = DEFAULT_TRIGGER,
+  triggerStart,
+  triggerEnd,
   triggerOffset = 'top',
   triggerMarkers = false,
   triggerScrub = 0.5,
@@ -27,6 +27,14 @@ function ScrollTriggerArea({
   YAxes,
   toScale,
   fromScale,
+  toOpacity,
+  fromOpacity,
+  timeLineXAxes,
+  timeLineYAxes,
+  timeLineToScale,
+  timeLineFromScale,
+  timeLineToOpacity,
+  timeLineFromOpacity,
   defaultID,
   className,
   children,
@@ -45,6 +53,14 @@ function ScrollTriggerArea({
   let MUTITRIGGER_OPTION_Y_AXES = [];
   let MUTITRIGGER_OPTION_TO_SCALE = [];
   let MUTITRIGGER_OPTION_FROM_SCALE = [];
+  let MUTITRIGGER_OPTION_TO_OPACITY = []; //
+  let MUTITRIGGER_OPTION_FROM_OPACITY = []; //
+  let TIMELINE_OPTION_X_AXES = []; //
+  let TIMELINE_OPTION_Y_AXES = []; //
+  let TIMELINE_OPTION_TO_SCALE = []; //
+  let TIMELINE_OPTION_FROM_SCALE = []; //
+  let TIMELINE_OPTION_TO_OPACITY = []; //
+  let TIMELINE_OPTION_FROM_OPACITY = []; //
 
   function BreakPoint() {
     if (BREAKPOINT_MOBILE) {
@@ -60,8 +76,9 @@ function ScrollTriggerArea({
   }
 
   function SetOption() {
-    TRIGGER_OPTION_START = triggerStart[BREAKPOINT_TYPE];
-    TRIGGER_OPTION_END = triggerEnd[BREAKPOINT_TYPE];
+    !triggerStart || triggerStart === '' ? (triggerStart = DEFAULT_TRIGGER) : (TRIGGER_OPTION_START = triggerStart[BREAKPOINT_TYPE]);
+    !triggerEnd || triggerEnd === '' ? (triggerEnd = DEFAULT_TRIGGER) : (TRIGGER_OPTION_END = triggerEnd[BREAKPOINT_TYPE]);
+
     if (XAxes !== undefined) {
       XAxes.map(function (el, index) {
         MUTITRIGGER_OPTION_X_AXES[index] = el[BREAKPOINT_TYPE];
@@ -83,6 +100,54 @@ function ScrollTriggerArea({
     if (fromScale !== undefined) {
       fromScale.map(function (el, index) {
         MUTITRIGGER_OPTION_FROM_SCALE[index] = el[BREAKPOINT_TYPE];
+      });
+    }
+
+    if (toOpacity !== undefined) {
+      toOpacity.map(function (el, index) {
+        MUTITRIGGER_OPTION_TO_OPACITY[index] = el[BREAKPOINT_TYPE];
+      });
+    }
+
+    if (fromOpacity !== undefined) {
+      fromOpacity.map(function (el, index) {
+        MUTITRIGGER_OPTION_FROM_OPACITY[index] = el[BREAKPOINT_TYPE];
+      });
+    }
+
+    if (timeLineXAxes !== undefined) {
+      timeLineXAxes.map(function (el, index) {
+        TIMELINE_OPTION_X_AXES[index] = el[BREAKPOINT_TYPE];
+      });
+    }
+
+    if (timeLineYAxes !== undefined) {
+      timeLineYAxes.map(function (el, index) {
+        TIMELINE_OPTION_Y_AXES[index] = el[BREAKPOINT_TYPE];
+      });
+    }
+
+    if (timeLineToScale !== undefined) {
+      timeLineToScale.map(function (el, index) {
+        TIMELINE_OPTION_TO_SCALE[index] = el[BREAKPOINT_TYPE];
+      });
+    }
+
+    if (timeLineFromScale !== undefined) {
+      timeLineFromScale.map(function (el, index) {
+        TIMELINE_OPTION_FROM_SCALE[index] = el[BREAKPOINT_TYPE];
+      });
+    }
+
+    if (timeLineToOpacity !== undefined) {
+      timeLineToOpacity.map(function (el, index) {
+        TIMELINE_OPTION_TO_OPACITY[index] = el[BREAKPOINT_TYPE];
+      });
+    }
+
+    if (timeLineFromOpacity !== undefined) {
+      timeLineFromOpacity.map(function (el, index) {
+        TIMELINE_OPTION_FROM_OPACITY[index] = el[BREAKPOINT_TYPE];
       });
     }
   }
@@ -109,7 +174,7 @@ function ScrollTriggerArea({
         return (
           <div
             className={
-              'wrapper ' +
+              'wrapper' +
               (!defaultID || defaultID === '' ? '' : ` ${defaultID}`) +
               (!className || className === '' ? '' : ` ${className}`) +
               (isActive ? ' is_active' : '')
@@ -121,8 +186,9 @@ function ScrollTriggerArea({
                   x: MUTITRIGGER_OPTION_X_AXES[idx],
                   y: MUTITRIGGER_OPTION_Y_AXES[idx],
                   scale: MUTITRIGGER_OPTION_TO_SCALE[idx],
+                  opacity: MUTITRIGGER_OPTION_TO_OPACITY[idx],
                 }}
-                from={{ scale: MUTITRIGGER_OPTION_FROM_SCALE[idx] }}
+                from={{ scale: MUTITRIGGER_OPTION_FROM_SCALE[idx], opacity: MUTITRIGGER_OPTION_FROM_OPACITY[idx] }}
                 key={idx}
                 ease={easing}
                 duration={duration}
@@ -132,7 +198,7 @@ function ScrollTriggerArea({
             ))}
           </div>
         );
-      case 'test':
+      case 'timeLine':
         return (
           <div
             className={
@@ -148,40 +214,56 @@ function ScrollTriggerArea({
                   <Tween
                     to={{
                       x: MUTITRIGGER_OPTION_X_AXES[idx],
-                      y: MUTITRIGGER_OPTION_Y_AXES[idx] || '0px',
+                      y: MUTITRIGGER_OPTION_Y_AXES[idx],
                       scale: MUTITRIGGER_OPTION_TO_SCALE[idx],
+                      opacity: MUTITRIGGER_OPTION_TO_OPACITY[idx],
                     }}
                     from={{
-                      x: '0px',
-                      y: '0px',
-                      scale: MUTITRIGGER_OPTION_FROM_SCALE[idx] || 1,
+                      scale: MUTITRIGGER_OPTION_FROM_SCALE[idx],
+                      opacity: MUTITRIGGER_OPTION_TO_OPACITY[idx],
                     }}
-                    // ease={easing}
-                    //duration={duration[idx] || 1}
+                    ease={easing}
+                    duration={duration}
                   >
                     {contents}
                   </Tween>
                 ) : (
-                  <Timeline target={contents} key={idx}>
-                    <Tween
-                      from={{ scale: MUTITRIGGER_OPTION_FROM_SCALE[idx] }}
-                      to={{
-                        x: MUTITRIGGER_OPTION_X_AXES[idx],
-                        y: MUTITRIGGER_OPTION_Y_AXES[idx],
-                        //scale: MUTITRIGGER_OPTION_TO_SCALE[idx],
-                      }}
-                      //duration={duration[idx]}
-                    />
-                    <Tween
-                      from={{ scale: MUTITRIGGER_OPTION_FROM_SCALE[idx] }}
-                      to={{
-                        x: MUTITRIGGER_OPTION_X_AXES[idx],
-                        y: MUTITRIGGER_OPTION_Y_AXES[idx],
-                        scale: MUTITRIGGER_OPTION_TO_SCALE[idx],
-                      }}
-                      //duration={duration[idx]}
-                    />
-                  </Timeline>
+                  (console.log(
+                    idx,
+                    MUTITRIGGER_OPTION_X_AXES[idx],
+                    MUTITRIGGER_OPTION_FROM_SCALE[idx],
+                    MUTITRIGGER_OPTION_TO_SCALE[idx],
+                    MUTITRIGGER_OPTION_Y_AXES,
+                  ),
+                  (
+                    <Timeline target={contents}>
+                      <Tween
+                        to={{
+                          x: MUTITRIGGER_OPTION_X_AXES[idx],
+                          y: MUTITRIGGER_OPTION_Y_AXES[idx],
+                          scale: MUTITRIGGER_OPTION_TO_SCALE[idx],
+                          opacity: MUTITRIGGER_OPTION_TO_OPACITY[idx],
+                        }}
+                        from={{
+                          scale: MUTITRIGGER_OPTION_FROM_SCALE[idx],
+                          opacity: MUTITRIGGER_OPTION_TO_OPACITY[idx],
+                        }}
+                        ease={easing}
+                        duration={duration}
+                      />
+                      <Tween
+                        to={{
+                          x: TIMELINE_OPTION_X_AXES[idx],
+                          y: TIMELINE_OPTION_Y_AXES[idx],
+                          scale: TIMELINE_OPTION_TO_SCALE[idx],
+                          opacity: TIMELINE_OPTION_TO_OPACITY[idx],
+                        }}
+                        from={{ scale: TIMELINE_OPTION_FROM_SCALE[idx], opacity: TIMELINE_OPTION_FROM_OPACITY[idx] }}
+                        ease={easing}
+                        duration={duration}
+                      />
+                    </Timeline>
+                  ))
                 )}
               </div>
             ))}

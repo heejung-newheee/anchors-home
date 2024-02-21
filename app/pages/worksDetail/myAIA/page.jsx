@@ -1,25 +1,18 @@
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
 import seo from '@/helper/data/json/contents/SEO.json';
-import works from '@/helper/data/json/contents/works/works.json';
 export const metadata = {
   title: seo.title.subPage.detail.myAIA + ' : ' + seo.title.subPage.works,
 };
 
 export default function MyAIA() {
+
+  const PAGE_ID = "0017";
+
   return (
     <>
       <WorksTemplate
-        visualImgUrl={works.imgUrl + works.content[4].visual}
-        visualChildren={works.content[4].title}
-        disclaimerChildren={works.content[4].description}
-        detailTextDescEn={works.content[4].text.en}
-        detailTextDescKo={works.content[4].text.ko}
-        subVisualImgUrl={works.imgUrl + works.content[4].subVisual}
-        workContent={works.content[4].projectInfomation}
-        webSiteUrl={works.content[4].websiteUrl}
-        firstNextWork={works.content[5]}
-        secondNextWork={works.content[6]}
-        thirdNextWork={works.content[7]}
+        pageId={PAGE_ID}
+        webSiteUrl="Y"
       />
     </>
   );

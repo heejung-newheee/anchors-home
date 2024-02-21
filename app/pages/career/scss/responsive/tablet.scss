@@ -62,8 +62,8 @@
       .swiper_comment_swiper{
         width: 93vw;
         height: 56vw;
-        .swiper-scrollbar.swiper-scrollbar-horizontal{
-          transform: translate(-50%, 4rem);
+        .swiper-pagination {
+          bottom: -3rem;
         }
         .swiper-slide{
           .detail_slide{
@@ -71,7 +71,7 @@
               bottom: 3.6rem;
             }
             .detail{
-              transform: translateY(18%);
+              transform: translateY(6vh);
               bottom: 0;
               padding: 0 3rem;
               padding-bottom: 10rem;
@@ -88,7 +88,7 @@
               &.on {
                 transform: translateY(0%);
                 &::before{
-                  opacity: 0.4;
+                  //opacity: 0.4;
                 }
                 .disclaimer{
                   font-size: 1.6rem;

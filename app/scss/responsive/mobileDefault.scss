@@ -65,6 +65,9 @@
       padding: 0 1.8rem;
       position: relative;
       z-index: 1;
+      /*.lottie {
+        height: 38vw;
+      }*/ // single lottie css
       .text_keyvisual_wrap {
         height: 44vw;
       }
@@ -127,15 +130,54 @@
 
       &:before {
         width: 100vw;
-        height: 110vh;
+        height: 100vh;
         display: block;
         content:'';
-        background-color: $color_blue;
+        background-color: $color_white;
       }
     }
     .rolling_wrap {
+      .expertise_scroll {
+        height :100vh;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        .scroll_wrap {
+          position :relative;
+          display: flex;
+          margin-left: 33vh;
+          .scroll_text{
+            font-size: 60vh;
+            font-family: $font_en;
+            letter-spacing: $en_letterSpacing;
+            font-weight: bold;
+            white-space: nowrap;
+            display: inline-block;
+          }
+          .scroll_image_wrap {
+            img {
+              position: absolute;
+              max-width: 19.3rem;
+              width: 30.2vh;
+            }
+            span {
+              &:nth-child(1) img {
+                top: 8.5%;
+                left: 8%;
+              }
+              &:nth-child(2) img {
+                top: 63%;
+                left: 35.5%;
+              }
+              &:nth-child(3) img {
+                top: 13%;
+                left: 73%;
+              }
+            }
+          }
+        }
+      }
       .rolling_text {
-        margin-left: 61vw;
         .text_expertis,
         .text_e {
           position: relative;
@@ -146,23 +188,6 @@
           white-space: nowrap;
           display: inline-block;
         }
-        .expertise_img {
-          position: absolute;
-          max-width: 19.3rem;
-          width: 30.2vh;
-          &:nth-child(1) {
-              top: 8.5%;
-              left: 9%;
-          }
-          &:nth-child(2) {
-              top: 64%;
-              left: 41.5%;
-          }
-          &:nth-child(3) {
-              top: 12.5%;
-              left: 84.5%;
-          }
-        }
       }
     }
     .rolling_area_wrap {
@@ -171,65 +196,77 @@
       .rolling_area {
         height: 5.2rem;
         margin-bottom: 1rem;
-        li {
-          align-items: center;
-          span {
-            margin-right: 1.5rem;
-            font-family: $font_en;
-            font-family : $en_letterSpacing;
-            font-size: 5.2rem;
-            line-height: 100%;
-            color: #000;
-            white-space: nowrap;
-          }
-          img {
-            width: 7.6rem;
-            margin-right: 1.9rem;
+        .infinite_rolling_inner {
+          ul {
+
+            li {
+              display: block;
+
+              div {
+                display: flex;
+                align-items: center;
+                width: fit-content;
+                max-width: fit-content;
+                span {
+                  margin-right: 1.5rem;
+                  font-family: $font_en;
+                  font-family : $en_letterSpacing;
+                  font-size: 5.2rem;
+                  line-height: 100%;
+                  color: #000;
+                  white-space: nowrap;
+                }
+                img {
+                  width: 7.6rem;
+                  margin-right: 1.9rem;
+                }
+              }
+            }
           }
         }
 
         &:nth-child(1) {
           .infinite_rolling_inner {
-            animation-name: infiniteRollingSolo !important;
+            animation: infiniteRollingSolo 20s linear infinite !important;
 
             @keyframes infiniteRollingSolo {
               0% {
                 left: 0;
               }
               100% {
-                left: -1210.5px;
+                left: -2421px;
               }
             }
           }
         }
         &:nth-child(2) {
           .infinite_rolling_inner {
-            animation-name: infiniteRollingSolo2 !important;
+            animation: infiniteRollingSolo2 20s linear infinite !important;
 
             @keyframes infiniteRollingSolo2 {
               0% {
                 right: 0;
               }
               100% {
-                right: -1208.7px;
+                right: -2417.4px;
               }
             }
           }
         }
         &:nth-child(3) {
-           .infinite_rolling_inner {
-             animation-name: infiniteRollingSolo3 !important;
+          .infinite_rolling_inner {
+            animation: infiniteRollingSolo3 20s linear infinite !important;
 
-             @keyframes infiniteRollingSolo3 {
-               0% {
-                 left: 0;
-               }
-               100% {
-                 left: -1266.5px;
-               }
-             }
-           }
-         }
+            @keyframes infiniteRollingSolo3 {
+              0% {
+                left: 0;
+              }
+              100% {
+                left: -2533px;
+              }
+            }
+          }
+        }
       }
     }
     .intro_area {
@@ -245,16 +282,68 @@
   }
 
   .our_works {
-    .rolling_wrap {
-      .line1_flow {
+    .is_black {
+      position: relative;
+      height: calc(100vh + 1000px);
+      //background: #000;
+      &:after {
+        width: 100vw;
+        height: 1000px;
+        display: block;
+        content:'';
+        //background-color: $color_black;
+      }
+      &.bg_black {
+        background-color: #1d1d1f;
         transition: background-color 1s;
-        &.is_active {
-          background-color: $color_black;
-          .text_ourworks {
-            color: $color_white;
+      }
+    }
+    .ourwork_scroll {
+      height :100vh;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      transition: background-color 1s;
+      position: relative;
+      .scroll_wrap {
+        position :relative;
+        display: flex;
+        margin-left: 10vw;
+        transition: color 1s;
+        .scroll_text{
+          font-size: 33vh;
+          font-family: $font_en;
+          letter-spacing: $en_letterSpacing;
+          font-weight: bold;
+          white-space: nowrap;
+          display: inline-block;
+        }
+        .scroll_image_wrap {
+          img {
+            position: absolute;
+            /*top: 0;
+            left: 0;*/
+            max-width: 19.3rem;
+            width: 30.2vh;
+          }
+          span {
+            &:nth-child(1) img {
+              top: 5.5%;
+              left: 13.5%;
+            }
+            &:nth-child(2) img {
+              top: 64%;
+              left: 41.5%;
+            }
+            &:nth-child(3) img {
+              top: 12.5%;
+              left: 70.5%;
+            }
           }
         }
       }
+    }
+    .rolling_wrap {
       .rolling_text {
         margin-left: 10vw;
         .text_ourworks {
@@ -265,23 +354,6 @@
           font-weight: bold;
           white-space: nowrap;
           position: relative;
-        }
-        .ourworks_img {
-          position: absolute;
-          max-width: 19.4rem;
-          width: 30.2vh;
-          &:nth-child(1) {
-            top: 0;
-            left: 13.5%;
-          }
-          &:nth-child(2) {
-            top: 66%;
-            left: 44.5%;
-          }
-          &:nth-child(3) {
-            top: 12.5%;
-            left: 84.5%;
-          }
         }
       }
     }
@@ -297,15 +369,6 @@
       }
     }
     .portfolio_wrap {
-      //position: fixed;
-      /*&:before {
-        width: 100vw;
-        height: 100vh;
-        display: block;
-        content:'';
-      }*/
-      //left: 100vw;
-      //top: 0;
       width: 100vw;
       .portfolio {
         overflow: hidden;
@@ -314,17 +377,24 @@
         text-align: center;
         height: 100vh;
         .visual {
-         height: 100%;
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .wrapper {
+            img {
+              transform: translate(0) scale(1) !important;
+            }
+          }
           .element_title {
             @extend %font_visualTitle;
+            padding: 0 2rem 1.8rem;
           }
           .disclaimer {
             @extend %font_visualDescription;
             margin-bottom: 5rem;
+            padding: 0 2rem;
           }
           a {
             @extend %btn_primary_ghost;
@@ -335,6 +405,12 @@
         .swiper_area {
           .swiper-button-prev, .swiper-button-next {
             display: none;
+          }
+          .swiper-pagination {
+            bottom: 5rem;
+            .swiper-pagination-bullet-active {
+              background-color: $color_lightblue;
+            }
           }
         }
       }

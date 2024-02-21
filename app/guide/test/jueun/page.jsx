@@ -4,6 +4,8 @@ import Visual from '@/components/Visual/Visual';
 import aboutIntro from '@/helper/data/json/contents/about/aboutIntro.json';
 import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
 import variables from '@/public/assets/scss/_variables.module.scss';
+import Expertise from '@/components/MainScrollInteration/Expertise';
+import OurWorks from '@/components/MainScrollInteration/OurWorks';
 
 export default function Jueun() {
   return (
@@ -34,7 +36,7 @@ export default function Jueun() {
       >
         Visual Component
       </p>
-      <Visual imgUrl="https://picsum.photos/1920/800" pageTitleData="pageTitle">
+      <Visual imgUrl="https://picsum.photos/1920/800" pageTitleData="pageTitle" defaultID="visual_test">
         <div>
           <p>Title</p>
           <span>Description</span>
@@ -56,19 +58,16 @@ export default function Jueun() {
         autoPlayStop="Y"
         type="single"
         swiperOption={{
-          slidesPerView: 'auto',
+          slidesPerView: 4,
           navigation: false,
-          pagination: false,
-          scrollbar: {
-            draggable: true,
+          pagination: {
+            clickable: true,
           },
-          autoplay: {
-            delay: 1,
-          },
+          autoplay: true,
           loop: true,
           speed: 4000,
         }}
-        className="single scroll-linear"
+        className="single"
         swiperContent={aboutMembers.members.map((cont, idx) => (
           <div key={idx}>
             <p>{cont.nameEn}</p>
@@ -102,6 +101,28 @@ export default function Jueun() {
         firstClassName="first_test"
         secondClassName="second_test"
       />
+
+      {/* ElementTitle component test */}
+      <p
+        style={{
+          backgroundColor: variables.colorBlack,
+          color: '#fff',
+          padding: '10px 0',
+        }}
+      >
+        Expertise
+      </p>
+      <Expertise />
+      <p
+        style={{
+          backgroundColor: variables.colorBlack,
+          color: '#fff',
+          padding: '10px 0',
+        }}
+      >
+        OurWorks
+      </p>
+      <OurWorks />
     </>
   );
 }

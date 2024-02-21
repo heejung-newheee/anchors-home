@@ -8,31 +8,31 @@ export default function InfiniteRolling({
   className,
   reverse = 'N',
   duration = '40',
-  length = 'auto',
-  key
+  widthFixed = 'N'
 }) {
   const REVERSE_CLASS = reverse === 'Y' ? ' reverse' : '';
+  const WIDTHFIXED_CLASS = widthFixed === 'Y' ? ' width_fixed' : '' ;
   const GET_CLASSNAME = !className
-    ? { className: 'infinite_rolling' + REVERSE_CLASS + ' ' + length }
-    : { className: 'infinite_rolling ' + className + REVERSE_CLASS + ' ' + length };
+    ? { className: 'infinite_rolling' + REVERSE_CLASS + WIDTHFIXED_CLASS }
+    : { className: 'infinite_rolling ' + className + REVERSE_CLASS + WIDTHFIXED_CLASS };
 
   const CHILD_ARR = Array.isArray(children) ? children : [children];
 
   const CHILD_ARR_MAP = [
-    length === 'auto' &&  CHILD_ARR.map((contentArrays, idx) => <li key={idx}>{contentArrays}</li>),
-    length === 'solo' &&  <><li>{CHILD_ARR}</li><li>{CHILD_ARR}</li><li>{CHILD_ARR}</li></>
+    CHILD_ARR.map((contentArrays, idx) => <li key={idx}>{contentArrays}</li>)
   ];
 
   return (
-    <div {...GET_CLASSNAME} key={key}>
+    <div {...GET_CLASSNAME}>
       <div
         className="infinite_rolling_inner"
         style={{ animationDuration: duration + 's' }}
       >
-        {length === 'auto' && <><ul>{CHILD_ARR_MAP}</ul>
+        {widthFixed === 'N' && <><ul>{CHILD_ARR_MAP}</ul>
           <ul>{CHILD_ARR_MAP}</ul></>}
 
-        {length === 'solo' && <ul>{CHILD_ARR_MAP}</ul>}
+        {widthFixed === 'Y' && <><ul>{CHILD_ARR_MAP}</ul>
+          <ul>{CHILD_ARR_MAP}</ul><ul>{CHILD_ARR_MAP}</ul></>}
 
       </div>
     </div>

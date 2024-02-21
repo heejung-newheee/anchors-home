@@ -54,7 +54,7 @@ function About() {
       {/* E: PageTitle 영역*/}
 
       {/* S: Key Visual 영역*/}
-      <Visual imgUrl="/assets/images/contents/about/img_keyvisual_office.jpg" />
+      <Visual defaultId="scroll_main_visual" imgUrl="/assets/images/contents/about/img_keyvisual_office.jpg" />
       {/* E: Key Visual 영역*/}
 
       {/* S: Description 영역*/}
@@ -165,7 +165,7 @@ function About() {
             </InfiniteRolling>
           </article>
           <Disclaimer data={<>Want to know about us</>} />
-          <Btn className="download_btn" type="a" url="/assets/images/pdf/[Anchors]Company_Profile_A4_230320.pdf">
+          <Btn className="download_btn" type="a" url="/assets/images/pdf/[Anchors]Company_Profile_A4_230320.pdf" target="_blank">
             Download
             <br />
             Profiles
@@ -175,7 +175,7 @@ function About() {
       {/* E: anchors profile 영역*/}
 
       <section className="about_members section_div is_photo">
-        <Visual imgUrl="/assets/images/contents/about/img_visual_members.jpg" />
+        <Visual defaultId="scroll_sub_visual" imgUrl="/assets/images/contents/about/img_visual_members.jpg" />
         <section className="about_members_desc">
           <Description innerHTMLOption="Y" data={aboutMembers.membersText.textEn} />
           <Description innerHTMLOption="Y" data={aboutMembers.membersText.textKo} />
@@ -191,10 +191,6 @@ function About() {
           swiperOption={{
             slidesPerView: 'auto',
             navigation: false,
-            pagination: false,
-            scrollbar: {
-              draggable: true,
-            },
             spaceBetween: 16,
             slidesOffsetBefore: 24,
             slidesOffsetAfter: 24,
@@ -202,10 +198,14 @@ function About() {
               delay: 1,
             },
             loop: true,
-            speed: 8000,
+            speed: 4000,
             breakpoints: {
+              360: {
+                autoplay: false,
+              },
               768: {
                 spaceBetween: 24,
+                autoplay: false,
               },
               1280: {
                 spaceBetween: 32,
@@ -222,12 +222,12 @@ function About() {
               },
             },
           }}
-          className="about_members_swiper scroll-linear"
+          className="about_members_swiper"
           swiperContent={[...aboutMembers.members, ...aboutMembers.members].map((cont, idx) => (
             <article key={`sw04-${idx}`}>
               <ElementTitle data={cont.nameEn} className="member_name_en" />
               <MoreDetail imgUrl={aboutMembers.imgUrl + cont.img} imgAlt={cont.alt}>
-                <article>
+                <article className="tooltip">
                   <ElementTitle data={cont.nameKo} />
                   <Description className="member_team" data={cont.part} />
                   <Description innerHTMLOption="Y" className="member_hashtag" data={cont.hashtag} />
