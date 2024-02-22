@@ -1,50 +1,39 @@
 {
-  "copyright" : "All Rights Reserved ©Anchors 2023",
+  "copyright": "All Rights Reserved ©Anchors 2023",
   "sendEmail": "contact@anchors-biz.com",
-  "menuList" : [
+  "menuList": [
     {
-      "name" : [
-        {"words" : "Our" },
-        {"words" : "works" }
-      ],
-      "url" : "/pages/works",
-      "alt" : "Our works"
+      "name": [{ "words": "Our" }, { "words": "works" }],
+      "url": "/pages/works",
+      "alt": "Our works"
     },
     {
-      "name" : [
-        {"words" : "About" },
-        {"words" : "us" }
-      ],
-      "url" : "/pages/about",
-      "alt" : "About us"
+      "name": [{ "words": "About" }, { "words": "us" }],
+      "url": "/pages/about",
+      "alt": "About us"
     },
     {
-      "name" : [
-        {"words" : "Service" }
-      ],
-      "url" : "/pages/service",
-      "alt" : "Service"
+      "name": [{ "words": "Service" }],
+      "url": "/pages/service",
+      "alt": "Service"
     },
     {
-      "name" : [
-        {"words" : "Contact" }
-      ],
-      "url" : "/pages/contact",
-      "alt" : "Contact"
+      "name": [{ "words": "Contact" }],
+      "url": "/pages/contact",
+      "alt": "Contact"
     },
     {
-      "name" : [
-        {"words" : "Careers" }
-      ],
-      "url" : "/pages/career",
-      "alt" : "Careers"
+      "name": [{ "words": "Careers" }],
+      "url": "/pages/career",
+      "alt": "Careers"
     },
     {
-      "name" : [
-        {"words" : "ESG" }
-      ],
-      "url" : "/pages/esg",
-      "alt" : "ESG"
+      "name": [{ "words": "ESG" }],
+      "url": "/pages/esg",
+      "alt": "ESG"
     }
-  ]
+  ],
+  "privacyPolicyEn": "Privacy Policy",
+  "privacyPolicyKo": "개인정보 처리방침",
+  "privacyPolicyUrl": "/pages/privacyPolicy"
 }
