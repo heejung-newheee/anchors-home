@@ -20,6 +20,7 @@ build-job:
   artifacts:
     paths:
       - ./out
+    expire_in: 1 hour
   before_script:
     - npm install --force
   script:
@@ -40,6 +41,7 @@ deploy-to-dev-job:
   script:
     - cp -r ./out/* /var/www/www-2022-dev
   after_script:
+    - rm -rf ./out
     - ls -al
     - echo "deploy success!"
   tags:
@@ -54,6 +56,7 @@ deploy-to-prd-job:
   script:
     - cp -r ./out/* /var/www/www-2022-new
   after_script:
+    - rm -rf ./out
     - ls -al
     - echo "deploy success!"
   tags:

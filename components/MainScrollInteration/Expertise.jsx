@@ -6,44 +6,14 @@ import ScrollTriggerArea from '@/components/ScrollTriggerArea/ScrollTriggerArea'
 
 import main from '@/helper/data/json/contents/main/main.json';
 
-// S: scroll trigger option
-const SCROLL_TRIGGER_OPTION = {
-  triggerStart: [{ mobile: '0px', table: '0px', desktop: '0px', wide: '200px' }],
-  triggerEnd: [{ mobile: '0px', table: '0px', desktop: '5000vh', wide: '200px' }],
-  XAxes: {
-    expertiseTrigger: [
-      { mobile: '0px', table: '0px', desktop: '-580vh', wide: '200px' },
-      { mobile: '0px', table: '0px', desktop: '-580vh', wide: '200px' },
-      { mobile: '0px', table: '0px', desktop: '-630vh', wide: '200px' },
-      { mobile: '0px', table: '0px', desktop: '-620vh', wide: '200px' },
-      { mobile: '0px', table: '0px', desktop: '-610vh', wide: '200px' },
-    ],
-  },
-  fromScale: {
-    expertiseFromScale: [
-      { mobile: 1, table: 1, desktop: 1, wide: 1 },
-      { mobile: 1, table: 1, desktop: 1, wide: 1 },
-    ],
-  },
-  toScale: {
-    expertiseToScale: [
-      { mobile: 1, table: 1, desktop: 1, wide: 1 },
-      { mobile: 1, table: 1, desktop: 30, wide: 30 },
-    ],
-  },
-};
-// E: scroll trigger option
-
 function Expertise({ className, firstText, secondText, scrollImage, scrollDuration }) {
   const WINDOW_OBJECT = React.useRef();
   const GET_CLASSNAME = !className ? { className: 'bg_blue expertise_scroll' } : { className: 'bg_blue expertise_rolling ' + className };
   const IMAGE_ARR = Array.isArray(scrollImage) ? scrollImage : [scrollImage];
   const IMAGE_ARR_MAP = [IMAGE_ARR.map((content, idx) => <span key={idx}>{content}</span>)];
   const [animationScrollY, setAnimationScrollY] = useState(0);
-  //const animating = React.useRef(false);
   const EXPERTISE_REF = React.useRef(); // article dom
   const START_POINT = React.useRef(0); // article Y coordinate
-  //const marginLeft = React.useRef(0);
   const WRAP_STYLE = React.useRef({}); // text scroll animation
   const CONT_STYLE = React.useRef({}); // position fixed
   const CHAR_STYLE = React.useRef({}); // text extend animation
@@ -72,12 +42,9 @@ function Expertise({ className, firstText, secondText, scrollImage, scrollDurati
 
   useEffect(() => {
     const DEVICE_WIDTH = WINDOW_OBJECT.current.innerWidth;
-    //console.log(DEVICE_WIDTH);
-    //const crit = EXPERTISE_REF.current?.getBoundingClientRect().top;
     const SCROLL_START = DEVICE_WIDTH < 768 ? 1143 : 1559;
     const DURATION_1 = (scrollDuration * 2) / 3; // expertise animation 시간
 
-    //console.log(crit + animationScrollY);
     if (animationScrollY > SCROLL_START && animationScrollY <= SCROLL_START + DURATION_1) {
       // 첫번째 애니메이션 구간
       CONT_STYLE.current = {
@@ -134,34 +101,176 @@ function Expertise({ className, firstText, secondText, scrollImage, scrollDurati
   return (
     <div className="scroll_expertise">
       {windowWidth >= 1280 ? (
-        <article>
+        <>
+          {/* Expertise 텍스트 영역 'Expertis' */}
           <ScrollTriggerArea
-            type="timeLine"
+            className="line1_flow scroll_expertise"
             defaultID="scroll_trigger01"
-            className="expertise_wrap"
-            triggerStart={SCROLL_TRIGGER_OPTION.triggerStart[0]}
-            triggerEnd={SCROLL_TRIGGER_OPTION.triggerEnd[0]}
-            XAxes={SCROLL_TRIGGER_OPTION.XAxes.expertiseTrigger}
-            triggerOffset={'top'}
-            triggerMarkers={true}
-            timeLineFromScale={SCROLL_TRIGGER_OPTION.fromScale.expertiseFromScale}
-            timeLineToScale={SCROLL_TRIGGER_OPTION.toScale.expertiseToScale}
+            type="multiTrigger"
+            triggerStart={{
+              mobile: '0',
+              table: '0',
+              desktop: '0',
+              wide: '0',
+            }}
+            triggerEnd={{
+              mobile: '2200vh',
+              table: '2200vh',
+              desktop: '5000vh',
+              wide: '5000vh',
+            }}
+            triggerMarkers={false}
+            XAxes={[
+              {
+                mobile: '-360vh',
+                table: '-400vh',
+                desktop: '-600vh',
+                wide: '-600vh',
+              },
+            ]}
           >
-            <span className="expertise_text expertis">{main.service.rollingBigText[0]}</span>
-            <span className="expertise_text e timeLine" style={{ width: '83.5vh' }}>
-              {main.service.rollingBigText[1]}
-            </span>
-            <span className="expertise_img img_first_test">
-              <img src={main.imgUrl + main.service.blueBgRollingImages[0].image} alt={main.service.blueBgRollingImages[0].alt} />
-            </span>
-            <span className="expertise_img img_second_test">
-              <img src={main.imgUrl + main.service.blueBgRollingImages[1].image} alt={main.service.blueBgRollingImages[1].alt} />
-            </span>
-            <span className="expertise_img img_third_test">
-              <img src={main.imgUrl + main.service.blueBgRollingImages[2].image} alt={main.service.blueBgRollingImages[2].alt} />
-            </span>
+            <article className="rolling_text">
+              <div className="text_expertis">
+                {main.service.rollingBigText[0]}
+                {/* Expertise 첫번째 이미지 */}
+                <ScrollTriggerArea
+                  className="expertise_img"
+                  defaultID="scroll_trigger02"
+                  type="multiTrigger"
+                  triggerStart={{
+                    mobile: '-160px',
+                    table: '-300px',
+                    desktop: '-110px',
+                    wide: '-100px',
+                  }}
+                  triggerEnd={{
+                    mobile: '1000vh',
+                    table: '1500vh',
+                    desktop: '3000vh',
+                    wide: '3000vh',
+                  }}
+                  triggerMarkers={false}
+                  XAxes={[
+                    {
+                      mobile: '-200%',
+                      table: '-200%',
+                      desktop: '-200%',
+                      wide: '-200%',
+                    },
+                  ]}
+                  duration={0.01}
+                >
+                  <img src={main.imgUrl + main.service.blueBgRollingImages[0].image} alt={main.service.blueBgRollingImages[0].alt} />
+                </ScrollTriggerArea>
+                {/* Expertise 두번째 이미지 */}
+                <ScrollTriggerArea
+                  className="expertise_img"
+                  defaultID="scroll_trigger03"
+                  type="multiTrigger"
+                  triggerStart={{
+                    mobile: '-350px',
+                    table: '-550px',
+                    desktop: '-410px',
+                    wide: '-550px',
+                  }}
+                  triggerEnd={{
+                    mobile: '1000vh',
+                    table: '1500vh',
+                    desktop: '2000vh',
+                    wide: '2000vh',
+                  }}
+                  triggerMarkers={false}
+                  XAxes={[
+                    {
+                      mobile: '-200%',
+                      table: '-200%',
+                      desktop: '-200%',
+                      wide: '-200%',
+                    },
+                  ]}
+                  duration={0.01}
+                >
+                  <img src={main.imgUrl + main.service.blueBgRollingImages[1].image} alt={main.service.blueBgRollingImages[1].alt} />
+                </ScrollTriggerArea>
+                {/* Expertise 세번째 이미지 */}
+                <ScrollTriggerArea
+                  className="expertise_img"
+                  defaultID="scroll_trigger04"
+                  type="multiTrigger"
+                  triggerStart={{
+                    mobile: '0',
+                    table: '-200px',
+                    desktop: '-150px',
+                    wide: '50px',
+                  }}
+                  triggerEnd={{
+                    mobile: '1000vh',
+                    table: '1500vh',
+                    desktop: '3000vh',
+                    wide: '3000vh',
+                  }}
+                  triggerMarkers={false}
+                  XAxes={[
+                    {
+                      mobile: '-200%',
+                      table: '-200%',
+                      desktop: '-200%',
+                      wide: '-200%',
+                    },
+                  ]}
+                  duration={0.01}
+                >
+                  <img src={main.imgUrl + main.service.blueBgRollingImages[2].image} alt={main.service.blueBgRollingImages[2].alt} />
+                </ScrollTriggerArea>
+              </div>
+              {/* Expertise 텍스트 영역 'e' */}
+              <ScrollTriggerArea
+                defaultID="scroll_trigger05"
+                type="multiTrigger"
+                triggerStart={{
+                  mobile: '280px',
+                  table: '130px',
+                  desktop: '900px',
+                  wide: '1200px',
+                }}
+                triggerEnd={{
+                  mobile: '3000vh',
+                  table: '4000vh',
+                  desktop: '5300vh',
+                  wide: '6900vh',
+                }}
+                triggerMarkers={false}
+                fromScale={[
+                  {
+                    mobile: 1,
+                    table: 1,
+                    desktop: 1,
+                    wide: 1,
+                  },
+                ]}
+                toScale={[
+                  {
+                    mobile: 30,
+                    table: 40,
+                    desktop: 60,
+                    wide: 30,
+                  },
+                ]}
+                YAxes={[
+                  {
+                    mobile: '-200%',
+                    table: '-150%',
+                    desktop: '-200%',
+                    wide: '-200%',
+                  },
+                ]}
+                duration={0.001}
+              >
+                <span className="text_e">{main.service.rollingBigText[1]}</span>
+              </ScrollTriggerArea>
+            </article>
           </ScrollTriggerArea>
-        </article>
+        </>
       ) : (
         <article ref={EXPERTISE_REF} {...GET_CLASSNAME} style={CONT_STYLE.current}>
           <div className="scroll_wrap" style={WRAP_STYLE.current}>
