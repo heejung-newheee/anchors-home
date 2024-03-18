@@ -1,0 +1,12 @@
+.works_template .detail_text_wrap .base_article .description {
+  line-height: 2.4rem !important;
+}
+.works_template .detail_text_wrap .base_article .description:nth-child(2) br {
+  display: block;
+}
+.works_template .detail_sub_visual_wrap .sub_visual_text .base_article .description {
+  line-height: 2.4rem !important;
+}
+.works_template .detail_sub_visual_wrap .sub_visual_text .base_article .description:nth-child(2) br {
+  display: block;
+}/*# sourceMappingURL=mobileDefault.css.map */

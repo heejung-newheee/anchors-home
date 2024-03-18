@@ -1,0 +1,13 @@
+html {
+  background-color: #000;
+}
+
+.about_partner {
+  height: 4.7rem;
+}
+.about_partner:first-child {
+  margin-bottom: 2.6rem;
+}
+.about_partner .rolling_inner li {
+  width: 16rem;
+}/*# sourceMappingURL=chchaa.css.map */

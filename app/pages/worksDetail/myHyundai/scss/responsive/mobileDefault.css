@@ -1,0 +1,9 @@
+.my_hyundai .visual .disclaimer {
+  padding: 0 3rem;
+}
+.my_hyundai .detail_text_wrap .description:nth-child(2) br {
+  display: block;
+}
+.my_hyundai .myhyundai_device_wrap {
+  background-color: #f4f4f4;
+}/*# sourceMappingURL=mobileDefault.css.map */
