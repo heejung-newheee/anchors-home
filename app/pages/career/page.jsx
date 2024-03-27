@@ -23,6 +23,8 @@ import './scss/ career.scss';
 
 export const metadata = {
   title: seo.title.subPage.career,
+  keywords: seo.keywords.career,
+  description: seo.description.career,
 };
 // const TRIGGER_START = {
 //   mobile: '10px',

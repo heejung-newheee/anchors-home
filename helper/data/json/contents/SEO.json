@@ -10,6 +10,7 @@
       "contact" : "Contact",
       "career" : "Career",
       "esg" : "Esg",
+      "privacyPolicy" : "Privacy Policy",
       "detail" : {
         "jPlatform" : "Hyundai Motor J Platform",
         "BMS": "Hyundai Motor BMS renewal",
@@ -27,8 +28,26 @@
        }
     }
   },
-  "keywords" : "ANCHORS.Inc | Anything is Possible",
-  "description": "주식회사 앵커스는 2018년에 설립되어, 사원수 100+여명 규모로 매년 50% 이상 성장하고 있습니다. 사업분야는 AEM Consulting & Development, Salesforce Consulting & Development, Digital Service 구축 및 운영, System Integration 등이며, 삼성, 현대, KIA, Chanel 등 대기업 프로젝트를 주로 진행하고 있습니다.",
+  "keywords" : {
+    "main" : "Anchors, SI, System Integration, AEM, Adobe Experience Manager, Salesforce, Consulting, Homepage, 앵커스, 어도비, 세일즈포스, 홈페이지, 컨설팅, 시스템 개발, Web, App, IT",
+    "works" : "Anchors, 앵커스, CHANEL, 샤넬, luxury, 럭셔리, Hyundai, 현대, automobile, 자동차, engineering, 엔지니어링, Kia, 기아, AIA, Insurance, 보험 Korean air, 대한항공, Genesis, 제네시스",
+    "about" : "Anchors, 앵커스, awards, 수상",
+    "service" : "Anchors, 앵커스, Development, 개발, 구축, Consulting, 기획, 컨설팅, Maintenance, 운영, Design, 디자인",
+    "contact" : "Anchors, 앵커스, 문의, 불공정거래, 제보",
+    "career" : "Anchors, 앵커스, 구인, 채용, 복지",
+    "esg" : "Anchors, 앵커스, ESG, 환경 경영 방침, 인권 경영 헌장, 안전 보건 방침, 윤리 강령",
+    "privacyPolicy" : "Anchors, 앵커스, Privacy, Policy, 개인정보 처리 방침"
+  },
+  "description": {
+    "main" : "주식회사 앵커스는 2018년에 설립되어, 사원수 100+여명 규모로 매년 50% 이상 성장하고 있습니다.  주식회사 앵커스의 사업 분야는, 컨설팅, 개발, AEM, Salesforce, System Integration 등이며, 삼성, 현대, KIA, Chanel 등 대기업 프로젝트를 주로진행하고 있습니다.",
+    "works" : "주식회사 앵커스는 한국, 일본, 유럽, 독일, 영국, 캐나다, 호주, 브라질 등 다양한 해외 프로젝트를 진행하고 있습니다.",
+    "about" : "주식회사 앵커스는 2018년에 설립되어, 임직원 100여명 규모로 성장했습니다. 임직원들이 행복한 회사를 만들어 나가는 것이 목표입니다.",
+    "service" : "주식회사 앵커스에서 진행하는 서비스 입니다.고객에게 컨설팅, 기획, 디자인, 개발, 운영 등의 서비스를 제공하고 있습니다.",
+    "contact" : "주식회사 앵커스에 문의하실 부분이 있거나, 제보하실 것이 있다면, 언제든 연락 부탁드립니다.",
+    "career" : "주식회사 앵커스의 팀장 소개, 복지, 채용 과정을 소개합니다.",
+    "esg" : "주식회사 앵커스의 ESG 정책입니다.",
+    "privacyPolicy" : "주식회사 앵커스의 개인정보 처리방침입니다."
+  },
   "openGraph": {
     "locale": "ko-KR",
     "type": "website",

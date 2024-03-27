@@ -12,6 +12,8 @@ import './scss/service.scss';
 
 export const metadata = {
   title: seo.title.subPage.service,
+  keywords: seo.keywords.service,
+  description: seo.description.service,
 };
 
 const TRIGGER_START = {

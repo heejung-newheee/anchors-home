@@ -11,6 +11,8 @@ import './scss/works.scss';
 
 export const metadata = {
   title: seo.title.subPage.works,
+  keywords: seo.keywords.works,
+  description: seo.description.works,
 };
 
 function Works() {
