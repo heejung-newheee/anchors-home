@@ -24,6 +24,8 @@ import './scss/about.scss';
 
 export const metadata = {
   title: seo.title.subPage.about,
+  keywords: seo.keywords.about,
+  description: seo.description.about,
 };
 
 const LOTTIE_OPTION = {

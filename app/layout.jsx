@@ -12,8 +12,8 @@ export const metadata = {
     default: seo.title.default,
     template: seo.title.template,
   },
-  keywords: seo.keywords,
-  description: seo.description,
+  keywords: seo.keywords.main,
+  description: seo.description.main,
   openGraph: seo.openGraph,
 };
 export default function RootLayout({ children }) {

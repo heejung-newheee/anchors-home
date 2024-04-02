@@ -9,7 +9,9 @@ import seo from '@/helper/data/json/contents/SEO.json';
 import './scss/contact.scss';
 
 export const metadata = {
-  title: seo.title.subPage.esg,
+  title: seo.title.subPage.contact,
+  keywords: seo.keywords.contact,
+  description: seo.description.contact,
 };
 
 function Contact() {

@@ -8,7 +8,9 @@ import './scss/esg.scss';
 import Visual from '@/components/Visual/Visual'
 
 export const metadata = {
-  title: seo.title.subPage.contact,
+  title: seo.title.subPage.esg,
+  keywords: seo.keywords.esg,
+  description: seo.description.esg,
 };
 
 // const TRIGGER_START = {
@@ -40,7 +42,7 @@ function Esg() {
       </div>
       {/* E: Visual 영역 */}
 
-      <Tab className="esg_tab_wrapper" type="article" tabList={["환경 경영방침", "인권 경영 현장","안전 보건 방침", "윤리 강영", "ESG 정보방"]}>
+      <Tab className="esg_tab_wrapper" type="article" tabList={["환경 경영방침", "인권 경영 현장","안전 보건 방침", "윤리 강령", "ESG 정보방"]}>
         <article className="tab_content_00">
           <img src='/assets/images/contents/esg/img_tab00_img00.png' className='img_00'/>
           <div className='img_01'>

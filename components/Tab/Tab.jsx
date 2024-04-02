@@ -17,11 +17,13 @@ function Tab({ type = 'article', className, json, tabList, children }) {
 
   let SORT_CONTENT_LENGTH = json ? json.content.length : 0;
   function TabButtonEvent(button, index) {
+    //console.log('TabButtonEvent : ', window.scrollY);
     setTabCurrent(index);
     if (type === 'portfolioList') setSortFilter(button), setSortContents(DEFAULT_COUNT), topMoving(0);
   }
 
   function topMoving(value) {
+    //console.log('topMoving : ', window.scrollY);
     window.scrollTo({
       top: value,
       behavior: 'smooth',
@@ -37,6 +39,8 @@ function Tab({ type = 'article', className, json, tabList, children }) {
       case 'portfolioList':
         const IMG_URL = json.imgUrl;
         const JSON_FILTER = json.content.filter(({ sort }) => sort.includes(sortFilter));
+
+        //console.log(sortFilter, JSON_FILTER);
 
         return JSON_FILTER.map(({ sort, thumbnail, thumbnailAlt, title, description, pageUrl }, idx, array) =>
           idx < sortContents

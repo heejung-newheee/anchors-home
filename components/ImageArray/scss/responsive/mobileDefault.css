@@ -1,0 +1,13 @@
+.image_array {
+  padding: 6rem 2.6rem;
+}
+.image_array img {
+  width: 100%;
+  max-width: 1196px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+.image_array img:first-child {
+  margin-top: 0;
+}/*# sourceMappingURL=mobileDefault.css.map */
