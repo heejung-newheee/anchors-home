@@ -24,5 +24,16 @@
         }
       }
     }
+    .esg {
+      .img_01 {
+        & > div {
+          & > img {
+            &:first-child {
+              padding-right: 20rem;
+            }
+          }
+        }
+      }
+    }
   }
 }

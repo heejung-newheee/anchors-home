@@ -1,0 +1,16 @@
+@include tablet {
+  .esg {
+    .esg_tab_wrapper {
+      .tab_btn_wrap {
+        .tab-button {
+          font-size: 2rem;
+          line-height: 3.2rem;
+
+          button {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
