@@ -67,11 +67,11 @@
     margin-bottom: 0;
     .img_00 {
       max-width: 100rem;
-      padding-bottom: 8rem;
+      margin: 0 2.4rem 8rem;
     }
     .img_01 {
-      background: url(/assets/images/contents/contact/img_bottom_bg01.png) no-repeat;
-      background-size: cover;
+      background: url(/assets/images/contents/contact/img_bottom_bg01.png) center / cover no-repeat;
+      padding: 0 2.4rem;
 
       & > div {
         max-width: 120rem;
@@ -83,7 +83,6 @@
             max-width: 52.3rem;
             padding-top: 16.4rem;
             padding-bottom: 5rem;
-            // padding-right: 20rem;
           }
           &:last-child {
             max-width: 44rem;

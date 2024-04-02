@@ -1,11 +1,11 @@
-@include tablet {
+@include wide {
   .esg {
     .esg_visual {
       .visual {
-        height: 57.6rem;
+        height: 96rem;
       }
       .description {
-        padding: 12rem 7.4rem 0rem;
+        padding: 18rem 16.8rem 6rem;
 
         & + .description {
           padding-top: 0;
@@ -17,7 +17,6 @@
     .esg_tab_wrapper {
       .tab-button {
         font-size: 2rem;
-        height: 4.6rem;
 
         button {
           font-size: 2rem;
