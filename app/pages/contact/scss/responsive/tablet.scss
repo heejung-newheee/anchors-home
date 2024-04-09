@@ -24,5 +24,29 @@
         }
       }
     }
+    .esg {
+      .img_01 {
+        & > div {
+          & > img {
+            &:first-child {
+              padding-right: 20rem;
+            }
+          }
+        }
+      }
+    }
+
+    .esg {
+      .img_00 {
+        margin: 0 7.4rem 8rem;
+      }
+      .img_01 {
+        & > img {
+          &:first-child {
+            padding-right: 20rem;
+          }
+        }
+      }
+    }
   }
 }

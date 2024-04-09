@@ -1,0 +1,27 @@
+@include wide {
+  .esg {
+    .esg_visual {
+      .visual {
+        height: 96rem;
+      }
+      .description {
+        padding: 18rem 16.8rem 6rem;
+
+        & + .description {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    .esg_tab_wrapper {
+      .tab-button {
+        font-size: 2rem;
+
+        button {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

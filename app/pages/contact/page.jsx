@@ -29,10 +29,7 @@ function Contact() {
           </DepthTitle>
           {/* S: 말풍선 영역 */}
           <span className="wordbubble">
-            <img
-              src={contact.imgUrl + contact.bubbleImg}
-              alt={contact.bubbleAlt}
-            />
+            <img src={contact.imgUrl + contact.bubbleImg} alt={contact.bubbleAlt} />
           </span>
           {/* E: 말풍선 영역 */}
 
@@ -51,11 +48,13 @@ function Contact() {
       {/* E: visual 영역 */}
 
       <div className="esg">
-        <img src='/assets/images/contents/contact/img_bottom_img00.png' className='img_00'/>
-        <div className='img_01'>
+        <div className="img_00">
+          <img src="/assets/images/contents/contact/img_bottom_img00.png" />
+        </div>
+        <div className="img_01">
           <div>
-            <img src='/assets/images/contents/contact/img_bottom_img02.png'/>
-            <img src='/assets/images/contents/contact/img_bottom_img03.png'/>
+            <img src="/assets/images/contents/contact/img_bottom_img02.png" />
+            <img src="/assets/images/contents/contact/img_bottom_img03.png" />
           </div>
         </div>
       </div>
