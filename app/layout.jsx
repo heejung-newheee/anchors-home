@@ -12,9 +12,13 @@ export const metadata = {
     default: seo.title.default,
     template: seo.title.template,
   },
+  verification: {
+    google: seo.google,
+  },
   keywords: seo.keywords.main,
   description: seo.description.main,
   openGraph: seo.openGraph,
+  robots : seo.robots
 };
 export default function RootLayout({ children }) {
   console.log(seo);

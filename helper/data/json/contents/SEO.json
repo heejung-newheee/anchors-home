@@ -54,5 +54,7 @@
     "title": "ANCHORS.Inc",
     "description": "Anything is Possible",
     "siteName": "ANCHORS.Inc"
-  }
+  },
+  "robots" : "index, follow",
+  "google" : "JjlezwG_qM36q15vv-M38XMeqM0kR1fxkt9BmJvsN5c"
 }
