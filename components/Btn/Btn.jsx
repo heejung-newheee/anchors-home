@@ -26,13 +26,13 @@ export default function Btn({
       )}
 
       {type === 'a' && (
-        <a href={url} title={alt} className={className} onClick={onClick} target={target}>
+        <a href={url} title={alt} className={className} onClick={onClick} target={target} rel={"canonical"}>
           <span>{children}</span>
         </a>
       )}
 
       {type === 'link' && (
-        <a href={url} title={alt} className={className} onClick={onClick}>
+        <a href={url} title={alt} className={className} onClick={onClick} rel={"canonical"}>
           <span>{children}</span>
         </a>
       )}
