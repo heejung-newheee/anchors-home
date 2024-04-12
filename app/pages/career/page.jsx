@@ -25,7 +25,9 @@ export const metadata = {
   title: seo.title.subPage.career,
   keywords: seo.keywords.career,
   description: seo.description.career,
-  canonical : seo.canonical.career,
+  alternates : {
+    canonical : seo.canonical.career,
+  }
 };
 // const TRIGGER_START = {
 //   mobile: '10px',

@@ -15,11 +15,13 @@ export const metadata = {
   verification: {
     google: seo.google,
   },
+  alternates : {
+    canonical : seo.canonical.main,
+  },
   keywords: seo.keywords.main,
   description: seo.description.main,
   openGraph: seo.openGraph,
   robots : seo.robots,
-  canonical : seo.canonical.main,
 };
 export default function RootLayout({ children }) {
   console.log(seo);

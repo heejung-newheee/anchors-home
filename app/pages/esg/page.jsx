@@ -11,7 +11,9 @@ export const metadata = {
   title: seo.title.subPage.esg,
   keywords: seo.keywords.esg,
   description: seo.description.esg,
-  canonical : seo.canonical.esg,
+  alternates : {
+    canonical : seo.canonical.esg,
+  }
 };
 
 // const TRIGGER_START = {

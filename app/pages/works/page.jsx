@@ -13,7 +13,9 @@ export const metadata = {
   title: seo.title.subPage.works,
   keywords: seo.keywords.works,
   description: seo.description.works,
-  canonical : seo.canonical.works,
+  alternates : {
+    canonical : seo.canonical.works,
+  }
 };
 
 function Works() {

@@ -14,7 +14,9 @@ export const metadata = {
   title: seo.title.subPage.service,
   keywords: seo.keywords.service,
   description: seo.description.service,
-  canonical : seo.canonical.service,
+  alternates : {
+    canonical : seo.canonical.service,
+  }
 };
 
 const TRIGGER_START = {

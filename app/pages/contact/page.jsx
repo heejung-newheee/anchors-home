@@ -12,7 +12,9 @@ export const metadata = {
   title: seo.title.subPage.contact,
   keywords: seo.keywords.contact,
   description: seo.description.contact,
-  canonical : seo.canonical.contact,
+  alternates : {
+    canonical : seo.canonical.contact,
+  }
 };
 
 function Contact() {
