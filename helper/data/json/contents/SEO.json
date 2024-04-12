@@ -55,6 +55,16 @@
     "description": "Anything is Possible",
     "siteName": "ANCHORS.Inc"
   },
+  "canonical" : {
+    "main" : "https://www.anchors-biz.com/",
+    "works" : "https://www.anchors-biz.com/pages/works",
+    "about" : "https://www.anchors-biz.com/pages/about",
+    "service" : "https://www.anchors-biz.com/pages/service",
+    "contact" : "https://www.anchors-biz.com/pages/contact",
+    "career" : "https://www.anchors-biz.com/pages/career",
+    "esg" : "https://www.anchors-biz.com/pages/esg",
+    "privacyPolicy" : "https://www.anchors-biz.com/pages/privacyPolicy"
+  },
   "robots" : "index, follow",
   "google" : "JjlezwG_qM36q15vv-M38XMeqM0kR1fxkt9BmJvsN5c"
 }

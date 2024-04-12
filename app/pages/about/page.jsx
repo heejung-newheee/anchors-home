@@ -26,6 +26,7 @@ export const metadata = {
   title: seo.title.subPage.about,
   keywords: seo.keywords.about,
   description: seo.description.about,
+  canonical : seo.canonical.about,
 };
 
 const LOTTIE_OPTION = {

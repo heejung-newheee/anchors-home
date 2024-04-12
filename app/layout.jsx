@@ -18,7 +18,8 @@ export const metadata = {
   keywords: seo.keywords.main,
   description: seo.description.main,
   openGraph: seo.openGraph,
-  robots : seo.robots
+  robots : seo.robots,
+  canonical : seo.canonical.main,
 };
 export default function RootLayout({ children }) {
   console.log(seo);

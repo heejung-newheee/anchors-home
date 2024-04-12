@@ -5,6 +5,7 @@ export const metadata = {
   title: seo.title.subPage.privacyPolicy,
   keywords: seo.keywords.privacyPolicy,
   description: seo.description.privacyPolicy,
+  canonical : seo.canonical.privacyPolicy,
 };
 
 function PrivacyPolicy() {
