@@ -23,6 +23,7 @@ export const metadata = {
   openGraph: seo.openGraph,
   robots : seo.robots,
 };
+
 export default function RootLayout({ children }) {
   console.log(seo);
   return (
