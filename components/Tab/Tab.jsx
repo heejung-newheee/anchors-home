@@ -65,7 +65,7 @@ function Tab({ type = 'article', className, json, tabList, children }) {
 
   return (
     <section className={'tab' + (!className || className === '' ? '' : ` ${className}`)} data-tab-type={type}>
-      <article className="tab_btn_wrap">
+      <div className="tab_btn_wrap">
         <ul>
           {BUTTON_ARR.map((button, idx) => (
             <TabButton current={tabCurrent} index={idx} key={idx} event={() => TabButtonEvent(button, idx)}>
@@ -73,7 +73,7 @@ function Tab({ type = 'article', className, json, tabList, children }) {
             </TabButton>
           ))}
         </ul>
-      </article>
+      </div>
       <TabContents>{TabContentsEvent()}</TabContents>
       {type === 'portfolioList' && sortContents < SORT_CONTENT_LENGTH && sortContents !== SORT_CONTENT_LENGTH ? (
         <Btn type="button" className="view_more_btn" onClick={() => moreEvent()}>

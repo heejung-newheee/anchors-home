@@ -1,6 +1,4 @@
 {
-  "copyright": "All Rights Reserved ©Anchors 2023",
-  "sendEmail": "contact@anchors-biz.com",
   "menuList": [
     {
       "name": [{ "words": "Our" }, { "words": "works" }],
@@ -33,6 +31,9 @@
       "alt": "ESG"
     }
   ],
+
+  "sendEmail": "contact@anchors-biz.com",
+  "copyright": "All Rights Reserved ©Anchors 2023",
   "privacyPolicyEn": "Privacy Policy",
   "privacyPolicyKo": "개인정보 처리방침",
   "privacyPolicyUrl": "/pages/privacyPolicy"

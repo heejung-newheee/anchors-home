@@ -6,6 +6,14 @@
   },
   "introduction": [
     {
+      "name":"Anchors Platform",
+      "textLine1" : "진화하는 플랫폼과 디지털 기술에 대한 지속적인 습득은 급변하는 e-Business 환경에 유연하게 대처할 수 있습니다.",
+      "textLine2" : "웹과 애플리케이션, AEM, Salesforce 등 다양한 솔루션을 개발합니다. 기발하고 다양한 인터렉션을 통해 디자인에 생동감을 불어넣습니다.",
+      "hashtag": ["#Web & App Development","#Salesforce Project Development","#Global IT Service Development","#AEM Project Development"],
+      "img": "img_rdlab.jpg",
+      "alt": "앵커스 R&D Lab실 이미지"
+    },
+    {
       "name":"Development",
       "textLine1" : "진화하는 플랫폼과 디지털 기술에 대한 지속적인 습득은 급변하는 e-Business 환경에 유연하게 대처할 수 있습니다.",
       "textLine2" : "웹과 애플리케이션, AEM, Salesforce 등 다양한 솔루션을 개발합니다. 기발하고 다양한 인터렉션을 통해 디자인에 생동감을 불어넣습니다.",
