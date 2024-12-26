@@ -19,35 +19,6 @@ export const metadata = {
 };
 
 function Esg() {
-  function TabContents() {
-    return (
-      <>
-        <div className="tab_content_00">
-          <img src='/assets/images/contents/esg/img_tab00_img00.png' className='img_00' alt="" />
-          <div className='img_01'>
-          <img src='/assets/images/contents/esg/img_tab00_img01.png' alt="" />
-          </div>
-          <img src='/assets/images/contents/esg/img_tab00_img02.png' className='img_02' alt="" />
-        </div>
-
-        <div className="tab_content_01">
-          <img src='/assets/images/contents/esg/img_tab01_img00.png' className='img_00' alt="" />
-        </div>
-        <div className="tab_content_02">
-          <img src='/assets/images/contents/esg/img_tab02_img00.png' className='img_00' alt="" />
-        </div>
-        <div className="tab_content_03" >
-          <img src='/assets/images/contents/esg/img_tab03_img01.png' className='img_00' alt="" />
-          <img src='/assets/images/contents/esg/img_tab03_img00.png' className='img_01' alt="" />
-        </div>
-        <div className="tab_content_04">
-          <img src='/assets/images/contents/esg/img_tab04_img00.png' className='img_00' alt="" />
-        </div>
-      </>
-    );
-  }
-
-
   return (
     <main className="esg section_div is_photo">
       {/* S: PageTitle 영역 */}
@@ -63,7 +34,15 @@ function Esg() {
       {/* E: Visual 영역 */}
 
       <Tab className="esg_tab_wrapper" type="article" tabList={esg.tabList}>
-        {TabContents()}
+        {/* S : TabContents 영역 */}
+        {esg.tabContents.map((cont, idx) => (
+          <div key={idx} className={cont.className}>
+            {cont.contents.map((data, index) => (
+              data.useArea === "Y" ? <div key={index} className={data.className}><img src={esg.imgUrl + data.img} alt={data.alt} /></div> : <img key={index} src={esg.imgUrl + data.img} className={data.className} alt={data.alt} />
+            ))}
+          </div>
+        ))}
+        {/* E : TabContents 영역 */}
       </Tab>
     </main>
   );

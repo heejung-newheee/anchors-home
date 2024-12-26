@@ -1,8 +1,43 @@
 {
-  "imgUrl": "/assets/images/contents/contact/",
+  "imgUrl": "/assets/images/contents/esg/",
   "textList" : {
     "textEn": "Anchors takes the lead in <span>environmental protection</span>, carries out <span>social contribution activities</span> such as supporting the socially disadvantaged, and <span>complies with laws and ethics.</span>",
     "textKo": "주식회사 앵커스는 환경보호에 앞장서며, 사회적 약자 지원 등 사회공헌 활동을 전개하며, 법규와 윤리를 준수합니다."
   },
-  "tabList" : ["환경 경영방침", "인권 경영 현장","안전 보건 방침", "윤리 강령", "ESG 정보방"]
+  "tabList" : ["환경 경영방침", "인권 경영 현장","안전 보건 방침", "윤리 강령", "ESG 정보방"],
+  "tabContents" : [
+    {
+      "className" : "tab_content_00",
+      "contents" : [
+        {"img" : "img_tab00_img00.png", "className" : "img_00", "useArea" : "N", "alt" : "00-00"},
+        {"img" : "img_tab00_img01.png", "className" : "img_01", "useArea" : "Y", "alt" : "00-01"},
+        {"img" : "img_tab00_img02.png", "className" : "img_02", "useArea" : "N", "alt" : "00-02"}
+      ]
+    },
+    {
+      "className" : "tab_content_01",
+      "contents" : [
+        {"img" : "img_tab01_img00.png", "className" : "img_00", "useArea" : "N", "alt" : "01-00"}
+      ]
+    },
+    {
+      "className" : "tab_content_02",
+      "contents" : [
+        {"img" : "img_tab02_img00.png", "className" : "img_00", "useArea" : "N", "alt" : "02-00"}
+      ]
+    },
+    {
+      "className" : "tab_content_03",
+      "contents" : [
+        {"img" : "img_tab03_img01.png", "className" : "img_01", "useArea" : "N", "alt" : "03-01"},
+        {"img" : "img_tab03_img00.png", "className" : "img_00", "useArea" : "N", "alt" : "03-00"}
+      ]
+    },
+    {
+      "className" : "tab_content_04",
+      "contents" : [
+        {"img" : "img_tab04_img00.png", "className" : "img_00", "useArea" : "N", "alt" : "04-00"}
+      ]
+    }
+  ]
 }

@@ -71,22 +71,16 @@
     }
     .img_01 {
       background: url(/assets/images/contents/contact/img_bottom_bg01.png) center / cover no-repeat;
-      padding: 0 2.4rem;
+      padding: 0 2.4rem 10rem;
 
-      & > div {
-        max-width: 120rem;
-        margin: 0 auto;
-        padding-bottom: 10rem;
-
-        & > img {
-          &:first-child {
-            max-width: 52.3rem;
-            padding-top: 16.4rem;
-            padding-bottom: 5rem;
-          }
-          &:last-child {
-            max-width: 44rem;
-          }
+      & > img {
+        &:first-child {
+          max-width: 52.3rem;
+          padding-top: 16.4rem;
+          padding-bottom: 5rem;
+        }
+        &:last-child {
+          max-width: 44rem;
         }
       }
     }
