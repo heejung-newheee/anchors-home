@@ -11,10 +11,8 @@ import Tab from '@/components/Tab/Tab';
 import Visual from '@/components/Visual/Visual';
 import careerComment from '@/helper/data/json/contents/career/careerComment.json';
 import careerEmployment from '@/helper/data/json/contents/career/careerEmployment.json';
-import careerFaq from '@/helper/data/json/contents/career/careerFaq.json';
 import careerMembers from '@/helper/data/json/contents/career/careerMembers.json';
-import careerProcess from '@/helper/data/json/contents/career/careerProcess.json';
-import careerText from '@/helper/data/json/contents/career/careerText.json';
+import career from '@/helper/data/json/contents/career/career.json';
 import careerWelfare from '@/helper/data/json/contents/career/careerWelfare.json';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 import seo from '@/helper/data/json/contents/SEO.json';
@@ -29,19 +27,6 @@ export const metadata = {
     canonical : seo.canonical.career,
   }
 };
-// const TRIGGER_START = {
-//   mobile: '10px',
-//   table: '10px',
-//   desktop: '10px',
-//   wide: '10px',
-// };
-//
-// const TRIGGER_END = {
-//   mobile: '500px',
-//   table: '500px',
-//   desktop: '1000px',
-//   wide: '1000px',
-// };
 
 function Career() {
   return (
@@ -49,16 +34,12 @@ function Career() {
       <PageTitle data={headerFooter.menuList[4].name} />
 
       {/* S: key_visual 영역 */}
-      <Visual
-        defaultId="scroll_main_visual"
-        imgUrl="/assets/images/contents/career/img_keyvisual_members.jpg"
-        // className="key_visual"
-      />
+      <Visual defaultId="scroll_main_visual" imgUrl="/assets/images/contents/career/img_keyvisual_members.jpg" />
 
       {/* S: 비주얼 이미지 아래 텍스트 */}
       <div className="career_text">
-        <Description innerHTMLOption="Y" data={careerText.textList[0].textEn} />
-        <Description data={careerText.textList[0].textKo} />
+        <Description innerHTMLOption="Y" data={career.textList.textEn} />
+        <Description data={career.textList.textKo} />
       </div>
       {/* E: 비주얼 이미지 아래 텍스트 */}
 
@@ -71,7 +52,7 @@ function Career() {
           type="double"
           firstContent={careerMembers.members.map((img, idx) => (
             <div key={idx} className="first_swiper_cards">
-              <img src={careerMembers.imgUrl + img.img} alt={img.alt} />
+              <img src={career.imgUrl + img.img} alt={img.alt} />
             </div>
           ))}
           secondContent={careerMembers.members.map((txt, idx) => (
@@ -99,22 +80,16 @@ function Career() {
         <DepthTitle blindOption="hidden" depthLevel="1">
           Our Philosophy
         </DepthTitle>
-        <Description className="swiper_comment_text" innerHTMLOption="Y" data={careerText.textList[0].commentText} />
+        <Description className="swiper_comment_text" innerHTMLOption="Y" data={career.textList.commentText} />
         <SwiperArea
           type="single"
           autoPlayStop="Y"
           swiperContent={[...careerComment.content, ...careerComment.content].map((cont, idx) => (
             <div key={idx}>
-              <>
-                {/*<Visual*/}
-                {/*  key={`visual${idx}`}*/}
-                {/*  imgUrl={careerComment.imgUrl + cont.img}*/}
-                {/*/>*/}
-                <MoreDetail key={`detail${idx}`} imgUrl={careerComment.imgUrl + cont.img}>
+                <MoreDetail key={`detail${idx}`} imgUrl={career.imgUrl + cont.img}>
                   <Description innerHTMLOption="Y" data={cont.highlightText} />
                   <Disclaimer data={cont.text} />
                 </MoreDetail>
-              </>
             </div>
           ))}
           swiperOption={{
@@ -144,10 +119,10 @@ function Career() {
         <DepthTitle blindOption="hidden" depthLevel="1">
           Welfare List
         </DepthTitle>
-        <Description className="welfare_text" innerHTMLOption="Y" data={careerText.textList[0].welfareText} />
+        <Description className="welfare_text" innerHTMLOption="Y" data={career.textList.welfareText} />
         <article className="welfare_list">
           {careerWelfare.content.map((data, idx) => (
-            <BaseArticle key={idx} imgUrl={careerWelfare.imgUrl + data.img} imgAlt={data.alt} description={data.title} disclaimer={data.text} />
+            <BaseArticle key={idx} imgUrl={career.imgUrl + data.img} imgAlt={data.alt} description={data.title} disclaimer={data.text} />
           ))}
         </article>
       </section>
@@ -164,11 +139,12 @@ function Career() {
         <DepthTitle blindOption="hidden" depthLevel="1">
           How to join Anchors
         </DepthTitle>
-        <Description className="employment_text" data={careerText.textList[0].employmentText} />
-        <Tab type="article" tabList={careerEmployment.title}>
+        <Description className="employment_text" data={career.textList.employmentText} />
+        <Tab type="article" tabList={careerEmployment.tabList}>
+
           <article className="process_tab">
             <div className="process_number_wrap">
-              {careerProcess.process.map((data, idx) => (
+              {careerEmployment.process.map((data, idx) => (
                 <div key={idx} className="process_number">
                   <Description data={data.number} />
                   <Description data={data.text} />
@@ -176,11 +152,11 @@ function Career() {
               ))}
             </div>
             <div className="process_description">
-              <Description data={careerProcess.description[0].text1} />
-              <Description data={careerProcess.description[0].text2} />
+              <Description data={careerEmployment.description[0].text1} />
+              <Description data={careerEmployment.description[0].text2} />
             </div>
             <div className="process_detail_description">
-              {careerProcess.detail_description.map((data, idx) => (
+              {careerEmployment.detail_description.map((data, idx) => (
                 <div key={idx} className="detail_description_list">
                   <ElementTitle data={data.number} />
                   <ElementTitle data={data.title} />
@@ -189,9 +165,10 @@ function Career() {
               ))}
             </div>
           </article>
+
           <article className="faq_tab">
             <Accordion
-              contents={careerFaq.content.map((data, idx) => ({
+              contents={careerEmployment.faq.map((data, idx) => ({
                 key: idx,
                 title: data.title,
                 content: data.text,
