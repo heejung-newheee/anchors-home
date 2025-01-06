@@ -1,0 +1,51 @@
+@include tablet {
+    //  welfare 영역
+    .welfare{
+        .welfare_text{
+            margin-bottom: 4rem;
+            br.career_mo{
+                display: none;
+            }
+        }
+        .welfare_list{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            .base_article{
+                box-sizing: border-box;
+                width: calc(33.3333% - 1.8rem);
+                height: 27.8rem;
+                margin-bottom: 1.8rem;
+                padding: 3.4rem 2.4rem;
+                border: 0.1rem solid #E4E4E4;
+                &:nth-child(3),&:nth-child(6),&:nth-child(9),&:nth-child(12){
+                    margin-right: 0;
+                }
+                &:last-child{
+                    margin-bottom: 8rem;
+                }
+                img{
+                    width: 4.6rem;
+                    height: 4.6rem;
+                    margin-top: 4.6rem;
+                    margin-bottom: 3.6rem;
+                }
+                p{
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 100%;
+                    text-align: left;
+                    margin: 0;
+                    padding-bottom: 1.4rem;
+                }
+                span{
+                    width: 100%;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 2.4rem;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}

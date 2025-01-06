@@ -1,5 +1,4 @@
 import Accordion from '@/components/Accordion/Accordion';
-import BaseArticle from '@/components/BaseArticle/BaseArticle';
 import DepthTitle from '@/components/DepthTitle/DepthTitle';
 import Description from '@/components/Description/Description';
 import Disclaimer from '@/components/Disclaimer/Disclaimer';
@@ -9,6 +8,7 @@ import PageTitle from '@/components/PageTitle/PageTitle';
 import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Tab from '@/components/Tab/Tab';
 import Visual from '@/components/Visual/Visual';
+import Welfare from '@/components/Welfare/Welfare';
 import careerComment from '@/helper/data/json/contents/career/careerComment.json';
 import careerEmployment from '@/helper/data/json/contents/career/careerEmployment.json';
 import careerMembers from '@/helper/data/json/contents/career/careerMembers.json';
@@ -31,7 +31,7 @@ export const metadata = {
 function Career() {
   return (
     <main className="career section_div is_photo">
-      <PageTitle data={headerFooter.menuList[4].name} />
+      <PageTitle data={headerFooter.menuList[5].name} />
 
       {/* S: key_visual 영역 */}
       <Visual defaultId="scroll_main_visual" imgUrl="/assets/images/contents/career/img_keyvisual_members.jpg" />
@@ -114,18 +114,9 @@ function Career() {
       </section>
       {/* E: swiper_comment 영역 */}
 
+
       {/* S: welfare 영역 */}
-      <section className="welfare">
-        <DepthTitle blindOption="hidden" depthLevel="1">
-          Welfare List
-        </DepthTitle>
-        <Description className="welfare_text" innerHTMLOption="Y" data={career.textList.welfareText} />
-        <article className="welfare_list">
-          {careerWelfare.content.map((data, idx) => (
-            <BaseArticle key={idx} imgUrl={career.imgUrl + data.img} imgAlt={data.alt} description={data.title} disclaimer={data.text} />
-          ))}
-        </article>
-      </section>
+      <Welfare description={career.textList.welfareText} dataList={careerWelfare.content} imgUrl={career.imgUrl} />
       {/* E: welfare 영역 */}
 
       {/*S: sub_visual 영역 */}

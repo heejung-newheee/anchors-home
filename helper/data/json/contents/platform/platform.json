@@ -1,0 +1,95 @@
+{
+  "imgUrl": "/assets/images/contents/platform/",
+  "textList" : {
+    "textEn": "Transforming the way businesses <span>Operate</span>.",
+    "textKo": "Anchors는 유연한 커스터마이징과 손쉬운 구독형 솔루션으로, 여러분의 비즈니스를 한 단계 더 성장시키세요."
+  },
+  "visual" : {
+    "img": "img_visual.png",
+    "alt": "Anchors 커머스 플랫폼 이미지"
+  },
+  "subVisual" : {
+    "img": "img_visual_lights.png",
+    "alt": "개발 작업 중인 이미지"
+  },
+  "welfare" : [
+    {
+      "title": "회원관리",
+      "text": "상세한 회원정보 기록부터 엑셀 대량등록까지 지원해요.",
+      "img": "img_welfare_member.svg",
+      "alt": "회원 아이콘"
+    },
+    {
+      "title": "권한 관리",
+      "text": "관리자별 메뉴 권한 지정이 가능해요.",
+      "img": "img_welfare_authority.svg",
+      "alt": "권한 아이콘"
+    },
+    {
+      "title": "주문관리",
+      "text": "회원이 문의한 문의 내용을 확인할 수 있어요.",
+      "img": "img_welfare_order.svg",
+      "alt": "주문 아이콘"
+    },
+    {
+      "title": "일정관리",
+      "text": "고객정보와 예약을 효율적으로 관리해요.",
+      "img": "img_welfare_schedule.svg",
+      "alt": "일정 아이콘"
+    },
+    {
+      "title": "시스템 관리",
+      "text": "IP 접근 제한 관리, 보안 관리를 할 수 있어요.",
+      "img": "img_welfare_system.svg",
+      "alt": "시스템 아이콘"
+    },
+    {
+      "title": "분석통계",
+      "text": "구글 애널리틱스 통계 기능을 지원해요.",
+      "img": "img_welfare_analysis.svg",
+      "alt": "분석 아이콘"
+    }
+  ],
+  "introduction" : {
+    "depthTitle":"비즈니스의 성장을 위한 Anchors의 커머스 플랫폼",
+    "description" : "Anchors는 변화하는 비즈니스 환경에 발맞춘 유연한 서비스와 독창적인 커스터마이징 옵션을 제공합니다. <br />당신의 브랜드와 목표에 완벽히 어우러지는 내부몰을 구현해 보세요.",
+    "images": "img_visual_introduction.png",
+    "alt": "Anchors 커머스 플랫폼 이미지",
+    "contactUs" : [
+      {
+        "disclaimer" : "필요한 만큼, 원하는 대로.",
+        "elementTitle" : "유연한 구독 서비스",
+        "description" : "Anchors Commerce는 비즈니스의 성장 단계에 맞춰 서비스를 구독형으로 제공합니다. 효율적인 비용 관리와 필요한 기능만 선택하세요.",
+        "buttonText" : "구독 서비스 문의하기",
+        "sendEmail": "hehwang@anchors-biz.com"
+      },
+      {
+        "disclaimer" : "당신만의 플랫폼",
+        "elementTitle" : "맞춤형 커스터마이징",
+        "description" : "Anchors Commerce는 다양한 커스터마이징 옵션으로 당신의 브랜드 아이덴티티와 워크플로우에 꼭 맞는 내부몰을 제공합니다.",
+        "buttonText" : "커스터마이징 문의하기",
+        "sendEmail": "youngman@anchors-biz.com"
+      }
+    ]
+  },
+  "features" : [
+    {
+      "highlightText": "기업 아이덴티티를 한층 강화하다",
+      "text": "제작사의 정형화된 틀을 넘어, 귀사의 아이덴티티를 온전히 담아낸 맞춤형 쇼핑몰 구축 솔루션",
+      "img": "img_intro_card_swiper1.jpg",
+      "alt": "기업 아이덴티티 이미지"
+    },
+    {
+      "highlightText": "효율적인 비용으로 구축의 새로운 기준을 제시하다",
+      "text": "체계적인 마이그레이션 분석을 통해 신뢰성과 보안을 갖춘 AWS 클라우드 환경으로의 효율적인 전환 지원",
+      "img": "img_intro_card_swiper2.jpg",
+      "alt": "AWS 클라우드 환경 이미지"
+    },
+    {
+      "highlightText": "다양한 브랜드와의 협업을 통해 검증된 시스템",
+      "text": "플랫폼 특성에 맞춘 최적화된 프로모션 및 이벤트 구성으로 매출 증대를 지원합니다",
+      "img": "img_intro_card_swiper3.jpg",
+      "alt": "플랫폼 이미지"
+    }
+  ]
+}

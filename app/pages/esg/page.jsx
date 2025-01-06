@@ -22,7 +22,7 @@ function Esg() {
   return (
     <main className="esg section_div is_photo">
       {/* S: PageTitle 영역 */}
-      <PageTitle data={headerFooter.menuList[5].name} />
+      <PageTitle data={headerFooter.menuList[6].name} />
       {/* E: PageTitle 영역 */}
 
       {/* S: Visual 영역 */}

@@ -1,0 +1,77 @@
+@include wide {
+  .platform {
+    &_visual {
+      .visual {
+        height: 96rem;
+      }
+      .description {
+        padding: 18rem 16.8rem 6rem;
+
+        & + .description {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    //sub_visual 영역
+    .sub_visual{
+      height: 56rem;
+      img{
+        top: -70px;
+        height: 63rem;
+      }
+    }
+
+    .features_swiper {
+      max-width: 130.6rem;
+      margin: 0 auto;
+      padding: 0 8.4rem 18rem;
+
+      .image_swiper {
+        width: 33.854167vw;
+        padding-bottom: 4rem;
+        margin: 0;
+        max-width: 520px;
+
+        .swiper-pagination {
+          bottom: 0;
+        }
+      }
+      .text_swiper {
+        width: 38.151042vw;
+        max-width: 58.6rem;
+        padding: 15.5rem 0 0 0;
+        margin: 0;
+        margin-left: 4rem;
+
+        .swiper-slide {
+          margin-bottom: 0;
+
+          &:after {
+            width: 26.3rem;
+            height: 2.2rem;
+            right: 0;
+          }
+          /*
+          &:first-child:after {
+            right: 0;
+          }
+          &:nth-child(2):after {
+            left: unset;
+            right: 15rem;
+          }
+          &:nth-child(3):after {
+            bottom: 23.7rem;
+          }
+          */
+          .intro_text {
+            .intro_disclaimer {
+              margin-bottom: 24.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

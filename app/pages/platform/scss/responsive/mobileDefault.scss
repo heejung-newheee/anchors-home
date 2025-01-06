@@ -1,0 +1,189 @@
+%description { color: #121212; font-family: $font-en; letter-spacing: $en_letterSpacing; text-align: center; }
+
+.platform {
+  &_visual {
+    .visual {
+      height: 27rem;
+    }
+    .description {
+      @extend %description;
+      @extend %font_enIntro;
+      margin: 0 auto 3rem;
+      padding: 6rem 2.4rem 0;
+
+      span {
+        @extend %font_enIntro;
+        font-family: $font_en_italic;
+      }
+      & + .description {
+        @extend %font_primary;
+        font-family: $font_ko;
+        padding-top: 0;
+      }
+    }
+  }
+
+  &_introduction {
+    @extend %layout_fix;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .depthTitle {
+      @extend %description;
+      @extend %font_enIntro;
+      font-family: $font_ko;
+      font-weight: 700;
+      margin-bottom: 3rem;
+    }
+    .description {
+      @extend %description;
+      @extend %font_primary;
+      font-family: $font_ko;
+      margin-bottom: 3rem;
+    }
+
+    .img_area{
+      display:inline-block;
+    }
+  }
+
+  &_contactUs {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      padding: 3.3rem 0 1.6rem;
+      border-bottom: 0.1rem solid #E4E4E4;
+
+      .description {
+        text-align: left;
+      }
+      .disclaimer {
+        color:$color_darkgrey;
+      }
+    }
+
+    a { 
+      @extend %btn_primary_ghost;
+      border-color: $color_black;
+      color: $color_black;
+      &:after{
+        background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill_rule="evenodd" clip_rule="evenodd" d="M13.2628 4.95072L2.49902 15.7145L5.03607 18.2516L15.7998 7.48784V15.7145H19.3877V3.89991L19.3878 3.89984L19.3877 3.89977V1.36279H16.8507H5.03601V4.95072H13.2628Z" fill="black"/></svg>');
+      }
+    }
+  }
+
+  .sub_visual{
+    height:61vw;
+    position: relative;
+    margin-bottom: 18rem;
+    overflow: hidden;
+    img{
+      position: absolute;
+      top: -10px;
+      left: 0;
+      height: 70vw;
+      object-fit: cover;
+      object-position: center top;
+    }
+  }
+
+  &_features {
+    .depthTitle {
+      @extend %description;
+      @extend %font_enIntro;
+      font-family: $font_ko;
+      font-weight: 700;
+      max-width: 110rem;
+      margin: 0 auto 6rem;
+    }
+  }
+
+  .features_swiper {
+    background-color: $color_white;
+    .image_swiper {
+      width: 74.534161%;
+      .swiper-pagination {
+        bottom: -3.6rem;
+      }
+    }
+    .text_swiper {
+      padding: 8.6rem 2.4rem 0;
+      .swiper-slide {
+        position: relative;
+
+        &:first-child {
+          padding-bottom: 9rem;
+          margin-bottom: 10.6rem;
+        }
+        &:nth-child(2) {
+          padding-bottom: 10rem;
+          margin-bottom: 11.6rem;
+        }
+        &:nth-child(3) {
+          padding-bottom: 11.6rem;
+          margin-bottom: 11.6rem;
+        }
+
+        &:after {
+          display: block;
+          content: '';
+          position: absolute;
+          width: 17rem;
+          height: 1.6rem;
+          background: url(/assets/images/ico/ico_wave.svg) center / cover no-repeat;
+        }
+        &:after {
+          right: 0;
+          margin-top: 8.8rem;
+        }
+        /*
+        &:first-child:after {
+          right: 0;
+          margin-top: 8.8rem;
+        }
+        &:nth-child(2):after {
+          right: 5rem;
+          margin-top: 5.2rem;
+        }
+        &:nth-child(3):after {
+          left: 0;
+          margin-top: 4.2rem;
+        }
+        */
+        .intro_text {
+          transition: .9s;
+          transition-delay: .1s;
+          position: relative;
+          opacity: 0;
+          font-family: $font-ko;
+          transform: translateY(50%);
+
+          .intro_title {
+            @extend %font_contentsTitle;
+            font-weight: 700;
+            margin-bottom: 2.4rem;
+          }
+          .intro_disclaimer {
+            @extend %font_primary;
+          }
+        }
+
+        /*
+        &:last-child {
+          margin-right: 0 !important;
+        }
+        */
+
+        &.swiper-slide-active div {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}

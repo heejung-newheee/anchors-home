@@ -11,7 +11,7 @@
       "career" : "Career",
       "esg" : "Esg",
       "privacyPolicy" : "Privacy Policy",
-      "platform" : "Anchors Platform",
+      "platform" : "e-Commerce Platform",
       "detail" : {
         "jPlatform" : "Hyundai Motor J Platform",
         "BMS": "Hyundai Motor BMS renewal",
@@ -26,7 +26,7 @@
         "genesisGlobal" : "Genesis Global site",
         "DCXT" : "Hyundai Motor DCXT",
         "chanel" : "CHANEL KOREA",
-        "platform" : "Anchors Platform"
+        "platform" : "e-Commerce Platform"
        }
     }
   },
@@ -39,7 +39,7 @@
     "career" : "Anchors, 앵커스, 구인, 채용, 복지",
     "esg" : "Anchors, 앵커스, ESG, 환경 경영 방침, 인권 경영 헌장, 안전 보건 방침, 윤리 강령",
     "privacyPolicy" : "Anchors, 앵커스, Privacy, Policy, 개인정보 처리 방침",
-    "platform" : "Anchors Platform"
+    "platform" : "e-Commerce Platform"
   },
   "description": {
     "main" : "주식회사 앵커스는 2018년에 설립되어, 사원수 100+여명 규모로 매년 50% 이상 성장하고 있습니다.  주식회사 앵커스의 사업 분야는, 컨설팅, 개발, AEM, Salesforce, System Integration 등이며, 삼성, 현대, KIA, Chanel 등 대기업 프로젝트를 주로진행하고 있습니다.",
@@ -50,7 +50,7 @@
     "career" : "주식회사 앵커스의 팀장 소개, 복지, 채용 과정을 소개합니다.",
     "esg" : "주식회사 앵커스의 ESG 정책입니다.",
     "privacyPolicy" : "주식회사 앵커스의 개인정보 처리방침입니다.",
-    "platform" : "Anchors Platform"
+    "platform" : "e-Commerce Platform"
   },
   "canonical" : {
     "main" : "https://www.anchors-biz.com/",

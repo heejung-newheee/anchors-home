@@ -21,7 +21,7 @@ function Contact() {
   return (
     <main className="contact section_div is_photo">
       {/* S: PageTitle 영역 */}
-      <PageTitle data={headerFooter.menuList[3].name} />
+      <PageTitle data={headerFooter.menuList[4].name} />
       {/* E: PageTitle 영역 */}
 
       {/* S: visual 영역 */}

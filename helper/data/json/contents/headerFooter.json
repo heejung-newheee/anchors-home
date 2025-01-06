@@ -16,6 +16,11 @@
       "alt": "Service"
     },
     {
+      "name": [{ "words": "e-Commerce" }],
+      "url": "/pages/platform",
+      "alt": "e-Commerce Platform"
+    },
+    {
       "name": [{ "words": "Contact" }],
       "url": "/pages/contact",
       "alt": "Contact"
