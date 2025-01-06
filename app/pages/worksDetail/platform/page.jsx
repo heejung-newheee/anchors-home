@@ -1,4 +1,5 @@
 import WorksTemplate from '@/components/WorksTemplate/WorksTemplate';
+import CommercePlatform from '@/components/DetailCustom/CommercePlatform';
 import seo from '@/helper/data/json/contents/SEO.json';
 
 import './scss/platform.scss';
@@ -15,6 +16,8 @@ export default function Chanel() {
     <>
       <WorksTemplate
         pageId={PAGE_ID}
+        customChildren={<CommercePlatform pageId={PAGE_ID} />}
+        // webSiteUrl="Y"
       />
     </>
   );

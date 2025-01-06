@@ -10,12 +10,12 @@
       "htmlName": "지정할 html 파일명",
       "title": "e-Commerce",
       "description": "e-Commerce Platform, Subscription Sales, Website",
-      "thumbnail": "img_thumbnail_chanel.jpg",
+      "thumbnail": "img_thumbnail_commerce.jpg",
       "thumbnailAlt": "앵커스 플랫폼 제작 이미지",
       "pageUrl": "/pages/worksDetail/platform",
       "websiteUrl": "",
-      "visual": "img_keyvisual_chanel.jpg",
-      "subVisual": "img_subvisual_chanel.jpg",
+      "visual": "img_keyvisual_commerce.jpg",
+      "subVisual": "img_subvisual_commerce.jpg",
       "text": {
         "en": "The private subscription sales service provides <span>member management, shopping cart, card payment and management system at a relatively</span> low initial cost. The differentiated customization service provides a customer-friendly UI configuration and a <span>lightweight and flexible BO (Back Office) payment management, inventory management, and membership management system.</span>",
         "ko": "프라이빗 구독판매 서비스는 비교적 저렴한 초기비용으로 회원괸리, 장바구니, 카드결제 및 관리 시스템을 제공합니다. 차별화된 커스터마이징 서비스는 고객 친화적 UI 구성과 가볍고 유연한 BO(Back Office)의 결제관리, 재고관리, 회원관리 시스템을 제공하고 있습니다."
@@ -24,7 +24,24 @@
         { "title" :  "Client" , "contents" :  "앵커스"},
         { "title" :  "Year" , "contents" :  "2024.06 ~ Present"},
         { "title" :  "Service" , "contents" :  "Java, React"}
-      ]
+      ],
+      "custom" : {
+        "bg_color" : "#252525",
+        "img_array": [
+          {
+            "url": "img_commerce_imgarray1.jpg",
+            "alt": "e-Commerce Platform Main 화면 이미지"
+          },
+          {
+            "url": "img_commerce_imgarray2.jpg",
+            "alt": "e-Commerce Platform 주문 팝업 화면 이미지"
+          },
+          {
+            "url": "img_commerce_imgarray3.jpg",
+            "alt": "e-Commerce Platform 장바구니 화면 이미지"
+          }
+        ]
+      }
     },
     {
       "id": "0000",
