@@ -5,17 +5,16 @@
         height: 96rem;
       }
       .description {
-        padding: 18rem 16.8rem 6rem;
+        padding: 18rem 16.8rem 8rem;
 
         & + .description {
           padding-top: 0;
-          padding-bottom: 0;
         }
       }
     }
 
     //sub_visual 영역
-    .sub_visual{
+   & &_sub_visual{
       height: 56rem;
       img{
         top: -70px;

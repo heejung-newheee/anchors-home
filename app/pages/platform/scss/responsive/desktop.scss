@@ -5,12 +5,11 @@
         height: 80rem;
       }
       .description {
-        padding: 14rem 9rem 4rem;
+        padding: 14rem 9rem 6rem;
         margin-bottom: 0;
 
         & + .description {
           padding-top: 0;
-          padding-bottom: 0;
         }
       }
     }
@@ -25,7 +24,7 @@
     }
 
      //sub_visual 영역
-    .sub_visual{
+    & &_sub_visual{
       height: 35vw;
       img{
         top: -2rem;

@@ -68,12 +68,14 @@
       .profile_development {
         padding: 0 4.8rem 17.3rem;
 
+        .description {
+          display: flex;
+        }
         .profile_grow_text {
           margin-bottom: 8rem;
         }
         .profile_grow_number {
           font-size: 8rem;
-          display: flex;
           align-items: baseline;
 
           span {
