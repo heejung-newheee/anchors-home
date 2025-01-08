@@ -51,7 +51,6 @@ function Platform() {
       {/* S: swiper 영역*/}
       <Features data={platform.features} imgUrl={platform.imgUrl} />
       {/* E: swiper 영역*/}
-
     </main>
   );
 }

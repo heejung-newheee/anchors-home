@@ -10,6 +10,7 @@ import Visual from '@/components/Visual/Visual';
 
 import Profile from './_components/Profile';
 import Members from './_components/Members';
+import Introduction from './_components/Introduction';
 
 import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
 import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
@@ -39,44 +40,8 @@ function About() {
       <Visual defaultId="scroll_main_visual" imgUrl="/assets/images/contents/about/img_keyvisual_office.jpg" />
       {/* E: Key Visual 영역*/}
 
-      {/* S: Description 영역*/}
-      <section className="about_intro_text_wrap section_div is_photo">
-        <Description innerHTMLOption="Y" data={aboutIntro.introText.textEn} />
-        <Description innerHTMLOption="Y" data={aboutIntro.introText.textKo} />
-      </section>
-      {/* E: Description 영역*/}
-
-      {/* S: about intro swiper 영역*/}
-      <section className="about_intro_swiper section_div is_photo">
-        <DepthTitle depthLevel="1" blindOption="hidden">
-          Anchors Introduction
-        </DepthTitle>
-        <SwiperArea
-          key="swiper01"
-          type="double"
-          firstClassName="image_swiper"
-          secondClassName="text_swiper"
-          firstContent={aboutIntro.introduction.map((cont, idx) => (
-            <span key={`sw01-img-${idx}`}>
-              <img src={aboutIntro.imgUrl + cont.img} alt={cont.alt} />
-            </span>
-          ))}
-          secondContent={aboutIntro.introduction.map((cont, idx) => (
-            <div className="intro_text" key={`sw01-div-${idx}`}>
-              <ElementTitle className="intro_title" innerHTMLOption="Y" data={cont.highlightText} />
-              <Disclaimer className="intro_disclaimer" data={cont.text} />
-            </div>
-          ))}
-          firstSwiperOption={{
-            effect: 'cards',
-          }}
-          secondSwiperOption={{
-            navigation: false,
-            pagination: false,
-            spaceBetween: 24,
-          }}
-        />
-      </section>
+      {/* S: about intro 영역*/}
+      <Introduction data={aboutIntro} imgUrl={aboutIntro.imgUrl} />
       {/* E: about intro swiper 영역*/}
 
       {/* S: anchors profile 영역*/}
