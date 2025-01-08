@@ -13,9 +13,14 @@
       }
     }
 
+    &_introduction {
+      padding-bottom:18rem;
+    }
+
     //sub_visual 영역
    & &_sub_visual{
       height: 56rem;
+      margin-bottom: 18rem;
       img{
         top: -70px;
         height: 63rem;

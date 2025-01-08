@@ -25,10 +25,13 @@
 
   &_introduction {
     @extend %layout_fix;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    padding-bottom:6rem;
+    br {
+      display:none;
+    }
     .depthTitle {
       @extend %description;
       @extend %font_enIntro;
@@ -44,29 +47,31 @@
     }
 
     .img_area{
-      display:inline-block;
+      display:flex;
+      justify-content: center;
+      height:35.2rem;
+      width:100vw;
+      overflow: hidden;
+      img {
+        width:auto;
+        height:100%;
+      }
     }
   }
 
   &_contactUs {
     display: flex;
     flex-direction: column;
-
+    gap: 2rem;
+    max-width: 1440px;
+    padding-top:4rem;
     li {
       display: flex;
-      align-items: start;
       flex-direction: column;
-      padding: 3.3rem 0 1.6rem;
-      border-bottom: 0.1rem solid #E4E4E4;
-
-      .description {
-        text-align: left;
-      }
-      .disclaimer {
-        color:$color_darkgrey;
-      }
+      align-items: center;
+      padding:3.6rem 2.4rem;
+      border: 0.1rem solid #E4E4E4;
     }
-
     a { 
       @extend %btn_primary_ghost;
       border-color: $color_black;
@@ -75,12 +80,21 @@
         background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill_rule="evenodd" clip_rule="evenodd" d="M13.2628 4.95072L2.49902 15.7145L5.03607 18.2516L15.7998 7.48784V15.7145H19.3877V3.89991L19.3878 3.89984L19.3877 3.89977V1.36279H16.8507H5.03601V4.95072H13.2628Z" fill="black"/></svg>');
       }
     }
+    .disclaimer {
+      color:$color_darkgrey;
+    }
+    .element_title {
+      margin:1.2rem 0 1.6rem;
+    }
+    .description {
+      margin-bottom: 3.6rem;
+    }
   }
 
   & &_sub_visual{
     height:61vw;
     position: relative;
-    margin-bottom: 18rem;
+    margin-bottom: 8rem;
     overflow: hidden;
     img{
       position: absolute;
@@ -106,7 +120,8 @@
   .features_swiper {
     background-color: $color_white;
     .image_swiper {
-      width: 74.534161%;
+      // width: 74.534161%;
+      width: 69%;
       .swiper-pagination {
         bottom: -3.6rem;
       }
