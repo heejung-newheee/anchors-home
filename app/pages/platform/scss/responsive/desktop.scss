@@ -15,35 +15,17 @@
     }
 
     &_introduction {
-      padding-bottom:14rem;
       .depthTitle {
         margin-bottom:4rem;
       }
       .description {
         margin-bottom:8rem;
       }
-      .img_area{
-        height:65rem;
-      }
-    }
-
-    &_contactUs {
-      flex-direction: row;
-      li {
-        padding:8rem 10rem;
-      }
-      .element_title {
-        margin:2rem 0 2.4rem;
-      }
-      .description {
-        margin-bottom: 4rem;
-      }
     }
 
      //sub_visual 영역
     & &_sub_visual{
       height: 35vw;
-      margin-bottom: 14rem;
       img{
         top: -2rem;
         height: 42vw;

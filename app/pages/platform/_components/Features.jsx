@@ -9,7 +9,7 @@ import SwiperArea from '@/components/SwiperArea/SwiperArea';
 const Features = ({data, imgUrl}) => {
   return (
     <section className="platform_features">
-      <DepthTitle className="depthTitle" depthLevel="1" blindOption="visible">{data.depthTitle}</DepthTitle>
+      <DepthTitle className="depthTitle" depthLevel="1" blindOption="visible">{data.DepthTitle}</DepthTitle>
       <div className='features_swiper is_photo'>
         <SwiperArea
           key="swiper01"

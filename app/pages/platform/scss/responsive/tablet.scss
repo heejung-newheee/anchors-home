@@ -13,40 +13,32 @@
       }
     }
 
-    .welfare {
-      margin-bottom: 4rem;
-    }
-
     &_introduction {
-      padding-bottom:12rem;
-      br {
-        display: block;
-      }
-      .description {
-        margin-bottom: 8rem;
-      }
-      .img_area{
-        height:45rem;
-      }
+      padding-bottom:18rem;
     }
 
     &_contactUs {
+      flex-direction: row;
       gap: 4rem;
+      max-width: 1440px;
+      padding-top:4rem;
+      
       li {
-        padding:6rem 14rem;
-      }
-      .element_title {
-        margin:2rem 0 2rem;
-      }
-      .description {
-        margin-bottom: 4rem;
+        align-items: center;
+        gap: 2rem;
+        padding:8rem 4rem;
+        border: 0.1rem solid #E4E4E4;
+
+        .description {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
       }
     }
     
     //sub_visual 영역
     & &_sub_visual{
       height: 44vw;
-      margin-bottom: 12rem;
       img{
         height: 50vw;
       }
