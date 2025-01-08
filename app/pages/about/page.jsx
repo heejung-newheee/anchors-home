@@ -9,6 +9,7 @@ import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Visual from '@/components/Visual/Visual';
 
 import Profile from './_components/Profile';
+import Members from './_components/Members';
 
 import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
 import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
@@ -82,70 +83,9 @@ function About() {
       <Profile data={aboutProfile} />
       {/* E: anchors profile 영역*/}
 
-      <section className="about_members section_div is_photo">
-        <Visual defaultId="scroll_sub_visual" imgUrl="/assets/images/contents/about/img_visual_members.jpg" />
-        <section className="about_members_desc">
-          <Description innerHTMLOption="Y" data={aboutMembers.membersText.textEn} />
-          <Description innerHTMLOption="Y" data={aboutMembers.membersText.textKo} />
-        </section>
-        {/* S: about members swiper 영역*/}
-        <DepthTitle depthLevel="1" blindOption="hidden">
-          About Anchors Members Introduction
-        </DepthTitle>
-        <SwiperArea
-          key="swiper04"
-          type="single"
-          autoPlayStop="Y"
-          swiperOption={{
-            slidesPerView: 'auto',
-            navigation: false,
-            spaceBetween: 16,
-            slidesOffsetBefore: 24,
-            slidesOffsetAfter: 24,
-            autoplay: {
-              delay: 1,
-            },
-            loop: true,
-            speed: 4000,
-            breakpoints: {
-              360: {
-                autoplay: false,
-              },
-              768: {
-                spaceBetween: 24,
-                autoplay: false,
-              },
-              1280: {
-                spaceBetween: 32,
-                slidesOffsetBefore: 32,
-                slidesOffsetAfter: 32,
-              },
-              1536: {
-                spaceBetween: 48,
-                slidesOffsetBefore: 48,
-                slidesOffsetAfter: 48,
-              },
-              1920: {
-                slidesOffsetBefore: 240,
-              },
-            },
-          }}
-          className="about_members_swiper"
-          swiperContent={[...aboutMembers.members, ...aboutMembers.members].map((cont, idx) => (
-            <article key={`sw04-${idx}`}>
-              <ElementTitle data={cont.nameEn} className="member_name_en" />
-              <MoreDetail imgUrl={aboutMembers.imgUrl + cont.img} imgAlt={cont.alt}>
-                <article className="tooltip">
-                  <ElementTitle data={cont.nameKo} />
-                  <Description className="member_team" data={cont.part} />
-                  <Description innerHTMLOption="Y" className="member_hashtag" data={cont.hashtag} />
-                </article>
-              </MoreDetail>
-            </article>
-          ))}
-        />
-        {/* E: about members swiper 영역*/}
-      </section>
+      {/* S: about members swiper 영역*/}
+      <Members data={aboutMembers} imgUrl={aboutMembers.imgUrl} />
+      {/* E: about members swiper 영역*/}
     </main>
   );
 }

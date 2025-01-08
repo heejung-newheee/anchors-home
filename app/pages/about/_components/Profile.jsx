@@ -32,9 +32,10 @@ const TRIGGER_END = {
 };
 
 const Profile = ({data}) => {
+  const { profileDevelopment, scale, profileAward, award, profilePartner, customerLogo } = data;
 
-  function scale() {
-    return data.scale.map((item, idx) => 
+  function scales() {
+    return scale.map((item, idx) => 
       <em key={idx} className="profile_grow_number">
       {item.number}
       <span>{item.text}</span>
@@ -43,8 +44,14 @@ const Profile = ({data}) => {
      );
   }
 
-  function customerLogo() {
-    return data.customerLogo.map((item, idx) => 
+  function awards(){
+    return award.map((item, idx) => 
+      <BaseArticle key={idx} className="profile_award_list" elementTitle={item.name} description={item.description} />
+    );
+  }
+
+  function customerLogos() {
+    return customerLogo.map((item, idx) => 
       <span key={idx}>
         <img src={data.imgUrl + item.img} alt={item.alt} />
       </span>
@@ -56,8 +63,8 @@ const Profile = ({data}) => {
         <DepthTitle depthLevel="1" blindOption="visible">Anchors Profile</DepthTitle>
         <section className="profile_development">
           <DepthTitle depthLevel="2" blindOption="hidden">About Anchors Development History</DepthTitle>
-          <Description innerHTMLOption="Y" className="profile_grow_text" data={data.profileDevelopment} />
-          <Description data={scale()} />
+          <Description innerHTMLOption="Y" className="profile_grow_text" data={profileDevelopment} />
+          <Description data={scales()} />
           <ScrollTriggerArea
             type="lottieTrigger"
             lottieOption={LOTTIE_OPTION}
@@ -69,18 +76,16 @@ const Profile = ({data}) => {
 
         <section className="profile_award">
           <DepthTitle depthLevel="2" blindOption="hidden">About Anchors Awards List</DepthTitle>
-          <Description innerHTMLOption="Y" className="profile_award_description" data={data.profileAward} />
+          <Description innerHTMLOption="Y" className="profile_award_description" data={profileAward} />
           <span className="profile_award_icon"><img src="/assets/images/ico/ico_webaward.svg" alt="web award icon image" /></span>
-          {data.award.map((item, idx) => (
-              <BaseArticle key={idx} className="profile_award_list" elementTitle={item.name} description={item.description} />
-          ))}
+          {award && awards() || null}
         </section>
 
         <section className="profile_partner">
           <DepthTitle depthLevel="2" blindOption="hidden">About Anchors Partners List</DepthTitle>
-          <Description innerHTMLOption="Y" data={data.profilePartner} />
-          <InfiniteRolling className="about_partner" reverse="Y">{customerLogo()}</InfiniteRolling>
-          <InfiniteRolling className="about_partner">{customerLogo()}</InfiniteRolling>
+          <Description innerHTMLOption="Y" data={profilePartner} />
+          <InfiniteRolling className="about_partner" reverse="Y">{customerLogos()}</InfiniteRolling>
+          <InfiniteRolling className="about_partner">{customerLogos()}</InfiniteRolling>
           <Disclaimer data={<>Want to know about us</>} />
           <Btn className="download_btn" type="a" url="/assets/images/pdf/[Anchors]Company_Profile_A4_230320.pdf" target="_blank">Download<br />Profiles</Btn>
         </section>

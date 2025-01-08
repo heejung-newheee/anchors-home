@@ -1,5 +1,7 @@
 {
   "imgUrl": "/assets/images/contents/about/",
+  "visualImg": "img_visual_members.jpg",
+  "depthTitle" : "About Anchors Members Introduction",
   "membersText": {
     "textEn": "We work with people <span>challenging and fun</span> to work with than alone. <span>Synergy</span> is a great driving force to sail through any problem ahead.",
     "textKo": "우리는 혼자보다 함께 일할 때 더 즐거운 사람들과 일하고 있습니다.<br />신뢰감 있는 동료와 함께 일할 때 나는 시너지는 어떠한 문제도 헤쳐나갈 수 있는 가장 큰 원동력입니다."
