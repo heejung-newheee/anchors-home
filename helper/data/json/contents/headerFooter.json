@@ -38,7 +38,8 @@
   ],
 
   "sendEmail": "contact@anchors-biz.com",
-  "copyright": "All Rights Reserved ©Anchors 2023",
+  "copyright_old": "All Rights Reserved ©Anchors 2023",
+  "copyright": "©Anchors 2025 All Rights Reserved",
   "privacyPolicyEn": "Privacy Policy",
   "privacyPolicyKo": "개인정보 처리방침",
   "privacyPolicyUrl": "/pages/privacyPolicy"

@@ -1,0 +1,27 @@
+@include desktop {
+  .footer {
+    .lottie_wrap {
+      .line_lottie {
+        padding-top: 16rem;
+      }
+      .hand_lottie {
+        top: 26.7rem;
+      }
+    }
+    .btn_wrap {
+      padding-top: 0.8rem;
+      padding-bottom: 10rem;
+    }
+
+    .about_privacy_wrap {
+      padding: 4rem 0;
+      margin: 0 6.4rem;
+
+      * {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        letter-spacing: 0.48px;
+      }
+    }
+  }
+}
