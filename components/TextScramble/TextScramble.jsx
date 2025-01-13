@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const symbols = '!<>-_\\/[]{}—=+*^?#'.split('');
 
@@ -16,23 +16,27 @@ const TextScramble = ({
   const [displayedText, setDisplayedText] = useState(texts[0]);
   const [paused, setPaused] = useState(true);
 
-  const leftIndexes = [];
-  const randomItem = (array) => array[Math.floor(Math.random() * array.length)]
+  const leftIndexes = useRef([]);
+  const bakeLetterInterval = useRef(null);
+  const bakeTextInterval = useRef(null);
+  const timeoutRef = useRef(null);
 
-  let bakeLetterInterval = 0;
-  let bakeTextInterval = 0;
+  const randomItem = (array) => array[Math.floor(Math.random() * array.length)];
 
   const defaultLeftIndexes = () => {
-    currentText.split('').forEach((_, i) => {leftIndexes.push(i);});
+    leftIndexes.current = [];
+    currentText.split('').forEach((_, i) => {
+      leftIndexes.current.push(i);
+    });
   };
 
   const bakeLetter = () => {
-    bakeLetterInterval = setInterval(() => {
+    bakeLetterInterval.current = setInterval(() => {
       if (!paused) {
         const updatedText = [];
 
         currentText.split('').forEach((_, i) => {
-          if (!leftIndexes.includes(i)) {
+          if (!leftIndexes.current.includes(i)) {
             updatedText[i] = currentText[i];
             return;
           }
@@ -48,17 +52,17 @@ const TextScramble = ({
     defaultLeftIndexes();
     bakeLetter();
 
-    bakeTextInterval = setInterval(() => {
-      if (leftIndexes.length === 0) {
-        clearInterval(bakeLetterInterval);
-        clearInterval(bakeTextInterval);
+    bakeTextInterval.current = setInterval(() => {
+      if (leftIndexes.current.length === 0) {
+        clearInterval(bakeLetterInterval.current);
+        clearInterval(bakeTextInterval.current);
 
-        setTimeout(() => {
+        timeoutRef.current = setTimeout(() => {
           defaultLeftIndexes();
         }, pauseTime);
       }
 
-      leftIndexes.shift();
+      leftIndexes.current.shift();
     }, nextLetterSpeed);
   };
 
@@ -67,12 +71,22 @@ const TextScramble = ({
       setPaused(false);
       setCurrentText(texts[0]);
       bakeText();
-    } else if (!isHovered) {
+    } else {
       setPaused(false);
       setCurrentText(texts[1]);
       bakeText();
     }
+
+    return () => {
+      clearInterval(bakeLetterInterval.current);
+      clearInterval(bakeTextInterval.current);
+      clearTimeout(timeoutRef.current);
+    };
   }, [isHovered]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    //setDisplayedText(currentText);
+  }, [currentText]);
 
   return <div className={className}>{displayedText}</div>;
 };

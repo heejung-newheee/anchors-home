@@ -15,4 +15,15 @@
       }
     }
   }
+
+  .top_btn {
+    height: 9.2rem;
+    margin-bottom:4.2rem;
+    right: 4.2rem;
+    width: 9.2rem;
+    &::after {
+      height: 3.2rem;
+      width: 3.2rem;
+    }
+  }
 }
