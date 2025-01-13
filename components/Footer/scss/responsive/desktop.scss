@@ -19,7 +19,8 @@
       height:2rem;
       transition: all 0.3s ease-in-out;
       transition-property: background-color, color, font-size, height, width, transform;
-      transform: translate(-50%, calc(-100% - 11.6rem));
+      //transform: translate(-50%, calc(-100% - 11.6rem));
+      transform: translate(-50%, -50%);
       transform-origin: 100% 100%;
       width:2rem;
       z-index: 1000;

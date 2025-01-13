@@ -37,9 +37,38 @@
     }
   ],
 
+  "footer" : {
+    "information" :{
+      "depthTitle" : "Let’s Talk",
+      "sendEmail" : {
+        "title" : "Send maill",
+        "href" : "contact@anchors-biz.com",
+        "description" : ["Ready to email us?", "Let’s go"]
+      },
+      "call" : {
+        "href" : "+82)02-332-9603",
+        "title" : "Call us"
+      }
+    },
+    "address" : {
+      "depthTitle" : "Address",
+      "description" :  ["Anchors F9, 10 125, Yanghwa-ro, Mapo-gu, Seoul, Republic of Korea", "서울특별시 마포구 양화로 125 9층, 10층"]
+    },
+
+    "companyProfile" : {
+      "title" : "회사소개서",
+      "href" : "/assets/images/pdf/[Anchors]Company_Profile_A4_230320.pdf"
+    },
+    "privacyPolicy" : {
+      "privacyPolicyEn": "Privacy Policy",
+      "privacyPolicyKo": "개인정보 처리방침",
+      "privacyPolicyUrl": "/pages/privacyPolicy"
+    },
+    "copyright": "©Anchors 2025 All Rights Reserved"
+  },
+
   "sendEmail": "contact@anchors-biz.com",
-  "copyright_old": "All Rights Reserved ©Anchors 2023",
-  "copyright": "©Anchors 2025 All Rights Reserved",
+  "copyright": "All Rights Reserved ©Anchors 2023",
   "privacyPolicyEn": "Privacy Policy",
   "privacyPolicyKo": "개인정보 처리방침",
   "privacyPolicyUrl": "/pages/privacyPolicy"
