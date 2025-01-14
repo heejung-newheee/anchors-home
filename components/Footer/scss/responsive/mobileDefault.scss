@@ -141,22 +141,8 @@
     width: 1.6rem;
   }
   &:hover{
-    background-color: $color_black;
-    transform: rotate(0);
     &::after {
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.18174 3.30857L3.07969 7.41062L1.92194 6.25287L8.00015 0.174652L8.00028 0.174783L8.00054 0.17453L14.0788 6.25275L12.921 7.4105L8.81906 3.30856L8.81906 15.0069L7.18174 15.0069L7.18174 3.30857Z" fill="white"/></svg>');
-      animation: btnSecondaryDown_invert 2s infinite;
+      animation: none;
     }
   }
-}
-
-@keyframes btnSecondaryDown_invert {
-  0% { top: 50%; }
-  18% { top: -30%; }
-  19% {opacity: 1;}
-  20% {opacity: 0;}
-  29% {opacity: 0;}
-  30% {opacity: 1;}
-  31% { top: 120%; }
-  50% { top: 50%; }
 }

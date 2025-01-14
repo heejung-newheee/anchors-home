@@ -19,7 +19,7 @@ const Menu = ({data}) => {
       </ul>
 
       <div className='sideLink'>
-      <Btn className="Apply_btn" type="a" url="#none" target="_blank">채용정보</Btn>
+      { /* <Btn className="Apply_btn" type="a" url="#none" target="_blank">채용정보</Btn> */}
       <Btn type="link" alt="privacy policy" url={privacyPolicyUrl}>{privacyPolicyKo}</Btn>
       </div>
     </nav>
