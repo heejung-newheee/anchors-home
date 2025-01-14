@@ -8,7 +8,7 @@
   },
   "members": [
     {
-      "nameKo": "최인성 과장",
+      "nameKo": "최인성 책임",
       "nameEn": "Choi Insung",
       "part": "PM / 기획팀",
       "hashtag": [
@@ -19,18 +19,7 @@
       "alt": "앵커스 직원 대표 이미지"
     },
     {
-      "nameKo": "구은이 대리",
-      "nameEn": "Chiu En Yi",
-      "part": "기획팀",
-      "hashtag": [
-        "#대만어 아주 잘함<br>#워라벨 = 행복<br>#UX 기획은 공감 능력 중요함<br>#가끔 여행 유튜버<br>#빵순인데 항상 다이어트 중"
-      ],
-      "tagClassname": "해시태그 style 클래스 명",
-      "img": "img_member_slide_swiper2.jpg",
-      "alt": "앵커스 직원 대표 이미지"
-    },
-    {
-      "nameKo": "서승희 대리",
+      "nameKo": "서승희 책임",
       "nameEn": "Seo Seung hee",
       "part": "기획팀",
       "hashtag": [
@@ -41,7 +30,7 @@
       "alt": "앵커스 직원 대표 이미지"
     },
     {
-      "nameKo": "최혜주 과장",
+      "nameKo": "최혜주 책임",
       "nameEn": "Choi hye ju",
       "part": "연구실",
       "hashtag": [
