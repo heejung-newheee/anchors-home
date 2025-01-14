@@ -78,7 +78,7 @@ export default function Footer() {
   
   return (
     <>
-      {isTopVisible && <button type={"button"} className={"top_btn"} style={{ bottom: topBtnOffset() }} onClick={handleTopBtn} /> | null}
+      {isTopVisible && <button type={"button"} className={"top_btn"} style={{ bottom: topBtnOffset() }} onClick={handleTopBtn} /> || null}
       <footer ref={FOOTER_REF} className="footer section_div is_black">
         {FooterData.footer.information && <SendMail data={FooterData.footer.information} state={{ isVisible }} /> || null}
 
