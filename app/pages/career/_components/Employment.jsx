@@ -10,7 +10,7 @@ import Tab from '@/components/Tab/Tab';
 const Employment = ({data}) => {
   const { depthTitle, description, process, process_description, process_detail_description, faq, tabList } = data;
 
-  function processStep(){
+  const renderProcessSteps = () => {
     return process.map((data, idx) => (
       <div key={idx} className="process_number">
         <Description data={data.number} />
@@ -19,13 +19,13 @@ const Employment = ({data}) => {
     ));
   }
 
-  function processDescription(){
+  const renderProcessDescriptions = () => {
     return process_description.map((data, idx) => (
       <Description key={idx} data={data} />
     ));
   }
 
-  function processDetail(){
+  const renderProcessDetails = () => {
     return process_detail_description.map((data, idx) => (
       <div key={idx} className="detail_description_list">
         <ElementTitle data={data.number} />
@@ -35,7 +35,7 @@ const Employment = ({data}) => {
     ));
   }
 
-  function faqData(){
+  const renderFaqData = () => {
     return faq.map((item, idx) => ({
       key: idx,
       title: item.title,
@@ -49,13 +49,13 @@ const Employment = ({data}) => {
 
       <Tab type="article" tabList={tabList}>
         <article className="process_tab">
-          {process && <div className="process_number_wrap">{processStep()}</div> || null}
-          {process_description && <div className="process_description">{processDescription()}</div> || null}
-          {process_detail_description && <div className="process_detail_description">{processDetail()}</div> || null}
+          {process && <div className="process_number_wrap">{renderProcessSteps()}</div> || null}
+          {process_description && <div className="process_description">{renderProcessDescriptions()}</div> || null}
+          {process_detail_description && <div className="process_detail_description">{renderProcessDetails()}</div> || null}
         </article>
 
         <article className="faq_tab">
-          <Accordion contents={faqData()} />
+          <Accordion contents={renderFaqData()} />
         </article>
       </Tab>
     </section>

@@ -28,7 +28,7 @@ const SWIPEROPTION = {
 const Comment = ({data, imgUrl}) => {
   const { depthTitle, description, content } = data;
   
-  function swiperContent(){
+  const renderSwiperContent = () => {
     return content.map((item, idx) => 
       <div key={idx}>
           <MoreDetail key={`detail${idx}`} imgUrl={imgUrl+ item.img}>
@@ -46,7 +46,7 @@ const Comment = ({data, imgUrl}) => {
       <SwiperArea
         type="single"
         autoPlayStop="Y"
-        swiperContent={swiperContent()}
+        swiperContent={renderSwiperContent()}
         swiperOption={SWIPEROPTION}
         className="single swiper_comment_swiper"
       />

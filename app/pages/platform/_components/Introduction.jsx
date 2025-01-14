@@ -10,7 +10,7 @@ import Btn from '@/components/Btn/Btn';
 const Introduction = ({data, imgUrl}) => {
   const { depthTitle, description, images, alt, contents } = data;
 
-  function contactUs(){
+  const renderContactUs = () => {
     return contents.map((item, idx) => {
       const { disclaimer, elementTitle, description, sendEmail, buttonText } = item;
       return (
@@ -29,7 +29,7 @@ const Introduction = ({data, imgUrl}) => {
         <DepthTitle className="depthTitle" depthLevel="1" blindOption="visible">{depthTitle}</DepthTitle>
         <Description innerHTMLOption="Y" data={description} />
         <span className='img_area'><img src={imgUrl + images} alt={alt} /></span>
-        {contents && <ul className='platform_contactUs'>{contactUs()}</ul> || null}
+        {contents && <ul className='platform_contactUs'>{renderContactUs()}</ul> || null}
       </section>
   );
 };

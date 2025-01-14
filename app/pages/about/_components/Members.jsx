@@ -46,8 +46,8 @@ const SWIPEROPTION = {
 const Members = ({data, imgUrl}) => {
   const { depthTitle, visualImg, membersText, members } = data;
   
-  function swiperContent(){
-    return [...members, ...members].map((item, idx) => 
+  const renderSwiperContent = () => {
+    return [...members, ...members].map((item, idx) => (
       <article key={`sw04-${idx}`}>
         <ElementTitle data={item.nameEn} className="member_name_en" />
         <MoreDetail imgUrl={imgUrl + item.img} imgAlt={item.alt}>
@@ -58,8 +58,8 @@ const Members = ({data, imgUrl}) => {
           </article>
         </MoreDetail>
       </article>
-    );
-  }
+    ));
+  };
 
   return (
     <section className="about_members section_div is_photo">
@@ -76,7 +76,7 @@ const Members = ({data, imgUrl}) => {
         autoPlayStop="Y"
         swiperOption={SWIPEROPTION}
         className="about_members_swiper"
-        swiperContent={swiperContent()}
+        swiperContent={renderSwiperContent()}
       />
     </section>
   );

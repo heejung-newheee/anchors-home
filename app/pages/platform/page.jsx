@@ -1,10 +1,13 @@
+import React, { memo } from 'react';
+import dynamic from 'next/dynamic';
+
 import Description from '@/components/Description/Description';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import Visual from '@/components/Visual/Visual'
-import Welfare from '@/components/Welfare/Welfare';
 
-import Features from './_components/Features';
-import Introduction from './_components/Introduction';
+const Features = memo(dynamic(() => import('./_components/Features')));
+const Introduction = memo(dynamic(() => import('./_components/Introduction')));
+const Welfare = memo(dynamic(() => import('@/components/Welfare/Welfare')));
 
 import platform from '@/helper/data/json/contents/platform/platform.json';
 import headerFooter from '@/helper/data/json/contents/headerFooter.json';

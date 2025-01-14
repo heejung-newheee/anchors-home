@@ -18,7 +18,7 @@ const SECONDWIPEROPTION = {
 const Features = ({data, imgUrl}) => {
   const { depthTitle, contents } = data;
 
-  function firstContent(){
+  const renderFirstContent = () => {
     return contents.map((cont, idx) => (
       <span key={`sw01-img-${idx}`}>
         <img src={imgUrl + cont.img} alt={cont.alt} />
@@ -26,7 +26,7 @@ const Features = ({data, imgUrl}) => {
     ));
   }
 
-  function secondContent(){
+  const renderSecondContent = () => {
     return contents.map((cont, idx) => (
       <div className="intro_text" key={`sw01-div-${idx}`}>
         <ElementTitle className="intro_title" innerHTMLOption="Y" data={cont.highlightText} />
@@ -45,8 +45,8 @@ const Features = ({data, imgUrl}) => {
           type="double"
           firstClassName="image_swiper"
           secondClassName="text_swiper"
-          firstContent={firstContent()}
-          secondContent={secondContent()}
+          firstContent={renderFirstContent()}
+          secondContent={renderSecondContent()}
           firstSwiperOption={FIRSTSWIPEROPTION}
           secondSwiperOption={SECONDWIPEROPTION}
         />

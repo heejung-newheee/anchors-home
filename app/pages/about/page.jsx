@@ -1,16 +1,14 @@
+import React, { memo } from 'react';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
-import DepthTitle from '@/components/DepthTitle/DepthTitle';
-import Description from '@/components/Description/Description';
-import Disclaimer from '@/components/Disclaimer/Disclaimer';
-import ElementTitle from '@/components/ElementTitle/ElementTitle';
-import MoreDetail from '@/components/MoreDetail/MoreDetail';
 import PageTitle from '@/components/PageTitle/PageTitle';
-import SwiperArea from '@/components/SwiperArea/SwiperArea';
 import Visual from '@/components/Visual/Visual';
 
-import Profile from './_components/Profile';
-import Members from './_components/Members';
-import Introduction from './_components/Introduction';
+const Profile = memo(dynamic(() => import('./_components/Profile')));
+const Members = memo(dynamic(() => import('./_components/Members')));
+const Introduction = memo(dynamic(() => import('./_components/Introduction')));
+
 
 import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
 import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';

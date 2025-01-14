@@ -1,11 +1,15 @@
+import React, { memo } from 'react';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+
 import Description from '@/components/Description/Description';
 import PageTitle from '@/components/PageTitle/PageTitle';
 import Visual from '@/components/Visual/Visual';
-import Welfare from '@/components/Welfare/Welfare';
 
-import Members from './_components/Members';
-import Comment from './_components/Comment';
-import Employment from './_components/Employment';
+const Members = memo(dynamic(() => import('./_components/Members')));
+const Comment = memo(dynamic(() => import('./_components/Comment')));
+const Employment = memo(dynamic(() => import('./_components/Employment')));
+const Welfare = memo(dynamic(() => import('@/components/Welfare/Welfare')));
 
 import careerComment from '@/helper/data/json/contents/career/careerComment.json';
 import careerEmployment from '@/helper/data/json/contents/career/careerEmployment.json';

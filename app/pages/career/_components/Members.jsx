@@ -17,7 +17,7 @@ const SECONDWIPEROPTION = {
 }
 
 const Members = ({data, imgUrl}) => {
-  function firstContent(){
+  const renderFirstContent = () => {
     return data.map((item, idx) => (
       <div key={idx} className="first_swiper_cards">
         <img src={imgUrl + item.img} alt={item.alt} />
@@ -25,7 +25,7 @@ const Members = ({data, imgUrl}) => {
     ));
   }
 
-  function secondContent(){
+  const renderSecondContent = () => {
     return data.map((item, idx) => (
       <>
         <ElementTitle key={`title${idx}`} data={item.name} />
@@ -41,8 +41,8 @@ const Members = ({data, imgUrl}) => {
       <DepthTitle blindOption="hidden" depthLevel="1">Member Introduction</DepthTitle>
       <SwiperArea
         type="double"
-        firstContent={firstContent()}
-        secondContent={secondContent()}
+        firstContent={renderFirstContent()}
+        secondContent={renderSecondContent()}
         firstSwiperOption={FIRSTSWIPEROPTION}
         secondSwiperOption={SECONDWIPEROPTION}
       />

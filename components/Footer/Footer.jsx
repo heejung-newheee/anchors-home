@@ -23,10 +23,11 @@ export default function Footer() {
   const [isVisible, setIsVisible] = useState(false); // BREAKPOINT_DESKTOP 체크
   const [isFooterOffset, setIsFooterOffset] = useState({}); // footer 위치 값
   
+  const WORKPAGEFILTER = Works.content.filter(({ pageUrl, websiteUrl }) => pageUrl.includes(LOCATION) && websiteUrl === "").length > 0;
+
   useLayoutEffect(() => {
-    const workPageFilter = Works.content.filter(({ pageUrl, websiteUrl }) => pageUrl.includes(LOCATION) && websiteUrl === "").length > 0;
     const showTopButton = (
-      LOCATION.includes("works") && workPageFilter ||
+      (LOCATION.includes("works") && WORKPAGEFILTER) ||
       LOCATION.includes("about") ||
       LOCATION.includes("service") ||
       LOCATION.includes("platform") ||
@@ -38,7 +39,7 @@ export default function Footer() {
 
     setIsVisible(BREAKPOINT_DESKTOP);
     setTopVisible(showTopButton);
-  }, [BREAKPOINT_DESKTOP, LOCATION, Works]);
+  }, [BREAKPOINT_DESKTOP, LOCATION, WORKPAGEFILTER]);
 
   useEffect(() => {
     const updateScrollSizes = () => {
@@ -58,15 +59,19 @@ export default function Footer() {
   }, []);
 
   useEffect(() => {
-    const shouldShowTopButton = window.innerHeight >= isFooterOffset.y && isFooterOffset.y > 0;
-    setTopVisible(shouldShowTopButton);
-  }, [isFooterOffset]);
+    const showTopButton = window.innerHeight >= isFooterOffset.y && isFooterOffset.y > 0;
+
+    if (LOCATION.includes("worksDetail") && !WORKPAGEFILTER) {
+      setTopVisible(showTopButton);
+    }
+  }, [isFooterOffset, LOCATION, WORKPAGEFILTER]);
 
   const topBtnOffset = () => {
     const offset = window.innerHeight - isFooterOffset.y;
     if (window.innerHeight >= isFooterOffset.y) {
       return offset;
     }
+    return 0;
   };
 
   const handleTopBtn = () => {

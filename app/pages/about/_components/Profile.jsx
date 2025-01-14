@@ -34,7 +34,7 @@ const TRIGGER_END = {
 const Profile = ({data}) => {
   const { profileDevelopment, scale, profileAward, award, profilePartner, customerLogo } = data;
 
-  function scales() {
+  const renderScales = () => {
     return scale.map((item, idx) => 
       <em key={idx} className="profile_grow_number">
       {item.number}
@@ -44,13 +44,13 @@ const Profile = ({data}) => {
      );
   }
 
-  function awards(){
+  const renderAwards = () => {
     return award.map((item, idx) => 
       <BaseArticle key={idx} className="profile_award_list" elementTitle={item.name} description={item.description} />
     );
   }
 
-  function customerLogos() {
+  const renderCustomerLogos = () => {
     return customerLogo.map((item, idx) => 
       <span key={idx}>
         <img src={data.imgUrl + item.img} alt={item.alt} />
@@ -64,7 +64,7 @@ const Profile = ({data}) => {
         <section className="profile_development">
           <DepthTitle depthLevel="2" blindOption="hidden">About Anchors Development History</DepthTitle>
           <Description innerHTMLOption="Y" className="profile_grow_text" data={profileDevelopment} />
-          <Description data={scales()} />
+          <Description data={renderScales()} />
           <ScrollTriggerArea
             type="lottieTrigger"
             lottieOption={LOTTIE_OPTION}
@@ -78,14 +78,14 @@ const Profile = ({data}) => {
           <DepthTitle depthLevel="2" blindOption="hidden">About Anchors Awards List</DepthTitle>
           <Description innerHTMLOption="Y" className="profile_award_description" data={profileAward} />
           <span className="profile_award_icon"><img src="/assets/images/ico/ico_webaward.svg" alt="web award icon image" /></span>
-          {award && awards() || null}
+          {award && renderAwards() || null}
         </section>
 
         <section className="profile_partner">
           <DepthTitle depthLevel="2" blindOption="hidden">About Anchors Partners List</DepthTitle>
           <Description innerHTMLOption="Y" data={profilePartner} />
-          <InfiniteRolling className="about_partner" reverse="Y">{customerLogos()}</InfiniteRolling>
-          <InfiniteRolling className="about_partner">{customerLogos()}</InfiniteRolling>
+          <InfiniteRolling className="about_partner" reverse="Y">{renderCustomerLogos()}</InfiniteRolling>
+          <InfiniteRolling className="about_partner">{renderCustomerLogos()}</InfiniteRolling>
           <Disclaimer data={<>Want to know about us</>} />
           <Btn className="download_btn" type="a" url="/assets/images/pdf/[Anchors]Company_Profile_A4_230320.pdf" target="_blank">Download<br />Profiles</Btn>
         </section>
