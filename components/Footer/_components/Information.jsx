@@ -2,10 +2,18 @@
 
 import Btn from '@/components/Btn/Btn';
 
-const Information = ({data}) => {
-  const { information,  address, companyProfile} = data;
+const Information = ({ data }) => {
+  if (!data) {
+    return null; // data가 없을 경우 아무것도 렌더링하지 않음
+  }
+
+  const { information, address, companyProfile } = data;
+  if (!information || !address || !companyProfile) {
+    return null; // 필요한 속성이 없을 경우 아무것도 렌더링하지 않음
+  }
+
   const { depthTitle, sendEmail, call } = information;
-  
+
   return (
     <div className='footer_container_anchors'>
       <div className='container'>
@@ -26,4 +34,3 @@ const Information = ({data}) => {
 };
 
 export default Information;
- 

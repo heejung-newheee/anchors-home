@@ -10,7 +10,7 @@ import Information from '@/components/Footer/_components/Information';
 import Copyright from '@/components/Footer/_components/Copyright';
 
 import FooterData from '@/helper/data/json/contents/headerFooter.json';
-import Works from '@/helper/data/json/contents/works/works.json'
+import Works from '@/helper/data/json/contents/works/works.json';
 
 import './scss/Footer.scss';
 
@@ -22,12 +22,11 @@ export default function Footer() {
   const [isTopVisible, setTopVisible] = useState(false); // 탑 버튼 사용 가능 여부
   const [isVisible, setIsVisible] = useState(false); // BREAKPOINT_DESKTOP 체크
   const [isFooterOffset, setIsFooterOffset] = useState({}); // footer 위치 값
-  
-  const WORKPAGEFILTER = Works.content.filter(({ pageUrl, websiteUrl }) => pageUrl.includes(LOCATION) && websiteUrl === "").length > 0;
 
   useLayoutEffect(() => {
+    const workPageFilter = Works.content.filter(({ pageUrl, websiteUrl }) => pageUrl.includes(LOCATION) && websiteUrl === "").length > 0;
     const showTopButton = (
-      (LOCATION.includes("works") && WORKPAGEFILTER) ||
+      (LOCATION.includes("works") && workPageFilter) ||
       LOCATION.includes("about") ||
       LOCATION.includes("service") ||
       LOCATION.includes("platform") ||
@@ -39,7 +38,7 @@ export default function Footer() {
 
     setIsVisible(BREAKPOINT_DESKTOP);
     setTopVisible(showTopButton);
-  }, [BREAKPOINT_DESKTOP, LOCATION, WORKPAGEFILTER]);
+  }, [BREAKPOINT_DESKTOP, LOCATION]);
 
   useEffect(() => {
     const updateScrollSizes = () => {
@@ -59,12 +58,11 @@ export default function Footer() {
   }, []);
 
   useEffect(() => {
-    const showTopButton = window.innerHeight >= isFooterOffset.y && isFooterOffset.y > 0;
-
-    if (LOCATION.includes("worksDetail") && !WORKPAGEFILTER) {
-      setTopVisible(showTopButton);
+    const shouldShowTopButton = window.innerHeight >= isFooterOffset.y && isFooterOffset.y > 0;
+    if (LOCATION.includes("worksDetail") && !Works.content.some(({ pageUrl, websiteUrl }) => pageUrl.includes(LOCATION) && websiteUrl === "")) {
+      setTopVisible(shouldShowTopButton);
     }
-  }, [isFooterOffset, LOCATION, WORKPAGEFILTER]);
+  }, [isFooterOffset.y, LOCATION]);
 
   const topBtnOffset = () => {
     const offset = window.innerHeight - isFooterOffset.y;
@@ -77,12 +75,12 @@ export default function Footer() {
   const handleTopBtn = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
+  
   return (
     <>
-      {isTopVisible && <button type={"button"} className={"top_btn"} style={{ bottom: topBtnOffset() }} onClick={() => handleTopBtn()}></button> || null}
+      {isTopVisible && <button type={"button"} className={"top_btn"} style={{ bottom: topBtnOffset() }} onClick={handleTopBtn} /> | null}
       <footer ref={FOOTER_REF} className="footer section_div is_black">
-        <SendMail data={FooterData.footer.information} state={{ isVisible }} />
+        {FooterData.footer.information && <SendMail data={FooterData.footer.information} state={{ isVisible }} /> || null}
 
         <div className='footer_container'>
           <Menu data={FooterData} />
