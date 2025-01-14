@@ -10,6 +10,7 @@ import Information from '@/components/Footer/_components/Information';
 import Copyright from '@/components/Footer/_components/Copyright';
 
 import FooterData from '@/helper/data/json/contents/headerFooter.json';
+import Works from '@/helper/data/json/contents/works/works.json'
 
 import './scss/Footer.scss';
 
@@ -23,11 +24,21 @@ export default function Footer() {
   const [isFooterOffset, setIsFooterOffset] = useState({}); // footer 위치 값
   
   useLayoutEffect(() => {
+    const workPageFilter = Works.content.filter(({ pageUrl, websiteUrl }) => pageUrl.includes(LOCATION) && websiteUrl === "").length > 0;
+    const showTopButton = (
+      LOCATION.includes("works") && workPageFilter ||
+      LOCATION.includes("about") ||
+      LOCATION.includes("service") ||
+      LOCATION.includes("platform") ||
+      LOCATION.includes("contact") ||
+      LOCATION.includes("career") ||
+      LOCATION.includes("esg") ||
+      LOCATION.includes("privacy")
+    );
+
     setIsVisible(BREAKPOINT_DESKTOP);
-
-    setTopVisible(LOCATION.includes("pages"));
-  }, [BREAKPOINT_DESKTOP, LOCATION]);
-
+    setTopVisible(showTopButton);
+  }, [BREAKPOINT_DESKTOP, LOCATION, Works]);
 
   useEffect(() => {
     const updateScrollSizes = () => {
@@ -46,6 +57,11 @@ export default function Footer() {
     };
   }, []);
 
+  useEffect(() => {
+    const shouldShowTopButton = window.innerHeight >= isFooterOffset.y && isFooterOffset.y > 0;
+    setTopVisible(shouldShowTopButton);
+  }, [isFooterOffset]);
+
   const topBtnOffset = () => {
     const offset = window.innerHeight - isFooterOffset.y;
     if (window.innerHeight >= isFooterOffset.y) {
@@ -55,11 +71,11 @@ export default function Footer() {
 
   const handleTopBtn = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  };
 
   return (
     <>
-      {isTopVisible && <button type={"button"} className={"top_btn"} style={{ bottom: topBtnOffset() }} onClick={() => handleTopBtn()}></button>}
+      {isTopVisible && <button type={"button"} className={"top_btn"} style={{ bottom: topBtnOffset() }} onClick={() => handleTopBtn()}></button> || null}
       <footer ref={FOOTER_REF} className="footer section_div is_black">
         <SendMail data={FooterData.footer.information} state={{ isVisible }} />
 

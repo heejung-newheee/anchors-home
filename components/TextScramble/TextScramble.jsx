@@ -11,6 +11,7 @@ const TextScramble = ({
   nextLetterSpeed = 100,
   pauseTime = 1500,
   isHovered,
+  symbolsYN = true,
 }) => {
   const [currentText, setCurrentText] = useState(texts[0]);
   const [displayedText, setDisplayedText] = useState(texts[0]);
@@ -41,7 +42,7 @@ const TextScramble = ({
             return;
           }
           const randomSymbol = randomItem(symbols);
-          updatedText[i] = randomSymbol;
+          if(symbolsYN) updatedText[i] = randomSymbol;
         });
         setDisplayedText(updatedText.join(''));
       }

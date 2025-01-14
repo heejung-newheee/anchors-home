@@ -22,7 +22,7 @@ const SendMail = ({data, state}) => {
   return (
     <>
       <a href={`mailto:${sendEmail.href}`} title={sendEmail.title} className={"footer_sendMail_btn"} onMouseMove={(e)=> handleMouseMove(e)} onMouseLeave={handleMouseLeave}>
-      <TextScramble className={"description"} texts={sendEmail.description} isHovered={isHovered} />
+      <TextScramble className={"description"} texts={sendEmail.description} isHovered={isHovered} symbolsYN={false} />
       </a>
 
       {state.isVisible && <i className={isHovered ? "footer_cursor isHover" : "footer_cursor"} style={isMouseMove}>{sendEmail.title}</i>}
