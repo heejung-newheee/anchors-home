@@ -1,9 +1,77 @@
 @include desktop {
+  .top_btn {
+    margin-bottom: 3.2rem;
+    right: 3.2rem;
+    &:hover{
+      background-color: $color_black;
+      transform: rotate(0);
+      &::after {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.18174 3.30857L3.07969 7.41062L1.92194 6.25287L8.00015 0.174652L8.00028 0.174783L8.00054 0.17453L14.0788 6.25275L12.921 7.4105L8.81906 3.30856L8.81906 15.0069L7.18174 15.0069L7.18174 3.30857Z" fill="white"/></svg>');
+        animation: btnSecondaryDown_invert 2s infinite;
+      }
+    }
+  }
+
   .footer {
-    padding:6rem 3.2rem 4rem;
+    gap: 8rem;
+    padding:0 3.2rem;
+    &_container {
+      &:first-child {
+        gap: 2rem;
+        // justify-content: center;
+      }
+
+      &_lottie_wrap {
+        .line_lottie {
+          height: 60rem;
+        }
+        .hand_lottie {
+          height: 29.7vw;
+          bottom: 0;
+          bottom: 50%;
+          right: -13rem;
+          transform: translateY(80%);
+        }
+      }
+
+      &_anchors{
+        padding: 4.8rem 0;
+        display: flex;
+        flex-direction: row;
+        gap: 2.4rem;
+        dl {
+          flex-basis: 50%;
+          display: block;
+          dt {
+            float: left;
+            height:100%;
+            margin-right: 4rem;
+          }
+          dd + dd {
+            margin-top: 1.2rem;
+          }
+          & + dl {
+            margin-top: 0;
+          }
+        }
+        .call_btn:not(.footer_container_primary_normal_btn) {
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      &_copyright {
+        padding: 4rem 0;
+        gap: 2.4rem;
+      }
+    }
+
+
     &_sendMail_btn {
       cursor: none;
       min-height:24rem;
+      margin-bottom: 8.8rem;
       .description {
         font-size:6.8rem;
       }
@@ -32,67 +100,29 @@
       }
     }
 
-    &_container {
-      padding-top: 8.8rem;
-      &_nav {
-        display: flex;
-        flex-direction: row;
-        * {
-          font-size: 1.6rem;
-        }
-        .gnb {
-          flex-grow: 1;
-        }
-        .sideLink {
-          margin-top:0;
-        }
+    &_nav {
+      display: flex;
+      flex-direction: row;
+      * {
+        font-size: 1.6rem;
       }
-      &_anchors{
-        margin-top: 4.8rem;
-        padding: 4.8rem 0 10.6rem;
-        position: relative;
-        .container {
-          dl {
-            flex-basis: 33.33%;
-            dt {
-              float: left;
-              height:100%;
-              margin-bottom:0;
-              margin-right: 4.8rem;
-            }
-          }
-        }
-        .download_btn {
-          height: 6.4rem;
-          margin-top:0;
-          padding: 0 3.3rem;
-          position: absolute;
-          right: 0;
-          top: 2.4rem;
-          span {
-            font-size: 1.6rem !important;
-          }
-        }
+      .gnb {
+        flex-grow: 1;
       }
-
-      &_copyright {
-        justify-content: start;
-        .copyright {
-          flex-grow: 1;
-        }
+      .sideLink {
+        margin-top:0;
       }
     }
-  }
 
-  .top_btn {
-    margin-bottom: 3.2rem;
-    right: 3.2rem;
-    &:hover{
-      background-color: $color_black;
-      transform: rotate(0);
-      &::after {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.18174 3.30857L3.07969 7.41062L1.92194 6.25287L8.00015 0.174652L8.00028 0.174783L8.00054 0.17453L14.0788 6.25275L12.921 7.4105L8.81906 3.30856L8.81906 15.0069L7.18174 15.0069L7.18174 3.30857Z" fill="white"/></svg>');
-        animation: btnSecondaryDown_invert 2s infinite;
+    .download_btn {
+      height: 6.4rem;
+      margin-top:0;
+      padding: 0 3.3rem;
+      position: absolute;
+      right: 0;
+      top: 2.4rem;
+      span {
+        font-size: 1.6rem !important;
       }
     }
   }

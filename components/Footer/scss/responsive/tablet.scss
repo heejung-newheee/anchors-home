@@ -1,61 +1,4 @@
 @include tablet {
-  .footer {
-    padding:2.4rem 2.9rem 3.2rem;
-    &_sendMail_btn {
-      border-width: 0.3rem;
-      border-radius: 2.8rem;
-      min-height:17.2rem;
-      .description {
-        font-size:4rem;
-        br {
-          display: inline;
-        }
-      }
-    }
-
-    &_container {
-      padding-top: 4.8rem;
-      &_nav {
-        * {
-          font-size: 1.4rem;
-        }
-        .gnb {
-          flex-direction: row;
-          gap: 2.8rem;
-        }
-      }
-
-      &_anchors{
-        padding: 3.2rem 0 4rem;
-        .container {
-          display: flex;
-          flex-direction: row;
-          dl {
-            flex-basis: 50%;
-            & + dl {
-              margin-top: 0;
-            }
-          }
-        }
-        .download_btn {
-          display: inline-flex;
-          height: 4.4rem;
-          margin-top: 4rem;
-        }
-      }
-
-      &_copyright {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        .logo{
-          display: block;
-        }
-      }
-    }
-  }
-
   .top_btn {
     height: 6.9rem;
     margin-bottom: 2.4rem;
@@ -64,6 +7,66 @@
     &::after {
       height: 2.4rem;
       width: 2.4rem;
+    }
+  }
+
+  .footer {
+    gap: 10.417vw;
+    &_container {
+      &:first-child {
+        gap: 3.125vw;
+      }
+
+      &_lottie_wrap {
+        .line_lottie {
+          height: 32.813vh;
+        }
+        .hand_lottie {
+          height: 20.313vw;
+          bottom: 16.7rem;
+          right: -4.5rem;
+        }
+      }
+
+      &_anchors{
+        padding: 6.25vw 0 10.417vw;
+        dl {
+          gap: 1.563vw;
+          & + dl {
+            margin-top: 5.208vw;
+          }
+        }
+      }
+
+      &_copyright {
+        padding-bottom: 4.167vw;
+      }
+    }
+
+    &_sendMail_btn {
+      border-width: 0.3rem;
+      border-radius: 2.8rem;
+      min-height:17.2rem;
+      margin-bottom: 4.8rem;
+      .description {
+        font-size:4rem;
+        br {
+          display: inline;
+        }
+      }
+    }
+
+    &_nav {
+      .gnb {
+        flex-direction: row;
+        gap: 2.8rem;
+      }
+    }
+
+    .download_btn {
+      display: inline-flex;
+      height: 4.4rem;
+      margin-top: 4rem;
     }
   }
 }

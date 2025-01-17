@@ -1,12 +1,113 @@
+.top_btn {
+  @extend %btn_secondary_down;
+  bottom: 0;
+  height: 4.6rem;
+  margin-bottom: 2rem;
+  position: fixed;
+  right: 2rem;
+  transform: rotate(180deg);
+  width: 4.6rem;
+  z-index: 100;
+  &::after {
+    display: block;
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+  &:hover{
+    border: none;
+    &::after {
+      animation: none;
+    }
+  }
+}
+
 .footer {
-  background-color: $color_black;
-  padding:2.4rem 2.4rem;
+  align-items: center;
+  background-color: $color_blue;
+  display: flex;
+  flex-direction: column;
+  gap: 13.333vw;
+  justify-content: center;
+  height: 100vh;
+  padding:0 2.4rem;
   position: relative;
   overflow: hidden;
   * {
+    @extend %font_footerContents;
     color: $color_white;
-    font-family: $font_en;
-    @extend %font_device;
+    font-family: $font_ko;
+    white-space: break-spaces;
+  }
+
+  &_container {
+    width: 100%;
+    position: relative;
+    [class*="_btn"]:not(.footer_container_primary_normal_btn) {
+      position: relative;
+      &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: -0.2rem;
+        left: 0;
+        width: 100%;
+        height: 0.1rem;
+        background-color: #fff;
+      }
+    }
+
+    &:first-child {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      gap: 5.556vw;
+      justify-content: end;
+    }
+
+    &_lottie_wrap {
+      .hand_lottie {
+        height: 20vw;
+        position: absolute;
+        bottom: 10.4rem;
+        right: -3.5rem;
+      }
+    }
+
+    &_primary_normal_btn {
+      @extend %btn_primary_normal;
+      * {
+        color: $color_blue;
+        font-family: $font_en;
+        font-weight: 700;
+      }
+    }
+
+    &_anchors{
+      border-top: 0.1rem solid $color_white;
+      padding: 11.111vw 0;
+      dl {
+        display: flex;
+        flex-direction: column;
+        gap: 3.333vw;
+        dt {
+          color: $color_lightblue;
+        }
+        & + dl {
+          margin-top: 8.889vw;
+        }
+      }
+    }
+
+    &_copyright {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 5.556vw;
+      *{
+        @extend %font_footerCopyright
+      }
+    }
   }
 
   &_sendMail_btn {
@@ -17,6 +118,7 @@
     display: flex;
     justify-content: center;
     min-height:13rem;
+    margin-bottom: 4rem;
     padding:0 4rem;
     .description {
       font-size:3.6rem;
@@ -38,111 +140,81 @@
     }
   }
 
-  &_container {
-    padding-top: 4rem;
-    position: relative;
-    &_nav {
-      .gnb {
-        display: flex;
-        flex-direction: column;
-      }
-      .sideLink {
-        display: flex;
-        flex-direction: row;
-        gap: 2.8rem;
-        margin-top: 3.5rem;
+  &_nav {
+    * {
+      font-size: 1.4rem;
+    }
+    .gnb {
+      display: flex;
+      flex-direction: column;
+      * {
+        font-family: $font_en;
+        font-weight: 300;
       }
     }
-
-    &_anchors{
-      border-top: 0.1rem solid #3B3B3B;
-      margin-top: 3.2rem;
-      padding: 3.2rem 0;
-      .sendMail_btn {
-        text-decoration: underline;
-      }
-
-      .container {
-        dl {
-          * {
-            font-weight: 400;
-          }
-          dt {
-            color: $color_darkgrey;
-            margin-bottom: 1.6rem;
-          }
-          dd + dd {
-            margin-top: 1.2rem;
-          }
-          & + dl {
-            margin-top: 3.2rem;
-          }
-        }
-        .address {
-          dd:last-child {
-            font-family: $font_ko;
-          }
-        }
-      }
-      .download_btn {
-        @extend %btn_primary_ghost;
-        align-items: center;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        font-family: $font_ko;
-        justify-content: center;
-        margin-top: 3.2rem;
-        padding: 0 2.4rem;
-        &::after{
-          position: static;
-          transform: none;
-        }
-        &:hover:after {
-          animation: none;
-        }
-        span {
-          font-size: 1.4rem !important;
-          font-weight: 700;
-        }
-      }
+    .sideLink {
+      display: flex;
+      flex-direction: row;
+      gap: 2.8rem;
+      margin-top: 3.5rem;
     }
+  }
 
-    &_copyright {
-      text-align: center;
-      .logo{
-        display: none;
-        position: static;
-        transform: none;
-      }
-      .copyright {
-        color: $color_darkgrey;
-        font-size: 1.2rem;
-      }
+  .download_btn {
+    @extend %btn_primary_ghost;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 3.2rem;
+    padding: 0 2.4rem;
+    &::after{
+      position: static;
+      transform: none;
     }
-  
+    &:hover:after {
+      animation: none;
+    }
+    span {
+      font-size: 1.4rem !important;
+    }
   }
 }
 
-.top_btn {
-  @extend %btn_secondary_down;
-  bottom: 0;
-  height: 4.6rem;
-  margin-bottom: 2rem;
-  position: fixed;
-  right: 2rem;
-  transform: rotate(180deg);
-  width: 4.6rem;
-  z-index: 100;
-  &::after {
-    display: block;
-    height: 1.6rem;
-    width: 1.6rem;
-  }
-  &:hover{
-    &::after {
-      animation: none;
+// galaxy z fold 5
+@include folded {
+  .footer {
+    gap: 6.957vw;
+    &_container {
+      &:first-child {
+        gap: 2.899vw;
+      }
+      &_lottie_wrap {
+        .hand_lottie {
+          height: 20vw;
+          bottom: 10.4rem;
+          right: -3.5rem;
+        }
+      }
+  
+      &_anchors{
+        padding: 5.797vw 0;
+        dl {
+          gap: 1.739vw;
+          & + dl {
+            margin-top: 4.638vw;
+          }
+        }
+      }
+  
+      &_copyright {
+        flex-direction: row;
+        gap: 2.604vw;
+        justify-content: center;
+        padding-bottom: 2.899vw;
+      }
     }
   }
 }

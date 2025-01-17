@@ -3,6 +3,7 @@
 $breakpoint_wide: 1536px;
 $breakpoint_desktop: 1280px;
 $breakpoint_tablet: 768px;
+$breakpoint_folded: 690px;
 $breakpoint_mobile: 360px;
 @mixin wide {
   @media (min-width: #{$breakpoint_wide}) {
@@ -16,6 +17,11 @@ $breakpoint_mobile: 360px;
 }
 @mixin tablet {
   @media (min-width: #{$breakpoint_tablet}) {
+    @content;
+  }
+}
+@mixin folded {
+  @media (min-width: #{$breakpoint_folded}) {
     @content;
   }
 }
@@ -94,6 +100,7 @@ $color_lightgrey : #E4E4E4;
 %font_visualDescription { font-size: 16px; line-height: 26px; } /* subhead4 */
 %font_tabAccContents { font-size: 16px; line-height: 26px; } /* body3 */
 %font_device { font-size: 12px; line-height: 18px; } /* caption2 */
+%font_footerContents { font-size: 14px; line-height: 22px; } /* body4 */
 
 @include tablet {
   // common
@@ -110,6 +117,8 @@ $color_lightgrey : #E4E4E4;
   %font_visualDescription { font-size: 18px; line-height: 28px; } /* subhead4 */
   //%font_tabAccContents { font-size: 16px; line-height: 26px; } /* body3 */
   //%font_device { font-size: px; line-height: px; } /* caption2 */
+  %font_footerContents { font-size: 16px; line-height: 26px; } /* body4 */
+  %font_footerCopyright { font-size: 14px; line-height: 22px; } /* body4 */
 }
 @include desktop {
   // common
@@ -126,6 +135,8 @@ $color_lightgrey : #E4E4E4;
   %font_visualDescription { font-size: 22px; line-height: 30px; } /* subhead4 */
   //%font_tabAccContents { font-size: px; line-height: px; } /* body3 */
   %font_device { font-size: 14px; line-height: 22px; } /* caption2 */
+  %font_footerContents { font-size: 18px; line-height: 26px; } /* body4 */
+  %font_footerCopyright {font-size: 16px; line-height: 26px; } /* body4 */
 }
 @include wide {
   // common

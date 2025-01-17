@@ -1,6 +1,33 @@
 @include wide {
+  .top_btn {
+    height: 9.2rem;
+    margin-bottom:4.2rem;
+    right: 4.2rem;
+    width: 9.2rem;
+    &::after {
+      height: 3.2rem;
+      width: 3.2rem;
+    }
+  }
+
   .footer {
-    padding:6rem 4.8rem 4rem;
+    padding:0 4.8rem;
+    &_container {
+      &:first-child {
+        gap: 3rem;
+      }
+
+      &_lottie_wrap {
+        .hand_lottie {
+          right: -17rem;
+        }
+      }
+
+      &_anchors{
+        padding: 4.8rem 0 6rem;
+      }
+    }
+
     &_sendMail_btn {
       min-height:26.8rem;
       .description {
@@ -13,17 +40,6 @@
         width:18rem;
         height:18rem;
       }
-    }
-  }
-
-  .top_btn {
-    height: 9.2rem;
-    margin-bottom:4.2rem;
-    right: 4.2rem;
-    width: 9.2rem;
-    &::after {
-      height: 3.2rem;
-      width: 3.2rem;
     }
   }
 }

@@ -17,7 +17,8 @@ export default function Chanel() {
       <WorksTemplate
         pageId={PAGE_ID}
         customChildren={<CommercePlatform pageId={PAGE_ID} />}
-        // webSiteUrl="Y"
+        webSiteUrl="Y"
+        targetBlackYn="N"
       />
     </>
   );

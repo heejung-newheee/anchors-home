@@ -15,7 +15,8 @@ export default function WorksTemplate({
   className,
   pageId,
   customChildren,
-  webSiteUrl ="N"
+  webSiteUrl ="N",
+  targetBlackYn ="Y",
 }) {
   const customChildrenExtended = customChildren ?? customChildren;
   // const HAS_CUSTOM = custom === 'Y' ? ' custom' : '';
@@ -51,7 +52,7 @@ export default function WorksTemplate({
     return () => {
       window.removeEventListener('scroll', HandleScroll);
     };
-  }, []);
+  }, [THIS_INDEX]);
 
   return (
     <section {...GET_CLASSNAME}>
@@ -139,8 +140,8 @@ export default function WorksTemplate({
 
       {/* S: View Website Button 영역 */}
       {webSiteUrl === "Y" && (
-        <Btn className={`view_website_btn${hideClass}`} type="a" title="view website button" url={FILTERED.websiteUrl} target="_black">
-          View <br /> Website
+        <Btn className={`view_website_btn${hideClass}`} type="a" title="view website button" url={FILTERED.websiteUrl} target={targetBlackYn === "Y" ? "_black" : ""}>
+          {targetBlackYn === "Y" ? (<>View <br /> Website</>) : (<>More <br /> introduction</>)}
         </Btn>
       )}
       {/* E: View Website Button 영역 */}

@@ -6,7 +6,7 @@ const Menu = ({data}) => {
   const { menuList,  privacyPolicyUrl, privacyPolicyKo } = data;
    
   return (
-    <nav className='footer_container_nav'>
+    <nav className='footer_nav'>
       <ul className="gnb">
         {menuList.map((menuList, idx) => (
           <li key={idx}>
