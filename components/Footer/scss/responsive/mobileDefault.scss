@@ -1,3 +1,7 @@
+@use "sass:math";
+
+$device : 360;
+
 .top_btn {
   @extend %btn_secondary_down;
   bottom: 0;
@@ -26,7 +30,7 @@
   background-color: $color_blue;
   display: flex;
   flex-direction: column;
-  gap: 13.333vw;
+  gap : #{converter(48)}vw;
   justify-content: center;
   height: 100vh;
   padding:0 2.4rem;
@@ -61,16 +65,17 @@
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      gap: 5.556vw;
-      justify-content: end;
+      gap: #{converter(20)}vw;
+      justify-content: flex-end; // 수정된 부분
     }
 
     &_lottie_wrap {
       .hand_lottie {
-        height: 20vw;
+        height: #{converter(72)}vw;
         position: absolute;
-        bottom: 10.4rem;
-        right: -3.5rem;
+        bottom:0;
+        right:0;
+        transform: translate(#{converter(8 + 24)}vw, offsetY(104 + 72));
       }
     }
 
@@ -84,17 +89,17 @@
     }
 
     &_anchors{
-      border-top: 0.1rem solid $color_white;
-      padding: 11.111vw 0;
+      border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+      padding: #{converter(40)}vw 0;
       dl {
         display: flex;
         flex-direction: column;
-        gap: 3.333vw;
+        gap: #{converter(12)}vw;
         dt {
           color: $color_lightblue;
         }
         & + dl {
-          margin-top: 8.889vw;
+          margin-top: #{converter(32)}vw;
         }
       }
     }
@@ -103,7 +108,7 @@
       align-items: center;
       display: flex;
       flex-direction: column;
-      padding-bottom: 5.556vw;
+      padding-bottom: #{converter(20)}vw;
       *{
         @extend %font_footerCopyright
       }
@@ -185,35 +190,36 @@
 
 // galaxy z fold 5
 @include folded {
+  $device : 690;
+
   .footer {
-    gap: 6.957vw;
+    gap : #{converter(48, $device)}vw;
     &_container {
       &:first-child {
-        gap: 2.899vw;
+        gap: #{converter(20, $device)}vw;
       }
+
       &_lottie_wrap {
         .hand_lottie {
-          height: 20vw;
-          bottom: 10.4rem;
-          right: -3.5rem;
+          transform: translate(#{converter(30 + 24, $device)}vw, offsetY(140 + 138, $device));
         }
       }
-  
+
       &_anchors{
-        padding: 5.797vw 0;
+        padding: #{converter(40, $device)}vw 0;
         dl {
-          gap: 1.739vw;
+          gap: #{converter(12, $device)}vw;
           & + dl {
-            margin-top: 4.638vw;
+            margin-top: #{converter(32, $device)}vw;
           }
         }
       }
   
       &_copyright {
         flex-direction: row;
-        gap: 2.604vw;
+        gap: #{converter(20, $device)}vw;
         justify-content: center;
-        padding-bottom: 2.899vw;
+        padding-bottom: #{converter(20, $device)}vw;
       }
     }
   }

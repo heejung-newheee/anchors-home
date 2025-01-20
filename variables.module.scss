@@ -1,10 +1,22 @@
+@use "sass:math";
+
+@function converter($value, $device: $device) {
+  @return math.div($value, $device) * 100
+}
+
+@function offsetY($value, $device: $device) {
+  @return calc(100% - #{converter($value, $device)}vw);
+}
+
 // S: for variable
 // Breakpoints
 $breakpoint_wide: 1536px;
 $breakpoint_desktop: 1280px;
+$breakpoint_rotate: 1024px; // tablet rotate 분기 추가
 $breakpoint_tablet: 768px;
-$breakpoint_folded: 690px;
+$breakpoint_folded: 690px; // galaxy z fold 5 분기 추가
 $breakpoint_mobile: 360px;
+
 @mixin wide {
   @media (min-width: #{$breakpoint_wide}) {
     @content;
@@ -12,6 +24,11 @@ $breakpoint_mobile: 360px;
 }
 @mixin desktop {
   @media (min-width: #{$breakpoint_desktop}) {
+    @content;
+  }
+}
+@mixin rotate {
+  @media (min-width: #{$breakpoint_rotate}) {
     @content;
   }
 }

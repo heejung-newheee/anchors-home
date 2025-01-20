@@ -1,4 +1,6 @@
 @include wide {
+  $device : 1536;
+
   .top_btn {
     height: 9.2rem;
     margin-bottom:4.2rem;
@@ -12,19 +14,39 @@
 
   .footer {
     padding:0 4.8rem;
+    gap: 8.8rem; 
     &_container {
+      max-width: 1536px;
       &:first-child {
         gap: 3rem;
       }
 
       &_lottie_wrap {
+        .line_lottie {
+          height: auto;
+        }
         .hand_lottie {
-          right: -17rem;
+          height:#{converter(276, $device )}vw;
+          right:50%;
+          transform: translate(calc(50vw + 100px), 0);
         }
       }
 
       &_anchors{
         padding: 4.8rem 0 6rem;
+        dl {
+          dt {
+            margin-right: 4rem;
+          }
+          dd + dd {
+            margin-top: 1.2rem;
+          }
+        }
+      }
+
+      &_copyright {
+        padding: 4rem 0;
+        gap: 2.4rem;
       }
     }
 

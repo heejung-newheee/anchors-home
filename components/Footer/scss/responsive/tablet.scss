@@ -1,4 +1,6 @@
 @include tablet {
+  $device : 768;
+
   .top_btn {
     height: 6.9rem;
     margin-bottom: 2.4rem;
@@ -11,35 +13,31 @@
   }
 
   .footer {
-    gap: 10.417vw;
+    gap : #{converter(80, $device)}vw;
     &_container {
       &:first-child {
-        gap: 3.125vw;
+        gap: #{converter(24, $device)}vw;
       }
 
       &_lottie_wrap {
-        .line_lottie {
-          height: 32.813vh;
-        }
         .hand_lottie {
-          height: 20.313vw;
-          bottom: 16.7rem;
-          right: -4.5rem;
+          height: #{converter(156, $device)}vw;
+          transform: translate(#{converter(16 + 30 + 24, $device)}vw, offsetY(168 + 156 + 50, $device));
         }
       }
 
       &_anchors{
-        padding: 6.25vw 0 10.417vw;
+        padding: #{converter(48, $device)}vw 0 #{converter(80, $device)}vw;
         dl {
-          gap: 1.563vw;
+          gap: #{converter(12, $device)}vw;
           & + dl {
-            margin-top: 5.208vw;
+            margin-top: #{converter(40, $device)}vw;
           }
         }
       }
 
       &_copyright {
-        padding-bottom: 4.167vw;
+        padding-bottom: #{converter(32, $device)}vw;
       }
     }
 
@@ -67,6 +65,55 @@
       display: inline-flex;
       height: 4.4rem;
       margin-top: 4rem;
+    }
+  }
+}
+
+@include rotate {
+  $device : 1024;
+
+  .footer {
+    gap : #{converter(48, $device)}vw;
+    &_container {
+      &:first-child {
+        gap: #{converter(20, $device)}vw;
+      }
+
+      &_lottie_wrap {
+        .line_lottie {
+          height: #{converter(192, 600)}vh;      
+        }
+        .hand_lottie {
+          height: #{converter(146, 600)}vh;
+          transform: translate(#{converter(16 + 30 + 24, $device)}vw, -#{converter(44 + 20, $device)}vw); // offsetY(44 + 20, $device)
+        }
+      }
+
+      &_anchors{
+        display: flex;
+        flex-direction: row;
+        padding: #{converter(32, $device)}vw 0;
+        dl {
+          flex-basis: 50%;
+          display: block;
+          dt {
+            float: left;
+            height:100%;
+            margin-right: #{converter(40, $device)}vw;
+          }
+          & + dl {
+            margin-top: 0;
+          }
+          dd + dd {
+            margin-top: #{converter(12, $device)}vw;
+          }
+        }
+      }
+
+      &_copyright {
+        padding: #{converter(24, $device)}vw 0;
+        gap : #{converter(24, $device)}vw;
+      }
     }
   }
 }
