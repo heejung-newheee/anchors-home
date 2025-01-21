@@ -13,6 +13,11 @@
         <priority>0.80</priority>
     </url>
     <url>
+        <loc>https://www.anchors-biz.com/pages/worksDetail/platform</loc>
+        <lastmod>2025-01-24T06:06:18+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
         <loc>https://www.anchors-biz.com/pages/worksDetail/chanel</loc>
         <lastmod>2024-04-09T06:06:18+00:00</lastmod>
         <priority>0.64</priority>
@@ -85,6 +90,11 @@
     <url>
         <loc>https://www.anchors-biz.com/pages/service</loc>
         <lastmod>2024-04-09T06:06:18+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.anchors-biz.com/pages/platform</loc>
+        <lastmod>2025-01-24T06:06:18+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
