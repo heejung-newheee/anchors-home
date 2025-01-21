@@ -95,6 +95,7 @@ $device : 360;
         gap: #{converter(12)}vw;
         dt {
           color: $color_lightblue;
+          font-family: $font_en;
         }
         & + dl {
           margin-top: #{converter(32)}vw;

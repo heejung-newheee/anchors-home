@@ -10,6 +10,7 @@
 
 // S: for variable
 // Breakpoints
+$breakpoint_maxWide: 1920px; // 1920px 이상
 $breakpoint_wide: 1536px;
 $breakpoint_desktop: 1280px;
 $breakpoint_rotate: 1024px; // tablet rotate 분기 추가
@@ -17,6 +18,11 @@ $breakpoint_tablet: 768px;
 $breakpoint_folded: 690px; // galaxy z fold 5 분기 추가
 $breakpoint_mobile: 360px;
 
+@mixin maxWide {
+  @media (min-width: #{$breakpoint_maxWide}) {
+    @content;
+  }
+}
 @mixin wide {
   @media (min-width: #{$breakpoint_wide}) {
     @content;
