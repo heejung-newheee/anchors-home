@@ -4,8 +4,8 @@
   @return math.div($value, $device) * 100
 }
 
-@function offsetY($value, $device: $device) {
-  @return calc(100% - #{converter($value, $device)}vw);
+@function offsetY($value, $device: $device, $converterUnit: vw) {
+  @return calc(100% - #{converter($value, $device) + $converterUnit});
 }
 
 // S: for variable
