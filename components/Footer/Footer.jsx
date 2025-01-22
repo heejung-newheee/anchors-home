@@ -27,7 +27,7 @@ export default function Footer() {
   useLayoutEffect(() => {
     setIsVisible(BREAKPOINT_DESKTOP);
   }, [BREAKPOINT_DESKTOP]);
-
+  
   return (
     <>
       <TopButton data={{ works : Works, footerRef: FOOTER_REF }} />

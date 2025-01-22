@@ -3,19 +3,17 @@ import seo from '@/helper/data/json/contents/SEO.json';
 
 import './scss/chanel.scss';
 
+const PAGE_ID = "0000";
+const TITLE = seo.title.subPage.worksDetail;
+const KEYWORDS = seo.keywords.worksDetail;
+const DESCRIPTION = seo.description.worksDetail;
+
 export const metadata = {
-  title: seo.title.subPage.detail.chanel + ' : ' + seo.title.subPage.works,
+  title: TITLE.chanel + ' : ' + seo.title.subPage.works,
+  keywords: KEYWORDS.chanel,
+  description: DESCRIPTION.chanel,
 };
 
 export default function Chanel() {
-
-  const PAGE_ID = "0000";
-
-  return (
-    <>
-      <WorksTemplate
-        pageId={PAGE_ID}
-      />
-    </>
-  );
+  return <WorksTemplate pageId={PAGE_ID} />;
 }

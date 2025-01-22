@@ -54,7 +54,7 @@ const Members = ({data, imgUrl}) => {
           <article className="tooltip">
             <ElementTitle data={item.nameKo} />
             <Description className="member_team" data={item.part} />
-            <Description innerHTMLOption="Y" className="member_hashtag" data={item.hashtag} />
+            <Description innerHTMLOption="Y" className={`member_hashtag ${item.tagClassname}`} data={item.hashtag} />
           </article>
         </MoreDetail>
       </article>
