@@ -426,7 +426,7 @@
       "custom": [
         { "video": "video_nbrand.mp4" },
         { "text": "Main" },
-        { "text": "산업에 대한 높은 이해도와 IT지식을 통해 현대자동차와 N브랜드 차종을 일원화된 콘텐츠로 운영하였습니다. 특히, 글로벌 웹사이트 특성으로 인해, 다국어 표현 및 사용 리소스를 최적화 하여, 소비자들의 정보 접근성을 높였습니다." },
+        { "text": "산업에 대한 높은 이해도와 IT지식을 통해 현대자동차와 N브랜드 차종을 일원화된 콘텐츠로 운영하였습니다.\n특히, 글로벌 웹사이트 특성으로 인해, 다국어 표현 및 사용 리소스를 최적화 하여, 소비자들의 정보 접근성을 높였습니다." },
         { "image": "img_web1_nbrand.jpg", "alt": "NBrand main 이미지" },
         { "image": "img_web2_nbrand.jpg", "alt": "NBrand main 이미지" },
         { "image": "img_full_nbrand.jpg", "alt": "NBrand website 상세페이지 관련 이미지" },
