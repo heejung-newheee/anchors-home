@@ -29,6 +29,7 @@
         .hand_lottie {
           height: #{converter(166, 720)}vh;
           transform: translate(#{converter(50 + 32, $device)}vw, -#{converter(70 + 20, $device)}vw);
+          width : #{converter(166, 720)}vh;
         }
       }
 

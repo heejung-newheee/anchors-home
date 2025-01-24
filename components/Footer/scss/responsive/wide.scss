@@ -29,6 +29,7 @@
           height:#{converter(276, $device )}vw;
           right:50%;
           transform: translate(calc(50vw + 100px), 0);
+          width:#{converter(276, $device )}vw;
         }
       }
 

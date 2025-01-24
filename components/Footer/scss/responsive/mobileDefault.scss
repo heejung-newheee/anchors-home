@@ -74,6 +74,7 @@ $device : 360;
         bottom:0;
         right:0;
         transform: translate(#{converter(8 + 24)}vw, offsetY(104 + 72));
+        width: #{converter(72)}vw;
       }
     }
 

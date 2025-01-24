@@ -23,6 +23,7 @@
         .hand_lottie {
           height: #{converter(156, $device)}vw;
           transform: translate(#{converter(16 + 30 + 24, $device)}vw, offsetY(168 + 156 + 50, $device));
+          width: #{converter(156, $device)}vw;
         }
       }
 
@@ -86,6 +87,7 @@
         .hand_lottie {
           height: #{converter(146, 600)}vh;
           transform: translate(#{converter(16 + 30 + 24, $device)}vw, -#{converter(44 + 20, $device)}vw); // offsetY(44 + 20, $device)
+          width: #{converter(146, 600)}vh;
         }
       }
 
