@@ -2,7 +2,7 @@
   "imgUrl": "/assets/images/contents/service/",
   "textList" : {
     "textEn": "Anchors is a <span>software development</span> company established in 2018. Although short in history,<br/> we are Powered by <span>Technology</span> and Driven by <span>Talent.</span>",
-    "textKo": "앵커스는 2018년에 설립된 소프트웨어 개발 회사입니다. 회사의 짧은 역사지만, 우리는 기술에 의해 구동되고 인재에 의해 구동됩니다."
+    "textKo": "앵커스는 2018년에 설립된 소프트웨어 개발 회사입니다. 비록, 업력은 길지 않지만, 우리는 기술에 의해 구동되고 인재에 의해 구동됩니다."
   },
   "introduction": [
     {
@@ -31,7 +31,7 @@
     },
     {
       "name":"Maintenance",
-      "textLine1" : "정보기술이 발전하면서 새로운 기술들이 끊임없이 나오고 있는 상황에서신기술을 통한 업무한경 개선이 중요해지고 있으며, 고객의 요구사항도 계속해서 다변화되고 있습니다.",
+      "textLine1" : "정보 기술이 발전하면 새로운 기술들이 끊임없이 나오고 있는 상황에서 신기술을 통한 업무환경 개선이 중요해지고 있으며, 고객의 요구사항도 계속해서 다변화되고 있습니다.",
       "textLine2" : "Anchors는 IT의 전문성을 통해 고객사 비즈니스에 도움이 될 수 있도록 Maintenance Service를 제공합니다.",
       "hashtag": ["#Web & App Maintenance","#Global IT Service Maintenance"],
       "img": "img_maintenance.jpg",
@@ -39,7 +39,7 @@
     },
     {
       "name":"Design",
-      "textLine1" : "항상 사용자 입장에서 생각하며 사용하기 편하고 즐거운 디자인을 만듭니다. 트랜드에 예민하게 반응하며 필요에 따라 독창적으로, 때로는 심플한 디자인을 합니다.",
+      "textLine1" : "항상 사용자 입장에서 생각하며 사용하기 편하고 즐거운 디자인을 만듭니다. 트렌드에 예민하게 반응하며 필요에 따라 독창적으로, 때로는 심플한 디자인을 합니다.",
       "textLine2" : "크리에이티브한 디자인은 많은 사용자들에게 확장될 수 있는 쉽고 안정적인 UX환경을 만들어냅니다.",
       "hashtag": ["#User Experience Design","#User Interface Design"],
       "img": "img_design.jpg",

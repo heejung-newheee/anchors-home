@@ -2,7 +2,7 @@
   "imgUrl": "/assets/images/contents/platform/",
   "textList" : {
     "textEn": "Transforming the way businesses <span>Operate</span>.",
-    "textKo": "Anchors는 유연한 커스터마이징과 손쉬운 구독형 솔루션으로, 여러분의 비즈니스를 한 단계 더 성장시키세요."
+    "textKo": "Anchors의 유연한 커스터마이징이 가능한 구독형 Platform으로, 여러분의 비즈니스를 한 단계 더 성장시키세요."
   },
   "visual" : {
     "img": "img_visual.jpg",
@@ -15,25 +15,25 @@
   "welfare" : {
     "content" :[
       {
-        "title": "회원관리",
-        "text": "상세한 회원정보 기록부터 엑셀 대량등록까지 지원해요.",
+        "title": "회원 관리",
+        "text": "상세한 회원 정보의 관리가 가능하며, 엑셀 파일을 통해 손쉬운 업로드가 가능해요.",
         "img": "img_welfare_member.svg",
         "alt": "회원 아이콘"
       },
       {
         "title": "권한 관리",
-        "text": "관리자별 메뉴 권한 지정이 가능해요.",
+        "text": "관리자 별로 등급 설정이 가능하여, 각 등급별 또는 관리자 별로 접근 가능한 메뉴를 설정할 수 있어요.",
         "img": "img_welfare_authority.svg",
         "alt": "권한 아이콘"
       },
       {
-        "title": "주문관리",
+        "title": "주문 관리",
         "text": "회원이 문의한 문의 내용을 확인할 수 있어요.",
         "img": "img_welfare_order.svg",
         "alt": "주문 아이콘"
       },
       {
-        "title": "일정관리",
+        "title": "일정 관리",
         "text": "고객정보와 예약을 효율적으로 관리해요.",
         "img": "img_welfare_schedule.svg",
         "alt": "일정 아이콘"
@@ -45,7 +45,7 @@
         "alt": "시스템 아이콘"
       },
       {
-        "title": "분석통계",
+        "title": "분석 통계",
         "text": "구글 애널리틱스 통계 기능을 지원해요.",
         "img": "img_welfare_analysis.svg",
         "alt": "분석 아이콘"
