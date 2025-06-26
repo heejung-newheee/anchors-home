@@ -1,0 +1,124 @@
+@include desktop {
+  .platform {
+    &_visual {
+      .visual {
+        height: 80rem;
+      }
+      .description {
+        padding: 14rem 9rem 6rem;
+        margin-bottom: 0;
+
+        & + .description {
+          padding-top: 0;
+        }
+      }
+    }
+
+    &_introduction {
+      padding-bottom:14rem;
+      .depthTitle {
+        margin-bottom:4rem;
+      }
+      .description {
+        margin-bottom:8rem;
+      }
+      .img_area{
+        max-width:1440px;
+        height:65rem;
+      }
+    }
+
+    &_contactUs {
+      flex-direction: row;
+      li {
+        padding:8rem 10rem;
+      }
+      .element_title {
+        margin:2rem 0 2.4rem;
+      }
+      .description {
+        margin-bottom: 4rem;
+      }
+    }
+
+     //sub_visual 영역
+    & &_sub_visual{
+      height: 35vw;
+      margin-bottom: 14rem;
+      img{
+        top: -2rem;
+        height: 42vw;
+      }
+    }
+
+    &_features {
+      .depthTitle {
+        margin-bottom:18rem;
+      }
+    }
+
+    .features_swiper {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 14rem;
+
+      .image_swiper {
+        width: 36.718750vw;
+        padding-bottom: 3.6rem;
+        margin: 0;
+
+        .swiper-pagination {
+          bottom: 0;
+        }
+      }
+      .text_swiper {
+        width: 30.468750vw;
+        height: auto;
+        padding: 12.9rem 0 0 0;
+        margin: 0;
+        margin-left: 3rem;
+
+        .swiper-slide {
+          &:first-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+          }
+          &:nth-child(2) {
+            padding-bottom: 0;
+            margin-bottom: 0;
+          }
+          &:nth-child(3) {
+            padding-bottom: 0;
+            margin-bottom: 0;
+          }
+
+          &:after {
+            width: 20.6rem;
+            height: 1.8rem;
+            margin-bottom: 0;
+
+            right: 3rem;
+            bottom: 9.1rem;
+            margin-top: 0;
+          }
+          /*
+          &:first-child:after {
+            right: 3rem;
+            bottom: 9.1rem;
+            margin-top: 0;
+          }
+          &:nth-child(2):after {
+            right: 6rem;
+            bottom: 14.1rem;
+            margin-top: 0;
+          }
+          &:nth-child(3):after {
+            margin-top: 0;
+            bottom: 20.1rem;
+          }
+          */
+        }
+      }
+    }
+  }
+}

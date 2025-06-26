@@ -1,0 +1,42 @@
+//  welfare 영역
+.welfare{
+    @extend %layout_fix;
+    //padding: 0 2.4rem;
+    .welfare_text{
+        @extend %font_sectionTitle;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 2.6rem;
+        padding: 0 2rem;
+    }
+    .welfare_list{
+        .base_article{
+            width: 100%;
+            border-bottom: 0.1rem solid #E4E4E4;
+            &:last-child{
+                margin-bottom: 8rem;
+            }
+            img{
+                width: 3.4rem;
+                height: 3.4rem;
+                margin-top: 3.3rem;
+                margin-bottom: 1.8rem;
+                transform: scale(1) !important;
+            }
+            p{
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 100%;
+                text-align: left;
+                margin: 0;
+                padding-bottom: 0.6rem ;
+            }
+            span{
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 2.2rem;
+                padding-bottom: 1.6rem;
+            }
+        }
+    }
+}

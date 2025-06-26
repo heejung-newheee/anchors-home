@@ -1,53 +1,88 @@
 {
   "imgUrl": "/assets/images/contents/about/",
+  "visualImg": "img_visual_members.jpg",
+  "depthTitle" : "About Anchors Members Introduction",
   "membersText": {
     "textEn": "We work with people <span>challenging and fun</span> to work with than alone. <span>Synergy</span> is a great driving force to sail through any problem ahead.",
     "textKo": "우리는 혼자보다 함께 일할 때 더 즐거운 사람들과 일하고 있습니다.<br />신뢰감 있는 동료와 함께 일할 때 나는 시너지는 어떠한 문제도 헤쳐나갈 수 있는 가장 큰 원동력입니다."
   },
   "members": [
     {
-      "nameKo": "최인성 과장",
+      "nameKo": "최인성 책임",
       "nameEn": "Choi Insung",
-      "part": "PM / 기획팀",
+      "part": "기획팀",
       "hashtag": [
         "#내 꿈은 #연봉 1억 #사원<br/>#참아 #견뎌 #버텨<br/>#나도 이만큼 하는데<br/>#너희들이라고 못할까"
       ],
-      "tagClassname": "해시태그 style 클래스 명",
+      "tagClassname": "",
       "img": "img_member_slide_swiper1.jpg",
-      "alt": "앵커스 직원 대표 이미지"
+      "alt": "앵커스 최인성 책임 대표 이미지"
     },
     {
-      "nameKo": "구은이 대리",
-      "nameEn": "Chiu En Yi",
-      "part": "기획팀",
-      "hashtag": [
-        "#대만어 아주 잘함<br>#워라벨 = 행복<br>#UX 기획은 공감 능력 중요함<br>#가끔 여행 유튜버<br>#빵순인데 항상 다이어트 중"
-      ],
-      "tagClassname": "해시태그 style 클래스 명",
-      "img": "img_member_slide_swiper2.jpg",
-      "alt": "앵커스 직원 대표 이미지"
-    },
-    {
-      "nameKo": "서승희 대리",
+      "nameKo": "서승희 책임",
       "nameEn": "Seo Seung hee",
       "part": "기획팀",
       "hashtag": [
         "#4개국어 합니다 #영어<br/>#일본어 #서울말 #대구말<br/>#애주가 #소주파<br/>#밀집모자일당급동료애"
       ],
-      "tagClassname": "해시태그 style 클래스 명",
+      "tagClassname": "",
       "img": "img_member_slide_swiper3.jpg",
-      "alt": "앵커스 직원 대표 이미지"
+      "alt": "앵커스 서승희 책임 대표 이미지"
     },
     {
-      "nameKo": "최혜주 과장",
+      "nameKo": "최혜주 책임",
       "nameEn": "Choi hye ju",
       "part": "연구실",
       "hashtag": [
         "#애엄마 #캠퍼<br/>#화가많음주의 #웃음도많음주의<br/>#손빠름 #근데실수도많음<br/>#돌아간다신난다<br/>#ISFJ #그것은프로불편러"
       ],
-      "tagClassname": "해시태그 style 클래스 명",
+      "tagClassname": "",
       "img": "img_member_slide_swiper4.jpg",
-      "alt": "앵커스 직원 대표 이미지"
+      "alt": "앵커스 최혜주 책임 대표 이미지"
+    },
+    {
+      "nameKo": "모함메드 책임",
+      "nameEn": "Mohamed Abdelrehim",
+      "part": "개발팀",
+      "hashtag": [
+        "#이집트 #앗쌀라무 알라이쿰<br/>#써티머신 #한국패치완료<br/>#언어마스터 #ENTJ<br/>#열정러"
+      ],
+      "tagClassname": "",
+      "img": "img_member_slide_swiper5.jpg",
+      "alt": "앵커스 모함메드 책임 대표 이미지"
+    },
+    {
+      "nameKo": "이준현 사원",
+      "nameEn": "Lee, Jun hyun",
+      "part": "개발팀",
+      "hashtag": [
+        "#토론 #우기기 #순발력<br/>#아침에헬스다니는데헬창처럼몸이커지는거는싫어요원하는몸은저스틴비버잔근육을원해요<br/>#건강해요"
+      ],
+      "tagClassname": "word-break-normal",
+      "img": "img_member_slide_swiper6.jpg",
+      "alt": "앵커스 이준현 사원 대표 이미지"
+    },
+    {
+      "nameKo": "이도화 책임",
+      "nameEn": "Lee, Do Hwa",
+      "part": "디자인실",
+      "hashtag": [
+        "#물위에서배운건 #흐르는대로사는법<br/>#모험은좋아 #근데균형은어렵<br/> #닻을내리는건 #멈춤이아닌준비"
+      ],
+      "tagClassname": "",
+      "img": "img_member_slide_swiper7.jpg",
+      "alt": "앵커스 이도화 책임 대표 이미지"
+    },
+    {
+      "nameKo": "이현지 사원",
+      "nameEn": "Lee, Hyun ji",
+      "part": "경영지원실",
+      "hashtag": [
+        "#경영지원실막내 #집순이<br/>#커피러버 #얼죽따<br/>#헬린이 #ISFJ<br/>#가끔T나옴"
+      ],
+      "tagClassname": "",
+      "img": "img_member_slide_swiper8.jpg",
+      "alt": "앵커스 이현지 사원 대표 이미지"
     }
   ]
 }

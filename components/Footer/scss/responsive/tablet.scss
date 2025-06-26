@@ -1,33 +1,120 @@
 @include tablet {
+  $device : 768;
+
+  .top_btn {
+    height: 6.9rem;
+    margin-bottom: 2.4rem;
+    right: 2.4rem;
+    width: 6.9rem;
+    &::after {
+      height: 2.4rem;
+      width: 2.4rem;
+    }
+  }
+
   .footer {
-    .lottie_wrap {
-      .line_lottie {
-        padding-top: 12.8rem;
+    gap : #{converter(80, $device)}vw;
+    &_container {
+      &:first-child {
+        gap: #{converter(24, $device)}vw;
       }
-      .hand_lottie {
-        top: 19.2rem;
+
+      &_lottie_wrap {
+        .hand_lottie {
+          height: #{converter(156, $device)}vw;
+          transform: translate(#{converter(16 + 30 + 24, $device)}vw, offsetY(168 + 156 + 50, $device));
+          width: #{converter(156, $device)}vw;
+        }
+      }
+
+      &_anchors{
+        padding: #{converter(48, $device)}vw 0 #{converter(80, $device)}vw;
+        dl {
+          gap: #{converter(12, $device)}vw;
+          & + dl {
+            margin-top: #{converter(40, $device)}vw;
+          }
+        }
+      }
+
+      &_copyright {
+        padding-bottom: #{converter(32, $device)}vw;
       }
     }
-    .btn_wrap {
-      padding-top: 1.1rem;
+
+    &_sendMail_btn {
+      border-width: 0.3rem;
+      border-radius: 2.8rem;
+      min-height:17.2rem;
+      margin-bottom: 4.8rem;
+      .description {
+        font-size:4rem;
+        br {
+          display: inline;
+        }
+      }
     }
 
-    .about_privacy_wrap {
-      display: flex;
-      justify-content: center;
-      padding: 3.2rem 0;
-      margin: 0 5rem;
-      gap: 2.4rem;
+    &_nav {
+      .gnb {
+        flex-direction: row;
+        gap: 2.8rem;
+      }
+    }
 
-      * {
-        font-size: 1.4rem;
-        line-height: 1.7rem;
-        letter-spacing: 0.42px;
+    .download_btn {
+      display: inline-flex;
+      height: 4.4rem;
+      margin-top: 4rem;
+    }
+  }
+}
+
+@include rotate {
+  $device : 1024;
+
+  .footer {
+    gap : #{converter(48, $device)}vw;
+    &_container {
+      &:first-child {
+        gap: #{converter(20, $device)}vw;
       }
 
-      .policy_wrap {
-        width: auto;
-        padding-top: 0;
+      &_lottie_wrap {
+        .line_lottie {
+          height: #{converter(192, 600)}vh;      
+        }
+        .hand_lottie {
+          height: #{converter(146, 600)}vh;
+          transform: translate(#{converter(16 + 30 + 24, $device)}vw, -#{converter(44 + 20, $device)}vw); // offsetY(44 + 20, $device)
+          width: #{converter(146, 600)}vh;
+        }
+      }
+
+      &_anchors{
+        display: flex;
+        flex-direction: row;
+        padding: #{converter(32, $device)}vw 0;
+        dl {
+          flex-basis: 50%;
+          display: block;
+          dt {
+            float: left;
+            height:100%;
+            margin-right: #{converter(40, $device)}vw;
+          }
+          & + dl {
+            margin-top: 0;
+          }
+          dd + dd {
+            margin-top: #{converter(12, $device)}vw;
+          }
+        }
+      }
+
+      &_copyright {
+        padding: #{converter(24, $device)}vw 0;
+        gap : #{converter(24, $device)}vw;
       }
     }
   }

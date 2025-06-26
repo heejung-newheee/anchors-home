@@ -1,0 +1,40 @@
+@include desktop {
+//  welfare 영역
+    .welfare{
+        .welfare_text{
+            margin-bottom: 6rem;
+        }
+        .welfare_list{
+            .base_article{
+                width: calc(33.3333% - 3.8rem);
+                height: 37.4rem;
+                margin-bottom: 3.8rem;
+                padding: 4rem 5rem;
+                &:last-child{
+                    margin-bottom: 16rem;
+                }
+                img{
+                    width: 6rem;
+                    height: 6rem;
+                    margin-top: 7rem;
+                    margin-bottom: 5rem;
+                }
+                p{
+                    font-size: 2.8rem;
+                    font-weight: 700;
+                    line-height: 100%;
+                    text-align: left;
+                    margin: 0;
+                    padding-bottom: 1.8rem;
+                }
+                span{
+                    width: 100%;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 2.4rem;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}

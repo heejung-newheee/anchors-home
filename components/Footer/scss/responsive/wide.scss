@@ -1,12 +1,108 @@
 @include wide {
+  $device : 1536;
+
+  .top_btn {
+    height: 9.2rem;
+    margin-bottom:4.2rem;
+    right: 4.2rem;
+    width: 9.2rem;
+    &::after {
+      height: 3.2rem;
+      width: 3.2rem;
+    }
+  }
+
   .footer {
-    .lottie_wrap {
-      .hand_lottie {
-        top: 28.9rem;
+    padding:0 4.8rem;
+    gap : #{converter(48, $device)}vw;
+    &_container {
+      max-width: 1536px;
+      &:first-child {
+        gap : #{converter(20, $device)}vw;
+      }
+
+      &_lottie_wrap { 
+        .line_lottie {
+          height: #{converter(225, $device)}vw;
+        }
+        .hand_lottie {
+          height:#{converter(276, $device )}vw;
+          right:50%;
+          transform: translate(calc(50vw + 100px), 0);
+          width:#{converter(276, $device )}vw;
+        }
+      }
+
+      &_anchors{
+        padding: #{converter(32, $device)}vw 0;
+        dl {
+          dt {
+            margin-right: 4rem;
+          }
+          dd + dd {
+            margin-top: #{converter(12, $device)}vw;
+          }
+        }
+      }
+
+      &_copyright {
+        // padding: 3.2rem 0;
+        // gap: 2.4rem;
+
+        padding: #{converter(32, $device)}vw 0;
+        gap: #{converter(24, $device)}vw;
       }
     }
-    .btn_wrap {
-      padding-top: 3.1rem;
+
+    &_sendMail_btn {
+      min-height:26.8rem;
+      .description {
+        font-size:8rem;
+      }
+    }
+
+    &_cursor {
+      &.isHover {
+        width:18rem;
+        height:18rem;
+      }
+    }
+  }
+}
+
+@include maxWide {
+  $device : 1920;
+
+  .footer {
+    gap : #{converter(80, $device)}vw;
+    &_container {
+      &:first-child {
+        gap : #{converter(30, $device)}vw;
+      }
+
+      &_lottie_wrap { 
+        .line_lottie {
+          height: 100%;
+          max-height: 42rem;
+        }
+      }
+
+      &_anchors{
+        padding: #{converter(48, $device)}vw 0;
+        dl {
+          dt {
+            margin-right: 4rem;
+          }
+          dd + dd {
+            margin-top: #{converter(12, $device)}vw;
+          }
+        }
+      }
+
+      &_copyright {
+        padding: #{converter(32, $device)}vw 0;
+        gap: #{converter(24, $device)}vw;
+      }
     }
   }
 }

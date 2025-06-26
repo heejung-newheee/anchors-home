@@ -11,12 +11,10 @@ export default function Menu() {
   };
 
   return (
-    <article className="menu">
-      <Btn type="button" className="menu_btn black" onClick={MenuBtnClass}>
-        메뉴버튼
-      </Btn>
+    <div className="menu">
+      <Btn type="button" className="menu_btn black" onClick={MenuBtnClass}>메뉴버튼</Btn>
       {/* 햄버거 버튼 */}
-      <div className="gnb_wrap">
+      <nav className="gnb_wrap">
         <ul className="gnb">
           {headerFooter.menuList.map((menuList, idx) => (
             <li key={idx}>
@@ -28,7 +26,7 @@ export default function Menu() {
           ))}
         </ul>
         <span className="copy">{headerFooter.copyright}</span>
-      </div>
-    </article>
+      </nav>
+    </div>
   );
 }

@@ -50,6 +50,7 @@
           font-weight: 700;
           text-align: center;
           color: #d6d6d6;
+          cursor: pointer;
 
           &.is_active {
             border-color: #00befd;
@@ -69,7 +70,7 @@
     }
 
     .tab_content_wrap {
-      & > article {
+      & > [class*="tab_content"] {
         margin-top: 8rem;
         margin-bottom: 16rem;
         text-align: center;

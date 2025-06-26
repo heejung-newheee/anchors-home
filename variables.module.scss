@@ -1,9 +1,28 @@
+@use "sass:math";
+
+@function converter($value, $device: $device) {
+  @return math.div($value, $device) * 100
+}
+
+@function offsetY($value, $device: $device, $converterUnit: vw) {
+  @return calc(100% - #{converter($value, $device) + $converterUnit});
+}
+
 // S: for variable
 // Breakpoints
+$breakpoint_maxWide: 1920px; // 1920px 이상
 $breakpoint_wide: 1536px;
 $breakpoint_desktop: 1280px;
+$breakpoint_rotate: 1024px; // tablet rotate 분기 추가
 $breakpoint_tablet: 768px;
+$breakpoint_folded: 690px; // galaxy z fold 5 분기 추가
 $breakpoint_mobile: 360px;
+
+@mixin maxWide {
+  @media (min-width: #{$breakpoint_maxWide}) {
+    @content;
+  }
+}
 @mixin wide {
   @media (min-width: #{$breakpoint_wide}) {
     @content;
@@ -14,8 +33,18 @@ $breakpoint_mobile: 360px;
     @content;
   }
 }
+@mixin rotate {
+  @media (min-width: #{$breakpoint_rotate}) {
+    @content;
+  }
+}
 @mixin tablet {
   @media (min-width: #{$breakpoint_tablet}) {
+    @content;
+  }
+}
+@mixin folded {
+  @media (min-width: #{$breakpoint_folded}) {
     @content;
   }
 }
@@ -88,12 +117,13 @@ $color_lightgrey : #E4E4E4;
 %font_disclaimer { font-size: 12px; line-height: 20px; } /* subhead5 */
 %font_enIntro { font-size: 22px; line-height: 30px; } /* body1 */
 // component
-%font_pageTitle { font-size: 60px; line-height: 60px; } /* display1 */
+%font_pageTitle { font-size: 50px; line-height: 60px; } /* display1 */
 %font_visualTitle { font-size: 50px; line-height: 58px; } /* headline1 */
 %font_baseArticleTitle { font-size: 18px; line-height: 26px; } /* headline2 */
 %font_visualDescription { font-size: 16px; line-height: 26px; } /* subhead4 */
 %font_tabAccContents { font-size: 16px; line-height: 26px; } /* body3 */
 %font_device { font-size: 12px; line-height: 18px; } /* caption2 */
+%font_footerContents { font-size: 14px; line-height: 22px; } /* body4 */
 
 @include tablet {
   // common
@@ -104,12 +134,14 @@ $color_lightgrey : #E4E4E4;
   %font_disclaimer { font-size: 14px; line-height: 22px; } /* subhead5 */
   %font_enIntro { font-size: 34px; line-height: 48px; } /* body1 */
   // component
-  %font_pageTitle { font-size: 120px; line-height: 120px; } /* display1 */
+  %font_pageTitle { font-size: 110px; line-height: 120px; } /* display1 */
   %font_visualTitle { font-size: 80px; line-height: 90px; } /* headline1 */
   %font_baseArticleTitle { font-size: 22px; line-height: 30px; } /* headline2 */
   %font_visualDescription { font-size: 18px; line-height: 28px; } /* subhead4 */
   //%font_tabAccContents { font-size: 16px; line-height: 26px; } /* body3 */
   //%font_device { font-size: px; line-height: px; } /* caption2 */
+  %font_footerContents { font-size: 16px; line-height: 26px; } /* body4 */
+  %font_footerCopyright { font-size: 14px; line-height: 22px; } /* body4 */
 }
 @include desktop {
   // common
@@ -126,6 +158,8 @@ $color_lightgrey : #E4E4E4;
   %font_visualDescription { font-size: 22px; line-height: 30px; } /* subhead4 */
   //%font_tabAccContents { font-size: px; line-height: px; } /* body3 */
   %font_device { font-size: 14px; line-height: 22px; } /* caption2 */
+  %font_footerContents { font-size: 18px; line-height: 26px; } /* body4 */
+  %font_footerCopyright {font-size: 16px; line-height: 26px; } /* body4 */
 }
 @include wide {
   // common
@@ -254,6 +288,22 @@ $color_lightgrey : #E4E4E4;
       30% {opacity: 1;}
       31% { top: 110%; right: 64px; }
       50% { top: 50%; right: 32px; }
+    }
+  }
+}
+
+%btn_primary_invert {
+  @extend %btn_primary_ghost;
+  border-color: $color_black;
+  color: $color_black;
+  &:after{
+    background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill_rule="evenodd" clip_rule="evenodd" d="M13.2628 4.95072L2.49902 15.7145L5.03607 18.2516L15.7998 7.48784V15.7145H19.3877V3.89991L19.3878 3.89984L19.3877 3.89977V1.36279H16.8507H5.03601V4.95072H13.2628Z" fill="black"/></svg>');
+  }
+  &:hover{
+    background-color: $color_black;
+    color: $color_white;
+    &:after{
+      background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill_rule="evenodd" clip_rule="evenodd" d="M13.2628 4.95072L2.49902 15.7145L5.03607 18.2516L15.7998 7.48784V15.7145H19.3877V3.89991L19.3878 3.89984L19.3877 3.89977V1.36279H16.8507H5.03601V4.95072H13.2628Z" fill="white"/></svg>');
     }
   }
 }

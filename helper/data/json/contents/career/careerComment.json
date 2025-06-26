@@ -1,5 +1,6 @@
 {
-  "imgUrl": "/assets/images/contents/career/",
+  "depthTitle" : "Our Philosophy",
+  "description": "우리는 함께 <br/> 성장할 수 있다고 믿어요.",
   "content": [
     {
       "img": "img_comment_slide_swiper1.jpg",
@@ -19,7 +20,7 @@
     {
       "img": "img_comment_slide_swiper4.jpg",
       "highlightText": "동료는 최고의 <br/>원동력이에요",
-      "text": "끌어주고 받쳐줄 수 있는 신뢰감 있는 동료와 하나의 팀으로 일하고 있어요. 내가 존경할 수 있는 동료, 나보다 훌륭한 동료와 함께 일하는 것만으로 큰 자극이 되고, 배움과 성장의 원동력이 돼요."
+      "text": "끌어주고 받쳐줄 수 있는 신뢰감 있는 동료와 하나의 팀으로 일하고 있어요. 내가 존경할 수 있는 동료, 나보다 훌륭한 동료와 함께 일하는 것 만으로 큰 자극이 되고, 배움과 성장의 원동력이 돼요."
     }
   ]
 }
