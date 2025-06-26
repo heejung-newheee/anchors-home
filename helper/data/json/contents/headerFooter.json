@@ -41,7 +41,7 @@
     "information" :{
       "depthTitle" : "Let’s Talk",
       "sendEmail" : {
-        "title" : "Send maill",
+        "title" : "Send mail",
         "href" : "contact@anchors-biz.com",
         "description" : ["Ready to email us?", "Let’s go"]
       },
