@@ -25,14 +25,13 @@
         "BMS": "Hyundai Motor BMS renewal",
         "jPlatform" : "Hyundai Motor J Platform",
         "DCXT" : "Hyundai Motor DCXT",
-        "chanel" : "CHANEL KOREA",
         "platform" : "E-commerce Platform"
        }
     }
   },
   "keywords" : {
     "main" : "Anchors, SI, System Integration, AEM, Adobe Experience Manager, Salesforce, Consulting, Homepage, E-commerce platform, 앵커스, 어도비, 세일즈포스, 홈페이지, 컨설팅, 시스템 개발, Web, App, IT",
-    "works" : "Anchors, 앵커스, homepage, 홈페이지, AEM, salesforce, 세일즈포스, consulting, 컨설팅, CHANEL, 샤넬, luxury, 럭셔리, Hyundai, 현대, automobile, 자동차, engineering, 엔지니어링, Kia, 기아, AIA, Insurance, 보험 Korean air, 대한항공, Genesis, 제네시스, E-commerce, 이커머스, 금융, finanace, Platform, 플랫폼, Burberry, 버버리, Dior, 디올",
+    "works" : "Anchors, 앵커스, homepage, 홈페이지, AEM, salesforce, 세일즈포스, consulting, 컨설팅, luxury, 럭셔리, Hyundai, 현대, automobile, 자동차, engineering, 엔지니어링, Kia, 기아, AIA, Insurance, 보험 Korean air, 대한항공, Genesis, 제네시스, E-commerce, 이커머스, 금융, finanace, Platform, 플랫폼, Burberry, 버버리, Dior, 디올",
     "about" : "Anchors, 앵커스, awards, 수상",
     "service" : "Anchors, 앵커스, Development, 개발, 구축, Consulting, 기획, 컨설팅, Maintenance, 운영, Design, 디자인",
     "platform" : "Anchors, 앵커스, E-commerce, platform, 플랫폼, private sales",
@@ -53,12 +52,11 @@
       "BMS": "Anchors, 앵커스, homepage, 홈페이지, Hyundai motor, 현대자동차, consulting, 컨설팅, java, react, brand management, 브랜드, automobile",
       "jPlatform" : "Anchors, 앵커스, homepage, 홈페이지, Hyundai motor, 현대자동차, AEM, E-commerce, consulting, 컨설팅, java, IOS, Android, salesforce, 세일즈포스, japan, 일본, automobile",
       "DCXT" : "Anchors, 앵커스, homepage, 홈페이지, Hyundai motor, 현대자동차, automoblie, salesforce, 세일즈포스, consulting, 컨설팅, java, data",
-      "chanel" : "Anchors, 앵커스, Homepage, 홈페이지, CHANEL, 샤넬, luxury, 럭셔리, consulting, 컨설팅, salesforce, 세일즈포스, java",
-      "platform" : "Anchors, 앵커스, E-commerce, 이커머스, 금융, finanace, luxury, 럭셔리, Platform, 플랫폼, CHANEL, 샤넬, Burberry, 버버리, Dior, 디올"
+      "platform" : "Anchors, 앵커스, E-commerce, 이커머스, 금융, finanace, luxury, 럭셔리, Platform, 플랫폼, Burberry, 버버리, Dior, 디올"
     }
   },
   "description": {
-    "main" : "주식회사 앵커스는 2018년에 설립되어, 사원수 100+여명 규모로 매년 50% 이상 성장하고 있습니다.  주식회사 앵커스의 사업 분야는, 컨설팅, 개발, AEM, Salesforce, E-commerce, System Integration 등이며, 삼성, 현대, Chanel, 대한항공 등 대기업 프로젝트와 해외 프로젝트를 주로진행하고 있습니다.",
+    "main" : "주식회사 앵커스는 2018년에 설립되어, 사원수 100+여명 규모로 매년 50% 이상 성장하고 있습니다.  주식회사 앵커스의 사업 분야는, 컨설팅, 개발, AEM, Salesforce, E-commerce, System Integration 등이며, 삼성, 현대, 대한항공 등 대기업 프로젝트와 해외 프로젝트를 주로진행하고 있습니다.",
     "works" : "주식회사 앵커스는 한국, 일본, 유럽, 독일, 영국, 캐나다, 호주, 브라질 등의 해외 및 대기업 위주의 프로젝트를 진행하고 있습니다.",
     "about" : "주식회사 앵커스는 2018년에 설립되어, 임직원 100여명 규모로 성장했습니다. 임직원들이 행복한 회사를 만들어 나가는 것이 목표입니다.",
     "service" : "주식회사 앵커스에서 진행하는 서비스 입니다.고객에게 컨설팅, 기획, 디자인, 개발, 운영 등의 서비스를 제공하고 있습니다.",
@@ -79,8 +77,7 @@
       "myAIA" : "AIA생명의 MY AIA 개편 사업으로 User Interface를 개선하였습니다.",
       "BMS": "현대자동차 임직원 및 관계자들이 사용하는 브랜드 관리 사이트로 업무 효율성을 높이기 위한 운영 시스템을 구축하였습니다.",
       "jPlatform" : "현대자동차의 일본 진출을 위한 온라인 커머스 사이트를 구축했습니다.",
-      "DCXT" : "현대자동차 각 국가 법인의 효율적인 세일즈 데이터 관리를 위해 DCXT(Connex)를 구축하였습니다.",
-      "chanel" : "CHANEL KOREA의 내/외부 전반적인 시스템 분석을 바탕으로, 운영 및 개발업무를 통하여 마케팅 솔루션 및 내부 관리 시스템을 향상시켰습니다.",
+      "DCXT" : "현대자동차 각 국가 법인의 효율적인 세일즈 데이터 관리를 위해 DCXT(Connex)를 구축하였습니다.",      
       "platform" : "프라이빗 구독 플랫폼을 제공하며, 커스터마이징을 제공합니다."
     }
   },

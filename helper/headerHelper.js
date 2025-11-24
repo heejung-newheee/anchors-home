@@ -2,7 +2,7 @@ export const pagesIsBgBlack = [
   '/',
   '/pages/worksDetail/myAIA',
   '/pages/worksDetail/BMS',
-  '/pages/worksDetail/chanel',
+  // '/pages/worksDetail/chanel',
   '/pages/worksDetail/hyundaiDCXT',
   '/pages/worksDetail/genesisGlobal',
   '/pages/worksDetail/jPlatform',

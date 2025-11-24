@@ -42,29 +42,7 @@
           }
         ]
       }
-    },
-    {
-      "id": "0000",
-      "sort": ["All","Website"],
-      "htmlName": "",
-      "title": "CHANEL KOREA",
-      "description": "e-Commerce, Website, Mobile Web, CRM",
-      "thumbnail": "img_thumbnail_chanel.jpg",
-      "thumbnailAlt": "샤넬코리아 시스템 분석 컨설팅 및 총괄 운영 이미지",
-      "pageUrl": "/pages/worksDetail/chanel",
-      "websiteUrl": "",
-      "visual": "img_keyvisual_chanel.jpg",
-      "subVisual": "img_subvisual_chanel.jpg",
-      "text": {
-        "en": "CHANEL KOREA <span>general management system</span> project. Anchors had provided convenient and efficient way to manage the store system by analyzing CHANEL KOREA’s system. We have improved its marketing solution and internal management system through <span>further development</span> of the system <span>integration</span> and <span>operations.</span>",
-        "ko": "샤넬코리아 시스템 총괄 운영 프로젝트입니다. 앵커스는 샤넬코리아의 내/외부 전반적인 시스템 분석을 바탕으로, 운영 및 개발을 진행하였고, 이는 샤넬코리아의 마케팅 솔루션 및 내부 관리 시스템의 성능 향상을 도모하는 계기가 되었습니다."
-      },
-      "projectInfomation" : [
-        { "title" :  "Client" , "contents" :  "샤넬코리아"},
-        { "title" :  "Year" , "contents" :  "2022.06 ~ Present"},
-        { "title" :  "Service" , "contents" :  "PHP, mySQL, ASP.net, Java, Salesforce, AmpScript, javascript"}
-      ]
-    },
+    },    
     {
       "id": "0001",
       "sort": ["All","Website"],

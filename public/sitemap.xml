@@ -1,5 +1,5 @@
 <?xml version="1.1" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!--Sitemap ANCHOSR.Inc -->
  
     <url>
@@ -20,12 +20,12 @@
         <changefreq>daily</changefreq>
         <priority>0.64</priority>
     </url>
-    <url>
+    <!-- <url>
         <loc>https://www.anchors-biz.com/pages/worksDetail/chanel</loc>
         <lastmod>2024-04-09T06:06:18+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.64</priority>
-    </url>
+    </url> -->
     <url>
         <loc>https://www.anchors-biz.com/pages/worksDetail/hyundaiDCXT</loc>
         <lastmod>2024-04-09T06:06:18+00:00</lastmod>
