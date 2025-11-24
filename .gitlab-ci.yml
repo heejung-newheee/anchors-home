@@ -14,9 +14,9 @@ workflow:
 
 build-job:
   stage: build
-  only:
-    - dev
-    - prd
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev"
+    - if: $CI_COMMIT_BRANCH == "prd"
   artifacts:
     paths:
       - ./out
@@ -34,36 +34,36 @@ build-job:
 
 deploy-to-dev-job:
   stage: deploy
-  only : 
-    - dev
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev"
   before_script:
     - echo "Starting deploy to dev..."
     - ls -al
   script:
     - set -x
     - echo "Copying files to /var/www/www-2022-dev"
-    - cp -r ./out/* /var/www/www-2022-dev || echo "Copy failed: $?" > /dev/stderr
+    - cp -r ./out/* /var/www/www-2022-dev || echo 'Copy failed: $?' > /dev/stderr
   after_script:
     - echo "Cleaning up ./out"
-    - rm -rf ./out || echo "Cleanup failed" > /dev/stderr
+    - rm -rf ./out || echo 'Cleanup failed' > /dev/stderr
     - echo "Deploy to dev completed."
   tags:
     - instance-ssh #공통 runner 이용, 같은 서버내 배포로 cp 할 것이라 docker 아닌 ssh 로
 
 deploy-to-prd-job:
   stage: deploy
-  only : 
-    - prd
+  rules:
+    - if: $CI_COMMIT_BRANCH == "prd"
   before_script:
     - echo "Starting deploy to prd..."
     - ls -al
   script:
     - set -x
     - echo "Copying files to /var/www/www-2022-new"
-    - cp -r ./out/* /var/www/www-2022-new || echo "Copy failed: $?" > /dev/stderr
+    - cp -r ./out/* /var/www/www-2022-new || echo 'Copy failed: $?' > /dev/stderr
   after_script:
     - echo "Cleaning up ./out"
-    - rm -rf ./out || echo "Cleanup failed" > /dev/stderr
+    - rm -rf ./out || echo 'Cleanup failed' > /dev/stderr
     - echo "Deploy to prd completed."
   tags:
     - instance-ssh #공통 runner 이용, 같은 서버내 배포로 cp 할 것이라 docker 아닌 ssh 로
