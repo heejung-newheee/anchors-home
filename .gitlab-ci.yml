@@ -37,13 +37,16 @@ deploy-to-dev-job:
   only : 
     - dev
   before_script:
+    - echo "Starting deploy to dev..."
     - ls -al
   script:
-    - cp -r ./out/* /var/www/www-2022-dev
+    - set -x
+    - echo "Copying files to /var/www/www-2022-dev"
+    - cp -r ./out/* /var/www/www-2022-dev || echo "Copy failed: $?" > /dev/stderr
   after_script:
-    - rm -rf ./out
-    - ls -al
-    - echo "deploy success!"
+    - echo "Cleaning up ./out"
+    - rm -rf ./out || echo "Cleanup failed" > /dev/stderr
+    - echo "Deploy to dev completed."
   tags:
     - instance-ssh #공통 runner 이용, 같은 서버내 배포로 cp 할 것이라 docker 아닌 ssh 로
 
@@ -52,12 +55,15 @@ deploy-to-prd-job:
   only : 
     - prd
   before_script:
+    - echo "Starting deploy to prd..."
     - ls -al
   script:
-    - cp -r ./out/* /var/www/www-2022-new
+    - set -x
+    - echo "Copying files to /var/www/www-2022-new"
+    - cp -r ./out/* /var/www/www-2022-new || echo "Copy failed: $?" > /dev/stderr
   after_script:
-    - rm -rf ./out
-    - ls -al
-    - echo "deploy success!"
+    - echo "Cleaning up ./out"
+    - rm -rf ./out || echo "Cleanup failed" > /dev/stderr
+    - echo "Deploy to prd completed."
   tags:
     - instance-ssh #공통 runner 이용, 같은 서버내 배포로 cp 할 것이라 docker 아닌 ssh 로
