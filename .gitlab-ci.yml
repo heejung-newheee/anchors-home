@@ -22,9 +22,16 @@ build-job:
       - ./out
     expire_in: 1 hour
   before_script:
+    - echo "Checking Node.js and npm versions..."
+    - node --version || echo "Node.js not found"
+    - npm --version || echo "npm not found"
+    - echo "Installing dependencies..."
     - npm install --force
+    - echo "Dependencies installed successfully"
   script:
+    - echo "Starting build process..."
     - npm run build
+    - echo "Build completed successfully"
   after_script:
     - ls -al
     - echo "build success!"
@@ -34,7 +41,7 @@ build-job:
 
 deploy-to-dev-job:
   stage: deploy
-  only : 
+  only:
     - dev
   before_script:
     - ls -al
@@ -49,7 +56,7 @@ deploy-to-dev-job:
 
 deploy-to-prd-job:
   stage: deploy
-  only : 
+  only:
     - prd
   before_script:
     - ls -al
