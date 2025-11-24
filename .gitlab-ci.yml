@@ -23,12 +23,13 @@ build-job:
     expire_in: 1 hour
   before_script:
     - echo "Checking Node.js and npm versions..."
-    - node --version || echo "Node.js not found"
+    - node --version || (echo "Node.js not found, installing..." && curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install -y nodejs)
     - npm --version || echo "npm not found"
     - echo "Installing dependencies..."
     - npm install --force
     - echo "Dependencies installed successfully"
   script:
+    - set -e
     - echo "Starting build process..."
     - npm run build
     - echo "Build completed successfully"
