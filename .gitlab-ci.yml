@@ -3,8 +3,8 @@ stages:
   - deploy
 
 variables:
-  DEV_BRANCH: "dev"
-  PRD_BRANCH: "prd"
+  DEV_BRANCH: 'dev'
+  PRD_BRANCH: 'prd'
 
 workflow:
   rules:
@@ -38,7 +38,6 @@ build-job:
     - echo "build success!"
   tags:
     - instance-ssh #공통 runner 이용
-
 
 deploy-to-dev-job:
   stage: deploy

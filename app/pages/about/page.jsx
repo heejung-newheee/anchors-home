@@ -9,11 +9,10 @@ const Profile = memo(dynamic(() => import('./_components/Profile')));
 const Members = memo(dynamic(() => import('./_components/Members')));
 const Introduction = memo(dynamic(() => import('./_components/Introduction')));
 
-
-import aboutIntro from '/helper/data/json/contents/about/aboutIntro.json';
+import aboutIntro from '@/helper/data/json/contents/about/aboutIntro.json';
 import aboutMembers from '@/helper/data/json/contents/about/aboutMembers.json';
-import aboutProfile from '/helper/data/json/contents/about/aboutProfile.json';
-import headerFooter from 'helper/data/json/contents/headerFooter.json';
+import aboutProfile from '@/helper/data/json/contents/about/aboutProfile.json';
+import headerFooter from '@/helper/data/json/contents/headerFooter.json';
 import seo from '@/helper/data/json/contents/SEO.json';
 
 import './scss/about.scss';
@@ -22,9 +21,9 @@ export const metadata = {
   title: seo.title.subPage.about,
   keywords: seo.keywords.about,
   description: seo.description.about,
-  alternates : {
-    canonical : seo.canonical.about,
-  }
+  alternates: {
+    canonical: seo.canonical.about,
+  },
 };
 
 function About() {

@@ -14,7 +14,7 @@ import {
   EffectCards,
   EffectCreative,
   Controller,
-} from 'swiper';
+} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';

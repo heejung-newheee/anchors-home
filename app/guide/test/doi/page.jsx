@@ -9,7 +9,7 @@ import MyHyundai from '@/app/pages/worksDetail/myHyundai/page';
 import WWN from '@/app/pages/worksDetail/WWN/page';
 import HappyMove from '@/app/pages/worksDetail/happyMove/page';
 
-import aboutProfile from '/helper/data/json/contents/about/aboutProfile.json';
+import aboutProfile from '@/helper/data/json/contents/about/aboutProfile.json';
 
 export default function Doi() {
   return (

@@ -4,13 +4,9 @@ const path = require('path');
 const nextConfig = {
   output: 'export',
   reactStrictMode: false,
-  experimental: {
-    appDir: true,
-  },
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-    // prependData: `@use 'variables.module' as *;`,
-    prependData: `@import "/variables.module.scss";`, // prependData 옵션 추가
+    includePaths: [path.join(__dirname, '.')],
+    additionalData: `@import "${path.join(__dirname, 'variables.module.scss').replace(/\\/g, '/')}";`,
   },
 };
 
